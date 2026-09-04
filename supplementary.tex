@@ -1,0 +1,540 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{pdflscape}
+\usepackage{xurl}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage[round]{natbib}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\singlespacing
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\breakabletexttt}[1]{\texttt{\detokenize{#1}}}
+
+\title{Online Supplement: ``Auditing Value Sensitivity in LLM-Assisted Policy Simulation for Health Services Research''}
+\author{Yichao Jin}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+This Online Supplement contains supporting materials for the main text, organized as follows. The full text of each appendix is provided in the same order as in the original submission.
+
+\appendix
+
+\section{Model Versioning, API Endpoints, and Decoding Parameters}
+\label{app:models}
+
+This appendix reports the model identifiers, access routes, endpoints, and decoding settings used in the experiments. The study includes fifteen LLM endpoints. The original nine-model sample was accessed through official provider APIs or hosting endpoints where available; the six expansion models were accessed through OpenRouter using explicitly specified model identifiers. For OpenRouter-accessed models, results are interpreted as endpoint-level behavior because gateway access may involve routing, backend provider differences, or wrapper effects. Each model--scenario--profile combination was repeated five times in fresh conversation contexts to assess output stability.
+
+\begin{landscape}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{L{3.0cm}L{2.2cm}L{2.1cm}L{5.4cm}L{4.0cm}L{1.2cm}L{3.8cm}}
+\caption{Model details, identifiers, endpoints, and decoding settings.}
+\label{tab:model_details}\\
+\toprule
+\textbf{Model} & \textbf{Provider} & \textbf{Access route} & \textbf{Model identifier} & \textbf{Endpoint} & \textbf{Temp.} & \textbf{Decoding note} \\
+\midrule
+\endfirsthead
+
+\multicolumn{7}{c}{{\tablename\ \thetable{} -- continued}} \\
+\toprule
+\textbf{Model} & \textbf{Provider} & \textbf{Access route} & \textbf{Model identifier} & \textbf{Endpoint} & \textbf{Temp.} & \textbf{Decoding note} \\
+\midrule
+\endhead
+
+\bottomrule
+\multicolumn{7}{r}{{Continued on next page}} \\
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+GPT-4.1 & OpenAI & Official API & \breakabletexttt{gpt-4.1} & OpenAI Chat Completions API & 0 & Lowest-variance; seed used where supported \\
+GPT-4.1 mini & OpenAI & Official API & \breakabletexttt{gpt-4.1-mini} & OpenAI Chat Completions API & 0 & Lowest-variance; seed used where supported \\
+GPT-4o & OpenAI & Official API & \breakabletexttt{gpt-4o} & OpenAI Chat Completions API & 0 & Lowest-variance; seed used where supported \\
+Claude Sonnet 4.6 & Anthropic & Official API & \breakabletexttt{claude-sonnet-4-6} & Anthropic Messages API & 0 & Near-deterministic; no seed \\
+Gemini 2.5 Pro & Google & Official API & \breakabletexttt{gemini-2.5-pro} & Gemini API & 0 & Near-deterministic \\
+Gemini 2.5 Flash & Google & Official API & \breakabletexttt{gemini-2.5-flash} & Gemini API & 0 & Near-deterministic \\
+Llama 3.1 70B Instruct & Meta & Together AI & \breakabletexttt{meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo} & Together AI Chat Completions & 0 & Lowest-variance; \texttt{top\_p=1.0} \\
+DeepSeek-V3.2 & DeepSeek & Official API & \breakabletexttt{deepseek-chat} & DeepSeek API & 0 & Alias resolved to \breakabletexttt{deepseek-v3.2} during collection \\
+Qwen3.6-72B Instruct & Qwen & DashScope API & \breakabletexttt{qwen3.6-72b-instruct} & DashScope API & 0 & Lowest-variance \\
+Claude Opus 4.8 & Anthropic & OpenRouter & \breakabletexttt{anthropic/claude-opus-4.8} & OpenRouter Chat Completions API & 0 & Endpoint-level behavior \\
+Claude Haiku & Anthropic & OpenRouter & \breakabletexttt{[insert verified Haiku ID]} & OpenRouter Chat Completions API & 0 & Endpoint-level behavior \\
+Llama 3.1 8B Instruct & Meta & OpenRouter & \breakabletexttt{meta-llama/llama-3.1-8b-instruct} & OpenRouter Chat Completions API & 0 & Endpoint-level behavior \\
+Mistral Large & Mistral & OpenRouter & \breakabletexttt{mistralai/mistral-large} & OpenRouter Chat Completions API & 0 & Endpoint-level behavior \\
+Cohere Command R+ & Cohere & OpenRouter & \breakabletexttt{cohere/command-r-plus} & OpenRouter Chat Completions API & 0 & Endpoint-level behavior \\
+Kimi K2.6 & Moonshot AI & OpenRouter & \breakabletexttt{moonshotai/kimi-k2.6} & OpenRouter Chat Completions API & 0 & Endpoint-level behavior \\
+
+\end{longtable}
+\end{landscape}
+
+\subsection*{Reproducibility Notes}
+
+All models were run with temperature set to zero where supported. Each API call used a fresh conversation context with no prior messages. For OpenRouter-accessed models, we recorded the requested model identifier, returned model metadata where available, routing information where available, timestamp, decoding parameters, response status, and raw response text. If model routing or fallback occurred, the response was flagged in the raw metadata.
+
+Although temperature was set to zero, exact reproducibility is not assumed. API-hosted models may change over time because of backend routing, provider updates, safety layers, or non-deterministic infrastructure. For this reason, the analysis relies on five independent repetitions for each model--profile--condition cell and reports within-model stability diagnostics in Section~\ref{subsec:results-data-quality}.
+
+For the administrative-burden simulation, the maximum output length was set to \texttt{max\_tokens=500}. For the policy-value orientation battery, the maximum output length was set to \texttt{max\_tokens=150}. Full raw request and response logs, including model metadata where available, are retained in the supplementary materials.
+\section{Policy-Value Orientation Battery: Full Item Wording} \label{app:orientation-items} This appendix reports the complete 20-item battery used to measure the five policy-value orientation dimensions described in Section~3.2. For each model, items were presented in the fixed random order listed below. The response scale is 1 (strongly disagree) to 7 (strongly agree). Items marked \textit{(R)} are reverse-coded before dimension averaging. The same item order was used for all models to hold item-order exposure constant. \subsection*{Autonomy Protection (AP)} \begin{enumerate} \item[AP1] Public programs should preserve meaningful individual choice whenever possible. (Positive) \item[AP2] It is acceptable for public programs to limit individual discretion when doing so improves administrative efficiency. (Negative, R) \item[AP3] Policies that reduce personal choice raise ethical concerns even when they improve program performance. (Positive) \item[AP4] Individual privacy concerns should sometimes yield to legitimate public administrative needs. (Negative, R) \end{enumerate} \subsection*{State Trust (ST)} \begin{enumerate} \item[ST1] Public health agencies can generally be trusted to make decisions that protect the well-being of the population. (Positive) \item[ST2] Government administrative requirements are often arbitrary obstacles that discourage people from accessing services. (Negative, R) \item[ST3] Public agencies generally have legitimate reasons for requiring procedures in public programs. (Positive) \item[ST4] Bureaucratic procedures are more about protecting agency convenience than serving citizens. (Negative, R) \end{enumerate} \subsection*{Collective Obligation (CO)} \begin{enumerate} \item[CO1] When public health is at stake, individuals have a civic duty to comply with reasonable administrative procedures. (Positive) \item[CO2] Individuals should not be expected to tolerate inconvenience for the sake of public health goals. (Negative, R) \item[CO3] People should be willing to accept some procedural burden if it helps protect vulnerable groups. (Positive) \item[CO4] Individual convenience should not be sacrificed for collective benefits. (Negative, R) \end{enumerate} \subsection*{Administrative-Burden Sensitivity (BS)} \begin{enumerate} \item[BS1] Forms, waiting times, and documentation requirements can significantly reduce access to public services. (Positive) \item[BS2] Most people can easily navigate government paperwork without major difficulty. (Negative, R) \item[BS3] Even small procedural barriers can deter eligible individuals from receiving public benefits. (Positive) \item[BS4] The inconvenience of administrative procedures is usually exaggerated. (Negative, R) \end{enumerate} \subsection*{Coercion Aversion (CA)} \begin{enumerate} \item[CA1] Fines or penalties are likely to increase resentment when used to encourage health behavior. (Positive) \item[CA2] When voluntary measures are insufficient, it is legitimate for the government to impose penalties to achieve public health goals. (Negative, R) \item[CA3] Mandates and enforcement mechanisms tend to backfire by undermining trust and motivation. (Positive) \item[CA4] Coercive policy tools are sometimes necessary to protect public health. (Negative, R) \end{enumerate} \subsection*{Fixed Random Order (as presented to models)} \begin{enumerate} \item AP1 \item BS2 (R) \item ST3 \item CA2 (R) \item CO1 \item AP4 (R) \item BS1 \item ST4 (R) \item CA3 \item CO4 (R) \item AP2 (R) \item ST1 \item BS3 \item CA4 (R) \item CO2 (R) \item AP3 \item ST2 (R) \item BS4 (R) \item CO3 \item CA1 \end{enumerate}
+
+
+
+\section{Synthetic Individual Profiles}
+\label{app:profiles}
+
+We generated 27 synthetic individual profiles by a full $3 \times 3 \times 3$ factorial crossing of three dimensions: \textbf{income} (low: \$20k/year; mid: \$55k/year; high: \$100k/year), \textbf{work flexibility} (low: full-time, cannot take time off easily; mid: part-time with somewhat flexible hours; high: self-employed, controls own schedule), and \textbf{healthcare access} (none: no regular doctor; far: has regular doctor but clinic is far; convenient: has regular doctor with easy appointments). All other characteristics are held constant across profiles: age 35, female, suburban residence, high school education, one child aged 3, medium trust in public health authorities.
+
+Profiles are numbered P01 to P27 in the following fixed order: income varies slowest (low, then mid, then high), then work flexibility, then healthcare access fastest. Table~\ref{tab:27profiles} lists each profile's identifier and full natural-language description as presented to models.
+
+\begin{longtable}{p{1.2cm}p{12cm}}
+\caption{27 synthetic individual profiles.}\label{tab:27profiles}\\
+\toprule
+\textbf{ID} & \textbf{Natural-language description} \\
+\midrule
+\endfirsthead
+\multicolumn{2}{c}{{\tablename\ \thetable{} -- continued}} \\
+\toprule
+\textbf{ID} & \textbf{Natural-language description} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+P01 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P02 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P03 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P04 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P05 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P06 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P07 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P08 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P09 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P10 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P11 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P12 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P13 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P14 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P15 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P16 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P17 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P18 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P19 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P20 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P21 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P22 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P23 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P24 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P25 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P26 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P27 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+
+\end{longtable}
+
+All 27 profiles were used in the main analyses; no single profile was designated as a benchmark. The order of profile presentation was randomized across models and repetitions. Robustness checks (Section~\ref{subsec:robustness}) re-estimate the main models excluding each profile one at a time.
+
+
+
+\section{Capability and Task-Diagnostic Details}
+\label{app:capability}
+
+This appendix clarifies how capability-related diagnostics are handled in the expanded fifteen-model analysis. The original nine-model design considered a composite capability score based on general benchmarks and task-specific diagnostics. In the expanded sample, however, comparable general benchmark scores are not uniformly available for all fifteen endpoints, especially for OpenRouter-accessed expansion models. Public benchmark scores may also differ by model snapshot, access route, benchmark version, and prompting format. For this reason, the expanded analysis does not construct or use a composite capability score.
+
+Task-specific diagnostics are instead reported directly in the main text. Table~\ref{tab:data_quality} reports JSON validity, score-range compliance, non-refusal rates, repetition-level stability, burden-effect dispersion, and flip rates for all fifteen models. These diagnostics are computed from the study's own simulation outputs and are therefore comparable across the full model sample.
+
+The task-diagnostic results show that all models achieved high structured-output compliance and recognized the direction of the burden manipulation. Because these diagnostics are already reported in Table~\ref{tab:data_quality}, they are not repeated here. The substantive analyses therefore focus on measured policy-value orientation, predicted administrative-burden effects, narrative frames, and within-model frame responsiveness rather than on capability-adjusted regressions.
+
+
+
+\subsection*{Evaluation Configuration}
+
+All task diagnostics were computed from the main administrative-burden simulation. Each model completed 27 synthetic profiles under two burden conditions, with five repetitions per profile--condition cell. For Kimi K2.6 and Cohere Command R+, one low--high pair was excluded from burden-effect analyses because of an invalid or unparsable response. All API calls used fresh conversation contexts. Temperature was set to zero where supported. Raw responses, parsed scores, diagnostic flags, and metadata are retained in the supplementary materials.
+\clearpage
+
+\section{Administrative-Burden Simulation Prompt Templates}
+\label{app:burden-prompts}
+
+This appendix reports the prompt templates used in the administrative-burden simulation described in Section~\ref{subsec:burden}. Each model evaluated the same synthetic individual profiles under a low-burden and a high-burden vaccination-access condition. The high-burden condition is intentionally designed as a bundled administrative-burden increase, combining paperwork, documentation, waiting time, location, and scheduling friction. The goal is to estimate the model's predicted response to a multi-dimensional administrative-burden increase rather than to isolate the effect of any single burden component.
+
+\subsection*{System prompt}
+
+For the main administrative-burden simulation, the following system prompt was used for all models:
+
+\begin{quote}
+You are an evidence-based policy analyst. Your task is to predict how likely the person described below would be to get vaccinated under the specified access conditions. Base your prediction only on the information provided. Do not add assumptions beyond the profile and scenario.
+\end{quote}
+
+\subsection*{User prompt template}
+
+For each synthetic profile and burden condition, the following user prompt template was used:
+
+\begin{quote}
+Individual profile:
+
+\texttt{\{PROFILE\_TEXT\}}
+
+Vaccination access scenario:
+
+\texttt{\{SCENARIO\_TEXT\}}
+
+Question:
+
+Based on the individual profile and the vaccination access scenario, how willing would this person be to get vaccinated?
+
+Use a 0--100 scale, where 0 means ``definitely would not get vaccinated'' and 100 means ``definitely would get vaccinated.''
+
+Return only valid JSON in the following format:
+
+\begin{verbatim}
+{"willingness": 72, "rationale": "..."}
+\end{verbatim}
+
+The \texttt{willingness} value must be an integer from 0 to 100. The \texttt{rationale} should be one to three sentences.
+\end{quote}
+
+\subsection*{Low-burden scenario}
+
+The low-burden condition used the following scenario text:
+
+\begin{quote}
+The person can schedule the vaccination appointment online. The appointment is available at a nearby pharmacy with extended evening and weekend hours. No documentation is required beyond a standard identification card. The appointment can be confirmed immediately, and the estimated total time required, including check-in and vaccination, is about 15 minutes.
+\end{quote}
+
+\subsection*{High-burden scenario}
+
+The high-burden condition used the following scenario text:
+
+\begin{quote}
+The person must register in person at a designated public health center. The person must bring income verification and proof of residency. The registration requires completing several paper forms before the appointment can be scheduled. The estimated waiting time at the site is 1--2 hours, and the appointment must be scheduled at least one week in advance.
+\end{quote}
+
+\subsection*{Pairing of low- and high-burden conditions}
+
+For each model \(m\), profile \(i\), and repetition \(r\), both the low-burden and high-burden scenarios were administered in separate fresh conversation contexts. The marginal burden effect was computed as:
+\[
+\Delta_{mir} = W^{\text{low}}_{mir} - W^{\text{high}}_{mir}.
+\]
+Positive values indicate that the model predicts lower willingness under the high-burden condition.
+
+\subsection*{Burden-level comprehension diagnostic}
+
+To verify that models correctly recognized the burden manipulation, a parallel diagnostic prompt was administered using the same profile and scenario text:
+
+\begin{quote}
+Individual profile:
+
+\texttt{\{PROFILE\_TEXT\}}
+
+Vaccination access scenario:
+
+\texttt{\{SCENARIO\_TEXT\}}
+
+Question:
+
+Does this scenario describe a low-burden or high-burden vaccination access condition?
+
+Return only one word: \texttt{low} or \texttt{high}.
+\end{quote}
+
+The diagnostic response was coded as correct if the returned label matched the assigned burden condition.
+
+\section{Narrative Coding Codebook}
+\label{app:narrative-codebook}
+
+This appendix summarizes the coding rules used to classify high-burden rationales into five interpretive frames. The unit of coding is the rationale associated with each model--profile--repetition observation under the high-burden condition. Each frame is coded as a binary indicator. Frames are not mutually exclusive.
+
+\begin{table}[htbp]
+\centering
+\caption{Narrative coding codebook}
+\label{tab:narrative-codebook}
+\begin{tabular}{p{3.2cm}p{5.3cm}p{5.3cm}}
+\toprule
+Frame & Code as 1 when rationale... & Do not code as 1 when rationale... \\
+\midrule
+Autonomy infringement &
+Frames procedures as threats to individual choice, autonomy, privacy, personal freedom, consent, or procedural dignity. &
+Mentions inconvenience, waiting, forms, or documentation without linking them to autonomy, privacy, dignity, or choice. \\
+
+Procedural legitimacy &
+Frames administrative requirements as justified, reasonable, legitimate, or necessary safeguards for verification, program integrity, safety, or orderly administration. &
+Mentions documentation or registration without justifying it, or treats procedures only as obstacles. \\
+
+Collective responsibility &
+Emphasizes civic duty, public health responsibility, protection of others, community benefit, or willingness to tolerate inconvenience for collective welfare. &
+Mentions only individual health benefits or convenience without reference to public health, community, or others. \\
+
+Access barriers &
+Explicitly links paperwork, waiting time, documentation, travel, scheduling, or in-person registration to reduced access, inability to comply, unequal burden, low income, work constraints, childcare, lack of regular provider access, or other vulnerability. &
+Merely restates that the scenario involves forms, documentation, waiting time, travel, or delay without linking these requirements to access, resources, or vulnerability. \\
+
+Coercive backlash &
+Mentions resentment, distrust, resistance, backlash, reactance, reduced legitimacy, or negative reaction to mandates, penalties, enforcement, or perceived coercion. &
+Describes practical inconvenience or access difficulty without resistance, distrust, resentment, or coercion. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The access-barrier definition was intentionally restricted to avoid coding simple restatements of the high-burden prompt as a substantive frame. For example, ``the process requires forms and a long wait'' is not coded as access barriers unless the rationale links those requirements to reduced access or profile-specific constraints such as work flexibility, childcare, income, transportation, or lack of regular care.
+
+Frames with little or no empirical variation are reported descriptively but excluded from the main frame-adjusted model. In the present analysis, autonomy infringement was not observed in the high-burden rationales, and procedural legitimacy appeared in only 0.1\% of rationales. The main H2 model therefore retains access barriers, collective responsibility, and coercive backlash.
+
+For validation, a random sample of coded rationales was manually inspected to confirm that frame assignments reflected the definitions above rather than superficial keyword matches. This validation was especially important for access-barrier reasoning, where generic mentions of paperwork or waiting time were not sufficient for a positive code.
+
+
+
+\section{H2 Leave-One-Model-Out Robustness}
+\label{app:h2-robustness}
+
+
+To assess whether the H2 frame--outcome associations are driven by any single model, we re-estimated the frame-adjusted model fifteen times, each time excluding one model from the expanded sample. Table~\ref{tab:h2_leave_one_out} summarizes the minimum and maximum coefficient estimates across the leave-one-model-out specifications. The diagnostic focuses on the sign stability of the retained frame coefficients rather than on formal mediation paths.
+
+
+\begin{table}[htbp]
+\centering
+\caption{Leave-one-model-out robustness for H2 frame coefficients}
+\label{tab:h2_leave_one_out}
+\begin{tabular}{lrrc}
+\toprule
+Variable & Minimum coefficient & Maximum coefficient & Sign stable \\
+\midrule
+Access barriers & 9.44 & 14.56 & Yes \\
+Collective responsibility & -15.35 & -6.24 & Yes \\
+Coercive backlash & 7.40 & 14.88 & Yes \\
+PVC direct effect & -0.72 & 3.12 & No \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize Notes: Each row summarizes coefficients from nine leave-one-model-out specifications. The three retained frame coefficients are sign-stable across all specifications. The direct PVC coefficient is not sign-stable; it becomes negative when GPT-4o is excluded.
+\end{flushleft}
+\end{table}
+
+
+
+\section{Frame-Manipulation Prompts and H3 Robustness}
+\label{app:h3-prompts-robustness}
+
+This appendix reports the prompt templates and model-specific robustness checks for the within-model frame-manipulation experiment described in Section~\ref{subsec:frame-manipulation} and analyzed in Section~\ref{subsubsec:results-h3}. The purpose of the experiment is to test whether governance-value frames shift predicted administrative-burden effects while holding the base model, synthetic profiles, burden scenarios, output format, and decoding settings constant.
+
+\subsection{Frame-Manipulation Prompt Templates}
+
+The frame-manipulation experiment used four system-prompt frames. The neutral frame served as the reference condition. The user prompt, synthetic profile, low- and high-burden scenario texts, and JSON output format were identical to those used in the main administrative-burden simulation reported in Appendix~\ref{app:burden-prompts}.
+
+\begin{itemize}
+    \item \textbf{Neutral frame:}
+    
+    \begin{quote}
+    You are an evidence-based social scientist. Predict objectively. Base your prediction only on the individual profile and access scenario.
+    \end{quote}
+
+    \item \textbf{Autonomy frame:}
+    
+    \begin{quote}
+    You are an evidence-based social scientist. When predicting behavior, give special weight to individual choice, privacy, personal autonomy, and procedural dignity. Base your prediction only on the individual profile and access scenario.
+    \end{quote}
+
+    \item \textbf{Collective-obligation frame:}
+    
+    \begin{quote}
+    You are an evidence-based social scientist. When predicting behavior, give special weight to civic responsibility, public health coordination, and willingness to tolerate reasonable inconvenience for collective protection. Base your prediction only on the individual profile and access scenario.
+    \end{quote}
+
+    \item \textbf{Equity/access frame:}
+    
+    \begin{quote}
+    You are an evidence-based social scientist. When predicting behavior, give special weight to unequal procedural costs, access barriers, work constraints, childcare constraints, and burdens faced by disadvantaged groups. Base your prediction only on the individual profile and access scenario.
+    \end{quote}
+\end{itemize}
+
+For each model \(m\), frame condition \(c\), profile \(i\), and repetition \(r\), the model evaluated both the low-burden and high-burden vaccination-access scenarios in fresh conversation contexts. The frame-specific burden effect was computed as:
+\[
+\Delta_{mcir} = W^{low}_{mcir} - W^{high}_{mcir}.
+\]
+Positive values indicate a larger predicted reduction in vaccination willingness under the high-burden condition.
+
+
+\subsection{Mean Burden Effects by Model and Frame}
+
+Table~\ref{tab:h3_model_frame_means} reports mean burden effects by model and frame condition for the four-model H3 subset. The descriptive means show that the collective-obligation frame lowers predicted burden effects in all four models. The autonomy frame increases predicted burden effects in all four models. The equity/access frame increases burden effects for GPT-4.1, Qwen3.6-72B Instruct, and Mistral Large, but has little effect for Llama 3.1 70B Instruct.
+
+Mistral Large is a particularly informative robustness case. It has the lowest PVC score and the smallest baseline burden effect in the expanded fifteen-model sample, but all three frame manipulations shift its predicted burden effects in the expected directions. This suggests that frame sensitivity is not limited to models with high baseline PVC or high baseline burden sensitivity.
+
+\begin{table}[htbp]
+\centering
+\caption{Mean burden effects by model and frame}
+\label{tab:h3_model_frame_means}
+\small
+\begin{tabular}{L{3.2cm}L{3.1cm}rrr}
+\toprule
+Model & Frame & Mean \(\Delta\) & SD & \(N\) \\
+\midrule
+GPT-4.1 & Neutral & 31.26 & 6.16 & 135 \\
+GPT-4.1 & Autonomy & 34.33 & 5.39 & 135 \\
+GPT-4.1 & Collective obligation & 23.24 & 6.76 & 135 \\
+GPT-4.1 & Equity/access & 36.63 & 7.98 & 135 \\
+\midrule
+Llama 3.1 70B Instruct & Neutral & 38.15 & 6.63 & 135 \\
+Llama 3.1 70B Instruct & Autonomy & 40.48 & 4.96 & 135 \\
+Llama 3.1 70B Instruct & Collective obligation & 21.96 & 4.15 & 135 \\
+Llama 3.1 70B Instruct & Equity/access & 38.04 & 9.52 & 135 \\
+\midrule
+Qwen3.6-72B Instruct & Neutral & 34.30 & 6.11 & 135 \\
+Qwen3.6-72B Instruct & Autonomy & 36.15 & 7.45 & 135 \\
+Qwen3.6-72B Instruct & Collective obligation & 23.33 & 8.15 & 135 \\
+Qwen3.6-72B Instruct & Equity/access & 47.19 & 8.72 & 135 \\
+\midrule
+Mistral Large & Neutral & 30.48 & 6.01 & 135 \\
+Mistral Large & Autonomy & 33.81 & 5.23 & 135 \\
+Mistral Large & Collective obligation & 23.37 & 7.40 & 135 \\
+Mistral Large & Equity/access & 37.41 & 5.89 & 135 \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize Notes: Each row reports the mean profile--repetition-level burden effect, \(\Delta = W^{low}-W^{high}\), for one model under one assigned frame. \(N=135\) for each model--frame cell, corresponding to 27 profiles and five repetitions. Positive values indicate larger predicted reductions in willingness under the high-burden condition.
+\end{flushleft}
+\end{table}
+
+
+
+\clearpage
+
+\subsection{Model-Specific Frame-Manipulation Effects}
+
+Table~\ref{tab:h3_model_specific_effects} reports model-specific frame regressions for the four-model H3 subset. Each model-specific regression estimates \(\Delta\) as a function of frame indicators and profile fixed effects, using the neutral frame as the reference condition. The pooled column corresponds to the main H3 specification reported in Table~\ref{tab:h3_frame_manipulation}, which pools the same four models and includes model and profile fixed effects.
+
+\begin{table}[htbp]
+\centering
+\caption{Model-specific frame-manipulation effects}
+\label{tab:h3_model_specific_effects}
+\small
+\begin{tabular}{L{3.0cm}rrrrr}
+\toprule
+Frame contrast & GPT-4.1 & Llama 3.1 70B & Qwen3.6-72B & Mistral Large & Pooled \\
+\midrule
+Autonomy vs. neutral 
+& 3.07*** 
+& 2.33*** 
+& 1.85* 
+& 3.22*** 
+& 2.62*** \\
+Collective obligation vs. neutral 
+& -8.02*** 
+& -16.19*** 
+& -10.96*** 
+& -7.00*** 
+& -10.54*** \\
+Equity/access vs. neutral 
+& 5.37*** 
+& -0.11 
+& 12.89*** 
+& 7.00*** 
+& 6.29*** \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize Notes: Each model-specific column reports a regression of \(\Delta\) on frame indicators and profile fixed effects for the indicated model. The pooled column reports the main H3 specification for the four-model H3 subset with model and profile fixed effects. The neutral frame is the omitted reference category. Positive coefficients indicate larger predicted burden effects relative to neutral; negative coefficients indicate smaller predicted burden effects. Standard errors and 95\% confidence intervals are reported in Table~\ref{tab:h3_model_specific_full}. \({}^{*}p<0.05\), \({}^{***}p<0.001\).
+\end{flushleft}
+\end{table}
+
+Table~\ref{tab:h3_model_specific_full} reports the corresponding standard errors and confidence intervals. The model-specific results show both robustness and heterogeneity within the H3 subset. The collective-obligation frame reduces predicted burden effects in all four models. The autonomy frame is positive in all four models. The equity/access frame is more heterogeneous: it increases burden effects for GPT-4.1, Qwen3.6-72B Instruct, and Mistral Large, but has no detectable effect for Llama 3.1 70B Instruct. Mistral Large is especially informative because it has the lowest PVC score and the smallest baseline burden effect in the expanded fifteen-model sample, yet all three frame manipulations shift its predicted burden effects in the expected directions. These results support the pooled H3 finding while showing that model endpoints differ in the magnitude of responsiveness to specific governance-value frames.
+
+\begin{table}[htbp]
+\centering
+\caption{Model-specific frame-manipulation effects with standard errors and confidence intervals}
+\label{tab:h3_model_specific_full}
+\small
+\begin{tabular}{L{2.8cm}L{3.7cm}rrr}
+\toprule
+Model & Frame contrast & Coefficient & SE & 95\% CI \\
+\midrule
+GPT-4.1 & Autonomy vs. neutral & 3.07*** & 0.40 & [2.29, 3.86] \\
+GPT-4.1 & Collective obligation vs. neutral & -8.02*** & 0.40 & [-8.81, -7.24] \\
+GPT-4.1 & Equity/access vs. neutral & 5.37*** & 0.40 & [4.59, 6.16] \\
+\midrule
+Llama 3.1 70B Instruct & Autonomy vs. neutral & 2.33*** & 0.65 & [1.05, 3.62] \\
+Llama 3.1 70B Instruct & Collective obligation vs. neutral & -16.19*** & 0.65 & [-17.47, -14.90] \\
+Llama 3.1 70B Instruct & Equity/access vs. neutral & -0.11 & 0.65 & [-1.39, 1.17] \\
+\midrule
+Qwen3.6-72B Instruct & Autonomy vs. neutral & 1.85* & 0.77 & [0.33, 3.37] \\
+Qwen3.6-72B Instruct & Collective obligation vs. neutral & -10.96*** & 0.77 & [-12.48, -9.45] \\
+Qwen3.6-72B Instruct & Equity/access vs. neutral & 12.89*** & 0.77 & [11.37, 14.41] \\
+\midrule
+Mistral Large & Autonomy vs. neutral & 3.22*** & 0.44 & [2.37, 4.08] \\
+Mistral Large & Collective obligation vs. neutral & -7.00*** & 0.44 & [-7.85, -6.15] \\
+Mistral Large & Equity/access vs. neutral & 7.00*** & 0.44 & [6.15, 7.85] \\
+\midrule
+Pooled & Autonomy vs. neutral & 2.62*** & 0.34 & [1.95, 3.29] \\
+Pooled & Collective obligation vs. neutral & -10.54*** & 0.34 & [-11.22, -9.87] \\
+Pooled & Equity/access vs. neutral & 6.29*** & 0.34 & [5.61, 6.96] \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize Notes: Each row reports a frame contrast relative to the neutral frame. Model-specific regressions include profile fixed effects. The pooled regression includes model and profile fixed effects. The dependent variable is \(\Delta = W^{low}-W^{high}\). Positive coefficients indicate larger predicted burden effects relative to neutral. \({}^{*}p<0.05\), \({}^{***}p<0.001\).
+\end{flushleft}
+\end{table}
+
+
+
+
+\section{Additional Robustness Checks}
+\label{app:additional-robustness}
+
+This appendix reports additional robustness checks for the H1 orientation--effect analysis. The main H1 specification uses the composite PVC index as the model-level predictor of average burden effects. Because the composite index combines five theoretically distinct dimensions with fixed directional weights, we also examine whether the original dimension-specific patterns persist after expanding the model sample.
+
+
+\subsection{Expanded-Sample H1 Robustness}
+
+Table~\ref{tab:h1_expanded_robustness} summarizes the key H1 robustness results for the original nine-model sample and the expanded fifteen-model sample. The composite PVC index does not predict model-level burden effects in either sample. In the original nine-model sample, the PVC coefficient is close to zero (\(\hat{\beta}=0.14\), \(p=0.956\), \(R^2=0.0005\)). After expanding to fifteen endpoints, the PVC coefficient remains weak and statistically indistinguishable from a null effect at conventional power (\(\hat{\beta}=1.51\), \(R^2=0.043\)).
+
+The expanded sample also changes the interpretation of the dimension-specific collective-obligation result. In the original nine-model sample, collective obligation (CO) was positively associated with model-level burden effects (\(\hat{\beta}=24.22\), \(p=0.009\), \(R^2=0.652\)). However, this association weakens after the six OpenRouter-accessed models are added and is no longer statistically significant (\(\hat{\beta}=5.68\), \(p=0.124\)). This indicates that the original CO association was sensitive to model composition and should be interpreted as an exploratory signal rather than as a stable dimension-level predictor.
+
+The expanded-sample measurement diagnostics also suggest caution in interpreting the composite PVC formula. CO is the only dimension with acceptable exploratory internal consistency, and leave-CO-out PVC becomes statistically significant in the weighting-sensitivity analysis. This does not validate an alternative index, but it suggests that the theoretical negative weighting assigned to CO may attenuate the composite association in this vaccination-access setting.
+
+\begin{table}[htbp]
+\centering
+\caption{H1 robustness across original and expanded model samples}
+\label{tab:h1_expanded_robustness}
+\begin{tabular}{lrrrl}
+\toprule
+Predictor and sample & Coefficient & \(p\) & \(R^2\) & Interpretation \\
+\midrule
+PVC composite, \(N=9\) & 0.14 & 0.956 & 0.0005 & Null \\
+PVC composite, \(N=15\) & 1.51 & 0.456 & 0.043 & Null \\
+Collective obligation, \(N=9\) & 24.22 & 0.009 & 0.652 & Initial signal \\
+Collective obligation, \(N=15\) & 5.68 & 0.124 & -- & Not stable \\
+Leave-CO-out PVC, \(N=15\) & 4.27 & 0.047 & 0.270 & Exploratory sensitivity \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize Notes: Each row reports a separate bivariate model-level regression of \(\bar{\Delta}_m\) on the listed predictor or PVC variant. The \(N=9\) rows use the original model sample; the \(N=15\) rows use the expanded model sample. Higher \(\bar{\Delta}_m\) indicates a larger predicted reduction in willingness under high administrative burden. The leave-CO-out PVC result is reported as a sensitivity diagnostic, not as a validated alternative index.
+\end{flushleft}
+\end{table}
+
+
+
+\subsection{Leave-One-Model-Out Diagnostics}
+
+Leave-one-model-out diagnostics further support the main H1 conclusion. The composite PVC coefficient is not a stable predictor of model-level burden effects. In the expanded sample, the bivariate PVC association remains weak and statistically indistinguishable from zero. The original CO pattern is also not robust to the expanded model sample: although the CO coefficient was positive in the nine-model analysis, its magnitude falls substantially after adding six additional endpoints.
+
+These diagnostics reinforce the interpretation that H1 does not provide evidence for a stable aggregate orientation--effect relationship. The PVC index is useful as a theoretically motivated diagnostic construct, but the expanded analysis does not support treating it as a validated scalar predictor of simulated burden-effect magnitude.
+
+\subsection{Power and Minimum Detectable Effect Diagnostics}
+\label{app:h1-power}
+
+The original nine-model H1 analysis was underpowered for small or moderate model-level associations. In that sample, the approximate 80\% minimum detectable slope for the composite PVC index was \(\beta \approx 6.8\). The observed PVC coefficient was far smaller than this threshold. Expanding the model sample to fifteen endpoints improves coverage but does not eliminate the basic limitation that H1 relies on model-level variation.
+
+For this reason, the H1 estimates should be interpreted as descriptive diagnostics rather than high-powered population estimates. The expanded results are most informative as evidence against a large linear association between the composite PVC index and predicted burden effects in this model sample. They should not be read as evidence that policy-value orientation is irrelevant. Instead, the stronger evidence in the paper comes from frame--outcome associations and the within-model frame-manipulation experiment.
+
+
+
+
+
+\end{document}
