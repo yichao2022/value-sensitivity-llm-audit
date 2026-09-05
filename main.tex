@@ -35,7 +35,6 @@
 
 % ---------- 摘要 ----------
 
-
 \begin{abstract}
 Health services researchers are exploring large language models (LLMs) as structured analytical instruments for policy simulation—not as substitutes for empirical behavioral data, but as tools for generating, stress-testing, and comparing simulated policy effects. This paper evaluates the validity, robustness, and normative-frame sensitivity of LLM-assisted policy simulation in health services research. Using administrative burden in vaccination access as a controlled HSR testbed, we develop a multi-level diagnostic for measuring value sensitivity in LLM-generated policy simulations. We evaluate fifteen LLM endpoints spanning nine provider ecosystems. Each model completes a policy-value orientation battery and then simulates vaccination willingness for 27 synthetic profiles under low- and high-burden conditions.
 
@@ -44,11 +43,6 @@ The results do not support a simple composite-contamination account. A composite
 These findings demonstrate that LLM-assisted policy simulation is normatively frame-sensitive—value sensitivity appears through interpretive frames and prompt-induced governance lenses, not through a single ideological score. We contribute a multi-level diagnostic for evaluating simulation validity, applicable across HSR policy domains where LLM-assisted simulation is used to generate, compare, or stress-test policy effects.
 
 \end{abstract}
-
-
-
-
-
 
 % ---------- 关键词 ----------
 \noindent\textbf{Keywords:} large language models, simulation validity, administrative burden, policy simulation robustness, normative-frame sensitivity, calibration
@@ -66,13 +60,11 @@ This paper evaluates whether LLM-assisted policy simulations are valid, robust, 
 
 Administrative burden in vaccination access provides a controlled HSR testbed for this question. Administrative burden refers to the learning, psychological, and compliance costs that individuals face when interacting with public programs . These burdens include forms, documentation requirements, waiting time, procedural uncertainty, and perceived loss of autonomy. Recent health-care research similarly shows that administrative tasks can delay or discourage care, making administrative burden a consequential nonfinancial barrier to access \citep{Shin2025}. Because burdens can shape access to public programs and operate as policy instruments in their own right , they are well suited for testing whether LLM simulation outputs are sensitive to normative framing. I study this problem in vaccination-access scenarios, where administrative burden intersects with individual choice, public health externalities, institutional trust, and procedural barriers---properties that make it well-suited for detecting whether simulation outputs are valid and robust across models and frames.
 
-
 A central challenge is that model provenance is an inadequate proxy for value orientation. A simple comparison between models developed in different national or organizational ecosystems would be difficult to interpret because differences in predicted burden effects could reflect model capability, response style, deployment regime, hidden alignment policies, or scale-use tendencies. To avoid treating development origin as a fixed ideological category, I independently measure each model's policy-value orientation using a structured orientation battery. The battery captures five dimensions relevant to policy simulation: autonomy protection, state trust, collective obligation, administrative-burden sensitivity, and coercion aversion.
 
 The study addresses three research questions. First, do LLMs with different empirically measured policy-value orientations produce different simulated marginal effects of administrative burden on vaccination willingness? Second, are simulated burden effects systematically associated with the interpretive frames used in model rationales? Third, can simulated burden effects be shifted within the same base model by experimentally assigning governance-value frames?
 
 The paper makes three contributions. First, it shifts the study of LLM value sensitivity from stated opinion to simulated policy effects---from opinion audits to simulation validity audits. Second, it introduces a structured policy-value orientation battery for measuring model-level governance assumptions without relying on coarse provenance labels. Third, it provides a multi-level diagnostic approach for evaluating the validity of LLM-assisted policy simulations by linking measured orientations, simulated treatment effects, rationale frames, and within-model frame manipulation---applicable across HSR policy domains where LLM simulation is used as a methodological tool.
-
 
 \section{Theoretical Framework and Hypotheses}
 
@@ -87,7 +79,6 @@ We conceptualize an LLM-generated policy simulation as a mapping from a policy s
 where \(m\) indexes the model, \(i\) the synthetic individual profile, and \(s\) the policy scenario. A larger \(\Delta_{mis}\) indicates a stronger simulated negative effect of burden on vaccination willingness.
 
 Administrative burden—defined as learning, psychological, and compliance costs in citizen–state interactions —is a controlled HSR testbed because it is both behavioral and normative . The same procedural requirement (e.g., a form or waiting period) can be interpreted as a legitimate safeguard, an infringement on autonomy, or an access barrier. Vaccination access combines individual choice with public health externalities, making it particularly suited for detecting whether simulation outputs are sensitive to normative framing.
-
 
 \subsection{Policy-Value Orientation}
 \label{sec:orientation-effect}
@@ -121,13 +112,10 @@ The empirical tests proceed in three linked steps, moving from an aggregate orie
 
 \section{Experimental Design and Methods}
 
-
 \subsection{Model Sample}
 \label{subsec:model-sample}
 
 We evaluate fifteen LLM endpoints spanning nine provider ecosystems: OpenAI, Anthropic, Google, Meta, Mistral, Cohere, Moonshot AI, DeepSeek, and Qwen. The original nine-model sample included GPT-4.1, GPT-4.1 mini, GPT-4o, Claude Sonnet 4.6, Gemini 2.5 Pro, Gemini 2.5 Flash, Llama 3.1 70B Instruct, DeepSeek-V3.2, and Qwen3.6-72B-Instruct. To expand cross-model coverage, we added six endpoints accessed through OpenRouter: Claude Opus 4.8, Claude Haiku, Llama 3.1 8B Instruct, Mistral Large, Cohere Command R+, and Kimi K2.6. The sample is intentionally heterogeneous to cover frontier proprietary, lower-cost, hosted open-weight, enterprise-oriented, and non-U.S. ecosystems; it supports cross-model auditing but not provider-level causal comparisons. All models were run with temperature set to zero where supported, and each model--scenario--profile cell was repeated five times in fresh contexts. Detailed model identifiers and decoding parameters are reported in the Online Supplement.
-
-
 
 \subsection{Policy-Value Orientation Battery}
 \label{subsec:orientation-battery}
@@ -135,8 +123,6 @@ We evaluate fifteen LLM endpoints spanning nine provider ecosystems: OpenAI, Ant
 To operationalize the five policy-value dimensions, we administered a 20-item Likert battery before the administrative-burden simulation, covering autonomy protection, state trust, collective obligation, administrative-burden sensitivity, and coercion aversion. Each dimension is measured with four items on a 1--7 agreement scale. The battery was administered in fresh API calls before any exposure to the burden scenarios, and models were instructed to output only the numeric score for each item. For each model, each dimension score is the mean of the four items after reverse-coding reverse-worded items.
 
 Following the directional expectations developed earlier, we constructed the policy-value contamination (PVC) index as a standardized sum of the five dimensions, with higher values indicating an orientation profile expected, ex ante, to produce larger predicted burden effects. Because the index is standardized within the study sample and the battery is newly constructed, PVC is a theory-specified diagnostic composite rather than a validated psychometric scale. We treat the PVC result as one diagnostic input among three rather than as the central test of value sensitivity, consistent with prior evidence that aggregate composite scores from constrained-choice batteries produce unstable estimates in small model samples. The PVC index serves as the primary independent variable in the orientation-effect models. Exploratory internal-consistency diagnostics and weighting-sensitivity checks are reported in the Online Supplement.
-
-
 
 \subsection{Administrative-Burden Simulation}
 \label{subsec:burden}
@@ -158,13 +144,10 @@ For each synthetic individual, we defined two burden levels that differ in the a
 
 For each model, profile, burden level, and repetition, we obtained a predicted vaccination willingness on a 0--100 scale. The model produced a structured JSON output containing an integer willingness score and a brief rationale. The primary outcome is the marginal effect of moving from low to high burden for a given model, profile, and repetition: \(\Delta_{mir} = W_{mi,\text{low},r} - W_{mi,\text{high},r}\). Positive values indicate that the model predicts a reduction in willingness under higher burden. For model-level analyses, we average across profiles and repetitions.
 
-
-
 \subsection{Task-Compliance Diagnostics}
 \label{subsec:capability}
 
 Because comparable general benchmark scores are not uniformly available for all fifteen model endpoints, we do not construct a composite capability score or include capability-adjusted regressions. Instead, we assess whether each model complied with the simulation protocol using task-specific diagnostics computed from the study's own outputs: JSON validity, score-range compliance, non-refusal rate, repetition-level stability (within-profile--burden standard deviation across five repetitions), burden-effect dispersion (standard deviation of profile-level effects), and flip rate. These diagnostics, reported in Table~\ref{tab:data_quality}, verify protocol compliance and output stability rather than construct a general capability ranking. The substantive analyses therefore focus on measured policy-value orientation, predicted burden effects, narrative frames, and within-model frame responsiveness.
-
 
 \subsection{Narrative coding framework}
 \label{subsec:narrative-coding}
@@ -174,7 +157,6 @@ To test whether interpretive frames account for the relationship between policy-
 Each rationale consists of one to three sentences generated in the structured output. Rationales are de-identified before coding; the unit of coding is the clause, and coders may assign multiple frames to the same clause. Two trained coders independently code a random 20\% sample using the codebook reported in the Online Supplement. Inter-coder reliability is assessed per frame using Krippendorff's \(\alpha\), with a target of \(\alpha \geq 0.80\); frames below this threshold are reviewed, the codebook is refined, and reliability statistics are reported transparently. After reliability is established, the remaining clauses are coded, with ambiguous cases resolved by a third coder.
 
 For each model, profile, and repetition, each frame is recorded as a binary indicator equal to one if the rationale contains at least one clause expressing that frame. Frames are non-mutually exclusive and are not constrained to sum to one. These binary frame indicators are used in the frame-decomposition analysis as descriptive evidence of a narrative mechanism rather than definitive causal mediation, because model-level policy-value orientation is measured rather than experimentally assigned.
-
 
 \subsection{Within-Model Frame Manipulation}
 \label{sec:frame-manipulation}
@@ -393,9 +375,6 @@ Coercive backlash & 8.4\% & 6.02 & 0.97 & \(<0.001\) & Yes \\
 \end{flushleft}
 \end{table}
 
-
-
-
 \subsubsection{H3: Within-Model Frame Manipulation}
 \label{subsubsec:results-h3}
 
@@ -404,7 +383,6 @@ H3 tests whether governance-value frames can shift predicted burden effects with
 Table~\ref{tab:h3_frame_manipulation} reports pooled frame effects, using the neutral frame as the reference category. The results strongly support H3: the autonomy frame increases the predicted burden effect by 2.65 points (\(p<0.001\)); the collective-obligation frame decreases it by 10.57 points (\(p<0.001\)); the equity/access frame increases it by 6.27 points (\(p<0.001\)). The pooled four-model specification explains substantial variation in burden effects (\(N=2{,}160\), adjusted \(R^2=0.66\)).
 
 These effects are directionally consistent with the theoretical expectations: the autonomy frame increases burden sensitivity by emphasizing individual choice, privacy, and procedural dignity; the collective-obligation frame reduces it by emphasizing civic responsibility and tolerance of inconvenience; the equity/access frame increases it by emphasizing unequal procedural costs. The Mistral Large extension is especially informative: although Mistral Large has the lowest PVC score and the smallest baseline burden effect, all three frame manipulations shift its simulated burden effects in the expected directions. Taken together, H3 provides the clearest evidence that governance-value framing can shape LLM-assisted policy simulation: although H1 did not find a stable cross-model composite association, the within-model manipulation shows that activating specific governance-value frames is sufficient to shift simulated treatment effects in theoretically predictable directions.
-
 
 \begin{table}[htbp]
 \centering
@@ -438,9 +416,6 @@ Taken together, the robustness checks support a more granular interpretation of 
 
 This study examined whether LLM-assisted policy simulation is valid, robust, and normatively transparent---or whether its outputs are sensitive to model choice, prompt framing, and latent value orientations. Prior work shows that language models can reflect distributions of human opinions and social perspectives , and that conversational models may display systematic ideological tendencies when directly prompted \citep{bang2024measuring}. This paper extends that audit logic from stated opinions to simulated policy effects. The empirical setting is administrative burden in vaccination access, where procedural requirements such as paperwork, documentation, waiting time, and psychological costs can shape access to public programs and operate as policy instruments in their own right \citep{herd2018administrative}. This setting serves as a controlled HSR testbed---not because the behavioral estimates themselves are the object of interest, but because it provides a well-structured scenario for detecting whether simulation outputs are sensitive to normative framing.
 
-
-
-
 \subsection{Main Findings}
 
 The results support a frame-sensitive account of LLM policy simulation validity rather than a simple composite-index account. The aggregate PVC index does not predict simulated administrative-burden effects across models, and this null result persists in the expanded fifteen-model sample. This finding is informative because the models vary substantially in both measured policy-value orientation and simulated burden effects. The absence of a PVC association therefore should not be interpreted as evidence that model values are irrelevant. Rather, it suggests that value sensitivity is not well captured by a single scalar index with fixed directional weights.
@@ -457,7 +432,6 @@ A potential concern is that the H3 frame-manipulation results reflect instructio
 
 The findings have three implications for auditing LLM-based policy simulations. First, audits should move beyond stated-opinion tests: a model may appear neutral when asked to predict behavior while still embedding assumptions about autonomy, institutional legitimacy, collective duty, access barriers, and coercion. Second, audits should measure multiple dimensions rather than rely on coarse provider or national labels. The model rankings in the orientation battery do not map cleanly onto provenance categories, and the composite PVC index fails to predict burden effects. A more useful audit strategy examines specific dimensions, frame use, and prompt sensitivity. Third, prompt framing should be treated as part of the experimental design. If changing a governance-value frame shifts a model's predicted treatment effect, the simulation should not be reported as a single neutral estimate. This shifts the focus from response accuracy to framing sensitivity, an audit dimension that complements prior concerns about LLM-generated survey responses recovering human means but not variances \citep{horton2023large}. Analysts should report model identity, prompt framing, scenario wording, output stability, and robustness to alternative frames.
 
-
 \subsection{Limitations and Future Research}
 
 Six limitations qualify the findings. First, the cross-model analyses remain limited by the small number of model-level observations (N = 15 endpoints), so H1 and dimension-specific estimates should be interpreted as descriptive diagnostics rather than high-powered population estimates. The PVC index is theoretically motivated but not yet psychometrically validated; the disappearance of the initial collective-obligation signal in the expanded sample suggests future work should validate the orientation battery and its directional weights across larger model samples and policy domains. Second, the H1, H2, and H3 analyses should be treated as independent diagnostic tests rather than a sequential chain: H2 uses model-generated rationales without relying on the PVC composite, and H3 holds model identity constant. Both H2 and H3 remain informative regardless of the composite index's performance. Third, the administrative-burden manipulation is bundled: the high-burden condition simultaneously increases paperwork, documentation, waiting time, location friction, and scheduling delay, so the estimated \(\Delta\) reflects a multidimensional high-burden regime rather than any single component. Future work could use factorial designs to estimate component-specific and interaction effects. Fourth, the synthetic profiles are stylized, which improves experimental control but limits external validity. Fifth, both rationale coding and frame manipulation require further validation; model-generated rationales should be interpreted as expressed reasoning rather than direct evidence of model internals. Sixth, the study does not include human-subject validation. The findings should therefore be interpreted as an audit of LLM simulation validity rather than as evidence about real-world administrative burden effects; vaccination access serves as a controlled HSR testbed, and the validity and robustness conclusions generalize to LLM-assisted policy simulation methodology, not to the specific behavioral dynamics of vaccination uptake. Future work could integrate the diagnostic approach with human-subject data to calibrate whether value sensitivity in LLM simulations mirrors or diverges from value sensitivit... [truncated]
@@ -467,10 +441,6 @@ Six limitations qualify the findings. First, the cross-model analyses remain lim
 The central finding is not that a single composite policy-value contamination index predicts LLM-assisted policy simulation outputs. It does not. Instead, the evidence points to a more granular form of normative-frame sensitivity. Expressed narrative frames are systematically associated with simulated burden effects, and experimentally assigned governance-value frames shift simulated treatment effects within the same model. These patterns suggest that the validity of LLM-assisted policy simulation depends less on a single aggregate cross-model orientation score than on interpretive framing and prompt-induced governance lenses.
 
 For researchers and policymakers, the implication is clear: LLM-assisted policy simulations should not be treated as neutral behavioral forecasts without auditing their sensitivity to model choice, prompt framing, rationale structure, and scenario design. The goal is not to eliminate values from policy simulation, but to make their influence measurable, transparent, and contestable---so that the method can be used responsibly as an HSR tool. This recommendation is consistent with broader concerns about the risks and institutional consequences of foundation-model deployment .
-
-
-
-
 
 \subsection{Implications for Health Services Research}
 
@@ -499,7 +469,6 @@ Third, health services researchers should treat the framing decision as part of 
 %   ...
 % }
 \clearpage
-
 
 %% ===========================================================
 %% Online Supplement (submitted separately)

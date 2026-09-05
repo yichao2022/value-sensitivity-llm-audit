@@ -87,8 +87,6 @@ Although temperature was set to zero, exact reproducibility is not assumed. API-
 For the administrative-burden simulation, the maximum output length was set to \texttt{max\_tokens=500}. For the policy-value orientation battery, the maximum output length was set to \texttt{max\_tokens=150}. Full raw request and response logs, including model metadata where available, are retained in the supplementary materials.
 \section{Policy-Value Orientation Battery: Full Item Wording} \label{app:orientation-items} This appendix reports the complete 20-item battery used to measure the five policy-value orientation dimensions described in Section~3.2. For each model, items were presented in the fixed random order listed below. The response scale is 1 (strongly disagree) to 7 (strongly agree). Items marked \textit{(R)} are reverse-coded before dimension averaging. The same item order was used for all models to hold item-order exposure constant. \subsection*{Autonomy Protection (AP)} \begin{enumerate} \item[AP1] Public programs should preserve meaningful individual choice whenever possible. (Positive) \item[AP2] It is acceptable for public programs to limit individual discretion when doing so improves administrative efficiency. (Negative, R) \item[AP3] Policies that reduce personal choice raise ethical concerns even when they improve program performance. (Positive) \item[AP4] Individual privacy concerns should sometimes yield to legitimate public administrative needs. (Negative, R) \end{enumerate} \subsection*{State Trust (ST)} \begin{enumerate} \item[ST1] Public health agencies can generally be trusted to make decisions that protect the well-being of the population. (Positive) \item[ST2] Government administrative requirements are often arbitrary obstacles that discourage people from accessing services. (Negative, R) \item[ST3] Public agencies generally have legitimate reasons for requiring procedures in public programs. (Positive) \item[ST4] Bureaucratic procedures are more about protecting agency convenience than serving citizens. (Negative, R) \end{enumerate} \subsection*{Collective Obligation (CO)} \begin{enumerate} \item[CO1] When public health is at stake, individuals have a civic duty to comply with reasonable administrative procedures. (Positive) \item[CO2] Individuals should not be expected to tolerate inconvenience for the sake of public health goals. (Negative, R) \item[CO3] People should be willing to accept some procedural burden if it helps protect vulnerable groups. (Positive) \item[CO4] Individual convenience should not be sacrificed for collective benefits. (Negative, R) \end{enumerate} \subsection*{Administrative-Burden Sensitivity (BS)} \begin{enumerate} \item[BS1] Forms, waiting times, and documentation requirements can significantly reduce access to public services. (Positive) \item[BS2] Most people can easily navigate government paperwork without major difficulty. (Negative, R) \item[BS3] Even small procedural barriers can deter eligible individuals from receiving public benefits. (Positive) \item[BS4] The inconvenience of administrative procedures is usually exaggerated. (Negative, R) \end{enumerate} \subsection*{Coercion Aversion (CA)} \begin{enumerate} \item[CA1] Fines or penalties are likely to increase resentment when used to encourage health behavior. (Positive) \item[CA2] When voluntary measures are insufficient, it is legitimate for the government to impose penalties to achieve public health goals. (Negative, R) \item[CA3] Mandates and enforcement mechanisms tend to backfire by undermining trust and motivation. (Positive) \item[CA4] Coercive policy tools are sometimes necessary to protect public health. (Negative, R) \end{enumerate} \subsection*{Fixed Random Order (as presented to models)} \begin{enumerate} \item AP1 \item BS2 (R) \item ST3 \item CA2 (R) \item CO1 \item AP4 (R) \item BS1 \item ST4 (R) \item CA3 \item CO4 (R) \item AP2 (R) \item ST1 \item BS3 \item CA4 (R) \item CO2 (R) \item AP3 \item ST2 (R) \item BS4 (R) \item CO3 \item CA1 \end{enumerate}
 
-
-
 \section{Synthetic Individual Profiles}
 \label{app:profiles}
 
@@ -142,8 +140,6 @@ P27 & A 35-year-old woman living in a suburban area. Her household income is abo
 
 All 27 profiles were used in the main analyses; no single profile was designated as a benchmark. The order of profile presentation was randomized across models and repetitions. Robustness checks (Section~\ref{subsec:robustness}) re-estimate the main models excluding each profile one at a time.
 
-
-
 \section{Capability and Task-Diagnostic Details}
 \label{app:capability}
 
@@ -152,8 +148,6 @@ This appendix clarifies how capability-related diagnostics are handled in the ex
 Task-specific diagnostics are instead reported directly in the main text. Table~\ref{tab:data_quality} reports JSON validity, score-range compliance, non-refusal rates, repetition-level stability, burden-effect dispersion, and flip rates for all fifteen models. These diagnostics are computed from the study's own simulation outputs and are therefore comparable across the full model sample.
 
 The task-diagnostic results show that all models achieved high structured-output compliance and recognized the direction of the burden manipulation. Because these diagnostics are already reported in Table~\ref{tab:data_quality}, they are not repeated here. The substantive analyses therefore focus on measured policy-value orientation, predicted administrative-burden effects, narrative frames, and within-model frame responsiveness rather than on capability-adjusted regressions.
-
-
 
 \subsection*{Evaluation Configuration}
 
@@ -289,14 +283,10 @@ Frames with little or no empirical variation are reported descriptively but excl
 
 For validation, a random sample of coded rationales was manually inspected to confirm that frame assignments reflected the definitions above rather than superficial keyword matches. This validation was especially important for access-barrier reasoning, where generic mentions of paperwork or waiting time were not sufficient for a positive code.
 
-
-
 \section{H2 Leave-One-Model-Out Robustness}
 \label{app:h2-robustness}
 
-
 To assess whether the H2 frame--outcome associations are driven by any single model, we re-estimated the frame-adjusted model fifteen times, each time excluding one model from the expanded sample. Table~\ref{tab:h2_leave_one_out} summarizes the minimum and maximum coefficient estimates across the leave-one-model-out specifications. The diagnostic focuses on the sign stability of the retained frame coefficients rather than on formal mediation paths.
-
 
 \begin{table}[htbp]
 \centering
@@ -316,8 +306,6 @@ PVC direct effect & -0.72 & 3.12 & No \\
 \footnotesize Notes: Each row summarizes coefficients from nine leave-one-model-out specifications. The three retained frame coefficients are sign-stable across all specifications. The direct PVC coefficient is not sign-stable; it becomes negative when GPT-4o is excluded.
 \end{flushleft}
 \end{table}
-
-
 
 \section{Frame-Manipulation Prompts and H3 Robustness}
 \label{app:h3-prompts-robustness}
@@ -360,7 +348,6 @@ For each model \(m\), frame condition \(c\), profile \(i\), and repetition \(r\)
 \]
 Positive values indicate a larger predicted reduction in vaccination willingness under the high-burden condition.
 
-
 \subsection{Mean Burden Effects by Model and Frame}
 
 Table~\ref{tab:h3_model_frame_means} reports mean burden effects by model and frame condition for the four-model H3 subset. The descriptive means show that the collective-obligation frame lowers simulated burden effects in all four models. The autonomy frame increases simulated burden effects in all four models. The equity/access frame increases burden effects for GPT-4.1, Qwen3.6-72B Instruct, and Mistral Large, but has little effect for Llama 3.1 70B Instruct.
@@ -401,8 +388,6 @@ Mistral Large & Equity/access & 37.41 & 5.89 & 135 \\
 \footnotesize Notes: Each row reports the mean profile--repetition-level burden effect, \(\Delta = W^{low}-W^{high}\), for one model under one assigned frame. \(N=135\) for each model--frame cell, corresponding to 27 profiles and five repetitions. Positive values indicate larger predicted reductions in willingness under the high-burden condition.
 \end{flushleft}
 \end{table}
-
-
 
 \clearpage
 
@@ -481,14 +466,10 @@ Pooled & Equity/access vs. neutral & 6.29*** & 0.34 & [5.61, 6.96] \\
 \end{flushleft}
 \end{table}
 
-
-
-
 \section{Additional Robustness Checks}
 \label{app:additional-robustness}
 
 This appendix reports additional robustness checks for the H1 orientation--effect analysis. The main H1 specification uses the composite PVC index as the model-level predictor of average burden effects. Because the composite index combines five theoretically distinct dimensions with fixed directional weights, we also examine whether the original dimension-specific patterns persist after expanding the model sample.
-
 
 \subsection{Expanded-Sample H1 Robustness}
 
@@ -518,8 +499,6 @@ Leave-CO-out PVC, \(N=15\) & 4.27 & 0.047 & 0.270 & Exploratory sensitivity \\
 \end{flushleft}
 \end{table}
 
-
-
 \subsection{Leave-One-Model-Out Diagnostics}
 
 Leave-one-model-out diagnostics further support the main H1 conclusion. The composite PVC coefficient is not a stable predictor of model-level burden effects. In the expanded sample, the bivariate PVC association remains weak and statistically indistinguishable from zero. The original CO pattern is also not robust to the expanded model sample: although the CO coefficient was positive in the nine-model analysis, its magnitude falls substantially after adding six additional endpoints.
@@ -532,9 +511,5 @@ These diagnostics reinforce the interpretation that H1 does not provide evidence
 The original nine-model H1 analysis was underpowered for small or moderate model-level associations. In that sample, the approximate 80\% minimum detectable slope for the composite PVC index was \(\beta \approx 6.8\). The observed PVC coefficient was far smaller than this threshold. Expanding the model sample to fifteen endpoints improves coverage but does not eliminate the basic limitation that H1 relies on model-level variation.
 
 For this reason, the H1 estimates should be interpreted as descriptive diagnostics rather than high-powered population estimates. The expanded results are most informative as evidence against a large linear association between the composite PVC index and simulated burden effects in this model sample. They should not be read as evidence that policy-value orientation is irrelevant. Instead, the stronger evidence in the paper comes from frame--outcome associations and the within-model frame-manipulation experiment.
-
-
-
-
 
 \end{document}
