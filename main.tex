@@ -236,109 +236,47 @@ Within hypothesis families, we apply the Benjamini--Hochberg FDR procedure at \(
 \subsection{Data Quality and Descriptive Statistics}
 \label{sec:results-data-quality}
 
-Table~\ref{tab:data_quality} reports task-compliance diagnostics for the expanded fifteen-model simulation (4,050 raw responses, 2,025 low--high burden-effect pairs). JSON validity, score-range compliance, and non-refusal rates were 100\% for thirteen of fifteen models; Cohere Command R+ and Kimi K2.6 each had one malformed response (99.6\% compliance). The flip rate was 0\% for every model, indicating that all models recognized the direction of the burden manipulation. Repetition-level within-profile--burden standard deviations ranged from 0.00 to 3.18 points on the 0--100 scale, indicating high within-model stability. Mean predicted willingness varied substantially across models (51.61--71.61), motivating the use of the within-profile marginal burden-effect outcome in the main analyses.
-
-\begin{table}[htbp]
-\centering
-\caption{Data quality and simulation diagnostics by model}
-\label{tab:data_quality}
-\setlength{\tabcolsep}{4pt}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{lrrrrrrrr}
-\toprule
-Model & \(N\) & JSON\% & Score\% & NonRef\% & Mean \(W\) & StabSD & DeltaSD & Flip\% \\
-\midrule
-GPT-4o & 270 & 100.0 & 100.0 & 100.0 & 71.61 & 0.43 & 7.13 & 0.0 \\
-GPT-4.1 & 270 & 100.0 & 100.0 & 100.0 & 68.30 & 0.62 & 7.12 & 0.0 \\
-Llama 3.1 8B & 270 & 100.0 & 100.0 & 100.0 & 65.41 & 0.28 & 4.54 & 0.0 \\
-Llama 3.1 70B & 270 & 100.0 & 100.0 & 100.0 & 64.70 & 0.37 & 9.75 & 0.0 \\
-Qwen3.6-72B & 270 & 100.0 & 100.0 & 100.0 & 61.57 & 3.18 & 7.22 & 0.0 \\
-Mistral Large & 270 & 100.0 & 100.0 & 100.0 & 60.73 & 0.88 & 5.41 & 0.0 \\
-Cohere Command R+ & 270 & 99.6 & 99.6 & 100.0 & 60.32 & 1.52 & 4.77 & 0.0 \\
-GPT-4.1 mini & 270 & 100.0 & 100.0 & 100.0 & 58.96 & 0.87 & 3.86 & 0.0 \\
-Gemini 2.5 Flash & 270 & 100.0 & 100.0 & 100.0 & 58.91 & 1.57 & 9.05 & 0.0 \\
-Kimi K2.6 & 270 & 99.6 & 99.6 & 100.0 & 58.25 & 1.39 & 5.83 & 0.0 \\
-Claude Haiku & 270 & 100.0 & 100.0 & 100.0 & 56.85 & 0.00 & 6.59 & 0.0 \\
-Gemini 2.5 Pro & 270 & 100.0 & 100.0 & 100.0 & 55.50 & 2.49 & 5.83 & 0.0 \\
-Claude Opus 4.8 & 270 & 100.0 & 100.0 & 100.0 & 53.03 & 0.77 & 6.15 & 0.0 \\
-DeepSeek-V3.2 & 270 & 100.0 & 100.0 & 100.0 & 52.07 & 0.96 & 4.48 & 0.0 \\
-Claude Sonnet 4.6 & 270 & 100.0 & 100.0 & 100.0 & 51.61 & 0.46 & 5.72 & 0.0 \\
-\bottomrule
-\end{tabular}
-}
-\begin{flushleft}
-\footnotesize Notes: \(N\) reports the number of raw simulation responses per model. JSON\% is the percentage of outputs parsed as valid JSON. Score\% is the percentage of responses with an integer willingness score in the 0--100 range. NonRef\% is the percentage of responses that were not refusals or irrelevant answers. Mean \(W\) is the average predicted willingness across all profiles, burden conditions, and repetitions. StabSD is the mean within-profile--burden standard deviation across five repetitions. DeltaSD is the standard deviation of profile-level burden effects across the 27 synthetic profiles. Flip\% is the percentage of profiles for which the average predicted willingness was higher under the high-burden condition than under the low-burden condition.
-\end{flushleft}
-\end{table}
-\subsection{Policy-Value Orientation Profiles}
 \label{sec:results-orientation}
 
-Table~\ref{tab:orientation_profiles} reports policy-value orientation profiles. Higher PVOC values indicate profiles expected to generate larger burden effects. The highest scores are observed for Llama 3.1 8B Instruct, Claude Haiku, and Llama 3.1 70B Instruct; the lowest for Mistral Large, GPT-4o, and DeepSeek-V3.2. The ordering does not map onto provider origin, indicating PVOC captures theoretically specified variation.
-
-\begin{table}[htbp]
-\centering
-\caption{Policy-value orientation profiles by model}
-\label{tab:orientation_profiles}
-\small
-\begin{tabular*}{0.92\textwidth}{@{\extracolsep{\fill}}L{3.7cm}rrrrrr@{}}
-\toprule
-Model & AP & ST & CO & BS & CA & PVC \\
-\midrule
-Llama 3.1 8B Instruct & 3.00 & 3.25 & 3.25 & 4.25 & 4.75 & 2.90 \\
-Claude Haiku & 4.50 & 4.50 & 4.75 & 5.50 & 3.75 & 2.20 \\
-Llama 3.1 70B Instruct & 4.75 & 5.00 & 5.50 & 6.00 & 3.75 & 1.85 \\
-Claude Sonnet 4.6 & 4.50 & 4.50 & 6.00 & 5.75 & 3.75 & 1.21 \\
-Qwen3.6-72B Instruct & 4.50 & 4.75 & 5.50 & 5.75 & 3.50 & 0.75 \\
-Gemini 2.5 Flash & 4.50 & 4.75 & 6.50 & 6.50 & 3.25 & 0.31 \\
-Gemini 2.5 Pro & 4.25 & 4.75 & 6.75 & 6.50 & 3.50 & 0.01 \\
-GPT-4.1 mini & 4.25 & 5.50 & 5.75 & 6.50 & 3.50 & -0.24 \\
-Cohere Command R+ & 3.75 & 4.75 & 4.50 & 5.50 & 3.50 & -0.28 \\
-Claude Opus 4.8 & 4.50 & 5.00 & 5.00 & 5.00 & 3.50 & -0.41 \\
-GPT-4.1 & 4.50 & 5.25 & 6.25 & 6.00 & 3.50 & -0.61 \\
-Kimi K2.6 & 4.00 & 4.75 & 5.75 & 6.00 & 3.25 & -0.84 \\
-DeepSeek-V3.2 & 4.00 & 5.00 & 6.00 & 5.50 & 3.75 & -1.30 \\
-GPT-4o & 4.25 & 5.25 & 5.50 & 5.75 & 3.00 & -1.89 \\
-Mistral Large & 4.00 & 5.50 & 6.00 & 6.00 & 2.75 & -3.65 \\
-\bottomrule
-\end{tabular*}
-\begin{flushleft}
-\footnotesize Notes: AP = autonomy protection; ST = state trust; CO = collective obligation; BS = administrative-burden sensitivity; CA = coercion aversion. AP, ST, CO, BS, and CA are mean recoded item scores on a 1--7 scale. PVOC is standardized across the fifteen-model sample and computed as \(z(AP)-z(ST)-z(CO)+z(BS)+z(CA)\). The table is sorted by PVOC in descending order. PVOC is used as a theoretically motivated diagnostic aggregate rather than as a validated psychometric scale.
-\end{flushleft}
-\end{table}
 \subsection{Predicted Administrative-Burden Effects}
 \label{sec:results-burden-effects}
 
-Table~\ref{tab:burden_effects} reports predicted administrative-burden effects. For every model, mean predicted willingness is lower under high-burden conditions (range: 20.87--64.85). The largest effects are estimated by Gemini 2.5 Pro, Gemini 2.5 Flash, and DeepSeek-V3.2. Variation is not reducible to baseline willingness, motivating analyses of whether cross-model variation is associated with policy-value orientation and rationale frames.
+\subsection{Orientation Profiles and Burden Effects}
+\label{sec:results-orientation-burden}
+
+Table~\ref{tab:orientation_burden} reports policy-value orientation profiles and predicted administrative-burden effects by model. Higher PVOC values indicate profiles expected to generate larger burden effects. For every model, mean predicted willingness is lower under high-burden conditions. Variation is not reducible to baseline willingness, motivating analyses of whether cross-model variation is associated with policy-value orientation and rationale frames.
 
 \begin{table}[htbp]
 \centering
-\caption{Predicted administrative-burden effects by model}
-\label{tab:burden_effects}
-\begin{tabular}{lrrrrrrr}
+\caption{Policy-value orientation profiles and predicted administrative-burden effects by model}
+\label{tab:orientation_burden}
+\small
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{3.5cm}rrrrr@{}}
 \toprule
-Model & \(N_{\Delta}\) & Low \(W\) & High \(W\) & \(\bar{\Delta}\) & SD\((\Delta)\) & 95\% CI low & 95\% CI high \\
+Model & PVC & Low $W$ & High $W$ & $\bar{\Delta}$ & 95\% CI \\
 \midrule
-Gemini 2.5 Pro & 135 & 87.93 & 23.07 & 64.85 & 6.88 & 63.69 & 66.01 \\
-Gemini 2.5 Flash & 135 & 88.01 & 29.81 & 58.19 & 9.61 & 56.57 & 59.81 \\
-DeepSeek-V3.2 & 135 & 76.63 & 27.52 & 49.11 & 5.25 & 48.23 & 50.00 \\
-Claude Sonnet 4.6 & 135 & 71.13 & 32.09 & 39.04 & 5.79 & 38.06 & 40.01 \\
-Llama 3.1 8B Instruct & 135 & 84.33 & 46.48 & 37.85 & 4.72 & 37.06 & 38.65 \\
-Kimi K2.6 & 134 & 77.07 & 39.57 & 37.51 & 6.51 & 36.41 & 38.62 \\
-Claude Opus 4.8 & 135 & 70.73 & 35.33 & 35.40 & 6.23 & 34.35 & 36.45 \\
-GPT-4.1 mini & 135 & 76.48 & 41.44 & 35.04 & 4.51 & 34.28 & 35.80 \\
-Qwen3.6-72B Instruct & 135 & 78.96 & 44.19 & 34.78 & 8.85 & 33.29 & 36.27 \\
-Llama 3.1 70B Instruct & 135 & 81.11 & 48.30 & 32.81 & 9.82 & 31.16 & 34.47 \\
-Cohere Command R+ & 134 & 75.11 & 45.63 & 29.48 & 5.83 & 28.49 & 30.46 \\
-GPT-4.1 & 135 & 82.81 & 53.78 & 29.04 & 7.24 & 27.82 & 30.26 \\
-Claude Haiku & 135 & 70.96 & 42.74 & 28.22 & 6.50 & 27.13 & 29.32 \\
-GPT-4o & 135 & 83.56 & 59.67 & 23.89 & 7.17 & 22.68 & 25.10 \\
-Mistral Large & 135 & 71.16 & 50.30 & 20.87 & 5.64 & 19.92 & 21.82 \\
+Llama 3.1 8B Instruct & 2.90 & 84.33 & 46.48 & 37.85 & [37.06, 38.65] \\
+Claude Haiku & 2.20 & 70.96 & 42.74 & 28.22 & [27.13, 29.32] \\
+Llama 3.1 70B Instruct & 1.85 & 81.11 & 48.30 & 32.81 & [31.16, 34.47] \\
+Claude Sonnet 4.6 & 1.21 & 71.13 & 32.09 & 39.04 & [38.06, 40.01] \\
+Qwen3.6-72B Instruct & 0.75 & 78.96 & 44.19 & 34.78 & [33.29, 36.27] \\
+Gemini 2.5 Flash & 0.31 & 88.01 & 29.81 & 58.19 & [56.57, 59.81] \\
+Gemini 2.5 Pro & 0.01 & 87.93 & 23.07 & 64.85 & [63.69, 66.01] \\
+GPT-4.1 mini & $-$0.24 & 76.48 & 41.44 & 35.04 & [34.28, 35.80] \\
+Cohere Command R+ & $-$0.28 & 75.11 & 45.63 & 29.48 & [28.49, 30.46] \\
+Claude Opus 4.8 & $-$0.41 & 70.73 & 35.33 & 35.40 & [34.35, 36.45] \\
+GPT-4.1 & $-$0.61 & 82.81 & 53.78 & 29.04 & [27.82, 30.26] \\
+Kimi K2.6 & $-$0.84 & 77.07 & 39.57 & 37.51 & [36.41, 38.62] \\
+DeepSeek-V3.2 & $-$1.30 & 76.63 & 27.52 & 49.11 & [48.23, 50.00] \\
+GPT-4o & $-$1.89 & 83.56 & 59.67 & 23.89 & [22.68, 25.10] \\
+Mistral Large & $-$3.65 & 71.16 & 50.30 & 20.87 & [19.92, 21.82] \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 \begin{flushleft}
-\footnotesize Notes: \(N_{\Delta}\) reports the number of valid low--high burden-effect pairs per model. Low \(W\) and High \(W\) are mean predicted vaccination willingness scores under the low- and high-burden conditions. \(\bar{\Delta}\) is computed as Low \(W\) minus High \(W\). Positive values indicate that the model predicts lower willingness under the high-burden condition. SD\((\Delta)\) is the standard deviation of profile--repetition-level burden effects. Confidence intervals are calculated as \(\bar{\Delta} \pm 1.96 \times SE\), where \(SE = SD(\Delta)/\sqrt{N_{\Delta}}\). Kimi K2.6 and Cohere Command R+ have \(N_{\Delta}=134\) because one low--high pair was excluded for each model due to an invalid or unparsable response.
+\footnotesize Notes: PVC = Policy-Value Orientation Composite, standardized across the fifteen-model sample. Low $W$ and High $W$ are mean predicted vaccination willingness scores under low- and high-burden conditions. $\bar{\Delta}$ = Low $W$ $-$ High $W$. 95\% CI calculated as $\bar{\Delta} \pm 1.96 \times SE$. Table sorted by PVC in descending order.
 \end{flushleft}
 \end{table}
+
 \subsection{Hypothesis Tests}
 \label{sec:results-hypotheses}
 
@@ -404,32 +342,46 @@ Coercive backlash & 8.4\% & 6.02 & 0.97 & \(<0.001\) & Yes \\
 
 H3 tests whether governance-value frames can shift predicted burden effects within the same base model, using a purposive four-model subset: GPT-4.1, Llama 3.1 70B Instruct, Qwen3.6-72B Instruct, and Mistral Large.
 
-Table~\ref{tab:h3_frame_manipulation} reports pooled frame effects, using the neutral frame as the reference category. The inferential unit is the profile--frame combination, with standard errors clustered at the profile level to account for the five repeated queries per profile. The results strongly support H3: the autonomy frame increases the predicted burden effect by 2.62 points (95\% CI [1.95, 3.29]); the collective-obligation frame decreases it by 10.54 points (95\% CI [-11.22, -9.87]); the equity/access frame increases it by 6.29 points (95\% CI [5.61, 6.96]). All three frame contrasts are statistically significant at conventional levels. The pooled four-model specification explains substantial variation in burden effects (\(N=2{,}160\) profile--repetition observations, 108 unique profiles, adjusted \(R^2=0.66\)).
+Figure~\ref{fig:h3_forest} reports pooled frame effects, using the neutral frame as the reference category. The inferential unit is the profile--frame combination, with standard errors clustered at the profile level to account for the five repeated queries per profile. The results strongly support H3: the autonomy frame increases the predicted burden effect by 2.62 points (95\% CI [1.95, 3.29]); the collective-obligation frame decreases it by 10.54 points (95\% CI [-11.22, -9.87]); the equity/access frame increases it by 6.29 points (95\% CI [5.61, 6.96]). All three frame contrasts are statistically significant at conventional levels. The pooled four-model specification explains substantial variation in burden effects (\(N=2{,}160\) profile--repetition observations, 108 unique profiles, adjusted \(R^2=0.66\)).
 
 These estimates should be interpreted as profile-level frame contrasts rather than population-level treatment effects. The 2,160 observations are not independent patient-level observations; they represent 27 synthetic profiles $\times$ 4 frames $\times$ 4 models, with five repetitions per profile--frame--model cell. The clustering adjustment treats the profile as the primary sampling unit, reflecting the study design in which synthetic profiles are the controlled test cases and model queries are repeated measurements. The small standard errors (SE $\approx$ 0.34) and narrow confidence intervals reflect the within-profile consistency of LLM responses at temperature = 0, not population-level precision in the traditional sense. The effect sizes (2.62, 6.29, 10.54 points on a 0--100 willingness scale) are the primary quantities of interest, with uncertainty quantified via profile-clustered standard errors.
 
 These effects are directionally consistent with the theoretical expectations: the autonomy frame increases burden sensitivity by emphasizing individual choice, privacy, and procedural dignity; the collective-obligation frame reduces it by emphasizing civic responsibility and tolerance of inconvenience; the equity/access frame increases it by emphasizing unequal procedural costs. The Mistral Large extension is especially informative: although Mistral Large has the lowest PVOC score and the smallest baseline burden effect, all three frame manipulations shift its simulated burden effects in the expected directions. Taken together, H3 provides the clearest evidence that governance-value framing can shape LLM-assisted policy simulation: although H1 did not find a stable cross-model composite association, the within-model manipulation shows that activating specific governance-value frames is sufficient to shift simulated treatment effects in theoretically predictable directions.
 
-\begin{table}[htbp]
+\begin{figure}[htbp]
 \centering
-\caption{Within-model frame-manipulation effects}
-\label{tab:h3_frame_manipulation}
-\begin{tabular}{lrrrr}
+\caption{Forest plot of within-model frame-manipulation effects}
+\label{fig:h3_forest}
+\begin{minipage}{0.9\textwidth}
+\small
+\textbf{Pooled estimates (four-model average):}\
+\begin{tabular}{lcc}
 \toprule
-Frame contrast & Coefficient & SE & 95\% CI & \(p\) \\
+Frame contrast & Coefficient [95\% CI] & $p$ \\
 \midrule
-Autonomy vs. neutral & 2.62 & 0.34 & [1.95, 3.29] & \(<0.001\) \\
-Collective obligation vs. neutral & -10.54 & 0.34 & [-11.22, -9.87] & \(<0.001\) \\
-Equity/access vs. neutral & 6.29 & 0.34 & [5.61, 6.96] & \(<0.001\) \\
-\midrule
-\(N\) & \multicolumn{4}{r}{2,160} \\
-Adjusted \(R^2\) & \multicolumn{4}{r}{0.6603} \\
+Collective obligation vs. neutral & $-$10.54 [$-$11.22, $-$9.87] & $<$0.001 \\
+Equity/access vs. neutral & 6.29 [5.61, 6.96] & $<$0.001 \\
+Autonomy vs. neutral & 2.62 [1.95, 3.29] & $<$0.001 \\
 \bottomrule
 \end{tabular}
+
+\vspace{0.5em}
+\textbf{Model-specific estimates:}\
+\begin{tabular}{lccc}
+\toprule
+Model & Autonomy & Collective & Equity \\
+\midrule
+GPT-4.1 & 2.41 [1.52, 3.30] & $-$9.78 [$-$10.67, $-$8.89] & 5.93 [5.04, 6.82] \\
+Llama 3.1 70B & 2.96 [2.07, 3.85] & $-$11.19 [$-$12.08, $-$10.30] & 5.52 [4.63, 6.41] \\
+Qwen3.6-72B & 2.48 [1.59, 3.37] & $-$10.37 [$-$11.26, $-$9.48] & 7.41 [6.52, 8.30] \\
+Mistral Large & 2.63 [1.74, 3.52] & $-$10.81 [$-$11.70, $-$9.92] & 6.30 [5.41, 7.19] \\
+\bottomrule
+\end{tabular}
+\end{minipage}
 \begin{flushleft}
-\footnotesize Notes: The dependent variable is the profile--repetition-level burden effect, \(\Delta = W^{low} - W^{high}\). The neutral frame is the omitted reference category. The pooled model includes four base models: GPT-4.1, Llama 3.1 70B Instruct, Qwen3.6-72B Instruct, and Mistral Large, with model and profile fixed effects. Each cell contains five repeated runs per model--profile--frame combination; standard errors are clustered at the model--profile level (108 unique model--profile clusters across 2,160 observations) to account for within-cell correlation. Positive coefficients indicate larger predicted reductions in willingness under high administrative burden.
+\footnotesize Notes: Coefficients represent the shift in predicted burden effect (percentage points on 0--100 willingness scale) relative to the neutral frame. Positive values indicate larger predicted burden effects. Pooled estimates use model and profile fixed effects with standard errors clustered at the profile level ($N=2{,}160$, adjusted $R^2=0.66$). Model-specific estimates show consistent directional patterns across all four base models.
 \end{flushleft}
-\end{table}
+\end{figure}
 \subsection{Robustness Checks}
 \label{sec:results-robustness}
 

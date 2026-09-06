@@ -28,6 +28,44 @@
 
 This Online Supplement contains supporting materials for the main text, organized as follows. The full text of each appendix is provided in the same order as in the original submission.
 
+\section{Data Quality and Simulation Diagnostics}
+\label{sec:data-quality}
+
+Table~\ref{tab:data_quality} reports task-compliance diagnostics for the expanded fifteen-model simulation (4,050 raw responses, 2,025 low--high burden-effect pairs). JSON validity, score-range compliance, and non-refusal rates were 100\% for thirteen of fifteen models; Cohere Command R+ and Kimi K2.6 each had one malformed response (99.6\% compliance). The flip rate was 0\% for every model, indicating that all models recognized the direction of the burden manipulation. Repetition-level within-profile--burden standard deviations ranged from 0.00 to 3.18 points on the 0--100 scale, indicating high within-model stability.
+
+\begin{table}[htbp]
+\centering
+\caption{Data quality and simulation diagnostics by model}
+\label{tab:data_quality}
+\setlength{\tabcolsep}{4pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Model & $N$ & JSON\% & Score\% & NonRef\% & Mean $W$ & StabSD & DeltaSD & Flip\% \\
+\midrule
+GPT-4o & 270 & 100.0 & 100.0 & 100.0 & 71.61 & 0.43 & 7.13 & 0.0 \\
+GPT-4.1 & 270 & 100.0 & 100.0 & 100.0 & 68.30 & 0.62 & 7.12 & 0.0 \\
+Llama 3.1 8B & 270 & 100.0 & 100.0 & 100.0 & 65.41 & 0.28 & 4.54 & 0.0 \\
+Llama 3.1 70B & 270 & 100.0 & 100.0 & 100.0 & 64.70 & 0.37 & 9.75 & 0.0 \\
+Qwen3.6-72B & 270 & 100.0 & 100.0 & 100.0 & 61.57 & 3.18 & 7.22 & 0.0 \\
+Mistral Large & 270 & 100.0 & 100.0 & 100.0 & 60.73 & 0.88 & 5.41 & 0.0 \\
+Cohere Command R+ & 270 & 99.6 & 99.6 & 100.0 & 60.32 & 1.52 & 4.77 & 0.0 \\
+GPT-4.1 mini & 270 & 100.0 & 100.0 & 100.0 & 58.96 & 0.87 & 3.86 & 0.0 \\
+Gemini 2.5 Flash & 270 & 100.0 & 100.0 & 100.0 & 58.91 & 1.57 & 9.05 & 0.0 \\
+Kimi K2.6 & 270 & 99.6 & 99.6 & 100.0 & 58.25 & 1.39 & 5.83 & 0.0 \\
+Claude Haiku & 270 & 100.0 & 100.0 & 100.0 & 56.85 & 0.00 & 6.59 & 0.0 \\
+Gemini 2.5 Pro & 270 & 100.0 & 100.0 & 100.0 & 55.50 & 2.49 & 5.83 & 0.0 \\
+Claude Opus 4.8 & 270 & 100.0 & 100.0 & 100.0 & 53.03 & 0.77 & 6.15 & 0.0 \\
+DeepSeek-V3.2 & 270 & 100.0 & 100.0 & 100.0 & 52.07 & 0.96 & 4.48 & 0.0 \\
+Claude Sonnet 4.6 & 270 & 100.0 & 100.0 & 100.0 & 51.61 & 0.46 & 5.72 & 0.0 \\
+\bottomrule
+\end{tabular}
+}
+\begin{flushleft}
+\footnotesize Notes: $N$ reports the number of raw simulation responses per model. JSON\% is the percentage of outputs parsed as valid JSON. Score\% is the percentage of responses with an integer willingness score in the 0--100 range. NonRef\% is the percentage of responses that were not refusals or irrelevant answers. Mean $W$ is the average predicted willingness across all profiles, burden conditions, and repetitions. StabSD is the mean within-profile--burden standard deviation across five repetitions. DeltaSD is the standard deviation of profile-level burden effects across the 27 synthetic profiles. Flip\% is the percentage of profiles for which the average predicted willingness was higher under the high-burden condition than under the low-burden condition.
+\end{flushleft}
+\end{table}
+
 \appendix
 
 \section{Model Versioning, API Endpoints, and Decoding Parameters}
