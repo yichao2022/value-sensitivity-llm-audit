@@ -83,11 +83,9 @@
 
 Administrative burden in U.S. health services---the learning, psychological, and compliance costs that individuals face when interacting with public programs---is a well-documented barrier to care \citep{Shin2025}. These burdens include forms, documentation requirements, waiting time, procedural uncertainty, and perceived loss of autonomy, and they can delay or discourage access to vaccination and other preventive services \citep{Shin2025}. Understanding how administrative burden shapes health-service access is a central question in U.S. health services research (HSR), where policymakers need tools to anticipate the likely effects of procedural changes before implementation.
 
-Large language models (LLMs) are increasingly used in HSR not only to generate text but also to simulate social judgments, preferences, and behavioral responses \citep{Aher2022,Park2023,Argyle2023,Lin2024}. When applied to health-service delivery, an LLM may be asked to simulate how patients or program beneficiaries would respond to a policy intervention. This creates a methodological chain:
-\[
-\text{administrative burden} \rightarrow \text{health-service access/delivery} \rightarrow \text{LLM policy simulation} \rightarrow \text{validity threat from analyst framing}.
-\]
-The core validity question is whether LLM-assisted policy simulations are robust across models and framing choices. Vaccination access serves as a controlled HSR testbed for evaluating this validity threat. This paper evaluates whether simulated treatment effects are sensitive to the normative lens activated by model architecture, training data, or prompt design.
+Large language models (LLMs) are increasingly used in health services research (HSR) to simulate policy effects---generating treatment-effect estimates for administrative burden, access barriers, and behavioral responses. This creates a new methodological problem: seemingly technical treatment-effect estimates may depend on analyst-selected normative framing. The same model, same synthetic population, and same policy scenario can produce materially different simulated effects depending on which governance-value lens---autonomy, collective obligation, or equity---is activated in the prompt.
+
+This paper develops and validates a multi-level diagnostic framework for auditing whether LLM-assisted policy simulation outputs are robust to alternative normative framings. We use administrative burden in U.S. vaccination access as a controlled HSR testbed to demonstrate the framework.
 
 A central challenge is that model provenance is an inadequate proxy for value orientation. To avoid treating development origin as a fixed ideological category, I independently measure each model's policy-value orientation using a structured battery capturing five dimensions: autonomy protection, state trust, collective obligation, administrative-burden sensitivity, and coercion aversion.
 
@@ -103,18 +101,18 @@ Contributions: (1) shift LLM value-sensitivity study from opinion to simulated p
 
 Policy-value orientation is defined as systematic tendencies to interpret governance situations through assumptions about individual--institution relationships, legitimacy of public authority, and procedural costs. The framework captures five dimensions (autonomy protection, state trust, collective obligation, burden sensitivity, coercion aversion) via a structured battery. The PVOC aggregates these dimensions with theoretically specified weights, treated as a diagnostic aggregate rather than validated scale. Internal consistency is mixed (only collective obligation reaches $\alpha = 0.869$), consistent with prior findings that human psychometric scales may not transfer directly to LLMs.
 
-\subsection{Hypotheses}
-\label{sec:hypotheses}
+\subsection{Three-Level Diagnostic Framework}
+\label{sec:diagnostics}
 
-Tests proceed from aggregate orientation to narrative associations to within-model evidence. Each step is informative regardless of preceding outcomes.
+The framework proceeds from coarse to fine-grained diagnostics. Each diagnostic is informative regardless of the others.
 
-\textbf{H1 (Orientation--Effect).} Models with higher PVOC scores should produce larger burden effects. A null result suggests value sensitivity does not follow a simple composite pathway.
+\textbf{Diagnostic 1 --- Aggregate Orientation.} We first test whether a scalar policy-value composite (PVOC) predicts cross-model variation in simulated burden effects. A null result would indicate that simple ideology/value scores are insufficient for auditing LLM simulation validity.
 
-\textbf{H2 (Frame Association).} Expressed frames should associate with burden effects: access-barrier/autonomy/coercive frames with larger effects; procedural-legitimacy/collective frames with smaller effects. Frames are generated, not assigned---H2 identifies associations, not causal pathways.
+\textbf{Diagnostic 2 --- Naturally Expressed Framing.} We examine whether interpretive frames expressed in model rationales systematically co-occur with simulated burden effects. Access-barrier, autonomy-infringement, and coercive-backlash frames should correspond to larger effects; procedural-legitimacy and collective-responsibility frames to smaller effects. Because frames are generated rather than assigned, this diagnostic identifies rationale--outcome co-expression rather than causal pathways.
 
-\textbf{H3 (Frame Manipulation).} Assigned governance-value frames should causally shift burden effects: autonomy/equity increase effects; collective-obligation decreases effects. Fixed model/profiles/scenarios attribute shifts to framing.
+\textbf{Diagnostic 3 --- Experimental Frame Sensitivity.} We test whether experimentally assigned governance-value frames causally shift simulated burden effects within the same base model. Autonomy and equity/access frames should increase effects; collective-obligation frames should decrease them. Holding model, profiles, and scenarios fixed attributes any shift to framing itself.
 
-Each hypothesis addresses distinct questions (aggregate, narrative, causal) and is informative independently.
+Each diagnostic addresses a distinct aspect of normative-frame sensitivity and contributes to the overall assessment of simulation validity.
 
 \begin{figure}[htbp]
 \centering
@@ -264,7 +262,7 @@ This subsection reports the hypothesis-specific tests as three independent diagn
 \subsubsection{H1: Orientation--Effect Models}
 \label{subsubsec:results-h1}
 
-H1 tests whether PVOC predicts simulated burden effects using a bivariate model-level regression (N=15). The estimated coefficient is positive but small (\(\hat{\beta}=1.51\), 95\% CI \([-2.41, 5.43]\), \(R^2=0.044\)), not reaching conventional detectability thresholds (minimum detectable \(R^2\) $\approx$ 0.40). The composite PVOC does not provide evidence of stable linear association with predicted burden effects.
+\textbf{Diagnostic 1 Result: Aggregate orientation performs poorly.} The PVOC does not predict cross-model variation in simulated burden effects ($\hat{\beta}=1.51$, 95\% CI [$-$2.41, 5.43], $R^2=0.044$). At N=15, the minimum detectable $R^2$ is approximately 0.40, so the null result indicates that a simple scalar composite is insufficient for auditing LLM simulation validity. This is a valuable methodological finding: researchers should not rely on aggregate ideology/value scores alone to assess simulation robustness.
 
 Figure~\ref{fig:pvc_delta} visualizes the bivariate relationship. Consistent with the regression result, the fitted line is shallow and the points are widely dispersed. Models with higher PVOC scores do not necessarily predict larger burden effects: Llama 3.1 8B Instruct has the highest PVOC score but predicts a mid-range burden effect, while Gemini 2.5 Pro has a near-zero PVOC score but predicts the largest effect in the sample.
 
@@ -369,7 +367,11 @@ Robustness checks support granular interpretation: simulated policy effects are 
 \section{Discussion}
 \label{sec:discussion}
 
-This study examined LLM policy simulation validity using administrative burden in vaccination access as a controlled HSR testbed. Results support frame-sensitive validity: the aggregate PVC index does not predict simulated burden effects across models, suggesting value sensitivity is not captured by a single scalar index.
+This study develops and validates a three-level diagnostic framework for auditing normative-frame sensitivity in LLM-assisted policy simulation. Using administrative burden in vaccination access as a controlled HSR testbed, we demonstrate that seemingly technical treatment-effect estimates depend on analyst-selected normative framing.
+
+\textbf{Summary of Diagnostic Results.} Diagnostic 1 shows that aggregate policy-value scores (PVOC) do not predict cross-model variation---a valuable negative finding indicating that simple scalar composites are insufficient for validity auditing. Diagnostic 2 demonstrates that naturally expressed interpretive frames systematically co-occur with simulated effects: access-barrier and coercive-backlash rationales correspond to larger burden effects; collective-responsibility rationales to smaller effects. Diagnostic 3 confirms experimental frame sensitivity: holding model and population fixed, alternative governance-value frames (autonomy, collective obligation, equity/access) materially shift estimated policy effects by 3--11 percentage points.
+
+Taken together, the three diagnostics establish that LLM-assisted policy simulation is normatively frame-sensitive. The same model, same synthetic profiles, and same policy scenario can produce materially different treatment-effect estimates depending on the normative lens activated by the prompt.
 
 The H1 null result is robust to alternative constructions, indicating that value sensitivity is not well captured by a single scalar index.
 
@@ -389,9 +391,9 @@ Seventh, and most importantly for health services research, the vaccination-acce
 
 \subsection{Conclusion}
 
-The central finding is normative-frame sensitivity: expressed narrative frames are systematically associated with simulated burden effects, and experimentally assigned governance-value frames shift simulated treatment effects within the same model. Validity depends less on aggregate orientation scores than on interpretive framing.
+The central finding is that LLM-assisted policy simulation creates a new methodological problem for HSR: seemingly technical treatment-effect estimates may depend on analyst-selected normative framing. The three-level diagnostic framework demonstrates that (1) simple aggregate value scores are insufficient for validity auditing, (2) naturally expressed interpretive frames systematically co-occur with simulated effects, and (3) experimentally assigned governance-value frames materially shift estimated policy effects.
 
-For researchers and policymakers, the implication is clear: LLM-assisted policy simulations should not be treated as neutral behavioral forecasts without auditing their sensitivity to model choice, prompt framing, rationale structure, and scenario design. The goal is not to eliminate values from policy simulation, but to make their influence measurable, transparent, and contestable---so that the method can be used responsibly as an HSR tool. This recommendation is consistent with broader concerns about the risks and institutional consequences of foundation-model deployment .
+For HSR researchers using LLMs for policy simulation, the implication is clear: report frame sensitivity rather than treating one prompt/model output as a neutral point estimate. Analysts should document model identity, prompt framing, scenario wording, and robustness to alternative frames. The goal is not to eliminate values from policy simulation, but to make their influence measurable, transparent, and contestable---so that the method can be used responsibly as an HSR tool.
 
 \clearpage
 
