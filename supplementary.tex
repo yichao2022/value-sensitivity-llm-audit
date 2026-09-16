@@ -1,32 +1,6 @@
-\documentclass[11pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath,amssymb}
-\usepackage{graphicx}
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{pdflscape}
-\usepackage{xurl}
-\usepackage[margin=1in]{geometry}
-\usepackage{setspace}
-\usepackage[round]{natbib}
-\usepackage{hyperref}
-\usepackage{caption}
-\usepackage{subcaption}
-
-\singlespacing
-\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
-\newcommand{\breakabletexttt}[1]{\texttt{\detokenize{#1}}}
-
-\title{Online Supplement: ``Auditing Value Sensitivity in LLM-Assisted Policy Simulation for Health Services Research''}
-\author{Yichao Jin}
-\date{\today}
-
-\begin{document}
-\maketitle
-
-This Online Supplement contains supporting materials for the main text, organized as follows. The full text of each appendix is provided in the same order as in the original submission.
+% ---------- 在线补充材料 ----------
+% 此文件作为 main.tex 的附录内容被引入
+% 不要在此文件中设置 \documentclass 或 \begin{document}
 
 \section{Data Quality and Simulation Diagnostics}
 \label{sec:data-quality}
@@ -587,5 +561,3 @@ These diagnostics reinforce the interpretation that H1 does not provide evidence
 The original nine-model H1 analysis was underpowered for small or moderate model-level associations. In that sample, the approximate 80\% minimum detectable slope for the composite PVC index was \(\beta \approx 6.8\). The observed PVC coefficient was far smaller than this threshold. Expanding the model sample to fifteen endpoints improves coverage but does not eliminate the basic limitation that H1 relies on model-level variation.
 
 For this reason, the H1 estimates should be interpreted as descriptive diagnostics rather than high-powered population estimates. The expanded results are most informative as evidence against a large linear association between the composite PVC index and simulated burden effects in this model sample. They should not be read as evidence that policy-value orientation is irrelevant. Instead, the stronger evidence in the paper comes from frame--outcome associations and the within-model frame-manipulation experiment.
-
-\end{document}
