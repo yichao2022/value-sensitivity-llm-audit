@@ -12,6 +12,7 @@
 \usepackage{setspace}
 \usepackage[round]{natbib}
 \usepackage{hyperref}
+\hypersetup{hidelinks}  % submission PDF: no coloured link borders
 \usepackage{caption}
 \usepackage{subcaption}
 
@@ -597,7 +598,7 @@ Positive values indicate a larger predicted reduction in vaccination willingness
 
 \subsection{Mean Burden Effects by Model and Frame}
 
-Table~\ref{tab:h3_model_frame_means} reports mean burden effects by model and frame condition for the four-model H3 subset. The descriptive means show that the collective-obligation frame lowers simulated burden effects in all four models, and that the autonomy frame increases simulated burden effects in three of the four models. The remaining contrasts are model-specific rather than uniform: for Qwen3.7 Plus the autonomy frame lowers the mean burden effect (53.71 vs.\ 56.59 under the neutral frame), and the equity/access frame has little effect for that model (55.64) and for Llama 3.1 70B Instruct (36.42 vs.\ 27.11 under neutral, a positive but smaller shift than the autonomy frame). The absolute level of the burden effect also differs substantially across models under the neutral frame (25.59 for GPT-4.1 to 56.59 for Qwen3.7 Plus), so frame effects are interpreted relative to each model's own neutral baseline.
+Table~\ref{tab:h3_model_frame_means} reports mean burden effects by model and frame condition for the four-model H3 subset. The descriptive means show that the collective-obligation frame lowers simulated burden effects in all four models, and that the autonomy frame increases simulated burden effects in three of the four models. The remaining contrasts are model-specific rather than uniform: for Qwen3.7 Plus the autonomy frame lowers the mean burden effect (53.71 vs.\ 56.59 under the neutral frame), and the equity/access frame shifts that model only slightly (55.64 vs.\ 56.59 under neutral). Equity/access is instead sizeable and precisely estimated for Llama 3.1 70B Instruct (36.42 vs.\ 27.11 under neutral; regression coefficient $+9.36$, $p<0.001$), where it is smaller than the autonomy shift but not negligible. The absolute level of the burden effect also differs substantially across models under the neutral frame (25.59 for GPT-4.1 to 56.59 for Qwen3.7 Plus), so frame effects are interpreted relative to each model's own neutral baseline.
 
 Mistral Large is a particularly informative robustness case. It has the lowest PVOC score in the expanded fifteen-model sample, and all three frame manipulations shift its simulated burden effects in the expected directions. This suggests that frame sensitivity is not limited to models with high baseline PVOC or high baseline burden sensitivity.
 
@@ -676,6 +677,7 @@ Mistral Large & Equity/access & $+2.59$ & 0.023 & 0.030 & 0.027 \\
 
 Table~\ref{tab:h3_model_specific_effects} reports model-specific frame regressions for the four-model H3 subset. Each model-specific regression estimates \(\Delta\) as a function of frame indicators and profile fixed effects, using the neutral frame as the reference condition. The pooled column corresponds to the main H3 specification reported in the main text, which pools the same four models and includes model and profile fixed effects.
 
+\clearpage  % keep the model-specific table off the middle of a paragraph
 \begin{table}[htbp]
 \centering
 \caption{Model-specific frame-manipulation effects}
@@ -706,7 +708,7 @@ Equity/access vs. neutral
 \bottomrule
 \end{tabular}
 \begin{flushleft}
-\footnotesize Notes: Each model-specific column reports a regression of \(\Delta\) on frame indicators and profile fixed effects for the indicated model. The pooled column reports the main H3 specification for the four-model H3 subset with model and profile fixed effects. Standard errors are clustered at the model--profile level in all columns. The neutral frame is the omitted reference category. Positive coefficients indicate larger simulated burden effects relative to neutral; negative coefficients indicate smaller simulated burden effects. Standard errors and 95\% confidence intervals are reported in Table~\ref{tab:h3_model_specific_full}. \(^{*}p<0.05\), \(^{***}p<0.001\).
+\footnotesize Notes: Each model-specific column reports a regression of \(\Delta\) on frame indicators and profile fixed effects for the indicated model. The pooled column reports the main H3 specification for the four-model H3 subset with model and profile fixed effects. Standard errors are clustered at the model--profile level in all columns. The neutral frame is the omitted reference category. Positive coefficients indicate larger simulated burden effects relative to neutral; negative coefficients indicate smaller simulated burden effects. Standard errors and 95\% confidence intervals are reported in Table~\ref{tab:h3_model_specific_full}. \(^{*}p<0.05\), \(^{**}p<0.01\), \(^{***}p<0.001\).
 \end{flushleft}
 \end{table}
 
@@ -743,7 +745,7 @@ Pooled & Equity/access vs. neutral & 4.84*** & 0.70 & [3.45, 6.24] \\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
-\footnotesize Notes: Each row reports a frame contrast relative to the neutral frame. Model-specific regressions include profile fixed effects. The pooled regression includes model and profile fixed effects. Standard errors are clustered at the model--profile level for the pooled column (108 clusters) and at the profile level within each model for the model-specific columns (27 clusters each), because profiles are the controlled test cases and queries within a profile are repeated measures. The pooled specification uses $N=2{,}159$ profile--repetition observations (540 for GPT-4.1, 539 for Llama 3.1 70B Instruct, 540 for Qwen3.7 Plus, and 540 for Mistral Large, after excluding responses that failed the structured-output checks). The dependent variable is \(\Delta = W^{low}-W^{high}\). Positive coefficients indicate larger simulated burden effects relative to neutral. Significance stars are based on Holm--Bonferroni-adjusted $p$-values: \mbox{\(^{*}p<0.05\)}, \mbox{\(^{***}p<0.001\)}.
+\footnotesize Notes: Each row reports a frame contrast relative to the neutral frame. Model-specific regressions include profile fixed effects. The pooled regression includes model and profile fixed effects. Standard errors are clustered at the model--profile level for the pooled column (108 clusters) and at the profile level within each model for the model-specific columns (27 clusters each), because profiles are the controlled test cases and queries within a profile are repeated measures. The pooled specification uses $N=2{,}159$ profile--repetition observations (540 for GPT-4.1, 539 for Llama 3.1 70B Instruct, 540 for Qwen3.7 Plus, and 540 for Mistral Large, after excluding responses that failed the structured-output checks). The dependent variable is \(\Delta = W^{low}-W^{high}\). Positive coefficients indicate larger simulated burden effects relative to neutral. Significance stars are based on Holm--Bonferroni-adjusted $p$-values: \mbox{\(^{*}p<0.05\)}, \mbox{\(^{**}p<0.01\)}, \mbox{\(^{***}p<0.001\)}.
 \end{flushleft}
 \end{table}
 
