@@ -52,7 +52,7 @@
 (2) Under the primary specification with model-by-profile pair fixed effects, naturally expressed rationale frames show no detectable association with simulated burden effects (BH-adjusted $p \geq 0.86$ for all three retained frames).
 (3) Assigned frames shift simulated burden effects within models: autonomy $+4.96$ [3.57, 6.35], collective obligation $-10.88$ [$-$12.54, $-$9.21], equity/access $+4.84$ [3.45, 6.24]; the autonomy direction reverses in one of four models.
 
-\noindent\textbf{Conclusions:} LLM-assisted policy simulation is frame-sensitive: identical models, profiles, and scenarios yield materially different estimates (pooled shifts of 4.8--10.9 points on a 0--100 scale) depending on analyst-selected framing. These results characterize simulation behavior, not real-world vaccination response.
+\noindent\textbf{Conclusions:} In this testbed, LLM-assisted policy simulation is frame-sensitive: identical models, profiles, and scenarios yield materially different estimates (pooled shifts of 4.8--10.9 points on a 0--100 scale) depending on analyst-selected framing. These results characterize simulation behavior, not real-world vaccination response.
 
 \vspace{0.5em}
 \noindent\rule{\linewidth}{0.4pt}
@@ -111,7 +111,7 @@ Policy-value orientation is defined as systematic tendencies to interpret govern
 
 The framework proceeds from coarse to fine-grained diagnostics. Each diagnostic is informative regardless of the others.
 
-\textbf{Diagnostic 1 --- Aggregate Orientation.} We first test whether a scalar policy-value composite (PVOC) predicts cross-model variation in simulated burden effects. A null result would indicate that simple ideology/value scores are insufficient for auditing LLM simulation validity.
+\textbf{Diagnostic 1 --- Aggregate Orientation.} We first test whether a scalar policy-value composite (PVOC) predicts cross-model variation in simulated burden effects. A null result would indicate that an aggregate score of this kind, on its own, carries little cross-model audit signal.
 
 \textbf{Diagnostic 2 --- Naturally Expressed Framing.} We examine whether interpretive frames expressed in model rationales systematically co-occur with simulated burden effects. Access-barrier, autonomy-infringement, and coercive-backlash frames should correspond to larger effects; procedural-legitimacy and collective-responsibility frames to smaller effects. Because frames are generated rather than assigned, this diagnostic identifies rationale--outcome co-expression rather than causal pathways, and we test whether any such co-expression survives model-by-profile pair fixed effects.
 
@@ -277,7 +277,7 @@ H1 tests whether the model-level PVOC predicts cross-model variation in average 
 \subsubsection{H1: Orientation--Effect Models}
 \label{subsubsec:results-h1}
 
-\textbf{Diagnostic 1 Result: Aggregate orientation performs poorly.} The PVOC does not predict cross-model variation in simulated burden effects ($\hat{\beta}=$ $-$2.14, 95\% CI [$-$6.23, 1.95], $R^2=0.090$); at N = 15 the minimum detectable $R^2$ is approximately 0.38. A scalar ideology/value score is therefore insufficient to audit LLM simulation validity.
+\textbf{Diagnostic 1 Result: Aggregate orientation performs poorly.} The PVOC does not predict cross-model variation in simulated burden effects ($\hat{\beta}=$ $-$2.14, 95\% CI [$-$6.23, 1.95], $R^2=0.090$); at N = 15 the minimum detectable $R^2$ is approximately 0.38. In this fifteen-endpoint sample, the PVOC did not provide a useful scalar cross-model audit signal for simulated burden effects.
 
 Figure~\ref{fig:pvc_delta} shows the same pattern: the fitted line is shallow, and high-PVOC models do not produce larger effects (GPT-4.1 has the highest PVOC score and one of the smallest burden effects, $\bar{\Delta}=25.63$; Gemini 2.5 Pro has an essentially zero PVOC score and the largest, $53.93$).
 
@@ -363,7 +363,7 @@ This study develops and evaluates a three-level diagnostic framework for auditin
 
 \textbf{Summary of Diagnostic Results.} Diagnostic 1 shows that aggregate policy-value scores do not predict cross-model variation. Diagnostic 2 does not: under model-by-profile pair fixed effects, none of the retained rationale frames predicts burden effects. The access-barrier association that appears when only additive model and profile heterogeneity is removed disappears once pair-specific heterogeneity is absorbed, and only 7.8\% of the variance in the burden effect lies within model--profile pairs. Diagnostic 3 shows that assigned frames shift estimated effects---by 4.8 to 10.9 points pooled and up to 20.1 points model-specifically, with the autonomy contrast differing in sign across models.
 
-Taken together, the three diagnostics establish that LLM-assisted policy simulation is normatively frame-sensitive. The same model, same synthetic profiles, and same policy scenario can produce materially different simulated policy-effect estimates depending on the normative lens activated by the prompt.
+Taken together, the three diagnostics establish that, in this controlled testbed, LLM-assisted policy simulation is normatively frame-sensitive. The same model, same synthetic profiles, and same policy scenario can produce materially different simulated policy-effect estimates depending on the normative lens activated by the prompt.
 
 
 The narrative analysis does not supply a robust within-cell signal. Under the primary pair-fixed-effects specification none of the retained frames is detectable, and the access-barrier association that appears under additive model and profile fixed effects does not survive pair-specific heterogeneity---a pattern consistent with cells whose baseline burden effect and rationale style are jointly model- and profile-specific. Because only 7.8\% of the variance in \(\Delta\) occurs within pairs, this is a failure of robustness rather than proof that rationale framing is behaviorally irrelevant. H2 is descriptive co-expression in any case rather than causal mediation, because willingness and rationales are generated together and associations may reflect post-hoc justification.
@@ -391,7 +391,7 @@ Six limitations qualify the findings. \textbf{(1) Model sample.} The cross-model
 
 \subsection{Conclusion}
 
-The central finding is that LLM-assisted policy simulation creates a new methodological problem for HSR: seemingly technical simulated policy-effect estimates may depend on analyst-selected normative framing. The three-level diagnostic framework demonstrates that (1) simple aggregate value scores are insufficient for validity auditing, (2) naturally expressed rationale frames did not provide a robust within-pair diagnostic of simulated effect magnitude, and (3) experimentally assigned governance-value frames materially shift estimated policy effects.
+The central finding is that LLM-assisted policy simulation creates a new methodological problem for HSR: seemingly technical simulated policy-effect estimates may depend on analyst-selected normative framing. The three-level diagnostic framework demonstrates that (1) the aggregate PVOC used here was not informative as a cross-model predictor, (2) naturally expressed rationale frames did not provide a robust within-pair diagnostic of simulated effect magnitude, and (3) experimentally assigned governance-value frames materially shift estimated policy effects.
 
 For HSR researchers using LLMs for policy simulation, the implication is clear: report frame sensitivity rather than treating one prompt/model output as a neutral point estimate. Analysts should document model identity, prompt framing, scenario wording, and robustness to alternative frames. The goal is not to eliminate values from policy simulation, but to make their influence measurable, transparent, and contestable---so that the method can be used responsibly as an HSR tool.
 
