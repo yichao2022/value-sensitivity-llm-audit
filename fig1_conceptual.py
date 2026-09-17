@@ -66,14 +66,14 @@ for i, (edge, fill, level, title, lines, verdict) in enumerate(COLS):
                                 linewidth=1.0, edgecolor=edge, facecolor="white"))
     ax.text(x + box_w / 2, 4.27, verdict, ha="center", va="center", fontsize=10.2,
             color=edge, fontweight="bold")
-    ax.add_patch(FancyArrowPatch((x + box_w / 2, 3.4), (x + box_w / 2, 2.62), arrowstyle="-|>",
+    ax.add_patch(FancyArrowPatch((x + box_w / 2, 3.4), (x + box_w / 2, 3.02), arrowstyle="-|>",
                                  mutation_scale=12, linewidth=1.1, color=edge, shrinkA=0, shrinkB=0))
 
-ax.add_patch(FancyBboxPatch((5.5, 1.6), 24, 0.95, boxstyle="round,pad=0.15,rounding_size=0.2",
+ax.add_patch(FancyBboxPatch((5.5, 2.05), 24, 0.95, boxstyle="round,pad=0.15,rounding_size=0.2",
                             linewidth=1.2, edgecolor="#333333", facecolor="#f2f2f2"))
-ax.text(17.5, 2.07, "Does normative-frame sensitivity affect LLM-assisted policy simulation?",
+ax.text(17.5, 2.52, "Does normative-frame sensitivity affect LLM-assisted policy simulation?",
         ha="center", va="center", fontsize=12, fontweight="bold", color="#222222")
-ax.text(17.5, 1.35, "Three independent diagnostic tests \u2014 each informative regardless of the others.",
+ax.text(17.5, 1.45, "Three independent diagnostic tests \u2014 each informative regardless of the others.",
         ha="center", va="center", fontsize=10, color="#444444")
 ax.text(17.5, 0.72, "PVC null (H1)  \u2192  frames partially matter (H2)  \u2192  causal manipulation confirms (H3)",
         ha="center", va="center", fontsize=10, color="#444444")
@@ -83,24 +83,35 @@ fig.savefig(OUT, bbox_inches="tight")
 fig.savefig(OUT.with_suffix(".png"), dpi=150, bbox_inches="tight")
 print(f"wrote {OUT} (+ preview png)")
 
+QUESTION_BOX_BOTTOM = 2.05          # keep the note lines clear of this border
+
+
+QUESTION_BOX_BOTTOM = 2.05          # keep the note lines clear of this border
+
+
 def _check_layout():
-    """Fail loudly if any two labels collide or a patch/label leaves the axes."""
+    """Fail loudly if labels collide, leave the axes, or crowd the question box."""
     fig.canvas.draw()
     r = fig.canvas.get_renderer()
     a = fig.axes[0]
     ab = a.get_window_extent(r)
-    boxes = [t.get_window_extent(r) for t in a.texts]
+    boxes = [tx.get_window_extent(r) for tx in a.texts]
     for i in range(len(boxes)):
         for j in range(i + 1, len(boxes)):
             if boxes[i].overlaps(boxes[j]):
                 ox = min(boxes[i].x1, boxes[j].x1) - max(boxes[i].x0, boxes[j].x0)
                 oy = min(boxes[i].y1, boxes[j].y1) - max(boxes[i].y0, boxes[j].y0)
-                assert ox < 1 or oy < 1, f"label collision: {a.texts[i].get_text()[:30]!r} x {a.texts[j].get_text()[:30]!r}"
+                assert ox < 1 or oy < 1, (
+                    f"label collision: {a.texts[i].get_text()[:30]!r} x {a.texts[j].get_text()[:30]!r}")
     for tx, bb in zip(a.texts, boxes):
         assert bb.x0 >= ab.x0 - 1 and bb.x1 <= ab.x1 + 1, f"label outside axes: {tx.get_text()[:30]!r}"
+        if tx.get_text().startswith(("Three independent", "PVC null")):
+            assert tx.get_position()[1] + 0.3 < QUESTION_BOX_BOTTOM, (
+                f"note line crowds the question box: y={tx.get_position()[1]}")
     for p_ in a.patches:
         bb = p_.get_window_extent(r)
-        assert bb.x0 >= ab.x0 - 1 and bb.x1 <= ab.x1 + 1, f"patch clipped horizontally: {bb.x0:.0f}..{bb.x1:.0f} vs {ab.x0:.0f}..{ab.x1:.0f}"
+        assert bb.x0 >= ab.x0 - 1 and bb.x1 <= ab.x1 + 1, (
+            f"patch clipped horizontally: {bb.x0:.0f}..{bb.x1:.0f} vs {ab.x0:.0f}..{ab.x1:.0f}")
 
 
 if __name__ == "__main__":
