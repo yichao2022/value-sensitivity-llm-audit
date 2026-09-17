@@ -36,7 +36,7 @@ H3_BODY = [r"$\Delta_{mcir} \;\approx\; \mathrm{Frame}_c$",
            r"adj. $R^2$ = 0.77"]
 
 COLS = [
-    ("#1f4e79", "#dce9f5", "Model-level", "H1: Composite orientation-effect", H1_BODY,
+    ("#1f4e79", "#dce9f5", "Model-level", "H1: Composite orientation", H1_BODY,
      "Null: no detectable association"),
     ("#8c1d1d", "#f7dede", "Narrative-level", "H2: Narrative frame association", H2_BODY,
      "Partial support: 2 of 3 frames"),
@@ -44,27 +44,27 @@ COLS = [
      "Supported (pooled; model heterogeneity)"),
 ]
 
-fig, ax = plt.subplots(figsize=(11, 4.6))
+fig, ax = plt.subplots(figsize=(9.8, 4.3))
 ax.set_xlim(0, 35); ax.set_ylim(0, 14); ax.axis("off")
 
-box_w, gap = 10.2, 1.2
+box_w, gap = 10.6, 0.9
 for i, (edge, fill, level, title, lines, verdict) in enumerate(COLS):
-    x = 1.0 + i * (box_w + gap)
+    x = 0.7 + i * (box_w + gap)
     ax.add_patch(FancyBboxPatch((x, 3.4), box_w, 9.6, boxstyle="round,pad=0.15,rounding_size=0.25",
                                 linewidth=1.4, edgecolor=edge, facecolor=fill))
     ax.add_patch(Rectangle((x, 12.1), box_w, 0.9, facecolor=edge, edgecolor="none"))
-    ax.text(x + box_w / 2, 12.55, level, ha="center", va="center", fontsize=11,
+    ax.text(x + box_w / 2, 12.55, level, ha="center", va="center", fontsize=13,
             color="white", fontweight="bold")
-    ax.text(x + box_w / 2, 11.35, title, ha="center", va="center", fontsize=10,
+    ax.text(x + box_w / 2, 11.35, title, ha="center", va="center", fontsize=10.5,
             color=edge, fontweight="bold")
     ax.plot([x + 0.7, x + box_w - 0.7], [10.85, 10.85], color=edge, linewidth=0.8)
-    ax.text(x + box_w / 2, 10.55, lines[0], ha="center", va="top", fontsize=10, color="#222222")
+    ax.text(x + box_w / 2, 10.6, lines[0], ha="center", va="top", fontsize=11.5, color="#222222")
     for j, ln in enumerate(lines[1:], start=1):
-        ax.text(x + box_w / 2, 9.7 - 0.62 * j, ln, ha="center", va="center", fontsize=8.4, color="#333333")
+        ax.text(x + box_w / 2, 9.95 - 0.665 * j, ln, ha="center", va="center", fontsize=10.2, color="#333333")
     ax.add_patch(FancyBboxPatch((x + 0.5, 3.75), box_w - 1.0, 1.05,
                                 boxstyle="round,pad=0.1,rounding_size=0.15",
                                 linewidth=1.0, edgecolor=edge, facecolor="white"))
-    ax.text(x + box_w / 2, 4.27, verdict, ha="center", va="center", fontsize=8.6,
+    ax.text(x + box_w / 2, 4.27, verdict, ha="center", va="center", fontsize=10.2,
             color=edge, fontweight="bold")
     ax.add_patch(FancyArrowPatch((x + box_w / 2, 3.4), (x + box_w / 2, 2.62), arrowstyle="-|>",
                                  mutation_scale=12, linewidth=1.1, color=edge, shrinkA=0, shrinkB=0))
@@ -72,14 +72,15 @@ for i, (edge, fill, level, title, lines, verdict) in enumerate(COLS):
 ax.add_patch(FancyBboxPatch((5.5, 1.6), 24, 0.95, boxstyle="round,pad=0.15,rounding_size=0.2",
                             linewidth=1.2, edgecolor="#333333", facecolor="#f2f2f2"))
 ax.text(17.5, 2.07, "Does normative-frame sensitivity affect LLM-assisted policy simulation?",
-        ha="center", va="center", fontsize=10.5, fontweight="bold", color="#222222")
-ax.text(17.5, 1.05, "Three independent diagnostic tests \u2014 each informative regardless of the others.   "
-                    "PVC null (H1)  \u2192  frames partially matter (H2)  \u2192  causal manipulation confirms (H3)",
-        ha="center", va="center", fontsize=9, color="#444444")
+        ha="center", va="center", fontsize=12, fontweight="bold", color="#222222")
+ax.text(17.5, 1.35, "Three independent diagnostic tests \u2014 each informative regardless of the others.",
+        ha="center", va="center", fontsize=10, color="#444444")
+ax.text(17.5, 0.72, "PVC null (H1)  \u2192  frames partially matter (H2)  \u2192  causal manipulation confirms (H3)",
+        ha="center", va="center", fontsize=10, color="#444444")
 
-plt.tight_layout()
-fig.savefig(OUT)
-fig.savefig(OUT.with_suffix(".png"), dpi=150)
+fig.subplots_adjust(left=0.005, right=0.995, bottom=0.01, top=0.99)
+fig.savefig(OUT, bbox_inches="tight")
+fig.savefig(OUT.with_suffix(".png"), dpi=150, bbox_inches="tight")
 print(f"wrote {OUT} (+ preview png)")
 
 def _check_layout():
@@ -95,6 +96,8 @@ def _check_layout():
                 ox = min(boxes[i].x1, boxes[j].x1) - max(boxes[i].x0, boxes[j].x0)
                 oy = min(boxes[i].y1, boxes[j].y1) - max(boxes[i].y0, boxes[j].y0)
                 assert ox < 1 or oy < 1, f"label collision: {a.texts[i].get_text()[:30]!r} x {a.texts[j].get_text()[:30]!r}"
+    for tx, bb in zip(a.texts, boxes):
+        assert bb.x0 >= ab.x0 - 1 and bb.x1 <= ab.x1 + 1, f"label outside axes: {tx.get_text()[:30]!r}"
     for p_ in a.patches:
         bb = p_.get_window_extent(r)
         assert bb.x0 >= ab.x0 - 1 and bb.x1 <= ab.x1 + 1, f"patch clipped horizontally: {bb.x0:.0f}..{bb.x1:.0f} vs {ab.x0:.0f}..{ab.x1:.0f}"
