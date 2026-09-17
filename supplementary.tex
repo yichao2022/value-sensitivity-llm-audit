@@ -458,7 +458,9 @@ This appendix reports the prompt templates and model-specific robustness checks 
 The frame-manipulation experiment used four system-prompt frames. Each frame is built from the same two fixed sentences: an opening sentence and a closing instruction block, with the frame clause inserted between them. The neutral frame contains no frame clause, so the neutral system prompt is byte-identical to the baseline prompt reported in Appendix~\ref{app:burden-prompts}:
 \begin{flushleft}
 {\footnotesize\ttfamily SHA256 380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe}
-\end{flushleft} the frame contrast is therefore measured against the true baseline condition. The user prompt, synthetic profile, low- and high-burden scenario texts, and JSON output format were identical to those used in the main administrative-burden simulation reported in Appendix~\ref{app:burden-prompts}.
+\end{flushleft}
+
+The frame contrast is therefore measured against the true baseline condition. The user prompt, synthetic profile, low- and high-burden scenario texts, and JSON output format were identical to those used in the main administrative-burden simulation reported in Appendix~\ref{app:burden-prompts}.
 
 \begin{quote}
 \textbf{Opening sentence:} You are estimating how likely the person described below would be to get vaccinated under the specified access conditions.
@@ -481,6 +483,15 @@ The four frame conditions differ only in the inserted clause:
     \item \textbf{Equity/access frame:} ``When forming the estimate, give special weight to unequal procedural costs, access barriers, work constraints, childcare constraints, and burdens faced by disadvantaged groups.''\\
     {\footnotesize\ttfamily SHA256 cba0156ababefd86611eb267ebf9ccddb1d60fe5a8cecf4e289871006042844a}
 \end{itemize}
+
+\textbf{Randomization and archived execution plans.} Execution order was randomized within each model by a generator seeded from the protocol seed (20260916, recorded in the protocol lock together with the prompt texts and decoding settings): in the baseline simulation the profile--scenario--repetition cells were shuffled, and in the frame manipulation the four frames were permuted within each profile--repetition cell, with the low/high order inside each pair randomized as well. The plans were generated once, frozen before data collection, and are archived with the replication materials:
+\begin{flushleft}
+{\footnotesize Baseline simulation plan (\path{canonical/plans/plan_sim.csv}):}\\
+{\footnotesize\ttfamily 097667f0bfe2b409fb9e37f6ceef4a6d05e3828eb25f55f7736de2005d2c350c}\\
+{\footnotesize Frame-manipulation plan (\path{canonical/plans/plan_h3.csv}):}\\
+{\footnotesize\ttfamily 2da307521db1f8b578d1ebc87e77d85be372a1bdca5a10c5416069d958174133}
+\end{flushleft}
+The runner consumes each plan in the recorded order, so the frame sequence actually administered to a given model is verifiable from the archived file rather than from the runner code alone. Rebuilding the plan from the current code reproduces the same set of cells but not necessarily the same row order; the archived files, not the builder, are the record of the executed sequence. The orientation battery, by contrast, was administered in a single fixed item order to all fifteen endpoints.
 
 For each model \(m\), frame condition \(c\), profile \(i\), and repetition \(r\), the model evaluated both the low-burden and high-burden vaccination-access scenarios in fresh conversation contexts. The frame-specific burden effect was computed as:
 \[
