@@ -415,18 +415,22 @@ The keyword patterns for each frame are derived from the theoretical definitions
 
 The full regular expression patterns are available in the replication code at \url{https://github.com/yichao2022/llm-policy-simulation}, which is released under the MIT License (Copyright 2026 Yichao Jin); reuse and modification are permitted with attribution, and model outputs remain subject to the providers' terms of service.
 
-\subsection{Validation Protocol}
+\subsection{Manual Coding Audit}
 
-To validate the algorithmic coding, a random sample of 200 rationales (approximately 10\% of the high-burden sample, $N \approx 2,019$) was manually inspected by the author. The validation protocol was:
+The algorithmic coding was audited, not independently validated. A stratified random sample of 200 rationales (approximately 10\% of the 2,019 high-burden rationales, allocated proportionally across the fifteen endpoints) was inspected by the author. The audit procedure was:
 
 \begin{enumerate}
-\item \textbf{Blinded inspection:} The validator reviewed rationale text and algorithmic assignments without access to model identity or predicted outcomes.
-\item \textbf{Definition check:} Each positive algorithmic assignment was checked against the frame definitions in Table~\ref{tab:narrative-codebook}.
-\item \textbf{Focus areas:} Special attention was given to access-barrier coding, where generic mentions of paperwork or waiting time are not sufficient for a positive code under the algorithmic rules.
-\item \textbf{Discrepancy review:} Any rationales where pattern matches appeared to violate frame definitions were flagged for review.
+\item \textbf{Scope:} the auditor reviewed each rationale together with the algorithm's frame assignments, without access to model identity or predicted outcomes. The auditor was therefore \emph{not} blind to the algorithm's labels, and this is a single-coder quality check rather than an independent second coding.
+\item \textbf{Definition check:} each positive algorithmic assignment was checked against the frame definitions in Table~\ref{tab:narrative-codebook}.
+\item \textbf{Focus areas:} special attention was given to access-barrier coding, where generic mentions of paperwork or waiting time are not sufficient for a positive code under the algorithmic rules.
+\item \textbf{Discrepancy review:} any rationale in which a pattern match appeared to violate a frame definition was flagged for review.
 \end{enumerate}
 
-The manual inspection found that pattern assignments reflected the codebook definitions rather than superficial keyword matches, and no systematic misclassification pattern was identified that would require pattern refinement. This review is a single-coder quality check on a 10\% sample; it establishes that the coding is transparent and rule-based, not that the frames are measured with validated reliability. The coded indicators are therefore used as descriptive inputs to the frame--outcome association analysis, and their coefficients should be read accordingly.
+The manual audit found that pattern assignments reflected the codebook definitions rather than superficial keyword matches, and no systematic misclassification pattern was identified that would require pattern revision.
+
+Two limits follow from the audit design. First, because the auditor saw the algorithm's assignments and concentrated on positive ones, the audit cannot bound false negatives: a frame the algorithm missed may simply not have been noticed, and the audit yields no precision, recall, F1, or agreement statistic. Second, single-coder inspection is not independent of the algorithm it checks. The main text therefore describes the frame indicators as descriptive evidence of rationale--outcome co-expression rather than as validated measurements.
+
+A blinded re-coding sheet is archived in the replication materials for a human-versus-rule validation of the coding: \path{outputs/h2_gold_coding_sheet.csv} contains the 200 sampled rationale texts with the frame labels, model identity, profile, repetition, and outcome withheld into a separate key file, and the sampling is reproducible from the canonical data with seed 20260917 (\path{prepare_h2_gold_sample.py}). Coding the sheet and running \path{score_h2_gold_coding.py} yields per-frame precision, recall, F1, exact agreement, and Cohen's \(\kappa\) against the rule-based assignments. Those statistics are not reported here because the sheet was not coded in this study; the audit above is what was actually performed.
 
 \subsection{Frame Prevalence and Exclusions}
 
