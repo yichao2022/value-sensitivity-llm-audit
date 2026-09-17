@@ -234,7 +234,7 @@ Table~\ref{tab:orientation_burden} reports policy-value orientation profiles and
 \small
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{3.5cm}rrrrr@{}}
 \toprule
-Model & PVC & Low $W$ & High $W$ & $\bar{\Delta}$ & 95\% CI \\
+Model & PVOC & Low $W$ & High $W$ & $\bar{\Delta}$ & 95\% CI \\
 \midrule
 GPT-4.1 & 2.15 & 74.67 & 49.04 & 25.63 & [22.51, 28.75] \\
 Llama 3.1 70B Instruct & 1.94 & 80.00 & 50.96 & 29.04 & [25.47, 32.60] \\
@@ -254,14 +254,14 @@ Mistral Large & $-$2.57 & 76.00 & 39.04 & 36.96 & [34.67, 39.25] \\
 \bottomrule
 \end{tabular*}
 \begin{flushleft}
-\footnotesize Notes: PVC = Policy-Value Orientation Composite, standardized across the fifteen-model sample. Low $W$ and High $W$ are mean predicted vaccination willingness scores under low- and high-burden conditions. $\bar{\Delta}$ = Low $W$ $-$ High $W$. 95\% CI calculated as $\bar{\Delta} \pm 1.96 \times SE$. Table sorted by PVC in descending order.
+\footnotesize Notes: PVOC = Policy-Value Orientation Composite, standardized across the fifteen-model sample. Low $W$ and High $W$ are mean predicted vaccination willingness scores under low- and high-burden conditions. $\bar{\Delta}$ = Low $W$ $-$ High $W$. 95\% CI calculated as $\bar{\Delta} \pm 1.96 \times SE$. Table sorted by PVOC in descending order.
 \end{flushleft}
 \end{table}
 
 \subsection{Hypothesis Tests}
 \label{sec:results-hypotheses}
 
-This subsection reports the hypothesis-specific tests as three independent diagnostic components consistent with the framework introduced earlier. H1 examines whether the model-level PVOC predicts cross-model variation in average administrative-burden effects. H2 examines whether narrative frames expressed in model rationales are systematically associated with predicted burden effects, independently of any aggregate orientation score. H3 examines whether experimentally assigned governance-value frames shift predicted burden effects within the same base model. The three tests are independently informative: each addresses a distinct level of evidence (aggregate orientation, narrative mechanism, and within-model causal frame), and each can contribute to the overall assessment whether or not the others yield significant results.
+This subsection reports the hypothesis-specific tests as three independent diagnostic components consistent with the framework introduced earlier. H1 examines whether the model-level PVOC predicts cross-model variation in average administrative-burden effects. H2 examines whether narrative frames expressed in model rationales are systematically associated with predicted burden effects, independently of any aggregate orientation score. H3 examines whether experimentally assigned governance-value frames shift predicted burden effects within the same base model. The three tests are independently informative: each addresses a distinct level of evidence (aggregate orientation, narrative co-expression, and within-model causal frame), and each can contribute to the overall assessment whether or not the others yield significant results.
 
 \subsubsection{H1: Orientation--Effect Models}
 \label{subsubsec:results-h1}
@@ -288,7 +288,7 @@ This null result is substantively informative. Models vary considerably in both 
 \subsubsection{H2: Narrative Frame-Decomposition Analysis}
 \label{subsubsec:results-h2}
 
-H2 examines whether interpretive frames in model rationales are associated with predicted administrative-burden effects, independently of any aggregate orientation index. The analysis is designed as a frame--outcome association decomposition: the goal is not to establish a causal pathway from PVC to burden predictions, but to assess whether expressed rationale frames are systematically related to predicted burden effects in theoretically interpretable ways.
+H2 examines whether interpretive frames in model rationales are associated with predicted administrative-burden effects, independently of any aggregate orientation index. The analysis is designed as a frame--outcome association decomposition: the goal is not to establish a causal pathway from PVOC to burden predictions, but to assess whether expressed rationale frames are systematically related to predicted burden effects in theoretically interpretable ways.
 
 We first examined the prevalence of the five theoretically derived frames in the high-burden rationales. Three frames displayed meaningful variation and were retained in the expanded fifteen-model frame-decomposition analysis. Access-barrier reasoning appeared in 43.2\% of high-burden rationales after recoding the frame to require an explicit link between procedural costs and reduced access, resource constraints, work flexibility, childcare, provider access, or socioeconomic vulnerability. Collective-responsibility reasoning appeared in 75.2\% of rationales, while coercive-backlash reasoning appeared in 7.7\%. Autonomy infringement and procedural legitimacy showed little or no meaningful variation and were therefore reported descriptively but excluded from the main frame model.
 
@@ -298,7 +298,7 @@ Leave-one-model-out diagnostics support the stability of the frame--outcome asso
 
 \begin{table}[htbp]
 \centering
-\caption{Narrative frame-decomposition estimates}
+\caption{Narrative frame--outcome association estimates}
 \label{tab:h2_frame_decomposition}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{lrrrrc}
@@ -312,7 +312,7 @@ Coercive backlash & 7.7\% & 7.26 & 1.98 & \(<0.001\) & Yes \\
 \end{tabular}
 }
 \begin{flushleft}
-\footnotesize Notes: The table reports descriptive frame--outcome estimates using high-burden rationales in the expanded fifteen-model sample. The dependent variable is the profile--repetition-level burden effect \(\Delta = W^{low} - W^{high}\). Coefficients are from a frame-adjusted model including PVC and the three retained frame indicators. \(N=2{,}019\), \(R^2=0.083\). Positive coefficients indicate larger predicted burden effects. LOMO = leave-one-model-out. Access barriers and coercive backlash are sign-stable in all fifteen leave-one-model-out samples; collective responsibility is not sign-stable. The table emphasizes frame--outcome associations rather than formal mediation. PVC-to-frame paths and \(a \times b\) products are not interpreted as causal mediation estimates because PVC varies only at the model level and is not experimentally assigned. The PVC coefficient itself is retained as a covariate diagnostic only and is not interpreted as an H2 effect.
+\footnotesize Notes: The table reports descriptive frame--outcome estimates using high-burden rationales in the expanded fifteen-model sample. The dependent variable is the profile--repetition-level burden effect \(\Delta = W^{low} - W^{high}\). Coefficients are from a frame-adjusted model including PVOC and the three retained frame indicators. \(N=2{,}019\), \(R^2=0.083\). Positive coefficients indicate larger predicted burden effects. LOMO = leave-one-model-out. Access barriers and coercive backlash are sign-stable in all fifteen leave-one-model-out samples; collective responsibility is not sign-stable. The table emphasizes frame--outcome associations rather than formal mediation. PVOC-to-frame paths and \(a \times b\) products are not interpreted as causal mediation estimates because PVOC varies only at the model level and is not experimentally assigned. The PVOC coefficient itself is retained as a covariate diagnostic only and is not interpreted as an H2 effect.
 \end{flushleft}
 \end{table}
 

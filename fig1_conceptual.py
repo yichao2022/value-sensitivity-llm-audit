@@ -17,8 +17,8 @@ from matplotlib.patches import FancyBboxPatch, FancyArrowPatch, Rectangle
 OUT = Path(__file__).with_name("fig1_conceptual.pdf")
 plt.rcParams.update({"font.family": "DejaVu Sans"})
 
-H1_BODY = [r"$\mathrm{PVC}_m \;\rightarrow\; \Delta_m$",
-           "Aggregate PVC index predicts", "cross-model burden effects", "",
+H1_BODY = [r"$\mathrm{PVOC}_m \;\rightarrow\; \Delta_m$",
+           "Aggregate PVOC index predicts", "cross-model burden effects", "",
            r"$N$ = 15 model endpoints",
            r"$\beta_1$ = $-2.14$, 95% CI [$-6.23$, 1.95]", r"$R^2$ = 0.09"]
 H2_BODY = [r"$\mathrm{Frame}_{mi} \;\rightarrow\; \Delta_{mi}$",
@@ -75,7 +75,7 @@ ax.text(17.5, 2.52, "Does normative-frame sensitivity affect LLM-assisted policy
         ha="center", va="center", fontsize=12, fontweight="bold", color="#222222")
 ax.text(17.5, 1.45, "Three independent diagnostic tests \u2014 each informative regardless of the others.",
         ha="center", va="center", fontsize=10, color="#444444")
-ax.text(17.5, 0.72, "PVC null (H1)  \u2192  frames partially matter (H2)  \u2192  causal manipulation confirms (H3)",
+ax.text(17.5, 0.72, "PVOC null (H1)  \u2192  frames partially matter (H2)  \u2192  causal manipulation confirms (H3)",
         ha="center", va="center", fontsize=10, color="#444444")
 
 fig.subplots_adjust(left=0.005, right=0.995, bottom=0.01, top=0.99)
@@ -105,7 +105,7 @@ def _check_layout():
                     f"label collision: {a.texts[i].get_text()[:30]!r} x {a.texts[j].get_text()[:30]!r}")
     for tx, bb in zip(a.texts, boxes):
         assert bb.x0 >= ab.x0 - 1 and bb.x1 <= ab.x1 + 1, f"label outside axes: {tx.get_text()[:30]!r}"
-        if tx.get_text().startswith(("Three independent", "PVC null")):
+        if tx.get_text().startswith(("Three independent", "PVOC null")):
             assert tx.get_position()[1] + 0.3 < QUESTION_BOX_BOTTOM, (
                 f"note line crowds the question box: y={tx.get_position()[1]}")
     for p_ in a.patches:

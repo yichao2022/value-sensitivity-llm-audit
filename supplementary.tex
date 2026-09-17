@@ -369,11 +369,11 @@ Variable & Minimum coefficient & Maximum coefficient & Sign stable \\
 Access barriers & 1.51 & 3.81 & Yes \\
 Collective responsibility & -1.79 & 1.62 & No \\
 Coercive backlash & 3.52 & 11.25 & Yes \\
-PVC direct effect & -3.64 & -0.60 & Yes (negative) \\
+PVOC direct effect & -3.64 & -0.60 & Yes (negative) \\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
-\footnotesize Notes: Each row summarizes coefficients from fifteen leave-one-model-out specifications. The access-barrier and coercive-backlash coefficients are sign-stable across all specifications; collective responsibility is not. The direct PVC coefficient is negative in all fifteen specifications; it is reported for completeness as a covariate diagnostic, since H2 is specified as a frame--outcome association rather than a PVC effect.
+\footnotesize Notes: Each row summarizes coefficients from fifteen leave-one-model-out specifications. The access-barrier and coercive-backlash coefficients are sign-stable across all specifications; collective responsibility is not. The direct PVOC coefficient is negative in all fifteen specifications; it is reported for completeness as a covariate diagnostic, since H2 is specified as a frame--outcome association rather than a PVOC effect.
 \end{flushleft}
 \end{table}
 
@@ -414,7 +414,7 @@ Positive values indicate a larger predicted reduction in vaccination willingness
 
 Table~\ref{tab:h3_model_frame_means} reports mean burden effects by model and frame condition for the four-model H3 subset. The descriptive means show that the collective-obligation frame lowers simulated burden effects in all four models, and that the autonomy frame increases simulated burden effects in three of the four models. The remaining contrasts are model-specific rather than uniform: for Qwen3.7 Plus the autonomy frame lowers the mean burden effect (53.71 vs.\ 56.59 under the neutral frame), and the equity/access frame has little effect for that model (55.64) and for Llama 3.1 70B Instruct (36.42 vs.\ 27.11 under neutral, a positive but smaller shift than the autonomy frame). The absolute level of the burden effect also differs substantially across models under the neutral frame (25.59 for GPT-4.1 to 56.59 for Qwen3.7 Plus), so frame effects are interpreted relative to each model's own neutral baseline.
 
-Mistral Large is a particularly informative robustness case. It has the lowest PVC score in the expanded fifteen-model sample, and all three frame manipulations shift its simulated burden effects in the expected directions. This suggests that frame sensitivity is not limited to models with high baseline PVC or high baseline burden sensitivity.
+Mistral Large is a particularly informative robustness case. It has the lowest PVOC score in the expanded fifteen-model sample, and all three frame manipulations shift its simulated burden effects in the expected directions. This suggests that frame sensitivity is not limited to models with high baseline PVOC or high baseline burden sensitivity.
 
 \begin{table}[htbp]
 \centering
@@ -491,7 +491,7 @@ Equity/access vs. neutral
 \end{flushleft}
 \end{table}
 
-Table~\ref{tab:h3_model_specific_full} reports the corresponding standard errors and confidence intervals. The model-specific results show both robustness and heterogeneity within the H3 subset. The collective-obligation frame reduces simulated burden effects in all four models (significantly in GPT-4.1, Qwen3.7 Plus, and Mistral Large; not statistically distinguishable from zero in Llama 3.1 70B Instruct). The autonomy frame increases simulated burden effects in GPT-4.1, Llama 3.1 70B Instruct, and Mistral Large, but \emph{reverses sign} for Qwen3.7 Plus ($-2.87$, 95\% CI $[-4.53, -1.22]$), where activating autonomy concerns reduces the simulated burden effect rather than amplifying it. The equity/access frame is positive and significant for GPT-4.1, Llama 3.1 70B Instruct, and Mistral Large, and statistically indistinguishable from zero for Qwen3.7 Plus. Mistral Large is especially informative because it has the lowest PVC score in the expanded fifteen-model sample, yet all three frame manipulations shift its simulated burden effects in the expected directions. These results support the pooled H3 finding for the collective-obligation contrast while showing that model endpoints differ in both the magnitude and the sign of responsiveness to specific governance-value frames; the pooled autonomy and equity estimates are averages over a genuinely mixed set of model-level responses, and the Qwen3.7 Plus reversal is the clearest caution against reading a pooled frame effect as a property of LLMs in general.
+Table~\ref{tab:h3_model_specific_full} reports the corresponding standard errors and confidence intervals. The model-specific results show both robustness and heterogeneity within the H3 subset. The collective-obligation frame reduces simulated burden effects in all four models (significantly in GPT-4.1, Qwen3.7 Plus, and Mistral Large; not statistically distinguishable from zero in Llama 3.1 70B Instruct). The autonomy frame increases simulated burden effects in GPT-4.1, Llama 3.1 70B Instruct, and Mistral Large, but \emph{reverses sign} for Qwen3.7 Plus ($-2.87$, 95\% CI $[-4.53, -1.22]$), where activating autonomy concerns reduces the simulated burden effect rather than amplifying it. The equity/access frame is positive and significant for GPT-4.1, Llama 3.1 70B Instruct, and Mistral Large, and statistically indistinguishable from zero for Qwen3.7 Plus. Mistral Large is especially informative because it has the lowest PVOC score in the expanded fifteen-model sample, yet all three frame manipulations shift its simulated burden effects in the expected directions. These results support the pooled H3 finding for the collective-obligation contrast while showing that model endpoints differ in both the magnitude and the sign of responsiveness to specific governance-value frames; the pooled autonomy and equity estimates are averages over a genuinely mixed set of model-level responses, and the Qwen3.7 Plus reversal is the clearest caution against reading a pooled frame effect as a property of LLMs in general.
 
 \begin{table}[htbp]
 \centering
@@ -531,15 +531,15 @@ Pooled & Equity/access vs. neutral & 4.84*** & 0.70 & [3.45, 6.24] \\
 \section{Additional Robustness Checks}
 \label{app:additional-robustness}
 
-This appendix reports additional robustness checks for the H1 orientation--effect analysis. The main H1 specification uses the composite PVC index as the model-level predictor of average burden effects. Because the composite index combines five theoretically distinct dimensions with fixed directional weights, we also examine whether the original dimension-specific patterns persist after expanding the model sample.
+This appendix reports additional robustness checks for the H1 orientation--effect analysis. The main H1 specification uses the composite PVOC index as the model-level predictor of average burden effects. Because the composite index combines five theoretically distinct dimensions with fixed directional weights, we also examine whether the original dimension-specific patterns persist after expanding the model sample.
 
 \subsection{Expanded-Sample H1 Robustness}
 
-Table~\ref{tab:h1_expanded_robustness} summarizes the key H1 robustness results for the original nine-model sample and the expanded fifteen-model sample. The composite PVC index does not predict model-level burden effects in either sample. In the original nine-model sample, the PVC coefficient is negative and statistically indistinguishable from zero (\(\hat{\beta}=$-$4.24\), \(p=0.219\), \(R^2=0.206\)). After expanding to fifteen endpoints, the PVC coefficient remains weak and statistically indistinguishable from a null effect at conventional power (\(\hat{\beta}=$-$2.14\), \(R^2=0.090\)).
+Table~\ref{tab:h1_expanded_robustness} summarizes the key H1 robustness results for the original nine-model sample and the expanded fifteen-model sample. The composite PVOC index does not predict model-level burden effects in either sample. In the original nine-model sample, the PVOC coefficient is negative and statistically indistinguishable from zero (\(\hat{\beta}=$-$4.24\), \(p=0.219\), \(R^2=0.206\)). After expanding to fifteen endpoints, the PVOC coefficient remains weak and statistically indistinguishable from a null effect at conventional power (\(\hat{\beta}=$-$2.14\), \(R^2=0.090\)).
 
 The expanded sample also changes the interpretation of the dimension-specific collective-obligation result. In the original nine-model sample, collective obligation (CO) was positively associated with model-level burden effects but did not reach conventional significance (\(\hat{\beta}=10.81\), \(p=0.179\), \(R^2=0.242\)). After the six OpenRouter-accessed models are added, the association shrinks and remains non-significant (\(\hat{\beta}=1.28\), \(p=0.725\), \(R^2=0.010\)). This indicates that the CO association is sensitive to model composition and should be interpreted as an exploratory signal at best rather than as a stable dimension-level predictor.
 
-The expanded-sample measurement diagnostics also suggest caution in interpreting the composite PVC formula. CO is the only dimension with acceptable exploratory internal consistency, but removing CO from the composite does not change the substantive conclusion: the leave-CO-out PVC coefficient remains statistically indistinguishable from zero (Table~\ref{tab:h1_expanded_robustness}). This does not validate an alternative index; the composite association is weak under either weighting.
+The expanded-sample measurement diagnostics also suggest caution in interpreting the composite PVOC formula. CO is the only dimension with acceptable exploratory internal consistency, but removing CO from the composite does not change the substantive conclusion: the leave-CO-out PVOC coefficient remains statistically indistinguishable from zero (Table~\ref{tab:h1_expanded_robustness}). This does not validate an alternative index; the composite association is weak under either weighting.
 
 \begin{table}[htbp]
 \centering
@@ -549,29 +549,29 @@ The expanded-sample measurement diagnostics also suggest caution in interpreting
 \toprule
 Predictor and sample & Coefficient & \(p\) & \(R^2\) & Interpretation \\
 \midrule
-PVC composite, \(N=9\) & $-$4.24 & 0.219 & 0.206 & Null \\
-PVC composite, \(N=15\) & $-$2.14 & 0.278 & 0.090 & Null \\
+PVOC composite, \(N=9\) & $-$4.24 & 0.219 & 0.206 & Null \\
+PVOC composite, \(N=15\) & $-$2.14 & 0.278 & 0.090 & Null \\
 Collective obligation, \(N=9\) & 10.81 & 0.179 & 0.242 & Not significant \\
 Collective obligation, \(N=15\) & 1.28 & 0.725 & 0.010 & Not stable \\
-Leave-CO-out PVC, \(N=15\) & $-$2.22 & 0.333 & 0.072 & Null \\
+Leave-CO-out PVOC, \(N=15\) & $-$2.22 & 0.333 & 0.072 & Null \\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
-\footnotesize Notes: Each row reports a separate bivariate model-level regression of \(\bar{\Delta}_m\) on the listed predictor or PVC variant. The \(N=9\) rows use the original model sample; the \(N=15\) rows use the expanded model sample. Higher \(\bar{\Delta}_m\) indicates a larger predicted reduction in willingness under high administrative burden. The leave-CO-out PVC result is reported as a sensitivity diagnostic, not as a validated alternative index.
+\footnotesize Notes: Each row reports a separate bivariate model-level regression of \(\bar{\Delta}_m\) on the listed predictor or PVOC variant. The \(N=9\) rows use the original model sample; the \(N=15\) rows use the expanded model sample. Higher \(\bar{\Delta}_m\) indicates a larger predicted reduction in willingness under high administrative burden. The leave-CO-out PVOC result is reported as a sensitivity diagnostic, not as a validated alternative index.
 \end{flushleft}
 \end{table}
 
 \subsection{Leave-One-Model-Out Diagnostics}
 
-Leave-one-model-out diagnostics further support the main H1 conclusion. The composite PVC coefficient is not a stable predictor of model-level burden effects. In the expanded sample, the bivariate PVC association remains weak and statistically indistinguishable from zero. The CO pattern is not significant in either sample: the coefficient is positive but small in the nine-model analysis and shrinks further after adding six additional endpoints.
+Leave-one-model-out diagnostics further support the main H1 conclusion. The composite PVOC coefficient is not a stable predictor of model-level burden effects. In the expanded sample, the bivariate PVOC association remains weak and statistically indistinguishable from zero. The CO pattern is not significant in either sample: the coefficient is positive but small in the nine-model analysis and shrinks further after adding six additional endpoints.
 
-These diagnostics reinforce the interpretation that H1 does not provide evidence for a stable aggregate orientation--effect relationship. The PVC index is useful as a theoretically motivated diagnostic construct, but the expanded analysis does not support treating it as a validated scalar predictor of simulated burden-effect magnitude.
+These diagnostics reinforce the interpretation that H1 does not provide evidence for a stable aggregate orientation--effect relationship. The PVOC index is useful as a theoretically motivated diagnostic construct, but the expanded analysis does not support treating it as a validated scalar predictor of simulated burden-effect magnitude.
 
 \subsection{Power and Minimum Detectable Effect Diagnostics}
 \label{app:h1-power}
 
-The original nine-model H1 analysis was underpowered for small or moderate model-level associations. In that sample, the approximate 80\% minimum detectable slope for the composite PVC index was \(\beta \approx 10.2\) (5.7 in the fifteen-endpoint sample). The observed PVC coefficient was far smaller than this threshold. Expanding the model sample to fifteen endpoints improves coverage but does not eliminate the basic limitation that H1 relies on model-level variation.
+The original nine-model H1 analysis was underpowered for small or moderate model-level associations. In that sample, the approximate 80\% minimum detectable slope for the composite PVOC index was \(\beta \approx 10.2\) (5.7 in the fifteen-endpoint sample). The observed PVOC coefficient was far smaller than this threshold. Expanding the model sample to fifteen endpoints improves coverage but does not eliminate the basic limitation that H1 relies on model-level variation.
 
-For this reason, the H1 estimates should be interpreted as descriptive diagnostics rather than high-powered population estimates. The expanded results are most informative as evidence against a large linear association between the composite PVC index and simulated burden effects in this model sample. They should not be read as evidence that policy-value orientation is irrelevant. Instead, the stronger evidence in the paper comes from frame--outcome associations and the within-model frame-manipulation experiment.
+For this reason, the H1 estimates should be interpreted as descriptive diagnostics rather than high-powered population estimates. The expanded results are most informative as evidence against a large linear association between the composite PVOC index and simulated burden effects in this model sample. They should not be read as evidence that policy-value orientation is irrelevant. Instead, the stronger evidence in the paper comes from frame--outcome associations and the within-model frame-manipulation experiment.
 
 \end{document}
