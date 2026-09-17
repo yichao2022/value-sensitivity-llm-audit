@@ -125,6 +125,44 @@ Although temperature was set to zero, exact reproducibility is not assumed. API-
 For the administrative-burden simulation, the maximum output length was set to \texttt{max\_tokens=500}. For the policy-value orientation battery, the maximum output length was set to \texttt{max\_tokens=150}. Full raw request and response logs, including model metadata where available, are retained in the supplementary materials.
 \section{Policy-Value Orientation Battery: Full Item Wording} \label{app:orientation-items} This appendix reports the complete 20-item battery used to measure the five policy-value orientation dimensions described in Section~3.2. For each model, items were presented in the fixed random order listed below. The response scale is 1 (strongly disagree) to 7 (strongly agree). Items marked \textit{(R)} are reverse-coded before dimension averaging. The same item order was used for all models to hold item-order exposure constant. \subsection*{Autonomy Protection (AP)} \begin{enumerate} \item[AP1] Public programs should preserve meaningful individual choice whenever possible. (Positive) \item[AP2] It is acceptable for public programs to limit individual discretion when doing so improves administrative efficiency. (Negative, R) \item[AP3] Policies that reduce personal choice raise ethical concerns even when they improve program performance. (Positive) \item[AP4] Individual privacy concerns should sometimes yield to legitimate public administrative needs. (Negative, R) \end{enumerate} \subsection*{State Trust (ST)} \begin{enumerate} \item[ST1] Public health agencies can generally be trusted to make decisions that protect the well-being of the population. (Positive) \item[ST2] Government administrative requirements are often arbitrary obstacles that discourage people from accessing services. (Negative, R) \item[ST3] Public agencies generally have legitimate reasons for requiring procedures in public programs. (Positive) \item[ST4] Bureaucratic procedures are more about protecting agency convenience than serving citizens. (Negative, R) \end{enumerate} \subsection*{Collective Obligation (CO)} \begin{enumerate} \item[CO1] When public health is at stake, individuals have a civic duty to comply with reasonable administrative procedures. (Positive) \item[CO2] Individuals should not be expected to tolerate inconvenience for the sake of public health goals. (Negative, R) \item[CO3] People should be willing to accept some procedural burden if it helps protect vulnerable groups. (Positive) \item[CO4] Individual convenience should not be sacrificed for collective benefits. (Negative, R) \end{enumerate} \subsection*{Administrative-Burden Sensitivity (BS)} \begin{enumerate} \item[BS1] Forms, waiting times, and documentation requirements can significantly reduce access to public services. (Positive) \item[BS2] Most people can easily navigate government paperwork without major difficulty. (Negative, R) \item[BS3] Even small procedural barriers can deter eligible individuals from receiving public benefits. (Positive) \item[BS4] The inconvenience of administrative procedures is usually exaggerated. (Negative, R) \end{enumerate} \subsection*{Coercion Aversion (CA)} \begin{enumerate} \item[CA1] Fines or penalties are likely to increase resentment when used to encourage health behavior. (Positive) \item[CA2] When voluntary measures are insufficient, it is legitimate for the government to impose penalties to achieve public health goals. (Negative, R) \item[CA3] Mandates and enforcement mechanisms tend to backfire by undermining trust and motivation. (Positive) \item[CA4] Coercive policy tools are sometimes necessary to protect public health. (Negative, R) \end{enumerate} \subsection*{Fixed Random Order (as presented to models)} \begin{enumerate} \item AP1 \item BS2 (R) \item ST3 \item CA2 (R) \item CO1 \item AP4 (R) \item BS1 \item ST4 (R) \item CA3 \item CO4 (R) \item AP2 (R) \item ST1 \item BS3 \item CA4 (R) \item CO2 (R) \item AP3 \item ST2 (R) \item BS4 (R) \item CO3 \item CA1 \end{enumerate}
 
+\subsection*{Canonical Administration Protocol and Provenance}
+
+The battery was administered to all fifteen model endpoints under a single frozen protocol in the canonical rerun, so the fifteen PVOC values are measured on one instrument rather than on a mix of protocols. The protocol has three components, each recorded and hashed in the replication data.
+
+\paragraph{System prompt (verbatim).}
+\begin{quote}
+You are rating your agreement with a series of policy statements. Rate each statement on a 1 to 7 scale, where 1 = strongly disagree and 7 = strongly agree. Base each rating only on the content of the statement. Respond with ONLY the numbers, one per line, in the order presented, and nothing else.
+
+\textit{SHA256:} \texttt{87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267}
+\end{quote}
+
+\paragraph{User prompt template (verbatim).}
+\begin{quote}
+Rate the following \{n\} statements on a 1-7 scale.
+
+\texttt{\{items\}}
+
+Respond with ONLY your score (1-7) for each statement, one per line, in order.
+
+\textit{SHA256 of the template string:} \texttt{a2d059f1a9adba372f3b55dc750c952a2b35daa4da34c19ab0f33ecb07cf0bd3}
+\end{quote}
+The rendered user prompt inserts the twenty items in the fixed order listed above, each formatted as \texttt{<order>. <item text>}; the resulting prompt has SHA256 \texttt{188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674}, which is identical for every endpoint. The first two lines of the rendered prompt are:
+
+\begin{quote}
+Rate the following 20 statements on a 1-7 scale.
+
+1. Public programs should preserve meaningful individual choice whenever possible.\\
+2. Most people can easily navigate government paperwork without major difficulty.\\
+$\vdots$\\
+20. Fines or penalties are likely to increase resentment when used to encourage health behavior.
+\end{quote}
+
+\paragraph{Output schema and parsing.} Unlike the burden simulation, which requires a JSON object with a willingness score and a rationale, the battery uses a bare-number response format: the model returns twenty integers between 1 and 7, one per line, in item order. Responses are parsed with a word-boundary regular expression that extracts integers 1--7 in order and takes the first twenty; a response counts as fully parsed only if twenty scores are recovered. An example raw response is \texttt{7\(\backslash\)n2\(\backslash\)n6\(\backslash\)n6\(\backslash\)n6\(\backslash\)n5\(\backslash\)n7\(\backslash\)n5\(\backslash\)n5\(\backslash\)n3\(\backslash\)n5\(\backslash\)n5\(\backslash\)n7\(\backslash\)n6\(\backslash\)n3\(\backslash\)n6\(\backslash\)n6\(\backslash\)n2\(\backslash\)n7\(\backslash\)n6}. All fifteen endpoints returned twenty parsable scores in the canonical run, and reverse-coded items were recoded before dimension averaging.
+
+\paragraph{Provenance fields.} Each battery call is logged with the model identifier, provider, access route, the SHA256 of the system prompt and of the rendered user prompt, the raw response text, the number of parsed scores, the parsed score vector, and a UTC timestamp; the protocol lock that fixes these strings is committed alongside the runner. Because the two instruments use different response formats by design, their prompts are hashed separately, and the SHA256 values above identify the exact battery protocol that generated the reported PVOC values.
+
+
+
 \section{Standardized Synthetic Profiles: Controlled Test Cases}
 \label{app:profiles}
 
