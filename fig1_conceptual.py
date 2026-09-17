@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+"""Figure 1: Diagnostic framework - three levels of value sensitivity testing.
+
+Statistics are the canonical values (2026-09 rerun):
+  H1 pooled bivariate  : beta1 = -2.14, 95% CI [-6.23, 1.95], R^2 = 0.090  (N = 15 endpoints)
+  H2 frame-adjusted    : access +2.36 (p=.020), collective +0.69 (n.s.), coercive +7.26 (p<.001), N = 2,019
+  H3 pooled (4 models) : autonomy +4.96 [3.57, 6.35], collective -10.88 [-12.54, -9.21],
+                         equity +4.84 [3.45, 6.24], adj. R^2 = 0.77 (N = 2,159; 108 clusters)
+Regenerate after any rerun; do not hand-edit the PDF.
+"""
+from pathlib import Path
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch, FancyArrowPatch, Rectangle
+
+OUT = Path(__file__).with_name("fig1_conceptual.pdf")
+plt.rcParams.update({"font.family": "DejaVu Sans"})
+
+H1_BODY = [r"$\mathrm{PVC}_m \;\rightarrow\; \Delta_m$",
+           "Aggregate PVC index predicts", "cross-model burden effects", "",
+           r"$N$ = 15 model endpoints",
+           r"$\beta_1$ = $-2.14$, 95% CI [$-6.23$, 1.95]", r"$R^2$ = 0.09"]
+H2_BODY = [r"$\mathrm{Frame}_{mi} \;\rightarrow\; \Delta_{mi}$",
+           "Interpretive frames correlate with", "predicted burden effects", "",
+           "N = 2,019 rationale\u2013effect observations",
+           r"Access barriers $\uparrow$ ($b$ = 2.36)",
+           "Co. responsibility n.s. ($b$ = 0.69)",
+           r"Coercive backlash $\uparrow$ ($b$ = 7.26)"]
+H3_BODY = [r"$\Delta_{mcir} \;\approx\; \mathrm{Frame}_c$",
+           "Assigned governance frame shifts",
+           "predicted effect within the same model", "",
+           r"$N$ = 4 models $\times$ 27 profiles $\times$ 4 frames",
+           r"Autonomy $\uparrow$ (+4.96), equity $\uparrow$ (+4.84)",
+           r"Collective obligation $\downarrow$ ($-$10.88)",
+           r"adj. $R^2$ = 0.77"]
+
+COLS = [
+    ("#1f4e79", "#dce9f5", "Model-level", "H1: Composite orientation-effect", H1_BODY,
+     "Null: no detectable association"),
+    ("#8c1d1d", "#f7dede", "Narrative-level", "H2: Narrative frame association", H2_BODY,
+     "Partial support: 2 of 3 frames"),
+    ("#1d6b3f", "#d9eedd", "Within-model", "H3: Frame manipulation", H3_BODY,
+     "Supported (pooled; model heterogeneity)"),
+]
+
+fig, ax = plt.subplots(figsize=(11, 4.6))
+ax.set_xlim(0, 33); ax.set_ylim(0, 14); ax.axis("off")
+
+box_w, gap = 10.2, 1.2
+for i, (edge, fill, level, title, lines, verdict) in enumerate(COLS):
+    x = 0.6 + i * (box_w + gap)
+    ax.add_patch(FancyBboxPatch((x, 3.4), box_w, 9.6, boxstyle="round,pad=0.15,rounding_size=0.25",
+                                linewidth=1.4, edgecolor=edge, facecolor=fill))
+    ax.add_patch(Rectangle((x, 12.1), box_w, 0.9, facecolor=edge, edgecolor="none"))
+    ax.text(x + box_w / 2, 12.55, level, ha="center", va="center", fontsize=11,
+            color="white", fontweight="bold")
+    ax.text(x + box_w / 2, 11.35, title, ha="center", va="center", fontsize=10,
+            color=edge, fontweight="bold")
+    ax.plot([x + 0.7, x + box_w - 0.7], [10.85, 10.85], color=edge, linewidth=0.8)
+    ax.text(x + box_w / 2, 10.55, lines[0], ha="center", va="top", fontsize=10, color="#222222")
+    for j, ln in enumerate(lines[1:], start=1):
+        ax.text(x + box_w / 2, 8.9 - 0.62 * j, ln, ha="center", va="center", fontsize=8.4, color="#333333")
+    ax.add_patch(FancyBboxPatch((x + 0.5, 3.75), box_w - 1.0, 1.05,
+                                boxstyle="round,pad=0.1,rounding_size=0.15",
+                                linewidth=1.0, edgecolor=edge, facecolor="white"))
+    ax.text(x + box_w / 2, 4.27, verdict, ha="center", va="center", fontsize=8.6,
+            color=edge, fontweight="bold")
+    ax.add_patch(FancyArrowPatch((x + box_w / 2, 3.4), (16.5, 2.55), arrowstyle="-|>",
+                                 mutation_scale=12, linewidth=1.1, color=edge, shrinkA=0, shrinkB=2))
+
+ax.add_patch(FancyBboxPatch((4.5, 1.6), 24, 0.95, boxstyle="round,pad=0.15,rounding_size=0.2",
+                            linewidth=1.2, edgecolor="#333333", facecolor="#f2f2f2"))
+ax.text(16.5, 2.07, "Does normative-frame sensitivity affect LLM-assisted policy simulation?",
+        ha="center", va="center", fontsize=10.5, fontweight="bold", color="#222222")
+ax.text(16.5, 0.85, "Three independent diagnostic tests \u2014 each informative regardless of the others.   "
+                    "PVC null (H1)  \u2192  frames partially matter (H2)  \u2192  causal manipulation confirms (H3)",
+        ha="center", va="center", fontsize=9, color="#444444")
+
+plt.tight_layout()
+fig.savefig(OUT)
+fig.savefig(OUT.with_suffix(".png"), dpi=150)
+print(f"wrote {OUT} (+ preview png)")
