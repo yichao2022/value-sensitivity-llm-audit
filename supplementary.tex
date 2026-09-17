@@ -19,14 +19,14 @@
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcommand{\breakabletexttt}[1]{\texttt{\detokenize{#1}}}
 
-\title{Online Supplement: ``Validity and Robustness of LLM-Assisted Policy Simulation in Health Services Research: A Value-Sensitivity Audit''}
+\title{Online Supplement: ``A Framework for Auditing Value Sensitivity in Large Language Model--Assisted Health Policy Simulation''}
 \author{Yichao Jin}
 \date{\today}
 
 \begin{document}
 \maketitle
 
-This Online Supplement contains supporting materials for the main text, organized as follows. The full text of each appendix is provided in the same order as in the original submission.
+This Online Supplement contains supporting materials for the main text. Appendices are presented in the order in which they are first cited.
 
 \section{Data Quality and Simulation Diagnostics}
 \label{sec:data-quality}
@@ -71,7 +71,7 @@ Claude Sonnet 4.6 & 270 & 100.0 & 100.0 & 100.0 & 47.99 & 0.44 & 8.35 & 0.0 \\
 \section{Model Versioning, API Endpoints, and Decoding Parameters}
 \label{app:models}
 
-This appendix reports the model identifiers, access routes, endpoints, and decoding settings used in the experiments. The study includes fifteen LLM endpoints. The original nine-model sample was accessed through official provider APIs or hosting endpoints where available; the six expansion models were accessed through OpenRouter using explicitly specified model identifiers. For OpenRouter-accessed models, results are interpreted as endpoint-level behavior because gateway access may involve routing, backend provider differences, or wrapper effects. Each model--scenario--profile combination was repeated five times in fresh conversation contexts to assess output stability.
+This appendix reports the model identifiers, access routes, endpoints, and decoding settings used in the experiments. The study includes fifteen LLM endpoints. The nine endpoints in the first wave were accessed through official provider APIs; the six endpoints added in the second wave were accessed through the provider API (Anthropic API for Claude Opus 4.8 and Claude Haiku) or through gateways (OpenRouter for Llama 3.1 8B Instruct, Mistral Large, Cohere Command R+, and Kimi K2.6; DashScope for Qwen3.7 Plus) using explicitly specified model identifiers. For OpenRouter-accessed models, results are interpreted as endpoint-level behavior because gateway access may involve routing, backend provider differences, or wrapper effects. Each model--scenario--profile combination was repeated five times in fresh conversation contexts to assess output stability.
 
 \begin{landscape}
 \small
@@ -181,15 +181,15 @@ All 27 profiles were used in the main analyses; no single profile was designated
 \section{Capability and Task-Diagnostic Details}
 \label{app:capability}
 
-This appendix clarifies how capability-related diagnostics are handled in the expanded fifteen-model analysis. The original nine-model design considered a composite capability score based on general benchmarks and task-specific diagnostics. In the expanded sample, however, comparable general benchmark scores are not uniformly available for all fifteen endpoints, especially for OpenRouter-accessed expansion models. Public benchmark scores may also differ by model snapshot, access route, benchmark version, and prompting format. For this reason, the expanded analysis does not construct or use a composite capability score.
+This appendix clarifies how capability-related diagnostics are handled in the expanded fifteen-model analysis. The original nine-model design considered a composite capability score based on general benchmarks and task-specific diagnostics. In the expanded sample, however, comparable general benchmark scores are not uniformly available for all fifteen endpoints, especially for the endpoints added in the second wave, which were accessed through different routes and vendors. Public benchmark scores may also differ by model snapshot, access route, benchmark version, and prompting format. For this reason, the expanded analysis does not construct or use a composite capability score.
 
-Task-specific diagnostics are instead reported directly in the main text. Table~\ref{tab:data_quality} reports JSON validity, score-range compliance, non-refusal rates, repetition-level stability, burden-effect dispersion, and flip rates for all fifteen models. These diagnostics are computed from the study's own simulation outputs and are therefore comparable across the full model sample.
+Task-specific diagnostics are reported in Table~\ref{tab:data_quality}. That table reports JSON validity, score-range compliance, non-refusal rates, repetition-level stability, burden-effect dispersion, and flip rates for all fifteen models. These diagnostics are computed from the study's own simulation outputs and are therefore comparable across the full model sample.
 
 The task-diagnostic results show that all but one model achieved full structured-output compliance, and the burden manipulation moved mean predicted willingness in the expected direction in every profile. Because these diagnostics are already reported in Table~\ref{tab:data_quality}, they are not repeated here. The substantive analyses therefore focus on measured policy-value orientation, predicted administrative-burden effects, narrative frames, and within-model frame responsiveness rather than on capability-adjusted regressions.
 
 \subsection*{Evaluation Configuration}
 
-All task diagnostics were computed from the main administrative-burden simulation. Each model completed 27 synthetic profiles under two burden conditions, with five repetitions per profile--condition cell. For Kimi K2.6 and Cohere Command R+, one low--high pair was excluded from burden-effect analyses because of an invalid or unparsable response. All API calls used fresh conversation contexts. Temperature was set to zero where supported. Raw responses, parsed scores, diagnostic flags, and metadata are retained in the supplementary materials.
+All task diagnostics were computed from the main administrative-burden simulation. Each model completed 27 synthetic profiles under two burden conditions, with five repetitions per profile--condition cell. For Gemini 2.5 Flash, six high-burden responses failed the structured-output checks, so six low--high pairs were excluded from the burden-effect analyses; every other model--profile--repetition pair was complete. All API calls used fresh conversation contexts. Temperature was set to zero where supported. Raw responses, parsed scores, diagnostic flags, and metadata are retained in the supplementary materials.
 \clearpage
 
 \section{Administrative-Burden Simulation Prompt Templates}
@@ -314,7 +314,7 @@ To validate the algorithmic coding, a random sample of 200 rationales (approxima
 \item \textbf{Discrepancy review:} Any rationales where pattern matches appeared to violate frame definitions were flagged for review.
 \end{enumerate}
 
-The manual inspection confirmed that pattern assignments reflected the codebook definitions rather than superficial keyword matches. No systematic misclassification patterns were identified that would require pattern refinement. The algorithmic prevalence estimates were deemed valid for use in the frame-decomposition analysis.
+The manual inspection confirmed that pattern assignments reflected the codebook definitions rather than superficial keyword matches, and no systematic misclassification pattern was identified that would require pattern refinement. The coded prevalence estimates were therefore used as descriptive inputs to the frame--outcome association analysis.
 
 \subsection{Frame Prevalence and Exclusions}
 
@@ -351,7 +351,7 @@ Describes practical inconvenience or access difficulty without resistance, distr
 
 The access-barrier definition was intentionally restricted to avoid coding simple restatements of the high-burden prompt as a substantive frame. For example, ``the process requires forms and a long wait'' is not coded as access barriers unless the rationale links those requirements to reduced access or profile-specific constraints such as work flexibility, childcare, income, transportation, or lack of regular care.
 
-Frames with little or no empirical variation are reported descriptively but excluded from the main frame-adjusted model. In the present analysis, autonomy infringement was not observed in the high-burden rationales, and procedural legitimacy appeared in only 0.1\% of rationales. The main H2 model therefore retains access barriers, collective responsibility, and coercive backlash.
+Frames with little or no empirical variation are reported descriptively but excluded from the main frame-adjusted model. In the present analysis, autonomy infringement and procedural legitimacy each appeared in one of the 2,019 high-burden rationales (0.05\% each), so neither frame has usable variation. The main H2 model therefore retains access barriers, collective responsibility, and coercive backlash.
 
 \section{H2 Leave-One-Model-Out Robustness}
 \label{app:h2-robustness}
@@ -447,7 +447,7 @@ Mistral Large & Equity/access & 39.63 & 6.95 & 135 \\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
-\footnotesize Notes: Each row reports the mean profile--repetition-level burden effect, \(\Delta = W^{low}-W^{high}\), for one model under one assigned frame. $N=135$ for each model--frame cell, corresponding to 27 profiles and five repetitions, except where a response failed the structured-output checks: Llama 3.1 70B Instruct equity/access ($N=134$), and Qwen3.7 Plus ($N=114$, 104, 108, and 120 across the neutral, autonomy, collective-obligation, and equity/access frames respectively, reflecting calls rejected by the serving endpoint). Positive values indicate larger predicted reductions in willingness under the high-burden condition.
+\footnotesize Notes: Each row reports the mean profile--repetition-level burden effect, \(\Delta = W^{low}-W^{high}\), for one model under one assigned frame. $N=135$ for each model--frame cell, corresponding to 27 profiles and five repetitions, except where a response failed the structured-output checks: Llama 3.1 70B Instruct equity/access ($N=134$). Positive values indicate larger predicted reductions in willingness under the high-burden condition.
 \end{flushleft}
 \end{table}
 
@@ -537,7 +537,7 @@ This appendix reports additional robustness checks for the H1 orientation--effec
 
 Table~\ref{tab:h1_expanded_robustness} summarizes the key H1 robustness results for the original nine-model sample and the expanded fifteen-model sample. The composite PVOC index does not predict model-level burden effects in either sample. In the original nine-model sample, the PVOC coefficient is negative and statistically indistinguishable from zero (\(\hat{\beta}=$-$4.24\), \(p=0.219\), \(R^2=0.206\)). After expanding to fifteen endpoints, the PVOC coefficient remains weak and statistically indistinguishable from a null effect at conventional power (\(\hat{\beta}=$-$2.14\), \(R^2=0.090\)).
 
-The expanded sample also changes the interpretation of the dimension-specific collective-obligation result. In the original nine-model sample, collective obligation (CO) was positively associated with model-level burden effects but did not reach conventional significance (\(\hat{\beta}=10.81\), \(p=0.179\), \(R^2=0.242\)). After the six OpenRouter-accessed models are added, the association shrinks and remains non-significant (\(\hat{\beta}=1.28\), \(p=0.725\), \(R^2=0.010\)). This indicates that the CO association is sensitive to model composition and should be interpreted as an exploratory signal at best rather than as a stable dimension-level predictor.
+The expanded sample also changes the interpretation of the dimension-specific collective-obligation result. In the original nine-model sample, collective obligation (CO) was positively associated with model-level burden effects but did not reach conventional significance (\(\hat{\beta}=10.81\), \(p=0.179\), \(R^2=0.242\)). After the six additional endpoints are added, the association shrinks and remains non-significant (\(\hat{\beta}=1.28\), \(p=0.725\), \(R^2=0.010\)). This indicates that the CO association is sensitive to model composition and should be interpreted as an exploratory signal at best rather than as a stable dimension-level predictor.
 
 The expanded-sample measurement diagnostics also suggest caution in interpreting the composite PVOC formula. CO is the only dimension with acceptable exploratory internal consistency, but removing CO from the composite does not change the substantive conclusion: the leave-CO-out PVOC coefficient remains statistically indistinguishable from zero (Table~\ref{tab:h1_expanded_robustness}). This does not validate an alternative index; the composite association is weak under either weighting.
 
