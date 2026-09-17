@@ -39,18 +39,18 @@
 
 \begin{abstract}
 
-\noindent\textbf{Objective:} To evaluate whether LLM-assisted policy simulations are robust to model choice, prompt framing, and measured policy-value orientations, and to characterize how sensitive simulated policy effects are to normative framing, using administrative burden in U.S. vaccination access as a testbed.
+\noindent\textbf{Objective:} To test whether LLM-assisted policy simulations are robust to model choice, prompt framing, and measured policy-value orientations, using administrative burden in U.S. vaccination access as a testbed.
 
-\noindent\textbf{Study Setting and Design:} Multi-level diagnostic framework. Fifteen LLM endpoints complete a policy-value orientation battery and simulate vaccination willingness for 27 standardized synthetic profiles under low- and high-burden conditions. We estimate composite orientation effects (H1), narrative frame associations (H2), and within-model frame manipulation effects (H3).
+\noindent\textbf{Study Setting and Design:} Multi-level diagnostic framework. Fifteen LLM endpoints completed a policy-value orientation battery and simulated vaccination willingness for 27 standardized profiles under low- and high-burden conditions, yielding tests of composite orientation (H1), rationale-frame association (H2), and within-model frame manipulation (H3).
 
-\noindent\textbf{Data Sources and Analytic Sample:} Data were collected on 16--17 September 2026 (UTC) from 15 large language model endpoints accessed through provider APIs and gateways. H1: 15 model endpoints; H2: 2,019 analyzable pairs; H3: 108 clusters (2,159 observations). Synthetic profiles (N=27) are constructed experimental stimuli, not human population samples; no human participants were involved.
+\noindent\textbf{Data Sources and Analytic Sample:} Responses were collected on 16--17 September 2026 (UTC) from 15 LLM endpoints accessed through provider APIs and gateways. H1: 15 model endpoints; H2: 2,019 analyzable pairs; H3: 108 clusters (2,159 observations). The 27 synthetic profiles are constructed test cases; no human participants were involved.
 
 \noindent\textbf{Principal Findings:} 
-(1) Composite orientation--effect: PVOC coefficient $\beta_1 = $ $-$2.14, 95\% CI [$-$6.23, 1.95], $p = 0.28$---composite orientation does not predict cross-model variation.
-(2) Narrative frame association: with model and profile fixed effects included, access-barrier rationales are associated with larger simulated effects ($\beta = 1.08$, 95\% CI [0.24, 1.92], $p = 0.012$); collective-responsibility ($\beta = 0.11$, $p = 0.88$) and coercive-backlash ($\beta = 1.59$, $p = 0.17$) rationales show no detectable association.
-(3) Within-model manipulation: Autonomy frames increase simulated burden effects by 4.96 points (95\% CI [3.57, 6.35]); collective-obligation frames reduce effects by 10.88 points (95\% CI [$-$12.54, $-$9.21]); equity/access frames increase effects by 4.84 points (95\% CI [3.45, 6.24]). Directions are model-specific: in one of four models the autonomy frame reverses sign.
+(1) The composite orientation index does not predict cross-model variation ($\beta_1 = $ $-$2.14, 95\% CI [$-$6.23, 1.95]).
+(2) With model and profile fixed effects, access-barrier rationales co-occur with larger simulated effects ($\beta = 1.08$ [0.24, 1.92]); collective-responsibility ($0.11$, $p = 0.88$) and coercive-backlash ($1.59$, $p = 0.17$) rationales show no detectable association.
+(3) Assigned frames shift simulated burden effects within models: autonomy $+4.96$ [3.57, 6.35], collective obligation $-10.88$ [$-$12.54, $-$9.21], equity/access $+4.84$ [3.45, 6.24]; the autonomy direction reverses in one of four models.
 
-\noindent\textbf{Conclusions:} LLM-assisted policy simulation is normatively frame-sensitive. The same model, profiles, and scenario can produce materially different estimates (pooled shifts of 4.8--10.9 points on a 0--100 scale, and up to 20.1 points in model-specific estimates) depending on analyst-selected framing. These estimates characterize LLM simulation behavior, not real-world vaccination responses.
+\noindent\textbf{Conclusions:} LLM-assisted policy simulation is frame-sensitive: identical models, profiles, and scenarios yield materially different estimates (pooled shifts of 4.8--10.9 points on a 0--100 scale) depending on analyst-selected framing. These results characterize simulation behavior, not real-world vaccination response.
 
 \vspace{0.5em}
 \noindent\rule{\textwidth}{0.4pt}
@@ -59,16 +59,16 @@
 \noindent\textbf{What is known on this topic}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 \item LLMs are increasingly used to simulate social judgments and policy effects in health services research.
-\item Prior work measures model values through direct survey prompts rather than downstream simulated policy effects.
-\item Less is known about whether measured policy-value orientations shape simulated policy-effect estimates under policy conditions.
+\item Model values are usually measured with survey prompts rather than downstream simulated policy effects.
+\item Whether measured value orientations shape simulated policy effects is unknown.
 \end{itemize}
 
 \vspace{0.3em}
 \noindent\textbf{What this study found}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item Composite policy-value scores do not predict cross-model variation in simulated effects.
-\item Access-barrier rationales co-occur with larger simulated effect sizes; collective-responsibility and coercive-backlash rationales do not.
-\item Frame manipulation shifts simulated effects in every model tested: collective-obligation frames reduce them in all four models, while autonomy and equity frames increase them in three of four (one model reverses sign).
+\item Composite policy-value scores do not predict cross-model variation.
+\item Access-barrier rationales co-occur with larger simulated effects; the other two retained rationales do not.
+\item Assigned frames shift simulated effects within models: collective obligation reduces them in all four tested models; autonomy and equity increase them in three.
 \end{itemize}
 
 \end{abstract}
