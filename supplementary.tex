@@ -781,6 +781,8 @@ Three caveats qualify the null H1 result. First, the PVOC imposes strong theoret
 
 Table~\ref{tab:h1_expanded_robustness} summarizes the key H1 robustness results for the original nine-model sample and the expanded fifteen-model sample. The composite PVOC index does not predict model-level burden effects in either sample. In the original nine-model sample, the PVOC coefficient is negative and statistically indistinguishable from zero (\(\hat{\beta}=$-$4.24\), \(p=0.219\), \(R^2=0.206\)). After expanding to fifteen endpoints, the PVOC coefficient remains weak and statistically indistinguishable from a null effect at conventional power (\(\hat{\beta}=$-$2.14\), \(R^2=0.090\)).
 
+Table~\ref{tab:h1_dimension_checks} reports the complete set of dimension-specific regressions in the fifteen-endpoint sample: each of the five dimensions is fitted separately, so the collective-obligation row discussed here is one of five rather than the only dimension reported. None of the five is individually significant (all \(p \geq 0.52\) and no dimension-specific \(R^2\) above \(0.04\)), so the dimension-level check does not overturn the composite null.
+
 The expanded sample also changes the interpretation of the dimension-specific collective-obligation result. In the original nine-model sample, collective obligation (CO) was positively associated with model-level burden effects but did not reach conventional significance (\(\hat{\beta}=10.81\), \(p=0.179\), \(R^2=0.242\)). After the six additional endpoints are added, the association shrinks and remains non-significant (\(\hat{\beta}=1.28\), \(p=0.725\), \(R^2=0.010\)). This indicates that the CO association is sensitive to model composition and should be interpreted as an exploratory signal at best rather than as a stable dimension-level predictor.
 
 The expanded-sample measurement diagnostics also suggest caution in interpreting the composite PVOC formula. CO is the only dimension with acceptable exploratory internal consistency, but removing CO from the composite does not change the substantive conclusion: the leave-CO-out PVOC coefficient remains statistically indistinguishable from zero (Table~\ref{tab:h1_expanded_robustness}). This does not validate an alternative index; the composite association is weak under either weighting.
@@ -805,6 +807,28 @@ Leave-CO-out PVOC, \(N=15\) & $-$2.22 & 0.333 & 0.072 & Null \\
 }
 \begin{flushleft}
 \footnotesize Notes: Each row reports a separate bivariate model-level regression of \(\bar{\Delta}_m\) on the listed predictor or PVOC variant. The \(N=9\) rows use the nine endpoints accessed through official provider APIs; the \(N=15\) rows use the expanded model sample. PVOC is standardised across the sample used for aggregation (Appendix~\ref{app:orientation-items}): the first \(N=9\) row keeps the fifteen-endpoint standardisation, the second re-standardises the five dimensions within the nine-endpoint subset. Both leave the H1 conclusion unchanged, but the slope is scale-dependent (\(-4.24\) [\(-11.66\), 3.19] versus \(-2.12\) [\(-6.44\), 2.21]), so the two are reported together. The collective-obligation rows use the raw 1--7 dimension means (not standardised), which is why their coefficients are expressed on a different scale; standardising CO gives \(+5.01\) (\(p=0.179\)) for \(N=9\) and \(+1.05\) (\(p=0.725\)) for \(N=15\), with identical \(p\)-values and \(R^2\) because a single regressor's \(t\) statistic is scale-invariant. Higher \(\bar{\Delta}_m\) indicates a larger predicted reduction in willingness under high administrative burden. The leave-CO-out PVOC result is reported as a sensitivity diagnostic, not as a validated alternative index.
+\end{flushleft}
+\end{table}
+\begin{table}[htbp]
+\centering
+\caption{Dimension-specific H1 regressions in the fifteen-endpoint sample}
+\label{tab:h1_dimension_checks}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrr}
+\toprule
+Predictor (standardised) & Coefficient & SE & 95\% CI & \(p\) & \(R^2\) \\
+\midrule
+AP & -0.54 & 2.93 & [-6.87, +5.79] & 0.856 & 0.003 \\
+ST & +1.89 & 2.89 & [-4.34, +8.13] & 0.523 & 0.032 \\
+CO & +1.05 & 2.92 & [-5.26, +7.36] & 0.725 & 0.010 \\
+BS & -0.49 & 2.93 & [-6.83, +5.84] & 0.869 & 0.002 \\
+CA & -0.71 & 2.93 & [-7.03, +5.62] & 0.813 & 0.004 \\
+\midrule
+PVOC composite (reference) & -2.14 & 1.89 & [-6.23, +1.95] & 0.278 & 0.090 \\
+\bottomrule
+\end{tabular}}
+\begin{flushleft}
+\footnotesize Notes: Each row is a separate bivariate OLS regression of the model-level mean burden effect (points on a 0--100 willingness scale) on a single standardised orientation dimension across the fifteen endpoints. Dimensions are standardised within the fifteen-endpoint sample (Appendix~\ref{app:orientation-items}); higher values indicate more of the named orientation. AP = autonomy protection, ST = state trust, CO = collective obligation, BS = administrative-burden sensitivity, CA = coercion aversion. None of the five dimensions is individually significant, so the dimension-level diagnostic check does not overturn the composite null; the collective-obligation row is one of five rather than the only dimension reported. The composite row is repeated for reference.
 \end{flushleft}
 \end{table}
 
