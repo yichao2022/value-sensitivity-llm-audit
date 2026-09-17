@@ -15,6 +15,8 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{setspace}
 \singlespacing
+\setlength{\emergencystretch}{3em}
+\sloppy
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -53,7 +55,7 @@
 \noindent\textbf{Conclusions:} LLM-assisted policy simulation is frame-sensitive: identical models, profiles, and scenarios yield materially different estimates (pooled shifts of 4.8--10.9 points on a 0--100 scale) depending on analyst-selected framing. These results characterize simulation behavior, not real-world vaccination response.
 
 \vspace{0.5em}
-\noindent\rule{\textwidth}{0.4pt}
+\noindent\rule{\linewidth}{0.4pt}
 \vspace{0.3em}
 
 \noindent\textbf{What is known on this topic}
@@ -139,7 +141,7 @@ We administered a 20-item Likert battery measuring five dimensions: autonomy pro
 
 To measure each model's simulated burden effect, we designed a vaccination-access simulation as a controlled HSR testbed, in which the same standardized profile faces two policy conditions: low administrative burden and high administrative burden. The simulation was administered after the orientation battery but before any frame manipulation, using a fresh API call for each model--profile--condition--repetition.
 
-\subsubsection{Standardized synthetic profiles (controlled test cases)}
+\subsubsection{Standardized synthetic profiles}
 \label{subsub:profiles}
 
 We constructed 27 standardized synthetic profiles as controlled test cases that cross income, work flexibility, and health-care access while holding age, gender, residence, education, family status, and trust in public health authorities constant. They are experimental stimuli designed to isolate how models interpret the same scenarios, not a representation of any human population; the full set is in the Online Supplement.
@@ -149,7 +151,7 @@ We constructed 27 standardized synthetic profiles as controlled test cases that 
 
 The two conditions differ only in administrative requirements: low burden (online scheduling, nearby pharmacy, minimal documentation, about 15 minutes) and high burden (in-person registration, income verification, proof of residency, paper forms, a 1--2 hour wait, one-week advance appointment). These are a \textbf{stylized testbed} for auditing simulation validity, not estimates of real-world burden magnitude.
 
-\subsubsection{Outcome: predicted willingness and marginal burden effect}
+\subsubsection{Outcome measure}
 \label{subsub:burden-outcome}
 
 For each model, profile, burden condition, and repetition we obtained a predicted willingness on a 0--100 scale from a structured JSON response (integer score plus a brief rationale). The primary outcome is the within-profile burden effect \(\Delta_{mir} = W_{mi,\text{low},r} - W_{mi,\text{high},r}\), positive when higher burden lowers predicted willingness; model-level analyses average across profiles and repetitions.
@@ -424,7 +426,8 @@ For HSR researchers using LLMs for policy simulation, the implication is clear: 
 \vspace*{2em}
 {\Large\bfseries Online Supplement\par}
 \vspace{2em}
-{\large\itshape ``Validity and Robustness of LLM-Assisted Policy Simulation in Health Services Research: A Value-Sensitivity Audit''\par}
+{\large\itshape A Framework for Auditing Value Sensitivity\\
+in LLM-Assisted Health Policy Simulation\par}
 \vspace{2em}
 {\large Yichao Jin\par}
 \vspace{0.75em}

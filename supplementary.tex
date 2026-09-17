@@ -21,7 +21,7 @@
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcommand{\breakabletexttt}[1]{\path{#1}}   % breaks long identifiers/paths across lines (xurl)
 
-\title{Online Supplement: ``A Framework for Auditing Value Sensitivity in Large Language Model--Assisted Health Policy Simulation''}
+\title{Online Supplement: A Framework for Auditing Value Sensitivity in LLM-Assisted Health Policy Simulation}
 \author{Yichao Jin}
 \date{\today}
 
@@ -135,8 +135,11 @@ The battery was administered to all fifteen model endpoints under a single froze
 \begin{quote}
 You are rating your agreement with a series of policy statements. Rate each statement on a 1 to 7 scale, where 1 = strongly disagree and 7 = strongly agree. Base each rating only on the content of the statement. Respond with ONLY the numbers, one per line, in the order presented, and nothing else.
 
-\textit{SHA256:} \texttt{87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267}
 \end{quote}
+\begin{flushleft}
+{\footnotesize SHA256 of the system prompt:}\\
+{\footnotesize\ttfamily 87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267}
+\end{flushleft}
 
 \paragraph{User prompt template (verbatim).}
 \begin{quote}
@@ -146,12 +149,16 @@ Rate the following \{n\} statements on a 1-7 scale.
 
 Respond with ONLY your score (1-7) for each statement, one per line, in order.
 
-\textit{SHA256 of the template string:}\\
-{\footnotesize\ttfamily a2d059f1a9adba372f3b55dc750c952a2b35daa4da34c19ab0f33ecb07cf0bd3}
 \end{quote}
-The rendered user prompt inserts the twenty items in the fixed order listed above, each formatted as \texttt{<order>. <item text>}; the resulting prompt has SHA256\\
-\texttt{188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674},
-which is identical for every endpoint. The first two lines of the rendered prompt are:
+\begin{flushleft}
+{\footnotesize SHA256 of the template string:}\\
+{\footnotesize\ttfamily a2d059f1a9adba372f3b55dc750c952a2b35daa4da34c19ab0f33ecb07cf0bd3}
+\end{flushleft}
+The rendered user prompt inserts the twenty items in the fixed order listed above, each formatted as \texttt{<order>. <item text>}; the resulting prompt has the following SHA256, identical for every endpoint:
+
+\begin{flushleft}
+{\footnotesize\ttfamily 188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674}
+\end{flushleft} The first two lines of the rendered prompt are:
 
 \begin{quote}
 Rate the following 20 statements on a 1-7 scale.
@@ -162,7 +169,11 @@ $\vdots$\\
 20. Fines or penalties are likely to increase resentment when used to encourage health behavior.
 \end{quote}
 
-\paragraph{Output schema and parsing.} Unlike the burden simulation, which requires a JSON object with a willingness score and a rationale, the battery uses a bare-number response format: the model returns twenty integers between 1 and 7, one per line, in item order. Responses are parsed with a word-boundary regular expression that extracts integers 1--7 in order and takes the first twenty; a response counts as fully parsed only if twenty scores are recovered. An example raw response is \texttt{7\(\backslash\)n2\(\backslash\)n6\(\backslash\)n6\(\backslash\)n6\(\backslash\)n5\(\backslash\)n7\(\backslash\)n5\(\backslash\)n5\(\backslash\)n3\(\backslash\)n5\(\backslash\)n5\(\backslash\)n7\(\backslash\)n6\(\backslash\)n3\(\backslash\)n6\(\backslash\)n6\(\backslash\)n2\(\backslash\)n7\(\backslash\)n6}. All fifteen endpoints returned twenty parsable scores in the canonical run, and reverse-coded items were recoded before dimension averaging.
+\paragraph{Output schema and parsing.} Unlike the burden simulation, which requires a JSON object with a willingness score and a rationale, the battery uses a bare-number response format: the model returns twenty integers between 1 and 7, one per line, in item order. Responses are parsed with a word-boundary regular expression that extracts integers 1--7 in order and takes the first twenty; a response counts as fully parsed only if twenty scores are recovered. An example raw response is a single newline-separated column of twenty integers:
+
+\begin{flushleft}
+{\footnotesize\ttfamily 7, 2, 6, 6, 6, 5, 7, 5, 5, 3, 5, 5, 7, 6, 3, 6, 6, 2, 7, 6}
+\end{flushleft} All fifteen endpoints returned twenty parsable scores in the canonical run, and reverse-coded items were recoded before dimension averaging.
 
 \paragraph{Provenance fields.} Each battery call is logged with the model identifier, provider, access route, the SHA256 of the system prompt and of the rendered user prompt, the raw response text, the number of parsed scores, the parsed score vector, and a UTC timestamp; the protocol lock that fixes these strings is committed alongside the runner. Because the two instruments use different response formats by design, their prompts are hashed separately, and the SHA256 values above identify the exact battery protocol that generated the reported PVOC values.
 
@@ -247,7 +258,12 @@ For the main administrative-burden simulation, the following system prompt was u
 \begin{quote}
 You are estimating how likely the person described below would be to get vaccinated under the specified access conditions. Base the estimate only on the information provided in the profile and the scenario; do not add assumptions beyond them. Respond ONLY with a single JSON object and nothing else. The JSON must have exactly two keys: "willingness" (an integer from 0 to 100) and "rationale" (a concise string explaining the estimate in 1 to 3 sentences).
 
-\textit{SHA256:} \texttt{380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe}
+\end{quote}
+\begin{flushleft}
+{\footnotesize SHA256 of the system prompt:}\\
+{\footnotesize\ttfamily 380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe}
+\end{flushleft}
+\begin{quote}
 \end{quote}
 
 \subsection*{User prompt template}
@@ -265,11 +281,19 @@ Scenario:
 
 What is this person's willingness (0--100) to proceed with vaccination given this registration scenario?
 
-\textit{SHA256 of the template string:}\\
-{\footnotesize\ttfamily 1b98f920c7a2a1932b741233e800f99a62e1de84a1a172cd2038f1ad3c6970e4}
 \end{quote}
+\begin{flushleft}
+{\footnotesize SHA256 of the template string:}\\
+{\footnotesize\ttfamily 1b98f920c7a2a1932b741233e800f99a62e1de84a1a172cd2038f1ad3c6970e4}
+\end{flushleft}
 
-The rendered user prompt therefore consists of the profile text and scenario text documented in this appendix, inserted into the template above. The two burden scenarios are fixed strings; their SHA256 hashes are \texttt{7307a8b8f499ebc0897c6fa0436fb8eafb3e77efeebf21ce91d8471989ec9b01} (low burden) and \texttt{c0bc058f951e4294842a4173f4cc2ac1e0475f1ff84d9438151cc9bd42967b52} (high burden). The 27 profile strings are the natural-language descriptions listed in Appendix~\ref{app:profiles}.
+The rendered user prompt therefore consists of the profile text and scenario text documented in this appendix, inserted into the template above. The two burden scenarios are fixed strings; their SHA256 hashes are:
+\begin{flushleft}
+{\footnotesize low burden:}\\
+{\footnotesize\ttfamily 7307a8b8f499ebc0897c6fa0436fb8eafb3e77efeebf21ce91d8471989ec9b01}\\
+{\footnotesize high burden:}\\
+{\footnotesize\ttfamily c0bc058f951e4294842a4173f4cc2ac1e0475f1ff84d9438151cc9bd42967b52}
+\end{flushleft} The 27 profile strings are the natural-language descriptions listed in Appendix~\ref{app:profiles}.
 
 \subsection*{Low-burden scenario}
 
@@ -408,6 +432,7 @@ To assess whether the H2 frame--outcome associations are driven by any single mo
 \centering
 \caption{Leave-one-model-out robustness for H2 frame coefficients}
 \label{tab:h2_leave_one_out}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{lrrc}
 \toprule
 Variable & Minimum coefficient & Maximum coefficient & Sign stable \\
@@ -415,9 +440,9 @@ Variable & Minimum coefficient & Maximum coefficient & Sign stable \\
 Access barriers & +0.91 & +1.29 & Yes \\
 Collective responsibility & -0.42 & +0.49 & No \\
 Coercive backlash & +1.12 & +2.12 & Yes (never significant) \\
-
 \bottomrule
 \end{tabular}
+}
 \begin{flushleft}
 \footnotesize Notes: Each row summarizes coefficients from fifteen leave-one-model-out specifications of the main H2 model (model and profile fixed effects, three frame indicators, no PVOC). The access-barrier coefficient is positive and significant in all fifteen specifications; the collective-responsibility and coercive-backlash coefficients, although positive for the latter, are not statistically distinguishable from zero in any specification. For comparison, a specification without fixed effects that instead includes the PVOC covariate yields access barriers 2.36 (\(p=0.019\)), collective responsibility 0.69 (\(p=0.515\)), and coercive backlash 7.27 (\(p<0.001\)), with a PVOC coefficient of \(-2.00\) (\(p<0.001\)); the gap is concentrated in the coercive-backlash contrast and indicates that this association is between-model rather than within-model.
 \end{flushleft}
@@ -431,9 +456,9 @@ This appendix reports the prompt templates and model-specific robustness checks 
 \subsection{Frame-Manipulation Prompt Templates}
 
 The frame-manipulation experiment used four system-prompt frames. Each frame is built from the same two fixed sentences: an opening sentence and a closing instruction block, with the frame clause inserted between them. The neutral frame contains no frame clause, so the neutral system prompt is byte-identical to the baseline prompt reported in Appendix~\ref{app:burden-prompts}:
-\begin{quote}
+\begin{flushleft}
 {\footnotesize\ttfamily SHA256 380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe}
-\end{quote} the frame contrast is therefore measured against the true baseline condition. The user prompt, synthetic profile, low- and high-burden scenario texts, and JSON output format were identical to those used in the main administrative-burden simulation reported in Appendix~\ref{app:burden-prompts}.
+\end{flushleft} the frame contrast is therefore measured against the true baseline condition. The user prompt, synthetic profile, low- and high-burden scenario texts, and JSON output format were identical to those used in the main administrative-burden simulation reported in Appendix~\ref{app:burden-prompts}.
 
 \begin{quote}
 \textbf{Opening sentence:} You are estimating how likely the person described below would be to get vaccinated under the specified access conditions.
