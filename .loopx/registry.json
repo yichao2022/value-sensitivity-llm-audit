@@ -1,0 +1,69 @@
+{
+  "schema_version": "0.1",
+  "updated_at": "2026-09-05",
+  "common_runtime_root": "/Users/cary/.codex/loopx",
+  "goals": [
+    {
+      "id": "value-sensitivity-llm-audit-goal",
+      "display_name": "Improve this project through bounded, verified goal segments.",
+      "domain": "project-goal-control-plane",
+      "status": "active",
+      "role": "controller",
+      "parent_goal_id": null,
+      "repo": "/Users/cary/Documents/value-sensitivity-llm-audit",
+      "state_file": ".codex/goals/value-sensitivity-llm-audit-goal/ACTIVE_GOAL_STATE.md",
+      "authority_sources": [],
+      "adapter": {
+        "kind": "generic_project_goal_v0",
+        "status": "connected"
+      },
+      "spawn_policy": {
+        "mode": "default",
+        "allowed": false,
+        "max_children": 3,
+        "allowed_domains": []
+      },
+      "coordination": {
+        "write_scope": [],
+        "requires_parent_approval": [
+          "write",
+          "publish",
+          "production-action"
+        ]
+      },
+      "execution_profile": {
+        "cadence": "bounded_progress_segment",
+        "minimum_scale": "multi_surface_or_implementation",
+        "must_include": [
+          "coherent_artifact",
+          "targeted_validation",
+          "state_writeback"
+        ],
+        "spend_rule": "spend_only_after_artifact_validation_writeback",
+        "outcome_floor": {
+          "required_when": "after_surface_progress_streak",
+          "surface_streak_threshold": 3,
+          "outcome_markers": [],
+          "surface_only_hints": [],
+          "must_advance": [
+            "primary_goal_outcome"
+          ],
+          "avoid": [
+            "surface_only_progress_loop"
+          ],
+          "if_unavailable": "report_blocker_without_spend"
+        },
+        "degradation_policy": {
+          "small_scale_streak_threshold": 2,
+          "on_degradation": "require_blocker_or_expand_next_batch"
+        }
+      },
+      "next_probe": "loopx --registry .loopx/registry.json check --scan-root /Users/cary/Documents/value-sensitivity-llm-audit",
+      "guards": [
+        "read-only by default",
+        "do not mutate production systems without explicit user approval",
+        "keep private evidence out of public commits"
+      ]
+    }
+  ]
+}
