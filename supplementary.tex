@@ -28,6 +28,11 @@
 \begin{document}
 \maketitle
 
+% Supplement tables are numbered S1, S2, \dots in both the standalone supplement and the
+% compiled manuscript, so a reader never has to guess which file a "Table 3" lives in.
+\setcounter{table}{0}
+\renewcommand{\thetable}{S\arabic{table}}
+
 This Online Supplement contains supporting materials for the main text. Appendices are presented in the order in which they are first cited.
 
 \section{Data Quality and Simulation Diagnostics}
