@@ -41,30 +41,30 @@ Table~\ref{tab:data_quality} reports task-compliance diagnostics for the expande
 \label{tab:data_quality}
 \setlength{\tabcolsep}{4pt}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{lrrrrrrrr}
+\begin{tabular}{lrrrrrrrrr}
 \toprule
-Model & $N$ & JSON\% & Score\% & NonRef\% & Mean $W$ & StabSD & DeltaSD & Flip\% \\
+Model & $N$ & JSON\% & Score\% & NonRef\% & Mean $W$ & StabSD & DeltaSD & Flip\% & ClassAcc\% \\
 \midrule
-Llama 3.1 70B & 270 & 100.0 & 100.0 & 100.0 & 65.48 & 0.87 & 9.45 & 0.0 \\
-GPT-4o & 270 & 100.0 & 100.0 & 100.0 & 64.80 & 0.97 & 9.08 & 0.0 \\
-GPT-4.1 & 270 & 100.0 & 100.0 & 100.0 & 61.85 & 0.69 & 8.27 & 0.0 \\
-Cohere Command R+ & 270 & 100.0 & 100.0 & 100.0 & 58.91 & 2.16 & 5.27 & 0.0 \\
-GPT-4.1 mini & 270 & 100.0 & 100.0 & 100.0 & 58.81 & 0.94 & 4.45 & 0.0 \\
-Gemini 2.5 Flash & 270 & 97.8 & 97.8 & 100.0 & 57.92 & 3.06 & 9.64 & 0.0 \\
-Mistral Large & 270 & 100.0 & 100.0 & 100.0 & 57.52 & 0.40 & 6.07 & 0.0 \\
-DeepSeek-V3.2 & 270 & 100.0 & 100.0 & 100.0 & 56.86 & 1.24 & 5.28 & 0.0 \\
-Claude Haiku & 270 & 100.0 & 100.0 & 100.0 & 56.59 & 0.03 & 8.23 & 0.0 \\
-Qwen3.7 Plus & 270 & 100.0 & 100.0 & 100.0 & 56.10 & 2.23 & 7.43 & 0.0 \\
-Kimi K2.6 & 270 & 100.0 & 100.0 & 100.0 & 55.25 & 1.63 & 6.43 & 0.0 \\
-Llama 3.1 8B & 270 & 100.0 & 100.0 & 100.0 & 52.76 & 3.14 & 7.23 & 0.0 \\
-Claude Opus 4.8 & 270 & 100.0 & 100.0 & 100.0 & 52.54 & 0.54 & 8.74 & 0.0 \\
-Gemini 2.5 Pro & 270 & 100.0 & 100.0 & 100.0 & 50.48 & 3.03 & 8.00 & 0.0 \\
-Claude Sonnet 4.6 & 270 & 100.0 & 100.0 & 100.0 & 47.99 & 0.44 & 8.35 & 0.0 \\
+Llama 3.1 70B & 270 & 100.0 & 100.0 & 100.0 & 65.48 & 0.87 & 9.45 & 0.0 & 100.0 \\
+GPT-4o & 270 & 100.0 & 100.0 & 100.0 & 64.80 & 0.97 & 9.08 & 0.0 & 100.0 \\
+GPT-4.1 & 270 & 100.0 & 100.0 & 100.0 & 61.85 & 0.69 & 8.27 & 0.0 & 100.0 \\
+Cohere Command R+ & 270 & 100.0 & 100.0 & 100.0 & 58.91 & 2.16 & 5.27 & 0.0 & 100.0 \\
+GPT-4.1 mini & 270 & 100.0 & 100.0 & 100.0 & 58.81 & 0.94 & 4.45 & 0.0 & 100.0 \\
+Gemini 2.5 Flash & 270 & 97.8 & 97.8 & 100.0 & 57.92 & 3.06 & 9.64 & 0.0 & 100.0 \\
+Mistral Large & 270 & 100.0 & 100.0 & 100.0 & 57.52 & 0.40 & 6.07 & 0.0 & 100.0 \\
+DeepSeek-V3.2 & 270 & 100.0 & 100.0 & 100.0 & 56.86 & 1.24 & 5.28 & 0.0 & 100.0 \\
+Claude Haiku & 270 & 100.0 & 100.0 & 100.0 & 56.59 & 0.03 & 8.23 & 0.0 & 100.0 \\
+Qwen3.7 Plus & 270 & 100.0 & 100.0 & 100.0 & 56.10 & 2.23 & 7.43 & 0.0 & 100.0 \\
+Kimi K2.6 & 270 & 100.0 & 100.0 & 100.0 & 55.25 & 1.63 & 6.43 & 0.0 & 100.0 \\
+Llama 3.1 8B & 270 & 100.0 & 100.0 & 100.0 & 52.76 & 3.14 & 7.23 & 0.0 & 100.0 \\
+Claude Opus 4.8 & 270 & 100.0 & 100.0 & 100.0 & 52.54 & 0.54 & 8.74 & 0.0 & 100.0 \\
+Gemini 2.5 Pro & 270 & 100.0 & 100.0 & 100.0 & 50.48 & 3.03 & 8.00 & 0.0 & 100.0 \\
+Claude Sonnet 4.6 & 270 & 100.0 & 100.0 & 100.0 & 47.99 & 0.44 & 8.35 & 0.0 & 100.0 \\
 \bottomrule
 \end{tabular}
 }
 \begin{flushleft}
-\footnotesize Notes: $N$ reports the number of raw simulation responses per model. JSON\% is the percentage of outputs parsed as valid JSON. Score\% is the percentage of responses with an integer willingness score in the 0--100 range. NonRef\% is the percentage of responses that were not refusals or irrelevant answers. Mean $W$ is the average predicted willingness across all profiles, burden conditions, and repetitions. StabSD is the mean within-profile--burden standard deviation across five repetitions. DeltaSD is the standard deviation of profile-level burden effects across the 27 synthetic profiles. Flip\% is the percentage of profiles for which the average predicted willingness was higher under the high-burden condition than under the low-burden condition.
+\footnotesize Notes: $N$ reports the number of raw simulation responses per model. JSON\% is the percentage of outputs parsed as valid JSON. Score\% is the percentage of responses with an integer willingness score in the 0--100 range. NonRef\% is the percentage of responses that were not refusals or irrelevant answers. Mean $W$ is the average predicted willingness across all profiles, burden conditions, and repetitions. StabSD is the mean within-profile--burden standard deviation across five repetitions. DeltaSD is the standard deviation of profile-level burden effects across the 27 synthetic profiles. Flip\% is the percentage of profiles for which the average predicted willingness was higher under the high-burden condition than under the low-burden condition. ClassAcc\% is the burden-classification accuracy of the auxiliary comprehension diagnostic described in Appendix~\ref{app:burden-prompts}: the share of low- and high-burden scenarios for which the model returned the correct burden label (54 scenarios per model, one call per scenario). All fifteen models returned the correct label for every scenario, so the flip rate documents directional consistency of the simulated responses while ClassAcc\% documents recognition of the manipulation itself. The classification block was fielded on 17 September 2026 (UTC), separately from the canonical simulation runs collected on 16--17 September 2026.
 \end{flushleft}
 \end{table}
 
@@ -73,7 +73,7 @@ Claude Sonnet 4.6 & 270 & 100.0 & 100.0 & 100.0 & 47.99 & 0.44 & 8.35 & 0.0 \\
 \section{Model Versioning, API Endpoints, and Decoding Parameters}
 \label{app:models}
 
-This appendix reports the model identifiers, access routes, endpoints, and decoding settings used in the experiments. The study includes fifteen LLM endpoints. An initial nine-endpoint design was expanded to fifteen, and all fifteen endpoints---the original nine and the six additional ones---were rerun under the same canonical protocol on 16--17 September 2026, so every result reported here comes from a single administration. Access routes differed by endpoint and are reported in Table~\ref{tab:model_details}: nine endpoints were reached through official provider APIs (OpenAI, Anthropic, Google, and DeepSeek), five through the OpenRouter gateway (Llama 3.1 70B Instruct, Llama 3.1 8B Instruct, Mistral Large, Kimi K2.6, and Cohere Command R+), and one through the Alibaba DashScope API (Qwen3.7 Plus). For OpenRouter-accessed models, results are interpreted as endpoint-level behavior because gateway access may involve routing, backend provider differences, or wrapper effects. Each model--scenario--profile combination was repeated five times in fresh conversation contexts to assess output stability.
+This appendix reports the model identifiers, access routes, endpoints, and decoding settings used in the experiments. The study includes fifteen LLM endpoints. An initial nine-endpoint design was expanded to fifteen, and all fifteen endpoints---the original nine and the six additional ones---were rerun under the same canonical protocol on 16--17 September 2026, so every simulation, frame-manipulation and orientation result reported here comes from a single administration; the auxiliary burden-classification diagnostic of Appendix~\ref{app:burden-prompts} was fielded separately on 17 September 2026. Access routes differed by endpoint and are reported in Table~\ref{tab:model_details}: nine endpoints were reached through official provider APIs (OpenAI, Anthropic, Google, and DeepSeek), five through the OpenRouter gateway (Llama 3.1 70B Instruct, Llama 3.1 8B Instruct, Mistral Large, Kimi K2.6, and Cohere Command R+), and one through the Alibaba DashScope API (Qwen3.7 Plus). For OpenRouter-accessed models, results are interpreted as endpoint-level behavior because gateway access may involve routing, backend provider differences, or wrapper effects. Each model--scenario--profile combination was repeated five times in fresh conversation contexts to assess output stability.
 
 \begin{landscape}
 \small
@@ -346,9 +346,11 @@ Positive values indicate that the model predicts lower willingness under the hig
 
 \subsection*{Burden-level comprehension diagnostic}
 
-Distinguishing comprehension from directional consistency requires a diagnostic that asks models directly about the manipulation. We therefore designed an auxiliary burden-classification prompt, to be administered with the same profile and scenario text:
+Distinguishing comprehension from directional consistency requires a diagnostic that asks models directly about the manipulation. We therefore fielded an auxiliary burden-classification prompt with the same profile and scenario text, administered outside the frozen canonical run (17 September 2026 UTC; the canonical simulation, frame-manipulation, and orientation data were collected on 16--17 September 2026):
 
 \begin{quote}
+\textbf{System prompt (verbatim):} You are answering a single factual question about a vaccination access scenario. Answer with one word only.
+
 Individual profile:
 
 \texttt{\{PROFILE\_TEXT\}}
@@ -364,7 +366,17 @@ Does this scenario describe a low-burden or high-burden vaccination access condi
 Return only one word: \texttt{low} or \texttt{high}.
 \end{quote}
 
-A response would be scored as correct if the returned label matched the assigned burden condition, and accuracy would be reported per model and pooled, with the number of malformed returns and an exact binomial confidence interval. \textbf{This diagnostic was not fielded in the runs reported here}: the canonical execution plans contain the baseline simulation, the frame manipulation, and the orientation battery only, so no classification accuracy is available and none is used in any analysis in this paper. A level-flip rate is what the reported runs can support, and it documents directional consistency rather than comprehension. Fielding the classification prompt would turn the manipulation-check question into a directly measurable one and is the most obvious extension of this design.
+\begin{flushleft}
+{\footnotesize SHA256 of the classification system prompt:}\\
+{\footnotesize\ttfamily 4bf68c6c4da0a644e4c1ddb43bddbb0d9fa549ed7a978fccad5d8e2fa8107a04}\\
+{\footnotesize SHA256 of the execution plan (\texttt{canonical/plans/plan\_comp.csv}):}\\
+{\footnotesize\ttfamily 9677719485949d6959c0a5fbe5e4dfd93cc608370497e05865e57a1378c96c22}
+\end{flushleft}
+
+The plan covers every combination of the fifteen endpoints, the 27 standardized profiles, and the two burden conditions (810 calls; order randomised per model from the protocol seed, as in the main blocks). A response was scored as correct if the returned label matched the burden condition assigned to the scenario that was shown, and as malformed if it contained neither token.
+
+\textbf{Results.} All 810 responses returned a usable label and none was malformed. Accuracy was 100\% for every model (54 of 54 scenarios each; exact Clopper--Pearson 95\% CI [93.4, 100.0]) and 100\% pooled (810 of 810; exact 95\% CI [99.5, 100.0]). The models therefore recognised the burden manipulation itself, and not merely its directional signature in the willingness responses. Two qualifications apply. First, the diagnostic establishes recognition of the assigned condition, not the magnitude or realism of the simulated burden effect. Second, it was fielded in a separate administration from the reported simulation runs, so it documents comprehension of the same scenario texts rather than of the exact queries that produced the main results.
+
 
 \section{Narrative Coding Codebook}
 \label{app:narrative-codebook}
