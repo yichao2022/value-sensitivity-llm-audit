@@ -31,7 +31,7 @@ This Online Supplement contains supporting materials for the main text, organize
 \section{Data Quality and Simulation Diagnostics}
 \label{sec:data-quality}
 
-Table~\ref{tab:data_quality} reports task-compliance diagnostics for the expanded fifteen-model simulation (4,050 raw responses, 2,025 low--high burden-effect pairs). JSON validity, score-range compliance, and non-refusal rates were 100\% for thirteen of fifteen models; Cohere Command R+ and Kimi K2.6 each had one malformed response (99.6\% compliance). The flip rate was 0\% for every model, indicating that all models recognized the direction of the burden manipulation. Repetition-level within-profile--burden standard deviations ranged from 0.00 to 3.18 points on the 0--100 scale, indicating high within-model stability.
+Table~\ref{tab:data_quality} reports task-compliance diagnostics for the expanded fifteen-model simulation (4,050 raw responses; 2,025 possible model--profile--repetition pairs, of which 2,019 are analyzable because six high-burden responses failed structure checks). JSON validity, score-range compliance, and non-refusal rates were 100\% for fourteen of fifteen models; Gemini 2.5 Flash had six malformed responses (97.8\% compliance). The flip rate was 0\% for every model, indicating that the high-burden condition moved mean predicted willingness in the expected direction in every profile, i.e., directional consistency rather than evidence that models understood the manipulation. Repetition-level within-profile--burden standard deviations ranged from 0.03 to 3.14 points on the 0--100 scale, indicating high within-model stability.
 
 \begin{table}[htbp]
 \centering
@@ -185,7 +185,7 @@ This appendix clarifies how capability-related diagnostics are handled in the ex
 
 Task-specific diagnostics are instead reported directly in the main text. Table~\ref{tab:data_quality} reports JSON validity, score-range compliance, non-refusal rates, repetition-level stability, burden-effect dispersion, and flip rates for all fifteen models. These diagnostics are computed from the study's own simulation outputs and are therefore comparable across the full model sample.
 
-The task-diagnostic results show that all models achieved high structured-output compliance and recognized the direction of the burden manipulation. Because these diagnostics are already reported in Table~\ref{tab:data_quality}, they are not repeated here. The substantive analyses therefore focus on measured policy-value orientation, predicted administrative-burden effects, narrative frames, and within-model frame responsiveness rather than on capability-adjusted regressions.
+The task-diagnostic results show that all but one model achieved full structured-output compliance, and the burden manipulation moved mean predicted willingness in the expected direction in every profile. Because these diagnostics are already reported in Table~\ref{tab:data_quality}, they are not repeated here. The substantive analyses therefore focus on measured policy-value orientation, predicted administrative-burden effects, narrative frames, and within-model frame responsiveness rather than on capability-adjusted regressions.
 
 \subsection*{Evaluation Configuration}
 
@@ -305,7 +305,7 @@ The full regular expression patterns are available in the replication code at \u
 
 \subsection{Validation Protocol}
 
-To validate the algorithmic coding, a random sample of 200 rationales (approximately 10\% of the high-burden sample, $N \approx 2,023$) was manually inspected by the author. The validation protocol was:
+To validate the algorithmic coding, a random sample of 200 rationales (approximately 10\% of the high-burden sample, $N \approx 2,019$) was manually inspected by the author. The validation protocol was:
 
 \begin{enumerate}
 \item \textbf{Blinded inspection:} The validator reviewed rationale text and algorithmic assignments without access to model identity or predicted outcomes.
