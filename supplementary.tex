@@ -453,6 +453,38 @@ Mistral Large & Equity/access & 39.63 & 6.95 & 135 \\
 
 \clearpage
 
+\subsection{Small-Sample Inference for the Model-Specific Estimates}
+
+Each model-specific regression rests on 27 profile clusters, so we checked the model-level conclusions against two small-sample procedures: a cluster covariance with the standard finite-sample correction ($G/(G-1)\cdot(N-1)/(N-K)$) and a wild cluster bootstrap-$t$ with Rademacher weights, the null imposed, and 1{,}999 replications. Table~\ref{tab:h3_small_sample} reports the resulting $p$-values next to the asymptotic cluster-robust ones. The three inferences agree: the marginal equity/access contrast for Mistral Large remains significant ($2.59$, $p=0.023$ asymptotic, $0.030$ corrected, $0.027$ bootstrap), the negative autonomy contrast for Qwen3.7 Plus remains significant ($-2.87$, $p=0.001$--$0.002$), and the collective-obligation contrast for Llama 3.1 70B Instruct and the equity/access contrast for Qwen3.7 Plus stay statistically indistinguishable from zero under every procedure.
+
+\begin{table}[htbp]
+\centering
+\caption{Small-sample inference for model-specific H3 contrasts}
+\label{tab:h3_small_sample}
+\small
+\begin{tabular}{llrrrr}
+\toprule
+Model & Contrast & Coefficient & $p$ (asymptotic) & $p$ (corrected) & $p$ (wild bootstrap) \\
+\midrule
+GPT-4.1 & Autonomy & $+8.56$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+GPT-4.1 & Collective obligation & $-6.97$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+GPT-4.1 & Equity/access & $+8.41$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+Llama 3.1 70B Instruct & Autonomy & $+10.07$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+Llama 3.1 70B Instruct & Collective obligation & $-1.78$ & 0.137 & 0.155 & 0.125 \\
+Llama 3.1 70B Instruct & Equity/access & $+9.36$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+Qwen3.7 Plus & Autonomy & $-2.87$ & $<0.001$ & 0.001 & 0.002 \\
+Qwen3.7 Plus & Collective obligation & $-14.65$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+Qwen3.7 Plus & Equity/access & $-0.94$ & 0.250 & 0.271 & 0.265 \\
+Mistral Large & Autonomy & $+4.07$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+Mistral Large & Collective obligation & $-20.11$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+Mistral Large & Equity/access & $+2.59$ & 0.023 & 0.030 & 0.027 \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize Notes: Each model-specific regression includes profile fixed effects and frame indicators, with standard errors clustered by profile (27 clusters per model). Asymptotic $p$-values use the cluster-robust covariance without small-sample correction; corrected $p$-values apply $G/(G-1)\cdot(N-1)/(N-K)$; wild bootstrap $p$-values come from 1{,}999 Rademacher-weighted bootstrap replications with the null imposed on the tested contrast. Bootstrap $p$-values are reported to three decimals and are bounded below by $1/2{,}000$.
+\end{flushleft}
+\end{table}
+
 \subsection{Model-Specific Frame-Manipulation Effects}
 
 Table~\ref{tab:h3_model_specific_effects} reports model-specific frame regressions for the four-model H3 subset. Each model-specific regression estimates \(\Delta\) as a function of frame indicators and profile fixed effects, using the neutral frame as the reference condition. The pooled column corresponds to the main H3 specification reported in the main text, which pools the same four models and includes model and profile fixed effects.
@@ -524,7 +556,7 @@ Pooled & Equity/access vs. neutral & 4.84*** & 0.70 & [3.45, 6.24] \\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
-\footnotesize Notes: Each row reports a frame contrast relative to the neutral frame. Model-specific regressions include profile fixed effects. The pooled regression includes model and profile fixed effects. Standard errors are clustered at the model--profile level (108 clusters) because profiles are the controlled test cases and queries within a profile are repeated measures. The pooled specification uses $N=2{,}159$ profile--repetition observations (540 for GPT-4.1, 539 for Llama 3.1 70B Instruct, 540 for Qwen3.7 Plus, and 540 for Mistral Large, after excluding responses that failed the structured-output checks). The dependent variable is \(\Delta = W^{low}-W^{high}\). Positive coefficients indicate larger simulated burden effects relative to neutral. Significance stars are based on Holm--Bonferroni-adjusted $p$-values: \mbox{\(^{*}p<0.05\)}, \mbox{\(^{***}p<0.001\)}.
+\footnotesize Notes: Each row reports a frame contrast relative to the neutral frame. Model-specific regressions include profile fixed effects. The pooled regression includes model and profile fixed effects. Standard errors are clustered at the model--profile level for the pooled column (108 clusters) and at the profile level within each model for the model-specific columns (27 clusters each), because profiles are the controlled test cases and queries within a profile are repeated measures. The pooled specification uses $N=2{,}159$ profile--repetition observations (540 for GPT-4.1, 539 for Llama 3.1 70B Instruct, 540 for Qwen3.7 Plus, and 540 for Mistral Large, after excluding responses that failed the structured-output checks). The dependent variable is \(\Delta = W^{low}-W^{high}\). Positive coefficients indicate larger simulated burden effects relative to neutral. Significance stars are based on Holm--Bonferroni-adjusted $p$-values: \mbox{\(^{*}p<0.05\)}, \mbox{\(^{***}p<0.001\)}.
 \end{flushleft}
 \end{table}
 
