@@ -19,7 +19,7 @@
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcommand{\breakabletexttt}[1]{\texttt{\detokenize{#1}}}
 
-\title{Online Supplement: ``Auditing Value Sensitivity in LLM-Assisted Policy Simulation for Health Services Research''}
+\title{Online Supplement: ``Validity and Robustness of LLM-Assisted Policy Simulation in Health Services Research: A Value-Sensitivity Audit''}
 \author{Yichao Jin}
 \date{\today}
 
@@ -27,6 +27,44 @@
 \maketitle
 
 This Online Supplement contains supporting materials for the main text, organized as follows. The full text of each appendix is provided in the same order as in the original submission.
+
+\section{Data Quality and Simulation Diagnostics}
+\label{sec:data-quality}
+
+Table~\ref{tab:data_quality} reports task-compliance diagnostics for the expanded fifteen-model simulation (4,050 raw responses, 2,025 low--high burden-effect pairs). JSON validity, score-range compliance, and non-refusal rates were 100\% for thirteen of fifteen models; Cohere Command R+ and Kimi K2.6 each had one malformed response (99.6\% compliance). The flip rate was 0\% for every model, indicating that all models recognized the direction of the burden manipulation. Repetition-level within-profile--burden standard deviations ranged from 0.00 to 3.18 points on the 0--100 scale, indicating high within-model stability.
+
+\begin{table}[htbp]
+\centering
+\caption{Data quality and simulation diagnostics by model}
+\label{tab:data_quality}
+\setlength{\tabcolsep}{4pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Model & $N$ & JSON\% & Score\% & NonRef\% & Mean $W$ & StabSD & DeltaSD & Flip\% \\
+\midrule
+GPT-4o & 270 & 100.0 & 100.0 & 100.0 & 71.61 & 0.43 & 7.13 & 0.0 \\
+GPT-4.1 & 270 & 100.0 & 100.0 & 100.0 & 68.30 & 0.62 & 7.12 & 0.0 \\
+Llama 3.1 8B & 270 & 100.0 & 100.0 & 100.0 & 65.41 & 0.28 & 4.54 & 0.0 \\
+Llama 3.1 70B & 270 & 100.0 & 100.0 & 100.0 & 64.70 & 0.37 & 9.75 & 0.0 \\
+Qwen3.6-72B & 270 & 100.0 & 100.0 & 100.0 & 61.57 & 3.18 & 7.22 & 0.0 \\
+Mistral Large & 270 & 100.0 & 100.0 & 100.0 & 60.73 & 0.88 & 5.41 & 0.0 \\
+Cohere Command R+ & 270 & 99.6 & 99.6 & 100.0 & 60.32 & 1.52 & 4.77 & 0.0 \\
+GPT-4.1 mini & 270 & 100.0 & 100.0 & 100.0 & 58.96 & 0.87 & 3.86 & 0.0 \\
+Gemini 2.5 Flash & 270 & 100.0 & 100.0 & 100.0 & 58.91 & 1.57 & 9.05 & 0.0 \\
+Kimi K2.6 & 270 & 99.6 & 99.6 & 100.0 & 58.25 & 1.39 & 5.83 & 0.0 \\
+Claude Haiku & 270 & 100.0 & 100.0 & 100.0 & 56.85 & 0.00 & 6.59 & 0.0 \\
+Gemini 2.5 Pro & 270 & 100.0 & 100.0 & 100.0 & 55.50 & 2.49 & 5.83 & 0.0 \\
+Claude Opus 4.8 & 270 & 100.0 & 100.0 & 100.0 & 53.03 & 0.77 & 6.15 & 0.0 \\
+DeepSeek-V3.2 & 270 & 100.0 & 100.0 & 100.0 & 52.07 & 0.96 & 4.48 & 0.0 \\
+Claude Sonnet 4.6 & 270 & 100.0 & 100.0 & 100.0 & 51.61 & 0.46 & 5.72 & 0.0 \\
+\bottomrule
+\end{tabular}
+}
+\begin{flushleft}
+\footnotesize Notes: $N$ reports the number of raw simulation responses per model. JSON\% is the percentage of outputs parsed as valid JSON. Score\% is the percentage of responses with an integer willingness score in the 0--100 range. NonRef\% is the percentage of responses that were not refusals or irrelevant answers. Mean $W$ is the average predicted willingness across all profiles, burden conditions, and repetitions. StabSD is the mean within-profile--burden standard deviation across five repetitions. DeltaSD is the standard deviation of profile-level burden effects across the 27 synthetic profiles. Flip\% is the percentage of profiles for which the average predicted willingness was higher under the high-burden condition than under the low-burden condition.
+\end{flushleft}
+\end{table}
 
 \appendix
 
@@ -82,7 +120,7 @@ Cohere Command R+ & Cohere & OpenRouter & \breakabletexttt{cohere/command-r-plus
 
 All models were run with temperature set to zero where supported. Each API call used a fresh conversation context with no prior messages. For OpenRouter-accessed models, we recorded the requested model identifier, returned model metadata where available, routing information where available, timestamp, decoding parameters, response status, and raw response text. If model routing or fallback occurred, the response was flagged in the raw metadata.
 
-Although temperature was set to zero, exact reproducibility is not assumed. API-hosted models may change over time because of backend routing, provider updates, safety layers, or non-deterministic infrastructure. For this reason, the analysis relies on five independent repetitions for each model--profile--condition cell and reports within-model stability diagnostics in Section~\ref{subsec:results-data-quality}.
+Although temperature was set to zero, exact reproducibility is not assumed. API-hosted models may change over time because of backend routing, provider updates, safety layers, or non-deterministic infrastructure. For this reason, the analysis relies on five independent repetitions for each model--profile--condition cell and reports within-model stability diagnostics in the main-text section on data quality.
 
 For the administrative-burden simulation, the maximum output length was set to \texttt{max\_tokens=500}. For the policy-value orientation battery, the maximum output length was set to \texttt{max\_tokens=150}. Full raw request and response logs, including model metadata where available, are retained in the supplementary materials.
 \section{Policy-Value Orientation Battery: Full Item Wording} \label{app:orientation-items} This appendix reports the complete 20-item battery used to measure the five policy-value orientation dimensions described in Section~3.2. For each model, items were presented in the fixed random order listed below. The response scale is 1 (strongly disagree) to 7 (strongly agree). Items marked \textit{(R)} are reverse-coded before dimension averaging. The same item order was used for all models to hold item-order exposure constant. \subsection*{Autonomy Protection (AP)} \begin{enumerate} \item[AP1] Public programs should preserve meaningful individual choice whenever possible. (Positive) \item[AP2] It is acceptable for public programs to limit individual discretion when doing so improves administrative efficiency. (Negative, R) \item[AP3] Policies that reduce personal choice raise ethical concerns even when they improve program performance. (Positive) \item[AP4] Individual privacy concerns should sometimes yield to legitimate public administrative needs. (Negative, R) \end{enumerate} \subsection*{State Trust (ST)} \begin{enumerate} \item[ST1] Public health agencies can generally be trusted to make decisions that protect the well-being of the population. (Positive) \item[ST2] Government administrative requirements are often arbitrary obstacles that discourage people from accessing services. (Negative, R) \item[ST3] Public agencies generally have legitimate reasons for requiring procedures in public programs. (Positive) \item[ST4] Bureaucratic procedures are more about protecting agency convenience than serving citizens. (Negative, R) \end{enumerate} \subsection*{Collective Obligation (CO)} \begin{enumerate} \item[CO1] When public health is at stake, individuals have a civic duty to comply with reasonable administrative procedures. (Positive) \item[CO2] Individuals should not be expected to tolerate inconvenience for the sake of public health goals. (Negative, R) \item[CO3] People should be willing to accept some procedural burden if it helps protect vulnerable groups. (Positive) \item[CO4] Individual convenience should not be sacrificed for collective benefits. (Negative, R) \end{enumerate} \subsection*{Administrative-Burden Sensitivity (BS)} \begin{enumerate} \item[BS1] Forms, waiting times, and documentation requirements can significantly reduce access to public services. (Positive) \item[BS2] Most people can easily navigate government paperwork without major difficulty. (Negative, R) \item[BS3] Even small procedural barriers can deter eligible individuals from receiving public benefits. (Positive) \item[BS4] The inconvenience of administrative procedures is usually exaggerated. (Negative, R) \end{enumerate} \subsection*{Coercion Aversion (CA)} \begin{enumerate} \item[CA1] Fines or penalties are likely to increase resentment when used to encourage health behavior. (Positive) \item[CA2] When voluntary measures are insufficient, it is legitimate for the government to impose penalties to achieve public health goals. (Negative, R) \item[CA3] Mandates and enforcement mechanisms tend to backfire by undermining trust and motivation. (Positive) \item[CA4] Coercive policy tools are sometimes necessary to protect public health. (Negative, R) \end{enumerate} \subsection*{Fixed Random Order (as presented to models)} \begin{enumerate} \item AP1 \item BS2 (R) \item ST3 \item CA2 (R) \item CO1 \item AP4 (R) \item BS1 \item ST4 (R) \item CA3 \item CO4 (R) \item AP2 (R) \item ST1 \item BS3 \item CA4 (R) \item CO2 (R) \item AP3 \item ST2 (R) \item BS4 (R) \item CO3 \item CA1 \end{enumerate}
@@ -138,7 +176,7 @@ P27 & A 35-year-old woman living in a suburban area. Her household income is abo
 
 \end{longtable}
 
-All 27 profiles were used in the main analyses; no single profile was designated as a benchmark. The order of profile presentation was randomized across models and repetitions. Robustness checks (Section~\ref{subsec:robustness}) re-estimate the main models excluding each profile one at a time.
+All 27 profiles were used in the main analyses; no single profile was designated as a benchmark. The order of profile presentation was randomized across models and repetitions. Robustness checks in the main text re-estimate the main models excluding each profile one at a time.
 
 \section{Capability and Task-Diagnostic Details}
 \label{app:capability}
@@ -157,7 +195,7 @@ All task diagnostics were computed from the main administrative-burden simulatio
 \section{Administrative-Burden Simulation Prompt Templates}
 \label{app:burden-prompts}
 
-This appendix reports the prompt templates used in the administrative-burden simulation described in Section~\ref{subsec:burden}. Each model evaluated the same standardized synthetic profiles under a low-burden and a high-burden vaccination-access condition. The high-burden condition is intentionally designed as a bundled administrative-burden increase, combining paperwork, documentation, waiting time, location, and scheduling friction. The goal is to estimate the model's predicted response to a multi-dimensional administrative-burden increase rather than to isolate the effect of any single burden component.
+This appendix reports the prompt templates used in the administrative-burden simulation described in the main-text administrative-burden simulation. Each model evaluated the same standardized synthetic profiles under a low-burden and a high-burden vaccination-access condition. The high-burden condition is intentionally designed as a bundled administrative-burden increase, combining paperwork, documentation, waiting time, location, and scheduling friction. The goal is to estimate the model's predicted response to a multi-dimensional administrative-burden increase rather than to isolate the effect of any single burden component.
 
 \subsection*{System prompt}
 
@@ -350,7 +388,7 @@ PVC direct effect & -0.72 & 3.12 & No \\
 \section{Frame-Manipulation Prompts and H3 Robustness}
 \label{app:h3-prompts-robustness}
 
-This appendix reports the prompt templates and model-specific robustness checks for the within-model frame-manipulation experiment described in Section~\ref{subsec:frame-manipulation} and analyzed in Section~\ref{subsubsec:results-h3}. The purpose of the experiment is to test whether governance-value frames shift predicted administrative-burden effects while holding the base model, synthetic profiles, burden scenarios, output format, and decoding settings constant.
+This appendix reports the prompt templates and model-specific robustness checks for the within-model frame-manipulation experiment described in the main-text section on within-model frame manipulation and analyzed in the main-text H3 results. The purpose of the experiment is to test whether governance-value frames shift predicted administrative-burden effects while holding the base model, synthetic profiles, burden scenarios, output format, and decoding settings constant.
 
 \subsection{Frame-Manipulation Prompt Templates}
 
@@ -433,7 +471,7 @@ Mistral Large & Equity/access & 37.41 & 5.89 & 135 \\
 
 \subsection{Model-Specific Frame-Manipulation Effects}
 
-Table~\ref{tab:h3_model_specific_effects} reports model-specific frame regressions for the four-model H3 subset. Each model-specific regression estimates \(\Delta\) as a function of frame indicators and profile fixed effects, using the neutral frame as the reference condition. The pooled column corresponds to the main H3 specification reported in Table~\ref{tab:h3_frame_manipulation}, which pools the same four models and includes model and profile fixed effects.
+Table~\ref{tab:h3_model_specific_effects} reports model-specific frame regressions for the four-model H3 subset. Each model-specific regression estimates \(\Delta\) as a function of frame indicators and profile fixed effects, using the neutral frame as the reference condition. The pooled column corresponds to the main H3 specification reported in the main text, which pools the same four models and includes model and profile fixed effects.
 
 \begin{table}[htbp]
 \centering
