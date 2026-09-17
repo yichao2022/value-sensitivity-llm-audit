@@ -331,34 +331,9 @@ The pooled effects are directionally consistent with the theoretical expectation
 \centering
 \caption{Forest plot of within-model frame-manipulation effects}
 \label{fig:h3_forest}
-\begin{minipage}{0.9\textwidth}
-\small
-\textbf{Pooled estimates (four-model average):}\
-\begin{tabular}{lcc}
-\toprule
-Frame contrast & Coefficient [95\% CI] & $p$ \\
-\midrule
-Collective obligation vs. neutral & $-$10.88 [$-$12.54, $-$9.21] & $<$0.001 \\
-Equity/access vs. neutral & 4.84 [3.45, 6.24] & $<$0.001 \\
-Autonomy vs. neutral & 4.96 [3.57, 6.35] & $<$0.001 \\
-\bottomrule
-\end{tabular}
-
-\vspace{0.5em}
-\textbf{Model-specific estimates:}\\
-\begin{tabular}{lccc}
-\toprule
-Model & Autonomy & Collective & Equity \\
-\midrule
-GPT-4.1 & 8.56 [6.99, 10.12] & $-$6.97 [$-$8.63, $-$5.31] & 8.41 [6.83, 9.99] \\
-Llama 3.1 70B & 10.07 [7.07, 13.08] & $-$1.78 [$-$4.27, 0.72] & 9.36 [5.76, 12.97] \\
-Qwen3.7 Plus & $-$2.87 [$-$4.53, $-$1.22] & $-$14.65 [$-$16.84, $-$12.47] & $-$0.94 [$-$2.66, 0.78] \\
-Mistral Large & 4.07 [2.05, 6.09] & $-$20.11 [$-$21.93, $-$18.29] & 2.59 [0.28, 4.91] \\
-\bottomrule
-\end{tabular}
-\end{minipage}
+\includegraphics[width=\textwidth]{fig3_h3_forest.pdf}
 \begin{flushleft}
-\footnotesize Notes: Coefficients represent the shift in predicted burden effect (points on a 0--100 willingness scale) relative to the neutral frame. Positive values indicate larger predicted burden effects. Pooled estimates use model and profile fixed effects with standard errors clustered at the model--profile level ($N=2{,}159$, 108 clusters: 27 synthetic profiles $\times$ 4 base models, adjusted $R^2=0.77$). Model-specific estimates show consistent directions for the collective-obligation contrast, but the autonomy and equity/access contrasts differ in sign across base models.
+\footnotesize Notes: Coefficients represent the shift in predicted burden effect (points on a 0--100 willingness scale) relative to the neutral frame. Positive values indicate larger predicted burden effects. Pooled estimates use model and profile fixed effects with standard errors clustered at the model--profile level ($N=2{,}159$, 108 clusters: 27 synthetic profiles $\times$ 4 base models, adjusted $R^2=0.77$). Model-specific estimates show consistent directions for the collective-obligation contrast, but the autonomy and equity/access contrasts differ in sign across base models. Model-specific coefficients and standard errors are reported in the Online Supplement.
 \end{flushleft}
 \end{figure}
 \subsection{Robustness Checks}
