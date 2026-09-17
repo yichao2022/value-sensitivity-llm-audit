@@ -423,30 +423,80 @@ The access-barrier definition was intentionally restricted to avoid coding simpl
 
 Frames with little or no empirical variation are reported descriptively but excluded from the main frame-adjusted model. In the present analysis, autonomy infringement and procedural legitimacy each appeared in one of the 2,019 high-burden rationales (0.05\% each), so neither frame has usable variation. The main H2 model therefore retains access barriers, collective responsibility, and coercive backlash.
 
-\section{H2 Leave-One-Model-Out Robustness}
+\section{H2 Specification Comparison and Identification Diagnostics}
+\label{app:h2-identification}
 \label{app:h2-robustness}
 
-To assess whether the H2 frame--outcome associations are driven by any single model, we re-estimated the fixed-effects frame model fifteen times, each time excluding one model from the expanded sample. The specification is the one used in the main text: model and profile fixed effects with the three retained frame indicators and no PVOC term. Table~\ref{tab:h2_leave_one_out} summarizes the minimum and maximum coefficient estimates across the leave-one-model-out specifications. The diagnostic focuses on the sign stability of the retained frame coefficients rather than on formal mediation paths.
+The main-text H2 analysis uses one fixed effect per model--profile pair, so its frame coefficients are identified only from repetition-level variation within a pair. This appendix reports the secondary specification with separate model and profile fixed effects, the identification diagnostics that follow from absorbing the pair-specific baseline, and leave-one-out variants of both specifications.
 
 \begin{table}[htbp]
 \centering
-\caption{Leave-one-model-out robustness for H2 frame coefficients}
-\label{tab:h2_leave_one_out}
+\caption{H2 frame--outcome estimates under the primary and secondary specifications}
+\label{tab:h2_spec_comparison}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{lrrc}
+\begin{tabular}{lrrrrcr}
 \toprule
-Variable & Minimum coefficient & Maximum coefficient & Sign stable \\
+Frame & Prevalence & Pair-FE \(b\) & SE & 95\% CI & BH-adj.\ \(p\) & Two-way FE \(b\) \\
 \midrule
-Access barriers & +0.91 & +1.29 & Yes \\
-Collective responsibility & -0.42 & +0.49 & No \\
-Coercive backlash & +1.12 & +2.12 & Yes (never significant) \\
+Access barriers & 43.2\% & 0.13 & 0.47 & [\(-0.79\), 1.04] & 0.86 & 1.08 \\
+Collective responsibility & 75.2\% & 0.15 & 0.83 & [\(-1.48\), 1.77] & 0.86 & 0.11 \\
+Coercive backlash & 7.7\% & 1.21 & 1.82 & [\(-2.35\), 4.77] & 0.86 & 1.59 \\
 \bottomrule
 \end{tabular}
 }
 \begin{flushleft}
-\footnotesize Notes: Each row summarizes coefficients from fifteen leave-one-model-out specifications of the main H2 model (model and profile fixed effects, three frame indicators, no PVOC); the per-fit $p$-values behind the significance statements are unadjusted. The access-barrier coefficient is positive and significant in all fifteen specifications; the collective-responsibility and coercive-backlash coefficients, although positive for the latter, are not statistically distinguishable from zero in any specification. For comparison, a specification without fixed effects that instead includes the PVOC covariate yields access barriers 2.36 (\(p=0.019\)), collective responsibility 0.69 (\(p=0.515\)), and coercive backlash 7.27 (\(p<0.001\)), with a PVOC coefficient of \(-2.00\) (\(p<0.001\)); the gap is concentrated in the coercive-backlash contrast and indicates that this association is between-model rather than within-model.
+\footnotesize Notes: Pair-FE is the primary specification of the main text: one fixed effect per model--profile pair (405 pairs) plus the three retained rationale-frame indicators, with standard errors clustered at the model--profile level. Two-way FE replaces the pair indicators with separate model and profile fixed effects, absorbing additive heterogeneity only; its unadjusted \(p\)-values are 0.012 (access barriers), 0.876 (collective responsibility) and 0.174 (coercive backlash), and its Benjamini--Hochberg adjusted values are 0.036, 0.876 and 0.262. All \(p\)-values in the pair-FE column are Benjamini--Hochberg adjusted across the three retained frames (\(q=0.10\)). \(N=2{,}019\) in both specifications. Positive coefficients indicate larger predicted burden effects.
 \end{flushleft}
 \end{table}
+
+\subsection*{Identification diagnostics}
+
+\begin{table}[htbp]
+\centering
+\caption{Within-pair variation available to the pair-fixed-effects specification}
+\label{tab:h2_within_pair}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrr}
+\toprule
+Variable & Within-pair variance share & Pairs with no within-pair variation \\
+\midrule
+Access barriers & 0.329 & 237 of 405 \\
+Collective responsibility & 0.245 & 310 of 405 \\
+Coercive backlash & 0.310 & 362 of 405 \\
+Burden effect \(\Delta\) & 0.078 & 182 of 405 \\
+\bottomrule
+\end{tabular}
+}
+\begin{flushleft}
+\footnotesize Notes: Each pair contains five repetitions. ``Within-pair share of variance'' is the fraction of a variable's total variance that remains after subtracting pair means, i.e.\ the variation the pair-fixed-effects estimator can use. Frame indicators that are constant within a pair contribute nothing to identification, so the frame coefficients rest on the pairs in which the expressed rationale changes between repeated queries of the same model--profile cell.
+\end{flushleft}
+\end{table}
+
+Two features of the design drive the results. First, the burden effect \(\Delta\) is largely a property of the cell rather than of the individual query: only 7.8\% of its variance lies within model--profile pairs, and in 182 of 405 pairs the five repetitions do not vary at all. Second, the coded rationale frames are also mostly stable within a pair, so identification comes from the minority of pairs in which the frame switches on or off across repetitions; in the remaining pairs the frame indicator is absorbed by the pair effect. The pair-fixed-effects null in the main text should be read against these limits: it shows that the access-barrier association is not robust to pair-specific heterogeneity, and that the strict within-cell estimand is weakly identified in a five-repetition design.
+
+\subsection*{Leave-one-out variants under the primary specification}
+
+\begin{table}[htbp]
+\centering
+\caption{Leave-one-out ranges under the primary (pair-fixed-effects) specification}
+\label{tab:h2_pairfe_leaveout}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrr}
+\toprule
+Frame & LOMO range & LOMO sig. & LOPO range & LOPO sig. \\
+\midrule
+Access barriers & \(-0.03\) to \(+0.37\) & 0/15 & \(-0.09\) to \(+0.32\) & 0/27 \\
+Collective responsibility & \(-0.62\) to \(+0.40\) & 0/15 & \(-0.48\) to \(+0.35\) & 0/27 \\
+Coercive backlash & \(+0.69\) to \(+1.58\) & 0/15 & \(+0.37\) to \(+2.33\) & 0/27 \\
+\bottomrule
+\end{tabular}
+}
+\begin{flushleft}
+\footnotesize Notes: LOMO = leave-one-model-out (fifteen fits, each excluding one model); LOPO = leave-one-profile-out (twenty-seven fits, each excluding one profile). No frame coefficient is statistically distinguishable from zero in any leave-one-out fit under the primary specification. Sign counts: access barriers positive in 14 of 15 LOMO and 25 of 27 LOPO fits; collective responsibility positive in 14 of 15 and 23 of 27; coercive backlash positive in 15 of 15 and 27 of 27.
+\end{flushleft}
+\end{table}
+
+\subsection*{Leave-one-model-out under the secondary specification}
 
 \section{Frame-Manipulation Prompts and H3 Robustness}
 \label{app:h3-prompts-robustness}
@@ -648,6 +698,31 @@ Pooled & Equity/access vs. neutral & 4.84*** & 0.70 & [3.45, 6.24] \\
 \end{tabular}
 \begin{flushleft}
 \footnotesize Notes: Each row reports a frame contrast relative to the neutral frame. Model-specific regressions include profile fixed effects. The pooled regression includes model and profile fixed effects. Standard errors are clustered at the model--profile level for the pooled column (108 clusters) and at the profile level within each model for the model-specific columns (27 clusters each), because profiles are the controlled test cases and queries within a profile are repeated measures. The pooled specification uses $N=2{,}159$ profile--repetition observations (540 for GPT-4.1, 539 for Llama 3.1 70B Instruct, 540 for Qwen3.7 Plus, and 540 for Mistral Large, after excluding responses that failed the structured-output checks). The dependent variable is \(\Delta = W^{low}-W^{high}\). Positive coefficients indicate larger simulated burden effects relative to neutral. Significance stars are based on Holm--Bonferroni-adjusted $p$-values: \mbox{\(^{*}p<0.05\)}, \mbox{\(^{***}p<0.001\)}.
+\end{flushleft}
+\end{table}
+
+\subsection*{Pair Fixed-Effects Robustness}
+\label{app:h3-pairfe}
+
+The pooled H3 estimates were re-estimated with one fixed effect per model--profile pair (108 pairs, twenty assigned-frame observations each) in place of the separate model and profile fixed effects, holding the clustering of standard errors at the model--profile level so that only the fixed-effect structure changes:
+
+\begin{table}[htbp]
+\centering
+\caption{Pooled H3 estimates under two-way and pair fixed effects}
+\label{tab:h3_pairfe}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrr}
+\toprule
+Contrast (vs.\ neutral) & Model + profile FE & Pair FE \\
+\midrule
+Autonomy & \(+4.96\) [\(+3.58\), \(+6.33\)] & \(+4.96\) [\(+3.56\), \(+6.36\)] \\
+Collective obligation & \(-10.88\) [\(-12.52\), \(-9.23\)] & \(-10.88\) [\(-12.55\), \(-9.20\)] \\
+Equity/access & \(+4.84\) [\(+3.47\), \(+6.22\)] & \(+4.86\) [\(+3.45\), \(+6.26\)] \\
+\bottomrule
+\end{tabular}
+}
+\begin{flushleft}
+\footnotesize Notes: Standard errors clustered at the model--profile level (108 clusters) in both columns; all six estimates have \(p<0.001\). Because frames are assigned rather than observed, 75\% of the variance in the frame indicator lies within a pair, so the pair-fixed-effects specification retains essentially the same identifying variation and the estimates are unchanged; adjusted \(R^2\) rises from 0.775 to 0.809. The pair-fixed-effects model is the specification that corresponds to the stated within-model--profile estimand.
 \end{flushleft}
 \end{table}
 

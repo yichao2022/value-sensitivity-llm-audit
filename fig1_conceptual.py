@@ -3,7 +3,8 @@
 
 Statistics are the canonical values (2026-09 rerun):
   H1 pooled bivariate  : beta1 = -2.14, 95% CI [-6.23, 1.95], R^2 = 0.090  (N = 15 endpoints)
-  H2 fixed effects     : access +1.08 (p=.012), collective +0.11 (n.s.), coercive +1.59 (n.s.), N = 2,019
+  H2 pair FE (primary): access +0.13 (n.s.), collective +0.15 (n.s.), coercive +1.21 (n.s.), N = 2,019
+  H2 two-way FE (secondary): access +1.08 (BH p=.036), collective +0.11, coercive +1.59
   H3 pooled (4 models) : autonomy +4.96 [3.57, 6.35], collective -10.88 [-12.54, -9.21],
                          equity +4.84 [3.45, 6.24], adj. R^2 = 0.77 (N = 2,159; 108 clusters)
 Regenerate after any rerun; do not hand-edit the PDF.
@@ -22,11 +23,11 @@ H1_BODY = [r"$\mathrm{PVOC}_m \;\rightarrow\; \Delta_m$",
            r"$N$ = 15 model endpoints",
            r"$\beta_1$ = $-2.14$, 95% CI [$-6.23$, 1.95]", r"$R^2$ = 0.09"]
 H2_BODY = [r"$\mathrm{Frame}_{mi} \;\rightarrow\; \Delta_{mi}$",
-           "Interpretive frames correlate with", "predicted burden effects", "",
-           "N = 2,019 rationale\u2013effect observations",
-           r"Access barriers $\uparrow$ ($b$ = 1.08)",
-           "Co. responsibility n.s. ($b$ = 0.11)",
-           r"Coercive backlash n.s. ($b$ = 1.59)"]
+           "Interpretive frames vs.", "predicted burden effects", "",
+           "Model $\\times$ profile pair fixed effects",
+           "N = 2,019 rationale\\u2013effect observations",
+           r"Access barriers n.s. ($b$ = 0.13)",
+           "Collective resp. n.s. (0.15); coercive n.s. (1.21)"]
 H3_BODY = [r"$\Delta_{mcir} \;\approx\; \mathrm{Frame}_c$",
            "Assigned prompt-frame clause shifts",
            "predicted effect within the same model", "",
@@ -39,7 +40,7 @@ COLS = [
     ("#1f4e79", "#dce9f5", "Model-level", "H1: Composite orientation", H1_BODY,
      "Null: no detectable association"),
     ("#8c1d1d", "#f7dede", "Narrative-level", "H2: Narrative frame association", H2_BODY,
-     "Limited: access barriers only"),
+     "Not supported: no within-pair association"),
     ("#1d6b3f", "#d9eedd", "Within-model", "H3: Frame manipulation", H3_BODY,
      "Supported (pooled; model heterogeneity)"),
 ]
@@ -75,7 +76,7 @@ ax.text(17.5, 2.52, "Does normative-frame sensitivity affect LLM-assisted policy
         ha="center", va="center", fontsize=12, fontweight="bold", color="#222222")
 ax.text(17.5, 1.45, "Three independent diagnostic tests \u2014 each informative regardless of the others.",
         ha="center", va="center", fontsize=10, color="#444444")
-ax.text(17.5, 0.72, "PVOC null (H1)  \u2192  one frame matters (H2)  \u2192  assigned prompt clause causally shifts effects (H3)",
+ax.text(17.5, 0.72, "PVOC null (H1)  \u2192  no robust rationale signal (H2)  \u2192  assigned prompt clause shifts effects (H3)",
         ha="center", va="center", fontsize=10, color="#444444")
 
 fig.subplots_adjust(left=0.005, right=0.995, bottom=0.01, top=0.99)

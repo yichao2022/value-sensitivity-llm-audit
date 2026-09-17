@@ -49,7 +49,7 @@
 
 \noindent\textbf{Principal Findings:} 
 (1) The composite orientation index does not predict cross-model variation ($\beta_1 = $ $-$2.14, 95\% CI [$-$6.23, 1.95]).
-(2) With model and profile fixed effects, access-barrier rationales co-occur with larger simulated effects ($\beta = 1.08$ [0.24, 1.92], BH-adjusted $p = 0.036$); collective-responsibility ($0.11$) and coercive-backlash ($1.59$) rationales show no detectable association.
+(2) Under the primary specification with model-by-profile pair fixed effects, naturally expressed rationale frames show no detectable association with simulated burden effects (BH-adjusted $p \geq 0.86$ for all three retained frames).
 (3) Assigned frames shift simulated burden effects within models: autonomy $+4.96$ [3.57, 6.35], collective obligation $-10.88$ [$-$12.54, $-$9.21], equity/access $+4.84$ [3.45, 6.24]; the autonomy direction reverses in one of four models.
 
 \noindent\textbf{Conclusions:} LLM-assisted policy simulation is frame-sensitive: identical models, profiles, and scenarios yield materially different estimates (pooled shifts of 4.8--10.9 points on a 0--100 scale) depending on analyst-selected framing. These results characterize simulation behavior, not real-world vaccination response.
@@ -68,7 +68,7 @@
 \noindent\textbf{What this study found}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 \item Composite policy-value scores do not predict cross-model variation.
-\item Access-barrier rationales co-occur with larger simulated effects; the other two retained rationales do not.
+\item Naturally expressed rationale frames show no detectable within-pair association with simulated effects under the primary specification.
 \item Assigned frames shift simulated effects within models: collective obligation reduces them in all four tested models; autonomy and equity increase them in three.
 \end{itemize}
 
@@ -113,7 +113,7 @@ The framework proceeds from coarse to fine-grained diagnostics. Each diagnostic 
 
 \textbf{Diagnostic 1 --- Aggregate Orientation.} We first test whether a scalar policy-value composite (PVOC) predicts cross-model variation in simulated burden effects. A null result would indicate that simple ideology/value scores are insufficient for auditing LLM simulation validity.
 
-\textbf{Diagnostic 2 --- Naturally Expressed Framing.} We examine whether interpretive frames expressed in model rationales systematically co-occur with simulated burden effects. Access-barrier, autonomy-infringement, and coercive-backlash frames should correspond to larger effects; procedural-legitimacy and collective-responsibility frames to smaller effects. Because frames are generated rather than assigned, this diagnostic identifies rationale--outcome co-expression rather than causal pathways.
+\textbf{Diagnostic 2 --- Naturally Expressed Framing.} We examine whether interpretive frames expressed in model rationales systematically co-occur with simulated burden effects. Access-barrier, autonomy-infringement, and coercive-backlash frames should correspond to larger effects; procedural-legitimacy and collective-responsibility frames to smaller effects. Because frames are generated rather than assigned, this diagnostic identifies rationale--outcome co-expression rather than causal pathways, and we test whether any such co-expression survives model-by-profile pair fixed effects.
 
 \textbf{Diagnostic 3 --- Experimental Frame Sensitivity.} We test whether an experimentally assigned governance-value prompt clause causally shifts simulated burden effects within the same base model. The manipulated object is the prompt clause itself: the causal claim therefore concerns the assigned framing of the prompt, not any claim about the values a model holds internally. Autonomy and equity/access frames should increase effects; collective-obligation frames should decrease them. Holding model, profiles, and scenarios fixed attributes any shift to framing itself.
 
@@ -201,11 +201,11 @@ where the PVOC is standardized across models; because its variation is model-lev
 \subsubsection{Narrative frame-decomposition models (H2)}
 \label{sec:est-h2}
 
-H2 estimates a frame--outcome association model with model and profile fixed effects:
+H2 estimates a frame--outcome association model with one fixed effect per model--profile pair:
 \[
-\Delta_{mir} = \alpha_m + \mu_i + \sum_{k} \beta_k \mathbb{I}(k \in r_{mir}) + \varepsilon_{mir},
+\Delta_{mir} = \alpha_{mi} + \sum_{k} \beta_k \mathbb{I}(k \in r_{mir}) + \varepsilon_{mir},
 \]
-The frame indicators are rationale-level. Model and profile fixed effects absorb between-model differences in baseline burden effects and between-profile differences in case difficulty, so the coefficients are identified from within-model, within-profile co-variation. The PVOC does not enter the H2 model. Estimates are co-expression, not causal mediation, because willingness and rationales are generated in the same response; standard errors are clustered at the model--profile level and frame-specific \(p\)-values use Benjamini--Hochberg FDR at \(q=0.10\).
+where \(\alpha_{mi}\) is an indicator for the model--profile pair (405 pairs in the fifteen-model sample). The frame indicators are rationale-level and vary across the five repetitions of a pair, so the coefficients are identified exclusively from repetition-level changes in frame presence within the same model--profile pair. Pair fixed effects absorb the cell-specific baseline, including any model-specific response to particular profiles that separate model and profile fixed effects would leave in the error term; a specification with separate model and profile fixed effects (additive heterogeneity only) is reported as a sensitivity analysis in Appendix~\ref{app:h2-identification}. The PVOC does not enter the H2 model. Estimates are co-expression, not causal mediation, because willingness and rationales are generated in the same response; standard errors are clustered at the model--profile level and frame-specific \(p\)-values use Benjamini--Hochberg FDR at \(q=0.10\).
 
 \subsubsection{Frame-manipulation models (H3)}
 \label{sec:est-h3}
@@ -302,27 +302,29 @@ H2 asks whether interpretive frames in model rationales co-vary with predicted b
 
 Three of the five frames varied meaningfully in the high-burden rationales: access-barrier reasoning in 43.2\% (after recoding to require an explicit link between procedural costs and reduced access, resource constraints, work flexibility, childcare, provider access, or socioeconomic vulnerability), collective-responsibility in 75.2\%, and coercive-backlash in 7.7\%. Autonomy infringement and procedural legitimacy were near zero and are reported descriptively only.
 
-Table~\ref{tab:h2_frame_decomposition} reports the fixed-effects estimates. Only access-barrier reasoning is associated with larger predicted burden effects (\(\hat{b}=1.08\), 95\% CI \([0.24, 1.92]\), BH-FDR-adjusted \(p=0.036\)), an association that survives the removal of between-model and between-profile variation. Collective-responsibility (\(\hat{b}=0.11\), adjusted \(p=0.88\)) and coercive-backlash (\(\hat{b}=1.59\), adjusted \(p=0.26\)) rationales show no detectable association; the larger coercive-backlash coefficient in a specification without fixed effects (7.27) reflects between-model differences rather than within-model co-expression.
+Table~\ref{tab:h2_frame_decomposition} reports the estimates. Under the primary model-by-profile pair-fixed-effects specification, none of the three retained rationale frames shows a detectable association with predicted burden effects (access barriers \(\hat{b}=0.13\), 95\% CI \([-0.79, 1.04]\), BH-adjusted \(p=0.86\); collective responsibility \(0.15\), adjusted \(p=0.86\); coercive backlash \(1.21\), adjusted \(p=0.86\)). A specification with separate model and profile fixed effects yields a positive access-barrier coefficient (\(\hat{b}=1.08\), 95\% CI \([0.24, 1.92]\), adjusted \(p=0.036\)), so that association does not survive absorbing pair-specific heterogeneity: it reflects cells in which a model systematically expresses access-barrier reasoning and also shows larger burden effects, rather than variation across repeated queries of the same cell.
 
-Leave-one-out diagnostics support only this association: the access-barrier coefficient stays positive and significant in all fifteen leave-one-model-out fits ($+0.91$ to $+1.29$) and all twenty-seven leave-one-profile-out fits ($+0.89$ to $+1.26$), whereas the other two coefficients are never distinguishable from zero. H2 therefore receives limited support: frames and simulated effects do co-vary within models and profiles, but the pattern is confined to access-barrier rationales.
+Identification under the pair-fixed-effects specification is limited by construction. Only 7.8\% of the variance in \(\Delta\) occurs within model--profile pairs (182 of 405 pairs show no within-pair variation in \(\Delta\) at all), and the frame indicators are constant across repetitions in 237 to 362 of the 405 pairs, so the coefficients are driven by the minority of pairs in which the expressed frame changes between repeated queries. The null estimates should therefore be interpreted as evidence that the previously observed access-barrier association is not robust to pair-specific heterogeneity, rather than as evidence that rationale framing is behaviorally irrelevant: with 7.8\% within-pair variation, the strict within-cell estimand is weakly identified in this design.
+
+Leave-one-out diagnostics behave accordingly: under the primary specification the access-barrier coefficient stays positive in 14 of 15 leave-one-model-out fits (\(-0.03\) to \(+0.37\)) and in 25 of 27 leave-one-profile-out fits (\(-0.09\) to \(+0.32\)), but is never statistically distinguishable from zero in either series, as are the other two frames. H2 was not supported under the primary pair-fixed-effects specification.
 
 \begin{table}[htbp]
 \centering
-\caption{Narrative frame--outcome association estimates}
+\caption{Narrative frame--outcome associations under model-by-profile pair fixed effects}
 \label{tab:h2_frame_decomposition}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{lrrrrc}
+\begin{tabular}{lrrrrcr}
 \toprule
-Frame & Prevalence & \(b\): Frame \(\rightarrow \Delta\) & SE & \(p\) (BH-adjusted) & LOMO sign stability \\
+Frame & Prevalence & Pair-FE \(b\) & SE & 95\% CI & BH-adj.\ \(p\) & Two-way FE \(b\) \\
 \midrule
-Access barriers & 43.2\% & 1.08 & 0.43 & 0.036 & Yes \\
-Collective responsibility & 75.2\% & 0.11 & 0.69 & 0.876 & No \\
-Coercive backlash & 7.7\% & 1.59 & 1.17 & 0.262 & Yes (not significant) \\
+Access barriers & 43.2\% & 0.13 & 0.47 & [\(-0.79\), 1.04] & 0.86 & 1.08 \\
+Collective responsibility & 75.2\% & 0.15 & 0.83 & [\(-1.48\), 1.77] & 0.86 & 0.11 \\
+Coercive backlash & 7.7\% & 1.21 & 1.82 & [\(-2.35\), 4.77] & 0.86 & 1.59 \\
 \bottomrule
 \end{tabular}
 }
 \begin{flushleft}
-\footnotesize Notes: The table reports descriptive frame--outcome estimates using high-burden rationales in the expanded fifteen-model sample. The dependent variable is the profile--repetition-level burden effect \(\Delta = W^{low} - W^{high}\). Coefficients are from a model with model and profile fixed effects and the three retained frame indicators; the PVOC does not enter this model because it belongs to the H1 analysis. \(N=2{,}019\), \(R^2=0.808\). Positive coefficients indicate larger predicted burden effects. \(p\)-values are Benjamini--Hochberg adjusted across the three retained frames (\(q=0.10\)); the corresponding unadjusted values are 0.012 (access barriers), 0.876 (collective responsibility), and 0.174 (coercive backlash). LOMO = leave-one-model-out. LOMO sign stability indicates only that the sign of the coefficient is preserved when each model is excluded in turn; it does not imply statistical significance. Access barriers and coercive backlash are sign-stable in all fifteen leave-one-model-out fits (coercive backlash is positive in every fit but never statistically significant), whereas collective responsibility is not sign-stable. The table emphasizes frame--outcome associations rather than formal mediation. PVOC-to-frame paths and \(a \times b\) products are not interpreted as causal mediation estimates because PVOC varies only at the model level and is not experimentally assigned. For comparison, a specification without fixed effects that instead includes the PVOC covariate yields larger frame coefficients (access barriers 2.36, collective responsibility 0.69, coercive backlash 7.27); the gap indicates that the coercive-backlash association in that specification reflects between-model baseline differences rather than within-model co-expression.
+\footnotesize Notes: The primary specification includes one fixed effect per model--profile pair (405 pairs) plus the three retained rationale-frame indicators; coefficients are therefore identified exclusively from repetition-level changes in frame presence within the same model--profile pair, and standard errors are clustered at the model--profile level. \(N=2{,}019\). The two-way column reports a specification with separate model and profile fixed effects (additive heterogeneity only) and is shown for comparison. \(p\)-values are Benjamini--Hochberg adjusted across the three retained frames (\(q=0.10\)); all three are non-significant under the primary specification. Prevalence is the share of high-burden rationales expressing the frame. Only 7.8\% of the variance in the burden effect \(\Delta = W^{low} - W^{high}\) occurs within model--profile pairs (182 of 405 pairs show no within-pair variation in \(\Delta\)), and the frame indicators are constant across repetitions in 237 (access barriers), 310 (collective responsibility) and 362 (coercive backlash) of the 405 pairs, so the pair-fixed-effects estimates rest on limited within-cell variation. Leave-one-out ranges for both specifications, and the full set of identification diagnostics, are reported in Appendix~\ref{app:h2-identification}. The table reports frame--outcome associations rather than formal mediation: PVOC-to-frame paths and \(a \times b\) products are not interpreted as causal mediation estimates because PVOC varies only at the model level and is not experimentally assigned.
 \end{flushleft}
 \end{table}
 
@@ -336,6 +338,8 @@ Figure~\ref{fig:h3_forest} reports pooled frame effects against the neutral fram
 These are within-model--profile frame contrasts, not population-level causal effects: the observations are repeated queries of 27 constructed test cases, so the intervals reflect within-profile consistency of responses at temperature = 0 rather than population-level precision. Effect sizes (4.96, 4.84, and 10.88 points pooled, up to 20.11 points model-specifically) are the primary quantities of interest, with uncertainty quantified by clustered standard errors.
 
 Because each model-specific regression rests on 27 profile clusters, inference was re-checked with a wild cluster bootstrap-$t$ and a finite-sample corrected covariance; no conclusion changes, including the marginal equity/access contrast for Mistral Large ($p=0.027$ bootstrap, $0.030$ corrected) and the autonomy reversal for Qwen3.7 Plus ($-2.87$, 95\% CI $[-4.53, -1.22]$; $p=0.002$). Pooled effects follow the theoretical expectations in three of the four models, and Mistral Large---the lowest-PVOC model in the subset---shifts in the expected direction on all three frames. H3 thus provides the clearest evidence that an assigned prompt clause shifts simulated effects within a model (by up to 20 points on a 0--100 scale, with collective obligation reducing effects in all four models), while the direction of that sensitivity is model-specific: a frame that amplifies burden sensitivity in one endpoint can attenuate it in another.
+
+Results were essentially unchanged when model-by-profile pair fixed effects replaced separate model and profile fixed effects (pooled autonomy $+4.96$, collective obligation $-10.88$, equity/access $+4.86$; Appendix~\ref{app:h3-pairfe}), confirming that the assigned-frame contrasts are identified within the same model--profile cells.
 
 \begin{figure}[htbp]
 \centering
@@ -357,12 +361,12 @@ Robustness checks leave every conclusion unchanged. The H1 null persists across 
 
 This study develops and evaluates a three-level diagnostic framework for auditing normative-frame sensitivity in LLM-assisted policy simulation. Using administrative burden in vaccination access as a controlled HSR testbed, we demonstrate that seemingly technical simulated policy-effect estimates depend on analyst-selected normative framing.
 
-\textbf{Summary of Diagnostic Results.} Diagnostic 1 shows that aggregate policy-value scores do not predict cross-model variation. Diagnostic 2 provides narrower co-expression evidence: with model and profile fixed effects, access-barrier rationales co-occur with larger burden effects while collective-responsibility and coercive-backlash rationales do not. Diagnostic 3 shows that assigned frames shift estimated effects---by 4.8 to 10.9 points pooled and up to 20.1 points model-specifically, with the autonomy contrast differing in sign across models.
+\textbf{Summary of Diagnostic Results.} Diagnostic 1 shows that aggregate policy-value scores do not predict cross-model variation. Diagnostic 2 does not: under model-by-profile pair fixed effects, none of the retained rationale frames predicts burden effects. The access-barrier association that appears when only additive model and profile heterogeneity is removed disappears once pair-specific heterogeneity is absorbed, and only 7.8\% of the variance in the burden effect lies within model--profile pairs. Diagnostic 3 shows that assigned frames shift estimated effects---by 4.8 to 10.9 points pooled and up to 20.1 points model-specifically, with the autonomy contrast differing in sign across models.
 
 Taken together, the three diagnostics establish that LLM-assisted policy simulation is normatively frame-sensitive. The same model, same synthetic profiles, and same policy scenario can produce materially different simulated policy-effect estimates depending on the normative lens activated by the prompt.
 
 
-The narrative analysis supplies within-model co-expression evidence: access-barrier rationales are associated with larger burden effects ($\hat{b}=1.08$, adjusted $p=0.036$), an association stable in all leave-one-out fits, while the other two frames show none. H2 is descriptive co-expression rather than causal mediation, because willingness and rationales are generated together and associations may reflect post-hoc justification.
+The narrative analysis does not supply a robust within-cell signal. Under the primary pair-fixed-effects specification none of the retained frames is detectable, and the access-barrier association that appears under additive model and profile fixed effects does not survive pair-specific heterogeneity---a pattern consistent with cells whose baseline burden effect and rationale style are jointly model- and profile-specific. Because only 7.8\% of the variance in \(\Delta\) occurs within pairs, this is a failure of robustness rather than proof that rationale framing is behaviorally irrelevant. H2 is descriptive co-expression in any case rather than causal mediation, because willingness and rationales are generated together and associations may reflect post-hoc justification.
 
 The strongest evidence comes from the within-model manipulation. In the four-model subset, the collective-obligation frame reduced simulated burden effects in all four models and the autonomy and equity/access frames increased them in three of four (Qwen3.7 Plus reversed sign on autonomy and showed no equity effect). What is manipulated is the assigned prompt clause, so the estimate is its causal effect on simulated effects---a swing of up to 20 points on a 0--100 scale---and the direction of that sensitivity is itself model-specific.
 
@@ -387,7 +391,7 @@ Six limitations qualify the findings. \textbf{(1) Model sample.} The cross-model
 
 \subsection{Conclusion}
 
-The central finding is that LLM-assisted policy simulation creates a new methodological problem for HSR: seemingly technical simulated policy-effect estimates may depend on analyst-selected normative framing. The three-level diagnostic framework demonstrates that (1) simple aggregate value scores are insufficient for validity auditing, (2) access-barrier rationales co-occur with larger simulated effects within models and profiles, while the other interpretive frames do not, and (3) experimentally assigned governance-value frames materially shift estimated policy effects.
+The central finding is that LLM-assisted policy simulation creates a new methodological problem for HSR: seemingly technical simulated policy-effect estimates may depend on analyst-selected normative framing. The three-level diagnostic framework demonstrates that (1) simple aggregate value scores are insufficient for validity auditing, (2) naturally expressed rationale frames did not provide a robust within-pair diagnostic of simulated effect magnitude, and (3) experimentally assigned governance-value frames materially shift estimated policy effects.
 
 For HSR researchers using LLMs for policy simulation, the implication is clear: report frame sensitivity rather than treating one prompt/model output as a neutral point estimate. Analysts should document model identity, prompt framing, scenario wording, and robustness to alternative frames. The goal is not to eliminate values from policy simulation, but to make their influence measurable, transparent, and contestable---so that the method can be used responsibly as an HSR tool.
 
