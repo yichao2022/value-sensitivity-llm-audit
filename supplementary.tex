@@ -43,21 +43,21 @@ Table~\ref{tab:data_quality} reports task-compliance diagnostics for the expande
 \toprule
 Model & $N$ & JSON\% & Score\% & NonRef\% & Mean $W$ & StabSD & DeltaSD & Flip\% \\
 \midrule
-GPT-4o & 270 & 100.0 & 100.0 & 100.0 & 71.61 & 0.43 & 7.13 & 0.0 \\
-GPT-4.1 & 270 & 100.0 & 100.0 & 100.0 & 68.30 & 0.62 & 7.12 & 0.0 \\
-Llama 3.1 8B & 270 & 100.0 & 100.0 & 100.0 & 65.41 & 0.28 & 4.54 & 0.0 \\
-Llama 3.1 70B & 270 & 100.0 & 100.0 & 100.0 & 64.70 & 0.37 & 9.75 & 0.0 \\
-Qwen3.6-72B & 270 & 100.0 & 100.0 & 100.0 & 61.57 & 3.18 & 7.22 & 0.0 \\
-Mistral Large & 270 & 100.0 & 100.0 & 100.0 & 60.73 & 0.88 & 5.41 & 0.0 \\
-Cohere Command R+ & 270 & 99.6 & 99.6 & 100.0 & 60.32 & 1.52 & 4.77 & 0.0 \\
-GPT-4.1 mini & 270 & 100.0 & 100.0 & 100.0 & 58.96 & 0.87 & 3.86 & 0.0 \\
-Gemini 2.5 Flash & 270 & 100.0 & 100.0 & 100.0 & 58.91 & 1.57 & 9.05 & 0.0 \\
-Kimi K2.6 & 270 & 99.6 & 99.6 & 100.0 & 58.25 & 1.39 & 5.83 & 0.0 \\
-Claude Haiku & 270 & 100.0 & 100.0 & 100.0 & 56.85 & 0.00 & 6.59 & 0.0 \\
-Gemini 2.5 Pro & 270 & 100.0 & 100.0 & 100.0 & 55.50 & 2.49 & 5.83 & 0.0 \\
-Claude Opus 4.8 & 270 & 100.0 & 100.0 & 100.0 & 53.03 & 0.77 & 6.15 & 0.0 \\
-DeepSeek-V3.2 & 270 & 100.0 & 100.0 & 100.0 & 52.07 & 0.96 & 4.48 & 0.0 \\
-Claude Sonnet 4.6 & 270 & 100.0 & 100.0 & 100.0 & 51.61 & 0.46 & 5.72 & 0.0 \\
+Llama 3.1 70B & 270 & 100.0 & 100.0 & 100.0 & 65.48 & 0.87 & 9.45 & 0.0 \\
+GPT-4o & 270 & 100.0 & 100.0 & 100.0 & 64.80 & 0.97 & 9.08 & 0.0 \\
+GPT-4.1 & 270 & 100.0 & 100.0 & 100.0 & 61.85 & 0.69 & 8.27 & 0.0 \\
+Cohere Command R+ & 270 & 100.0 & 100.0 & 100.0 & 58.91 & 2.16 & 5.27 & 0.0 \\
+GPT-4.1 mini & 270 & 100.0 & 100.0 & 100.0 & 58.81 & 0.94 & 4.45 & 0.0 \\
+Gemini 2.5 Flash & 270 & 97.8 & 97.8 & 100.0 & 57.92 & 3.06 & 9.64 & 0.0 \\
+Mistral Large & 270 & 100.0 & 100.0 & 100.0 & 57.52 & 0.40 & 6.07 & 0.0 \\
+DeepSeek-V3.2 & 270 & 100.0 & 100.0 & 100.0 & 56.86 & 1.24 & 5.28 & 0.0 \\
+Claude Haiku & 270 & 100.0 & 100.0 & 100.0 & 56.59 & 0.03 & 8.23 & 0.0 \\
+Qwen3.7 Plus & 270 & 100.0 & 100.0 & 100.0 & 56.10 & 2.23 & 7.43 & 0.0 \\
+Kimi K2.6 & 270 & 100.0 & 100.0 & 100.0 & 55.25 & 1.63 & 6.43 & 0.0 \\
+Llama 3.1 8B & 270 & 100.0 & 100.0 & 100.0 & 52.76 & 3.14 & 7.23 & 0.0 \\
+Claude Opus 4.8 & 270 & 100.0 & 100.0 & 100.0 & 52.54 & 0.54 & 8.74 & 0.0 \\
+Gemini 2.5 Pro & 270 & 100.0 & 100.0 & 100.0 & 50.48 & 3.03 & 8.00 & 0.0 \\
+Claude Sonnet 4.6 & 270 & 100.0 & 100.0 & 100.0 & 47.99 & 0.44 & 8.35 & 0.0 \\
 \bottomrule
 \end{tabular}
 }
@@ -98,18 +98,18 @@ This appendix reports the model identifiers, access routes, endpoints, and decod
 \endlastfoot
 
 GPT-4.1 & OpenAI & Official API & \breakabletexttt{gpt-4.1} returns \breakabletexttt{gpt-4.1-2025-04-14} & OpenAI Chat Completions API & 0 & Dated snapshot returned \\
-GPT-4.1 mini & OpenAI & Official API & \breakabletexttt{gpt-4.1-mini} & OpenAI Chat Completions API & 0 & Lowest-variance; seed used where supported \\
+GPT-4.1 mini & OpenAI & Official API & \breakabletexttt{gpt-4.1-mini} returns \breakabletexttt{gpt-4.1-mini-2025-04-14} & OpenAI Chat Completions API & 0 & Dated snapshot returned \\
 GPT-4o & OpenAI & Official API & \breakabletexttt{gpt-4o} returns \breakabletexttt{gpt-4o-2024-08-06} & OpenAI Chat Completions API & 0 & Dated snapshot returned \\
 Claude Sonnet 4.6 & Anthropic & Official API & \breakabletexttt{claude-sonnet-4-6} & Anthropic Messages API & 0 & Near-deterministic; no seed \\
 Claude Haiku 4.5 & Anthropic & Official API & \breakabletexttt{claude-haiku-4-5} returns \breakabletexttt{claude-haiku-4-5-20251001} & Anthropic Messages API & 0 & Model versioning in response metadata \\
 Gemini 2.5 Pro & Google & Official API & \breakabletexttt{gemini-2.5-pro} & Gemini API & 0 & Near-deterministic \\
 Gemini 2.5 Flash & Google & Official API & \breakabletexttt{gemini-2.5-flash} & Gemini API & 0 & Near-deterministic \\
-Llama 3.1 70B Instruct & Meta & Together AI & \breakabletexttt{meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo} & Together AI Chat Completions & 0 & Lowest-variance; \texttt{top\_p=1.0} \\
+Llama 3.1 70B Instruct & Meta & OpenRouter & \breakabletexttt{meta-llama/llama-3.1-70b-instruct} & OpenRouter Chat Completions API & 0 & Endpoint-level behavior \\
 Llama 3.1 8B Instruct & Meta & OpenRouter & \breakabletexttt{meta-llama/llama-3.1-8b-instruct} & OpenRouter Chat Completions API & 0 & Endpoint-level behavior \\
 Mistral Large & Mistral & OpenRouter & \breakabletexttt{mistralai/mistral-large} & OpenRouter Chat Completions API & 0 & Endpoint-level behavior \\
 DeepSeek-V3.2 & DeepSeek & Official API & \breakabletexttt{deepseek-chat} returns \breakabletexttt{deepseek-flash} & DeepSeek API & 0 & Endpoint returns snapshot variant \\
-Qwen3.6-72B Instruct & Alibaba & DashScope API & \breakabletexttt{qwen3.6-72b-instruct} & DashScope API & 0 & Lowest-variance \\
-Claude Opus 4.8 & Anthropic & OpenRouter & \breakabletexttt{anthropic/claude-opus-4.8} & OpenRouter Chat Completions API & 0 & Endpoint-level behavior \\
+Qwen3.7 Plus & Alibaba & DashScope API & \breakabletexttt{qwen3.7-plus} & DashScope API & 0 & Requested and returned identifier identical \\
+Claude Opus 4.8 & Anthropic & Official API & \breakabletexttt{claude-opus-4-8} & Anthropic Messages API & n/a & Temperature not accepted by this model; parameter omitted \\
 Kimi K2.6 & Moonshot AI & OpenRouter & \breakabletexttt{moonshotai/kimi-k2.6-20260420} returns \breakabletexttt{moonshotai/kimi-k2.6} & OpenRouter Chat Completions API & 0 & Dated snapshot requested, base version returned \\
 Cohere Command R+ & Cohere & OpenRouter & \breakabletexttt{cohere/command-r-plus-08-2024} & OpenRouter Chat Completions API & 0 & Explicit dated version used \\
 
@@ -209,31 +209,23 @@ You are estimating how likely the person described below would be to get vaccina
 
 \subsection*{User prompt template}
 
-For each synthetic profile and burden condition, the following user prompt template was used:
+For each synthetic profile and burden condition, the following user prompt template was used (the JSON output format is specified in the system prompt, not in the user prompt):
 
 \begin{quote}
-Individual profile:
+Person profile:
 
 \texttt{\{PROFILE\_TEXT\}}
 
-Vaccination access scenario:
+Scenario:
 
 \texttt{\{SCENARIO\_TEXT\}}
 
-Question:
+What is this person's willingness (0--100) to proceed with vaccination given this registration scenario?
 
-Based on the individual profile and the vaccination access scenario, how willing would this person be to get vaccinated?
-
-Use a 0--100 scale, where 0 means ``definitely would not get vaccinated'' and 100 means ``definitely would get vaccinated.''
-
-Return only valid JSON in the following format:
-
-\begin{verbatim}
-{"willingness": 72, "rationale": "..."}
-\end{verbatim}
-
-The \texttt{willingness} value must be an integer from 0 to 100. The \texttt{rationale} should be one to three sentences.
+\textit{SHA256 of the template string:} \texttt{1b98f920c7a2a1932b741233e800f99a62e1de84a1a172cd2038f1ad3c6970e4}
 \end{quote}
+
+The rendered user prompt therefore consists of the profile text and scenario text documented in this appendix, inserted into the template above. The two burden scenarios are fixed strings; their SHA256 hashes are \texttt{7307a8b8f499ebc0897c6fa0436fb8eafb3e77efeebf21ce91d8471989ec9b01} (low burden) and \texttt{c0bc058f951e4294842a4173f4cc2ac1e0475f1ff84d9438151cc9bd42967b52} (high burden). The 27 profile strings are the natural-language descriptions listed in Appendix~\ref{app:profiles}.
 
 \subsection*{Low-burden scenario}
 
@@ -374,14 +366,14 @@ To assess whether the H2 frame--outcome associations are driven by any single mo
 \toprule
 Variable & Minimum coefficient & Maximum coefficient & Sign stable \\
 \midrule
-Access barriers & 9.44 & 14.56 & Yes \\
-Collective responsibility & -15.35 & -6.24 & Yes \\
-Coercive backlash & 7.40 & 14.88 & Yes \\
-PVC direct effect & -0.72 & 3.12 & No \\
+Access barriers & 1.51 & 3.81 & Yes \\
+Collective responsibility & -1.79 & 1.62 & No \\
+Coercive backlash & 3.52 & 11.25 & Yes \\
+PVC direct effect & -3.64 & -0.60 & Yes (negative) \\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
-\footnotesize Notes: Each row summarizes coefficients from nine leave-one-model-out specifications. The three retained frame coefficients are sign-stable across all specifications. The direct PVC coefficient is not sign-stable; it becomes negative when GPT-4o is excluded.
+\footnotesize Notes: Each row summarizes coefficients from fifteen leave-one-model-out specifications. The access-barrier and coercive-backlash coefficients are sign-stable across all specifications; collective responsibility is not. The direct PVC coefficient is negative in all fifteen specifications.
 \end{flushleft}
 \end{table}
 
@@ -392,32 +384,24 @@ This appendix reports the prompt templates and model-specific robustness checks 
 
 \subsection{Frame-Manipulation Prompt Templates}
 
-The frame-manipulation experiment used four system-prompt frames. The neutral frame served as the reference condition. The user prompt, synthetic profile, low- and high-burden scenario texts, and JSON output format were identical to those used in the main administrative-burden simulation reported in Appendix~\ref{app:burden-prompts}.
+The frame-manipulation experiment used four system-prompt frames. Each frame is built from the same two fixed sentences: an opening sentence and a closing instruction block. The frame clause is inserted between them, immediately after the opening sentence. The neutral frame contains no frame clause, so the neutral system prompt is byte-identical to the baseline administrative-burden system prompt reported in Appendix~\ref{app:burden-prompts} (SHA256 \texttt{380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe}); the frame contrast is therefore measured against the true baseline condition. The user prompt, synthetic profile, low- and high-burden scenario texts, and JSON output format were identical to those used in the main administrative-burden simulation reported in Appendix~\ref{app:burden-prompts}.
+
+\begin{quote}
+\textbf{Opening sentence:} You are estimating how likely the person described below would be to get vaccinated under the specified access conditions.
+
+\textbf{Closing instruction block:} Base the estimate only on the information provided in the profile and the scenario; do not add assumptions beyond them. Respond ONLY with a single JSON object and nothing else. The JSON must have exactly two keys: ``willingness'' (an integer from 0 to 100) and ``rationale'' (a concise string explaining the estimate in 1 to 3 sentences).
+\end{quote}
+
+The four frame conditions differ only in the inserted clause:
 
 \begin{itemize}
-    \item \textbf{Neutral frame:}
-    
-    \begin{quote}
-    You are an evidence-based social scientist. Predict objectively. Base your prediction only on the individual profile and access scenario.
-    \end{quote}
+    \item \textbf{Neutral frame:} no clause inserted. Full system prompt SHA256: \texttt{380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe}
 
-    \item \textbf{Autonomy frame:}
-    
-    \begin{quote}
-    You are an evidence-based social scientist. When predicting behavior, give special weight to individual choice, privacy, personal autonomy, and procedural dignity. Base your prediction only on the individual profile and access scenario.
-    \end{quote}
+    \item \textbf{Autonomy frame:} ``When forming the estimate, give special weight to individual choice, privacy, personal autonomy, and procedural dignity.'' Full system prompt SHA256: \texttt{8b7d948eeee661603aa9898815ee3a01a058f43d4cc878cbc077e6cb5a5df243}
 
-    \item \textbf{Collective-obligation frame:}
-    
-    \begin{quote}
-    You are an evidence-based social scientist. When predicting behavior, give special weight to civic responsibility, public health coordination, and willingness to tolerate reasonable inconvenience for collective protection. Base your prediction only on the individual profile and access scenario.
-    \end{quote}
+    \item \textbf{Collective-obligation frame:} ``When forming the estimate, give special weight to civic responsibility, public health coordination, and willingness to tolerate reasonable inconvenience for collective protection.'' Full system prompt SHA256: \texttt{fe7512cde053405edf59cbaaf6d1402f68d69e7c478984eee3d0fbc3a49a5ecb}
 
-    \item \textbf{Equity/access frame:}
-    
-    \begin{quote}
-    You are an evidence-based social scientist. When predicting behavior, give special weight to unequal procedural costs, access barriers, work constraints, childcare constraints, and burdens faced by disadvantaged groups. Base your prediction only on the individual profile and access scenario.
-    \end{quote}
+    \item \textbf{Equity/access frame:} ``When forming the estimate, give special weight to unequal procedural costs, access barriers, work constraints, childcare constraints, and burdens faced by disadvantaged groups.'' Full system prompt SHA256: \texttt{cba0156ababefd86611eb267ebf9ccddb1d60fe5a8cecf4e289871006042844a}
 \end{itemize}
 
 For each model \(m\), frame condition \(c\), profile \(i\), and repetition \(r\), the model evaluated both the low-burden and high-burden vaccination-access scenarios in fresh conversation contexts. The frame-specific burden effect was computed as:
@@ -428,9 +412,9 @@ Positive values indicate a larger predicted reduction in vaccination willingness
 
 \subsection{Mean Burden Effects by Model and Frame}
 
-Table~\ref{tab:h3_model_frame_means} reports mean burden effects by model and frame condition for the four-model H3 subset. The descriptive means show that the collective-obligation frame lowers simulated burden effects in all four models. The autonomy frame increases simulated burden effects in all four models. The equity/access frame increases burden effects for GPT-4.1, Qwen3.6-72B Instruct, and Mistral Large, but has little effect for Llama 3.1 70B Instruct.
+Table~\ref{tab:h3_model_frame_means} reports mean burden effects by model and frame condition for the four-model H3 subset. The descriptive means show that the collective-obligation frame lowers simulated burden effects in all four models, and that the autonomy frame increases simulated burden effects in three of the four models. The remaining contrasts are model-specific rather than uniform: for Qwen3.7 Plus the autonomy frame lowers the mean burden effect (53.71 vs.\ 56.59 under the neutral frame), and the equity/access frame has little effect for that model (55.64) and for Llama 3.1 70B Instruct (36.42 vs.\ 27.11 under neutral, a positive but smaller shift than the autonomy frame). The absolute level of the burden effect also differs substantially across models under the neutral frame (25.59 for GPT-4.1 to 56.59 for Qwen3.7 Plus), so frame effects are interpreted relative to each model's own neutral baseline.
 
-Mistral Large is a particularly informative robustness case. It has the lowest PVC score and the smallest baseline burden effect in the expanded fifteen-model sample, but all three frame manipulations shift its simulated burden effects in the expected directions. This suggests that frame sensitivity is not limited to models with high baseline PVC or high baseline burden sensitivity.
+Mistral Large is a particularly informative robustness case. It has the lowest PVC score in the expanded fifteen-model sample, and all three frame manipulations shift its simulated burden effects in the expected directions. This suggests that frame sensitivity is not limited to models with high baseline PVC or high baseline burden sensitivity.
 
 \begin{table}[htbp]
 \centering
@@ -441,29 +425,29 @@ Mistral Large is a particularly informative robustness case. It has the lowest P
 \toprule
 Model & Frame & Mean \(\Delta\) & SD & \(N\) \\
 \midrule
-GPT-4.1 & Neutral & 31.26 & 6.16 & 135 \\
-GPT-4.1 & Autonomy & 34.33 & 5.39 & 135 \\
-GPT-4.1 & Collective obligation & 23.24 & 6.76 & 135 \\
-GPT-4.1 & Equity/access & 36.63 & 7.98 & 135 \\
+GPT-4.1 & Neutral & 25.59 & 8.42 & 135 \\
+GPT-4.1 & Autonomy & 34.15 & 6.84 & 135 \\
+GPT-4.1 & Collective obligation & 18.62 & 6.22 & 135 \\
+GPT-4.1 & Equity/access & 34.00 & 9.46 & 135 \\
 \midrule
-Llama 3.1 70B Instruct & Neutral & 38.15 & 6.63 & 135 \\
-Llama 3.1 70B Instruct & Autonomy & 40.48 & 4.96 & 135 \\
-Llama 3.1 70B Instruct & Collective obligation & 21.96 & 4.15 & 135 \\
-Llama 3.1 70B Instruct & Equity/access & 38.04 & 9.52 & 135 \\
+Llama 3.1 70B Instruct & Neutral & 27.11 & 9.69 & 135 \\
+Llama 3.1 70B Instruct & Autonomy & 37.19 & 7.98 & 135 \\
+Llama 3.1 70B Instruct & Collective obligation & 25.33 & 10.42 & 135 \\
+Llama 3.1 70B Instruct & Equity/access & 36.42 & 12.90 & 134 \\
 \midrule
-Qwen3.6-72B Instruct & Neutral & 34.30 & 6.11 & 135 \\
-Qwen3.6-72B Instruct & Autonomy & 36.15 & 7.45 & 135 \\
-Qwen3.6-72B Instruct & Collective obligation & 23.33 & 8.15 & 135 \\
-Qwen3.6-72B Instruct & Equity/access & 47.19 & 8.72 & 135 \\
+Qwen3.7 Plus & Neutral & 56.59 & 7.64 & 135 \\
+Qwen3.7 Plus & Autonomy & 53.71 & 6.54 & 135 \\
+Qwen3.7 Plus & Collective obligation & 41.93 & 11.34 & 135 \\
+Qwen3.7 Plus & Equity/access & 55.64 & 6.91 & 135 \\
 \midrule
-Mistral Large & Neutral & 30.48 & 6.01 & 135 \\
-Mistral Large & Autonomy & 33.81 & 5.23 & 135 \\
-Mistral Large & Collective obligation & 23.37 & 7.40 & 135 \\
-Mistral Large & Equity/access & 37.41 & 5.89 & 135 \\
+Mistral Large & Neutral & 37.04 & 6.44 & 135 \\
+Mistral Large & Autonomy & 41.11 & 5.38 & 135 \\
+Mistral Large & Collective obligation & 16.93 & 7.53 & 135 \\
+Mistral Large & Equity/access & 39.63 & 6.95 & 135 \\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
-\footnotesize Notes: Each row reports the mean profile--repetition-level burden effect, \(\Delta = W^{low}-W^{high}\), for one model under one assigned frame. \(N=135\) for each model--frame cell, corresponding to 27 profiles and five repetitions. Positive values indicate larger predicted reductions in willingness under the high-burden condition.
+\footnotesize Notes: Each row reports the mean profile--repetition-level burden effect, \(\Delta = W^{low}-W^{high}\), for one model under one assigned frame. $N=135$ for each model--frame cell, corresponding to 27 profiles and five repetitions, except where a response failed the structured-output checks: Llama 3.1 70B Instruct equity/access ($N=134$), and Qwen3.7 Plus ($N=114$, 104, 108, and 120 across the neutral, autonomy, collective-obligation, and equity/access frames respectively, reflecting calls rejected by the serving endpoint). Positive values indicate larger predicted reductions in willingness under the high-burden condition.
 \end{flushleft}
 \end{table}
 
@@ -480,34 +464,34 @@ Table~\ref{tab:h3_model_specific_effects} reports model-specific frame regressio
 \small
 \begin{tabular}{L{3.0cm}rrrrr}
 \toprule
-Frame contrast & GPT-4.1 & Llama 3.1 70B & Qwen3.6-72B & Mistral Large & Pooled \\
+Frame contrast & GPT-4.1 & Llama 3.1 70B & Qwen3.7 Plus & Mistral Large & Pooled \\
 \midrule
 Autonomy vs. neutral 
-& 3.07*** 
-& 2.33*** 
-& 1.85* 
-& 3.22*** 
-& 2.62*** \\
+& 8.56*** 
+& 10.07*** 
+& -2.87** 
+& 4.07*** 
+& 4.96*** \\
 Collective obligation vs. neutral 
-& -8.02*** 
-& -16.19*** 
-& -10.96*** 
-& -7.00*** 
-& -10.54*** \\
+& -6.97*** 
+& -1.78 
+& -14.65*** 
+& -20.11*** 
+& -10.88*** \\
 Equity/access vs. neutral 
-& 5.37*** 
-& -0.11 
-& 12.89*** 
-& 7.00*** 
-& 6.29*** \\
+& 8.41*** 
+& 9.36*** 
+& -0.94 
+& 2.59* 
+& 4.84*** \\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
-\footnotesize Notes: Each model-specific column reports a regression of \(\Delta\) on frame indicators and profile fixed effects for the indicated model. The pooled column reports the main H3 specification for the four-model H3 subset with model and profile fixed effects. The neutral frame is the omitted reference category. Positive coefficients indicate larger simulated burden effects relative to neutral; negative coefficients indicate smaller simulated burden effects. Standard errors and 95\% confidence intervals are reported in Table~\ref{tab:h3_model_specific_full}. \({}^{*}p<0.05\), \({}^{***}p<0.001\).
+\footnotesize Notes: Each model-specific column reports a regression of \(\Delta\) on frame indicators and profile fixed effects for the indicated model. The pooled column reports the main H3 specification for the four-model H3 subset with model and profile fixed effects. Standard errors are clustered at the model--profile level in all columns. The neutral frame is the omitted reference category. Positive coefficients indicate larger simulated burden effects relative to neutral; negative coefficients indicate smaller simulated burden effects. Standard errors and 95\% confidence intervals are reported in Table~\ref{tab:h3_model_specific_full}. \(^{*}p<0.05\), \(^{***}p<0.001\).
 \end{flushleft}
 \end{table}
 
-Table~\ref{tab:h3_model_specific_full} reports the corresponding standard errors and confidence intervals. The model-specific results show both robustness and heterogeneity within the H3 subset. The collective-obligation frame reduces simulated burden effects in all four models. The autonomy frame is positive in all four models. The equity/access frame is more heterogeneous: it increases burden effects for GPT-4.1, Qwen3.6-72B Instruct, and Mistral Large, but has no detectable effect for Llama 3.1 70B Instruct. Mistral Large is especially informative because it has the lowest PVC score and the smallest baseline burden effect in the expanded fifteen-model sample, yet all three frame manipulations shift its simulated burden effects in the expected directions. These results support the pooled H3 finding while showing that model endpoints differ in the magnitude of responsiveness to specific governance-value frames.
+Table~\ref{tab:h3_model_specific_full} reports the corresponding standard errors and confidence intervals. The model-specific results show both robustness and heterogeneity within the H3 subset. The collective-obligation frame reduces simulated burden effects in all four models (significantly in GPT-4.1, Qwen3.7 Plus, and Mistral Large; not statistically distinguishable from zero in Llama 3.1 70B Instruct). The autonomy frame increases simulated burden effects in GPT-4.1, Llama 3.1 70B Instruct, and Mistral Large, but \emph{reverses sign} for Qwen3.7 Plus ($-2.87$, 95\% CI $[-4.53, -1.22]$), where activating autonomy concerns reduces the simulated burden effect rather than amplifying it. The equity/access frame is positive and significant for GPT-4.1, Llama 3.1 70B Instruct, and Mistral Large, and statistically indistinguishable from zero for Qwen3.7 Plus. Mistral Large is especially informative because it has the lowest PVC score in the expanded fifteen-model sample, yet all three frame manipulations shift its simulated burden effects in the expected directions. These results support the pooled H3 finding for the collective-obligation contrast while showing that model endpoints differ in both the magnitude and the sign of responsiveness to specific governance-value frames; the pooled autonomy and equity estimates are averages over a genuinely mixed set of model-level responses, and the Qwen3.7 Plus reversal is the clearest caution against reading a pooled frame effect as a property of LLMs in general.
 
 \begin{table}[htbp]
 \centering
@@ -518,29 +502,29 @@ Table~\ref{tab:h3_model_specific_full} reports the corresponding standard errors
 \toprule
 Model & Frame contrast & Coefficient & SE & 95\% CI \\
 \midrule
-GPT-4.1 & Autonomy vs. neutral & 3.07*** & 0.40 & [2.29, 3.86] \\
-GPT-4.1 & Collective obligation vs. neutral & -8.02*** & 0.40 & [-8.81, -7.24] \\
-GPT-4.1 & Equity/access vs. neutral & 5.37*** & 0.40 & [4.59, 6.16] \\
+GPT-4.1 & Autonomy vs. neutral & 8.56*** & 0.76 & [6.99, 10.12] \\
+GPT-4.1 & Collective obligation vs. neutral & -6.97*** & 0.81 & [-8.63, -5.31] \\
+GPT-4.1 & Equity/access vs. neutral & 8.41*** & 0.77 & [6.83, 9.99] \\
 \midrule
-Llama 3.1 70B Instruct & Autonomy vs. neutral & 2.33*** & 0.65 & [1.05, 3.62] \\
-Llama 3.1 70B Instruct & Collective obligation vs. neutral & -16.19*** & 0.65 & [-17.47, -14.90] \\
-Llama 3.1 70B Instruct & Equity/access vs. neutral & -0.11 & 0.65 & [-1.39, 1.17] \\
+Llama 3.1 70B Instruct & Autonomy vs. neutral & 10.07*** & 1.46 & [7.07, 13.08] \\
+Llama 3.1 70B Instruct & Collective obligation vs. neutral & -1.78 & 1.21 & [-4.27, 0.72] \\
+Llama 3.1 70B Instruct & Equity/access vs. neutral & 9.36*** & 1.75 & [5.76, 12.97] \\
 \midrule
-Qwen3.6-72B Instruct & Autonomy vs. neutral & 1.85* & 0.77 & [0.33, 3.37] \\
-Qwen3.6-72B Instruct & Collective obligation vs. neutral & -10.96*** & 0.77 & [-12.48, -9.45] \\
-Qwen3.6-72B Instruct & Equity/access vs. neutral & 12.89*** & 0.77 & [11.37, 14.41] \\
+Qwen3.7 Plus & Autonomy vs. neutral & -2.87** & 0.81 & [-4.53, -1.22] \\
+Qwen3.7 Plus & Collective obligation vs. neutral & -14.65*** & 1.06 & [-16.84, -12.47] \\
+Qwen3.7 Plus & Equity/access vs. neutral & -0.94 & 0.84 & [-2.66, 0.78] \\
 \midrule
-Mistral Large & Autonomy vs. neutral & 3.22*** & 0.44 & [2.37, 4.08] \\
-Mistral Large & Collective obligation vs. neutral & -7.00*** & 0.44 & [-7.85, -6.15] \\
-Mistral Large & Equity/access vs. neutral & 7.00*** & 0.44 & [6.15, 7.85] \\
+Mistral Large & Autonomy vs. neutral & 4.07*** & 0.98 & [2.05, 6.09] \\
+Mistral Large & Collective obligation vs. neutral & -20.11*** & 0.89 & [-21.93, -18.29] \\
+Mistral Large & Equity/access vs. neutral & 2.59* & 1.13 & [0.28, 4.91] \\
 \midrule
-Pooled & Autonomy vs. neutral & 2.62*** & 0.34 & [1.95, 3.29] \\
-Pooled & Collective obligation vs. neutral & -10.54*** & 0.34 & [-11.22, -9.87] \\
-Pooled & Equity/access vs. neutral & 6.29*** & 0.34 & [5.61, 6.96] \\
+Pooled & Autonomy vs. neutral & 4.96*** & 0.70 & [3.57, 6.35] \\
+Pooled & Collective obligation vs. neutral & -10.88*** & 0.84 & [-12.54, -9.21] \\
+Pooled & Equity/access vs. neutral & 4.84*** & 0.70 & [3.45, 6.24] \\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
-\footnotesize Notes: Each row reports a frame contrast relative to the neutral frame. Model-specific regressions include profile fixed effects. The pooled regression includes model and profile fixed effects. The dependent variable is \(\Delta = W^{low}-W^{high}\). Positive coefficients indicate larger simulated burden effects relative to neutral. \({}^{*}p<0.05\), \({}^{***}p<0.001\).
+\footnotesize Notes: Each row reports a frame contrast relative to the neutral frame. Model-specific regressions include profile fixed effects. The pooled regression includes model and profile fixed effects. Standard errors are clustered at the model--profile level (108 clusters) because profiles are the controlled test cases and queries within a profile are repeated measures. The pooled specification uses $N=2{,}159$ profile--repetition observations (540 for GPT-4.1, 539 for Llama 3.1 70B Instruct, 540 for Qwen3.7 Plus, and 540 for Mistral Large, after excluding responses that failed the structured-output checks). The dependent variable is \(\Delta = W^{low}-W^{high}\). Positive coefficients indicate larger simulated burden effects relative to neutral. Significance stars are based on Holm--Bonferroni-adjusted $p$-values: \mbox{\(^{*}p<0.05\)}, \mbox{\(^{***}p<0.001\)}.
 \end{flushleft}
 \end{table}
 
@@ -551,11 +535,11 @@ This appendix reports additional robustness checks for the H1 orientation--effec
 
 \subsection{Expanded-Sample H1 Robustness}
 
-Table~\ref{tab:h1_expanded_robustness} summarizes the key H1 robustness results for the original nine-model sample and the expanded fifteen-model sample. The composite PVC index does not predict model-level burden effects in either sample. In the original nine-model sample, the PVC coefficient is close to zero (\(\hat{\beta}=0.14\), \(p=0.956\), \(R^2=0.0005\)). After expanding to fifteen endpoints, the PVC coefficient remains weak and statistically indistinguishable from a null effect at conventional power (\(\hat{\beta}=1.51\), \(R^2=0.043\)).
+Table~\ref{tab:h1_expanded_robustness} summarizes the key H1 robustness results for the original nine-model sample and the expanded fifteen-model sample. The composite PVC index does not predict model-level burden effects in either sample. In the original nine-model sample, the PVC coefficient is negative and statistically indistinguishable from zero (\(\hat{\beta}=$-$4.24\), \(p=0.219\), \(R^2=0.206\)). After expanding to fifteen endpoints, the PVC coefficient remains weak and statistically indistinguishable from a null effect at conventional power (\(\hat{\beta}=$-$2.14\), \(R^2=0.090\)).
 
-The expanded sample also changes the interpretation of the dimension-specific collective-obligation result. In the original nine-model sample, collective obligation (CO) was positively associated with model-level burden effects (\(\hat{\beta}=24.22\), \(p=0.009\), \(R^2=0.652\)). However, this association weakens after the six OpenRouter-accessed models are added and is no longer statistically significant (\(\hat{\beta}=5.68\), \(p=0.124\)). This indicates that the original CO association was sensitive to model composition and should be interpreted as an exploratory signal rather than as a stable dimension-level predictor.
+The expanded sample also changes the interpretation of the dimension-specific collective-obligation result. In the original nine-model sample, collective obligation (CO) was positively associated with model-level burden effects but did not reach conventional significance (\(\hat{\beta}=10.81\), \(p=0.179\), \(R^2=0.242\)). After the six OpenRouter-accessed models are added, the association shrinks and remains non-significant (\(\hat{\beta}=1.28\), \(p=0.725\), \(R^2=0.010\)). This indicates that the CO association is sensitive to model composition and should be interpreted as an exploratory signal at best rather than as a stable dimension-level predictor.
 
-The expanded-sample measurement diagnostics also suggest caution in interpreting the composite PVC formula. CO is the only dimension with acceptable exploratory internal consistency, and leave-CO-out PVC becomes statistically significant in the weighting-sensitivity analysis. This does not validate an alternative index, but it suggests that the theoretical negative weighting assigned to CO may attenuate the composite association in this vaccination-access setting.
+The expanded-sample measurement diagnostics also suggest caution in interpreting the composite PVC formula. CO is the only dimension with acceptable exploratory internal consistency, but removing CO from the composite does not change the substantive conclusion: the leave-CO-out PVC coefficient remains statistically indistinguishable from zero (Table~\ref{tab:h1_expanded_robustness}). This does not validate an alternative index; the composite association is weak under either weighting.
 
 \begin{table}[htbp]
 \centering
@@ -565,11 +549,11 @@ The expanded-sample measurement diagnostics also suggest caution in interpreting
 \toprule
 Predictor and sample & Coefficient & \(p\) & \(R^2\) & Interpretation \\
 \midrule
-PVC composite, \(N=9\) & 0.14 & 0.956 & 0.0005 & Null \\
-PVC composite, \(N=15\) & 1.51 & 0.456 & 0.043 & Null \\
-Collective obligation, \(N=9\) & 24.22 & 0.009 & 0.652 & Initial signal \\
-Collective obligation, \(N=15\) & 5.68 & 0.124 & -- & Not stable \\
-Leave-CO-out PVC, \(N=15\) & 4.27 & 0.047 & 0.270 & Exploratory sensitivity \\
+PVC composite, \(N=9\) & $-$4.24 & 0.219 & 0.206 & Null \\
+PVC composite, \(N=15\) & $-$2.14 & 0.278 & 0.090 & Null \\
+Collective obligation, \(N=9\) & 10.81 & 0.179 & 0.242 & Not significant \\
+Collective obligation, \(N=15\) & 1.28 & 0.725 & 0.010 & Not stable \\
+Leave-CO-out PVC, \(N=15\) & $-$2.22 & 0.333 & 0.072 & Null \\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
@@ -579,14 +563,14 @@ Leave-CO-out PVC, \(N=15\) & 4.27 & 0.047 & 0.270 & Exploratory sensitivity \\
 
 \subsection{Leave-One-Model-Out Diagnostics}
 
-Leave-one-model-out diagnostics further support the main H1 conclusion. The composite PVC coefficient is not a stable predictor of model-level burden effects. In the expanded sample, the bivariate PVC association remains weak and statistically indistinguishable from zero. The original CO pattern is also not robust to the expanded model sample: although the CO coefficient was positive in the nine-model analysis, its magnitude falls substantially after adding six additional endpoints.
+Leave-one-model-out diagnostics further support the main H1 conclusion. The composite PVC coefficient is not a stable predictor of model-level burden effects. In the expanded sample, the bivariate PVC association remains weak and statistically indistinguishable from zero. The CO pattern is not significant in either sample: the coefficient is positive but small in the nine-model analysis and shrinks further after adding six additional endpoints.
 
 These diagnostics reinforce the interpretation that H1 does not provide evidence for a stable aggregate orientation--effect relationship. The PVC index is useful as a theoretically motivated diagnostic construct, but the expanded analysis does not support treating it as a validated scalar predictor of simulated burden-effect magnitude.
 
 \subsection{Power and Minimum Detectable Effect Diagnostics}
 \label{app:h1-power}
 
-The original nine-model H1 analysis was underpowered for small or moderate model-level associations. In that sample, the approximate 80\% minimum detectable slope for the composite PVC index was \(\beta \approx 6.8\). The observed PVC coefficient was far smaller than this threshold. Expanding the model sample to fifteen endpoints improves coverage but does not eliminate the basic limitation that H1 relies on model-level variation.
+The original nine-model H1 analysis was underpowered for small or moderate model-level associations. In that sample, the approximate 80\% minimum detectable slope for the composite PVC index was \(\beta \approx 10.2\) (5.7 in the fifteen-endpoint sample). The observed PVC coefficient was far smaller than this threshold. Expanding the model sample to fifteen endpoints improves coverage but does not eliminate the basic limitation that H1 relies on model-level variation.
 
 For this reason, the H1 estimates should be interpreted as descriptive diagnostics rather than high-powered population estimates. The expanded results are most informative as evidence against a large linear association between the composite PVC index and simulated burden effects in this model sample. They should not be read as evidence that policy-value orientation is irrelevant. Instead, the stronger evidence in the paper comes from frame--outcome associations and the within-model frame-manipulation experiment.
 
