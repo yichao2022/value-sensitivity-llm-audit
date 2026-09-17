@@ -16,8 +16,10 @@
 \usepackage{subcaption}
 
 \singlespacing
+\setlength{\emergencystretch}{3em}
+\sloppy
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
-\newcommand{\breakabletexttt}[1]{\texttt{\detokenize{#1}}}
+\newcommand{\breakabletexttt}[1]{\path{#1}}   % breaks long identifiers/paths across lines (xurl)
 
 \title{Online Supplement: ``A Framework for Auditing Value Sensitivity in Large Language Model--Assisted Health Policy Simulation''}
 \author{Yichao Jin}
@@ -75,7 +77,7 @@ This appendix reports the model identifiers, access routes, endpoints, and decod
 
 \begin{landscape}
 \small
-\setlength{\tabcolsep}{4pt}
+\setlength{\tabcolsep}{2pt}
 \begin{longtable}{L{3.0cm}L{2.2cm}L{2.1cm}L{5.4cm}L{4.0cm}L{1.2cm}L{3.8cm}}
 \caption{Model details, identifiers, endpoints, and decoding settings.}
 \label{tab:model_details}\\
@@ -144,7 +146,8 @@ Rate the following \{n\} statements on a 1-7 scale.
 
 Respond with ONLY your score (1-7) for each statement, one per line, in order.
 
-\textit{SHA256 of the template string:} \texttt{a2d059f1a9adba372f3b55dc750c952a2b35daa4da34c19ab0f33ecb07cf0bd3}
+\textit{SHA256 of the template string:}\\
+{\footnotesize\ttfamily a2d059f1a9adba372f3b55dc750c952a2b35daa4da34c19ab0f33ecb07cf0bd3}
 \end{quote}
 The rendered user prompt inserts the twenty items in the fixed order listed above, each formatted as \texttt{<order>. <item text>}; the resulting prompt has SHA256\\
 \texttt{188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674},
@@ -262,7 +265,8 @@ Scenario:
 
 What is this person's willingness (0--100) to proceed with vaccination given this registration scenario?
 
-\textit{SHA256 of the template string:} \texttt{1b98f920c7a2a1932b741233e800f99a62e1de84a1a172cd2038f1ad3c6970e4}
+\textit{SHA256 of the template string:}\\
+{\footnotesize\ttfamily 1b98f920c7a2a1932b741233e800f99a62e1de84a1a172cd2038f1ad3c6970e4}
 \end{quote}
 
 The rendered user prompt therefore consists of the profile text and scenario text documented in this appendix, inserted into the template above. The two burden scenarios are fixed strings; their SHA256 hashes are \texttt{7307a8b8f499ebc0897c6fa0436fb8eafb3e77efeebf21ce91d8471989ec9b01} (low burden) and \texttt{c0bc058f951e4294842a4173f4cc2ac1e0475f1ff84d9438151cc9bd42967b52} (high burden). The 27 profile strings are the natural-language descriptions listed in Appendix~\ref{app:profiles}.
@@ -333,6 +337,7 @@ Rationales are coded using a rule-based algorithm that applies predefined keywor
 
 The keyword patterns for each frame are derived from the theoretical definitions and operationalized as follows:
 
+{\raggedright
 \begin{description}
 \item[Autonomy infringement:] \texttt{individual choice}, \texttt{personal choice}, \texttt{personal freedom}, \texttt{autonomy}, \texttt{privacy}, \texttt{consent}, \texttt{personal discretion}, \texttt{right to choose}, \texttt{individual liberty}, \texttt{procedural dignity}, and phrases indicating limits on personal autonomy.
 \item[Procedural legitimacy:] \texttt{justified}, \texttt{safeguard}, \texttt{reasonable verification}, \texttt{necessary procedure}, \texttt{eligibility}, \texttt{fraud prevention}, \texttt{legitimate public need}, \texttt{due process}, \texttt{accountability}, \texttt{oversight}, and phrases indicating procedural justification.
@@ -340,6 +345,7 @@ The keyword patterns for each frame are derived from the theoretical definitions
 \item[Access barriers:] \texttt{cannot afford}, \texttt{miss work}, \texttt{lose income}, \texttt{childcare}, \texttt{no regular doctor}, \texttt{lack of access}, \texttt{low income}, \texttt{unable to comply}, \texttt{disadvantage}, \texttt{single parent}, \texttt{hourly worker}, and phrases linking burdens to resource constraints.
 \item[Coercive backlash:] \texttt{resentment}, \texttt{distrust}, \texttt{resistance}, \texttt{backlash}, \texttt{reduced legitimacy}, \texttt{mandate}, \texttt{penalty}, \texttt{enforcement}, \texttt{backfire}, \texttt{coercion}, and phrases indicating reactance to mandates.
 \end{description}
+}
 
 The full regular expression patterns are available in the replication code at \url{https://github.com/yichao2022/llm-policy-simulation}, which is released under the MIT License (Copyright 2026 Yichao Jin); reuse and modification are permitted with attribution, and model outputs remain subject to the providers' terms of service.
 
@@ -362,7 +368,7 @@ The manual inspection found that pattern assignments reflected the codebook defi
 \centering
 \caption{Narrative coding codebook}
 \label{tab:narrative-codebook}
-\begin{tabular}{p{3.2cm}p{5.3cm}p{5.3cm}}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{3.2cm}L{5.9cm}L{5.9cm}@{}}
 \toprule
 Frame & Code as 1 when rationale... & Do not code as 1 when rationale... \\
 \midrule
@@ -386,7 +392,7 @@ Coercive backlash &
 Mentions resentment, distrust, resistance, backlash, reactance, reduced legitimacy, or negative reaction to mandates, penalties, enforcement, or perceived coercion. &
 Describes practical inconvenience or access difficulty without resistance, distrust, resentment, or coercion. \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 \end{table}
 
 The access-barrier definition was intentionally restricted to avoid coding simple restatements of the high-burden prompt as a substantive frame. For example, ``the process requires forms and a long wait'' is not coded as access barriers unless the rationale links those requirements to reduced access or profile-specific constraints such as work flexibility, childcare, income, transportation, or lack of regular care.
@@ -424,7 +430,10 @@ This appendix reports the prompt templates and model-specific robustness checks 
 
 \subsection{Frame-Manipulation Prompt Templates}
 
-The frame-manipulation experiment used four system-prompt frames. Each frame is built from the same two fixed sentences: an opening sentence and a closing instruction block. The frame clause is inserted between them, immediately after the opening sentence. The neutral frame contains no frame clause, so the neutral system prompt is byte-identical to the baseline administrative-burden system prompt reported in Appendix~\ref{app:burden-prompts} (SHA256 \texttt{380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe}); the frame contrast is therefore measured against the true baseline condition. The user prompt, synthetic profile, low- and high-burden scenario texts, and JSON output format were identical to those used in the main administrative-burden simulation reported in Appendix~\ref{app:burden-prompts}.
+The frame-manipulation experiment used four system-prompt frames. Each frame is built from the same two fixed sentences: an opening sentence and a closing instruction block, with the frame clause inserted between them. The neutral frame contains no frame clause, so the neutral system prompt is byte-identical to the baseline prompt reported in Appendix~\ref{app:burden-prompts}:
+\begin{quote}
+{\footnotesize\ttfamily SHA256 380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe}
+\end{quote} the frame contrast is therefore measured against the true baseline condition. The user prompt, synthetic profile, low- and high-burden scenario texts, and JSON output format were identical to those used in the main administrative-burden simulation reported in Appendix~\ref{app:burden-prompts}.
 
 \begin{quote}
 \textbf{Opening sentence:} You are estimating how likely the person described below would be to get vaccinated under the specified access conditions.
@@ -435,16 +444,17 @@ The frame-manipulation experiment used four system-prompt frames. Each frame is 
 The four frame conditions differ only in the inserted clause:
 
 \begin{itemize}
-    \item \textbf{Neutral frame:} no clause inserted. Full system prompt SHA256: \texttt{380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe}
+    \item \textbf{Neutral frame:} no clause inserted.\\
+    {\footnotesize\ttfamily SHA256 380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe}
 
     \item \textbf{Autonomy frame:} ``When forming the estimate, give special weight to individual choice, privacy, personal autonomy, and procedural dignity.''\\
-    Full system prompt SHA256: \texttt{8b7d948eeee661603aa9898815ee3a01a058f43d4cc878cbc077e6cb5a5df243}
+    {\footnotesize\ttfamily SHA256 8b7d948eeee661603aa9898815ee3a01a058f43d4cc878cbc077e6cb5a5df243}
 
     \item \textbf{Collective-obligation frame:} ``When forming the estimate, give special weight to civic responsibility, public health coordination, and willingness to tolerate reasonable inconvenience for collective protection.''\\
-    Full system prompt SHA256: \texttt{fe7512cde053405edf59cbaaf6d1402f68d69e7c478984eee3d0fbc3a49a5ecb}
+    {\footnotesize\ttfamily SHA256 fe7512cde053405edf59cbaaf6d1402f68d69e7c478984eee3d0fbc3a49a5ecb}
 
     \item \textbf{Equity/access frame:} ``When forming the estimate, give special weight to unequal procedural costs, access barriers, work constraints, childcare constraints, and burdens faced by disadvantaged groups.''\\
-    Full system prompt SHA256: \texttt{cba0156ababefd86611eb267ebf9ccddb1d60fe5a8cecf4e289871006042844a}
+    {\footnotesize\ttfamily SHA256 cba0156ababefd86611eb267ebf9ccddb1d60fe5a8cecf4e289871006042844a}
 \end{itemize}
 
 For each model \(m\), frame condition \(c\), profile \(i\), and repetition \(r\), the model evaluated both the low-burden and high-burden vaccination-access scenarios in fresh conversation contexts. The frame-specific burden effect was computed as:
@@ -505,6 +515,7 @@ Each model-specific regression rests on 27 profile clusters, so we checked the m
 \caption{Small-sample inference for model-specific H3 contrasts}
 \label{tab:h3_small_sample}
 \small
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{llrrrr}
 \toprule
 Model & Contrast & Coefficient & $p$ (asymptotic) & $p$ (corrected) & $p$ (wild bootstrap) \\
@@ -523,6 +534,7 @@ Mistral Large & Collective obligation & $-20.11$ & $<0.001$ & $<0.001$ & $<0.001
 Mistral Large & Equity/access & $+2.59$ & 0.023 & 0.030 & 0.027 \\
 \bottomrule
 \end{tabular}
+}
 \begin{flushleft}
 \footnotesize Notes: Each model-specific regression includes profile fixed effects and frame indicators, with standard errors clustered by profile (27 clusters per model). Asymptotic $p$-values use the cluster-robust covariance without small-sample correction; corrected $p$-values apply $G/(G-1)\cdot(N-1)/(N-K)$; wild bootstrap $p$-values come from 1{,}999 Rademacher-weighted bootstrap replications with the null imposed on the tested contrast. Bootstrap $p$-values are reported to three decimals and are bounded below by $1/2{,}000$.
 \end{flushleft}
