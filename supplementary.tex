@@ -146,7 +146,9 @@ Respond with ONLY your score (1-7) for each statement, one per line, in order.
 
 \textit{SHA256 of the template string:} \texttt{a2d059f1a9adba372f3b55dc750c952a2b35daa4da34c19ab0f33ecb07cf0bd3}
 \end{quote}
-The rendered user prompt inserts the twenty items in the fixed order listed above, each formatted as \texttt{<order>. <item text>}; the resulting prompt has SHA256 \texttt{188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674}, which is identical for every endpoint. The first two lines of the rendered prompt are:
+The rendered user prompt inserts the twenty items in the fixed order listed above, each formatted as \texttt{<order>. <item text>}; the resulting prompt has SHA256\\
+\texttt{188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674},
+which is identical for every endpoint. The first two lines of the rendered prompt are:
 
 \begin{quote}
 Rate the following 20 statements on a 1-7 scale.
@@ -435,11 +437,14 @@ The four frame conditions differ only in the inserted clause:
 \begin{itemize}
     \item \textbf{Neutral frame:} no clause inserted. Full system prompt SHA256: \texttt{380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe}
 
-    \item \textbf{Autonomy frame:} ``When forming the estimate, give special weight to individual choice, privacy, personal autonomy, and procedural dignity.'' Full system prompt SHA256: \texttt{8b7d948eeee661603aa9898815ee3a01a058f43d4cc878cbc077e6cb5a5df243}
+    \item \textbf{Autonomy frame:} ``When forming the estimate, give special weight to individual choice, privacy, personal autonomy, and procedural dignity.''\\
+    Full system prompt SHA256: \texttt{8b7d948eeee661603aa9898815ee3a01a058f43d4cc878cbc077e6cb5a5df243}
 
-    \item \textbf{Collective-obligation frame:} ``When forming the estimate, give special weight to civic responsibility, public health coordination, and willingness to tolerate reasonable inconvenience for collective protection.'' Full system prompt SHA256: \texttt{fe7512cde053405edf59cbaaf6d1402f68d69e7c478984eee3d0fbc3a49a5ecb}
+    \item \textbf{Collective-obligation frame:} ``When forming the estimate, give special weight to civic responsibility, public health coordination, and willingness to tolerate reasonable inconvenience for collective protection.''\\
+    Full system prompt SHA256: \texttt{fe7512cde053405edf59cbaaf6d1402f68d69e7c478984eee3d0fbc3a49a5ecb}
 
-    \item \textbf{Equity/access frame:} ``When forming the estimate, give special weight to unequal procedural costs, access barriers, work constraints, childcare constraints, and burdens faced by disadvantaged groups.'' Full system prompt SHA256: \texttt{cba0156ababefd86611eb267ebf9ccddb1d60fe5a8cecf4e289871006042844a}
+    \item \textbf{Equity/access frame:} ``When forming the estimate, give special weight to unequal procedural costs, access barriers, work constraints, childcare constraints, and burdens faced by disadvantaged groups.''\\
+    Full system prompt SHA256: \texttt{cba0156ababefd86611eb267ebf9ccddb1d60fe5a8cecf4e289871006042844a}
 \end{itemize}
 
 For each model \(m\), frame condition \(c\), profile \(i\), and repetition \(r\), the model evaluated both the low-burden and high-burden vaccination-access scenarios in fresh conversation contexts. The frame-specific burden effect was computed as:
