@@ -3,7 +3,7 @@
 
 Statistics are the canonical values (2026-09 rerun):
   H1 pooled bivariate  : beta1 = -2.14, 95% CI [-6.23, 1.95], R^2 = 0.090  (N = 15 endpoints)
-  H2 frame-adjusted    : access +2.36 (p=.020), collective +0.69 (n.s.), coercive +7.26 (p<.001), N = 2,019
+  H2 fixed effects     : access +1.08 (p=.012), collective +0.11 (n.s.), coercive +1.59 (n.s.), N = 2,019
   H3 pooled (4 models) : autonomy +4.96 [3.57, 6.35], collective -10.88 [-12.54, -9.21],
                          equity +4.84 [3.45, 6.24], adj. R^2 = 0.77 (N = 2,159; 108 clusters)
 Regenerate after any rerun; do not hand-edit the PDF.
@@ -24,9 +24,9 @@ H1_BODY = [r"$\mathrm{PVOC}_m \;\rightarrow\; \Delta_m$",
 H2_BODY = [r"$\mathrm{Frame}_{mi} \;\rightarrow\; \Delta_{mi}$",
            "Interpretive frames correlate with", "predicted burden effects", "",
            "N = 2,019 rationale\u2013effect observations",
-           r"Access barriers $\uparrow$ ($b$ = 2.36)",
-           "Co. responsibility n.s. ($b$ = 0.69)",
-           r"Coercive backlash $\uparrow$ ($b$ = 7.26)"]
+           r"Access barriers $\uparrow$ ($b$ = 1.08)",
+           "Co. responsibility n.s. ($b$ = 0.11)",
+           r"Coercive backlash n.s. ($b$ = 1.59)"]
 H3_BODY = [r"$\Delta_{mcir} \;\approx\; \mathrm{Frame}_c$",
            "Assigned governance frame shifts",
            "predicted effect within the same model", "",
@@ -39,7 +39,7 @@ COLS = [
     ("#1f4e79", "#dce9f5", "Model-level", "H1: Composite orientation", H1_BODY,
      "Null: no detectable association"),
     ("#8c1d1d", "#f7dede", "Narrative-level", "H2: Narrative frame association", H2_BODY,
-     "Partial support: 2 of 3 frames"),
+     "Limited: access barriers only"),
     ("#1d6b3f", "#d9eedd", "Within-model", "H3: Frame manipulation", H3_BODY,
      "Supported (pooled; model heterogeneity)"),
 ]
@@ -75,7 +75,7 @@ ax.text(17.5, 2.52, "Does normative-frame sensitivity affect LLM-assisted policy
         ha="center", va="center", fontsize=12, fontweight="bold", color="#222222")
 ax.text(17.5, 1.45, "Three independent diagnostic tests \u2014 each informative regardless of the others.",
         ha="center", va="center", fontsize=10, color="#444444")
-ax.text(17.5, 0.72, "PVOC null (H1)  \u2192  frames partially matter (H2)  \u2192  causal manipulation confirms (H3)",
+ax.text(17.5, 0.72, "PVOC null (H1)  \u2192  one frame matters (H2)  \u2192  causal manipulation confirms (H3)",
         ha="center", va="center", fontsize=10, color="#444444")
 
 fig.subplots_adjust(left=0.005, right=0.995, bottom=0.01, top=0.99)
