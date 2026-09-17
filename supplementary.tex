@@ -346,7 +346,7 @@ Positive values indicate that the model predicts lower willingness under the hig
 
 \subsection*{Burden-level comprehension diagnostic}
 
-To verify that models correctly recognized the burden manipulation, a parallel diagnostic prompt was administered using the same profile and scenario text:
+Distinguishing comprehension from directional consistency requires a diagnostic that asks models directly about the manipulation. We therefore designed an auxiliary burden-classification prompt, to be administered with the same profile and scenario text:
 
 \begin{quote}
 Individual profile:
@@ -364,7 +364,7 @@ Does this scenario describe a low-burden or high-burden vaccination access condi
 Return only one word: \texttt{low} or \texttt{high}.
 \end{quote}
 
-The diagnostic response was coded as correct if the returned label matched the assigned burden condition.
+A response would be scored as correct if the returned label matched the assigned burden condition, and accuracy would be reported per model and pooled, with the number of malformed returns and an exact binomial confidence interval. \textbf{This diagnostic was not fielded in the runs reported here}: the canonical execution plans contain the baseline simulation, the frame manipulation, and the orientation battery only, so no classification accuracy is available and none is used in any analysis in this paper. A level-flip rate is what the reported runs can support, and it documents directional consistency rather than comprehension. Fielding the classification prompt would turn the manipulation-check question into a directly measurable one and is the most obvious extension of this design.
 
 \section{Narrative Coding Codebook}
 \label{app:narrative-codebook}
