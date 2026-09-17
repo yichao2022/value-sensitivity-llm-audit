@@ -28,7 +28,7 @@ H2_BODY = [r"$\mathrm{Frame}_{mi} \;\rightarrow\; \Delta_{mi}$",
            "Co. responsibility n.s. ($b$ = 0.11)",
            r"Coercive backlash n.s. ($b$ = 1.59)"]
 H3_BODY = [r"$\Delta_{mcir} \;\approx\; \mathrm{Frame}_c$",
-           "Assigned governance frame shifts",
+           "Assigned prompt-frame clause shifts",
            "predicted effect within the same model", "",
            r"$N$ = 4 models $\times$ 27 profiles $\times$ 4 frames",
            r"Autonomy $\uparrow$ (+4.96), equity $\uparrow$ (+4.84)",
@@ -75,7 +75,7 @@ ax.text(17.5, 2.52, "Does normative-frame sensitivity affect LLM-assisted policy
         ha="center", va="center", fontsize=12, fontweight="bold", color="#222222")
 ax.text(17.5, 1.45, "Three independent diagnostic tests \u2014 each informative regardless of the others.",
         ha="center", va="center", fontsize=10, color="#444444")
-ax.text(17.5, 0.72, "PVOC null (H1)  \u2192  one frame matters (H2)  \u2192  causal manipulation confirms (H3)",
+ax.text(17.5, 0.72, "PVOC null (H1)  \u2192  one frame matters (H2)  \u2192  assigned prompt clause causally shifts effects (H3)",
         ha="center", va="center", fontsize=10, color="#444444")
 
 fig.subplots_adjust(left=0.005, right=0.995, bottom=0.01, top=0.99)
