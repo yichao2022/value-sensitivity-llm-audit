@@ -78,6 +78,7 @@ Claude Sonnet 4.6 & 270 & 100.0 & 100.0 & 100.0 & 47.99 & 0.44 & 8.35 & 0.0 & 10
 
 \clearpage   % keeps Table S1 inside Appendix A (float would otherwise spill past the Appendix B heading)
 
+\clearpage   % flush pending floats so this appendix's tables stay inside it
 \section{Model Versioning, API Endpoints, and Decoding Parameters}
 \label{app:models}
 
@@ -133,6 +134,7 @@ All models were run with temperature set to zero where supported. Each API call 
 Although temperature was set to zero, exact reproducibility is not assumed. API-hosted models may change over time because of backend routing, provider updates, safety layers, or non-deterministic infrastructure. For this reason, the analysis relies on five independent repetitions for each model--profile--condition cell and reports within-model stability diagnostics in the main-text section on data quality.
 
 For the administrative-burden simulation, the maximum output length was set to \texttt{max\_tokens=500}. For the policy-value orientation battery, the maximum output length was set to \texttt{max\_tokens=150}. Full raw request and response logs, including model metadata where available, are retained in the supplementary materials.
+\clearpage   % flush pending floats so this appendix's tables stay inside it
 \section{Policy-Value Orientation Battery: Full Item Wording} \label{app:orientation-items} This appendix reports the complete 20-item battery used to measure the five policy-value orientation dimensions described in Section~3.2. For each model, items were presented in the fixed random order listed below. The response scale is 1 (strongly disagree) to 7 (strongly agree). Items marked \textit{(R)} are reverse-coded before dimension averaging. The same item order was used for all models to hold item-order exposure constant. The scoring rule that turns the twenty ratings into the composite PVOC is stated in the final subsection of this appendix. \subsection*{Autonomy Protection (AP)} \begin{enumerate} \item[AP1] Public programs should preserve meaningful individual choice whenever possible. (Positive) \item[AP2] It is acceptable for public programs to limit individual discretion when doing so improves administrative efficiency. (Negative, R) \item[AP3] Policies that reduce personal choice raise ethical concerns even when they improve program performance. (Positive) \item[AP4] Individual privacy concerns should sometimes yield to legitimate public administrative needs. (Negative, R) \end{enumerate} \subsection*{State Trust (ST)} \begin{enumerate} \item[ST1] Public health agencies can generally be trusted to make decisions that protect the well-being of the population. (Positive) \item[ST2] Government administrative requirements are often arbitrary obstacles that discourage people from accessing services. (Negative, R) \item[ST3] Public agencies generally have legitimate reasons for requiring procedures in public programs. (Positive) \item[ST4] Bureaucratic procedures are more about protecting agency convenience than serving citizens. (Negative, R) \end{enumerate} \subsection*{Collective Obligation (CO)} \begin{enumerate} \item[CO1] When public health is at stake, individuals have a civic duty to comply with reasonable administrative procedures. (Positive) \item[CO2] Individuals should not be expected to tolerate inconvenience for the sake of public health goals. (Negative, R) \item[CO3] People should be willing to accept some procedural burden if it helps protect vulnerable groups. (Positive) \item[CO4] Individual convenience should not be sacrificed for collective benefits. (Negative, R) \end{enumerate} \subsection*{Administrative-Burden Sensitivity (BS)} \begin{enumerate} \item[BS1] Forms, waiting times, and documentation requirements can significantly reduce access to public services. (Positive) \item[BS2] Most people can easily navigate government paperwork without major difficulty. (Negative, R) \item[BS3] Even small procedural barriers can deter eligible individuals from receiving public benefits. (Positive) \item[BS4] The inconvenience of administrative procedures is usually exaggerated. (Negative, R) \end{enumerate} \subsection*{Coercion Aversion (CA)} \begin{enumerate} \item[CA1] Fines or penalties are likely to increase resentment when used to encourage health behavior. (Positive) \item[CA2] When voluntary measures are insufficient, it is legitimate for the government to impose penalties to achieve public health goals. (Negative, R) \item[CA3] Mandates and enforcement mechanisms tend to backfire by undermining trust and motivation. (Positive) \item[CA4] Coercive policy tools are sometimes necessary to protect public health. (Negative, R) \end{enumerate} \subsection*{Fixed Random Order (as presented to models)} \begin{enumerate} \item AP1 \item BS2 (R) \item ST3 \item CA2 (R) \item CO1 \item AP4 (R) \item BS1 \item ST4 (R) \item CA3 \item CO4 (R) \item AP2 (R) \item ST1 \item BS3 \item CA4 (R) \item CO2 (R) \item AP3 \item ST2 (R) \item BS4 (R) \item CO3 \item CA1 \end{enumerate}
 
 \subsection*{Canonical Administration Protocol and Provenance}
@@ -212,6 +214,7 @@ Autonomy protection, administrative-burden sensitivity, and coercion aversion en
 
 Because the transformation is sample-specific, composite values---and therefore fitted slopes---depend on which endpoints are standardised together. The main text reports the fifteen-endpoint composite. Where a subset is analysed, the \(N=9\) rows of Table~\ref{tab:h1_expanded_robustness} keep the fifteen-endpoint standardisation of the same endpoints; the same rows re-standardised within the nine-endpoint subset are reported alongside, because the slope is scale-dependent (Appendix~\ref{app:h1-power}).
 
+\clearpage   % flush pending floats so this appendix's tables stay inside it
 \section{Standardized Synthetic Profiles: Controlled Test Cases}
 \label{app:profiles}
 
@@ -265,6 +268,7 @@ P27 & A 35-year-old woman living in a suburban area. Her household income is abo
 
 All 27 profiles were used in the main analyses; no single profile was designated as a benchmark. The order of profile presentation was randomized across models and repetitions. Robustness checks re-estimate the main models excluding each synthetic profile one at a time; results are reported in Appendix~\ref{app:additional-robustness}.
 
+\clearpage   % flush pending floats so this appendix's tables stay inside it
 \section{Capability and Task-Diagnostic Details}
 \label{app:capability}
 
@@ -279,6 +283,7 @@ The task-diagnostic results show that all but one model achieved full structured
 All task diagnostics were computed from the main administrative-burden simulation. Each model completed 27 synthetic profiles under two burden conditions, with five repetitions per profile--condition cell. For Gemini 2.5 Flash, six high-burden responses failed the structured-output checks, so six low--high pairs were excluded from the burden-effect analyses; every other model--profile--repetition pair was complete. All API calls used fresh conversation contexts. Temperature was set to zero where supported. Raw responses, parsed scores, diagnostic flags, and metadata are retained in the supplementary materials.
 \clearpage
 
+\clearpage   % flush pending floats so this appendix's tables stay inside it
 \section{Administrative-Burden Simulation Prompt Templates}
 \label{app:burden-prompts}
 
@@ -386,6 +391,7 @@ The plan covers every combination of the fifteen endpoints, the 27 standardized 
 \textbf{Results.} All 810 responses returned a usable label and none was malformed. Accuracy was 100\% for every model (54 of 54 scenarios each; exact Clopper--Pearson 95\% CI [93.4, 100.0]) and 100\% pooled (810 of 810; exact 95\% CI [99.5, 100.0]). The models therefore recognised the burden manipulation itself, and not merely its directional signature in the willingness responses. Two qualifications apply. First, the diagnostic establishes recognition of the assigned condition, not the magnitude or realism of the simulated burden effect. Second, it was fielded in a separate administration from the reported simulation runs, so it documents comprehension of the same scenario texts rather than of the exact queries that produced the main results.
 
 
+\clearpage   % flush pending floats so this appendix's tables stay inside it
 \section{Narrative Coding Codebook}
 \label{app:narrative-codebook}
 
@@ -472,6 +478,7 @@ The access-barrier definition was intentionally restricted to avoid coding simpl
 
 Frames with little or no empirical variation are reported descriptively but excluded from the main frame-adjusted model. In the present analysis, autonomy infringement and procedural legitimacy each appeared in one of the 2,019 high-burden rationales (0.05\% each), so neither frame has usable variation. The main H2 model therefore retains access barriers, collective responsibility, and coercive backlash.
 
+\clearpage   % flush pending floats so this appendix's tables stay inside it
 \section{H2 Specification Comparison and Identification Diagnostics}
 \label{app:h2-identification}
 \label{app:h2-robustness}
@@ -545,6 +552,7 @@ Coercive backlash & \(+0.69\) to \(+1.58\) & 0/15 & \(+0.37\) to \(+2.33\) & 0/2
 \end{flushleft}
 \end{table}
 
+\clearpage   % flush pending floats so this appendix's tables stay inside it
 \section{Frame-Manipulation Prompts and H3 Robustness}
 \label{app:h3-prompts-robustness}
 
@@ -774,6 +782,7 @@ Equity/access & \(+4.84\) [\(+3.47\), \(+6.22\)] & \(+4.86\) [\(+3.45\), \(+6.26
 \end{flushleft}
 \end{table}
 
+\clearpage   % flush pending floats so this appendix's tables stay inside it
 \section{Additional Robustness Checks}
 \label{app:additional-robustness}
 
