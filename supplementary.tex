@@ -416,7 +416,7 @@ The keyword patterns for each frame are derived from the theoretical definitions
 \begin{description}
 \item[Autonomy infringement:] \texttt{individual choice}, \texttt{personal choice}, \texttt{personal freedom}, \texttt{autonomy}, \texttt{privacy}, \texttt{consent}, \texttt{personal discretion}, \texttt{right to choose}, \texttt{individual liberty}, \texttt{procedural dignity}, and phrases indicating limits on personal autonomy.
 \item[Procedural legitimacy:] \texttt{justified}, \texttt{safeguard}, \texttt{reasonable verification}, \texttt{necessary procedure}, \texttt{eligibility}, \texttt{fraud prevention}, \texttt{legitimate public need}, \texttt{due process}, \texttt{accountability}, \texttt{oversight}, and phrases indicating procedural justification.
-\item[Collective responsibility:] \texttt{civic duty}, \texttt{public health}, \texttt{protect others}, \texttt{communal benefit}, \texttt{vulnerable group}, \texttt{collective welfare}, \texttt{common good}, \texttt{herd immunity}, and phrases emphasizing community benefit.
+\item[Collective responsibility:] \texttt{civic duty}, \texttt{protect others}, \texttt{communal benefit}, \texttt{vulnerable group}, \texttt{collective welfare}, \texttt{common good}, \texttt{herd immunity}, and phrases emphasizing community benefit. The earlier \texttt{public health} pattern was removed because it matched ``trust in public health (authorities)'' and ``public health center'' (the vaccination site), which express trust in authorities or location rather than collective responsibility.
 \item[Access barriers:] \texttt{cannot afford}, \texttt{miss work}, \texttt{lose income}, \texttt{childcare}, \texttt{no regular doctor}, \texttt{lack of access}, \texttt{low income}, \texttt{unable to comply}, \texttt{disadvantage}, \texttt{single parent}, \texttt{hourly worker}, and phrases linking burdens to resource constraints.
 \item[Coercive backlash:] \texttt{resentment}, \texttt{distrust}, \texttt{resistance}, \texttt{backlash}, \texttt{reduced legitimacy}, \texttt{mandate}, \texttt{penalty}, \texttt{enforcement}, \texttt{backfire}, \texttt{coercion}, and phrases indicating reactance to mandates.
 \end{description}
@@ -476,7 +476,7 @@ Describes practical inconvenience or access difficulty without resistance, distr
 
 The access-barrier definition was intentionally restricted to avoid coding simple restatements of the high-burden prompt as a substantive frame. For example, ``the process requires forms and a long wait'' is not coded as access barriers unless the rationale links those requirements to reduced access or profile-specific constraints such as work flexibility, childcare, income, transportation, or lack of regular care.
 
-Frames with little or no empirical variation are reported descriptively but excluded from the main frame-adjusted model. In the present analysis, autonomy infringement and procedural legitimacy each appeared in one of the 2,019 high-burden rationales (0.05\% each), so neither frame has usable variation. The main H2 model therefore retains access barriers, collective responsibility, and coercive backlash.
+Frames with little or no empirical variation are reported descriptively but excluded from the main frame-adjusted model. In the present analysis, autonomy infringement and procedural legitimacy each appeared in one of the 2,019 high-burden rationales (0.05\% each), and collective responsibility appeared in a single rationale (0.05\%) after the coding rule was corrected (the original bare ``public health'' pattern, which matched ``trust in public health'' and ``public health center,'' is removed). None of these three frames has usable variation. The main H2 model therefore retains access barriers and coercive backlash.
 
 \clearpage   % flush pending floats so this appendix's tables stay inside it
 \section{H2 Specification Comparison and Identification Diagnostics}
@@ -495,13 +495,13 @@ The main-text H2 analysis uses one fixed effect per model--profile pair, so its 
 Frame & Prevalence & Pair-FE \(b\) & SE & 95\% CI & BH-adj.\ \(p\) & Two-way FE \(b\) \\
 \midrule
 Access barriers & 43.2\% & 0.13 & 0.47 & [\(-0.79\), 1.04] & 0.86 & 1.08 \\
-Collective responsibility & 75.2\% & 0.15 & 0.83 & [\(-1.48\), 1.77] & 0.86 & 0.11 \\
+Collective responsibility & 0.05\% & --- & --- & --- & --- & --- \\
 Coercive backlash & 7.7\% & 1.21 & 1.82 & [\(-2.35\), 4.77] & 0.86 & 1.59 \\
 \bottomrule
 \end{tabular}
 }
 \begin{flushleft}
-\footnotesize Notes: Pair-FE is the primary specification of the main text: one fixed effect per model--profile pair (405 pairs) plus the three retained rationale-frame indicators, with standard errors clustered at the model--profile level. Two-way FE replaces the pair indicators with separate model and profile fixed effects, absorbing additive heterogeneity only; its unadjusted \(p\)-values are 0.012 (access barriers), 0.876 (collective responsibility) and 0.174 (coercive backlash), and its Benjamini--Hochberg adjusted values are 0.036, 0.876 and 0.262. All \(p\)-values in the pair-FE column are Benjamini--Hochberg adjusted across the three retained frames (\(q=0.10\)). \(N=2{,}019\) in both specifications. Positive coefficients indicate larger predicted burden effects.
+\footnotesize Notes: Pair-FE is the primary specification of the main text: one fixed effect per model--profile pair (405 pairs) plus the retained rationale-frame indicators, with standard errors clustered at the model--profile level. Collective responsibility is dropped from the pair-FE column because the corrected coding leaves only one positive rationale (0.05\%), giving the indicator no within-pair variation. Two-way FE replaces the pair indicators with separate model and profile fixed effects, absorbing additive heterogeneity only; its unadjusted \(p\)-values are 0.012 (access barriers) and 0.174 (coercive backlash), and its Benjamini--Hochberg adjusted values are 0.036 and 0.262. All \(p\)-values in the pair-FE column are Benjamini--Hochberg adjusted across the retained frames (\(q=0.10\)). \(N=2{,}019\) in both specifications. Positive coefficients indicate larger predicted burden effects.
 \end{flushleft}
 \end{table}
 
