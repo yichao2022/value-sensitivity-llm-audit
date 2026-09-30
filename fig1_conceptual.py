@@ -2,10 +2,12 @@
 """Figure 1: three-level audit of normative-frame sensitivity (journal typeset).
 
 Statistics are the canonical values (2026-09 rerun), guarded by the companion checks:
-  H1 pooled bivariate   : beta1 = -2.14, 95% CI [-6.23, 1.95], R^2 = 0.09   (N = 15 endpoints)
-                          ->  outputs/canonical/h1_sample_comparison.csv
-  H2 pair FE (primary)  : access +0.13, collective +0.15, coercive +1.21, all n.s. (BH p = 0.86),
-                          N = 2,019  ->  outputs/canonical/h2_pairfe_main.csv
+  H1 pooled bivariate   : MFQ-30 composite beta1 = 2.96, 95% CI [-2.17, 8.09], R^2 = 0.11 (N = 15 endpoints)
+                          ->  outputs/table4_h1_regression_mfq.csv (canonical MFQ fielding)
+                          PVOC (secondary): beta1 = -2.14, 95% CI [-6.23, 1.95], R^2 = 0.09
+  H2 pair FE (primary)  : access +0.13, coercive +1.21, all n.s. (BH p = 0.86), N = 2,019;
+                          collective responsibility NOT ESTIMABLE after corrected coding (1/2,019, no within-pair variation)
+                          ->  outputs/canonical/h2_pairfe_afterfix.csv
   H3 pooled (4 models)  : autonomy +4.96, equity/access +4.84, collective -10.88, adj. R^2 = 0.77
                           ->  outputs/h3_clustered_results.csv (main model + profile FE specification)
 Regenerate after any rerun; never hand-edit the PDF.
@@ -29,25 +31,26 @@ plt.rcParams.update({"font.family": "DejaVu Sans", "mathtext.fontset": "dejavusa
 PANELS = [
     dict(level="Model-level", edge="#2f5d8a", tint="#eef4fa",
          title=["H1: Composite", "orientation"],
-         equation=r"$\mathrm{PVOC}_m \;\rightarrow\; \overline{\Delta}_m$",
-         question="Does aggregate policy-value orientation predict cross-model burden effects?",
+         equation=r"$\mathrm{MFQ}_m \;\rightarrow\; \overline{\Delta}_m$",
+         question="Does aggregate moral-foundations orientation predict cross-model burden effects?",
          design=["N = 15 model endpoints"],
-         estimates=[r"$\beta_1$ = $-2.14$, 95% CI [$-6.23$, 1.95]", r"$R^2$ = 0.09"],
+         estimates=[r"$\beta_1$ = 2.96, 95% CI [$-2.17$, 8.09]", r"$R^2$ = 0.11",
+                    "PVOC (secondary): $-$2.14, $R^2$ = 0.09"],
          result="No aggregate signal"),
     dict(level="Narrative-level", edge="#96504e", tint="#faf0ef",
          title=["H2: Narrative frame", "association"],
          equation=r"$\mathrm{Frame}_{mir} \;\rightarrow\; \Delta_{mir}$",
          question="Do naturally expressed rationale frames track simulated burden effects?",
-         design=["Model $\\times$ profile pair", "fixed effects", "N = 2,019"],
+         design=["Model $\times$ profile pair", "fixed effects", "N = 2,019"],
          estimates=["Access barriers: $b$ = 0.13, n.s.",
-                    "Collective responsibility: $b$ = 0.15, n.s.",
-                    "Coercive backlash: $b$ = 1.21, n.s."],
+                    "Coercive backlash: $b$ = 1.21, n.s.",
+                    "Collective resp.: not estimable (1/2,019)"],
          result="No robust within-pair signal"),
     dict(level="Within-model", edge="#4a7a5c", tint="#eef6f0",
          title=["H3: Frame", "manipulation"],
          equation=r"$\mathrm{Assigned\ Frame}_c \;\rightarrow\; \Delta_{mcir}$",
          question="Does an assigned prompt-frame clause shift the simulated burden effect within the same model?",
-         design=["4 models $\\times$ 27 profiles", "$\\times$ 4 frames"],
+         design=["4 models $\times$ 27 profiles", "$\times$ 4 frames"],
          estimates=["Autonomy: +4.96", "Equity/access: +4.84", "Collective obligation: $-10.88$"],
          result="Frame-sensitive",
          footnote="Model-specific heterogeneity"),
