@@ -4,7 +4,6 @@
 Statistics are the canonical values (2026-09 rerun), guarded by the companion checks:
   H1 pooled bivariate   : MFQ-30 composite beta1 = 2.96, 95% CI [-2.17, 8.09], R^2 = 0.11 (N = 15 endpoints)
                           ->  outputs/table4_h1_regression_mfq.csv (canonical MFQ fielding)
-                          PVOC (secondary): beta1 = -2.14, 95% CI [-6.23, 1.95], R^2 = 0.09
   H2 pair FE (primary)  : access +0.13, coercive +1.21, all n.s. (BH p = 0.86), N = 2,019;
                           collective responsibility NOT ESTIMABLE after corrected coding (1/2,019, no within-pair variation)
                           ->  outputs/canonical/h2_pairfe_afterfix.csv
@@ -34,8 +33,7 @@ PANELS = [
          equation=r"$\mathrm{MFQ}_m \;\rightarrow\; \overline{\Delta}_m$",
          question="Does aggregate moral-foundations orientation predict cross-model burden effects?",
          design=["N = 15 model endpoints"],
-         estimates=[r"$\beta_1$ = 2.96, 95% CI [$-2.17$, 8.09]", r"$R^2$ = 0.11",
-                    "PVOC (secondary): $-$2.14, $R^2$ = 0.09"],
+         estimates=[r"$\beta_1$ = 2.96, 95% CI [$-2.17$, 8.09]", r"$R^2$ = 0.11"],
          result="No aggregate signal"),
     dict(level="Narrative-level", edge="#96504e", tint="#faf0ef",
          title=["H2: Narrative frame", "association"],
