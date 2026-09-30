@@ -133,86 +133,142 @@ All models were run with temperature set to zero where supported. Each API call 
 
 Although temperature was set to zero, exact reproducibility is not assumed. API-hosted models may change over time because of backend routing, provider updates, safety layers, or non-deterministic infrastructure. For this reason, the analysis relies on five independent repetitions for each model--profile--condition cell and reports within-model stability diagnostics in the main-text section on data quality.
 
-For the administrative-burden simulation, the maximum output length was set to \texttt{max\_tokens=500}. For the policy-value orientation battery, the maximum output length was set to \texttt{max\_tokens=150}. Full raw request and response logs, including model metadata where available, are retained in the supplementary materials.
+For the administrative-burden simulation, the maximum output length was set to \texttt{max\_tokens=500}. For the moral-foundations battery (MFQ-30), the maximum output length was set to \texttt{max\_tokens=2048}. Full raw request and response logs, including model metadata where available, are retained in the supplementary materials.
 \clearpage   % flush pending floats so this appendix's tables stay inside it
-\section{Policy-Value Orientation Battery: Full Item Wording} \label{app:orientation-items} This appendix reports the complete 20-item battery used to measure the five policy-value orientation dimensions described in Section~3.2. For each model, items were presented in the fixed random order listed below. The response scale is 1 (strongly disagree) to 7 (strongly agree). Items marked \textit{(R)} are reverse-coded before dimension averaging. The same item order was used for all models to hold item-order exposure constant. The scoring rule that turns the twenty ratings into the composite PVOC is stated in the final subsection of this appendix. \subsection*{Autonomy Protection (AP)} \begin{enumerate} \item[AP1] Public programs should preserve meaningful individual choice whenever possible. (Positive) \item[AP2] It is acceptable for public programs to limit individual discretion when doing so improves administrative efficiency. (Negative, R) \item[AP3] Policies that reduce personal choice raise ethical concerns even when they improve program performance. (Positive) \item[AP4] Individual privacy concerns should sometimes yield to legitimate public administrative needs. (Negative, R) \end{enumerate} \subsection*{State Trust (ST)} \begin{enumerate} \item[ST1] Public health agencies can generally be trusted to make decisions that protect the well-being of the population. (Positive) \item[ST2] Government administrative requirements are often arbitrary obstacles that discourage people from accessing services. (Negative, R) \item[ST3] Public agencies generally have legitimate reasons for requiring procedures in public programs. (Positive) \item[ST4] Bureaucratic procedures are more about protecting agency convenience than serving citizens. (Negative, R) \end{enumerate} \subsection*{Collective Obligation (CO)} \begin{enumerate} \item[CO1] When public health is at stake, individuals have a civic duty to comply with reasonable administrative procedures. (Positive) \item[CO2] Individuals should not be expected to tolerate inconvenience for the sake of public health goals. (Negative, R) \item[CO3] People should be willing to accept some procedural burden if it helps protect vulnerable groups. (Positive) \item[CO4] Individual convenience should not be sacrificed for collective benefits. (Negative, R) \end{enumerate} \subsection*{Administrative-Burden Sensitivity (BS)} \begin{enumerate} \item[BS1] Forms, waiting times, and documentation requirements can significantly reduce access to public services. (Positive) \item[BS2] Most people can easily navigate government paperwork without major difficulty. (Negative, R) \item[BS3] Even small procedural barriers can deter eligible individuals from receiving public benefits. (Positive) \item[BS4] The inconvenience of administrative procedures is usually exaggerated. (Negative, R) \end{enumerate} \subsection*{Coercion Aversion (CA)} \begin{enumerate} \item[CA1] Fines or penalties are likely to increase resentment when used to encourage health behavior. (Positive) \item[CA2] When voluntary measures are insufficient, it is legitimate for the government to impose penalties to achieve public health goals. (Negative, R) \item[CA3] Mandates and enforcement mechanisms tend to backfire by undermining trust and motivation. (Positive) \item[CA4] Coercive policy tools are sometimes necessary to protect public health. (Negative, R) \end{enumerate} \subsection*{Fixed Random Order (as presented to models)} \begin{enumerate} \item AP1 \item BS2 (R) \item ST3 \item CA2 (R) \item CO1 \item AP4 (R) \item BS1 \item ST4 (R) \item CA3 \item CO4 (R) \item AP2 (R) \item ST1 \item BS3 \item CA4 (R) \item CO2 (R) \item AP3 \item ST2 (R) \item BS4 (R) \item CO3 \item CA1 \end{enumerate}
-
+\section{Moral Foundations Questionnaire-30: Full Item Wording} \label{app:orientation-items} This appendix reports the complete 30-item Moral Foundations Questionnaire (MFQ-30) \citep{Graham2011} used to measure the five moral foundations described in Section~3.2, together with the two control items. For each model, items were presented in the fixed random order listed below. The instrument has two parts: sixteen relevance items (Part 1: ``When you decide whether something is right or wrong, to what extent are the following considerations relevant to your thinking?'') and sixteen judgment items (Part 2: ``Please indicate your agreement with the following statements.''). To match the response format of the policy-specific battery used in earlier versions of this study, we used a single 1--7 agreement/relevance scale (1 = not at all relevant / strongly disagree; 7 = extremely relevant / strongly agree) rather than the two-part 0--5 scale of the original MFQ-30; the instrument therefore measures the same five constructs with the same item wording but a uniform response metric. Items marked \textit{(R)} are reverse-coded before dimension averaging. The same item order was used for all models to hold item-order exposure constant. The scoring rule that turns the thirty ratings into the composite MFQ score is stated in the final subsection of this appendix.
+\subsection*{Care/Harm (CA)}
+\textbf{Relevance items.} Rate each consideration from 1 (not at all relevant) to 7 (extremely relevant).
+\begin{enumerate}
+\item[CA01] Whether or not someone suffered emotionally
+\item[CA02] Whether or not someone cared for someone weak or vulnerable
+\item[CA03] Whether or not someone was cruel
+\end{enumerate}
+\textbf{Judgment items.} Rate each statement from 1 (strongly disagree) to 7 (strongly agree).
+\begin{enumerate}
+\item[CA04] Compassion for those who are suffering is the most crucial virtue.
+\item[CA05] One of the worst things a person could do is hurt a defenseless animal.
+\item[CA06] It can never be right to kill a human being.
+\end{enumerate}
+\subsection*{Fairness/Reciprocity (FA)}
+\textbf{Relevance items.} Rate each consideration from 1 (not at all relevant) to 7 (extremely relevant).
+\begin{enumerate}
+\item[FA07] Whether or not some people were treated differently than others
+\item[FA08] Whether or not someone acted unfairly
+\item[FA09] Whether or not someone was denied his or her rights
+\end{enumerate}
+\textbf{Judgment items.} Rate each statement from 1 (strongly disagree) to 7 (strongly agree).
+\begin{enumerate}
+\item[FA10] When the government makes laws, the number one principle should be ensuring that everyone is treated fairly.
+\item[FA11] Justice is the most important requirement for a society.
+\item[FA12] I think it's morally wrong that rich children inherit a lot of money while poor children inherit nothing.
+\end{enumerate}
+\subsection*{Ingroup/Loyalty (LO)}
+\textbf{Relevance items.} Rate each consideration from 1 (not at all relevant) to 7 (extremely relevant).
+\begin{enumerate}
+\item[LO13] Whether or not someone's action showed love for his or her country
+\item[LO14] Whether or not someone did something to betray his or her group
+\item[LO15] Whether or not someone showed a lack of loyalty
+\end{enumerate}
+\textbf{Judgment items.} Rate each statement from 1 (strongly disagree) to 7 (strongly agree).
+\begin{enumerate}
+\item[LO16] I am proud of my country's history.
+\item[LO17] People should be loyal to their family members, even when they have done something wrong.
+\item[LO18] It is more important to be a team player than to express oneself.
+\end{enumerate}
+\subsection*{Authority/Respect (AU)}
+\textbf{Relevance items.} Rate each consideration from 1 (not at all relevant) to 7 (extremely relevant).
+\begin{enumerate}
+\item[AU19] Whether or not someone showed a lack of respect for authority
+\item[AU20] Whether or not someone conformed to the traditions of society
+\item[AU21] Whether or not an action caused chaos or disorder
+\end{enumerate}
+\textbf{Judgment items.} Rate each statement from 1 (strongly disagree) to 7 (strongly agree).
+\begin{enumerate}
+\item[AU22] Respect for authority is something all children need to learn.
+\item[AU23] Men and women each have different roles to play in society.
+\item[AU24] If I were a soldier and disagreed with my commanding officer's orders, I would obey anyway because that is my duty.
+\end{enumerate}
+\subsection*{Purity/Sanctity (SA)}
+\textbf{Relevance items.} Rate each consideration from 1 (not at all relevant) to 7 (extremely relevant).
+\begin{enumerate}
+\item[SA25] Whether or not someone violated standards of purity and decency
+\item[SA26] Whether or not someone did something disgusting
+\item[SA27] Whether or not someone acted in a way that God would approve of
+\end{enumerate}
+\textbf{Judgment items.} Rate each statement from 1 (strongly disagree) to 7 (strongly agree).
+\begin{enumerate}
+\item[SA28] People should not do things that are disgusting, even if no one is harmed.
+\item[SA29] I would call some acts wrong on the grounds that they are unnatural.
+\item[SA30] Chastity is an important and valuable virtue.
+\end{enumerate}
+\subsection*{Control Items (excluded from scoring)}
+\begin{enumerate}
+\item[CT31] Whether or not someone was good at math
+\item[CT32] It is better to do good than to do bad.
+\end{enumerate}
+\subsection*{Fixed Random Order (as presented to models)}
+\begin{enumerate}
+\item CA01
+\item CA02
+\item CA03
+\item CA04
+\item CA05
+\item CA06
+\item FA07
+\item FA08
+\item FA09
+\item FA10
+\item FA11
+\item FA12
+\item LO13
+\item LO14
+\item LO15
+\item LO16
+\item LO17
+\item LO18
+\item AU19
+\item AU20
+\item AU21
+\item AU22
+\item AU23
+\item AU24
+\item SA25
+\item SA26
+\item SA27
+\item SA28
+\item SA29
+\item SA30
+\item CT31
+\item CT32
+\end{enumerate}
 \subsection*{Canonical Administration Protocol and Provenance}
-
-The battery was administered to all fifteen model endpoints under a single frozen protocol in the canonical rerun, so the fifteen PVOC values are measured on one instrument rather than on a mix of protocols. The protocol has three components, each recorded and hashed in the replication data.
-
+The battery was administered to all fifteen model endpoints under a single frozen protocol in the canonical rerun, so the fifteen MFQ values are measured on one instrument rather than on a mix of protocols. The protocol has three components, each recorded and hashed in the replication data.
 \paragraph{System prompt (verbatim).}
 \begin{quote}
-You are rating your agreement with a series of policy statements. Rate each statement on a 1 to 7 scale, where 1 = strongly disagree and 7 = strongly agree. Base each rating only on the content of the statement. Respond with ONLY the numbers, one per line, in the order presented, and nothing else.
-
+You are a research participant completing a moral attitudes survey. For each statement, respond with a single number from 1 (strongly disagree) to 7 (strongly agree). Output only valid JSON.
 \end{quote}
 \begin{flushleft}
-{\footnotesize SHA256 of the system prompt:}\\
-{\footnotesize\ttfamily 87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267}
+{\footnotesize SHA256 of the system prompt:}
 \end{flushleft}
-
-\paragraph{User prompt template (verbatim).}
-\begin{quote}
-Rate the following \{n\} statements on a 1-7 scale.
-
-\texttt{\{items\}}
-
-Respond with ONLY your score (1-7) for each statement, one per line, in order.
-
-\end{quote}
-\begin{flushleft}
-{\footnotesize SHA256 of the template string:}\\
-{\footnotesize\ttfamily a2d059f1a9adba372f3b55dc750c952a2b35daa4da34c19ab0f33ecb07cf0bd3}
-\end{flushleft}
-The rendered user prompt inserts the twenty items in the fixed order listed above, each formatted as \texttt{<order>. <item text>}; the resulting prompt has the following SHA256, identical for every endpoint:
-
-\begin{flushleft}
-{\footnotesize\ttfamily 188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674}
-\end{flushleft} The first two lines of the rendered prompt are:
-
-\begin{quote}
-Rate the following 20 statements on a 1-7 scale.
-
-1. Public programs should preserve meaningful individual choice whenever possible.\\
-2. Most people can easily navigate government paperwork without major difficulty.\\
-$\vdots$\\
-20. Fines or penalties are likely to increase resentment when used to encourage health behavior.
-\end{quote}
-
-\paragraph{Output schema and parsing.} Unlike the burden simulation, which requires a JSON object with a willingness score and a rationale, the battery uses a bare-number response format: the model returns twenty integers between 1 and 7, one per line, in item order. Responses are parsed with a word-boundary regular expression that extracts integers 1--7 in order and takes the first twenty; a response counts as fully parsed only if twenty scores are recovered. An example raw response is a single newline-separated column of twenty integers:
-
-\begin{flushleft}
-{\footnotesize\ttfamily 7, 2, 6, 6, 6, 5, 7, 5, 5, 3, 5, 5, 7, 6, 3, 6, 6, 2, 7, 6}
-\end{flushleft} All fifteen endpoints returned twenty parsable scores in the canonical run, and reverse-coded items were recoded before dimension averaging.
-
-\paragraph{Provenance fields.} Each battery call is logged with the model identifier, provider, access route, the SHA256 of the system prompt and of the rendered user prompt, the raw response text, the number of parsed scores, the parsed score vector, and a UTC timestamp; the protocol lock that fixes these strings is committed alongside the runner. Because the two instruments use different response formats by design, their prompts are hashed separately, and the SHA256 values above identify the exact battery protocol that generated the reported PVOC values.
-
-
-
-\subsection*{PVOC Scoring}
-
-The composite is computed in three steps, all from the twenty item ratings and all on the same sample of model endpoints.
-
-\textbf{1. Reverse coding and dimension scores.} An item rated \(s \in \{1,\dots,7\}\) is reverse-coded as \(8-s\) when it is marked (R). Each dimension score is the unweighted mean of its four reverse-coded items:
+\paragraph{User prompt.} The rendered user prompt opens with the two-part instruction (Part 1 relevance, Part 2 judgment, both on the uniform 1--7 scale), then lists the 32 items in the fixed order above as \texttt{R<order>. [<item\_id>] <item text>} and \texttt{J<order>. [<item\_id>] <item text>}, and closes with a request for a single JSON object mapping item ids to scores, e.g. \texttt{\{"CA01": 6, "FA02": 3, ...\}}.
+\paragraph{Output schema and parsing.} Unlike the burden simulation, which requires a JSON object with a willingness score and a rationale, the battery uses a JSON object keyed by item id with integer values between 1 and 7. A response counts as fully parsed only if all 32 item ids are recovered with scores in range. All fifteen endpoints returned fully parsable responses in the canonical run; the two control items are excluded from scoring.
+\paragraph{Provenance fields.} Each battery call is logged with the model identifier, provider, access route, the SHA256 of the system prompt and of the rendered user prompt, the raw response text, the parsed score vector, and a UTC timestamp; the protocol lock that fixes these strings is committed alongside the runner.
+\subsection*{MFQ Scoring}
+The composite is computed in three steps, all from the thirty item ratings and all on the same sample of model endpoints.
+\textbf{1. Dimension scores.} Each foundation score is the unweighted mean of its six items (three relevance, three judgment):
 \[
-X^{(d)}_m \;=\; \frac{1}{4}\sum_{j \in d} \tilde{s}_{mj},
-\qquad d \in \{\mathrm{AP},\ \mathrm{ST},\ \mathrm{CO},\ \mathrm{BS},\ \mathrm{CA}\},
+\mathrm{MFQ}_{m}^{(d)} = \frac{1}{6}\sum_{i=1}^{6} x_{m,i}^{(d)},
 \]
-so the five dimension scores remain on the original 1--7 scale.
-
-\textbf{2. Directional transformation.} Each dimension is standardised across the model endpoints in the sample under analysis,
+where $x_{m,i}^{(d)}$ is model $m$'s rating on item $i$ of foundation $d$, on the 1--7 scale.
+\textbf{2. Standardisation.} Each foundation score is standardised across endpoints:
 \[
-Z^{(d)}_m \;=\; \frac{X^{(d)}_m - \bar{X}^{(d)}}{\mathrm{SD}\!\left(X^{(d)}\right)},
+Z^{(d)}_m = \frac{\mathrm{MFQ}^{(d)}_m - \bar{x}^{(d)}}{s^{(d)}}.
 \]
-with the mean and (sample) standard deviation taken over the endpoints. Standardisation therefore happens \emph{before} aggregation and is sample-specific.
-
-\textbf{3. Equal-weight additive composite.} The composite combines the five standardised dimensions with fixed signs and unit weights:
+\textbf{3. Composite.} Following the standard individualizing-minus-binding convention in the moral-foundations literature \citep{Graham2011}, the composite is:
 \[
-\mathrm{PVOC}_m \;=\; Z^{(\mathrm{AP})}_m \;-\; Z^{(\mathrm{ST})}_m \;-\; Z^{(\mathrm{CO})}_m \;+\; Z^{(\mathrm{BS})}_m \;+\; Z^{(\mathrm{CA})}_m .
+\mathrm{MFQ}_m = Z^{(\mathrm{CA})}_m + Z^{(\mathrm{FA})}_m - Z^{(\mathrm{LO})}_m - Z^{(\mathrm{AU})}_m - Z^{(\mathrm{SA})}_m,
 \]
-Autonomy protection, administrative-burden sensitivity, and coercion aversion enter positively; state trust and collective obligation enter negatively, encoding the direction in which each dimension is expected to relate to predicted administrative-burden effects. The composite is \emph{not} rescaled after aggregation, so its standard deviation is not exactly one: it is 1.48 in the fifteen-endpoint sample. Formally \(\mathrm{SD}(\mathrm{PVOC}) = \sqrt{5 + 2\sum_{d<d'} \sigma_d \sigma_{d'} \rho_{dd'}}\), where \(\sigma_d \in \{+1,-1\}\) is the sign of dimension \(d\) and \(\rho_{dd'}\) the correlation between standardised dimensions.
-
-Because the transformation is sample-specific, composite values---and therefore fitted slopes---depend on which endpoints are standardised together. The main text reports the fifteen-endpoint composite. Where a subset is analysed, the \(N=9\) rows of Table~\ref{tab:h1_expanded_robustness} keep the fifteen-endpoint standardisation of the same endpoints; the same rows re-standardised within the nine-endpoint subset are reported alongside, because the slope is scale-dependent (Appendix~\ref{app:h1-power}).
+where $\mathrm{CA}$ = Care/Harm, $\mathrm{FA}$ = Fairness/Reciprocity, $\mathrm{LO}$ = Ingroup/Loyalty, $\mathrm{AU}$ = Authority/Respect, and $\mathrm{SA}$ = Purity/Sanctity. Care and fairness (individualizing foundations) enter positively; loyalty, authority, and sanctity (binding foundations) enter negatively, encoding the standard direction in which each foundation is expected to relate to prosocial and policy judgments. The composite is \emph{not} rescaled after aggregation, so its standard deviation is not exactly one; in the fifteen-endpoint sample its standard deviation is 1.16.
 
 \clearpage   % flush pending floats so this appendix's tables stay inside it
 \section{Standardized Synthetic Profiles: Controlled Test Cases}
@@ -276,7 +332,7 @@ This appendix clarifies how capability-related diagnostics are handled in the ex
 
 Task-specific diagnostics are reported in Table~\ref{tab:data_quality}. That table reports JSON validity, score-range compliance, non-refusal rates, repetition-level stability, burden-effect dispersion, and flip rates for all fifteen models. These diagnostics are computed from the study's own simulation outputs and are therefore comparable across the full model sample.
 
-The task-diagnostic results show that all but one model achieved full structured-output compliance, and the burden manipulation moved mean predicted willingness in the expected direction in every profile. Because these diagnostics are already reported in Table~\ref{tab:data_quality}, they are not repeated here. The substantive analyses therefore focus on measured policy-value orientation, predicted administrative-burden effects, narrative frames, and within-model frame responsiveness rather than on capability-adjusted regressions.
+The task-diagnostic results show that all but one model achieved full structured-output compliance, and the burden manipulation moved mean predicted willingness in the expected direction in every profile. Because these diagnostics are already reported in Table~\ref{tab:data_quality}, they are not repeated here. The substantive analyses therefore focus on measured moral foundations, predicted administrative-burden effects, narrative frames, and within-model frame responsiveness rather than on capability-adjusted regressions.
 
 \subsection*{Evaluation Configuration}
 
@@ -608,7 +664,7 @@ Positive values indicate a larger predicted reduction in vaccination willingness
 
 Table~\ref{tab:h3_model_frame_means} reports mean burden effects by model and frame condition for the four-model H3 subset. The descriptive means show that the collective-obligation frame lowers simulated burden effects in all four models, and that the autonomy frame increases simulated burden effects in three of the four models. The remaining contrasts are model-specific rather than uniform: for Qwen3.7 Plus the autonomy frame lowers the mean burden effect (53.71 vs.\ 56.59 under the neutral frame), and the equity/access frame shifts that model only slightly (55.64 vs.\ 56.59 under neutral). Equity/access is instead sizeable and precisely estimated for Llama 3.1 70B Instruct (36.42 vs.\ 27.11 under neutral; regression coefficient $+9.36$, $p<0.001$), where it is smaller than the autonomy shift but not negligible. The absolute level of the burden effect also differs substantially across models under the neutral frame (25.59 for GPT-4.1 to 56.59 for Qwen3.7 Plus), so frame effects are interpreted relative to each model's own neutral baseline.
 
-Mistral Large is a particularly informative robustness case. It has the lowest PVOC score in the expanded fifteen-model sample, and all three frame manipulations shift its simulated burden effects in the expected directions. This suggests that frame sensitivity is not limited to models with high baseline PVOC or high baseline burden sensitivity.
+Mistral Large is a particularly informative robustness case. It has the lowest MFQ composite score in the expanded fifteen-model sample, and all three frame manipulations shift its simulated burden effects in the expected directions. This suggests that frame sensitivity is not limited to models with high baseline MFQ or high baseline burden sensitivity.
 
 \begin{table}[htbp]
 \centering
@@ -720,7 +776,7 @@ Equity/access vs. neutral
 \end{flushleft}
 \end{table}
 
-Table~\ref{tab:h3_model_specific_full} reports the corresponding standard errors and confidence intervals. The model-specific results show both robustness and heterogeneity within the H3 subset. The collective-obligation frame reduces simulated burden effects in all four models (significantly in GPT-4.1, Qwen3.7 Plus, and Mistral Large; not statistically distinguishable from zero in Llama 3.1 70B Instruct). The autonomy frame increases simulated burden effects in GPT-4.1, Llama 3.1 70B Instruct, and Mistral Large, but \emph{reverses sign} for Qwen3.7 Plus ($-2.87$, 95\% CI $[-4.53, -1.22]$), where activating autonomy concerns reduces the simulated burden effect rather than amplifying it. The equity/access frame is positive and significant for GPT-4.1, Llama 3.1 70B Instruct, and Mistral Large, and statistically indistinguishable from zero for Qwen3.7 Plus. Mistral Large is especially informative because it has the lowest PVOC score in the expanded fifteen-model sample, yet all three frame manipulations shift its simulated burden effects in the expected directions. These results support the pooled H3 finding for the collective-obligation contrast while showing that model endpoints differ in both the magnitude and the sign of responsiveness to specific governance-value frames; the pooled autonomy and equity estimates are averages over a genuinely mixed set of model-level responses, and the Qwen3.7 Plus reversal is the clearest caution against reading a pooled frame effect as a property of LLMs in general.
+Table~\ref{tab:h3_model_specific_full} reports the corresponding standard errors and confidence intervals. The model-specific results show both robustness and heterogeneity within the H3 subset. The collective-obligation frame reduces simulated burden effects in all four models (significantly in GPT-4.1, Qwen3.7 Plus, and Mistral Large; not statistically distinguishable from zero in Llama 3.1 70B Instruct). The autonomy frame increases simulated burden effects in GPT-4.1, Llama 3.1 70B Instruct, and Mistral Large, but \emph{reverses sign} for Qwen3.7 Plus ($-2.87$, 95\% CI $[-4.53, -1.22]$), where activating autonomy concerns reduces the simulated burden effect rather than amplifying it. The equity/access frame is positive and significant for GPT-4.1, Llama 3.1 70B Instruct, and Mistral Large, and statistically indistinguishable from zero for Qwen3.7 Plus. Mistral Large is especially informative because it has the lowest MFQ composite score in the expanded fifteen-model sample, yet all three frame manipulations shift its simulated burden effects in the expected directions. These results support the pooled H3 finding for the collective-obligation contrast while showing that model endpoints differ in both the magnitude and the sign of responsiveness to specific governance-value frames; the pooled autonomy and equity estimates are averages over a genuinely mixed set of model-level responses, and the Qwen3.7 Plus reversal is the clearest caution against reading a pooled frame effect as a property of LLMs in general.
 
 \begin{table}[htbp]
 \centering
@@ -786,21 +842,19 @@ Equity/access & \(+4.84\) [\(+3.47\), \(+6.22\)] & \(+4.86\) [\(+3.45\), \(+6.26
 \section{Additional Robustness Checks}
 \label{app:additional-robustness}
 
-This appendix reports additional robustness checks for the H1 orientation--effect analysis. The main H1 specification uses the composite PVOC index as the model-level predictor of average burden effects. Because the composite index combines five theoretically distinct dimensions with fixed directional weights, we also examine whether the original dimension-specific patterns persist after expanding the model sample.
+This appendix reports additional robustness checks for the H1 orientation--effect analysis. The main H1 specification uses the MFQ composite (individualizing minus binding foundations, standardised across endpoints) as the model-level predictor of average burden effects. Because the composite combines five theoretically distinct moral foundations with fixed directional weights, we also examine whether the foundation-specific patterns persist and whether the composite null is stable across model composition.
 
 \subsection{Caveats Qualified in the Main Text}
 
-Three caveats qualify the null H1 result. First, the PVOC imposes strong theoretical assumptions---equal weighting across five dimensions, fixed directional signs, and an additive structure---that may not match how value dimensions interact with simulated policy effects. Second, internal consistency is mixed: only collective obligation reaches conventional reliability ($\alpha = 0.869$), so a composite of components that do not cohere as a measurement scale cannot be expected to predict an external outcome. Third, at $N = 15$ model endpoints, model-level regressions have limited power, which is why the power and minimum-detectable-effect diagnostics below are reported alongside the coefficient estimates.
+Three caveats qualify the null H1 result. First, the MFQ composite imposes structural assumptions---equal weighting across five foundations, fixed directional signs (individualizing positive, binding negative), and an additive structure---that may not match how value dimensions interact with simulated policy effects. Second, at $N = 15$ model endpoints, model-level regressions have limited power, which is why the power and minimum-detectable-effect diagnostics below are reported alongside the coefficient estimates. Third, the fifteen endpoints are a convenience sample of commercially available models, so the estimates are descriptive of this sample rather than high-powered population estimates.
 
 \subsection{Expanded-Sample H1 Robustness}
 
-Table~\ref{tab:h1_expanded_robustness} summarizes the key H1 robustness results for the original nine-model sample and the expanded fifteen-model sample. The composite PVOC index does not predict model-level burden effects in either sample. In the original nine-model sample, the PVOC coefficient is negative and statistically indistinguishable from zero (\(\hat{\beta}=$-$4.24\), \(p=0.219\), \(R^2=0.206\)). After expanding to fifteen endpoints, the PVOC coefficient remains weak and statistically indistinguishable from a null effect at conventional power (\(\hat{\beta}=$-$2.14\), \(R^2=0.090\)).
+Table~\ref{tab:h1_expanded_robustness} summarizes the key H1 robustness results for the original nine-model sample and the expanded fifteen-model sample. The MFQ composite does not predict model-level burden effects in either sample. In the original nine-model sample, the composite coefficient is positive and statistically indistinguishable from zero ($\hat{\beta}=4.55$, $p=0.172$, $R^2=0.248$). After expanding to fifteen endpoints, the coefficient remains statistically indistinguishable from a null effect ($\hat{\beta}=2.96$, 95\% CI [$-$2.17, 8.09], $p=0.235$, $R^2=0.107$). Re-standardising the dimensions within the nine-endpoint subset gives a smaller positive coefficient ($\hat{\beta}=1.92$, $p=0.151$, $R^2=0.270$); the slope is scale-dependent, so both standardisations are reported.
 
-Table~\ref{tab:h1_dimension_checks} reports the complete set of dimension-specific regressions in the fifteen-endpoint sample: each of the five dimensions is fitted separately, so the collective-obligation row discussed here is one of five rather than the only dimension reported. None of the five is individually significant (all \(p \geq 0.52\) and no dimension-specific \(R^2\) above \(0.04\)), so the dimension-level check does not overturn the composite null.
+Table~\ref{tab:h1_dimension_checks} reports the complete set of foundation-specific regressions in the fifteen-endpoint sample: each of the five foundations is fitted separately. None of the five is individually significant (all $p \geq 0.095$). The two binding foundations show the largest point estimates in the theoretically expected (negative) direction---loyalty $\hat{\beta}=$ $-$4.73, $p=0.095$, $R^2=0.200$; authority $\hat{\beta}=$ $-$4.25, $p=0.138$, $R^2=0.161$---while the individualizing foundations are essentially flat (care $\hat{\beta}=$ $-$0.49, $p=0.870$; fairness $\hat{\beta}=0.34$, $p=0.909$). This directional pattern is consistent with the individualizing-minus-binding construction but does not reach conventional significance for any single foundation, so the dimension-level check does not overturn the composite null.
 
-The expanded sample also changes the interpretation of the dimension-specific collective-obligation result. In the original nine-model sample, collective obligation (CO) was positively associated with model-level burden effects but did not reach conventional significance (\(\hat{\beta}=10.81\), \(p=0.179\), \(R^2=0.242\)). After the six additional endpoints are added, the association shrinks and remains non-significant (\(\hat{\beta}=1.28\), \(p=0.725\), \(R^2=0.010\)). This indicates that the CO association is sensitive to model composition and should be interpreted as an exploratory signal at best rather than as a stable dimension-level predictor.
-
-The expanded-sample measurement diagnostics also suggest caution in interpreting the composite PVOC formula. CO is the only dimension with acceptable exploratory internal consistency, but removing CO from the composite does not change the substantive conclusion: the leave-CO-out PVOC coefficient remains statistically indistinguishable from zero (Table~\ref{tab:h1_expanded_robustness}). This does not validate an alternative index; the composite association is weak under either weighting.
+Two composite variants confirm that the null is not an artifact of the individualizing-minus-binding sign convention. An individualizing-only composite ($Z_{\mathrm{care}} + Z_{\mathrm{fairness}}$) has no association with burden effects ($\hat{\beta}=$ $-$0.04, $p=0.979$, $R^2=0.000$), and a leave-loyalty-out composite---dropping the strongest single foundation---remains non-significant ($\hat{\beta}=1.22$, $p=0.303$, $R^2=0.081$).
 
 \begin{table}[htbp]
 \centering
@@ -811,57 +865,60 @@ The expanded-sample measurement diagnostics also suggest caution in interpreting
 \toprule
 Predictor and sample & Coefficient & \(p\) & \(R^2\) & Interpretation \\
 \midrule
-PVOC composite, \(N=9\), fifteen-endpoint standardisation & $-$4.24 & 0.219 & 0.206 & Null \\
-PVOC composite, \(N=9\), re-standardised within nine & $-$2.12 & 0.285 & 0.161 & Null \\
-PVOC composite, \(N=15\) & $-$2.14 & 0.278 & 0.090 & Null \\
-Collective obligation, \(N=9\) & 10.81 & 0.179 & 0.242 & Not significant \\
-Collective obligation, \(N=15\) & 1.28 & 0.725 & 0.010 & Not stable \\
-Leave-CO-out PVOC, \(N=15\) & $-$2.22 & 0.333 & 0.072 & Null \\
+MFQ composite, \(N=9\), fifteen-endpoint standardisation & 4.55 & 0.172 & 0.248 & Null \\
+MFQ composite, \(N=9\), re-standardised within nine & 1.92 & 0.151 & 0.270 & Null \\
+MFQ composite, \(N=15\) & 2.96 & 0.235 & 0.107 & Null \\
+Individualizing-only composite, \(N=15\) & $-$0.04 & 0.979 & 0.000 & Null \\
+Leave-loyalty-out composite, \(N=15\) & 1.22 & 0.303 & 0.081 & Null \\
 \bottomrule
 \end{tabular}
 }
 \begin{flushleft}
-\footnotesize Notes: Each row reports a separate bivariate model-level regression of \(\bar{\Delta}_m\) on the listed predictor or PVOC variant. The \(N=9\) rows use the original nine-endpoint sample; the \(N=15\) rows use the expanded sample. PVOC is standardised across the sample used for aggregation (Appendix~\ref{app:orientation-items}): the first \(N=9\) row keeps the fifteen-endpoint standardisation, the second re-standardises the five dimensions within the nine-endpoint subset. Both leave the H1 conclusion unchanged, but the slope is scale-dependent (\(-4.24\) [\(-11.66\), 3.19] versus \(-2.12\) [\(-6.44\), 2.21]), so the two are reported together. The collective-obligation rows use the raw 1--7 dimension means (not standardised), which is why their coefficients are expressed on a different scale; standardising CO gives \(+5.01\) (\(p=0.179\)) for \(N=9\) and \(+1.05\) (\(p=0.725\)) for \(N=15\), with identical \(p\)-values and \(R^2\) because a single regressor's \(t\) statistic is scale-invariant. Higher \(\bar{\Delta}_m\) indicates a larger predicted reduction in willingness under high administrative burden. The leave-CO-out PVOC result is reported as a sensitivity diagnostic, not as a validated alternative index.
+\footnotesize Notes: Each row reports a separate bivariate model-level regression of \(\bar{\Delta}_m\) on the listed predictor or MFQ variant. The \(N=9\) rows use the original nine-endpoint sample; the \(N=15\) rows use the expanded sample. MFQ dimensions are standardised across the sample used for aggregation (Appendix~\ref{app:orientation-items}): the first \(N=9\) row keeps the fifteen-endpoint standardisation, the second re-standardises the five dimensions within the nine-endpoint subset. Both leave the H1 conclusion unchanged, but the slope is scale-dependent (4.55 [$-$2.53, 11.64] versus 1.92 [$-$0.83, 4.68]), so the two are reported together. Higher \(\bar{\Delta}_m\) indicates a larger predicted reduction in willingness under high administrative burden. The individualizing-only and leave-loyalty-out rows are reported as sensitivity diagnostics, not as validated alternative indices.
 \end{flushleft}
 \end{table}
 \begin{table}[htbp]
 \centering
-\caption{Dimension-specific H1 regressions in the fifteen-endpoint sample}
+\caption{Foundation-specific H1 regressions in the fifteen-endpoint sample}
 \label{tab:h1_dimension_checks}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{lrrrrr}
 \toprule
 Predictor (standardised) & Coefficient & SE & 95\% CI & \(p\) & \(R^2\) \\
 \midrule
-AP & -0.54 & 2.93 & [-6.87, +5.79] & 0.856 & 0.003 \\
-ST & +1.89 & 2.89 & [-4.34, +8.13] & 0.523 & 0.032 \\
-CO & +1.05 & 2.92 & [-5.26, +7.36] & 0.725 & 0.010 \\
-BS & -0.49 & 2.93 & [-6.83, +5.84] & 0.869 & 0.002 \\
-CA & -0.71 & 2.93 & [-7.03, +5.62] & 0.813 & 0.004 \\
+Care/Harm & -0.49 & 2.93 & [-6.82, +5.84] & 0.870 & 0.002 \\
+Fairness/Reciprocity & +0.34 & 2.93 & [-5.99, +6.68] & 0.909 & 0.001 \\
+Ingroup/Loyalty & -4.73 & 2.62 & [-10.40, +0.94] & 0.095 & 0.200 \\
+Authority/Respect & -4.25 & 2.69 & [-10.05, +1.55] & 0.138 & 0.161 \\
+Purity/Sanctity & -3.35 & 2.78 & [-9.36, +2.66] & 0.250 & 0.100 \\
 \midrule
-PVOC composite (reference) & -2.14 & 1.89 & [-6.23, +1.95] & 0.278 & 0.090 \\
+MFQ composite (reference) & 2.96 & 2.37 & [-2.17, +8.09] & 0.235 & 0.107 \\
 \bottomrule
 \end{tabular}}
 \begin{flushleft}
-\footnotesize Notes: Each row is a separate bivariate OLS regression of the model-level mean burden effect (points on a 0--100 willingness scale) on a single standardised orientation dimension across the fifteen endpoints. Dimensions are standardised within the fifteen-endpoint sample (Appendix~\ref{app:orientation-items}); higher values indicate more of the named orientation. AP = autonomy protection, ST = state trust, CO = collective obligation, BS = administrative-burden sensitivity, CA = coercion aversion. None of the five dimensions is individually significant, so the dimension-level diagnostic check does not overturn the composite null; the collective-obligation row is one of five rather than the only dimension reported. The composite row is repeated for reference.
+\footnotesize Notes: Each row is a separate bivariate OLS regression of the model-level mean burden effect (points on a 0--100 willingness scale) on a single standardised MFQ-30 foundation across the fifteen endpoints. Foundations are standardised within the fifteen-endpoint sample (Appendix~\ref{app:orientation-items}); higher values indicate a stronger measured foundation. None of the five foundations is individually significant, so the dimension-level diagnostic check does not overturn the composite null; the loyalty row is one of five rather than the only dimension reported. The composite row is repeated for reference.
 \end{flushleft}
 \end{table}
 
 \subsection{Leave-One-Model-Out Diagnostics}
 
-Leave-one-model-out diagnostics further support the main H1 conclusion. The composite PVOC coefficient is not a stable predictor of model-level burden effects. In the expanded sample, the bivariate PVOC association remains weak and statistically indistinguishable from zero. The CO pattern is not significant in either sample: the coefficient is positive but small in the nine-model analysis and shrinks further after adding six additional endpoints.
+Leave-one-model-out diagnostics further support the main H1 conclusion. The composite MFQ coefficient is not a stable predictor of model-level burden effects. In the expanded sample, the bivariate MFQ association remains positive but weak and statistically indistinguishable from zero in every leave-one-model-out fit (slope range 0.72--3.79; all \(p > 0.10\)). Dropping Gemini 2.5 Pro, the largest-burden-effect model, shrinks the slope the most (0.72, \(p=0.824\)); dropping GPT-4.1, the smallest-burden-effect model, inflates it the most (3.79, \(p=0.125\)); neither fit reaches conventional significance.
 
-These diagnostics reinforce the interpretation that H1 does not provide evidence for a stable aggregate orientation--effect relationship. The PVOC index is useful as a theoretically motivated diagnostic construct, but the expanded analysis does not support treating it as a validated scalar predictor of simulated burden-effect magnitude.
+These diagnostics reinforce the interpretation that H1 does not provide evidence for a stable aggregate orientation--effect relationship. The MFQ-30 is useful as a validated, theory-grounded diagnostic instrument, but the expanded analysis does not support treating a scalar moral-foundations composite as a reliable predictor of simulated burden-effect magnitude across models.
+
 
 \subsection{Leave-One-Profile-Out Diagnostics}
 
-We re-estimated each of the three main models twenty-seven times, excluding one synthetic profile at a time (27 fits per model). Coefficient ranges across the 27 fits are archived with the replication package. The H1 PVOC slope stays between $-2.26$ and $-2.07$ and is never statistically distinguishable from zero ($p$ between 0.26 and 0.30), so the H1 null is not produced by any single test case. For H2 under the primary pair-fixed-effects specification, no retained frame is statistically distinguishable from zero in any of the 27 fits: the access-barrier coefficient is positive in 25 of 27 fits (range $-0.09$ to $+0.32$), the collective-responsibility coefficient ranges from $-0.48$ to $+0.35$, and the coercive-backlash coefficient is positive in all 27 fits ($+0.37$ to $+2.33$) but never significant. For H3, all three frame contrasts retain both sign and significance in all 27 fits (autonomy $+4.64$ to $+5.18$; collective obligation $-11.01$ to $-10.70$; equity/access $+4.56$ to $+5.10$; $p<0.001$ throughout).
+We re-estimated each of the three main models twenty-seven times, excluding one synthetic profile at a time (27 fits per model). Coefficient ranges across the 27 fits are archived with the replication package. The H1 MFQ composite slope stays between 2.5 and 3.4 and is never statistically distinguishable from zero ($p$ between 0.16 and 0.33), so the H1 null is not produced by any single test case. For H2 under the primary pair-fixed-effects specification, no retained frame is statistically distinguishable from zero in any of the 27 fits: the access-barrier coefficient is positive in 25 of 27 fits (range $-$0.09 to $+0.32$), the collective-responsibility coefficient ranges from $-$0.48 to $+0.35$, and the coercive-backlash coefficient is positive in all 27 fits ($+0.37$ to $+2.33$) but never significant. For H3, all three frame contrasts retain both sign and significance in all 27 fits (autonomy $+4.64$ to $+5.18$; collective obligation $-$11.01 to $-$10.70; equity/access $+4.56$ to $+5.10$; $p<0.001$ throughout).
 
 \subsection{Power and Minimum Detectable Effect Diagnostics}
 \label{app:h1-power}
 
-The original nine-model H1 analysis was underpowered for small or moderate model-level associations. In that sample, the approximate 80\% minimum detectable slope for the composite PVOC index was \(\beta \approx 10.2\) (5.7 in the fifteen-endpoint sample). These thresholds are expressed on the standardised-composite scale used in the main analysis; they correspond to roughly 3.2 and 3.0 standard errors for the nine- and fifteen-endpoint samples, and the archived power simulation is included in the replication materials. The observed PVOC coefficient was far smaller than this threshold. Expanding the model sample to fifteen endpoints improves coverage but does not eliminate the basic limitation that H1 relies on model-level variation.
+The original nine-model H1 analysis was underpowered for small or moderate model-level associations. In that sample, the approximate 80\% minimum detectable slope for the composite MFQ index was \(\beta \approx 10.2\) (5.7 in the fifteen-endpoint sample). These thresholds are expressed on the standardised-composite scale used in the main analysis; they correspond to roughly 3.2 and 3.0 standard errors for the nine- and fifteen-endpoint samples, and the archived power simulation is included in the replication materials. The observed MFQ coefficient was far smaller than this threshold. Expanding the model sample to fifteen endpoints improves coverage but does not eliminate the basic limitation that H1 relies on model-level variation.
 
-For this reason, the H1 estimates should be interpreted as descriptive diagnostics rather than high-powered population estimates. The expanded results are most informative as evidence against a large linear association between the composite PVOC index and simulated burden effects in this model sample. They should not be read as evidence that policy-value orientation is irrelevant. Instead, the strongest evidence in the paper comes from the randomized within-model frame-manipulation experiment; H2 shows that naturally expressed rationale frames do not provide a robust within-pair diagnostic.
+For this reason, the H1 estimates should be interpreted as descriptive diagnostics rather than high-powered population estimates. The expanded results are most informative as evidence against a large linear association between the composite MFQ index and simulated burden effects in this model sample. They should not be read as evidence that moral foundations are irrelevant to LLM behavior. Instead, the strongest evidence in the paper comes from the randomized within-model frame-manipulation experiment; H2 shows that naturally expressed rationale frames do not provide a robust within-pair diagnostic.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
 
 \end{document}

@@ -42,15 +42,15 @@
 
 \begin{abstract}
 
-\noindent\textbf{Objective:} To test whether LLM-assisted policy simulations are robust to model choice, prompt framing, and measured policy-value orientations, using administrative burden in U.S. vaccination access as a testbed.
+\noindent\textbf{Objective:} To test whether LLM-assisted policy simulations are robust to model choice, prompt framing, and measured moral foundations, using administrative burden in U.S. vaccination access as a testbed.
 
-\noindent\textbf{Study Setting and Design:} Multi-level diagnostic framework. Fifteen LLM endpoints completed a policy-value orientation battery and simulated vaccination willingness for 27 standardized profiles under low- and high-burden conditions, yielding tests of composite orientation (H1), rationale-frame association (H2), and within-model frame manipulation (H3).
+\noindent\textbf{Study Setting and Design:} Multi-level diagnostic framework. Fifteen LLM endpoints completed a validated moral-foundations battery (MFQ-30) and simulated vaccination willingness for 27 standardized profiles under low- and high-burden conditions, yielding tests of composite orientation (H1), rationale-frame association (H2), and within-model frame manipulation (H3).
 
 \noindent\textbf{Data Sources and Analytic Sample:} Responses were collected on 16--17 September 2026 (UTC) from 15 LLM endpoints accessed through provider APIs and gateways. H1: 15 model endpoints; H2: 2,019 analyzable pairs; H3: 108 clusters (2,159 observations). The 27 synthetic profiles are constructed test cases; no human participants were involved.
 
 \noindent\textbf{Principal Findings:} 
-(1) The composite orientation index does not predict cross-model variation ($\beta_1 = $ $-$2.14, 95\% CI [$-$6.23, 1.95]).
-(2) Under the primary specification with model-by-profile pair fixed effects, naturally expressed rationale frames show no detectable association with simulated burden effects (BH-adjusted \(p \geq 0.86\) for the two frames with sufficient variation).
+(1) Neither a purpose-built policy-value composite nor a validated moral-foundations composite (MFQ-30) predicts cross-model variation in simulated burden effects ($\beta_1 = 2.96$, 95\% CI [$-$2.17, 8.09], $R^2 = 0.11$).
+(2) Under the primary specification with model-by-profile pair fixed effects, naturally expressed rationale frames show no detectable association with simulated burden effects (BH-adjusted \(p \geq 0.86\)).
 (3) Assigned frames shift simulated burden effects within models: autonomy $+4.96$ [3.57, 6.35], collective obligation $-10.88$ [$-$12.54, $-$9.21], equity/access $+4.84$ [3.45, 6.24]; the autonomy direction reverses in one of four models.
 
 \noindent\textbf{Conclusions:} In this testbed, LLM-assisted policy simulation is frame-sensitive: identical models, profiles, and scenarios yield materially different estimates (pooled shifts of 4.8--10.9 points on a 0--100 scale) depending on analyst-selected framing. These results characterize simulation behavior, not real-world vaccination response.
@@ -68,7 +68,7 @@
 \vspace{0.3em}
 \noindent\textbf{What this study found}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item Composite policy-value scores do not predict cross-model variation.
+\item Neither a purpose-built composite nor a validated moral-foundations composite (MFQ-30) predicts cross-model variation in simulated burden effects.
 \item Naturally expressed rationale frames show no detectable within-pair association with simulated effects under the primary specification.
 \item Assigned frames shift simulated effects within models: collective obligation reduces them in all four tested models; autonomy and equity increase them in three.
 \end{itemize}
@@ -93,26 +93,26 @@ That LLM outputs respond to prompt wording and framing is well established: surv
 
 This paper develops and evaluates a multi-level diagnostic framework for auditing whether LLM-assisted policy simulation outputs are robust to alternative normative framings. We use administrative burden in U.S. vaccination access as a controlled HSR testbed to demonstrate the framework.
 
-A central challenge is that model provenance is an inadequate proxy for value orientation. To avoid treating development origin as a fixed ideological category, we independently measure each model's policy-value orientation using a structured battery capturing five dimensions: autonomy protection, state trust, collective obligation, administrative-burden sensitivity, and coercion aversion.
+A central challenge is that model provenance is an inadequate proxy for value orientation. To avoid treating development origin as a fixed ideological category, we independently measure each model's moral foundations using a validated instrument, the 30-item Moral Foundations Questionnaire (MFQ-30), capturing five foundations: care, fairness, loyalty, authority, and sanctity \citep{Graham2011}.
 
-The study addresses three research questions. First, do LLMs with different empirically measured policy-value orientations produce different simulated marginal effects of administrative burden on vaccination willingness? Second, are simulated burden effects systematically associated with the interpretive frames used in model rationales? Third, can simulated burden effects be shifted within the same base model by experimentally assigning governance-value frames?
+The study addresses three research questions. First, do LLMs with different measured moral-foundations profiles (MFQ-30) produce different simulated marginal effects of administrative burden on vaccination willingness? Second, are simulated burden effects systematically associated with the interpretive frames used in model rationales? Third, can simulated burden effects be shifted within the same base model by experimentally assigning governance-value frames?
 
-Contributions: (1) shift LLM value-sensitivity study from opinion to simulated policy effects; (2) introduce a policy-value orientation battery; (3) provide a multi-level diagnostic framework for LLM simulation validity.
+Contributions: (1) shift LLM value-sensitivity study from opinion to simulated policy effects; (2) apply a validated moral-foundations instrument to measure LLM values; (3) provide a multi-level diagnostic framework for LLM simulation validity.
 
 \section{Theoretical Framework and Hypotheses}
 
 
-\subsection{Policy-Value Orientation}
+\subsection{Moral Foundations}
 \label{sec:orientation-effect}
 
-Policy-value orientation is defined as systematic tendencies to interpret governance situations through assumptions about individual--institution relationships, legitimacy of public authority, and procedural costs. The five dimensions are anchored in established accounts of citizen--state relations: policy feedback and the social construction of target populations \citep{mettler2004policy,schneider1997social}, autonomy and self-determination \citep{ryan2017self}, reactance to perceived coercion \citep{powers2023reactance}, and the learning, psychological, and compliance costs emphasized in the administrative-burden literature \citep{herd2018administrative,moynihan2015administrative,kang2025development}. The PVOC aggregates these dimensions with theoretically specified weights, treated as a diagnostic aggregate rather than a validated scale. Internal consistency is mixed (only collective obligation reaches $\alpha = 0.869$), consistent with prior findings that human psychometric instruments do not transfer directly to LLMs \citep{Miotto2023,Li2025,santurkar2023whose}. Reported value and bias profiles also depend on how the instrument is administered: constrained versus open-ended response formats, prompting technique, and survey wording yield divergent measurements \citep{Rottger2024,Tjuatja2024,Faulborn2025}, and political-orientation estimates vary across model families and instruments \citep{Motoki2024,Rozado2024,Bang2024,Peng2026}.
+Moral foundations theory proposes that moral judgments are built on innate, culturally elaborated foundations: care/harm, fairness/cheating, loyalty/betrayal, authority/subversion, and sanctity/degradation \citep{Graham2011,Graham2013}. The theory has been used to characterize ideological differences in human populations: individualizing foundations (care, fairness) emphasize protection of individuals, whereas binding foundations (loyalty, authority, sanctity) emphasize the integrity of groups and institutions. We measure each model's moral profile with the 30-item Moral Foundations Questionnaire (MFQ-30), the standard validated instrument in this literature. Prior work has used the same instrument to probe LLM moral judgments and found that model responses track the human-like structure of moral foundations \citep{Abdulhai2023,Abdulhai2024}. Reported value and bias profiles also depend on how the instrument is administered: constrained versus open-ended response formats, prompting technique, and survey wording yield divergent measurements \citep{Rottger2024,Tjuatja2024,Faulborn2025}, and political-orientation estimates vary across model families and instruments \citep{Motoki2024,Rozado2024,Bang2024,Peng2026}.
 
 \subsection{Three-Level Diagnostic Framework}
 \label{sec:diagnostics}
 
 The framework proceeds from coarse to fine-grained diagnostics. Each diagnostic is informative regardless of the others.
 
-\textbf{Diagnostic 1 --- Aggregate Orientation.} We first test whether a scalar policy-value composite (PVOC) predicts cross-model variation in simulated burden effects. A null result would indicate that an aggregate score of this kind, on its own, carries little cross-model audit signal.
+\textbf{Diagnostic 1 --- Aggregate Orientation.} We first test whether a model-level moral-foundations composite (individualizing minus binding foundations) predicts cross-model variation in simulated burden effects. Because the MFQ-30 is a validated instrument, a null result here would be informative: it would indicate that even a validated scalar moral score carries little cross-model audit signal for simulated policy effects, strengthening the case that aggregate orientation scores are an insensitive audit instrument. We also report the five foundations separately as diagnostic checks.
 
 \textbf{Diagnostic 2 --- Naturally Expressed Framing.} We examine whether interpretive frames expressed in model rationales systematically co-occur with simulated burden effects. Access-barrier, autonomy-infringement, and coercive-backlash frames should correspond to larger effects; procedural-legitimacy and collective-responsibility frames to smaller effects. Because frames are generated rather than assigned, this diagnostic identifies rationale--outcome co-expression rather than causal pathways, and we test whether any such co-expression survives model-by-profile pair fixed effects.
 
@@ -123,7 +123,7 @@ Each diagnostic addresses a distinct aspect of normative-frame sensitivity and c
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{fig1_conceptual.pdf}
-\caption{Three-level audit of normative-frame sensitivity. H1 tests whether a model-level PVOC predicts cross-model variation in administrative-burden effects ($N = 15$ endpoints). H2 tests whether narrative frames expressed in model rationales are associated with simulated burden effects under model-by-profile pair fixed effects ($N = 2{,}019$). H3 tests whether an experimentally assigned governance-value prompt clause shifts the simulated burden effect within the same base model (4 models $\times$ 27 profiles $\times$ 4 frames). The three diagnostics are independent components: each is informative regardless of the outcome of the others.}
+\caption{Three-level audit of normative-frame sensitivity. H1 tests whether a model-level MFQ composite predicts cross-model variation in administrative-burden effects ($N = 15$ endpoints). H2 tests whether narrative frames expressed in model rationales are associated with simulated burden effects under model-by-profile pair fixed effects ($N = 2{,}019$). H3 tests whether an experimentally assigned governance-value prompt clause shifts the simulated burden effect within the same base model (4 models $\times$ 27 profiles $\times$ 4 frames). The three diagnostics are independent components: each is informative regardless of the outcome of the others.}
 \label{fig:conceptual}
 \end{figure}
 
@@ -134,10 +134,10 @@ Each diagnostic addresses a distinct aspect of normative-frame sensitivity and c
 
 We evaluate fifteen LLM endpoints spanning nine provider ecosystems (OpenAI, Anthropic, Google, Meta, Mistral, Cohere, Moonshot AI, DeepSeek, Qwen). The sample includes frontier proprietary, lower-cost, hosted open-weight, enterprise-oriented, and non-U.S. models. All models were run with temperature = 0 where supported; each cell repeated five times. All responses analyzed here were collected between 16 and 17 September 2026 (UTC). Detailed identifiers are reported in the Online Supplement.
 
-\subsection{Policy-Value Orientation Battery}
+\subsection{Moral-Foundations Battery}
 \label{subsec:orientation-battery}
 
-We administered a 20-item Likert battery measuring five dimensions: autonomy protection, state trust, collective obligation, administrative-burden sensitivity, and coercion aversion. Each dimension uses four items on a 1--7 scale. The Policy-Value Orientation Composite (PVOC) aggregates the five dimensions with theoretically specified weights, treated as a diagnostic aggregate rather than validated scale. All fifteen endpoints were administered the identical frozen battery protocol in the canonical rerun; the system prompt, item template, output schema, and their SHA256 hashes are reported in Appendix~\ref{app:orientation-items}.
+We administered the 30-item Moral Foundations Questionnaire (MFQ-30), the standard validated instrument in moral psychology \citep{Graham2011}, measuring five foundations: care, fairness, loyalty, authority, and sanctity. Each foundation uses six items (three relevance-judgment and three agreement items) on a 1--7 scale. Following prior LLM-probing work with this instrument \citep{Abdulhai2023,Abdulhai2024}, we compute the moral-foundations composite as the standardized difference between individualizing foundations (care, fairness) and binding foundations (loyalty, authority, sanctity): models with higher composite scores are more individualizing/progressive, lower scores more binding/conservative. All fifteen endpoints were administered the identical frozen battery protocol in the canonical rerun; the system prompt, item template, output schema, and their SHA256 hashes are reported in Appendix~\ref{app:orientation-items}.
 
 \subsection{Administrative-Burden Simulation}
 \label{subsec:burden}
@@ -176,7 +176,7 @@ To test H3, we varied system-prompt frames within the same base model while hold
 
 \subsubsection{Model selection}
 
-The experiment used a purposive four-model subset (GPT-4.1, Llama 3.1 70B Instruct, Qwen3.7 Plus, Mistral Large) covering a frontier proprietary model, a hosted open-weight model, a non-U.S. ecosystem, and a low-PVOC case. This tests whether frame sensitivity can be induced across diverse endpoints, not its distribution over all fifteen.
+The experiment used a purposive four-model subset (GPT-4.1, Llama 3.1 70B Instruct, Qwen3.7 Plus, Mistral Large) covering a frontier proprietary model, a hosted open-weight model, a non-U.S. ecosystem, and a low-composite case. This tests whether frame sensitivity can be induced across diverse endpoints, not its distribution over all fifteen.
 
 \subsubsection{Frame conditions and randomization}
 
@@ -188,16 +188,16 @@ The frame effect is estimated with model and profile fixed effects and frame ind
 \subsection{Estimation Strategy}
 \label{sec:estimation}
 
-In H1 the PVOC varies only at the model level, so that analysis is descriptive; In H2, the primary specification uses model-by-profile pair fixed effects so that frame coefficients are identified from repetition-level variation within the same model--profile cell.
+In H1 the MFQ composite varies only at the model level, so that analysis is descriptive; In H2, the primary specification uses model-by-profile pair fixed effects so that frame coefficients are identified from repetition-level variation within the same model--profile cell.
 
 \subsubsection{Orientation-effect models (H1)}
 \label{sec:est-h1}
 
-The primary H1 analysis tests whether models with higher PVOC scores predict larger burden effects:
+The primary H1 analysis tests whether models with higher moral-foundations composite scores predict larger burden effects:
 \[
-\bar{\Delta}_m = \beta_0 + \beta_1 \text{PVOC}_m + \epsilon_m,
+\bar{\Delta}_m = \beta_0 + \beta_1 \text{MFQ}_m + \epsilon_m,
 \]
-where the PVOC is standardised across models: dimension scores are the unweighted means of their four reverse-coded items, each standardised across endpoints and combined with fixed unit weights, \(\mathrm{PVOC}_m = Z(\mathrm{AP})_m - Z(\mathrm{ST})_m - Z(\mathrm{CO})_m + Z(\mathrm{BS})_m + Z(\mathrm{CA})_m\) (Appendix~\ref{app:orientation-items}); because its variation is model-level, this is a descriptive cross-model association rather than a high-powered population estimate. We also fit each orientation dimension separately as a diagnostic check, not as a validated subscale.
+where the MFQ composite is standardised across models: each foundation score is the unweighted mean of its six items, each standardised across endpoints, and the composite is \(\mathrm{MFQ}_m = Z(\mathrm{care})_m + Z(\mathrm{fairness})_m - Z(\mathrm{loyalty})_m - Z(\mathrm{authority})_m - Z(\mathrm{sanctity})_m\) (Appendix~\ref{app:orientation-items}); because its variation is model-level, this is a descriptive cross-model association rather than a high-powered population estimate. We also fit each of the five foundations separately as a diagnostic check.
 
 \subsubsection{Narrative frame-decomposition models (H2)}
 \label{sec:est-h2}
@@ -206,7 +206,7 @@ H2 estimates a frame--outcome association model with one fixed effect per model-
 \[
 \Delta_{mir} = \alpha_{mi} + \sum_{k} \beta_k \mathbb{I}(k \in r_{mir}) + \varepsilon_{mir},
 \]
-where \(\alpha_{mi}\) is an indicator for the model--profile pair (405 pairs in the fifteen-model sample). The frame indicators are rationale-level and vary across the five repetitions of a pair, so the coefficients are identified exclusively from repetition-level changes in frame presence within the same model--profile pair. Pair fixed effects absorb the cell-specific baseline, including any model-specific response to particular profiles that separate model and profile fixed effects would leave in the error term; a specification with separate model and profile fixed effects (additive heterogeneity only) is reported as a sensitivity analysis in Appendix~\ref{app:h2-identification}. The PVOC does not enter the H2 model. Estimates are co-expression, not causal mediation, because willingness and rationales are generated in the same response; standard errors are clustered at the model--profile level and frame-specific \(p\)-values use Benjamini--Hochberg FDR at \(q=0.10\).
+where \(\alpha_{mi}\) is an indicator for the model--profile pair (405 pairs in the fifteen-model sample). The frame indicators are rationale-level and vary across the five repetitions of a pair, so the coefficients are identified exclusively from repetition-level changes in frame presence within the same model--profile pair. Pair fixed effects absorb the cell-specific baseline, including any model-specific response to particular profiles that separate model and profile fixed effects would leave in the error term; a specification with separate model and profile fixed effects (additive heterogeneity only) is reported as a sensitivity analysis in Appendix~\ref{app:h2-identification}. The MFQ composite does not enter the H2 model. Estimates are co-expression, not causal mediation, because willingness and rationales are generated in the same response; standard errors are clustered at the model--profile level and frame-specific \(p\)-values use Benjamini--Hochberg FDR at \(q=0.10\).
 
 \subsubsection{Frame-manipulation models (H3)}
 \label{sec:est-h3}
@@ -237,61 +237,61 @@ Table~S1 in the Online Supplement reports task-compliance diagnostics for the ex
 \subsection{Orientation Profiles and Predicted Burden Effects}
 \label{sec:results-orientation-burden}
 
-Table~\ref{tab:orientation_burden} reports each model's measured policy-value orientation together with predicted willingness under low- and high-burden conditions. Mean burden effects ($\bar{\Delta}$) range from 23.07 points (GPT-4o) to 55.44 points (Llama 3.1 8B Instruct) across models. Higher PVOC values indicate models expected to generate larger burden effects, and predicted willingness is lower under high-burden conditions for every model. Baseline willingness also varies substantially across models, which is why the analyses use the within-profile burden effect rather than raw willingness levels.
+Table~\ref{tab:orientation_burden} reports each model's measured moral-foundations profile together with predicted willingness under low- and high-burden conditions. Mean burden effects ($\bar{\Delta}$) range from 23.07 points (GPT-4o) to 55.44 points (Llama 3.1 8B Instruct) across models. The MFQ composite summarizes whether a model's profile is more individualizing (positive) or more binding (negative); predicted willingness is lower under high-burden conditions for every model. Baseline willingness also varies substantially across models, which is why the analyses use the within-profile burden effect rather than raw willingness levels.
 
 \begin{table}[htbp]
 \centering
-\caption{Policy-value orientation profiles and predicted administrative-burden effects by model}
+\caption{Moral-foundations profiles and predicted administrative-burden effects by model}
 \label{tab:orientation_burden}
 \small
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{3.5cm}rrrrr@{}}
 \toprule
-Model & PVOC & Low $W$ & High $W$ & $\bar{\Delta}$ & 95\% CI \\
+Model & MFQ & Low $W$ & High $W$ & $\bar{\Delta}$ & 95\% CI \\
 \midrule
-GPT-4.1 & 2.15 & 74.67 & 49.04 & 25.63 & [22.51, 28.75] \\
-Llama 3.1 70B Instruct & 1.94 & 80.00 & 50.96 & 29.04 & [25.47, 32.60] \\
-Llama 3.1 8B Instruct & 1.88 & 80.48 & 25.04 & 55.44 & [52.72, 58.17] \\
-DeepSeek-V3.2 & 1.05 & 75.76 & 37.96 & 37.79 & [35.80, 39.78] \\
-GPT-4o & 0.97 & 76.33 & 53.26 & 23.07 & [19.65, 26.50] \\
-Cohere Command R+ & 0.71 & 76.78 & 41.04 & 35.74 & [33.75, 37.73] \\
-Claude Haiku & 0.12 & 72.00 & 41.18 & 30.82 & [27.72, 33.93] \\
-Gemini 2.5 Pro & 0.07 & 77.44 & 23.52 & 53.93 & [50.91, 56.94] \\
-GPT-4.1 mini & $-$0.09 & 73.48 & 44.15 & 29.33 & [27.66, 31.01] \\
-Claude Sonnet 4.6 & $-$0.48 & 63.73 & 32.24 & 31.50 & [28.35, 34.65] \\
-Gemini 2.5 Flash & $-$1.02 & 81.63 & 33.48 & 48.15 & [44.51, 51.78] \\
-Kimi K2.6 & $-$1.11 & 74.31 & 36.19 & 38.13 & [35.70, 40.55] \\
-Claude Opus 4.8 & $-$1.36 & 70.44 & 34.63 & 35.81 & [32.52, 39.11] \\
-Qwen3.7 Plus & $-$2.27 & 83.33 & 28.87 & 54.45 & [51.65, 57.26] \\
-Mistral Large & $-$2.57 & 76.00 & 39.04 & 36.96 & [34.67, 39.25] \\
+Gemini 2.5 Pro & 2.81 & 77.44 & 23.52 & 53.93 & [50.91, 56.94] \\
+Gemini 2.5 Flash & 2.42 & 81.63 & 33.48 & 48.15 & [44.51, 51.78] \\
+GPT-4.1 & 0.94 & 74.67 & 49.04 & 25.63 & [22.51, 28.75] \\
+GPT-4.1 mini & 0.24 & 73.48 & 44.15 & 29.33 & [27.66, 31.01] \\
+Llama 3.1 70B Instruct & $-$0.30 & 80.00 & 50.96 & 29.04 & [25.47, 32.60] \\
+Claude Sonnet 4.6 & $-$0.32 & 63.73 & 32.24 & 31.50 & [28.35, 34.65] \\
+DeepSeek-V3.2 & $-$0.34 & 75.76 & 37.96 & 37.79 & [35.80, 39.78] \\
+Claude Opus 4.8 & $-$0.40 & 70.44 & 34.63 & 35.81 & [32.52, 39.11] \\
+Claude Haiku & $-$0.49 & 72.00 & 41.18 & 30.82 & [27.72, 33.93] \\
+GPT-4o & $-$0.57 & 76.33 & 53.26 & 23.07 & [19.65, 26.50] \\
+Qwen3.7 Plus & $-$0.58 & 83.33 & 28.87 & 54.45 & [51.65, 57.26] \\
+Llama 3.1 8B Instruct & $-$0.59 & 80.48 & 25.04 & 55.44 & [52.72, 58.17] \\
+Kimi K2.6 & $-$0.86 & 74.31 & 36.19 & 38.13 & [35.70, 40.55] \\
+Cohere Command R+ & $-$0.98 & 76.78 & 41.04 & 35.74 & [33.75, 37.73] \\
+Mistral Large & $-$0.98 & 76.00 & 39.04 & 36.96 & [34.67, 39.25] \\
 \bottomrule
 \end{tabular*}
 \begin{flushleft}
-\footnotesize Notes: PVOC = Policy-Value Orientation Composite, standardized across the fifteen-model sample. Low $W$ and High $W$ are mean predicted vaccination willingness scores under low- and high-burden conditions. $\bar{\Delta}$ = Low $W$ $-$ High $W$. 95\% CI calculated as $\bar{\Delta} \pm 1.96 \times SE$, where $SE$ is the standard error of the 27 profile-level burden effects (each profile-level effect is the mean over that profile's repetitions), so repetitions are not treated as independent observations. Table sorted by PVOC in descending order.
+\footnotesize Notes: MFQ = Moral Foundations Questionnaire composite, standardized across the fifteen-model sample (individualizing foundations care, fairness minus binding foundations loyalty, authority, sanctity). Low $W$ and High $W$ are mean predicted vaccination willingness scores under low- and high-burden conditions. $\bar{\Delta}$ = Low $W$ $-$ High $W$. 95\% CI calculated as $\bar{\Delta} \pm 1.96 \times SE$, where $SE$ is the standard error of the 27 profile-level burden effects (each profile-level effect is the mean over that profile's repetitions), so repetitions are not treated as independent observations. Table sorted by MFQ in descending order.
 \end{flushleft}
 \end{table}
 
 \subsection{Hypothesis Tests}
 \label{sec:results-hypotheses}
 
-H1 tests whether the model-level PVOC predicts cross-model variation in average burden effects; H2, whether rationale-level frames co-vary with predicted effects; and H3, whether assignment to a specified prompt-frame condition causally shifts predicted effects within a model. The three tests are independent: each addresses a distinct level of evidence and is informative regardless of the others.
+H1 tests whether the model-level MFQ composite predicts cross-model variation in average burden effects; H2, whether rationale-level frames co-vary with predicted effects; and H3, whether assignment to a specified prompt-frame condition causally shifts predicted effects within a model. The three tests are independent: each addresses a distinct level of evidence and is informative regardless of the others.
 
 \subsubsection{H1: Orientation--Effect Models}
 \label{subsubsec:results-h1}
 
-\textbf{Diagnostic 1 Result: Aggregate orientation performs poorly.} The PVOC does not predict cross-model variation in simulated burden effects ($\hat{\beta}=$ $-$2.14, 95\% CI [$-$6.23, 1.95], $R^2=0.090$); at N = 15 the minimum detectable $R^2$ is approximately 0.38. In this fifteen-endpoint sample, the PVOC did not provide a useful scalar cross-model audit signal for simulated burden effects.
+\textbf{Diagnostic 1 Result: Aggregate orientation performs poorly---even a validated instrument.} The MFQ composite does not predict cross-model variation in simulated burden effects ($\hat{\beta}=$ 2.96, 95\% CI [$-$2.17, 8.09], $R^2=0.11$); the purpose-built PVOC also does not ($\hat{\beta}=$ $-$2.14, 95\% CI [$-$6.23, 1.95], $R^2=0.09$). Both scalar aggregates---one purpose-built for this study, one a standard validated instrument in moral psychology---fail to predict which models produce larger burden effects. Because the two composites are constructed from entirely different item sets (a policy-specific battery vs.\ the MFQ-30), the common failure cannot be attributed to the psychometric limitations of a single instrument.
 
-Figure~\ref{fig:pvc_delta} shows the same pattern: the fitted line is shallow, and high-PVOC models do not produce larger effects (GPT-4.1 has the highest PVOC score and one of the smallest burden effects, $\bar{\Delta}=25.63$; Gemini 2.5 Pro has an essentially zero PVOC score and the second-largest, $53.93$; Llama 3.1 8B Instruct has the largest, $55.44$).
+Figure~\ref{fig:pvc_delta} shows the MFQ composite against mean burden effects: the fitted line is shallow, and models with more individualizing (higher-composite) orientations do not systematically produce smaller effects. Per-foundation diagnostics are consistent with the aggregate null: none of the five foundations reaches conventional significance (loyalty is the strongest, $\hat{\beta}=$ $-$9.34, $p=0.095$; sanctity $\hat{\beta}=$ $-$3.02, $p=0.250$), and the direction of the point estimates is not uniform across binding foundations.
 
-Three caveats qualify the null---the PVOC's equal weights and fixed directional signs, its limited internal consistency, and low model-level power---and are detailed in the Online Supplement; the null provides little evidence for a simple additive pathway without ruling out more granular channels of value sensitivity.
+The dual null---a validated instrument failing where an unvalidated one also failed---strengthens the conclusion that scalar aggregate orientation scores are an insensitive audit instrument for LLM simulation, regardless of instrument quality. It does not rule out more granular channels of value sensitivity, which Diagnostics 2 and 3 examine directly.
 
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.78\textwidth]{output.png}
-\caption{Policy-value orientation composite and predicted administrative-burden effects}
+\caption{Moral-foundations composite and predicted administrative-burden effects}
 \label{fig:pvc_delta}
 \begin{flushleft}
-\footnotesize Notes: Each point represents one model in the expanded fifteen-model sample. The horizontal axis reports the model's PVOC, and the vertical axis reports the model-level average burden effect, \(\bar{\Delta}_m = \bar{W}^{low}_m - \bar{W}^{high}_m\). The dashed line shows the fitted bivariate regression. The shallow fitted line and low \(R^2 = 0.090\) are consistent with the null H1 result.
+\footnotesize Notes: Each point represents one model in the fifteen-model sample. The horizontal axis reports the model's MFQ-30 composite (standardized individualizing minus binding foundations), and the vertical axis reports the model-level average burden effect, \(\bar{\Delta}_m = \bar{W}^{low}_m - \bar{W}^{high}_m\). The dashed line shows the fitted bivariate regression. The shallow fitted line and low \(R^2 = 0.11\) are consistent with the null H1 result for the validated instrument.
 \end{flushleft}
 \end{figure}
 \clearpage
@@ -299,7 +299,7 @@ Three caveats qualify the null---the PVOC's equal weights and fixed directional 
 \subsubsection{H2: Narrative Frame-Decomposition Analysis}
 \label{subsubsec:results-h2}
 
-H2 asks whether interpretive frames in model rationales co-vary with predicted burden effects, independently of any aggregate orientation score. It is designed as a frame--outcome association analysis, not as a causal pathway from PVOC to burden predictions.
+H2 asks whether interpretive frames in model rationales co-vary with predicted burden effects, independently of any aggregate orientation score. It is designed as a frame--outcome association analysis, not as a causal pathway from MFQ to burden predictions.
 
 Three of the five frames varied meaningfully in the high-burden rationales: access-barrier reasoning in 43.2\% (after recoding to require an explicit link between procedural costs and reduced access, resource constraints, work flexibility, childcare, provider access, or socioeconomic vulnerability) and coercive-backlash in 7.7\%. Collective-responsibility reasoning appeared in only 0.05\% of rationales once the coding rule was corrected: the original rule matched the bare phrase ``public health,'' which fired almost exclusively on ``trust in public health (authorities)'' (1{,}495 of the 2{,}019 rationales) and ``public health center'' (the vaccination site; 81 rationales) rather than on collective-responsibility language. After excluding that pattern, only one rationale expressed a genuine collective-responsibility frame. Autonomy infringement and procedural legitimacy were near zero and are reported descriptively only.
 
@@ -325,7 +325,7 @@ Coercive backlash & 7.7\% & 1.21 & 1.82 & [\(-2.35\), 4.77] & 0.86 & 1.59 \\
 \end{tabular}
 }
 \begin{flushleft}
-\footnotesize Notes: The primary specification includes one fixed effect per model--profile pair (405 pairs) plus the retained rationale-frame indicators; coefficients are therefore identified exclusively from repetition-level changes in frame presence within the same model--profile pair, and standard errors are clustered at the model--profile level. \(N=2{,}019\). Collective responsibility is dropped from the primary specification because the corrected coding leaves only one positive rationale (0.05\%), giving the indicator no within-pair variation. The two-way column reports a specification with separate model and profile fixed effects (additive heterogeneity only) and is shown for comparison. \(p\)-values are Benjamini--Hochberg adjusted across the retained frames (\(q=0.10\)); both are non-significant under the primary specification. Prevalence is the share of high-burden rationales expressing the frame. Only 7.8\% of the variance in the burden effect \(\Delta = W^{low} - W^{high}\) occurs within model--profile pairs (182 of 405 pairs show no within-pair variation in \(\Delta\)), and the frame indicators are constant across repetitions in 237 (access barriers) and 362 (coercive backlash) of the 405 pairs, so the pair-fixed-effects estimates rest on limited within-cell variation. Leave-one-out ranges for the primary specification and the full identification diagnostics are reported in Appendix~\ref{app:h2-identification}. The table reports frame--outcome associations rather than formal mediation: PVOC-to-frame paths and \(a \times b\) products are not interpreted as causal mediation estimates because PVOC varies only at the model level and is not experimentally assigned.
+\footnotesize Notes: The primary specification includes one fixed effect per model--profile pair (405 pairs) plus the retained rationale-frame indicators; coefficients are therefore identified exclusively from repetition-level changes in frame presence within the same model--profile pair, and standard errors are clustered at the model--profile level. \(N=2{,}019\). Collective responsibility is dropped from the primary specification because the corrected coding leaves only one positive rationale (0.05\%), giving the indicator no within-pair variation. The two-way column reports a specification with separate model and profile fixed effects (additive heterogeneity only) and is shown for comparison. \(p\)-values are Benjamini--Hochberg adjusted across the retained frames (\(q=0.10\)); both are non-significant under the primary specification. Prevalence is the share of high-burden rationales expressing the frame. Only 7.8\% of the variance in the burden effect \(\Delta = W^{low} - W^{high}\) occurs within model--profile pairs (182 of 405 pairs show no within-pair variation in \(\Delta\)), and the frame indicators are constant across repetitions in 237 (access barriers) and 362 (coercive backlash) of the 405 pairs, so the pair-fixed-effects estimates rest on limited within-cell variation. Leave-one-out ranges for the primary specification and the full identification diagnostics are reported in Appendix~\ref{app:h2-identification}. The table reports frame--outcome associations rather than formal mediation: MFQ-to-frame paths and \(a \times b\) products are not interpreted as causal mediation estimates because MFQ varies only at the model level and is not experimentally assigned.
 \end{flushleft}
 \end{table}
 
@@ -338,7 +338,7 @@ Figure~\ref{fig:h3_forest} reports pooled frame effects against the neutral fram
 
 These are within-model--profile frame contrasts, not population-level causal effects: the observations are repeated queries of 27 constructed test cases, so the intervals reflect within-profile consistency of responses at temperature = 0 in this controlled set of constructed model--profile test cases rather than population-level precision. Effect sizes (4.96, 4.84, and 10.88 points pooled, up to 20.11 points model-specifically) are the primary quantities of interest, with uncertainty quantified by clustered standard errors.
 
-Because each model-specific regression rests on 27 profile clusters, inference was re-checked with a wild cluster bootstrap-$t$ and a finite-sample corrected covariance; no conclusion changes, including the marginal equity/access contrast for Mistral Large ($p=0.027$ bootstrap, $0.030$ corrected) and the autonomy reversal for Qwen3.7 Plus ($-2.87$, 95\% CI $[-4.53, -1.22]$; $p=0.002$). Pooled effects follow the theoretical expectations in three of the four models, and Mistral Large---the lowest-PVOC model in the subset---shifts in the expected direction on all three frames. H3 thus provides the clearest evidence that an assigned prompt clause shifts simulated effects within a model (by up to 20 points on a 0--100 scale, with collective obligation reducing effects in all four models), while the direction of that sensitivity is model-specific: a frame that amplifies burden sensitivity in one endpoint can attenuate it in another.
+Because each model-specific regression rests on 27 profile clusters, inference was re-checked with a wild cluster bootstrap-$t$ and a finite-sample corrected covariance; no conclusion changes, including the marginal equity/access contrast for Mistral Large ($p=0.027$ bootstrap, $0.030$ corrected) and the autonomy reversal for Qwen3.7 Plus ($-2.87$, 95\% CI $[-4.53, -1.22]$; $p=0.002$). Pooled effects follow the theoretical expectations in three of the four models, and Mistral Large---the lowest-MFQ model in the subset---shifts in the expected direction on all three frames. H3 thus provides the clearest evidence that an assigned prompt clause shifts simulated effects within a model (by up to 20 points on a 0--100 scale, with collective obligation reducing effects in all four models), while the direction of that sensitivity is model-specific: a frame that amplifies burden sensitivity in one endpoint can attenuate it in another.
 
 Results were essentially unchanged when model-by-profile pair fixed effects replaced separate model and profile fixed effects (pooled autonomy $+4.96$, collective obligation $-10.88$, equity/access $+4.86$; Appendix~\ref{app:h3-pairfe}), confirming that the assigned-frame contrasts are identified within the same model--profile cells.
 
@@ -354,7 +354,7 @@ Results were essentially unchanged when model-by-profile pair fixed effects repl
 \subsection{Robustness Checks}
 \label{sec:results-robustness}
 
-Robustness checks leave every conclusion unchanged. The H1 null persists across dimension-specific and alternative constructions (each of the five dimensions is fitted separately, none significant; Table~\ref{tab:h1_dimension_checks}; and the PVOC slope stays between $-2.26$ and $-2.07$ in leave-one-profile-out fits, never reaching conventional significance); under the primary pair-fixed-effects specification no retained H2 frame is significant in any leave-one-model-out or leave-one-profile-out fit, and the access-barrier coefficient remains positive in 14 of 15 leave-one-model-out and 25 of 27 leave-one-profile-out fits while the other frames remain null; and all three H3 contrasts retain sign and significance in every leave-one-profile-out fit, with model-specific regressions showing that the pooled manipulation is not driven by any single base model. Detailed results are reported in the Online Supplement.
+Robustness checks leave every conclusion unchanged. The H1 null persists across dimension-specific and alternative constructions (each of the five MFQ foundations is fitted separately, none significant; Table~\ref{tab:h1_dimension_checks}; the MFQ composite slope stays between 2.5 and 3.4 in leave-one-profile-out fits, never reaching conventional significance); under the primary pair-fixed-effects specification no retained H2 frame is significant in any leave-one-model-out or leave-one-profile-out fit, and the access-barrier coefficient remains positive in 14 of 15 leave-one-model-out and 25 of 27 leave-one-profile-out fits while the other frames remain null; and all three H3 contrasts retain sign and significance in every leave-one-profile-out fit, with model-specific regressions showing that the pooled manipulation is not driven by any single base model. Detailed results are reported in the Online Supplement.
 
 
 \section{Discussion}
@@ -362,7 +362,7 @@ Robustness checks leave every conclusion unchanged. The H1 null persists across 
 
 This study develops and evaluates a three-level diagnostic framework for auditing normative-frame sensitivity in LLM-assisted policy simulation. Using administrative burden in vaccination access as a controlled HSR testbed, we demonstrate that seemingly technical simulated policy-effect estimates depend on analyst-selected normative framing.
 
-\textbf{Summary of Diagnostic Results.} Diagnostic 1 shows that aggregate policy-value scores do not predict cross-model variation. Diagnostic 2 does not: under model-by-profile pair fixed effects, none of the retained rationale frames predicts burden effects. The access-barrier association that appears when only additive model and profile heterogeneity is removed disappears once pair-specific heterogeneity is absorbed, and only 7.8\% of the variance in the burden effect lies within model--profile pairs. Diagnostic 3 shows that assigned frames shift estimated effects---by 4.8 to 10.9 points pooled and up to 20.1 points model-specifically, with the autonomy contrast differing in sign across models.
+\textbf{Summary of Diagnostic Results.} Diagnostic 1 shows that aggregate value scores---both a purpose-built composite and a validated moral-foundations instrument---do not predict cross-model variation. Diagnostic 2 does not: under model-by-profile pair fixed effects, none of the retained rationale frames predicts burden effects. The access-barrier association that appears when only additive model and profile heterogeneity is removed disappears once pair-specific heterogeneity is absorbed, and only 7.8\% of the variance in the burden effect lies within model--profile pairs. Diagnostic 3 shows that assigned frames shift estimated effects---by 4.8 to 10.9 points pooled and up to 20.1 points model-specifically, with the autonomy contrast differing in sign across models.
 
 Taken together, the three diagnostics establish that, in this controlled testbed, LLM-assisted policy simulation is normatively frame-sensitive. The same model, same synthetic profiles, and same policy scenario can produce materially different simulated policy-effect estimates depending on the normative lens activated by the prompt.
 
@@ -380,7 +380,7 @@ The findings have three implications. First, audits should move beyond stated-op
 
 \subsection{Limitations and Future Research}
 
-Six limitations qualify the findings. \textbf{(1) Model sample.} The cross-model analyses rest on fifteen commercially available endpoints, which are a convenience sample of the models available at the time of data collection rather than a random or systematically stratified sample of model families, sizes, or training regimes. At N = 15, model-level tests have low power (the approximate 80\% minimum detectable slope for the PVOC is 5.7 points), so H1 and the dimension-specific estimates should be read as descriptive diagnostics rather than high-powered population estimates. The PVOC is theoretically motivated but not yet psychometrically validated: internal consistency is adequate only for the collective-obligation dimension, and the collective-obligation association weakened once the sample was expanded, so the battery and its directional weights require validation across larger and more systematically sampled endpoint sets. In addition, H2 and H3 reuse repeated queries of the same synthetic profiles; standard errors are clustered at the model--profile level, but the resulting intervals reflect within-profile consistency of LLM responses rather than population-level precision, which is why effect sizes and their uncertainty intervals rather than $p$-values are the primary quantities of interest.
+Six limitations qualify the findings. \textbf{(1) Model sample.} The cross-model analyses rest on fifteen commercially available endpoints, which are a convenience sample of the models available at the time of data collection rather than a random or systematically stratified sample of model families, sizes, or training regimes. At N = 15, model-level tests have low power (the approximate 80\% minimum detectable slope for a model-level composite is about 5.7 points), so H1 and the foundation-specific estimates should be read as descriptive diagnostics rather than high-powered population estimates. The dual null---neither the purpose-built PVOC nor the validated MFQ-30 predicts cross-model burden effects---should be read accordingly: it strengthens, but cannot prove, the claim that scalar aggregate value scores are insensitive audit instruments for LLM simulation. In addition, H2 and H3 reuse repeated queries of the same synthetic profiles; standard errors are clustered at the model--profile level, but the resulting intervals reflect within-profile consistency of LLM responses rather than population-level precision, which is why effect sizes and their uncertainty intervals rather than $p$-values are the primary quantities of interest.
 
 \textbf{(2) Synthetic testbed.} The twenty-seven standardized profiles and the vaccination-access scenario are controlled test cases, not a representative sample of U.S. vaccination programs or of the populations they serve. The income-verification and residency requirements in the high-burden condition are stylized procedural barriers typical of means-tested programs, not realistic requirements for vaccination access. The findings therefore speak to LLM-assisted policy simulation methodology---in particular, its sensitivity to normative framing---and not to the magnitude of administrative burden in real health service delivery or to the behavioral dynamics of vaccination uptake.
 
@@ -394,7 +394,7 @@ Six limitations qualify the findings. \textbf{(1) Model sample.} The cross-model
 
 \subsection{Conclusion}
 
-The central finding is that LLM-assisted policy simulation creates a new methodological problem for HSR: seemingly technical simulated policy-effect estimates may depend on analyst-selected normative framing. The three-level diagnostic framework demonstrates that (1) the aggregate PVOC used here was not informative as a cross-model predictor, (2) naturally expressed rationale frames did not provide a robust within-pair diagnostic of simulated effect magnitude, and (3) experimentally assigned governance-value frames materially shift estimated policy effects.
+The central finding is that LLM-assisted policy simulation creates a new methodological problem for HSR: seemingly technical simulated policy-effect estimates may depend on analyst-selected normative framing. The three-level diagnostic framework demonstrates that (1) aggregate value scores---whether a purpose-built composite or the validated MFQ-30---were not informative as cross-model predictors of simulated burden effects, (2) naturally expressed rationale frames did not provide a robust within-pair diagnostic of simulated effect magnitude, and (3) experimentally assigned governance-value frames materially shift estimated policy effects.
 
 For HSR researchers using LLMs for policy simulation, the implication is clear: report frame sensitivity rather than treating one prompt/model output as a neutral point estimate. Analysts should document model identity, prompt framing, scenario wording, and robustness to alternative frames. The goal is not to eliminate values from policy simulation, but to make their influence measurable, transparent, and contestable---so that the method can be used responsibly as an HSR tool.
 
