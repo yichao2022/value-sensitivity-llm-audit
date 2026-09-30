@@ -918,7 +918,14 @@ The original nine-model H1 analysis was underpowered for small or moderate model
 
 For this reason, the H1 estimates should be interpreted as descriptive diagnostics rather than high-powered population estimates. The expanded results are most informative as evidence against a large linear association between the composite MFQ index and simulated burden effects in this model sample. They should not be read as evidence that moral foundations are irrelevant to LLM behavior. Instead, the strongest evidence in the paper comes from the randomized within-model frame-manipulation experiment; H2 shows that naturally expressed rationale frames do not provide a robust within-pair diagnostic.
 
+% Guard: this file is \input{} by main.tex (which has its own \bibliography at the
+% end of the main text). Only emit \bibliographystyle/\bibliography when compiled
+% standalone, otherwise main.aux gets duplicate \bibstyle/\bibdata and bibtex fails,
+% dropping every citation.
+\ifdefined\vslaMainDocument
+\else
 \bibliographystyle{plainnat}
 \bibliography{references}
+\fi
 
 \end{document}
