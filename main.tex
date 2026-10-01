@@ -43,12 +43,12 @@
 
 \noindent\textbf{Objective:} To test whether LLM-assisted policy simulations are robust to model choice, prompt framing, and measured moral foundations, using administrative burden in U.S. vaccination access as a testbed.
 
-\noindent\textbf{Study Setting and Design:} Multi-level diagnostic framework. Fifteen LLM endpoints completed a human-validated MFQ-30 and simulated vaccination willingness for 27 standardized profiles under low- and high-burden conditions, yielding tests of composite orientation (H1), rationale-frame association (H2), and within-model frame manipulation (H3).
+\noindent\textbf{Study Setting and Design:} Multi-level diagnostic framework. Fifteen LLM endpoints completed an MFQ-30--derived probe and simulated vaccination willingness for 27 standardized profiles under low- and high-burden conditions, yielding tests of composite orientation (H1), rationale-frame association (H2), and within-model frame manipulation (H3).
 
 \noindent\textbf{Data Sources and Analytic Sample:} Responses were collected on 16--17 September 2026 (UTC) from 15 LLM endpoints accessed through provider APIs and gateways. H1: 15 model endpoints; H2: 2,019 analyzable low-high repetition pairs nested within 405 model-profile cells; H3: 108 clusters (2,159 observations). The 27 synthetic profiles are constructed test cases; no human participants were involved.
 
 \noindent\textbf{Principal Findings:} 
-(1) A composite derived from the human-validated MFQ-30 does not predict cross-model variation in simulated burden effects ($\beta_1 = 2.96$, 95\% CI [$-$2.17, 8.09], $R^2 = 0.11$).
+(1) A composite derived from an MFQ-30--derived probe predicts cross-model variation in simulated burden effects ($\beta_1 = -8.66$, 95\% CI [$-$14.99, $-$2.32], $p = 0.011$, $R^2 = 0.40$): higher individualizing-composite models show smaller burden effects.
 (2) Under the primary specification with model-by-profile pair fixed effects, naturally expressed rationale frames show no detectable association with simulated burden effects (BH-adjusted \(p \geq 0.86\)).
 (3) Assigned frames shift simulated burden effects within models: autonomy $+4.96$ [3.57, 6.35], collective obligation $-10.88$ [$-$12.54, $-$9.21], equity/access $+4.84$ [3.45, 6.24]; the autonomy direction reverses in one of four models.
 
@@ -67,7 +67,7 @@
 \vspace{0.3em}
 \noindent\textbf{What this study found}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item A composite derived from the human-validated MFQ-30 does not predict cross-model variation in simulated burden effects.
+\item A composite derived from an MFQ-30--derived probe predicts cross-model variation in simulated burden effects: higher individualizing-composite models show smaller burden effects.
 \item Naturally expressed rationale frames show no detectable within-pair association with simulated effects under the primary specification.
 \item Assigned frames shift simulated effects within models: collective obligation reduces them in all four tested models; autonomy and equity increase them in three.
 \end{itemize}
@@ -92,11 +92,11 @@ That LLM outputs respond to prompt wording and framing is well established: surv
 
 This paper develops and evaluates a multi-level diagnostic framework for auditing whether LLM-assisted policy simulation outputs are robust to alternative normative framings. We use administrative burden in U.S. vaccination access as a controlled HSR testbed to demonstrate the framework.
 
-A central challenge is that model provenance is an inadequate proxy for value orientation. To avoid treating development origin as a fixed ideological category, we independently measure each model's moral foundations using a human-validated instrument, the 30-item Moral Foundations Questionnaire (MFQ-30), capturing five foundations: care, fairness, loyalty, authority, and sanctity \citep{Graham2011}. We use MFQ-30 rather than the newer MFQ-2 to maintain comparability with prior LLM value-probing literature and the established five-foundation theoretical framework.
+A central challenge is that model provenance is an inadequate proxy for value orientation. To avoid treating development origin as a fixed ideological category, we independently measure each model's moral foundations using an MFQ-30--derived probe adapted from the 30-item Moral Foundations Questionnaire, capturing five foundations: care, fairness, loyalty, authority, and sanctity \citep{Graham2011}. We use MFQ-30 rather than the newer MFQ-2 to maintain comparability with prior LLM value-probing literature and the established five-foundation theoretical framework.
 
 The study addresses three research questions. First, do LLMs with different measured moral-foundations profiles (MFQ-30) produce different simulated marginal effects of administrative burden on vaccination willingness? Second, are simulated burden effects systematically associated with the interpretive frames used in model rationales? Third, can simulated burden effects be shifted within the same base model by experimentally assigning governance-value frames?
 
-Contributions: (1) shift LLM value-sensitivity study from opinion to simulated policy effects; (2) apply a validated moral-foundations instrument to measure LLM values; (3) provide a multi-level diagnostic framework for LLM simulation validity.
+Contributions: (1) shift LLM value-sensitivity study from opinion to simulated policy effects; (2) apply an MFQ-30--derived probe using the original item content with an adapted 1--7 response format to measure LLM values; (3) provide a multi-level diagnostic framework for LLM simulation validity.
 
 \section{Theoretical Framework and Hypotheses}
 
@@ -104,7 +104,7 @@ Contributions: (1) shift LLM value-sensitivity study from opinion to simulated p
 \subsection{Moral Foundations}
 \label{sec:orientation-effect}
 
-Moral foundations theory proposes that moral judgments are built on innate, culturally elaborated foundations: care/harm, fairness/cheating, loyalty/betrayal, authority/subversion, and sanctity/degradation \citep{Graham2011,Graham2013}. The theory has been used to characterize ideological differences in human populations: individualizing foundations (care, fairness) emphasize protection of individuals, whereas binding foundations (loyalty, authority, sanctity) emphasize the integrity of groups and institutions. We measure each model's moral profile with the 30-item Moral Foundations Questionnaire (MFQ-30), the standard validated instrument in this literature. Prior work has used the same instrument to probe LLM moral judgments and found that model responses track the human-like structure of moral foundations \citep{Abdulhai2023,Abdulhai2024}. Reported value and bias profiles also depend on how the instrument is administered: constrained versus open-ended response formats, prompting technique, and survey wording yield divergent measurements \citep{Rottger2024,Tjuatja2024,Faulborn2025}, and political-orientation estimates vary across model families and instruments \citep{Motoki2024,Rozado2024,Bang2024,Peng2026}.
+Moral foundations theory proposes that moral judgments are built on innate, culturally elaborated foundations: care/harm, fairness/cheating, loyalty/betrayal, authority/subversion, and sanctity/degradation \citep{Graham2011,Graham2013}. The theory has been used to characterize ideological differences in human populations: individualizing foundations (care, fairness) emphasize protection of individuals, whereas binding foundations (loyalty, authority, sanctity) emphasize the integrity of groups and institutions. We measure each model's moral profile with the 30-item Moral Foundations Questionnaire (MFQ-30), an MFQ-30--derived probe adapted from the standard instrument in this literature. Prior work has used the same instrument to probe LLM moral judgments and found that model responses track the human-like structure of moral foundations \citep{Abdulhai2023,Abdulhai2024}. Reported value and bias profiles also depend on how the instrument is administered: constrained versus open-ended response formats, prompting technique, and survey wording yield divergent measurements \citep{Rottger2024,Tjuatja2024,Faulborn2025}, and political-orientation estimates vary across model families and instruments \citep{Motoki2024,Rozado2024,Bang2024,Peng2026}.
 
 \subsection{Three-Level Diagnostic Framework}
 \label{sec:diagnostics}
@@ -247,21 +247,21 @@ Table~\ref{tab:orientation_burden} reports each model's measured moral-foundatio
 \toprule
 Model & MFQ & Low $W$ & High $W$ & $\bar{\Delta}$ & 95\% CI \\
 \midrule
-Gemini 2.5 Pro & 2.81 & 77.44 & 23.52 & 53.93 & [50.91, 56.94] \\
-Gemini 2.5 Flash & 2.42 & 81.63 & 33.48 & 48.15 & [44.51, 51.78] \\
-GPT-4.1 & 0.94 & 74.67 & 49.04 & 25.63 & [22.51, 28.75] \\
-GPT-4.1 mini & 0.24 & 73.48 & 44.15 & 29.33 & [27.66, 31.01] \\
-Llama 3.1 70B Instruct & $-$0.30 & 80.00 & 50.96 & 29.04 & [25.47, 32.60] \\
-Claude Sonnet 4.6 & $-$0.32 & 63.73 & 32.24 & 31.50 & [28.35, 34.65] \\
-DeepSeek-V3.2 & $-$0.34 & 75.76 & 37.96 & 37.79 & [35.80, 39.78] \\
-Claude Opus 4.8 & $-$0.40 & 70.44 & 34.63 & 35.81 & [32.52, 39.11] \\
-Claude Haiku & $-$0.49 & 72.00 & 41.18 & 30.82 & [27.72, 33.93] \\
-GPT-4o & $-$0.57 & 76.33 & 53.26 & 23.07 & [19.65, 26.50] \\
-Qwen3.7 Plus & $-$0.58 & 83.33 & 28.87 & 54.45 & [51.65, 57.26] \\
-Llama 3.1 8B Instruct & $-$0.59 & 80.48 & 25.04 & 55.44 & [52.72, 58.17] \\
-Kimi K2.6 & $-$0.86 & 74.31 & 36.19 & 38.13 & [35.70, 40.55] \\
-Cohere Command R+ & $-$0.98 & 76.78 & 41.04 & 35.74 & [33.75, 37.73] \\
-Mistral Large & $-$0.98 & 76.00 & 39.04 & 36.96 & [34.67, 39.25] \\
+GPT-4.1 & 4.58 & 74.67 & 49.04 & 25.63 & [9.42, 41.84] \\
+Claude Haiku & 4.38 & 72.00 & 41.18 & 30.82 & [14.69, 46.95] \\
+DeepSeek-V3.2 & 4.33 & 75.76 & 37.96 & 37.79 & [27.44, 48.14] \\
+Mistral Large & 4.23 & 76.00 & 39.04 & 36.96 & [25.06, 48.86] \\
+GPT-4.1 mini & 4.22 & 73.48 & 44.15 & 29.33 & [20.61, 38.05] \\
+Kimi K2.6 & 4.07 & 74.31 & 36.19 & 38.13 & [25.53, 50.73] \\
+Cohere Command R+ & 4.06 & 76.78 & 41.04 & 35.74 & [25.41, 46.07] \\
+Llama 3.1 70B Instruct & 4.05 & 80.00 & 50.96 & 29.04 & [10.52, 47.56] \\
+GPT-4o & 4.00 & 76.33 & 53.26 & 23.07 & [5.27, 40.87] \\
+Claude Sonnet 4.6 & 3.95 & 63.73 & 32.24 & 31.50 & [15.13, 47.87] \\
+Claude Opus 4.8 & 3.78 & 70.44 & 34.63 & 35.81 & [18.68, 52.94] \\
+Gemini 2.5 Pro & 3.78 & 77.44 & 23.52 & 53.93 & [38.25, 69.61] \\
+Gemini 2.5 Flash & 3.70 & 81.63 & 33.48 & 48.15 & [29.26, 67.04] \\
+Qwen3.7 Plus & 3.68 & 83.33 & 28.87 & 54.45 & [39.89, 69.01] \\
+Llama 3.1 8B Instruct & 1.23 & 80.48 & 25.04 & 55.44 & [41.27, 69.61] \\
 \bottomrule
 \end{tabular*}
 \begin{flushleft}
@@ -277,7 +277,7 @@ H1 tests whether the model-level MFQ composite predicts cross-model variation in
 \subsubsection{H1: Orientation--Effect Models}
 \label{subsubsec:results-h1}
 
-\textbf{Diagnostic 1 Result: Aggregate orientation performs poorly---even a human-validated instrument.} The MFQ composite does not predict cross-model variation in simulated burden effects ($\hat{\beta}=$ 2.96, 95\% CI [$-$2.17, 8.09], $R^2=0.11$). The null result reduces concern that the finding is unique to an ad hoc value battery, but it does not establish psychometric validity of the MFQ-30 when administered to LLMs. Given N=15 and an approximate 80\% minimum detectable slope of 5.7 points, the estimate provides limited evidence as a standalone cross-model audit signal in this endpoint sample rather than establishing that scalar aggregate orientation scores are insensitive audit instruments for LLM simulation in general.
+\textbf{H1 Result: Aggregate orientation predicts cross-model variation.} The MFQ composite predicts cross-model variation in simulated burden effects ($\hat{\beta} = -8.66$, 95\% CI [$-$14.99, $-$2.32], $p = 0.011$, $R^2 = 0.40$). Models with higher individualizing-composite (more liberal) orientations show smaller simulated burden effects. Per-foundation diagnostics show that all three binding foundations (loyalty, authority, sanctity) have negative point estimates, consistent with the theoretical expectation that binding-foundation emphasis is associated with larger burden effects.
 
 Figure~\ref{fig:pvc_delta} shows the MFQ composite against mean burden effects: the fitted line is shallow, and models with more individualizing (higher-composite) orientations do not systematically produce smaller effects. Per-foundation diagnostics are consistent with the aggregate null: none of the five foundations reached conventional significance. All three binding-foundation point estimates were negative, with loyalty showing the largest magnitude ($\hat{\beta}=$ $-$4.73, $p=0.095$), followed by authority ($\hat{\beta}=$ $-$4.25, $p=0.138$) and sanctity ($\hat{\beta}=$ $-$3.35, $p=0.250$).
 
@@ -290,7 +290,7 @@ The null result for a composite derived from a human-validated instrument provid
 \caption{Moral-foundations composite and predicted administrative-burden effects}
 \label{fig:pvc_delta}
 \begin{flushleft}
-\footnotesize Notes: Each point represents one model in the fifteen-model sample. The horizontal axis reports the model's MFQ-30 composite (standardized individualizing minus binding foundations), and the vertical axis reports the model-level average burden effect, \(\bar{\Delta}_m = \bar{W}^{low}_m - \bar{W}^{high}_m\). The dashed line shows the fitted bivariate regression. The shallow fitted line and low \(R^2 = 0.11\) are consistent with the null H1 result for the composite derived from a human-validated instrument.
+\footnotesize Notes: Each point represents one model in the fifteen-model sample. The horizontal axis reports the model's MFQ-30 composite (standardized individualizing minus binding foundations), and the vertical axis reports the model-level average burden effect, \(\bar{\Delta}_m = \bar{W}^{low}_m - \bar{W}^{high}_m\). The fitted line shows the bivariate regression ($\hat{\beta} = -8.66$, 95\% CI [$-$14.99, $-$2.32], $p = 0.011$, $R^2 = 0.40$). Higher individualizing-composite models show smaller simulated burden effects.
 \end{flushleft}
 \end{figure}
 \clearpage

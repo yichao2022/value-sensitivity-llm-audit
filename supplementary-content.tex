@@ -1,0 +1,901 @@
+\maketitle
+
+% Supplement tables are numbered S1, S2, \dots in both the standalone supplement and the
+% compiled manuscript, so a reader never has to guess which file a "Table 3" lives in.
+\setcounter{table}{0}
+\renewcommand{\thetable}{S\arabic{table}}
+
+This Online Supplement contains supporting materials for the main text. Appendices are presented in the order in which they are first cited.
+
+\appendix
+
+\section{Data Quality and Simulation Diagnostics}
+\label{sec:data-quality}
+
+Table~\ref{tab:data_quality} reports task-compliance diagnostics for the expanded fifteen-model simulation (4,050 raw responses; 2,025 possible model--profile--repetition pairs, of which 2,019 are analyzable because six high-burden responses failed structure checks). JSON validity, score-range compliance, and non-refusal rates were 100\% for fourteen of fifteen models; Gemini 2.5 Flash had six malformed responses (97.8\% compliance). The flip rate was 0\% for every model, indicating that the high-burden condition moved mean predicted willingness in the expected direction in every profile, i.e., directional consistency rather than evidence that models understood the manipulation. Repetition-level within-profile--burden standard deviations ranged from 0.03 to 3.14 points on the 0--100 scale, indicating high within-model stability.
+
+\begin{table}[htbp]
+\centering
+\caption{Data quality and simulation diagnostics by model}
+\label{tab:data_quality}
+\setlength{\tabcolsep}{4pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Model & $N$ & JSON\% & Score\% & NonRef\% & Mean $W$ & StabSD & DeltaSD & Flip\% & ClassAcc\% \\
+\midrule
+Llama 3.1 70B & 270 & 100.0 & 100.0 & 100.0 & 65.48 & 0.87 & 9.45 & 0.0 & 100.0 \\
+GPT-4o & 270 & 100.0 & 100.0 & 100.0 & 64.80 & 0.97 & 9.08 & 0.0 & 100.0 \\
+GPT-4.1 & 270 & 100.0 & 100.0 & 100.0 & 61.85 & 0.69 & 8.27 & 0.0 & 100.0 \\
+Cohere Command R+ & 270 & 100.0 & 100.0 & 100.0 & 58.91 & 2.16 & 5.27 & 0.0 & 100.0 \\
+GPT-4.1 mini & 270 & 100.0 & 100.0 & 100.0 & 58.81 & 0.94 & 4.45 & 0.0 & 100.0 \\
+Gemini 2.5 Flash & 270 & 97.8 & 97.8 & 100.0 & 57.92 & 3.06 & 9.64 & 0.0 & 100.0 \\
+Mistral Large & 270 & 100.0 & 100.0 & 100.0 & 57.52 & 0.40 & 6.07 & 0.0 & 100.0 \\
+DeepSeek-V3.2 & 270 & 100.0 & 100.0 & 100.0 & 56.86 & 1.24 & 5.28 & 0.0 & 100.0 \\
+Claude Haiku & 270 & 100.0 & 100.0 & 100.0 & 56.59 & 0.03 & 8.23 & 0.0 & 100.0 \\
+Qwen3.7 Plus & 270 & 100.0 & 100.0 & 100.0 & 56.10 & 2.23 & 7.43 & 0.0 & 100.0 \\
+Kimi K2.6 & 270 & 100.0 & 100.0 & 100.0 & 55.25 & 1.63 & 6.43 & 0.0 & 100.0 \\
+Llama 3.1 8B & 270 & 100.0 & 100.0 & 100.0 & 52.76 & 3.14 & 7.23 & 0.0 & 100.0 \\
+Claude Opus 4.8 & 270 & 100.0 & 100.0 & 100.0 & 52.54 & 0.54 & 8.74 & 0.0 & 100.0 \\
+Gemini 2.5 Pro & 270 & 100.0 & 100.0 & 100.0 & 50.48 & 3.03 & 8.00 & 0.0 & 100.0 \\
+Claude Sonnet 4.6 & 270 & 100.0 & 100.0 & 100.0 & 47.99 & 0.44 & 8.35 & 0.0 & 100.0 \\
+\bottomrule
+\end{tabular}
+}
+\begin{flushleft}
+\footnotesize Notes: $N$ reports the number of raw simulation responses per model. JSON\% is the percentage of outputs parsed as valid JSON. Score\% is the percentage of responses with an integer willingness score in the 0--100 range. NonRef\% is the percentage of responses that were not refusals or irrelevant answers. Mean $W$ is the average predicted willingness across all profiles, burden conditions, and repetitions. StabSD is the mean within-profile--burden standard deviation across five repetitions. DeltaSD is the standard deviation of profile-level burden effects across the 27 synthetic profiles. Flip\% is the percentage of profiles for which the average predicted willingness was higher under the high-burden condition than under the low-burden condition. ClassAcc\% is the burden-classification accuracy of the auxiliary comprehension diagnostic described in Appendix~\ref{app:burden-prompts}: the share of low- and high-burden scenarios for which the model returned the correct burden label (54 scenarios per model, one call per scenario). All fifteen models returned the correct label for every scenario, so the flip rate documents directional consistency of the simulated responses while ClassAcc\% documents recognition of the manipulation itself. The classification block was fielded on 17 September 2026 (UTC), separately from the canonical simulation runs collected on 16--17 September 2026.
+\end{flushleft}
+\end{table}
+
+\clearpage   % keeps Table S1 inside Appendix A (float would otherwise spill past the Appendix B heading)
+
+\clearpage   % flush pending floats so this appendix's tables stay inside it
+\section{Model Versioning, API Endpoints, and Decoding Parameters}
+\label{app:models}
+
+This appendix reports the model identifiers, access routes, endpoints, and decoding settings used in the experiments. The study includes fifteen LLM endpoints. An initial nine-endpoint design was expanded to fifteen, and all fifteen endpoints---the original nine and the six additional ones---were rerun under the same canonical protocol on 16--17 September 2026, so every simulation, frame-manipulation and orientation result reported here comes from a single administration; the auxiliary burden-classification diagnostic of Appendix~\ref{app:burden-prompts} was fielded separately on 17 September 2026. Access routes differed by endpoint and are reported in Table~\ref{tab:model_details}: nine endpoints were reached through official provider APIs (OpenAI, Anthropic, Google, and DeepSeek), five through the OpenRouter gateway (Llama 3.1 70B Instruct, Llama 3.1 8B Instruct, Mistral Large, Kimi K2.6, and Cohere Command R+), and one through the Alibaba DashScope API (Qwen3.7 Plus). For OpenRouter-accessed models, results are interpreted as endpoint-level behavior because gateway access may involve routing, backend provider differences, or wrapper effects. Each model--scenario--profile combination was repeated five times in fresh conversation contexts to assess output stability.
+
+\begin{landscape}
+\small
+\setlength{\tabcolsep}{2pt}
+\begin{longtable}{L{3.0cm}L{2.2cm}L{2.1cm}L{5.4cm}L{4.0cm}L{1.2cm}L{3.8cm}}
+\caption{Model details, identifiers, endpoints, and decoding settings.}
+\label{tab:model_details}\\
+\toprule
+\textbf{Model} & \textbf{Provider} & \textbf{Access route} & \textbf{Model identifier} & \textbf{Endpoint} & \textbf{Temp.} & \textbf{Decoding note} \\
+\midrule
+\endfirsthead
+
+\multicolumn{7}{c}{{\tablename\ \thetable{} -- continued}} \\
+\toprule
+\textbf{Model} & \textbf{Provider} & \textbf{Access route} & \textbf{Model identifier} & \textbf{Endpoint} & \textbf{Temp.} & \textbf{Decoding note} \\
+\midrule
+\endhead
+
+\bottomrule
+\multicolumn{7}{r}{{Continued on next page}} \\
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+GPT-4.1 & OpenAI & Official API & \breakabletexttt{gpt-4.1} returns \breakabletexttt{gpt-4.1-2025-04-14} & OpenAI Chat Completions API & 0 & Dated snapshot returned \\
+GPT-4.1 mini & OpenAI & Official API & \breakabletexttt{gpt-4.1-mini} returns \breakabletexttt{gpt-4.1-mini-2025-04-14} & OpenAI Chat Completions API & 0 & Dated snapshot returned \\
+GPT-4o & OpenAI & Official API & \breakabletexttt{gpt-4o} returns \breakabletexttt{gpt-4o-2024-08-06} & OpenAI Chat Completions API & 0 & Dated snapshot returned \\
+Claude Sonnet 4.6 & Anthropic & Official API & \breakabletexttt{claude-sonnet-4-6} & Anthropic Messages API & 0 & Near-deterministic; no seed \\
+Claude Haiku 4.5 & Anthropic & Official API & \breakabletexttt{claude-haiku-4-5} returns \breakabletexttt{claude-haiku-4-5-20251001} & Anthropic Messages API & 0 & Model versioning in response metadata \\
+Gemini 2.5 Pro & Google & Official API & \breakabletexttt{gemini-2.5-pro} & Gemini API & 0 & Near-deterministic \\
+Gemini 2.5 Flash & Google & Official API & \breakabletexttt{gemini-2.5-flash} & Gemini API & 0 & Near-deterministic \\
+Llama 3.1 70B Instruct & Meta & OpenRouter & \breakabletexttt{meta-llama/llama-3.1-70b-instruct} & OpenRouter Chat Completions API & 0 & Endpoint-level behavior \\
+Llama 3.1 8B Instruct & Meta & OpenRouter & \breakabletexttt{meta-llama/llama-3.1-8b-instruct} & OpenRouter Chat Completions API & 0 & Endpoint-level behavior \\
+Mistral Large & Mistral & OpenRouter & \breakabletexttt{mistralai/mistral-large} & OpenRouter Chat Completions API & 0 & Endpoint-level behavior \\
+DeepSeek-V3.2 & DeepSeek & Official API & \breakabletexttt{deepseek-chat} returns \breakabletexttt{deepseek-flash} & DeepSeek API & 0 & Endpoint returns snapshot variant \\
+Qwen3.7 Plus & Alibaba & DashScope API & \breakabletexttt{qwen3.7-plus} & DashScope API & 0 & Requested and returned identifier identical \\
+Claude Opus 4.8 & Anthropic & Official API & \breakabletexttt{claude-opus-4-8} & Anthropic Messages API & n/a & Temperature not accepted by this model; parameter omitted \\
+Kimi K2.6 & Moonshot AI & OpenRouter & \breakabletexttt{moonshotai/kimi-k2.6-20260420} returns \breakabletexttt{moonshotai/kimi-k2.6} & OpenRouter Chat Completions API & 0 & Dated snapshot requested, base version returned \\
+Cohere Command R+ & Cohere & OpenRouter & \breakabletexttt{cohere/command-r-plus-08-2024} & OpenRouter Chat Completions API & 0 & Explicit dated version used \\
+
+\end{longtable}
+\end{landscape}
+
+\subsection*{Reproducibility Notes}
+
+All models were run with temperature set to zero where supported. Each API call used a fresh conversation context with no prior messages. The responses analyzed here were collected on 16--17 September 2026 (UTC) from model APIs only; no human participants were involved (see the Human Subjects statement in the main text). Replication code and derived data are released under the MIT License. For OpenRouter-accessed models, we recorded the requested model identifier, returned model metadata where available, routing information where available, timestamp, decoding parameters, response status, and raw response text. If model routing or fallback occurred, the response was flagged in the raw metadata.
+
+Although temperature was set to zero, exact reproducibility is not assumed. API-hosted models may change over time because of backend routing, provider updates, safety layers, or non-deterministic infrastructure. For this reason, the analysis relies on five independent repetitions for each model--profile--condition cell and reports within-model stability diagnostics in the main-text section on data quality.
+
+For the administrative-burden simulation, the maximum output length was set to \texttt{max\_tokens=500}. For the moral-foundations battery (MFQ-30), the maximum output length was set to \texttt{max\_tokens=2048}. Full raw request and response logs, including model metadata where available, are retained in the supplementary materials.
+\clearpage   % flush pending floats so this appendix's tables stay inside it
+\section{Moral Foundations Questionnaire-30: Full Item Wording} \label{app:orientation-items} This appendix reports the complete 30-item Moral Foundations Questionnaire (MFQ-30) \citep{Graham2011} used to measure the five moral foundations described in Section~3.2, together with the two control items. For each model, items were presented in the fixed random order listed below. The instrument has two parts: sixteen relevance items (Part 1: ``When you decide whether something is right or wrong, to what extent are the following considerations relevant to your thinking?'') and sixteen judgment items (Part 2: ``Please indicate your agreement with the following statements.''). To match the response format of the policy-specific battery used in earlier versions of this study, we used a single 1--7 agreement/relevance scale (1 = not at all relevant / strongly disagree; 7 = extremely relevant / strongly agree) rather than the two-part 0--5 scale of the original MFQ-30; the instrument therefore measures the same five constructs with the same item wording but a uniform response metric. Items marked \textit{(R)} are reverse-coded before dimension averaging. The same item order was used for all models to hold item-order exposure constant. The scoring rule that turns the thirty ratings into the composite MFQ score is stated in the final subsection of this appendix.
+\subsection*{Care/Harm (CA)}
+\textbf{Relevance items.} Rate each consideration from 1 (not at all relevant) to 7 (extremely relevant).
+\begin{enumerate}
+\item[CA01] Whether or not someone suffered emotionally
+\item[CA02] Whether or not someone cared for someone weak or vulnerable
+\item[CA03] Whether or not someone was cruel
+\end{enumerate}
+\textbf{Judgment items.} Rate each statement from 1 (strongly disagree) to 7 (strongly agree).
+\begin{enumerate}
+\item[CA04] Compassion for those who are suffering is the most crucial virtue.
+\item[CA05] One of the worst things a person could do is hurt a defenseless animal.
+\item[CA06] It can never be right to kill a human being.
+\end{enumerate}
+\subsection*{Fairness/Reciprocity (FA)}
+\textbf{Relevance items.} Rate each consideration from 1 (not at all relevant) to 7 (extremely relevant).
+\begin{enumerate}
+\item[FA07] Whether or not some people were treated differently than others
+\item[FA08] Whether or not someone acted unfairly
+\item[FA09] Whether or not someone was denied his or her rights
+\end{enumerate}
+\textbf{Judgment items.} Rate each statement from 1 (strongly disagree) to 7 (strongly agree).
+\begin{enumerate}
+\item[FA10] When the government makes laws, the number one principle should be ensuring that everyone is treated fairly.
+\item[FA11] Justice is the most important requirement for a society.
+\item[FA12] I think it's morally wrong that rich children inherit a lot of money while poor children inherit nothing.
+\end{enumerate}
+\subsection*{Ingroup/Loyalty (LO)}
+\textbf{Relevance items.} Rate each consideration from 1 (not at all relevant) to 7 (extremely relevant).
+\begin{enumerate}
+\item[LO13] Whether or not someone's action showed love for his or her country
+\item[LO14] Whether or not someone did something to betray his or her group
+\item[LO15] Whether or not someone showed a lack of loyalty
+\end{enumerate}
+\textbf{Judgment items.} Rate each statement from 1 (strongly disagree) to 7 (strongly agree).
+\begin{enumerate}
+\item[LO16] I am proud of my country's history.
+\item[LO17] People should be loyal to their family members, even when they have done something wrong.
+\item[LO18] It is more important to be a team player than to express oneself.
+\end{enumerate}
+\subsection*{Authority/Respect (AU)}
+\textbf{Relevance items.} Rate each consideration from 1 (not at all relevant) to 7 (extremely relevant).
+\begin{enumerate}
+\item[AU19] Whether or not someone showed a lack of respect for authority
+\item[AU20] Whether or not someone conformed to the traditions of society
+\item[AU21] Whether or not an action caused chaos or disorder
+\end{enumerate}
+\textbf{Judgment items.} Rate each statement from 1 (strongly disagree) to 7 (strongly agree).
+\begin{enumerate}
+\item[AU22] Respect for authority is something all children need to learn.
+\item[AU23] Men and women each have different roles to play in society.
+\item[AU24] If I were a soldier and disagreed with my commanding officer's orders, I would obey anyway because that is my duty.
+\end{enumerate}
+\subsection*{Purity/Sanctity (SA)}
+\textbf{Relevance items.} Rate each consideration from 1 (not at all relevant) to 7 (extremely relevant).
+\begin{enumerate}
+\item[SA25] Whether or not someone violated standards of purity and decency
+\item[SA26] Whether or not someone did something disgusting
+\item[SA27] Whether or not someone acted in a way that God would approve of
+\end{enumerate}
+\textbf{Judgment items.} Rate each statement from 1 (strongly disagree) to 7 (strongly agree).
+\begin{enumerate}
+\item[SA28] People should not do things that are disgusting, even if no one is harmed.
+\item[SA29] I would call some acts wrong on the grounds that they are unnatural.
+\item[SA30] Chastity is an important and valuable virtue.
+\end{enumerate}
+\subsection*{Control Items (excluded from scoring)}
+\begin{enumerate}
+\item[CT31] Whether or not someone was good at math
+\item[CT32] It is better to do good than to do bad.
+\end{enumerate}
+\subsection*{Fixed Random Order (as presented to models)}
+\begin{enumerate}
+\item CA01
+\item CA02
+\item CA03
+\item CA04
+\item CA05
+\item CA06
+\item FA07
+\item FA08
+\item FA09
+\item FA10
+\item FA11
+\item FA12
+\item LO13
+\item LO14
+\item LO15
+\item LO16
+\item LO17
+\item LO18
+\item AU19
+\item AU20
+\item AU21
+\item AU22
+\item AU23
+\item AU24
+\item SA25
+\item SA26
+\item SA27
+\item SA28
+\item SA29
+\item SA30
+\item CT31
+\item CT32
+\end{enumerate}
+\subsection*{Canonical Administration Protocol and Provenance}
+The battery was administered to all fifteen model endpoints under a single frozen protocol in the canonical rerun, so the fifteen MFQ values are measured on one instrument rather than on a mix of protocols. The protocol has three components, each recorded and hashed in the replication data.
+\paragraph{System prompt (verbatim).}
+\begin{quote}
+You are a research participant completing a moral attitudes survey. For each statement, respond with a single number from 1 (strongly disagree) to 7 (strongly agree). Output only valid JSON.
+\end{quote}
+\begin{flushleft}
+{\footnotesize SHA256 of the system prompt:}\\
+{\footnotesize\ttfamily f57cc97029bbf0b054ffdd129912f875684ea99723ff445522a8d2ee752af820}
+\end{flushleft}
+\paragraph{User prompt.} The rendered user prompt opens with the two-part instruction (Part 1 relevance, Part 2 judgment, both on the uniform 1--7 scale), then lists the 32 items in the fixed order above as \texttt{R<order>. [<item\_id>] <item text>} and \texttt{J<order>. [<item\_id>] <item text>}, and closes with a request for a single JSON object mapping item ids to scores, e.g. \texttt{\{"CA01": 6, "FA02": 3, ...\}}.
+\paragraph{Output schema and parsing.} Unlike the burden simulation, which requires a JSON object with a willingness score and a rationale, the battery uses a JSON object keyed by item id with integer values between 1 and 7. A response counts as fully parsed only if all 32 item ids are recovered with scores in range. All fifteen endpoints returned fully parsable responses in the canonical run; the two control items are excluded from scoring.
+\paragraph{Provenance fields.} Each battery call is logged with the model identifier, provider, access route, the SHA256 of the system prompt and of the rendered user prompt, the raw response text, the parsed score vector, and a UTC timestamp; the protocol lock that fixes these strings is committed alongside the runner.
+\subsection*{MFQ Scoring}
+The composite is computed in three steps, all from the thirty item ratings and all on the same sample of model endpoints.
+\textbf{1. Dimension scores.} Each foundation score is the unweighted mean of its six items (three relevance, three judgment):
+\[
+\mathrm{MFQ}_{m}^{(d)} = \frac{1}{6}\sum_{i=1}^{6} x_{m,i}^{(d)},
+\]
+where $x_{m,i}^{(d)}$ is model $m$'s rating on item $i$ of foundation $d$, on the 1--7 scale.
+\textbf{2. Standardisation.} Each foundation score is standardised across endpoints:
+\[
+Z^{(d)}_m = \frac{\mathrm{MFQ}^{(d)}_m - \bar{x}^{(d)}}{s^{(d)}}.
+\]
+\textbf{3. Composite.} Following the standard individualizing-minus-binding convention in the moral-foundations literature \citep{Graham2011}, the composite is:
+\[
+\mathrm{MFQ}_m = Z^{(\mathrm{CA})}_m + Z^{(\mathrm{FA})}_m - Z^{(\mathrm{LO})}_m - Z^{(\mathrm{AU})}_m - Z^{(\mathrm{SA})}_m,
+\]
+where $\mathrm{CA}$ = Care/Harm, $\mathrm{FA}$ = Fairness/Reciprocity, $\mathrm{LO}$ = Ingroup/Loyalty, $\mathrm{AU}$ = Authority/Respect, and $\mathrm{SA}$ = Purity/Sanctity. Care and fairness (individualizing foundations) enter positively; loyalty, authority, and sanctity (binding foundations) enter negatively, encoding the standard direction in which each foundation is expected to relate to prosocial and policy judgments. The composite is \emph{not} rescaled after aggregation, so its standard deviation is not exactly one; in the fifteen-endpoint sample its standard deviation is 1.16.
+
+\clearpage   % flush pending floats so this appendix's tables stay inside it
+\section{Standardized Synthetic Profiles: Controlled Test Cases}
+\label{app:profiles}
+
+We generated 27 standardized synthetic profiles as controlled test cases by a full $3 \times 3 \times 3$ factorial crossing of three dimensions: \textbf{income} (low: \$20k/year; mid: \$55k/year; high: \$100k/year), \textbf{work flexibility} (low: full-time, cannot take time off easily; mid: part-time with somewhat flexible hours; high: self-employed, controls own schedule), and \textbf{healthcare access} (none: no regular doctor; far: has regular doctor but clinic is far; convenient: has regular doctor with easy appointments). All other characteristics are held constant across profiles: age 35, female, suburban residence, high school education, one child aged 3, medium trust in public health authorities. These profiles are experimental stimuli designed to isolate how models interpret the same administrative-burden scenarios under different model and frame conditions; they are not intended to represent a human population.
+
+Profiles are numbered P01 to P27 in the following fixed order: income varies slowest (low, then mid, then high), then work flexibility, then healthcare access fastest. Table~\ref{tab:27profiles} lists each profile's identifier and full natural-language description as presented to models.
+
+\begin{longtable}{p{1.2cm}p{12cm}}
+\caption{27 standardized synthetic profiles (controlled test cases).}\label{tab:27profiles}\\
+\toprule
+\textbf{ID} & \textbf{Natural-language description} \\
+\midrule
+\endfirsthead
+\multicolumn{2}{c}{{\tablename\ \thetable{} -- continued}} \\
+\toprule
+\textbf{ID} & \textbf{Natural-language description} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+P01 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P02 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P03 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P04 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P05 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P06 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P07 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P08 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P09 & A 35-year-old woman living in a suburban area. Her household income is about \$20,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P10 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P11 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P12 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P13 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P14 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P15 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P16 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P17 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P18 & A 35-year-old woman living in a suburban area. Her household income is about \$55,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P19 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P20 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P21 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She works full-time in a job that does not allow time off easily. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P22 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P23 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P24 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She works part-time with somewhat flexible hours. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+P25 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She does not have a regular doctor or health clinic. Her trust in public health authorities is medium. \\
+P26 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She has a regular doctor but the clinic is far from her home. Her trust in public health authorities is medium. \\
+P27 & A 35-year-old woman living in a suburban area. Her household income is about \$100,000 per year. She has a high school education. She is self-employed and controls her own schedule. She has a 3-year-old child. She has a regular doctor and can get appointments easily. Her trust in public health authorities is medium. \\
+
+\end{longtable}
+
+All 27 profiles were used in the main analyses; no single profile was designated as a benchmark. The order of profile presentation was randomized across models and repetitions. Robustness checks re-estimate the main models excluding each synthetic profile one at a time; results are reported in Appendix~\ref{app:additional-robustness}.
+
+\clearpage   % flush pending floats so this appendix's tables stay inside it
+\section{Capability and Task-Diagnostic Details}
+\label{app:capability}
+
+This appendix clarifies how capability-related diagnostics are handled in the expanded fifteen-model analysis. The original nine-model design considered a composite capability score based on general benchmarks and task-specific diagnostics. In the expanded sample, however, comparable general benchmark scores are not uniformly available for all fifteen endpoints, especially for the endpoints added when the sample was expanded from nine to fifteen, which span additional vendors and access routes. Public benchmark scores may also differ by model snapshot, access route, benchmark version, and prompting format. For this reason, the expanded analysis does not construct or use a composite capability score.
+
+Task-specific diagnostics are reported in Table~\ref{tab:data_quality}. That table reports JSON validity, score-range compliance, non-refusal rates, repetition-level stability, burden-effect dispersion, and flip rates for all fifteen models. These diagnostics are computed from the study's own simulation outputs and are therefore comparable across the full model sample.
+
+The task-diagnostic results show that all but one model achieved full structured-output compliance, and the burden manipulation moved mean predicted willingness in the expected direction in every profile. Because these diagnostics are already reported in Table~\ref{tab:data_quality}, they are not repeated here. The substantive analyses therefore focus on measured moral foundations, predicted administrative-burden effects, narrative frames, and within-model frame responsiveness rather than on capability-adjusted regressions.
+
+\subsection*{Evaluation Configuration}
+
+All task diagnostics were computed from the main administrative-burden simulation. Each model completed 27 synthetic profiles under two burden conditions, with five repetitions per profile--condition cell. For Gemini 2.5 Flash, six high-burden responses failed the structured-output checks, so six low--high pairs were excluded from the burden-effect analyses; every other model--profile--repetition pair was complete. All API calls used fresh conversation contexts. Temperature was set to zero where supported. Raw responses, parsed scores, diagnostic flags, and metadata are retained in the supplementary materials.
+\clearpage
+
+\clearpage   % flush pending floats so this appendix's tables stay inside it
+\section{Administrative-Burden Simulation Prompt Templates}
+\label{app:burden-prompts}
+
+This appendix reports the prompt templates used in the administrative-burden simulation described in the main-text administrative-burden simulation. Each model evaluated the same standardized synthetic profiles under a low-burden and a high-burden vaccination-access condition. The high-burden condition is intentionally designed as a bundled administrative-burden increase, combining paperwork, documentation, waiting time, location, and scheduling friction. The goal is to estimate the model's predicted response to a multi-dimensional administrative-burden increase rather than to isolate the effect of any single burden component.
+
+\subsection*{System prompt}
+
+For the main administrative-burden simulation, the following system prompt was used for all models:
+
+\begin{quote}
+You are estimating how likely the person described below would be to get vaccinated under the specified access conditions. Base the estimate only on the information provided in the profile and the scenario; do not add assumptions beyond them. Respond ONLY with a single JSON object and nothing else. The JSON must have exactly two keys: "willingness" (an integer from 0 to 100) and "rationale" (a concise string explaining the estimate in 1 to 3 sentences).
+
+\end{quote}
+\begin{flushleft}
+{\footnotesize SHA256 of the system prompt:}\\
+{\footnotesize\ttfamily 380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe}
+\end{flushleft}
+\begin{quote}
+\end{quote}
+
+\subsection*{User prompt template}
+
+For each synthetic profile and burden condition, the following user prompt template was used (the JSON output format is specified in the system prompt, not in the user prompt):
+
+\begin{quote}
+Person profile:
+
+\texttt{\{PROFILE\_TEXT\}}
+
+Scenario:
+
+\texttt{\{SCENARIO\_TEXT\}}
+
+What is this person's willingness (0--100) to proceed with vaccination given this registration scenario?
+
+\end{quote}
+\begin{flushleft}
+{\footnotesize SHA256 of the template string:}\\
+{\footnotesize\ttfamily 1b98f920c7a2a1932b741233e800f99a62e1de84a1a172cd2038f1ad3c6970e4}
+\end{flushleft}
+
+The rendered user prompt therefore consists of the profile text and scenario text documented in this appendix, inserted into the template above. The two burden scenarios are fixed strings; their SHA256 hashes are:
+\begin{flushleft}
+{\footnotesize low burden:}\\
+{\footnotesize\ttfamily 7307a8b8f499ebc0897c6fa0436fb8eafb3e77efeebf21ce91d8471989ec9b01}\\
+{\footnotesize high burden:}\\
+{\footnotesize\ttfamily c0bc058f951e4294842a4173f4cc2ac1e0475f1ff84d9438151cc9bd42967b52}
+\end{flushleft} The 27 profile strings are the natural-language descriptions listed in Appendix~\ref{app:profiles}.
+
+\subsection*{Low-burden scenario}
+
+The low-burden condition used the following scenario text:
+
+\begin{quote}
+The person can schedule the vaccination appointment online. The appointment is available at a nearby pharmacy with extended evening and weekend hours. No documentation is required beyond a standard identification card. The appointment can be confirmed immediately, and the estimated total time required, including check-in and vaccination, is about 15 minutes.
+\end{quote}
+
+\subsection*{High-burden scenario}
+
+The high-burden condition used the following scenario text:
+
+\begin{quote}
+The person must register in person at a designated public health center. The person must bring income verification and proof of residency. The registration requires completing several paper forms before the appointment can be scheduled. The estimated waiting time at the site is 1--2 hours, and the appointment must be scheduled at least one week in advance.
+\end{quote}
+
+\subsection*{Pairing of low- and high-burden conditions}
+
+For each model \(m\), profile \(i\), and repetition \(r\), both the low-burden and high-burden scenarios were administered in separate fresh conversation contexts. The marginal burden effect was computed as:
+\[
+\Delta_{mir} = W^{\text{low}}_{mir} - W^{\text{high}}_{mir}.
+\]
+Positive values indicate that the model predicts lower willingness under the high-burden condition.
+
+\subsection*{Burden-level comprehension diagnostic}
+
+Distinguishing comprehension from directional consistency requires a diagnostic that asks models directly about the manipulation. We therefore fielded an auxiliary burden-classification prompt with the same profile and scenario text, administered outside the frozen canonical run (17 September 2026 UTC; the canonical simulation, frame-manipulation, and orientation data were collected on 16--17 September 2026):
+
+\begin{quote}
+\textbf{System prompt (verbatim):} You are answering a single factual question about a vaccination access scenario. Answer with one word only.
+
+Individual profile:
+
+\texttt{\{PROFILE\_TEXT\}}
+
+Vaccination access scenario:
+
+\texttt{\{SCENARIO\_TEXT\}}
+
+Question:
+
+Does this scenario describe a low-burden or high-burden vaccination access condition?
+
+Return only one word: \texttt{low} or \texttt{high}.
+\end{quote}
+
+\begin{flushleft}
+{\footnotesize SHA256 of the classification system prompt:}\\
+{\footnotesize\ttfamily 4bf68c6c4da0a644e4c1ddb43bddbb0d9fa549ed7a978fccad5d8e2fa8107a04}\\
+{\footnotesize SHA256 of the execution plan (\texttt{canonical/plans/plan\_comp.csv}):}\\
+{\footnotesize\ttfamily 9677719485949d6959c0a5fbe5e4dfd93cc608370497e05865e57a1378c96c22}
+\end{flushleft}
+
+The plan covers every combination of the fifteen endpoints, the 27 standardized profiles, and the two burden conditions (810 calls; order randomised per model from the protocol seed, as in the main blocks). A response was scored as correct if the returned label matched the burden condition assigned to the scenario that was shown, and as malformed if it contained neither token.
+
+\textbf{Results.} All 810 responses returned a usable label and none was malformed. Accuracy was 100\% for every model (54 of 54 scenarios each; exact Clopper--Pearson 95\% CI [93.4, 100.0]) and 100\% pooled (810 of 810; exact 95\% CI [99.5, 100.0]). The models therefore recognised the burden manipulation itself, and not merely its directional signature in the willingness responses. Two qualifications apply. First, the diagnostic establishes recognition of the assigned condition, not the magnitude or realism of the simulated burden effect. Second, it was fielded in a separate administration from the reported simulation runs, so it documents comprehension of the same scenario texts rather than of the exact queries that produced the main results.
+
+
+\clearpage   % flush pending floats so this appendix's tables stay inside it
+\section{Narrative Coding Codebook}
+\label{app:narrative-codebook}
+
+This appendix reports the algorithmic coding protocol used to classify high-burden rationales into five interpretive frames. The unit of coding is the rationale (one to three sentences) associated with each model--profile--repetition observation under the high-burden condition. Each frame is coded as a binary indicator using regular-expression pattern matching. Frames are not mutually exclusive.
+
+\subsection{Algorithmic Coding Procedure}
+
+Rationales are coded using a rule-based algorithm that applies predefined keyword patterns (regular expressions) to each rationale text. The algorithm operates as follows:
+
+\begin{enumerate}
+\item \textbf{Text preprocessing:} Rationale text is converted to lowercase.
+\item \textbf{Pattern matching:} For each of the five frames, the algorithm searches for predefined regular expression patterns (word boundaries applied where appropriate).
+\item \textbf{Binary assignment:} A frame is coded as present (1) if at least one pattern matches; absent (0) otherwise.
+\item \textbf{Multiple frames:} Because frames are not mutually exclusive, a single rationale may be coded as positive for multiple frames.
+\end{enumerate}
+
+\subsection{Pattern Dictionary}
+
+The keyword patterns for each frame are derived from the theoretical definitions and operationalized as follows:
+
+{\raggedright
+\begin{description}
+\item[Autonomy infringement:] \texttt{individual choice}, \texttt{personal choice}, \texttt{personal freedom}, \texttt{autonomy}, \texttt{privacy}, \texttt{consent}, \texttt{personal discretion}, \texttt{right to choose}, \texttt{individual liberty}, \texttt{procedural dignity}, and phrases indicating limits on personal autonomy.
+\item[Procedural legitimacy:] \texttt{justified}, \texttt{safeguard}, \texttt{reasonable verification}, \texttt{necessary procedure}, \texttt{eligibility}, \texttt{fraud prevention}, \texttt{legitimate public need}, \texttt{due process}, \texttt{accountability}, \texttt{oversight}, and phrases indicating procedural justification.
+\item[Collective responsibility:] \texttt{civic duty}, \texttt{protect others}, \texttt{communal benefit}, \texttt{vulnerable group}, \texttt{collective welfare}, \texttt{common good}, \texttt{herd immunity}, and phrases emphasizing community benefit. The earlier \texttt{public health} pattern was removed because it matched ``trust in public health (authorities)'' and ``public health center'' (the vaccination site), which express trust in authorities or location rather than collective responsibility.
+\item[Access barriers:] \texttt{cannot afford}, \texttt{miss work}, \texttt{lose income}, \texttt{childcare}, \texttt{no regular doctor}, \texttt{lack of access}, \texttt{low income}, \texttt{unable to comply}, \texttt{disadvantage}, \texttt{single parent}, \texttt{hourly worker}, and phrases linking burdens to resource constraints.
+\item[Coercive backlash:] \texttt{resentment}, \texttt{distrust}, \texttt{resistance}, \texttt{backlash}, \texttt{reduced legitimacy}, \texttt{mandate}, \texttt{penalty}, \texttt{enforcement}, \texttt{backfire}, \texttt{coercion}, and phrases indicating reactance to mandates.
+\end{description}
+}
+
+The full regular expression patterns are available in the replication code at \url{https://github.com/yichao2022/llm-policy-simulation}, which is released under the MIT License (Copyright 2026 Yichao Jin); reuse and modification are permitted with attribution, and model outputs remain subject to the providers' terms of service.
+
+\subsection{Manual Coding Audit}
+
+The algorithmic coding was audited, not independently validated. A stratified random sample of 200 rationales (approximately 10\% of the 2,019 high-burden rationales, allocated proportionally across the fifteen endpoints) was inspected by the author. The audit procedure was:
+
+\begin{enumerate}
+\item \textbf{Scope:} the auditor reviewed each rationale together with the algorithm's frame assignments, without access to model identity or predicted outcomes. The auditor was therefore \emph{not} blind to the algorithm's labels, and this is a single-coder quality check rather than an independent second coding.
+\item \textbf{Definition check:} each positive algorithmic assignment was checked against the frame definitions in Table~\ref{tab:narrative-codebook}.
+\item \textbf{Focus areas:} special attention was given to access-barrier coding, where generic mentions of paperwork or waiting time are not sufficient for a positive code under the algorithmic rules.
+\item \textbf{Discrepancy review:} any rationale in which a pattern match appeared to violate a frame definition was flagged for review.
+\end{enumerate}
+
+The manual audit was conducted after the collective-responsibility pattern correction. The audit found that pattern assignments reflected the codebook definitions rather than superficial keyword matches, and no systematic misclassification pattern was identified that would require pattern revision.
+
+Two limits follow from the audit design. First, because the auditor saw the algorithm's assignments and concentrated on positive ones, the audit cannot bound false negatives: a frame the algorithm missed may simply not have been noticed, and the audit yields no precision, recall, F1, or agreement statistic. Second, single-coder inspection is not independent of the algorithm it checks. The main text therefore describes the frame indicators as descriptive evidence of rationale--outcome co-expression rather than as validated measurements.
+
+A blinded re-coding sheet is archived in the replication materials for a human-versus-rule validation of the coding: \path{outputs/h2_gold_coding_sheet.csv} contains the 200 sampled rationale texts with the frame labels, model identity, profile, repetition, and outcome withheld into a separate key file, and the sampling is reproducible from the canonical data with seed 20260917 (\path{prepare_h2_gold_sample.py}). Coding the sheet and running \path{score_h2_gold_coding.py} yields per-frame precision, recall, F1, exact agreement, and Cohen's \(\kappa\) against the rule-based assignments. Those statistics are not reported here because the sheet was not coded in this study; the audit above is what was actually performed.
+
+\subsection{Frame Prevalence and Exclusions}
+
+\begin{table}[htbp]
+\centering
+\caption{Narrative coding codebook}
+\label{tab:narrative-codebook}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{3.2cm}L{5.9cm}L{5.9cm}@{}}
+\toprule
+Frame & Code as 1 when rationale... & Do not code as 1 when rationale... \\
+\midrule
+Autonomy infringement &
+Frames procedures as threats to individual choice, autonomy, privacy, personal freedom, consent, or procedural dignity. &
+Mentions inconvenience, waiting, forms, or documentation without linking them to autonomy, privacy, dignity, or choice. \\
+
+Procedural legitimacy &
+Frames administrative requirements as justified, reasonable, legitimate, or necessary safeguards for verification, program integrity, safety, or orderly administration. &
+Mentions documentation or registration without justifying it, or treats procedures only as obstacles. \\
+
+Collective responsibility &
+Emphasizes civic duty, public health responsibility, protection of others, community benefit, or willingness to tolerate inconvenience for collective welfare. &
+Mentions only individual health benefits or convenience without reference to public health, community, or others. \\
+
+Access barriers &
+Explicitly links paperwork, waiting time, documentation, travel, scheduling, or in-person registration to reduced access, inability to comply, unequal burden, low income, work constraints, childcare, lack of regular provider access, or other vulnerability. &
+Merely restates that the scenario involves forms, documentation, waiting time, travel, or delay without linking these requirements to access, resources, or vulnerability. \\
+
+Coercive backlash &
+Mentions resentment, distrust, resistance, backlash, reactance, reduced legitimacy, or negative reaction to mandates, penalties, enforcement, or perceived coercion. &
+Describes practical inconvenience or access difficulty without resistance, distrust, resentment, or coercion. \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+The access-barrier definition was intentionally restricted to avoid coding simple restatements of the high-burden prompt as a substantive frame. For example, ``the process requires forms and a long wait'' is not coded as access barriers unless the rationale links those requirements to reduced access or profile-specific constraints such as work flexibility, childcare, income, transportation, or lack of regular care.
+
+Frames with little or no empirical variation are reported descriptively but excluded from the main frame-adjusted model. In the present analysis, autonomy infringement and procedural legitimacy each appeared in one of the 2,019 high-burden rationales (0.05\% each), and collective responsibility appeared in a single rationale (0.05\%) after the coding rule was corrected (the original bare ``public health'' pattern, which matched ``trust in public health'' and ``public health center,'' is removed). None of these three frames has usable variation. The main H2 model therefore retains access barriers and coercive backlash.
+
+\clearpage   % flush pending floats so this appendix's tables stay inside it
+\section{H2 Specification Comparison and Identification Diagnostics}
+\label{app:h2-identification}
+\label{app:h2-robustness}
+
+The main-text H2 analysis uses one fixed effect per model--profile pair, so its frame coefficients are identified only from repetition-level variation within a pair. This appendix reports the secondary specification with separate model and profile fixed effects, the identification diagnostics that follow from absorbing the pair-specific baseline, and leave-one-out variants of the primary specification.
+
+\begin{table}[htbp]
+\centering
+\caption{H2 frame--outcome estimates under the primary and secondary specifications}
+\label{tab:h2_spec_comparison}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrcr}
+\toprule
+Frame & Prevalence & Pair-FE \(b\) & SE & 95\% CI & BH-adj.\ \(p\) & Two-way FE \(b\) \\
+\midrule
+Access barriers & 43.2\% & 0.13 & 0.47 & [\(-0.79\), 1.04] & 0.86 & 1.08 \\
+Collective responsibility & 0.05\% & --- & --- & --- & --- & --- \\
+Coercive backlash & 7.7\% & 1.21 & 1.82 & [\(-2.35\), 4.77] & 0.86 & 1.59 \\
+\bottomrule
+\end{tabular}
+}
+\begin{flushleft}
+\footnotesize Notes: Pair-FE is the primary specification of the main text: one fixed effect per model--profile pair (405 pairs) plus the retained rationale-frame indicators, with standard errors clustered at the model--profile level. Collective responsibility is dropped from the pair-FE column because the corrected coding leaves only one positive rationale (0.05\%), giving the indicator no within-pair variation. Two-way FE replaces the pair indicators with separate model and profile fixed effects, absorbing additive heterogeneity only; its unadjusted \(p\)-values are 0.012 (access barriers) and 0.174 (coercive backlash), and its Benjamini--Hochberg adjusted values (across the two estimable frames) are 0.024 and 0.174. All \(p\)-values in the pair-FE column are Benjamini--Hochberg adjusted across the two retained frames (\(q=0.10\); collective responsibility is not estimable under this specification). \(N=2{,}019\) in both specifications. Positive coefficients indicate larger predicted burden effects.
+\end{flushleft}
+\end{table}
+
+\subsection*{Identification diagnostics}
+
+\begin{table}[htbp]
+\centering
+\caption{Within-pair variation available to the pair-fixed-effects specification}
+\label{tab:h2_within_pair}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrr}
+\toprule
+Variable & Within-pair variance share & Pairs with no within-pair variation \\
+\midrule
+Access barriers & 0.329 & 237 of 405 \\
+Collective responsibility & 0.800 & 404 of 405 \\
+Coercive backlash & 0.310 & 362 of 405 \\
+Burden effect \(\Delta\) & 0.078 & 182 of 405 \\
+\bottomrule
+\end{tabular}
+}
+\begin{flushleft}
+\footnotesize Notes: Each pair contains five repetitions. ``Within-pair share of variance'' is the fraction of a variable's total variance that remains after subtracting pair means, i.e.\ the variation the pair-fixed-effects estimator can use. Frame indicators that are constant within a pair contribute nothing to identification, so the frame coefficients rest on the pairs in which the expressed rationale changes between repeated queries of the same model--profile cell.
+\end{flushleft}
+\end{table}
+
+Two features of the design drive the results. First, the burden effect \(\Delta\) is largely a property of the cell rather than of the individual query: only 7.8\% of its variance lies within model--profile pairs, and in 182 of 405 pairs the five repetitions do not vary at all. Second, the coded rationale frames are also mostly stable within a pair, so identification comes from the minority of pairs in which the frame switches on or off across repetitions; in the remaining pairs the frame indicator is absorbed by the pair effect. The pair-fixed-effects null in the main text should be read against these limits: it shows that the access-barrier association is not robust to pair-specific heterogeneity, and that the strict within-cell estimand is weakly identified in a five-repetition design.
+
+\subsection*{Leave-one-out variants under the primary specification}
+
+\begin{table}[htbp]
+\centering
+\caption{Leave-one-out ranges under the primary (pair-fixed-effects) specification}
+\label{tab:h2_pairfe_leaveout}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrr}
+\toprule
+Frame & LOMO range & LOMO sig. & LOPO range & LOPO sig. \\
+\midrule
+Access barriers & \(-0.03\) to \(+0.37\) & 0/15 & \(-0.09\) to \(+0.32\) & 0/27 \\
+Coercive backlash & \(+0.69\) to \(+1.58\) & 0/15 & \(+0.37\) to \(+2.33\) & 0/27 \\
+\bottomrule
+\end{tabular}
+}
+\begin{flushleft}
+\footnotesize Notes: LOMO = leave-one-model-out (fifteen fits, each excluding one model); LOPO = leave-one-profile-out (twenty-seven fits, each excluding one profile). No frame coefficient is statistically distinguishable from zero in any leave-one-out fit under the primary specification. Sign counts: access barriers positive in 14 of 15 LOMO and 25 of 27 LOPO fits; coercive backlash positive in 15 of 15 and 27 of 27.
+\end{flushleft}
+\end{table}
+
+\clearpage   % flush pending floats so this appendix's tables stay inside it
+\section{Frame-Manipulation Prompts and H3 Robustness}
+\label{app:h3-prompts-robustness}
+
+This appendix reports the prompt templates and model-specific robustness checks for the within-model frame-manipulation experiment described in the main-text section on within-model frame manipulation and analyzed in the main-text H3 results. The purpose of the experiment is to test whether governance-value frames shift predicted administrative-burden effects while holding the base model, synthetic profiles, burden scenarios, output format, and decoding settings constant.
+
+\subsection{Frame-Manipulation Prompt Templates}
+
+The frame-manipulation experiment used four system-prompt frames. Each frame is built from the same two fixed sentences: an opening sentence and a closing instruction block, with the frame clause inserted between them. The neutral frame contains no frame clause, so the neutral system prompt is byte-identical to the baseline prompt reported in Appendix~\ref{app:burden-prompts}:
+\begin{flushleft}
+{\footnotesize\ttfamily SHA256 380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe}
+\end{flushleft}
+
+The frame contrast is therefore measured against the true baseline condition. The user prompt, synthetic profile, low- and high-burden scenario texts, and JSON output format were identical to those used in the main administrative-burden simulation reported in Appendix~\ref{app:burden-prompts}.
+
+\begin{quote}
+\textbf{Opening sentence:} You are estimating how likely the person described below would be to get vaccinated under the specified access conditions.
+
+\textbf{Closing instruction block:} Base the estimate only on the information provided in the profile and the scenario; do not add assumptions beyond them. Respond ONLY with a single JSON object and nothing else. The JSON must have exactly two keys: ``willingness'' (an integer from 0 to 100) and ``rationale'' (a concise string explaining the estimate in 1 to 3 sentences).
+\end{quote}
+
+The four frame conditions differ only in the inserted clause:
+
+\begin{itemize}
+    \item \textbf{Neutral frame:} no clause inserted.\\
+    {\footnotesize\ttfamily SHA256 380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe}
+
+    \item \textbf{Autonomy frame:} ``When forming the estimate, give special weight to individual choice, privacy, personal autonomy, and procedural dignity.''\\
+    {\footnotesize\ttfamily SHA256 8b7d948eeee661603aa9898815ee3a01a058f43d4cc878cbc077e6cb5a5df243}
+
+    \item \textbf{Collective-obligation frame:} ``When forming the estimate, give special weight to civic responsibility, public health coordination, and willingness to tolerate reasonable inconvenience for collective protection.''\\
+    {\footnotesize\ttfamily SHA256 fe7512cde053405edf59cbaaf6d1402f68d69e7c478984eee3d0fbc3a49a5ecb}
+
+    \item \textbf{Equity/access frame:} ``When forming the estimate, give special weight to unequal procedural costs, access barriers, work constraints, childcare constraints, and burdens faced by disadvantaged groups.''\\
+    {\footnotesize\ttfamily SHA256 cba0156ababefd86611eb267ebf9ccddb1d60fe5a8cecf4e289871006042844a}
+\end{itemize}
+
+\textbf{Randomization and archived execution plans.} Execution order was randomized within each model by a generator seeded from the protocol seed (20260916, recorded in the protocol lock together with the prompt texts and decoding settings): in the baseline simulation the profile--scenario--repetition cells were shuffled, and in the frame manipulation the four frames were permuted within each profile--repetition cell, with the low/high order inside each pair randomized as well. The plans were generated once, frozen before data collection, and are archived with the replication materials:
+\begin{flushleft}
+{\footnotesize Baseline simulation plan (\path{canonical/plans/plan_sim.csv}):}\\
+{\footnotesize\ttfamily 097667f0bfe2b409fb9e37f6ceef4a6d05e3828eb25f55f7736de2005d2c350c}\\
+{\footnotesize Frame-manipulation plan (\path{canonical/plans/plan_h3.csv}):}\\
+{\footnotesize\ttfamily 2da307521db1f8b578d1ebc87e77d85be372a1bdca5a10c5416069d958174133}
+\end{flushleft}
+The runner consumes each plan in the recorded order, so the frame sequence actually administered to a given model is verifiable from the archived file rather than from the runner code alone. Rebuilding the plan from the current code reproduces the same set of cells but not necessarily the same row order; the archived files, not the builder, are the record of the executed sequence. The orientation battery, by contrast, was administered in a single fixed item order to all fifteen endpoints.
+
+For each model \(m\), frame condition \(c\), profile \(i\), and repetition \(r\), the model evaluated both the low-burden and high-burden vaccination-access scenarios in fresh conversation contexts. The frame-specific burden effect was computed as:
+\[
+\Delta_{mcir} = W^{low}_{mcir} - W^{high}_{mcir}.
+\]
+Positive values indicate a larger predicted reduction in vaccination willingness under the high-burden condition.
+
+\subsection{Mean Burden Effects by Model and Frame}
+
+Table~\ref{tab:h3_model_frame_means} reports mean burden effects by model and frame condition for the four-model H3 subset. The descriptive means show that the collective-obligation frame lowers simulated burden effects in all four models, and that the autonomy frame increases simulated burden effects in three of the four models. The remaining contrasts are model-specific rather than uniform: for Qwen3.7 Plus the autonomy frame lowers the mean burden effect (53.71 vs.\ 56.59 under the neutral frame), and the equity/access frame shifts that model only slightly (55.64 vs.\ 56.59 under neutral). Equity/access is instead sizeable and precisely estimated for Llama 3.1 70B Instruct (36.42 vs.\ 27.11 under neutral; regression coefficient $+9.36$, $p<0.001$), where it is smaller than the autonomy shift but not negligible. The absolute level of the burden effect also differs substantially across models under the neutral frame (25.59 for GPT-4.1 to 56.59 for Qwen3.7 Plus), so frame effects are interpreted relative to each model's own neutral baseline.
+
+Mistral Large is a particularly informative robustness case. It has the lowest MFQ composite score in the expanded fifteen-model sample, and all three frame manipulations shift its simulated burden effects in the expected directions. This suggests that frame sensitivity is not limited to models with high baseline MFQ or high baseline burden sensitivity.
+
+\begin{table}[htbp]
+\centering
+\caption{Mean burden effects by model and frame}
+\label{tab:h3_model_frame_means}
+\small
+\begin{tabular}{L{3.2cm}L{3.1cm}rrr}
+\toprule
+Model & Frame & Mean \(\Delta\) & SD & \(N\) \\
+\midrule
+GPT-4.1 & Neutral & 25.59 & 8.42 & 135 \\
+GPT-4.1 & Autonomy & 34.15 & 6.84 & 135 \\
+GPT-4.1 & Collective obligation & 18.62 & 6.22 & 135 \\
+GPT-4.1 & Equity/access & 34.00 & 9.46 & 135 \\
+\midrule
+Llama 3.1 70B Instruct & Neutral & 27.11 & 9.69 & 135 \\
+Llama 3.1 70B Instruct & Autonomy & 37.19 & 7.98 & 135 \\
+Llama 3.1 70B Instruct & Collective obligation & 25.33 & 10.42 & 135 \\
+Llama 3.1 70B Instruct & Equity/access & 36.42 & 12.90 & 134 \\
+\midrule
+Qwen3.7 Plus & Neutral & 56.59 & 7.64 & 135 \\
+Qwen3.7 Plus & Autonomy & 53.71 & 6.54 & 135 \\
+Qwen3.7 Plus & Collective obligation & 41.93 & 11.34 & 135 \\
+Qwen3.7 Plus & Equity/access & 55.64 & 6.91 & 135 \\
+\midrule
+Mistral Large & Neutral & 37.04 & 6.44 & 135 \\
+Mistral Large & Autonomy & 41.11 & 5.38 & 135 \\
+Mistral Large & Collective obligation & 16.93 & 7.53 & 135 \\
+Mistral Large & Equity/access & 39.63 & 6.95 & 135 \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize Notes: Each row reports the mean profile--repetition-level burden effect, \(\Delta = W^{low}-W^{high}\), for one model under one assigned frame. $N=135$ for each model--frame cell, corresponding to 27 profiles and five repetitions, except where a response failed the structured-output checks: Llama 3.1 70B Instruct equity/access ($N=134$). Positive values indicate larger predicted reductions in willingness under the high-burden condition.
+\end{flushleft}
+\end{table}
+
+\clearpage
+
+\subsection{Small-Sample Inference for the Model-Specific Estimates}
+
+Each model-specific regression rests on 27 profile clusters, so we checked the model-level conclusions against two small-sample procedures: a cluster covariance with the standard finite-sample correction ($G/(G-1)\cdot(N-1)/(N-K)$) and a wild cluster bootstrap-$t$ with Rademacher weights, the null imposed, and 1{,}999 replications. Table~\ref{tab:h3_small_sample} reports the resulting $p$-values next to the asymptotic cluster-robust ones. The three inferences agree: the marginal equity/access contrast for Mistral Large remains significant ($2.59$, $p=0.023$ asymptotic, $0.030$ corrected, $0.027$ bootstrap), the negative autonomy contrast for Qwen3.7 Plus remains significant ($-2.87$, $p=0.001$--$0.002$), and the collective-obligation contrast for Llama 3.1 70B Instruct and the equity/access contrast for Qwen3.7 Plus stay statistically indistinguishable from zero under every procedure.
+
+\begin{table}[htbp]
+\centering
+\caption{Small-sample inference for model-specific H3 contrasts}
+\label{tab:h3_small_sample}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrr}
+\toprule
+Model & Contrast & Coefficient & $p$ (asymptotic) & $p$ (corrected) & $p$ (wild bootstrap) \\
+\midrule
+GPT-4.1 & Autonomy & $+8.56$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+GPT-4.1 & Collective obligation & $-6.97$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+GPT-4.1 & Equity/access & $+8.41$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+Llama 3.1 70B Instruct & Autonomy & $+10.07$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+Llama 3.1 70B Instruct & Collective obligation & $-1.78$ & 0.137 & 0.155 & 0.125 \\
+Llama 3.1 70B Instruct & Equity/access & $+9.36$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+Qwen3.7 Plus & Autonomy & $-2.87$ & $<0.001$ & 0.001 & 0.002 \\
+Qwen3.7 Plus & Collective obligation & $-14.65$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+Qwen3.7 Plus & Equity/access & $-0.94$ & 0.250 & 0.271 & 0.265 \\
+Mistral Large & Autonomy & $+4.07$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+Mistral Large & Collective obligation & $-20.11$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+Mistral Large & Equity/access & $+2.59$ & 0.023 & 0.030 & 0.027 \\
+\bottomrule
+\end{tabular}
+}
+\begin{flushleft}
+\footnotesize Notes: Each model-specific regression includes profile fixed effects and frame indicators, with standard errors clustered by profile (27 clusters per model). Asymptotic $p$-values use the cluster-robust covariance without small-sample correction; corrected $p$-values apply $G/(G-1)\cdot(N-1)/(N-K)$; wild bootstrap $p$-values come from 1{,}999 Rademacher-weighted bootstrap replications with the null imposed on the tested contrast. Bootstrap $p$-values are reported to three decimals and are bounded below by $1/2{,}000$.
+\end{flushleft}
+\end{table}
+
+\subsection{Model-Specific Frame-Manipulation Effects}
+
+Table~\ref{tab:h3_model_specific_effects} reports model-specific frame regressions for the four-model H3 subset. Each model-specific regression estimates \(\Delta\) as a function of frame indicators and profile fixed effects, using the neutral frame as the reference condition. The pooled column corresponds to the main H3 specification reported in the main text, which pools the same four models and includes model and profile fixed effects.
+
+\clearpage  % keep the model-specific table off the middle of a paragraph
+\begin{table}[htbp]
+\centering
+\caption{Model-specific frame-manipulation effects}
+\label{tab:h3_model_specific_effects}
+\small
+\begin{tabular}{L{3.0cm}rrrrr}
+\toprule
+Frame contrast & GPT-4.1 & Llama 3.1 70B & Qwen3.7 Plus & Mistral Large & Pooled \\
+\midrule
+Autonomy vs. neutral 
+& 8.56*** 
+& 10.07*** 
+& -2.87** 
+& 4.07*** 
+& 4.96*** \\
+Collective obligation vs. neutral 
+& -6.97*** 
+& -1.78 
+& -14.65*** 
+& -20.11*** 
+& -10.88*** \\
+Equity/access vs. neutral 
+& 8.41*** 
+& 9.36*** 
+& -0.94 
+& 2.59* 
+& 4.84*** \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize Notes: Each model-specific column reports a regression of \(\Delta\) on frame indicators and profile fixed effects for the indicated model. The pooled column reports the main H3 specification for the four-model H3 subset with model and profile fixed effects. Standard errors are clustered at the model--profile level in all columns. The neutral frame is the omitted reference category. Positive coefficients indicate larger simulated burden effects relative to neutral; negative coefficients indicate smaller simulated burden effects. Standard errors and 95\% confidence intervals are reported in Table~\ref{tab:h3_model_specific_full}. \(^{*}p<0.05\), \(^{**}p<0.01\), \(^{***}p<0.001\).
+\end{flushleft}
+\end{table}
+
+Table~\ref{tab:h3_model_specific_full} reports the corresponding standard errors and confidence intervals. The model-specific results show both robustness and heterogeneity within the H3 subset. The collective-obligation frame reduces simulated burden effects in all four models (significantly in GPT-4.1, Qwen3.7 Plus, and Mistral Large; not statistically distinguishable from zero in Llama 3.1 70B Instruct). The autonomy frame increases simulated burden effects in GPT-4.1, Llama 3.1 70B Instruct, and Mistral Large, but \emph{reverses sign} for Qwen3.7 Plus ($-2.87$, 95\% CI $[-4.53, -1.22]$), where activating autonomy concerns reduces the simulated burden effect rather than amplifying it. The equity/access frame is positive and significant for GPT-4.1, Llama 3.1 70B Instruct, and Mistral Large, and statistically indistinguishable from zero for Qwen3.7 Plus. Mistral Large is especially informative because it has the lowest MFQ composite score in the expanded fifteen-model sample, yet all three frame manipulations shift its simulated burden effects in the expected directions. These results support the pooled H3 finding for the collective-obligation contrast while showing that model endpoints differ in both the magnitude and the sign of responsiveness to specific governance-value frames; the pooled autonomy and equity estimates are averages over a genuinely mixed set of model-level responses, and the Qwen3.7 Plus reversal is the clearest caution against reading a pooled frame effect as a property of LLMs in general.
+
+\begin{table}[htbp]
+\centering
+\caption{Model-specific frame-manipulation effects with standard errors and confidence intervals}
+\label{tab:h3_model_specific_full}
+\small
+\begin{tabular}{L{2.8cm}L{3.7cm}rrr}
+\toprule
+Model & Frame contrast & Coefficient & SE & 95\% CI \\
+\midrule
+GPT-4.1 & Autonomy vs. neutral & 8.56*** & 0.76 & [6.99, 10.12] \\
+GPT-4.1 & Collective obligation vs. neutral & -6.97*** & 0.81 & [-8.63, -5.31] \\
+GPT-4.1 & Equity/access vs. neutral & 8.41*** & 0.77 & [6.83, 9.99] \\
+\midrule
+Llama 3.1 70B Instruct & Autonomy vs. neutral & 10.07*** & 1.46 & [7.07, 13.08] \\
+Llama 3.1 70B Instruct & Collective obligation vs. neutral & -1.78 & 1.21 & [-4.27, 0.72] \\
+Llama 3.1 70B Instruct & Equity/access vs. neutral & 9.36*** & 1.75 & [5.76, 12.97] \\
+\midrule
+Qwen3.7 Plus & Autonomy vs. neutral & -2.87** & 0.81 & [-4.53, -1.22] \\
+Qwen3.7 Plus & Collective obligation vs. neutral & -14.65*** & 1.06 & [-16.84, -12.47] \\
+Qwen3.7 Plus & Equity/access vs. neutral & -0.94 & 0.84 & [-2.66, 0.78] \\
+\midrule
+Mistral Large & Autonomy vs. neutral & 4.07*** & 0.98 & [2.05, 6.09] \\
+Mistral Large & Collective obligation vs. neutral & -20.11*** & 0.89 & [-21.93, -18.29] \\
+Mistral Large & Equity/access vs. neutral & 2.59* & 1.13 & [0.28, 4.91] \\
+\midrule
+Pooled & Autonomy vs. neutral & 4.96*** & 0.70 & [3.57, 6.35] \\
+Pooled & Collective obligation vs. neutral & -10.88*** & 0.84 & [-12.54, -9.21] \\
+Pooled & Equity/access vs. neutral & 4.84*** & 0.70 & [3.45, 6.24] \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize Notes: Each row reports a frame contrast relative to the neutral frame. Model-specific regressions include profile fixed effects. The pooled regression includes model and profile fixed effects. Standard errors are clustered at the model--profile level for the pooled column (108 clusters) and at the profile level within each model for the model-specific columns (27 clusters each), because profiles are the controlled test cases and queries within a profile are repeated measures. The pooled specification uses $N=2{,}159$ profile--repetition observations (540 for GPT-4.1, 539 for Llama 3.1 70B Instruct, 540 for Qwen3.7 Plus, and 540 for Mistral Large, after excluding responses that failed the structured-output checks). The dependent variable is \(\Delta = W^{low}-W^{high}\). Positive coefficients indicate larger simulated burden effects relative to neutral. Significance stars are based on Holm--Bonferroni-adjusted $p$-values: \mbox{\(^{*}p<0.05\)}, \mbox{\(^{**}p<0.01\)}, \mbox{\(^{***}p<0.001\)}.
+\end{flushleft}
+\end{table}
+
+\subsection*{Pair Fixed-Effects Robustness}
+\label{app:h3-pairfe}
+
+The pooled H3 estimates were re-estimated with one fixed effect per model--profile pair (108 pairs, up to twenty assigned-frame observations each; 2,159 observations total) in place of the separate model and profile fixed effects, holding the clustering of standard errors at the model--profile level so that only the fixed-effect structure changes:
+
+\begin{table}[htbp]
+\centering
+\caption{Pooled H3 estimates under two-way and pair fixed effects}
+\label{tab:h3_pairfe}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrr}
+\toprule
+Contrast (vs.\ neutral) & Model + profile FE & Pair FE \\
+\midrule
+Autonomy & \(+4.96\) [\(+3.57\), \(+6.35\)] & \(+4.96\) [\(+3.56\), \(+6.36\)] \\
+Collective obligation & \(-10.88\) [\(-12.54\), \(-9.21\)] & \(-10.88\) [\(-12.55\), \(-9.20\)] \\
+Equity/access & \(+4.84\) [\(+3.45\), \(+6.24\)] & \(+4.86\) [\(+3.45\), \(+6.26\)] \\
+\bottomrule
+\end{tabular}
+}
+\begin{flushleft}
+\footnotesize Notes: Standard errors clustered at the model--profile level (108 clusters) in both columns; all six estimates have \(p<0.001\). Because frames are assigned rather than observed, 75\% of the variance in the frame indicator lies within a pair, so the pair-fixed-effects specification retains essentially the same identifying variation and the estimates are unchanged; adjusted \(R^2\) rises from 0.775 to 0.809. The pair-fixed-effects specification provides stricter cell-specific adjustment and yields essentially identical estimates.
+\end{flushleft}
+\end{table}
+
+\clearpage   % flush pending floats so this appendix's tables stay inside it
+\section{Additional Robustness Checks}
+\label{app:additional-robustness}
+
+This appendix reports additional robustness checks for the H1 orientation--effect analysis. The main H1 specification uses the MFQ composite (individualizing minus binding foundations, standardised across endpoints) as the model-level predictor of average burden effects. Because the composite combines five theoretically distinct moral foundations with fixed directional weights, we also examine whether the foundation-specific patterns persist and whether the composite null is stable across model composition.
+
+\subsection{Caveats Qualified in the Main Text}
+
+Three caveats qualify the null H1 result. First, the MFQ composite imposes structural assumptions---equal weighting across five foundations, fixed directional signs (individualizing positive, binding negative), and an additive structure---that may not match how value dimensions interact with simulated policy effects. Second, at $N = 15$ model endpoints, model-level regressions have limited power, which is why the power and minimum-detectable-effect diagnostics below are reported alongside the coefficient estimates. Third, the fifteen endpoints are a convenience sample of commercially available models, so the estimates are descriptive of this sample rather than high-powered population estimates.
+
+\subsection{Expanded-Sample H1 Robustness}
+
+Table~\ref{tab:h1_expanded_robustness} summarizes the key H1 robustness results for the original nine-model sample and the expanded fifteen-model sample. The MFQ composite does not predict model-level burden effects in either sample. In the original nine-model sample, the composite coefficient is positive and statistically indistinguishable from zero ($\hat{\beta}=4.55$, $p=0.172$, $R^2=0.248$). After expanding to fifteen endpoints, the coefficient remains statistically indistinguishable from a null effect ($\hat{\beta}=2.96$, 95\% CI [$-$2.17, 8.09], $p=0.235$, $R^2=0.107$). Re-standardising the dimensions within the nine-endpoint subset gives a smaller positive coefficient ($\hat{\beta}=1.92$, $p=0.151$, $R^2=0.270$); the slope is scale-dependent, so both standardisations are reported.
+
+Table~\ref{tab:h1_dimension_checks} reports the complete set of foundation-specific regressions in the fifteen-endpoint sample: each of the five foundations is fitted separately. None of the five is individually significant (all $p \geq 0.095$). The two binding foundations show the largest point estimates in the theoretically expected (negative) direction---loyalty $\hat{\beta}=$ $-$4.73, $p=0.095$, $R^2=0.200$; authority $\hat{\beta}=$ $-$4.25, $p=0.138$, $R^2=0.161$---while the individualizing foundations are essentially flat (care $\hat{\beta}=$ $-$0.49, $p=0.870$; fairness $\hat{\beta}=0.34$, $p=0.909$). This directional pattern is consistent with the individualizing-minus-binding construction but does not reach conventional significance for any single foundation, so the dimension-level check does not overturn the composite null.
+
+Two composite variants confirm that the null is not an artifact of the individualizing-minus-binding sign convention. An individualizing-only composite ($Z_{\mathrm{care}} + Z_{\mathrm{fairness}}$) has no association with burden effects ($\hat{\beta}=$ $-$0.04, $p=0.979$, $R^2=0.000$), and a leave-loyalty-out composite---dropping the strongest single foundation---remains non-significant ($\hat{\beta}=1.22$, $p=0.303$, $R^2=0.081$).
+
+\begin{table}[htbp]
+\centering
+\caption{H1 robustness across original and expanded model samples}
+\label{tab:h1_expanded_robustness}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrl}
+\toprule
+Predictor and sample & Coefficient & \(p\) & \(R^2\) & Interpretation \\
+\midrule
+MFQ composite, \(N=9\), fifteen-endpoint standardisation & 4.55 & 0.172 & 0.248 & Null \\
+MFQ composite, \(N=9\), re-standardised within nine & 1.92 & 0.151 & 0.270 & Null \\
+MFQ composite, \(N=15\) & 2.96 & 0.235 & 0.107 & Null \\
+Individualizing-only composite, \(N=15\) & $-$0.04 & 0.979 & 0.000 & Null \\
+Leave-loyalty-out composite, \(N=15\) & 1.22 & 0.303 & 0.081 & Null \\
+\bottomrule
+\end{tabular}
+}
+\begin{flushleft}
+\footnotesize Notes: Each row reports a separate bivariate model-level regression of \(\bar{\Delta}_m\) on the listed predictor or MFQ variant. The \(N=9\) rows use the original nine-endpoint sample; the \(N=15\) rows use the expanded sample. MFQ dimensions are standardised across the sample used for aggregation (Appendix~\ref{app:orientation-items}): the first \(N=9\) row keeps the fifteen-endpoint standardisation, the second re-standardises the five dimensions within the nine-endpoint subset. Both leave the H1 conclusion unchanged, but the slope is scale-dependent (4.55 [$-$2.53, 11.64] versus 1.92 [$-$0.83, 4.68]), so the two are reported together. Higher \(\bar{\Delta}_m\) indicates a larger predicted reduction in willingness under high administrative burden. The individualizing-only and leave-loyalty-out rows are reported as sensitivity diagnostics, not as validated alternative indices.
+\end{flushleft}
+\end{table}
+\begin{table}[htbp]
+\centering
+\caption{Foundation-specific H1 regressions in the fifteen-endpoint sample}
+\label{tab:h1_dimension_checks}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrr}
+\toprule
+Predictor (standardised) & Coefficient & SE & 95\% CI & \(p\) & \(R^2\) \\
+\midrule
+Care/Harm & -0.49 & 2.93 & [-6.82, +5.84] & 0.870 & 0.002 \\
+Fairness/Reciprocity & +0.34 & 2.93 & [-5.99, +6.68] & 0.909 & 0.001 \\
+Ingroup/Loyalty & -4.73 & 2.62 & [-10.40, +0.94] & 0.095 & 0.200 \\
+Authority/Respect & -4.25 & 2.69 & [-10.05, +1.55] & 0.138 & 0.161 \\
+Purity/Sanctity & -3.35 & 2.78 & [-9.36, +2.66] & 0.250 & 0.100 \\
+\midrule
+MFQ composite (reference) & 2.96 & 2.37 & [-2.17, +8.09] & 0.235 & 0.107 \\
+\bottomrule
+\end{tabular}}
+\begin{flushleft}
+\footnotesize Notes: Each row is a separate bivariate OLS regression of the model-level mean burden effect (points on a 0--100 willingness scale) on a single standardised MFQ-30 foundation across the fifteen endpoints. Foundations are standardised within the fifteen-endpoint sample (Appendix~\ref{app:orientation-items}); higher values indicate a stronger measured foundation. None of the five foundations is individually significant, so the dimension-level diagnostic check does not overturn the composite null; the loyalty row is one of five rather than the only dimension reported. The composite row is repeated for reference.
+\end{flushleft}
+\end{table}
+
+\subsection{Leave-One-Model-Out Diagnostics}
+
+Leave-one-model-out diagnostics further support the main H1 conclusion. The composite MFQ coefficient is not a stable predictor of model-level burden effects. In the expanded sample, the bivariate MFQ association remains positive but weak and statistically indistinguishable from zero in every leave-one-model-out fit (slope range 0.72--3.79; all \(p > 0.10\)). Dropping Gemini 2.5 Pro shrinks the slope the most (0.72, \(p=0.824\)); dropping GPT-4.1 inflates it the most (3.79, \(p=0.125\)); neither fit reaches conventional significance.
+
+These diagnostics reinforce the interpretation that H1 does not provide evidence for a stable aggregate orientation--effect relationship. The MFQ-30 is useful as a human-validated questionnaire used here as a theory-grounded diagnostic probe, but the expanded analysis does not support treating a scalar moral-foundations composite as a reliable predictor of simulated burden-effect magnitude across models.
+
+
+\subsection{Leave-One-Profile-Out Diagnostics}
+
+We re-estimated each of the three main models twenty-seven times, excluding one synthetic profile at a time (27 fits per model). Coefficient ranges across the 27 fits are archived with the replication package. The H1 MFQ composite slope stays between 2.5 and 3.4 and is never statistically distinguishable from zero ($p$ between 0.16 and 0.33), so the H1 null is not produced by any single test case. For H2 under the primary pair-fixed-effects specification, no retained frame is statistically distinguishable from zero in any of the 27 fits: the access-barrier coefficient is positive in 25 of 27 fits (range $-$0.09 to $+0.32$), the collective-responsibility coefficient ranges from $-$0.08 to $+0.01$, and the coercive-backlash coefficient is positive in all 27 fits ($+0.37$ to $+2.33$) but never significant. For H3, all three frame contrasts retain both sign and significance in all 27 fits (autonomy $+4.64$ to $+5.18$; collective obligation $-$11.01 to $-$10.70; equity/access $+4.56$ to $+5.10$; $p<0.001$ throughout).
+
+\subsection{Power and Minimum Detectable Effect Diagnostics}
+\label{app:h1-power}
+
+The original nine-model H1 analysis was underpowered for small or moderate model-level associations. In that sample, the approximate 80\% minimum detectable slope for the composite MFQ index was \(\beta \approx 10.2\) (5.7 in the fifteen-endpoint sample). These thresholds are expressed on the standardised-composite scale used in the main analysis; they correspond to roughly 3.2 and 3.0 standard errors for the nine- and fifteen-endpoint samples, and the archived power simulation is included in the replication materials. The observed MFQ coefficient was far smaller than this threshold. Expanding the model sample to fifteen endpoints improves coverage but does not eliminate the basic limitation that H1 relies on model-level variation.
+
+For this reason, the H1 estimates should be interpreted as descriptive diagnostics rather than high-powered population estimates. The expanded results are most informative as evidence against a large linear association between the composite MFQ index and simulated burden effects in this model sample. They should not be read as evidence that moral foundations are irrelevant to LLM behavior. Instead, the strongest evidence in the paper comes from the randomized within-model frame-manipulation experiment; H2 shows that naturally expressed rationale frames do not provide a robust within-pair diagnostic.
+
+% Guard: this file is \input{} by main.tex (which has its own \bibliography at the
+% end of the main text). Only emit \bibliographystyle/\bibliography when compiled
+% standalone, otherwise main.aux gets duplicate \bibstyle/\bibdata and bibtex fails,
+% dropping every citation.
+\ifdefined\vslaMainDocument
+\else
+\bibliographystyle{plainnat}
+\bibliography{references}
+\fi
+
