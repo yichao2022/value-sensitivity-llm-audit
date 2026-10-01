@@ -44,7 +44,7 @@
 
 \noindent\textbf{Objective:} To test whether LLM-assisted policy simulations are robust to model choice, prompt framing, and measured moral foundations, using administrative burden in U.S. vaccination access as a testbed.
 
-\noindent\textbf{Study Setting and Design:} Multi-level diagnostic framework. Fifteen LLM endpoints completed a validated moral-foundations battery (MFQ-30) and simulated vaccination willingness for 27 standardized profiles under low- and high-burden conditions, yielding tests of composite orientation (H1), rationale-frame association (H2), and within-model frame manipulation (H3).
+\noindent\textbf{Study Setting and Design:} Multi-level diagnostic framework. Fifteen LLM endpoints completed a human-validated MFQ-30 and simulated vaccination willingness for 27 standardized profiles under low- and high-burden conditions, yielding tests of composite orientation (H1), rationale-frame association (H2), and within-model frame manipulation (H3).
 
 \noindent\textbf{Data Sources and Analytic Sample:} Responses were collected on 16--17 September 2026 (UTC) from 15 LLM endpoints accessed through provider APIs and gateways. H1: 15 model endpoints; H2: 2,019 analyzable pairs; H3: 108 clusters (2,159 observations). The 27 synthetic profiles are constructed test cases; no human participants were involved.
 
@@ -137,7 +137,7 @@ We evaluate fifteen LLM endpoints spanning nine provider ecosystems (OpenAI, Ant
 \subsection{Moral-Foundations Battery}
 \label{subsec:orientation-battery}
 
-We administered the 30-item Moral Foundations Questionnaire (MFQ-30), the standard human-validated instrument in moral psychology \citep{Graham2011}, measuring five foundations: care, fairness, loyalty, authority, and sanctity. Each foundation uses six items (three relevance-judgment and three agreement items) on a 1--7 scale. Following prior LLM-probing work with this instrument \citep{Abdulhai2023,Abdulhai2024}, we compute the moral-foundations composite as the standardized difference between individualizing foundations (care, fairness) and binding foundations (loyalty, authority, sanctity): models with higher composite scores are more individualizing/progressive, lower scores more binding/conservative. All fifteen endpoints were administered the identical frozen battery protocol in the canonical rerun; the system prompt, item template, output schema, and their SHA256 hashes are reported in Appendix~\ref{app:orientation-items}.
+We administered the 30-item Moral Foundations Questionnaire (MFQ-30), the standard human-validated instrument in moral psychology \citep{Graham2011}, measuring five foundations: care, fairness, loyalty, authority, and sanctity. Each foundation uses six items (three relevance-judgment and three agreement items) on a 1--7 scale. Following prior LLM-probing work with this instrument \citep{Abdulhai2023,Abdulhai2024}, we compute the moral-foundations composite as the standardized difference between individualizing foundations (care, fairness) and binding foundations (loyalty, authority, sanctity). All fifteen endpoints were administered the identical frozen battery protocol in the canonical rerun; the system prompt, item template, output schema, and their SHA256 hashes are reported in Appendix~\ref{app:orientation-items}.
 
 \subsection{Administrative-Burden Simulation}
 \label{subsec:burden}
