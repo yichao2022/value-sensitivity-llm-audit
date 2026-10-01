@@ -248,7 +248,8 @@ The battery was administered to all fifteen model endpoints under a single froze
 You are a research participant completing a moral attitudes survey. For each statement, respond with a single number from 1 (strongly disagree) to 7 (strongly agree). Output only valid JSON.
 \end{quote}
 \begin{flushleft}
-{\footnotesize SHA256 of the system prompt:}
+{\footnotesize SHA256 of the system prompt:}\\
+{\footnotesize\ttfamily f57cc97029bbf0b054ffdd129912f875684ea99723ff445522a8d2ee752af820}
 \end{flushleft}
 \paragraph{User prompt.} The rendered user prompt opens with the two-part instruction (Part 1 relevance, Part 2 judgment, both on the uniform 1--7 scale), then lists the 32 items in the fixed order above as \texttt{R<order>. [<item\_id>] <item text>} and \texttt{J<order>. [<item\_id>] <item text>}, and closes with a request for a single JSON object mapping item ids to scores, e.g. \texttt{\{"CA01": 6, "FA02": 3, ...\}}.
 \paragraph{Output schema and parsing.} Unlike the burden simulation, which requires a JSON object with a willingness score and a rationale, the battery uses a JSON object keyed by item id with integer values between 1 and 7. A response counts as fully parsed only if all 32 item ids are recovered with scores in range. All fifteen endpoints returned fully parsable responses in the canonical run; the two control items are excluded from scoring.
