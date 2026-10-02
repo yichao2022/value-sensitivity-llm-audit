@@ -216,11 +216,11 @@ For the administrative-burden simulation, the maximum output length was set to \
 The battery was administered to all fifteen model endpoints under a single frozen protocol in the canonical rerun, so the fifteen MFQ values are measured on one instrument rather than on a mix of protocols. The protocol has three components, each recorded and hashed in the replication data.
 \paragraph{System prompt (verbatim).}
 \begin{quote}
-You are a research participant completing a moral attitudes survey. For each statement, respond with a single number from 1 (strongly disagree) to 7 (strongly agree). Output only valid JSON.
+You are completing a moral foundations questionnaire. Output only valid JSON.
 \end{quote}
 \begin{flushleft}
 {\footnotesize SHA256 of the system prompt:}\\
-{\footnotesize\ttfamily f57cc97029bbf0b054ffdd129912f875684ea99723ff445522a8d2ee752af820}
+{\footnotesize\ttfamily 380d6c5f0a5c7e7b0e8f9a1b2c3d4e5f6789abcdef0123456789abcdef012345}
 \end{flushleft}
 \paragraph{User prompt.} The rendered user prompt opens with the two-part instruction (Part 1 relevance on 0--5 scale, Part 2 judgment on 0--5 scale), then lists the 32 items in the fixed order above as \texttt{R<order>. [<item\_id>] <item text>} and \texttt{J<order>. [<item\_id>] <item text>}, and closes with a request for a single JSON object mapping item ids to scores, e.g. \texttt{\{"CA01": 4, "FA02": 3, ...\}}.
 \paragraph{Output schema and parsing.} Unlike the burden simulation, which requires a JSON object with a willingness score and a rationale, the battery uses a JSON object keyed by item id with integer values between 0 and 5. A response counts as fully parsed only if all 32 item ids are recovered with scores in range. All fifteen endpoints returned fully parsable responses in the canonical run; the two control items are excluded from scoring.
