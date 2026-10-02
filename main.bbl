@@ -1,167 +1,238 @@
 \begin{thebibliography}{37}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[1]{Abdulhai2023}Abdulhai, S., Chen, Y., \& Kumar, A. (2023).
-Moral foundations in large language models.
-\emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, 1234--1248.
+\bibitem[Herd and Moynihan(2018)]{herd2018administrative}
+Pamela Herd and Donald~P. Moynihan.
+\newblock \emph{Administrative Burden: Policymaking by Other Means}.
+\newblock Russell Sage Foundation, 2018.
 
-\bibitem[2]{Abdulhai2024}Abdulhai, S., Chen, Y., \& Kumar, A. (2024).
-Moral reasoning in AI systems.
-\emph{Proceedings of the 2024 Conference on Neural Information Processing Systems}, 5678--5690.
+\bibitem[Moynihan et~al.(2015)Moynihan, Herd, and Harvey]{moynihan2015administrative}
+Donald~P. Moynihan, Pamela Herd, and Hope Harvey.
+\newblock Administrative burden: Learning, psychological, and compliance costs in citizen-state interactions.
+\newblock \emph{Journal of Public Administration Research and Theory}, 25\penalty0 (1):\penalty0 43--69, 2015.
+\newblock \doi{10.1093/jopart/muu009}.
 
-\bibitem[3]{Aher2022}Aher, G., Arriaga, R.~I., \& Kalai, A.~T. (2022).
-Using large language models for simulation and prediction.
-\emph{arXiv preprint arXiv:2208.12899}.
+\bibitem[B{\ae}kgaard et~al.(2021)B{\ae}kgaard, Moynihan, and Thomsen]{baekgaard2021burden}
+Martin B{\ae}kgaard, Donald~P. Moynihan, and Mette~Kj{\ae}rgaard Thomsen.
+\newblock Why do policymakers support administrative burdens? the roles of deservingness, political ideology, and personal experience.
+\newblock \emph{Journal of Public Administration Research and Theory}, 31\penalty0 (1):\penalty0 184--200, 2021.
+\newblock \doi{10.1093/jopart/muaa033}.
 
-\bibitem[4]{Argyle2023}Argyle, L.~P., Busby, E.~C., Fulda, N., Gubler, J.~R., Rytting, C., \& Wingate, D. (2023).
-Out of one, many: Using language models to simulate human samples.
-\emph{Political Analysis}, 31(3), 337--351.
+\bibitem[Kyle and Frakt(2021)]{Kyle2021}
+Michael~Anne Kyle and Austin Frakt.
+\newblock Patient administrative burden in the us health care system.
+\newblock \emph{Health Services Research}, 56\penalty0 (5):\penalty0 755--765, 2021.
+\newblock \doi{10.1111/1475-6773.13861}.
 
-\bibitem[5]{Baek2026synthetic}Baek, J., Kim, S., \& Lee, J. (2026).
-Synthetic quality-of-life responses from large language models.
-\emph{Health Economics}, 35(2), 412--428.
+\bibitem[Kyle et~al.(2025)Kyle, Feng, Wade, and Yaver]{Shin2025}
+Michael~Anne Kyle, Kimberly~Y. Feng, Carrie~G. Wade, and Miranda Yaver.
+\newblock Patient administrative burden: A scoping review.
+\newblock \emph{Health Affairs Scholar}, 3\penalty0 (11):\penalty0 qxaf216, 2025.
+\newblock \doi{10.1093/haschl/qxaf216}.
 
-\bibitem[6]{Bang2024}Bang, Y., Shim, J., \& Lee, S. (2024).
-Measuring political bias in large language models.
-\emph{Proceedings of the 2024 Annual Meeting of the Cognitive Science Society}, 234--239.
+\bibitem[Shafer(2025)]{Shafer2025}
+Paul Shafer.
+\newblock ``when there are enough cracks, everyone steps on them'': Administrative burdens in the {US} health care system.
+\newblock \emph{Health Services Research}, 2025.
+\newblock \doi{10.1111/1475-6773.14602}.
 
-\bibitem[7]{Cui2025replication}Cui, Y., Zhang, X., \& Liu, W. (2025).
-Replication of experimental effects using LLMs.
-\emph{Proceedings of the National Academy of Sciences}, 122(8), e2415678122.
+\bibitem[Halling and B{\ae}kgaard(2023)]{halling2023administrative}
+Aske Halling and Martin B{\ae}kgaard.
+\newblock Administrative burden in citizen--state interactions: A systematic literature review.
+\newblock \emph{Journal of Public Administration Research and Theory}, 33\penalty0 (4):\penalty0 607--621, 2023.
+\newblock \doi{10.1093/jopart/muad023}.
 
-\bibitem[8]{Dahabreh2025hybrid}Dahabreh, I.~J., Haneuse, S., \& Robins, J.~M. (2025).
-Hybrid approaches for causal inference with LLMs.
-\emph{Biometrika}, 112(1), 123--138.
+\bibitem[Aher et~al.(2022)Aher, Arriaga, and Kalai]{Aher2022}
+Gati Aher, Rosa~I. Arriaga, and Adam~Tauman Kalai.
+\newblock Using large language models to simulate multiple humans and replicate human subject studies.
+\newblock \emph{arXiv preprint arXiv:2208.10264}, 2022.
+\newblock URL \url{https://arxiv.org/abs/2208.10264}.
 
-\bibitem[9]{DeBartolomeis2025haipw}De Bartolomeis, P., Kumar, A., \& Bernstein, M.~S. (2025).
-Hybrid estimation with misspecified models.
-\emph{Proceedings of the 42nd International Conference on Machine Learning}, 4567--4598.
+\bibitem[Argyle et~al.(2023)Argyle, Busby, Fulda, Gubler, Rytting, and Wingate]{Argyle2023}
+Lisa~P. Argyle, Ethan~C. Busby, Nancy Fulda, Joshua~R. Gubler, Christopher Rytting, and David Wingate.
+\newblock Out of one, many: Using language models to simulate human samples.
+\newblock \emph{Political Analysis}, 31\penalty0 (3):\penalty0 337--351, 2023.
+\newblock \doi{10.1017/pan.2023.2}.
 
-% Measurement Issues
+\bibitem[Park et~al.(2023)Park, O'Brien, Cai, Morris, Liang, and Bernstein]{Park2023}
+Joon~Sung Park, Joseph~C. O'Brien, Carrie~J. Cai, Meredith~Ringel Morris, Percy Liang, and Michael~S. Bernstein.
+\newblock Generative agents: Interactive simulacra of human behavior.
+\newblock In \emph{Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology}. Association for Computing Machinery, 2023.
+\newblock \doi{10.1145/3586183.3606763}.
 
-\bibitem[10]{Faulborn2025}Faulborn, S., Kuhl, N., \& Benz, A. (2025).
-Measuring values in large language models: A survey of methods.
-\emph{AI \& Society}, 40(1), 145--162.
+\bibitem[Lin(2024)]{Lin2024}
+Zhicheng Lin.
+\newblock Large language models as linguistic simulators and cognitive models in human research.
+\newblock \emph{arXiv preprint arXiv:2402.04470}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2402.04470}.
 
-\bibitem[11]{Graham2011}Graham, J., Nosek, B.~A., Haidt, J., Iyer, R., Koleva, S., \& Ditto, P.~H. (2011).
-Mapping the moral domain.
-\emph{Journal of Personality and Social Psychology}, 101(2), 366--385.
+\bibitem[Ziems et~al.(2024)Ziems, Held, Shaikh, Chen, Zhang, and Yang]{Ziems2024}
+Caleb Ziems, William Held, Omar Shaikh, Jiaao Chen, Zhehao Zhang, and Diyi Yang.
+\newblock Can large language models transform computational social science?
+\newblock \emph{Computational Linguistics}, 50\penalty0 (1):\penalty0 237--291, 2024.
+\newblock \doi{10.1162/coli_a_00502}.
+\newblock URL \url{https://doi.org/10.1162/coli_a_00502}.
 
-\bibitem[12]{Graham2013}Graham, J., Haidt, J., Koleva, S., Motyl, M., Iyer, R., Wojcik, S., \& Ditto, P. (2013).
-Moral foundations theory: The pragmatic validity of moral pluralism.
-\emph{Advances in Experimental Social Psychology}, 47, 55--130.
+\bibitem[Horton et~al.(2023)Horton, Filippas, and Manning]{horton2023large}
+John~J. Horton, Apostolos Filippas, and Benjamin~S. Manning.
+\newblock Large language models as simulated economic agents: What can we learn from homo silicus?
+\newblock NBER Working Paper 31122, National Bureau of Economic Research, 2023.
+\newblock Available at https://www.nber.org/papers/w31122.
 
-% Administrative Burden
+\bibitem[Ashokkumar et~al.(2026)Ashokkumar, Hewitt, Ghezae, and Willer]{hewitt2024large}
+Ashwini Ashokkumar, Luke Hewitt, Isabel Ghezae, and Robb Willer.
+\newblock Large language models can predict the results of social science experiments.
+\newblock \emph{Nature}, 2026.
+\newblock \doi{10.1038/s41586-026-10742-x}.
+\newblock Preprint available at https://doi.org/10.31234/osf.io/3svep\_v1.
 
-\bibitem[13]{Kamal2025}Kamal, A., Smith, B., \& Jones, C. (2025).
-Prompt engineering for value alignment in LLMs.
-\emph{Journal of Artificial Intelligence Research}, 78, 234--256.
+\bibitem[Baek et~al.(2026)]{Baek2026synthetic}
+Seungkook Baek et~al.
+\newblock Assessment of {LLMs} for generating synthetic health-related quality-of-life survey responses among {U.S.} adults.
+\newblock \emph{American Journal of Preventive Medicine}, 2026.
+\newblock \doi{10.1016/j.amepre.2026.108454}.
 
-\bibitem[14]{Kyle2021}Kyle, M.~A., \& Meyer, B.~D. (2021).
-\emph{How administrative burdens harm health} (Vol. 2).
-Brookings Institution.
+\bibitem[Koaik et~al.(2026)Koaik, Gupta, and Sheikh]{koaik2026llm}
+Fatima Koaik, Aayush Gupta, and Farahan~Raza Sheikh.
+\newblock Llm-powered social digital twins: A framework for simulating population behavioral response to policy interventions.
+\newblock \emph{arXiv preprint arXiv:2601.06111}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2601.06111}.
 
-\bibitem[15]{Li2025}Li, H., Zhang, Y., \& Wang, L. (2025).
-Instrument validity in LLM-based surveys.
-\emph{Psychological Methods}, 30(1), 89--104.
+\bibitem[Templin et~al.(2025)Templin, Fort, Padmanabham, Seshadri, Rimal, Oliva, Hassmiller~Lich, Sylvia, and Sinnott-Armstrong]{Templin2025framework}
+Tara Templin, Sophia Fort, Prasanna Padmanabham, Pratyush Seshadri, Ram Rimal, Junier Oliva, Kristin Hassmiller~Lich, Sean Sylvia, and Nasa Sinnott-Armstrong.
+\newblock Framework for bias evaluation in large language models in healthcare settings.
+\newblock \emph{npj Digital Medicine}, 8, 2025.
+\newblock \doi{10.1038/s41746-025-01786-w}.
 
-% Hybrid Methods
+\bibitem[R{\"o}ttger et~al.(2024)R{\"o}ttger, Hofmann, Pyatkin, Hinck, Kirk, Sch{\"u}tze, and Hovy]{Rottger2024}
+Paul R{\"o}ttger, Valentin Hofmann, Valentina Pyatkin, Musashi Hinck, Hannah~Rose Kirk, Hinrich Sch{\"u}tze, and Dirk Hovy.
+\newblock Political compass or spinning arrow? towards more meaningful evaluations for values and opinions in large language models.
+\newblock In \emph{Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}, pages 15295--15311, Bangkok, Thailand, 2024. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2024.acl-long.816}.
+\newblock URL \url{https://aclanthology.org/2024.acl-long.816/}.
 
-\bibitem[16]{Lin2024}Lin, S., Hilton, J., \& Evans, O. (2024).
-TruthfulQA: Measuring how models mimic human falsehoods.
-\emph{Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics}, 3214--3252.
+\bibitem[Tjuatja et~al.(2024)Tjuatja, Chen, Wu, Talwalkar, and Neubig]{Tjuatja2024}
+Lindia Tjuatja, Valerie Chen, Tongshuang Wu, Ameet Talwalkar, and Graham Neubig.
+\newblock Do {LLMs} exhibit human-like response biases? a case study in survey design.
+\newblock \emph{Transactions of the Association for Computational Linguistics}, 12, 2024.
+\newblock \doi{10.1162/tacl_a_00685}.
+\newblock URL \url{https://aclanthology.org/2024.tacl-1.56/}.
 
-\bibitem[17]{Miotto2023}Miotto, M., Rossi, A., \& Kleinberg, B. (2023).
-Psychometric properties of LLM responses.
-\emph{Behavior Research Methods}, 55(3), 1234--1250.
+\bibitem[Faulborn et~al.(2025)Faulborn, Sen, Pellert, Spitz, and Garcia]{Faulborn2025}
+Mats Faulborn, Indira Sen, Max Pellert, Andreas Spitz, and David Garcia.
+\newblock Only a little to the left: A theory-grounded measure of political bias in large language models.
+\newblock In \emph{Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}, pages 31684--31704. Association for Computational Linguistics, 2025.
+\newblock \doi{10.18653/v1/2025.acl-long.1529}.
+\newblock URL \url{https://aclanthology.org/2025.acl-long.1529/}.
 
-\bibitem[18]{Motoki2024}Motoki, F., Pinho, V., \& Silva, S. (2024).
-Political orientation of large language models.
-\emph{Public Opinion Quarterly}, 88(2), 289--310.
+\bibitem[Kamal et~al.(2025)Kamal, Prakash, Rafiuddin, Rakib, Sen, and Choudhury]{Kamal2025}
+Sadia Kamal, Lalu Prasad~Yadav Prakash, S~M Rafiuddin, Mohammed Rakib, Atriya Sen, and Sagnik~Ray Choudhury.
+\newblock A detailed factor analysis for the political compass test: Navigating ideologies of large language models.
+\newblock In \emph{Proceedings of the 2025 International Joint Conference on Natural Language Processing and the Asia-Pacific Chapter of the Association for Computational Linguistics (Short Papers)}. Association for Computational Linguistics, 2025.
+\newblock \doi{10.18653/v1/2025.ijcnlp-short.25}.
+\newblock URL \url{https://aclanthology.org/2025.ijcnlp-short.25/}.
 
-\bibitem[19]{Park2023}Park, J.~S., Kim, J., Ye, Q., Kim, S., Geweke, J., \& Kim, M. (2023).
-Generative agents: Interactive simulacra of human behavior.
-\emph{Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology}, 1--22.
+\bibitem[Wright et~al.(2024)Wright, Arora, Borenstein, Yadav, Belongie, and Augenstein]{Wright2024}
+Dustin Wright, Arnav Arora, Nadav Borenstein, Srishti Yadav, Serge Belongie, and Isabelle Augenstein.
+\newblock Revealing fine-grained values and opinions in large language models.
+\newblock In \emph{Findings of the Association for Computational Linguistics: EMNLP 2024}. Association for Computational Linguistics, 2024.
+\newblock \doi{10.18653/v1/2024.findings-emnlp.995}.
+\newblock URL \url{https://aclanthology.org/2024.findings-emnlp.995/}.
 
-\bibitem[20]{Peng2026}Peng, A., Chen, B., \& Wang, C. (2026).
-Cross-cultural value measurement in LLMs.
-\emph{Journal of Cross-Cultural Psychology}, 57(1), 78--95.
+\bibitem[Graham et~al.(2011)Graham, Nosek, Haidt, Iyer, Koleva, and Ditto]{Graham2011}
+Jesse Graham, Brian~A. Nosek, Jonathan Haidt, Ravi Iyer, Spassena Koleva, and Peter~H. Ditto.
+\newblock Mapping the moral domain.
+\newblock \emph{Journal of Personality and Social Psychology}, 101\penalty0 (2):\penalty0 366--385, 2011.
+\newblock \doi{10.1037/a0021847}.
 
-% Replication and Methods
+\bibitem[Graham et~al.(2013)Graham, Haidt, Koleva, Motyl, Iyer, Wojcik, and Ditto]{Graham2013}
+Jesse Graham, Jonathan Haidt, Spassena Koleva, Matt Motyl, Ravi Iyer, Sean~P. Wojcik, and Peter~H. Ditto.
+\newblock Two cheers for the liberalization of the moral foundations questionnaire.
+\newblock \emph{Personality and Social Psychology Bulletin}, 39\penalty0 (2):\penalty0 126--143, 2013.
+\newblock \doi{10.1177/0146167212470805}.
 
-\bibitem[21]{Rottger2024}Rottger, P., Vamvas, J., \& Sennrich, R. (2024).
-Prompt sensitivity in LLM value measurement.
-\emph{Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing}, 1245--1260.
+\bibitem[Abdulhai et~al.(2023)Abdulhai, Serapio-Garc{\'i}a, Crepy, Valter, Canny, and Jaques]{Abdulhai2023}
+Marwa Abdulhai, Gregory Serapio-Garc{\'i}a, Clement Crepy, Daria Valter, John Canny, and Natasha Jaques.
+\newblock Can {LLMs} speak for diverse people? tuning large language models via human centered data.
+\newblock In \emph{Proceedings of the 2023 AAAI/ACM Conference on AI, Ethics, and Society}, pages 32--43, Montreal, QC, Canada, 2023. ACM.
+\newblock \doi{10.1145/3600211.3604651}.
 
-\bibitem[22]{Rozado2024}Rozado, D. (2024).
-The political preferences of LLMs.
-\emph{PLOS ONE}, 19(2), e0298481.
+\bibitem[Abdulhai et~al.(2024)Abdulhai, Serapio-Garc{\'i}a, Crepy, Valter, Canny, and Jaques]{Abdulhai2024}
+Marwa Abdulhai, Gregory Serapio-Garc{\'i}a, Clement Crepy, Daria Valter, John Canny, and Natasha Jaques.
+\newblock Moral foundations of large language models.
+\newblock In \emph{Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing}, pages 17737--17752, Miami, Florida, USA, 2024. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2024.emnlp-main.982}.
+\newblock URL \url{https://aclanthology.org/2024.emnlp-main.982/}.
 
-\bibitem[23]{Shafer2025}Shafer, P.~R., Grogan, C.~M., \& Moynihan, D.~P. (2025).
-Administrative burden in Medicaid: Learning from state variation.
-\emph{Health Affairs}, 44(3), 412--420.
+\bibitem[Motoki et~al.(2024)Motoki, Pinho~Neto, and Rodrigues]{Motoki2024}
+Fabio Motoki, Valdemar Pinho~Neto, and Victor Rodrigues.
+\newblock More human than human: Measuring chatgpt political bias.
+\newblock \emph{Public Choice}, 198\penalty0 (1-2):\penalty0 3--23, 2024.
+\newblock \doi{10.1007/s11127-023-01097-2}.
 
-\bibitem[24]{Shin2025}Shin, J. (2025).
-Administrative burden and health care access.
-\emph{Journal of Health Economics}, 88, 102845.
+\bibitem[Rozado(2024)]{Rozado2024}
+David Rozado.
+\newblock The political preferences of llms.
+\newblock \emph{PLOS ONE}, 19\penalty0 (7):\penalty0 e0306621, 2024.
+\newblock \doi{10.1371/journal.pone.0306621}.
 
-\bibitem[25]{Templin2025framework}Templin, T., Adler, D., \& Chen, Y. (2025).
-A framework for LLM-assisted health policy simulation.
-\emph{Health Services Research}, 60(3), 512--528.
+\bibitem[Bang et~al.(2024)Bang, Chen, Lee, and Fung]{Bang2024}
+Yejin Bang, Delong Chen, Nayeon Lee, and Pascale Fung.
+\newblock Measuring political bias in large language models: What is said and how it is said.
+\newblock In \emph{Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}, pages 11142--11159. Association for Computational Linguistics, 2024.
+\newblock \doi{10.18653/v1/2024.acl-long.600}.
 
-% Value Measurement
+\bibitem[Peng et~al.(2026)Peng, Yang, Lee, Li, Chu, and Lin]{Peng2026}
+Tai-Quan Peng, Kaiqi Yang, Sanguk Lee, Hang Li, Yucheng Chu, and Yu-Ping Lin.
+\newblock Beyond partisan leaning: A comparative analysis of political bias in large language models.
+\newblock \emph{Journal of Information Technology \& Politics}, 23\penalty0 (2):\penalty0 145--168, 2026.
+\newblock \doi{10.1080/19331681.2026.2646990}.
+\newblock Published online March 2026.
 
-\bibitem[26]{Tjuatja2024}Tjuatja, C., Gu, Y., \& Chen, A. (2024).
-The reliability of LLM-based value surveys.
-\emph{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency}, 89--103.
+\bibitem[Cui et~al.(2025)Cui, Li, and Zhou]{Cui2025replication}
+Ziyan Cui, Ning Li, and Huaikang Zhou.
+\newblock A large-scale replication of scenario-based experiments in psychology and management using large language models.
+\newblock \emph{Nature Computational Science}, 2025.
+\newblock \doi{10.1038/s43588-025-00840-7}.
 
-\bibitem[27]{Wang2025identity}Wang, X., Chen, Y., \& Li, Z. (2025).
-Identity representation in synthetic respondents.
-\emph{Nature Human Behaviour}, 9(3), 456--468.
+\bibitem[Wang et~al.(2025)Wang, Morgenstern, and Dickerson]{Wang2025identity}
+Angelina Wang, Jamie Morgenstern, and John~P. Dickerson.
+\newblock Large language models that replace human participants can harmfully misportray and flatten identity groups.
+\newblock \emph{Nature Machine Intelligence}, 2025.
+\newblock \doi{10.1038/s42256-025-00986-z}.
 
-\bibitem[28]{Wright2024}Wright, A., \& Horton, J.~J. (2024).
-Large-scale evaluation of value propositions in LLMs.
-\emph{Science Advances}, 10(15), eadk4567.
+\bibitem[Bisbee et~al.(2024)Bisbee, Clinton, Dorff, Kenkel, and Larson]{bisbee2024synthetic}
+James Bisbee, Joshua~D. Clinton, Cassy Dorff, Brenton Kenkel, and Jennifer~M. Larson.
+\newblock Synthetic replacements for human survey data? the perils of large language models.
+\newblock \emph{Political Analysis}, 32\penalty0 (4):\penalty0 401--416, 2024.
+\newblock \doi{10.1017/pan.2024.5}.
 
-% Political Orientation
+\bibitem[De~Bartolomeis et~al.(2025)De~Bartolomeis, Dahabreh, Kazi, et~al.]{DeBartolomeis2025haipw}
+Pierpaolo De~Bartolomeis, Issa~J. Dahabreh, Dhruv~S. Kazi, et~al.
+\newblock Horizontally-averaged inverse-probability weighting: A simple, scalable estimator for combining biased candidate predictions into valid causal estimates.
+\newblock \emph{arXiv preprint arXiv:2502.04262}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2502.04262}.
 
-\bibitem[29]{Ziems2024}Ziems, C., Held, W., Shaikh, O., Chen, J., Zhang, Z., \& Yang, D. (2024).
-Can large language models transform computational social science?
-\emph{Computational Linguistics}, 50(1), 237--291.
+\bibitem[Miotto et~al.(2023)Miotto, Rossberg, and Kleinberg]{Miotto2023}
+Marcellus Miotto, Nicole Rossberg, and Bennett Kleinberg.
+\newblock You don't need a personality test to know these models are unreliable: Assessing the reliability of large language models on psychometric instruments, 2023.
+\newblock arXiv:2311.09718.
 
-\bibitem[30]{baekgaard2021burden}Baekgaard, M., Thomsen, M.~K., \& Moynihan, D.~P. (2021).
-The impact of administrative burden on public service usage: A meta-analysis.
-\emph{Public Administration Review}, 81(4), 626--638.
+\bibitem[Li et~al.(2024)Li, Huang, Wang, Cheng, Zhang, Zou, and Sun]{Li2025}
+Yuan Li, Yue Huang, Hongyi Wang, Ying Cheng, Xiangliang Zhang, James Zou, and Lichao Sun.
+\newblock Evaluating large language models with psychometrics.
+\newblock \emph{arXiv preprint arXiv:2406.17675}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2406.17675}.
+\newblock arXiv:2406.17675.
 
-\bibitem[31]{bisbee2024synthetic}Bisbee, J., Hollenbach, F., \& Ishiyama, J. (2024).
-Synthetic respondents and survey inference.
-\emph{American Journal of Political Science}, 68(2), 389--405.
-
-\bibitem[32]{halling2023administrative}Halling, J., Seaman, A., \& Moynihan, D. (2023).
-Reducing administrative burden in health policy.
-\emph{Policy Studies Journal}, 51(2), 289--315.
-
-% LLM Simulation
-
-\bibitem[33]{herd2018administrative}Herd, P., \& Moynihan, D.~P. (2018).
-\emph{Administrative burden: Policymaking by other means}.
-Russell Sage Foundation.
-
-\bibitem[34]{hewitt2024large}Hewitt, J., Liang, P., \& Manning, C.~D. (2024).
-Large language models for scientific discovery.
-\emph{Nature}, 625(7996), 242--244.
-
-% Health Applications
-
-\bibitem[35]{horton2023large}Horton, J.~J. (2023).
-Large language models as simulated economic agents.
-\emph{arXiv preprint arXiv:2301.07543}.
-
-\bibitem[36]{koaik2026llm}Koaik, A., Patel, R., \& Johnson, T. (2026).
-LLM simulation of population responses to health policy.
-\emph{Journal of Health Politics, Policy and Law}, 51(1), 89--115.
-
-\bibitem[37]{moynihan2015administrative}Moynihan, D.~P., Herd, P., \& Harvey, H. (2015).
-Administrative burden: Learning, psychological, and compliance costs in citizen-state interactions.
-\emph{Journal of Public Administration Research and Theory}, 25(1), 43--69.
+\bibitem[Dahabreh et~al.(2025)]{Dahabreh2025hybrid}
+Issa~J. Dahabreh et~al.
+\newblock Hybrid synthetic data generation using large language models.
+\newblock \emph{arXiv preprint arXiv:2511.00318}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2511.00318}.
 
 \end{thebibliography}
