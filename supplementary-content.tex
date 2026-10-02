@@ -156,7 +156,7 @@ For the administrative-burden simulation, the maximum output length was set to \
 \textbf{Judgment items.} Rate each statement from 0 (strongly disagree) to 5 (strongly agree).
 \begin{enumerate}
 \item[AU22] Respect for authority is something all children need to learn.
-\item[AU23] Men and women each have different roles to play in society.
+\item[AU23] \textit{(R)} Men and women each have different roles to play in society.
 \item[AU24] If I were a soldier and disagreed with my commanding officer's orders, I would obey anyway because that is my duty.
 \end{enumerate}
 \subsection*{Purity/Sanctity (SA)}
@@ -168,7 +168,7 @@ For the administrative-burden simulation, the maximum output length was set to \
 \end{enumerate}
 \textbf{Judgment items.} Rate each statement from 0 (strongly disagree) to 5 (strongly agree).
 \begin{enumerate}
-\item[SA28] People should not do things that are disgusting, even if no one is harmed.
+\item[SA28] \textit{(R)} People should not do things that are disgusting, even if no one is harmed.
 \item[SA29] I would call some acts wrong on the grounds that they are unnatural.
 \item[SA30] Chastity is an important and valuable virtue.
 \end{enumerate}
@@ -227,6 +227,9 @@ You are a research participant completing a moral attitudes survey. For each sta
 \paragraph{Provenance fields.} Each battery call is logged with the model identifier, provider, access route, the SHA256 of the system prompt and of the rendered user prompt, the raw response text, the parsed score vector, and a UTC timestamp; the protocol lock that fixes these strings is committed alongside the runner.
 \subsection*{MFQ Scoring}
 The composite is computed in three steps, all from the thirty item ratings and all on the same sample of model endpoints.
+
+\textbf{Reverse-coding key.} Items marked \textit{(R)} in the list above are reverse-coded before dimension averaging: AU23 (Authority/Respect) and SA28 (Purity/Sanctity). For these items, the raw score $x$ is transformed to $5 - x$ to align the direction of measurement with the other items in the same dimension.
+
 \textbf{1. Dimension scores.} Each foundation score is the unweighted mean of its six items (three relevance, three judgment):
 \[
 \mathrm{MFQ}_{m}^{(d)} = \frac{1}{6}\sum_{i=1}^{6} x_{m,i}^{(d)},
