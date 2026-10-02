@@ -1,0 +1,16 @@
+model,provider,route,requested_model_id,alt_ids
+GPT-4.1,OpenAI,openai,gpt-4.1,
+GPT-4.1 mini,OpenAI,openai,gpt-4.1-mini,
+GPT-4o,OpenAI,openai,gpt-4o,
+Claude Sonnet 4.6,Anthropic,anthropic,claude-sonnet-4-6,
+Claude Opus 4.8,Anthropic,anthropic,claude-opus-4-8,openrouter:anthropic/claude-opus-4.8;anthropic:claude-opus-4-8-20260528
+Claude Haiku,Anthropic,anthropic,claude-haiku-4-5,openrouter:anthropic/claude-haiku-4.5
+Gemini 2.5 Pro,Google,gemini,gemini-2.5-pro,
+Gemini 2.5 Flash,Google,gemini,gemini-2.5-flash,
+Llama 3.1 70B Instruct,Meta,openrouter,meta-llama/llama-3.1-70b-instruct,
+Llama 3.1 8B Instruct,Meta,openrouter,meta-llama/llama-3.1-8b-instruct,
+DeepSeek-V3.2,DeepSeek,deepseek,deepseek-chat,openrouter:deepseek/deepseek-chat
+Qwen3.6-72B Instruct,Qwen,openrouter,qwen/qwen3.6-72b-instruct,
+Mistral Large,Mistral,openrouter,mistralai/mistral-large,
+Cohere Command R+,Cohere,openrouter,cohere/command-r-plus-08-2024,
+Kimi K2.6,Moonshot,openrouter,moonshotai/kimi-k2.6-20260420,

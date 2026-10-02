@@ -1,0 +1,201 @@
+rationale_id,model,profile_id,repetition,burden_effect,algo_access_barriers,algo_collective_responsibility,algo_coercive_backlash,algo_autonomy_infringement,algo_procedural_legitimacy
+R152,Claude Haiku,P02,5,44.0,0,0,0,0,0
+R063,Claude Haiku,P19,1,37.0,0,0,0,0,0
+R080,Claude Haiku,P15,2,20.0,0,0,0,0,0
+R157,Claude Haiku,P23,2,30.0,1,1,0,0,0
+R106,Claude Haiku,P08,2,37.0,0,0,0,0,0
+R140,Claude Haiku,P14,4,30.0,1,0,0,0,0
+R165,Claude Haiku,P27,4,14.0,0,0,1,0,0
+R126,Claude Haiku,P09,2,20.0,1,0,0,0,0
+R190,Claude Haiku,P04,3,37.0,1,0,0,0,0
+R121,Claude Haiku,P15,4,20.0,0,0,0,0,0
+R132,Claude Haiku,P12,1,30.0,0,0,1,0,0
+R078,Claude Haiku,P23,5,30.0,1,1,0,0,0
+R148,Claude Haiku,P18,4,14.0,0,0,1,0,0
+R127,Claude Opus 4.8,P27,4,23.0,0,0,0,0,0
+R117,Claude Opus 4.8,P04,2,33.0,1,1,0,0,0
+R188,Claude Opus 4.8,P18,2,23.0,0,0,0,0,0
+R105,Claude Opus 4.8,P11,1,53.0,0,1,0,0,0
+R051,Claude Opus 4.8,P20,4,53.0,1,1,0,0,0
+R048,Claude Opus 4.8,P09,5,23.0,1,0,0,0,0
+R168,Claude Opus 4.8,P20,2,45.0,1,0,0,0,0
+R020,Claude Opus 4.8,P10,1,47.0,1,0,0,0,0
+R008,Claude Opus 4.8,P12,1,42.0,0,0,0,0,0
+R037,Claude Opus 4.8,P05,5,37.0,1,1,0,0,0
+R045,Claude Opus 4.8,P04,1,33.0,1,0,0,0,0
+R068,Claude Opus 4.8,P08,2,37.0,1,0,0,0,0
+R027,Claude Opus 4.8,P11,5,53.0,1,0,0,0,0
+R065,Claude Sonnet 4.6,P07,3,26.0,1,1,0,0,0
+R089,Claude Sonnet 4.6,P23,2,30.0,0,1,0,0,0
+R180,Claude Sonnet 4.6,P18,5,20.0,0,1,0,0,0
+R013,Claude Sonnet 4.6,P15,3,24.0,0,1,0,0,0
+R172,Claude Sonnet 4.6,P17,2,30.0,0,1,0,0,0
+R173,Claude Sonnet 4.6,P11,1,50.0,0,1,1,0,0
+R114,Claude Sonnet 4.6,P15,4,24.0,0,1,0,0,0
+R169,Claude Sonnet 4.6,P01,1,40.0,1,1,1,0,0
+R138,Claude Sonnet 4.6,P20,1,44.0,0,1,0,0,0
+R179,Claude Sonnet 4.6,P19,2,34.0,0,1,0,0,0
+R015,Claude Sonnet 4.6,P24,1,24.0,0,1,0,0,0
+R199,Claude Sonnet 4.6,P26,4,24.0,0,1,0,0,0
+R035,Claude Sonnet 4.6,P24,4,24.0,0,1,0,0,0
+R120,Cohere Command R+,P19,5,45.0,0,0,0,0,0
+R109,Cohere Command R+,P18,1,30.0,0,0,0,0,0
+R070,Cohere Command R+,P03,2,30.0,1,0,0,0,0
+R032,Cohere Command R+,P09,1,25.0,0,1,0,0,0
+R072,Cohere Command R+,P14,3,40.0,0,1,0,0,0
+R186,Cohere Command R+,P11,4,50.0,0,0,0,0,0
+R067,Cohere Command R+,P12,5,40.0,1,1,0,0,0
+R110,Cohere Command R+,P13,1,30.0,1,0,0,0,0
+R108,Cohere Command R+,P24,2,30.0,0,1,0,0,0
+R092,Cohere Command R+,P18,3,30.0,0,1,0,0,0
+R022,Cohere Command R+,P10,2,30.0,1,0,0,0,0
+R024,Cohere Command R+,P22,5,30.0,0,1,0,0,0
+R058,Cohere Command R+,P09,2,30.0,0,1,0,0,0
+R097,DeepSeek-V3.2,P01,2,42.0,1,1,0,0,0
+R047,DeepSeek-V3.2,P22,3,30.0,1,1,0,0,0
+R149,DeepSeek-V3.2,P04,5,37.0,1,0,0,0,0
+R094,DeepSeek-V3.2,P02,3,53.0,1,0,0,0,0
+R036,DeepSeek-V3.2,P04,2,37.0,1,1,0,0,0
+R122,DeepSeek-V3.2,P24,1,33.0,0,1,0,0,0
+R125,DeepSeek-V3.2,P20,3,45.0,0,0,0,0,0
+R113,DeepSeek-V3.2,P16,1,37.0,1,1,0,0,0
+R019,DeepSeek-V3.2,P04,3,37.0,1,1,0,0,0
+R084,DeepSeek-V3.2,P02,2,50.0,1,1,0,0,0
+R197,DeepSeek-V3.2,P13,1,37.0,1,1,0,0,0
+R012,DeepSeek-V3.2,P05,1,40.0,1,1,0,0,0
+R030,DeepSeek-V3.2,P09,1,33.0,0,1,0,0,0
+R163,GPT-4.1,P22,2,25.0,1,1,0,0,0
+R066,GPT-4.1,P12,1,30.0,1,1,0,0,0
+R133,GPT-4.1,P04,3,30.0,1,1,0,0,0
+R053,GPT-4.1,P13,4,25.0,1,1,0,0,0
+R002,GPT-4.1,P21,3,25.0,1,1,0,0,0
+R123,GPT-4.1,P21,2,25.0,1,1,0,0,0
+R166,GPT-4.1,P11,4,35.0,0,1,0,0,0
+R098,GPT-4.1,P24,3,15.0,0,1,0,0,0
+R139,GPT-4.1,P12,5,30.0,1,1,0,0,0
+R175,GPT-4.1,P10,1,40.0,1,1,0,0,0
+R158,GPT-4.1,P11,2,35.0,0,1,0,0,0
+R046,GPT-4.1,P26,3,25.0,0,1,0,0,0
+R185,GPT-4.1,P17,1,25.0,0,1,0,0,0
+R057,GPT-4.1 mini,P27,1,30.0,0,1,0,0,0
+R059,GPT-4.1 mini,P02,1,35.0,1,1,0,0,0
+R124,GPT-4.1 mini,P03,5,30.0,1,1,0,0,0
+R189,GPT-4.1 mini,P27,2,30.0,0,1,0,0,0
+R156,GPT-4.1 mini,P13,5,35.0,1,1,0,0,0
+R134,GPT-4.1 mini,P15,4,30.0,1,1,0,0,0
+R025,GPT-4.1 mini,P09,1,30.0,1,1,0,0,0
+R153,GPT-4.1 mini,P19,5,35.0,0,1,0,0,0
+R171,GPT-4.1 mini,P07,2,35.0,1,1,0,0,0
+R055,GPT-4.1 mini,P25,5,30.0,1,1,0,0,0
+R099,GPT-4.1 mini,P19,2,35.0,0,1,0,0,0
+R150,GPT-4.1 mini,P20,5,35.0,0,1,0,0,0
+R074,GPT-4.1 mini,P20,2,35.0,0,1,0,0,0
+R073,GPT-4o,P16,1,10.0,0,1,0,0,0
+R083,GPT-4o,P21,1,25.0,0,1,0,0,0
+R182,GPT-4o,P05,1,35.0,1,1,0,0,0
+R031,GPT-4o,P19,5,35.0,0,1,0,0,0
+R187,GPT-4o,P17,3,15.0,0,1,0,0,0
+R014,GPT-4o,P02,2,35.0,1,1,0,0,0
+R091,GPT-4o,P10,5,35.0,1,1,0,0,0
+R028,GPT-4o,P19,4,35.0,0,1,0,0,0
+R029,GPT-4o,P07,3,25.0,0,1,0,0,0
+R130,GPT-4o,P25,1,15.0,0,1,0,0,0
+R077,GPT-4o,P19,1,35.0,0,1,0,0,0
+R181,GPT-4o,P27,3,15.0,0,1,0,0,0
+R164,GPT-4o,P22,4,15.0,0,1,0,0,0
+R170,Gemini 2.5 Flash,P26,2,33.0,0,1,1,0,0
+R082,Gemini 2.5 Flash,P16,4,20.0,0,0,1,0,0
+R176,Gemini 2.5 Flash,P13,3,60.0,1,1,1,0,0
+R147,Gemini 2.5 Flash,P03,4,50.0,1,1,0,0,0
+R174,Gemini 2.5 Flash,P12,2,53.0,1,1,0,0,0
+R131,Gemini 2.5 Flash,P18,2,45.0,0,0,1,0,0
+R141,Gemini 2.5 Flash,P20,5,55.0,1,0,0,0,0
+R096,Gemini 2.5 Flash,P07,1,45.0,1,0,1,0,0
+R054,Gemini 2.5 Flash,P12,1,58.0,1,1,1,0,0
+R104,Gemini 2.5 Flash,P13,2,60.0,1,1,1,0,0
+R021,Gemini 2.5 Flash,P19,5,50.0,1,1,0,0,0
+R042,Gemini 2.5 Flash,P08,5,45.0,1,0,0,0,0
+R136,Gemini 2.5 Flash,P15,1,53.0,1,1,1,0,0
+R100,Gemini 2.5 Pro,P24,2,45.0,0,1,1,0,0
+R101,Gemini 2.5 Pro,P05,5,60.0,1,1,0,0,0
+R193,Gemini 2.5 Pro,P09,2,55.0,1,0,1,0,0
+R102,Gemini 2.5 Pro,P03,3,60.0,1,1,0,0,0
+R093,Gemini 2.5 Pro,P16,3,40.0,1,0,0,0,0
+R007,Gemini 2.5 Pro,P27,2,55.0,0,1,0,0,0
+R116,Gemini 2.5 Pro,P20,4,70.0,0,1,1,0,0
+R000,Gemini 2.5 Pro,P14,5,60.0,0,1,0,0,0
+R043,Gemini 2.5 Pro,P04,2,40.0,1,0,1,0,0
+R194,Gemini 2.5 Pro,P12,4,60.0,1,1,0,0,0
+R009,Gemini 2.5 Pro,P12,3,65.0,1,1,0,0,0
+R184,Gemini 2.5 Pro,P08,1,60.0,1,0,0,0,0
+R192,Gemini 2.5 Pro,P22,5,45.0,0,1,0,0,0
+R115,Kimi K2.6,P17,2,43.0,0,1,0,0,0
+R087,Kimi K2.6,P26,3,43.0,0,1,0,0,0
+R064,Kimi K2.6,P08,2,37.0,1,1,0,0,0
+R060,Kimi K2.6,P01,1,47.0,1,1,0,0,0
+R196,Kimi K2.6,P09,1,27.0,1,1,0,0,0
+R003,Kimi K2.6,P15,3,30.0,1,1,1,0,0
+R052,Kimi K2.6,P27,2,30.0,0,1,0,0,0
+R079,Kimi K2.6,P23,5,30.0,1,1,0,0,0
+R081,Kimi K2.6,P24,4,30.0,1,1,0,0,0
+R103,Kimi K2.6,P10,2,47.0,1,1,0,0,0
+R090,Kimi K2.6,P21,3,40.0,0,1,0,0,0
+R069,Kimi K2.6,P17,5,37.0,1,1,0,0,0
+R155,Kimi K2.6,P24,2,27.0,1,1,0,0,0
+R040,Llama 3.1 70B Instruct,P12,1,20.0,0,1,0,0,0
+R038,Llama 3.1 70B Instruct,P17,2,40.0,0,1,0,0,0
+R162,Llama 3.1 70B Instruct,P08,2,40.0,1,1,0,0,0
+R017,Llama 3.1 70B Instruct,P05,4,20.0,1,1,0,0,0
+R143,Llama 3.1 70B Instruct,P18,1,20.0,0,1,0,0,0
+R107,Llama 3.1 70B Instruct,P11,4,40.0,0,0,0,0,0
+R018,Llama 3.1 70B Instruct,P24,1,20.0,1,1,0,0,0
+R010,Llama 3.1 70B Instruct,P04,2,40.0,0,1,0,0,0
+R004,Llama 3.1 70B Instruct,P22,5,20.0,0,1,0,0,0
+R075,Llama 3.1 70B Instruct,P01,4,40.0,0,1,0,0,0
+R071,Llama 3.1 70B Instruct,P21,1,20.0,0,1,0,0,0
+R118,Llama 3.1 70B Instruct,P09,2,20.0,0,1,0,0,0
+R144,Llama 3.1 70B Instruct,P15,5,20.0,0,1,0,0,0
+R001,Llama 3.1 8B Instruct,P01,1,60.0,0,0,0,0,0
+R160,Llama 3.1 8B Instruct,P09,5,60.0,1,1,0,0,0
+R039,Llama 3.1 8B Instruct,P09,3,65.0,1,1,0,0,0
+R167,Llama 3.1 8B Instruct,P02,4,60.0,1,1,0,0,0
+R195,Llama 3.1 8B Instruct,P07,1,60.0,1,1,0,0,0
+R178,Llama 3.1 8B Instruct,P16,3,60.0,0,1,0,0,0
+R128,Llama 3.1 8B Instruct,P14,5,60.0,0,1,0,0,0
+R011,Llama 3.1 8B Instruct,P27,4,65.0,0,1,0,0,0
+R088,Llama 3.1 8B Instruct,P09,1,60.0,1,1,0,0,0
+R142,Llama 3.1 8B Instruct,P26,5,60.0,0,1,0,0,0
+R016,Llama 3.1 8B Instruct,P03,1,60.0,1,1,0,0,0
+R095,Llama 3.1 8B Instruct,P21,2,40.0,0,1,0,0,0
+R119,Llama 3.1 8B Instruct,P07,4,60.0,1,1,0,0,0
+R135,Mistral Large,P27,3,25.0,0,1,0,0,0
+R086,Mistral Large,P15,1,35.0,0,1,0,0,0
+R006,Mistral Large,P27,4,25.0,0,1,0,0,0
+R033,Mistral Large,P06,3,35.0,1,1,0,0,0
+R111,Mistral Large,P17,5,40.0,0,1,0,0,0
+R041,Mistral Large,P22,5,35.0,0,1,0,0,0
+R076,Mistral Large,P24,1,25.0,0,1,0,0,0
+R198,Mistral Large,P23,3,40.0,0,1,0,0,0
+R177,Mistral Large,P20,1,40.0,0,1,0,0,0
+R023,Mistral Large,P05,4,40.0,0,1,0,0,0
+R061,Mistral Large,P09,2,30.0,1,1,0,0,0
+R145,Mistral Large,P09,4,35.0,0,1,0,0,0
+R151,Mistral Large,P25,3,35.0,0,1,0,0,0
+R129,Qwen3.7 Plus,P15,3,45.0,0,1,0,0,0
+R044,Qwen3.7 Plus,P18,2,50.0,0,1,0,0,0
+R154,Qwen3.7 Plus,P14,2,55.0,1,1,0,0,0
+R159,Qwen3.7 Plus,P20,3,65.0,0,1,0,0,0
+R161,Qwen3.7 Plus,P26,3,55.0,1,1,0,0,0
+R050,Qwen3.7 Plus,P06,4,50.0,0,1,1,0,0
+R026,Qwen3.7 Plus,P16,3,60.0,0,1,0,0,0
+R005,Qwen3.7 Plus,P26,4,55.0,1,1,0,0,0
+R191,Qwen3.7 Plus,P21,1,62.0,0,1,0,0,0
+R085,Qwen3.7 Plus,P24,2,55.0,0,1,0,0,0
+R137,Qwen3.7 Plus,P20,4,65.0,0,1,0,0,0
+R183,Qwen3.7 Plus,P09,2,40.0,0,1,0,0,0
+R034,Qwen3.7 Plus,P05,1,60.0,0,1,0,0,0
+R112,Claude Haiku,P22,2,30.0,0,0,0,0,0
+R049,Llama 3.1 8B Instruct,P11,4,60.0,0,1,0,0,0
+R146,Llama 3.1 8B Instruct,P14,2,60.0,0,1,0,0,0
+R062,Claude Haiku,P01,3,44.0,1,0,0,0,0
+R056,GPT-4.1 mini,P27,3,30.0,0,0,0,0,0

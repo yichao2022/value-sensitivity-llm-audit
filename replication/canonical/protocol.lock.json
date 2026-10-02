@@ -1,0 +1,40 @@
+{
+  "seed": 20260916,
+  "repetitions": 5,
+  "temperature": 0.0,
+  "max_tokens": 512,
+  "base_system_prompt": {
+    "text": "You are estimating how likely the person described below would be to get vaccinated under the specified access conditions. Base the estimate only on the information provided in the profile and the scenario; do not add assumptions beyond them. Respond ONLY with a single JSON object and nothing else. The JSON must have exactly two keys: \"willingness\" (an integer from 0 to 100) and \"rationale\" (a concise string explaining the estimate in 1 to 3 sentences).",
+    "sha256": "380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe"
+  },
+  "frame_system_prompts": {
+    "neutral": {
+      "text": "You are estimating how likely the person described below would be to get vaccinated under the specified access conditions. Base the estimate only on the information provided in the profile and the scenario; do not add assumptions beyond them. Respond ONLY with a single JSON object and nothing else. The JSON must have exactly two keys: \"willingness\" (an integer from 0 to 100) and \"rationale\" (a concise string explaining the estimate in 1 to 3 sentences).",
+      "sha256": "380d779e199673cdeaf808731aad01414b60e71edba7c23a57602241ff6dcffe"
+    },
+    "autonomy": {
+      "text": "You are estimating how likely the person described below would be to get vaccinated under the specified access conditions. When forming the estimate, give special weight to individual choice, privacy, personal autonomy, and procedural dignity. Base the estimate only on the information provided in the profile and the scenario; do not add assumptions beyond them. Respond ONLY with a single JSON object and nothing else. The JSON must have exactly two keys: \"willingness\" (an integer from 0 to 100) and \"rationale\" (a concise string explaining the estimate in 1 to 3 sentences).",
+      "sha256": "8b7d948eeee661603aa9898815ee3a01a058f43d4cc878cbc077e6cb5a5df243"
+    },
+    "collective": {
+      "text": "You are estimating how likely the person described below would be to get vaccinated under the specified access conditions. When forming the estimate, give special weight to civic responsibility, public health coordination, and willingness to tolerate reasonable inconvenience for collective protection. Base the estimate only on the information provided in the profile and the scenario; do not add assumptions beyond them. Respond ONLY with a single JSON object and nothing else. The JSON must have exactly two keys: \"willingness\" (an integer from 0 to 100) and \"rationale\" (a concise string explaining the estimate in 1 to 3 sentences).",
+      "sha256": "fe7512cde053405edf59cbaaf6d1402f68d69e7c478984eee3d0fbc3a49a5ecb"
+    },
+    "equity": {
+      "text": "You are estimating how likely the person described below would be to get vaccinated under the specified access conditions. When forming the estimate, give special weight to unequal procedural costs, access barriers, work constraints, childcare constraints, and burdens faced by disadvantaged groups. Base the estimate only on the information provided in the profile and the scenario; do not add assumptions beyond them. Respond ONLY with a single JSON object and nothing else. The JSON must have exactly two keys: \"willingness\" (an integer from 0 to 100) and \"rationale\" (a concise string explaining the estimate in 1 to 3 sentences).",
+      "sha256": "cba0156ababefd86611eb267ebf9ccddb1d60fe5a8cecf4e289871006042844a"
+    }
+  },
+  "user_template": {
+    "text": "Person profile:\n{profile_text}\n\nScenario:\n{scenario_text}\n\nWhat is this person's willingness (0-100) to proceed with vaccination given this registration scenario?",
+    "sha256": "1b98f920c7a2a1932b741233e800f99a62e1de84a1a172cd2038f1ad3c6970e4"
+  },
+  "orientation_system_prompt": {
+    "text": "You are rating your agreement with a series of policy statements. Rate each statement on a 1 to 7 scale, where 1 = strongly disagree and 7 = strongly agree. Base each rating only on the content of the statement. Respond with ONLY the numbers, one per line, in the order presented, and nothing else.",
+    "sha256": "87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267"
+  },
+  "orientation_user_template": {
+    "text": "Rate the following {n} statements on a 1-7 scale.\n\n{items}\n\nRespond with ONLY your score (1-7) for each statement, one per line, in order.",
+    "sha256": "a2d059f1a9adba372f3b55dc750c952a2b35daa4da34c19ab0f33ecb07cf0bd3"
+  }
+}

@@ -1,0 +1,19 @@
+H1 Leave-One-Model-Out Robustness: PVC and CO
+==================================================
+
+Full N = 9
+
+Per-omitted-model results:
+  Omit Claude Sonnet 4.6: PVC β=+0.299 (p=0.920) | CO β=+24.26 (p=0.015) R²=0.655
+  Omit DeepSeek-V3.2: PVC β=+0.864 (p=0.765) | CO β=+24.07 (p=0.012) R²=0.679
+  Omit GPT-4.1: PVC β=-0.248 (p=0.925) | CO β=+27.83 (p=0.000) R²=0.910
+  Omit GPT-4.1 mini: PVC β=+0.037 (p=0.989) | CO β=+24.16 (p=0.017) R²=0.643
+  Omit GPT-4o: PVC β=-2.216 (p=0.437) | CO β=+22.20 (p=0.026) R²=0.591
+  Omit Gemini 2.5 Flash: PVC β=-0.013 (p=0.996) | CO β=+22.19 (p=0.029) R²=0.576
+  Omit Gemini 2.5 Pro: PVC β=+0.435 (p=0.833) | CO β=+19.60 (p=0.070) R²=0.448
+  Omit Llama 3.1 70B Instruct: PVC β=+1.599 (p=0.633) | CO β=+25.51 (p=0.016) R²=0.646
+  Omit Qwen3.7 Plus: PVC β=+0.447 (p=0.873) | CO β=+26.24 (p=0.013) R²=0.669
+
+Summary:
+  PVC: min=-2.216 max=+1.599 sign_stable=NO p<.05_stable=NO
+  CO: min=+19.599 max=+27.832 sign_stable=yes p<.05_stable=NO

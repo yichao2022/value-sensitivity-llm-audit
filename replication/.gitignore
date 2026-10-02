@@ -1,0 +1,42 @@
+# API keys
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# OpenClaw (unrelated to this project)
+*.plist
+*.plist.*
+openclaw-*
+OPENCLAW_*
+*.sh
+beijing_tiantianjie.py
+c2c-review-skill/
+page-agent-skill/
+plugins/
+skills/
+openclaw-workspace/
+openclaw-gateway-bin/
+openclaw-workspace-quarantine/
+telegram-lite-workspace/
+telegram-update-backups/
+um_castor_pdf_fix/
+yichao2022.github.io/
+sendpdf
+fix-pairing
+kkfileviewctl.sh
+noiz_profile*
+main-model.patch.json5
+*.json.bak*
+*.json.guardfix
+*.json5
+*.orig
+.zshrc*
+
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+graft/
+openclaw.with-browser-guard.json

@@ -1,0 +1,7 @@
+model,AP,ST,CO,BS,CA
+Claude Haiku,4.5,4.5,4.75,5.5,3.75
+Claude Opus 4.8,4.5,5,5,5,3.5
+Cohere Command R+,3.75,4.75,4.5,5.5,3.5
+Kimi K2.6,4,4.75,5.75,6,3.25
+Llama 3.1 8B Instruct,3,3.25,3.25,4.25,4.75
+Mistral Large,4,5.5,6,6,2.75

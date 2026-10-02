@@ -1,0 +1,17 @@
+model,frame,mean,std,count
+GPT-4.1,neutral,25.59,8.42,135
+GPT-4.1,autonomy,34.15,6.84,135
+GPT-4.1,collective,18.62,6.22,135
+GPT-4.1,equity,34.0,9.46,135
+Llama 3.1 70B Instruct,neutral,27.11,9.69,135
+Llama 3.1 70B Instruct,autonomy,37.19,7.98,135
+Llama 3.1 70B Instruct,collective,25.33,10.42,135
+Llama 3.1 70B Instruct,equity,36.42,12.9,134
+Mistral Large,neutral,37.04,6.44,135
+Mistral Large,autonomy,41.11,5.38,135
+Mistral Large,collective,16.93,7.53,135
+Mistral Large,equity,39.63,6.95,135
+Qwen3.7 Plus,neutral,56.59,7.64,135
+Qwen3.7 Plus,autonomy,53.71,6.54,135
+Qwen3.7 Plus,collective,41.93,11.34,135
+Qwen3.7 Plus,equity,55.64,6.91,135

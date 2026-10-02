@@ -1,0 +1,16 @@
+run_id,order_index,block,model,provider,route,requested_model_id
+CAN_ORI_001,1,orient,GPT-4.1,OpenAI,openai,gpt-4.1
+CAN_ORI_002,2,orient,GPT-4.1 mini,OpenAI,openai,gpt-4.1-mini
+CAN_ORI_003,3,orient,GPT-4o,OpenAI,openai,gpt-4o
+CAN_ORI_004,4,orient,Claude Sonnet 4.6,Anthropic,anthropic,claude-sonnet-4-6
+CAN_ORI_005,5,orient,Claude Opus 4.8,Anthropic,anthropic,claude-opus-4-8
+CAN_ORI_006,6,orient,Claude Haiku,Anthropic,anthropic,claude-haiku-4-5
+CAN_ORI_007,7,orient,Gemini 2.5 Pro,Google,gemini,gemini-2.5-pro
+CAN_ORI_008,8,orient,Gemini 2.5 Flash,Google,gemini,gemini-2.5-flash
+CAN_ORI_009,9,orient,Llama 3.1 70B Instruct,Meta,openrouter,meta-llama/llama-3.1-70b-instruct
+CAN_ORI_010,10,orient,Llama 3.1 8B Instruct,Meta,openrouter,meta-llama/llama-3.1-8b-instruct
+CAN_ORI_011,11,orient,DeepSeek-V3.2,DeepSeek,deepseek,deepseek-chat
+CAN_ORI_012,12,orient,Mistral Large,Mistral,openrouter,mistralai/mistral-large
+CAN_ORI_013,13,orient,Cohere Command R+,Cohere,openrouter,cohere/command-r-plus-08-2024
+CAN_ORI_014,14,orient,Kimi K2.6,Moonshot,openrouter,moonshotai/kimi-k2.6-20260420
+CAN_ORI_015,15,orient,Qwen3.7 Plus,Qwen,dashscope,qwen3.7-plus

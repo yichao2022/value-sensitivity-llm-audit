@@ -1,0 +1,13 @@
+H2 Leave-One-Model-Out Robustness Summary
+==================================================
+
+Full sample N = 1215, models = 9
+
+PVC: min=-0.7214 max=+3.1203 range=3.8417 sign_stable=NO
+access_barriers: min=+9.4418 max=+14.5614 range=5.1196 sign_stable=yes
+collective_responsibility: min=-15.3495 max=-6.2350 range=9.1145 sign_stable=yes
+coercive_backlash: min=+7.4018 max=+14.8759 range=7.4741 sign_stable=yes
+
+PVC sign flip when 'GPT-4o' is omitted (PVC β = -0.7214, p = 0.0007).
+
+All other coefficients (access_barriers, collective_responsibility, coercive_backlash) are sign-stable across all 9 leave-one-model-out samples.

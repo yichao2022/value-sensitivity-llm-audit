@@ -1,0 +1,5 @@
+frame,prevalence_pct,b,se_clustered,p,ci_low,ci_high,lomo_positive
+collective_responsibility,75.2,0.6938,1.065,0.5150959627484389,-1.4,2.787,11/15
+access_barriers,43.2,2.3566,1.0056,0.019582511202628466,0.38,4.333,15/15
+coercive_backlash,7.7,7.2648,1.9766,0.00026954108938235307,3.379,11.151,15/15
+PVC,,-1.9987,0.4461,9.704997253525375e-06,-2.876,-1.122,

@@ -1,0 +1,12 @@
+Subject: Research background — health policy simulation & behavioral decision science
+
+Dear Dr. Chandra,
+
+I'm Yichao Jin, a recent PhD in Public Policy & Political Economy from UT Dallas. My research sits at the intersection of health policy and behavioral decision science, with a focus on computational methods for understanding policy preferences.
+
+My dissertation develops a simulation framework to test how LLM-based agents respond to health policy trade-offs, using behavioral experiments (DCEs) and causal inference to validate their decision patterns against human benchmarks. I'm particularly interested in how these tools can inform real-world policy design where stated preferences often diverge from revealed behavior.
+
+Your work on health care economics and innovation policy has shaped how I think about bridging methodological rigor with policy relevance. I'd welcome the opportunity to discuss whether my research directions might align with ongoing projects in your group.
+
+Best,
+Yichao Jin

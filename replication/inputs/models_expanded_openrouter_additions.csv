@@ -1,0 +1,7 @@
+model,provider,access_route,requested_model_id,endpoint,temperature,top_p,notes
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,OpenRouter Chat Completions API,0,default,added expansion model
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,OpenRouter Chat Completions API,0,default,added expansion model; versioned ID (not latest alias)
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,OpenRouter Chat Completions API,0,default,added expansion model
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,OpenRouter Chat Completions API,0,default,added expansion model
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,OpenRouter Chat Completions API,0,default,"added expansion model; cohere/command-r-plus not found, using versioned ID"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,OpenRouter Chat Completions API,0,default,added expansion model

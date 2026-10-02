@@ -1,0 +1,7 @@
+model,N,json_valid_pct,score_valid_pct,non_refusal_pct,mean_willingness,stab_sd,delta_sd,flip_pct
+Claude Haiku,270,100.0,100.0,100.0,56.85,0.0,6.59,0.0
+Claude Opus 4.8,270,100.0,100.0,100.0,53.03,0.77,6.15,0.0
+Cohere Command R+,270,99.6,99.6,100.0,60.32,1.52,4.77,0.0
+Kimi K2.6,270,99.6,99.6,100.0,58.25,1.39,5.83,0.0
+Llama 3.1 8B Instruct,270,100.0,100.0,100.0,65.41,0.28,4.54,0.0
+Mistral Large,270,100.0,100.0,100.0,60.73,0.88,5.41,0.0

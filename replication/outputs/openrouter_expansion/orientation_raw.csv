@@ -1,0 +1,2421 @@
+model,provider,access_route,requested_model_id,returned_model_id,route_provider,item_id,dimension,reverse_coded,raw_response,parsed_score,valid_score,timestamp,temperature,top_p,metadata_json
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,AP1,AP,0,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",5,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,BS2,BS,1,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",3,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,ST3,ST,0,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",5,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,CA2,CA,1,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",5,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,CO1,CO,0,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",5,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,AP4,AP,1,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",4,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,BS1,BS,0,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",5,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,ST4,ST,1,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",3,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,CA3,CA,0,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",4,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,CO4,CO,1,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",3,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,AP2,AP,1,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",4,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,ST1,ST,0,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",5,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,BS3,BS,0,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",5,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,CA4,CA,1,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",5,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,CO2,CO,1,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",3,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,AP3,AP,0,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",5,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,ST2,ST,1,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",3,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,BS4,BS,1,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",3,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,CO3,CO,0,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",5,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Opus 4.8,Anthropic,OpenRouter,anthropic/claude-opus-4.8,anthropic/claude-4.8-opus-20260528,Anthropic,CA1,CA,0,"5
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+5
+4",4,1,2026-06-04T20:12:06.641081+00:00,0,default,"{""id"": ""gen-1780603924-1Chs6VVb3NJsypzAta7a"", ""model"": ""anthropic/claude-4.8-opus-20260528"", ""provider"": ""Anthropic""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,AP1,AP,0,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",5,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,BS2,BS,1,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",3,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,ST3,ST,0,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",5,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,CA2,CA,1,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",6,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,CO1,CO,0,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",5,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,AP4,AP,1,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",5,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,BS1,BS,0,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",6,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,ST4,ST,1,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",4,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,CA3,CA,0,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",5,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,CO4,CO,1,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",4,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,AP2,AP,1,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",4,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,ST1,ST,0,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",5,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,BS3,BS,0,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",6,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,CA4,CA,1,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",6,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,CO2,CO,1,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",3,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,AP3,AP,0,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",6,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,ST2,ST,1,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",4,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,BS4,BS,1,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",3,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,CO3,CO,0,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",5,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Claude Haiku,Anthropic,OpenRouter,anthropic/claude-haiku-4.5,anthropic/claude-4.5-haiku-20251001,Amazon Bedrock,CA1,CA,0,"5
+3
+5
+6
+5
+5
+6
+4
+5
+4
+4
+5
+6
+6
+3
+6
+4
+3
+5
+6",6,1,2026-06-04T20:12:08.798683+00:00,0,default,"{""id"": ""gen-1780603927-chQFvsTQPTG8Nyzc0kjA"", ""model"": ""anthropic/claude-4.5-haiku-20251001"", ""provider"": ""Amazon Bedrock""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,AP1,AP,0,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",5,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,BS2,BS,1,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",3,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,ST3,ST,0,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",6,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,CA2,CA,1,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",6,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,CO1,CO,0,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",6,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,AP4,AP,1,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",5,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,BS1,BS,0,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",7,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,ST4,ST,1,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",2,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,CA3,CA,0,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",3,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,CO4,CO,1,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",2,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,AP2,AP,1,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",5,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,ST1,ST,0,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",6,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,BS3,BS,0,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",7,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,CA4,CA,1,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",6,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,CO2,CO,1,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",2,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,AP3,AP,0,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",5,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,ST2,ST,1,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",4,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,BS4,BS,1,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",3,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,CO3,CO,0,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",6,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Mistral Large,Mistral,OpenRouter,mistralai/mistral-large,mistralai/mistral-large,Mistral,CA1,CA,0,"5
+3
+6
+6
+6
+5
+7
+2
+3
+2
+5
+6
+7
+6
+2
+5
+4
+3
+6
+4",4,1,2026-06-04T20:12:12.035279+00:00,0,default,"{""id"": ""gen-1780603930-nxng0OjBwoZndhfUpLp7"", ""model"": ""mistralai/mistral-large"", ""provider"": ""Mistral""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,AP1,AP,0,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",6,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,BS2,BS,1,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",2,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,ST3,ST,0,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",6,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,CA2,CA,1,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",6,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,CO1,CO,0,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",6,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,AP4,AP,1,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",5,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,BS1,BS,0,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",6,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,ST4,ST,1,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",4,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,CA3,CA,0,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",4,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,CO4,CO,1,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",4,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,AP2,AP,1,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",5,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,ST1,ST,0,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",5,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,BS3,BS,0,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",6,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,CA4,CA,1,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",4,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,CO2,CO,1,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",4,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,AP3,AP,0,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",3,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,ST2,ST,1,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",4,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,BS4,BS,1,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",4,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,CO3,CO,0,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",4,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Cohere Command R+,Cohere,OpenRouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,Cohere,CA1,CA,0,"6
+2
+6
+6
+6
+5
+6
+4
+4
+4
+5
+5
+6
+4
+4
+3
+4
+4
+4
+4
+4",4,1,2026-06-04T20:12:14.073059+00:00,0,default,"{""id"": ""gen-1780603932-42R5ciBLt8kjxoBAja5M"", ""model"": ""cohere/command-r-plus-08-2024"", ""provider"": ""Cohere""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,AP1,AP,0,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",1,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,BS2,BS,1,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",6,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,ST3,ST,0,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",2,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,CA2,CA,1,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",2,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,CO1,CO,0,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",3,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,AP4,AP,1,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",5,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,BS1,BS,0,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",4,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,ST4,ST,1,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",6,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,CA3,CA,0,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",5,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,CO4,CO,1,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",7,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,AP2,AP,1,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",6,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,ST1,ST,0,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",6,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,BS3,BS,0,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",7,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,CA4,CA,1,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",7,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,CO2,CO,1,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",4,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,AP3,AP,0,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",6,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,ST2,ST,1,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",5,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,BS4,BS,1,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",4,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,CO3,CO,0,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",5,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Llama 3.1 8B Instruct,Meta,OpenRouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,DeepInfra,CA1,CA,0,"1. 6
+2. 2
+3. 5
+4. 6
+5. 7
+6. 6
+7. 7
+8. 4
+9. 6
+10. 5
+11. 4
+12. 5
+13. 7
+14. 6
+15. 4
+16. 6
+17. 7
+18. 2
+19. 5
+20. 7",7,1,2026-06-04T20:14:53.405648+00:00,0,default,"{""id"": ""gen-1780604089-H8ilIquEsZF05GW0oXMu"", ""model"": ""meta-llama/llama-3.1-8b-instruct"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,AP1,AP,0,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",4,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,BS2,BS,1,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",2,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,ST3,ST,0,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",5,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,CA2,CA,1,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",5,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,CO1,CO,0,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",5,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,AP4,AP,1,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",5,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,BS1,BS,0,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",6,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,ST4,ST,1,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",3,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,CA3,CA,0,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",3,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,CO4,CO,1,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",2,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,AP2,AP,1,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",4,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,ST1,ST,0,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",5,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,BS3,BS,0,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",6,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,CA4,CA,1,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",5,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,CO2,CO,1,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",2,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,AP3,AP,0,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",5,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,ST2,ST,1,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",4,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,BS4,BS,1,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",2,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,CO3,CO,0,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",6,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"
+Kimi K2.6,Moonshot AI,OpenRouter,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6-20260420,DeepInfra,CA1,CA,0,"4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+4",4,1,2026-06-04T20:24:25.457565+00:00,0,default,"{""id"": ""gen-1780604661-2ihV5nxTDQ5RwNsdRvrv"", ""model"": ""moonshotai/kimi-k2.6-20260420"", ""provider"": ""DeepInfra""}"

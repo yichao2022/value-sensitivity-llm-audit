@@ -1,0 +1,2160 @@
+model,frame,profile_id,repetition,w_low,w_high,delta
+GPT-4.1,autonomy,P01,1,75.0,35.0,40.0
+GPT-4.1,autonomy,P01,2,75.0,35.0,40.0
+GPT-4.1,autonomy,P01,3,75.0,35.0,40.0
+GPT-4.1,autonomy,P01,4,75.0,35.0,40.0
+GPT-4.1,autonomy,P01,5,75.0,35.0,40.0
+GPT-4.1,autonomy,P02,1,75.0,35.0,40.0
+GPT-4.1,autonomy,P02,2,75.0,35.0,40.0
+GPT-4.1,autonomy,P02,3,75.0,35.0,40.0
+GPT-4.1,autonomy,P02,4,75.0,35.0,40.0
+GPT-4.1,autonomy,P02,5,75.0,35.0,40.0
+GPT-4.1,autonomy,P03,1,80.0,40.0,40.0
+GPT-4.1,autonomy,P03,2,80.0,40.0,40.0
+GPT-4.1,autonomy,P03,3,75.0,40.0,35.0
+GPT-4.1,autonomy,P03,4,80.0,40.0,40.0
+GPT-4.1,autonomy,P03,5,80.0,40.0,40.0
+GPT-4.1,autonomy,P04,1,75.0,35.0,40.0
+GPT-4.1,autonomy,P04,2,75.0,35.0,40.0
+GPT-4.1,autonomy,P04,3,75.0,35.0,40.0
+GPT-4.1,autonomy,P04,4,75.0,35.0,40.0
+GPT-4.1,autonomy,P04,5,75.0,35.0,40.0
+GPT-4.1,autonomy,P05,1,75.0,40.0,35.0
+GPT-4.1,autonomy,P05,2,75.0,35.0,40.0
+GPT-4.1,autonomy,P05,3,75.0,40.0,35.0
+GPT-4.1,autonomy,P05,4,75.0,40.0,35.0
+GPT-4.1,autonomy,P05,5,75.0,40.0,35.0
+GPT-4.1,autonomy,P06,1,80.0,45.0,35.0
+GPT-4.1,autonomy,P06,2,75.0,45.0,30.0
+GPT-4.1,autonomy,P06,3,75.0,45.0,30.0
+GPT-4.1,autonomy,P06,4,75.0,45.0,30.0
+GPT-4.1,autonomy,P06,5,80.0,45.0,35.0
+GPT-4.1,autonomy,P07,1,75.0,40.0,35.0
+GPT-4.1,autonomy,P07,2,75.0,40.0,35.0
+GPT-4.1,autonomy,P07,3,75.0,40.0,35.0
+GPT-4.1,autonomy,P07,4,75.0,40.0,35.0
+GPT-4.1,autonomy,P07,5,75.0,40.0,35.0
+GPT-4.1,autonomy,P08,1,75.0,40.0,35.0
+GPT-4.1,autonomy,P08,2,75.0,40.0,35.0
+GPT-4.1,autonomy,P08,3,75.0,40.0,35.0
+GPT-4.1,autonomy,P08,4,75.0,40.0,35.0
+GPT-4.1,autonomy,P08,5,75.0,40.0,35.0
+GPT-4.1,autonomy,P09,1,75.0,55.0,20.0
+GPT-4.1,autonomy,P09,2,75.0,55.0,20.0
+GPT-4.1,autonomy,P09,3,75.0,55.0,20.0
+GPT-4.1,autonomy,P09,4,75.0,55.0,20.0
+GPT-4.1,autonomy,P09,5,75.0,55.0,20.0
+GPT-4.1,autonomy,P10,1,75.0,35.0,40.0
+GPT-4.1,autonomy,P10,2,75.0,35.0,40.0
+GPT-4.1,autonomy,P10,3,75.0,35.0,40.0
+GPT-4.1,autonomy,P10,4,75.0,35.0,40.0
+GPT-4.1,autonomy,P10,5,75.0,35.0,40.0
+GPT-4.1,autonomy,P11,1,80.0,35.0,45.0
+GPT-4.1,autonomy,P11,2,80.0,35.0,45.0
+GPT-4.1,autonomy,P11,3,80.0,35.0,45.0
+GPT-4.1,autonomy,P11,4,80.0,35.0,45.0
+GPT-4.1,autonomy,P11,5,80.0,35.0,45.0
+GPT-4.1,autonomy,P12,1,80.0,40.0,40.0
+GPT-4.1,autonomy,P12,2,80.0,40.0,40.0
+GPT-4.1,autonomy,P12,3,80.0,40.0,40.0
+GPT-4.1,autonomy,P12,4,80.0,40.0,40.0
+GPT-4.1,autonomy,P12,5,80.0,40.0,40.0
+GPT-4.1,autonomy,P13,1,75.0,45.0,30.0
+GPT-4.1,autonomy,P13,2,75.0,40.0,35.0
+GPT-4.1,autonomy,P13,3,75.0,40.0,35.0
+GPT-4.1,autonomy,P13,4,75.0,40.0,35.0
+GPT-4.1,autonomy,P13,5,75.0,40.0,35.0
+GPT-4.1,autonomy,P14,1,80.0,40.0,40.0
+GPT-4.1,autonomy,P14,2,80.0,40.0,40.0
+GPT-4.1,autonomy,P14,3,80.0,40.0,40.0
+GPT-4.1,autonomy,P14,4,80.0,40.0,40.0
+GPT-4.1,autonomy,P14,5,75.0,40.0,35.0
+GPT-4.1,autonomy,P15,1,80.0,55.0,25.0
+GPT-4.1,autonomy,P15,2,80.0,55.0,25.0
+GPT-4.1,autonomy,P15,3,80.0,55.0,25.0
+GPT-4.1,autonomy,P15,4,80.0,55.0,25.0
+GPT-4.1,autonomy,P15,5,80.0,55.0,25.0
+GPT-4.1,autonomy,P16,1,75.0,45.0,30.0
+GPT-4.1,autonomy,P16,2,75.0,45.0,30.0
+GPT-4.1,autonomy,P16,3,75.0,45.0,30.0
+GPT-4.1,autonomy,P16,4,75.0,45.0,30.0
+GPT-4.1,autonomy,P16,5,75.0,45.0,30.0
+GPT-4.1,autonomy,P17,1,80.0,45.0,35.0
+GPT-4.1,autonomy,P17,2,80.0,45.0,35.0
+GPT-4.1,autonomy,P17,3,80.0,45.0,35.0
+GPT-4.1,autonomy,P17,4,80.0,45.0,35.0
+GPT-4.1,autonomy,P17,5,80.0,45.0,35.0
+GPT-4.1,autonomy,P18,1,80.0,60.0,20.0
+GPT-4.1,autonomy,P18,2,80.0,55.0,25.0
+GPT-4.1,autonomy,P18,3,80.0,55.0,25.0
+GPT-4.1,autonomy,P18,4,80.0,60.0,20.0
+GPT-4.1,autonomy,P18,5,80.0,60.0,20.0
+GPT-4.1,autonomy,P19,1,75.0,35.0,40.0
+GPT-4.1,autonomy,P19,2,75.0,35.0,40.0
+GPT-4.1,autonomy,P19,3,75.0,35.0,40.0
+GPT-4.1,autonomy,P19,4,75.0,35.0,40.0
+GPT-4.1,autonomy,P19,5,75.0,35.0,40.0
+GPT-4.1,autonomy,P20,1,80.0,40.0,40.0
+GPT-4.1,autonomy,P20,2,80.0,35.0,45.0
+GPT-4.1,autonomy,P20,3,80.0,35.0,45.0
+GPT-4.1,autonomy,P20,4,80.0,35.0,45.0
+GPT-4.1,autonomy,P20,5,80.0,35.0,45.0
+GPT-4.1,autonomy,P21,1,80.0,45.0,35.0
+GPT-4.1,autonomy,P21,2,80.0,45.0,35.0
+GPT-4.1,autonomy,P21,3,80.0,45.0,35.0
+GPT-4.1,autonomy,P21,4,80.0,45.0,35.0
+GPT-4.1,autonomy,P21,5,80.0,45.0,35.0
+GPT-4.1,autonomy,P22,1,75.0,45.0,30.0
+GPT-4.1,autonomy,P22,2,75.0,45.0,30.0
+GPT-4.1,autonomy,P22,3,75.0,45.0,30.0
+GPT-4.1,autonomy,P22,4,75.0,45.0,30.0
+GPT-4.1,autonomy,P22,5,75.0,45.0,30.0
+GPT-4.1,autonomy,P23,1,80.0,45.0,35.0
+GPT-4.1,autonomy,P23,2,80.0,45.0,35.0
+GPT-4.1,autonomy,P23,3,80.0,45.0,35.0
+GPT-4.1,autonomy,P23,4,80.0,45.0,35.0
+GPT-4.1,autonomy,P23,5,80.0,45.0,35.0
+GPT-4.1,autonomy,P24,1,80.0,55.0,25.0
+GPT-4.1,autonomy,P24,2,80.0,55.0,25.0
+GPT-4.1,autonomy,P24,3,80.0,55.0,25.0
+GPT-4.1,autonomy,P24,4,80.0,55.0,25.0
+GPT-4.1,autonomy,P24,5,80.0,55.0,25.0
+GPT-4.1,autonomy,P25,1,75.0,45.0,30.0
+GPT-4.1,autonomy,P25,2,75.0,45.0,30.0
+GPT-4.1,autonomy,P25,3,75.0,45.0,30.0
+GPT-4.1,autonomy,P25,4,75.0,45.0,30.0
+GPT-4.1,autonomy,P25,5,75.0,45.0,30.0
+GPT-4.1,autonomy,P26,1,80.0,45.0,35.0
+GPT-4.1,autonomy,P26,2,80.0,45.0,35.0
+GPT-4.1,autonomy,P26,3,80.0,45.0,35.0
+GPT-4.1,autonomy,P26,4,80.0,45.0,35.0
+GPT-4.1,autonomy,P26,5,80.0,45.0,35.0
+GPT-4.1,autonomy,P27,1,80.0,60.0,20.0
+GPT-4.1,autonomy,P27,2,80.0,60.0,20.0
+GPT-4.1,autonomy,P27,3,80.0,60.0,20.0
+GPT-4.1,autonomy,P27,4,80.0,60.0,20.0
+GPT-4.1,autonomy,P27,5,85.0,60.0,25.0
+GPT-4.1,collective,P01,1,70.0,40.0,30.0
+GPT-4.1,collective,P01,2,70.0,40.0,30.0
+GPT-4.1,collective,P01,3,70.0,40.0,30.0
+GPT-4.1,collective,P01,4,70.0,40.0,30.0
+GPT-4.1,collective,P01,5,70.0,40.0,30.0
+GPT-4.1,collective,P02,1,75.0,45.0,30.0
+GPT-4.1,collective,P02,2,75.0,45.0,30.0
+GPT-4.1,collective,P02,3,75.0,45.0,30.0
+GPT-4.1,collective,P02,4,75.0,45.0,30.0
+GPT-4.1,collective,P02,5,75.0,45.0,30.0
+GPT-4.1,collective,P03,1,75.0,55.0,20.0
+GPT-4.1,collective,P03,2,75.0,55.0,20.0
+GPT-4.1,collective,P03,3,75.0,55.0,20.0
+GPT-4.1,collective,P03,4,75.0,55.0,20.0
+GPT-4.1,collective,P03,5,75.0,55.0,20.0
+GPT-4.1,collective,P04,1,70.0,55.0,15.0
+GPT-4.1,collective,P04,2,70.0,55.0,15.0
+GPT-4.1,collective,P04,3,75.0,55.0,20.0
+GPT-4.1,collective,P04,4,70.0,55.0,15.0
+GPT-4.1,collective,P04,5,75.0,55.0,20.0
+GPT-4.1,collective,P05,1,75.0,55.0,20.0
+GPT-4.1,collective,P05,2,75.0,55.0,20.0
+GPT-4.1,collective,P05,3,75.0,55.0,20.0
+GPT-4.1,collective,P05,4,75.0,55.0,20.0
+GPT-4.1,collective,P05,5,75.0,55.0,20.0
+GPT-4.1,collective,P06,1,75.0,60.0,15.0
+GPT-4.1,collective,P06,2,75.0,60.0,15.0
+GPT-4.1,collective,P06,3,75.0,60.0,15.0
+GPT-4.1,collective,P06,4,75.0,60.0,15.0
+GPT-4.1,collective,P06,5,75.0,65.0,10.0
+GPT-4.1,collective,P07,1,75.0,55.0,20.0
+GPT-4.1,collective,P07,2,75.0,60.0,15.0
+GPT-4.1,collective,P07,3,75.0,55.0,20.0
+GPT-4.1,collective,P07,4,75.0,55.0,20.0
+GPT-4.1,collective,P07,5,75.0,60.0,15.0
+GPT-4.1,collective,P08,1,75.0,60.0,15.0
+GPT-4.1,collective,P08,2,75.0,55.0,20.0
+GPT-4.1,collective,P08,3,75.0,55.0,20.0
+GPT-4.1,collective,P08,4,75.0,55.0,20.0
+GPT-4.1,collective,P08,5,75.0,55.0,20.0
+GPT-4.1,collective,P09,1,75.0,65.0,10.0
+GPT-4.1,collective,P09,2,75.0,65.0,10.0
+GPT-4.1,collective,P09,3,75.0,65.0,10.0
+GPT-4.1,collective,P09,4,75.0,65.0,10.0
+GPT-4.1,collective,P09,5,75.0,65.0,10.0
+GPT-4.1,collective,P10,1,75.0,45.0,30.0
+GPT-4.1,collective,P10,2,75.0,45.0,30.0
+GPT-4.1,collective,P10,3,75.0,45.0,30.0
+GPT-4.1,collective,P10,4,75.0,45.0,30.0
+GPT-4.1,collective,P10,5,75.0,45.0,30.0
+GPT-4.1,collective,P11,1,75.0,45.0,30.0
+GPT-4.1,collective,P11,2,75.0,45.0,30.0
+GPT-4.1,collective,P11,3,75.0,45.0,30.0
+GPT-4.1,collective,P11,4,75.0,45.0,30.0
+GPT-4.1,collective,P11,5,75.0,45.0,30.0
+GPT-4.1,collective,P12,1,75.0,55.0,20.0
+GPT-4.1,collective,P12,2,75.0,55.0,20.0
+GPT-4.1,collective,P12,3,75.0,55.0,20.0
+GPT-4.1,collective,P12,4,75.0,55.0,20.0
+GPT-4.1,collective,P12,5,75.0,55.0,20.0
+GPT-4.1,collective,P13,1,75.0,55.0,20.0
+GPT-4.1,collective,P13,2,75.0,55.0,20.0
+GPT-4.1,collective,P13,3,75.0,55.0,20.0
+GPT-4.1,collective,P13,4,75.0,55.0,20.0
+GPT-4.1,collective,P13,5,75.0,55.0,20.0
+GPT-4.1,collective,P14,1,80.0,55.0,25.0
+GPT-4.1,collective,P14,2,75.0,55.0,20.0
+GPT-4.1,collective,P14,3,78.0,55.0,23.0
+GPT-4.1,collective,P14,4,78.0,60.0,18.0
+GPT-4.1,collective,P14,5,78.0,60.0,18.0
+GPT-4.1,collective,P15,1,75.0,65.0,10.0
+GPT-4.1,collective,P15,2,80.0,65.0,15.0
+GPT-4.1,collective,P15,3,80.0,65.0,15.0
+GPT-4.1,collective,P15,4,80.0,65.0,15.0
+GPT-4.1,collective,P15,5,80.0,65.0,15.0
+GPT-4.1,collective,P16,1,75.0,60.0,15.0
+GPT-4.1,collective,P16,2,75.0,60.0,15.0
+GPT-4.1,collective,P16,3,75.0,60.0,15.0
+GPT-4.1,collective,P16,4,75.0,60.0,15.0
+GPT-4.1,collective,P16,5,75.0,60.0,15.0
+GPT-4.1,collective,P17,1,80.0,60.0,20.0
+GPT-4.1,collective,P17,2,75.0,60.0,15.0
+GPT-4.1,collective,P17,3,80.0,60.0,20.0
+GPT-4.1,collective,P17,4,75.0,60.0,15.0
+GPT-4.1,collective,P17,5,80.0,60.0,20.0
+GPT-4.1,collective,P18,1,75.0,70.0,5.0
+GPT-4.1,collective,P18,2,75.0,65.0,10.0
+GPT-4.1,collective,P18,3,80.0,65.0,15.0
+GPT-4.1,collective,P18,4,80.0,65.0,15.0
+GPT-4.1,collective,P18,5,80.0,70.0,10.0
+GPT-4.1,collective,P19,1,75.0,55.0,20.0
+GPT-4.1,collective,P19,2,75.0,55.0,20.0
+GPT-4.1,collective,P19,3,75.0,55.0,20.0
+GPT-4.1,collective,P19,4,75.0,55.0,20.0
+GPT-4.1,collective,P19,5,75.0,55.0,20.0
+GPT-4.1,collective,P20,1,75.0,55.0,20.0
+GPT-4.1,collective,P20,2,75.0,55.0,20.0
+GPT-4.1,collective,P20,3,75.0,45.0,30.0
+GPT-4.1,collective,P20,4,75.0,55.0,20.0
+GPT-4.1,collective,P20,5,75.0,55.0,20.0
+GPT-4.1,collective,P21,1,80.0,55.0,25.0
+GPT-4.1,collective,P21,2,75.0,55.0,20.0
+GPT-4.1,collective,P21,3,75.0,60.0,15.0
+GPT-4.1,collective,P21,4,75.0,60.0,15.0
+GPT-4.1,collective,P21,5,75.0,60.0,15.0
+GPT-4.1,collective,P22,1,75.0,60.0,15.0
+GPT-4.1,collective,P22,2,75.0,60.0,15.0
+GPT-4.1,collective,P22,3,75.0,60.0,15.0
+GPT-4.1,collective,P22,4,75.0,60.0,15.0
+GPT-4.1,collective,P22,5,75.0,60.0,15.0
+GPT-4.1,collective,P23,1,80.0,60.0,20.0
+GPT-4.1,collective,P23,2,80.0,60.0,20.0
+GPT-4.1,collective,P23,3,80.0,60.0,20.0
+GPT-4.1,collective,P23,4,80.0,60.0,20.0
+GPT-4.1,collective,P23,5,80.0,60.0,20.0
+GPT-4.1,collective,P24,1,80.0,65.0,15.0
+GPT-4.1,collective,P24,2,80.0,65.0,15.0
+GPT-4.1,collective,P24,3,80.0,65.0,15.0
+GPT-4.1,collective,P24,4,80.0,65.0,15.0
+GPT-4.1,collective,P24,5,80.0,65.0,15.0
+GPT-4.1,collective,P25,1,75.0,65.0,10.0
+GPT-4.1,collective,P25,2,75.0,65.0,10.0
+GPT-4.1,collective,P25,3,75.0,60.0,15.0
+GPT-4.1,collective,P25,4,75.0,60.0,15.0
+GPT-4.1,collective,P25,5,75.0,60.0,15.0
+GPT-4.1,collective,P26,1,80.0,65.0,15.0
+GPT-4.1,collective,P26,2,80.0,65.0,15.0
+GPT-4.1,collective,P26,3,80.0,60.0,20.0
+GPT-4.1,collective,P26,4,80.0,65.0,15.0
+GPT-4.1,collective,P26,5,80.0,65.0,15.0
+GPT-4.1,collective,P27,1,80.0,75.0,5.0
+GPT-4.1,collective,P27,2,80.0,70.0,10.0
+GPT-4.1,collective,P27,3,80.0,75.0,5.0
+GPT-4.1,collective,P27,4,80.0,75.0,5.0
+GPT-4.1,collective,P27,5,80.0,70.0,10.0
+GPT-4.1,equity,P01,1,75.0,30.0,45.0
+GPT-4.1,equity,P01,2,75.0,30.0,45.0
+GPT-4.1,equity,P01,3,75.0,30.0,45.0
+GPT-4.1,equity,P01,4,75.0,30.0,45.0
+GPT-4.1,equity,P01,5,75.0,30.0,45.0
+GPT-4.1,equity,P02,1,80.0,35.0,45.0
+GPT-4.1,equity,P02,2,80.0,35.0,45.0
+GPT-4.1,equity,P02,3,80.0,35.0,45.0
+GPT-4.1,equity,P02,4,80.0,35.0,45.0
+GPT-4.1,equity,P02,5,80.0,35.0,45.0
+GPT-4.1,equity,P03,1,80.0,40.0,40.0
+GPT-4.1,equity,P03,2,80.0,40.0,40.0
+GPT-4.1,equity,P03,3,80.0,40.0,40.0
+GPT-4.1,equity,P03,4,85.0,40.0,45.0
+GPT-4.1,equity,P03,5,85.0,40.0,45.0
+GPT-4.1,equity,P04,1,80.0,35.0,45.0
+GPT-4.1,equity,P04,2,80.0,40.0,40.0
+GPT-4.1,equity,P04,3,75.0,40.0,35.0
+GPT-4.1,equity,P04,4,75.0,35.0,40.0
+GPT-4.1,equity,P04,5,75.0,35.0,40.0
+GPT-4.1,equity,P05,1,85.0,40.0,45.0
+GPT-4.1,equity,P05,2,80.0,40.0,40.0
+GPT-4.1,equity,P05,3,80.0,40.0,40.0
+GPT-4.1,equity,P05,4,80.0,40.0,40.0
+GPT-4.1,equity,P05,5,80.0,40.0,40.0
+GPT-4.1,equity,P06,1,85.0,55.0,30.0
+GPT-4.1,equity,P06,2,85.0,55.0,30.0
+GPT-4.1,equity,P06,3,85.0,55.0,30.0
+GPT-4.1,equity,P06,4,85.0,55.0,30.0
+GPT-4.1,equity,P06,5,85.0,55.0,30.0
+GPT-4.1,equity,P07,1,80.0,45.0,35.0
+GPT-4.1,equity,P07,2,80.0,45.0,35.0
+GPT-4.1,equity,P07,3,80.0,45.0,35.0
+GPT-4.1,equity,P07,4,80.0,45.0,35.0
+GPT-4.1,equity,P07,5,80.0,45.0,35.0
+GPT-4.1,equity,P08,1,85.0,40.0,45.0
+GPT-4.1,equity,P08,2,85.0,40.0,45.0
+GPT-4.1,equity,P08,3,85.0,40.0,45.0
+GPT-4.1,equity,P08,4,85.0,45.0,40.0
+GPT-4.1,equity,P08,5,85.0,45.0,40.0
+GPT-4.1,equity,P09,1,85.0,60.0,25.0
+GPT-4.1,equity,P09,2,85.0,60.0,25.0
+GPT-4.1,equity,P09,3,85.0,65.0,20.0
+GPT-4.1,equity,P09,4,85.0,60.0,25.0
+GPT-4.1,equity,P09,5,85.0,65.0,20.0
+GPT-4.1,equity,P10,1,80.0,35.0,45.0
+GPT-4.1,equity,P10,2,80.0,35.0,45.0
+GPT-4.1,equity,P10,3,80.0,35.0,45.0
+GPT-4.1,equity,P10,4,80.0,35.0,45.0
+GPT-4.1,equity,P10,5,80.0,35.0,45.0
+GPT-4.1,equity,P11,1,85.0,35.0,50.0
+GPT-4.1,equity,P11,2,85.0,35.0,50.0
+GPT-4.1,equity,P11,3,80.0,35.0,45.0
+GPT-4.1,equity,P11,4,85.0,35.0,50.0
+GPT-4.1,equity,P11,5,85.0,35.0,50.0
+GPT-4.1,equity,P12,1,85.0,45.0,40.0
+GPT-4.1,equity,P12,2,85.0,45.0,40.0
+GPT-4.1,equity,P12,3,85.0,45.0,40.0
+GPT-4.1,equity,P12,4,85.0,45.0,40.0
+GPT-4.1,equity,P12,5,85.0,45.0,40.0
+GPT-4.1,equity,P13,1,80.0,45.0,35.0
+GPT-4.1,equity,P13,2,80.0,45.0,35.0
+GPT-4.1,equity,P13,3,80.0,45.0,35.0
+GPT-4.1,equity,P13,4,80.0,45.0,35.0
+GPT-4.1,equity,P13,5,80.0,45.0,35.0
+GPT-4.1,equity,P14,1,85.0,45.0,40.0
+GPT-4.1,equity,P14,2,85.0,45.0,40.0
+GPT-4.1,equity,P14,3,85.0,45.0,40.0
+GPT-4.1,equity,P14,4,85.0,45.0,40.0
+GPT-4.1,equity,P14,5,85.0,45.0,40.0
+GPT-4.1,equity,P15,1,85.0,60.0,25.0
+GPT-4.1,equity,P15,2,85.0,60.0,25.0
+GPT-4.1,equity,P15,3,85.0,60.0,25.0
+GPT-4.1,equity,P15,4,85.0,60.0,25.0
+GPT-4.1,equity,P15,5,85.0,60.0,25.0
+GPT-4.1,equity,P16,1,85.0,55.0,30.0
+GPT-4.1,equity,P16,2,85.0,55.0,30.0
+GPT-4.1,equity,P16,3,85.0,55.0,30.0
+GPT-4.1,equity,P16,4,80.0,55.0,25.0
+GPT-4.1,equity,P16,5,85.0,55.0,30.0
+GPT-4.1,equity,P17,1,85.0,55.0,30.0
+GPT-4.1,equity,P17,2,85.0,50.0,35.0
+GPT-4.1,equity,P17,3,85.0,55.0,30.0
+GPT-4.1,equity,P17,4,85.0,50.0,35.0
+GPT-4.1,equity,P17,5,85.0,55.0,30.0
+GPT-4.1,equity,P18,1,85.0,70.0,15.0
+GPT-4.1,equity,P18,2,85.0,65.0,20.0
+GPT-4.1,equity,P18,3,85.0,65.0,20.0
+GPT-4.1,equity,P18,4,85.0,70.0,15.0
+GPT-4.1,equity,P18,5,85.0,70.0,15.0
+GPT-4.1,equity,P19,1,85.0,40.0,45.0
+GPT-4.1,equity,P19,2,85.0,40.0,45.0
+GPT-4.1,equity,P19,3,85.0,40.0,45.0
+GPT-4.1,equity,P19,4,85.0,40.0,45.0
+GPT-4.1,equity,P19,5,80.0,40.0,40.0
+GPT-4.1,equity,P20,1,85.0,40.0,45.0
+GPT-4.1,equity,P20,2,85.0,45.0,40.0
+GPT-4.1,equity,P20,3,85.0,40.0,45.0
+GPT-4.1,equity,P20,4,85.0,45.0,40.0
+GPT-4.1,equity,P20,5,85.0,45.0,40.0
+GPT-4.1,equity,P21,1,85.0,55.0,30.0
+GPT-4.1,equity,P21,2,85.0,55.0,30.0
+GPT-4.1,equity,P21,3,85.0,55.0,30.0
+GPT-4.1,equity,P21,4,85.0,55.0,30.0
+GPT-4.1,equity,P21,5,85.0,55.0,30.0
+GPT-4.1,equity,P22,1,85.0,55.0,30.0
+GPT-4.1,equity,P22,2,85.0,55.0,30.0
+GPT-4.1,equity,P22,3,85.0,55.0,30.0
+GPT-4.1,equity,P22,4,85.0,55.0,30.0
+GPT-4.1,equity,P22,5,85.0,55.0,30.0
+GPT-4.1,equity,P23,1,85.0,55.0,30.0
+GPT-4.1,equity,P23,2,85.0,55.0,30.0
+GPT-4.1,equity,P23,3,85.0,55.0,30.0
+GPT-4.1,equity,P23,4,85.0,55.0,30.0
+GPT-4.1,equity,P23,5,85.0,55.0,30.0
+GPT-4.1,equity,P24,1,85.0,65.0,20.0
+GPT-4.1,equity,P24,2,90.0,65.0,25.0
+GPT-4.1,equity,P24,3,90.0,65.0,25.0
+GPT-4.1,equity,P24,4,90.0,70.0,20.0
+GPT-4.1,equity,P24,5,90.0,65.0,25.0
+GPT-4.1,equity,P25,1,85.0,65.0,20.0
+GPT-4.1,equity,P25,2,85.0,65.0,20.0
+GPT-4.1,equity,P25,3,85.0,60.0,25.0
+GPT-4.1,equity,P25,4,85.0,60.0,25.0
+GPT-4.1,equity,P25,5,85.0,60.0,25.0
+GPT-4.1,equity,P26,1,85.0,60.0,25.0
+GPT-4.1,equity,P26,2,85.0,60.0,25.0
+GPT-4.1,equity,P26,3,85.0,60.0,25.0
+GPT-4.1,equity,P26,4,85.0,60.0,25.0
+GPT-4.1,equity,P26,5,85.0,60.0,25.0
+GPT-4.1,equity,P27,1,90.0,75.0,15.0
+GPT-4.1,equity,P27,2,90.0,75.0,15.0
+GPT-4.1,equity,P27,3,90.0,75.0,15.0
+GPT-4.1,equity,P27,4,90.0,75.0,15.0
+GPT-4.1,equity,P27,5,90.0,75.0,15.0
+GPT-4.1,neutral,P01,1,70.0,35.0,35.0
+GPT-4.1,neutral,P01,2,70.0,35.0,35.0
+GPT-4.1,neutral,P01,3,70.0,35.0,35.0
+GPT-4.1,neutral,P01,4,70.0,35.0,35.0
+GPT-4.1,neutral,P01,5,70.0,35.0,35.0
+GPT-4.1,neutral,P02,1,75.0,35.0,40.0
+GPT-4.1,neutral,P02,2,75.0,35.0,40.0
+GPT-4.1,neutral,P02,3,75.0,35.0,40.0
+GPT-4.1,neutral,P02,4,75.0,35.0,40.0
+GPT-4.1,neutral,P02,5,75.0,35.0,40.0
+GPT-4.1,neutral,P03,1,75.0,45.0,30.0
+GPT-4.1,neutral,P03,2,75.0,45.0,30.0
+GPT-4.1,neutral,P03,3,75.0,45.0,30.0
+GPT-4.1,neutral,P03,4,75.0,45.0,30.0
+GPT-4.1,neutral,P03,5,75.0,45.0,30.0
+GPT-4.1,neutral,P04,1,65.0,40.0,25.0
+GPT-4.1,neutral,P04,2,65.0,40.0,25.0
+GPT-4.1,neutral,P04,3,65.0,40.0,25.0
+GPT-4.1,neutral,P04,4,65.0,40.0,25.0
+GPT-4.1,neutral,P04,5,65.0,40.0,25.0
+GPT-4.1,neutral,P05,1,75.0,40.0,35.0
+GPT-4.1,neutral,P05,2,75.0,40.0,35.0
+GPT-4.1,neutral,P05,3,75.0,40.0,35.0
+GPT-4.1,neutral,P05,4,75.0,40.0,35.0
+GPT-4.1,neutral,P05,5,75.0,40.0,35.0
+GPT-4.1,neutral,P06,1,75.0,55.0,20.0
+GPT-4.1,neutral,P06,2,75.0,55.0,20.0
+GPT-4.1,neutral,P06,3,75.0,55.0,20.0
+GPT-4.1,neutral,P06,4,75.0,55.0,20.0
+GPT-4.1,neutral,P06,5,75.0,55.0,20.0
+GPT-4.1,neutral,P07,1,70.0,45.0,25.0
+GPT-4.1,neutral,P07,2,70.0,45.0,25.0
+GPT-4.1,neutral,P07,3,70.0,45.0,25.0
+GPT-4.1,neutral,P07,4,70.0,45.0,25.0
+GPT-4.1,neutral,P07,5,70.0,45.0,25.0
+GPT-4.1,neutral,P08,1,75.0,45.0,30.0
+GPT-4.1,neutral,P08,2,75.0,45.0,30.0
+GPT-4.1,neutral,P08,3,75.0,45.0,30.0
+GPT-4.1,neutral,P08,4,75.0,45.0,30.0
+GPT-4.1,neutral,P08,5,75.0,45.0,30.0
+GPT-4.1,neutral,P09,1,75.0,60.0,15.0
+GPT-4.1,neutral,P09,2,75.0,60.0,15.0
+GPT-4.1,neutral,P09,3,75.0,60.0,15.0
+GPT-4.1,neutral,P09,4,75.0,60.0,15.0
+GPT-4.1,neutral,P09,5,75.0,60.0,15.0
+GPT-4.1,neutral,P10,1,70.0,35.0,35.0
+GPT-4.1,neutral,P10,2,75.0,35.0,40.0
+GPT-4.1,neutral,P10,3,75.0,35.0,40.0
+GPT-4.1,neutral,P10,4,70.0,35.0,35.0
+GPT-4.1,neutral,P10,5,75.0,35.0,40.0
+GPT-4.1,neutral,P11,1,75.0,40.0,35.0
+GPT-4.1,neutral,P11,2,75.0,40.0,35.0
+GPT-4.1,neutral,P11,3,75.0,40.0,35.0
+GPT-4.1,neutral,P11,4,75.0,40.0,35.0
+GPT-4.1,neutral,P11,5,75.0,40.0,35.0
+GPT-4.1,neutral,P12,1,75.0,45.0,30.0
+GPT-4.1,neutral,P12,2,75.0,45.0,30.0
+GPT-4.1,neutral,P12,3,75.0,45.0,30.0
+GPT-4.1,neutral,P12,4,75.0,45.0,30.0
+GPT-4.1,neutral,P12,5,75.0,45.0,30.0
+GPT-4.1,neutral,P13,1,70.0,45.0,25.0
+GPT-4.1,neutral,P13,2,70.0,45.0,25.0
+GPT-4.1,neutral,P13,3,70.0,45.0,25.0
+GPT-4.1,neutral,P13,4,70.0,45.0,25.0
+GPT-4.1,neutral,P13,5,70.0,45.0,25.0
+GPT-4.1,neutral,P14,1,75.0,45.0,30.0
+GPT-4.1,neutral,P14,2,75.0,45.0,30.0
+GPT-4.1,neutral,P14,3,75.0,45.0,30.0
+GPT-4.1,neutral,P14,4,75.0,45.0,30.0
+GPT-4.1,neutral,P14,5,75.0,45.0,30.0
+GPT-4.1,neutral,P15,1,75.0,60.0,15.0
+GPT-4.1,neutral,P15,2,75.0,60.0,15.0
+GPT-4.1,neutral,P15,3,75.0,60.0,15.0
+GPT-4.1,neutral,P15,4,75.0,60.0,15.0
+GPT-4.1,neutral,P15,5,75.0,60.0,15.0
+GPT-4.1,neutral,P16,1,70.0,55.0,15.0
+GPT-4.1,neutral,P16,2,70.0,55.0,15.0
+GPT-4.1,neutral,P16,3,70.0,55.0,15.0
+GPT-4.1,neutral,P16,4,70.0,55.0,15.0
+GPT-4.1,neutral,P16,5,70.0,45.0,25.0
+GPT-4.1,neutral,P17,1,75.0,55.0,20.0
+GPT-4.1,neutral,P17,2,75.0,50.0,25.0
+GPT-4.1,neutral,P17,3,75.0,50.0,25.0
+GPT-4.1,neutral,P17,4,75.0,45.0,30.0
+GPT-4.1,neutral,P17,5,75.0,45.0,30.0
+GPT-4.1,neutral,P18,1,75.0,65.0,10.0
+GPT-4.1,neutral,P18,2,75.0,65.0,10.0
+GPT-4.1,neutral,P18,3,80.0,65.0,15.0
+GPT-4.1,neutral,P18,4,75.0,65.0,10.0
+GPT-4.1,neutral,P18,5,75.0,65.0,10.0
+GPT-4.1,neutral,P19,1,75.0,45.0,30.0
+GPT-4.1,neutral,P19,2,75.0,45.0,30.0
+GPT-4.1,neutral,P19,3,75.0,45.0,30.0
+GPT-4.1,neutral,P19,4,75.0,40.0,35.0
+GPT-4.1,neutral,P19,5,75.0,40.0,35.0
+GPT-4.1,neutral,P20,1,80.0,40.0,40.0
+GPT-4.1,neutral,P20,2,75.0,45.0,30.0
+GPT-4.1,neutral,P20,3,75.0,40.0,35.0
+GPT-4.1,neutral,P20,4,80.0,45.0,35.0
+GPT-4.1,neutral,P20,5,80.0,45.0,35.0
+GPT-4.1,neutral,P21,1,75.0,55.0,20.0
+GPT-4.1,neutral,P21,2,80.0,50.0,30.0
+GPT-4.1,neutral,P21,3,75.0,55.0,20.0
+GPT-4.1,neutral,P21,4,75.0,55.0,20.0
+GPT-4.1,neutral,P21,5,80.0,55.0,25.0
+GPT-4.1,neutral,P22,1,75.0,50.0,25.0
+GPT-4.1,neutral,P22,2,75.0,50.0,25.0
+GPT-4.1,neutral,P22,3,75.0,55.0,20.0
+GPT-4.1,neutral,P22,4,75.0,55.0,20.0
+GPT-4.1,neutral,P22,5,75.0,55.0,20.0
+GPT-4.1,neutral,P23,1,80.0,50.0,30.0
+GPT-4.1,neutral,P23,2,80.0,50.0,30.0
+GPT-4.1,neutral,P23,3,80.0,50.0,30.0
+GPT-4.1,neutral,P23,4,80.0,50.0,30.0
+GPT-4.1,neutral,P23,5,80.0,50.0,30.0
+GPT-4.1,neutral,P24,1,80.0,65.0,15.0
+GPT-4.1,neutral,P24,2,75.0,65.0,10.0
+GPT-4.1,neutral,P24,3,75.0,65.0,10.0
+GPT-4.1,neutral,P24,4,80.0,65.0,15.0
+GPT-4.1,neutral,P24,5,75.0,65.0,10.0
+GPT-4.1,neutral,P25,1,75.0,60.0,15.0
+GPT-4.1,neutral,P25,2,75.0,55.0,20.0
+GPT-4.1,neutral,P25,3,75.0,60.0,15.0
+GPT-4.1,neutral,P25,4,75.0,60.0,15.0
+GPT-4.1,neutral,P25,5,75.0,60.0,15.0
+GPT-4.1,neutral,P26,1,75.0,55.0,20.0
+GPT-4.1,neutral,P26,2,80.0,55.0,25.0
+GPT-4.1,neutral,P26,3,80.0,55.0,25.0
+GPT-4.1,neutral,P26,4,80.0,55.0,25.0
+GPT-4.1,neutral,P26,5,80.0,55.0,25.0
+GPT-4.1,neutral,P27,1,80.0,65.0,15.0
+GPT-4.1,neutral,P27,2,80.0,65.0,15.0
+GPT-4.1,neutral,P27,3,80.0,65.0,15.0
+GPT-4.1,neutral,P27,4,80.0,65.0,15.0
+GPT-4.1,neutral,P27,5,80.0,65.0,15.0
+Llama 3.1 70B Instruct,autonomy,P01,1,80.0,30.0,50.0
+Llama 3.1 70B Instruct,autonomy,P01,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P01,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P01,4,80.0,20.0,60.0
+Llama 3.1 70B Instruct,autonomy,P01,5,80.0,30.0,50.0
+Llama 3.1 70B Instruct,autonomy,P02,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P02,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P02,3,90.0,40.0,50.0
+Llama 3.1 70B Instruct,autonomy,P02,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P02,5,80.0,30.0,50.0
+Llama 3.1 70B Instruct,autonomy,P03,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P03,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P03,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P03,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P03,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P04,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P04,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P04,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P04,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P04,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P05,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P05,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P05,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P05,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P05,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P06,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P06,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P06,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P06,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P06,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P07,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P07,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P07,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P07,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P07,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P08,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P08,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P08,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P08,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P08,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P09,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P09,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P09,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P09,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P09,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P10,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P10,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P10,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P10,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P10,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P11,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P11,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P11,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P11,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P11,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P12,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P12,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P12,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P12,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P12,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P13,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P13,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P13,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P13,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P13,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P14,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P14,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P14,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P14,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P14,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P15,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P15,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P15,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P15,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P15,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P16,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P16,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P16,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P16,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P16,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P17,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P17,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P17,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P17,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P17,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P18,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P18,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P18,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P18,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P18,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P19,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P19,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P19,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P19,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P19,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P20,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P20,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P20,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P20,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P20,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P21,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P21,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P21,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P21,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P21,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P22,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P22,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P22,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P22,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P22,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P23,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P23,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P23,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P23,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P23,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P24,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P24,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P24,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P24,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P24,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P25,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P25,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P25,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P25,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P25,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P26,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P26,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P26,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P26,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P26,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P27,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P27,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P27,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,autonomy,P27,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,autonomy,P27,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P01,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P01,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P01,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P01,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P01,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P02,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P02,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P02,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P02,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P02,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P03,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P03,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P03,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P03,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P03,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P04,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P04,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P04,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P04,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P04,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P05,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P05,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P05,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P05,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P05,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P06,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P06,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P06,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P06,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P06,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P07,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P07,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P07,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P07,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P07,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P08,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P08,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P08,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P08,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P08,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P09,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P09,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P09,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P09,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P09,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P10,1,80.0,20.0,60.0
+Llama 3.1 70B Instruct,collective,P10,2,80.0,20.0,60.0
+Llama 3.1 70B Instruct,collective,P10,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P10,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P10,5,80.0,20.0,60.0
+Llama 3.1 70B Instruct,collective,P11,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P11,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P11,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P11,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P11,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P12,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P12,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P12,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P12,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P12,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P13,1,80.0,30.0,50.0
+Llama 3.1 70B Instruct,collective,P13,2,80.0,30.0,50.0
+Llama 3.1 70B Instruct,collective,P13,3,80.0,30.0,50.0
+Llama 3.1 70B Instruct,collective,P13,4,80.0,30.0,50.0
+Llama 3.1 70B Instruct,collective,P13,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P14,1,90.0,60.0,30.0
+Llama 3.1 70B Instruct,collective,P14,2,90.0,60.0,30.0
+Llama 3.1 70B Instruct,collective,P14,3,90.0,40.0,50.0
+Llama 3.1 70B Instruct,collective,P14,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P14,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P15,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P15,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P15,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P15,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P15,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P16,1,80.0,30.0,50.0
+Llama 3.1 70B Instruct,collective,P16,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P16,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P16,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P16,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P17,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P17,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P17,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P17,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P17,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P18,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P18,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P18,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P18,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P18,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P19,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P19,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P19,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P19,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P19,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,collective,P20,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P20,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P20,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P20,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P20,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P21,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P21,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P21,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P21,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P21,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P22,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P22,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P22,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P22,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P22,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P23,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P23,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P23,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P23,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P23,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P24,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P24,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P24,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P24,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P24,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P25,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P25,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P25,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P25,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P25,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P26,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P26,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P26,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P26,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P26,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P27,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P27,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P27,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P27,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,collective,P27,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P01,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P01,2,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P01,3,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P01,4,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P01,5,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P02,1,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P02,2,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P02,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P02,4,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P02,5,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P03,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P03,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P03,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P03,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P03,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P04,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P04,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P04,3,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P04,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P04,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P05,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P05,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P05,3,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P05,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P05,5,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P06,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P06,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P06,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P06,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P06,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P07,2,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P07,3,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P07,4,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P07,5,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P08,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P08,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P08,3,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P08,4,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P08,5,80.0,20.0,60.0
+Llama 3.1 70B Instruct,equity,P09,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P09,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P09,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P09,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P09,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P10,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P10,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P10,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P10,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P10,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P11,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P11,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P11,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P11,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P11,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P12,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P12,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P12,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P12,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P12,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P13,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P13,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P13,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P13,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P13,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P14,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P14,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P14,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P14,4,95.0,40.0,55.0
+Llama 3.1 70B Instruct,equity,P14,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P15,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P15,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P15,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P15,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P15,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P16,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P16,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P16,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P16,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P16,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P17,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P17,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P17,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P17,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P17,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P18,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P18,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P18,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P18,4,85.0,60.0,25.0
+Llama 3.1 70B Instruct,equity,P18,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P19,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P19,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P19,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P19,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P19,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P20,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P20,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P20,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P20,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P20,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P21,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P21,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P21,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P21,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P21,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P22,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P22,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P22,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P22,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P22,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P23,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P23,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P23,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P23,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P23,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P24,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P24,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P24,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P24,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P24,5,90.0,60.0,30.0
+Llama 3.1 70B Instruct,equity,P25,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P25,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P25,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P25,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P25,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P26,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P26,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P26,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P26,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,equity,P26,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,equity,P27,1,90.0,60.0,30.0
+Llama 3.1 70B Instruct,equity,P27,2,90.0,60.0,30.0
+Llama 3.1 70B Instruct,equity,P27,3,90.0,60.0,30.0
+Llama 3.1 70B Instruct,equity,P27,4,90.0,60.0,30.0
+Llama 3.1 70B Instruct,equity,P27,5,90.0,60.0,30.0
+Llama 3.1 70B Instruct,neutral,P01,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P01,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P01,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P01,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P01,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P02,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P02,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P02,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P02,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P02,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P03,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P03,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P03,3,90.0,40.0,50.0
+Llama 3.1 70B Instruct,neutral,P03,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P03,5,90.0,60.0,30.0
+Llama 3.1 70B Instruct,neutral,P04,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P04,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P04,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P04,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P04,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P05,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P05,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P05,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P05,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P05,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P06,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P06,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P06,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P06,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P06,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P07,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P07,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P07,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P07,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P07,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P08,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P08,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P08,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P08,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P08,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P09,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P09,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P09,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P09,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P09,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P10,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P10,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P10,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P10,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P10,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P11,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P11,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P11,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P11,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P11,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P12,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P12,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P12,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P12,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P12,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P13,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P13,2,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P13,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P13,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P13,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P14,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P14,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P14,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P14,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P14,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P15,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P15,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P15,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P15,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P15,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P16,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P16,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P16,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P16,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P16,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P17,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P17,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P17,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P17,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P17,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P18,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P18,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P18,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P18,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P18,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P19,1,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P19,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P19,3,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P19,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P19,5,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P20,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P20,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P20,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P20,4,80.0,40.0,40.0
+Llama 3.1 70B Instruct,neutral,P20,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P21,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P21,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P21,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P21,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P21,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P22,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P22,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P22,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P22,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P22,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P23,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P23,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P23,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P23,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P23,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P24,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P24,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P24,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P24,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P24,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P25,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P25,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P25,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P25,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P25,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P26,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P26,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P26,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P26,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P26,5,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P27,1,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P27,2,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P27,3,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P27,4,80.0,60.0,20.0
+Llama 3.1 70B Instruct,neutral,P27,5,80.0,60.0,20.0
+Mistral Large,autonomy,P01,1,75.0,30.0,45.0
+Mistral Large,autonomy,P01,2,75.0,30.0,45.0
+Mistral Large,autonomy,P01,3,75.0,30.0,45.0
+Mistral Large,autonomy,P01,4,75.0,30.0,45.0
+Mistral Large,autonomy,P01,5,75.0,30.0,45.0
+Mistral Large,autonomy,P02,1,80.0,30.0,50.0
+Mistral Large,autonomy,P02,2,80.0,30.0,50.0
+Mistral Large,autonomy,P02,3,80.0,30.0,50.0
+Mistral Large,autonomy,P02,4,80.0,30.0,50.0
+Mistral Large,autonomy,P02,5,80.0,30.0,50.0
+Mistral Large,autonomy,P03,1,75.0,30.0,45.0
+Mistral Large,autonomy,P03,2,75.0,40.0,35.0
+Mistral Large,autonomy,P03,3,75.0,30.0,45.0
+Mistral Large,autonomy,P03,4,75.0,30.0,45.0
+Mistral Large,autonomy,P03,5,75.0,30.0,45.0
+Mistral Large,autonomy,P04,1,75.0,30.0,45.0
+Mistral Large,autonomy,P04,2,70.0,30.0,40.0
+Mistral Large,autonomy,P04,3,70.0,30.0,40.0
+Mistral Large,autonomy,P04,4,75.0,30.0,45.0
+Mistral Large,autonomy,P04,5,75.0,30.0,45.0
+Mistral Large,autonomy,P05,1,75.0,30.0,45.0
+Mistral Large,autonomy,P05,2,75.0,30.0,45.0
+Mistral Large,autonomy,P05,3,75.0,30.0,45.0
+Mistral Large,autonomy,P05,4,75.0,30.0,45.0
+Mistral Large,autonomy,P05,5,75.0,40.0,35.0
+Mistral Large,autonomy,P06,1,75.0,40.0,35.0
+Mistral Large,autonomy,P06,2,75.0,40.0,35.0
+Mistral Large,autonomy,P06,3,75.0,40.0,35.0
+Mistral Large,autonomy,P06,4,75.0,40.0,35.0
+Mistral Large,autonomy,P06,5,75.0,40.0,35.0
+Mistral Large,autonomy,P07,1,75.0,30.0,45.0
+Mistral Large,autonomy,P07,2,75.0,30.0,45.0
+Mistral Large,autonomy,P07,3,75.0,30.0,45.0
+Mistral Large,autonomy,P07,4,75.0,30.0,45.0
+Mistral Large,autonomy,P07,5,75.0,30.0,45.0
+Mistral Large,autonomy,P08,1,75.0,30.0,45.0
+Mistral Large,autonomy,P08,2,75.0,30.0,45.0
+Mistral Large,autonomy,P08,3,75.0,30.0,45.0
+Mistral Large,autonomy,P08,4,75.0,30.0,45.0
+Mistral Large,autonomy,P08,5,75.0,30.0,45.0
+Mistral Large,autonomy,P09,1,75.0,40.0,35.0
+Mistral Large,autonomy,P09,2,75.0,40.0,35.0
+Mistral Large,autonomy,P09,3,75.0,40.0,35.0
+Mistral Large,autonomy,P09,4,75.0,40.0,35.0
+Mistral Large,autonomy,P09,5,75.0,40.0,35.0
+Mistral Large,autonomy,P10,1,75.0,30.0,45.0
+Mistral Large,autonomy,P10,2,75.0,30.0,45.0
+Mistral Large,autonomy,P10,3,75.0,30.0,45.0
+Mistral Large,autonomy,P10,4,75.0,30.0,45.0
+Mistral Large,autonomy,P10,5,75.0,30.0,45.0
+Mistral Large,autonomy,P11,1,80.0,30.0,50.0
+Mistral Large,autonomy,P11,2,80.0,30.0,50.0
+Mistral Large,autonomy,P11,3,80.0,30.0,50.0
+Mistral Large,autonomy,P11,4,80.0,30.0,50.0
+Mistral Large,autonomy,P11,5,80.0,30.0,50.0
+Mistral Large,autonomy,P12,1,75.0,40.0,35.0
+Mistral Large,autonomy,P12,2,75.0,40.0,35.0
+Mistral Large,autonomy,P12,3,75.0,40.0,35.0
+Mistral Large,autonomy,P12,4,75.0,40.0,35.0
+Mistral Large,autonomy,P12,5,75.0,40.0,35.0
+Mistral Large,autonomy,P13,1,75.0,30.0,45.0
+Mistral Large,autonomy,P13,2,75.0,30.0,45.0
+Mistral Large,autonomy,P13,3,75.0,40.0,35.0
+Mistral Large,autonomy,P13,4,75.0,40.0,35.0
+Mistral Large,autonomy,P13,5,75.0,30.0,45.0
+Mistral Large,autonomy,P14,1,80.0,40.0,40.0
+Mistral Large,autonomy,P14,2,80.0,40.0,40.0
+Mistral Large,autonomy,P14,3,80.0,40.0,40.0
+Mistral Large,autonomy,P14,4,80.0,40.0,40.0
+Mistral Large,autonomy,P14,5,80.0,40.0,40.0
+Mistral Large,autonomy,P15,1,75.0,40.0,35.0
+Mistral Large,autonomy,P15,2,75.0,40.0,35.0
+Mistral Large,autonomy,P15,3,75.0,40.0,35.0
+Mistral Large,autonomy,P15,4,75.0,40.0,35.0
+Mistral Large,autonomy,P15,5,75.0,40.0,35.0
+Mistral Large,autonomy,P16,1,75.0,30.0,45.0
+Mistral Large,autonomy,P16,2,75.0,30.0,45.0
+Mistral Large,autonomy,P16,3,75.0,40.0,35.0
+Mistral Large,autonomy,P16,4,75.0,30.0,45.0
+Mistral Large,autonomy,P16,5,75.0,30.0,45.0
+Mistral Large,autonomy,P17,1,80.0,40.0,40.0
+Mistral Large,autonomy,P17,2,80.0,40.0,40.0
+Mistral Large,autonomy,P17,3,80.0,40.0,40.0
+Mistral Large,autonomy,P17,4,80.0,40.0,40.0
+Mistral Large,autonomy,P17,5,80.0,40.0,40.0
+Mistral Large,autonomy,P18,1,75.0,40.0,35.0
+Mistral Large,autonomy,P18,2,75.0,40.0,35.0
+Mistral Large,autonomy,P18,3,75.0,40.0,35.0
+Mistral Large,autonomy,P18,4,75.0,40.0,35.0
+Mistral Large,autonomy,P18,5,75.0,40.0,35.0
+Mistral Large,autonomy,P19,1,75.0,30.0,45.0
+Mistral Large,autonomy,P19,2,75.0,30.0,45.0
+Mistral Large,autonomy,P19,3,75.0,30.0,45.0
+Mistral Large,autonomy,P19,4,75.0,30.0,45.0
+Mistral Large,autonomy,P19,5,75.0,30.0,45.0
+Mistral Large,autonomy,P20,1,80.0,30.0,50.0
+Mistral Large,autonomy,P20,2,80.0,30.0,50.0
+Mistral Large,autonomy,P20,3,80.0,30.0,50.0
+Mistral Large,autonomy,P20,4,80.0,30.0,50.0
+Mistral Large,autonomy,P20,5,80.0,30.0,50.0
+Mistral Large,autonomy,P21,1,75.0,40.0,35.0
+Mistral Large,autonomy,P21,2,75.0,40.0,35.0
+Mistral Large,autonomy,P21,3,75.0,40.0,35.0
+Mistral Large,autonomy,P21,4,75.0,40.0,35.0
+Mistral Large,autonomy,P21,5,75.0,40.0,35.0
+Mistral Large,autonomy,P22,1,75.0,30.0,45.0
+Mistral Large,autonomy,P22,2,75.0,40.0,35.0
+Mistral Large,autonomy,P22,3,75.0,30.0,45.0
+Mistral Large,autonomy,P22,4,75.0,30.0,45.0
+Mistral Large,autonomy,P22,5,75.0,40.0,35.0
+Mistral Large,autonomy,P23,1,80.0,40.0,40.0
+Mistral Large,autonomy,P23,2,80.0,40.0,40.0
+Mistral Large,autonomy,P23,3,80.0,40.0,40.0
+Mistral Large,autonomy,P23,4,80.0,40.0,40.0
+Mistral Large,autonomy,P23,5,80.0,40.0,40.0
+Mistral Large,autonomy,P24,1,75.0,40.0,35.0
+Mistral Large,autonomy,P24,2,75.0,40.0,35.0
+Mistral Large,autonomy,P24,3,75.0,40.0,35.0
+Mistral Large,autonomy,P24,4,75.0,40.0,35.0
+Mistral Large,autonomy,P24,5,75.0,40.0,35.0
+Mistral Large,autonomy,P25,1,75.0,30.0,45.0
+Mistral Large,autonomy,P25,2,75.0,30.0,45.0
+Mistral Large,autonomy,P25,3,75.0,30.0,45.0
+Mistral Large,autonomy,P25,4,75.0,30.0,45.0
+Mistral Large,autonomy,P25,5,75.0,30.0,45.0
+Mistral Large,autonomy,P26,1,75.0,40.0,35.0
+Mistral Large,autonomy,P26,2,75.0,40.0,35.0
+Mistral Large,autonomy,P26,3,80.0,40.0,40.0
+Mistral Large,autonomy,P26,4,75.0,40.0,35.0
+Mistral Large,autonomy,P26,5,75.0,40.0,35.0
+Mistral Large,autonomy,P27,1,75.0,40.0,35.0
+Mistral Large,autonomy,P27,2,75.0,40.0,35.0
+Mistral Large,autonomy,P27,3,75.0,40.0,35.0
+Mistral Large,autonomy,P27,4,75.0,40.0,35.0
+Mistral Large,autonomy,P27,5,75.0,40.0,35.0
+Mistral Large,collective,P01,1,75.0,40.0,35.0
+Mistral Large,collective,P01,2,75.0,40.0,35.0
+Mistral Large,collective,P01,3,75.0,40.0,35.0
+Mistral Large,collective,P01,4,75.0,40.0,35.0
+Mistral Large,collective,P01,5,75.0,40.0,35.0
+Mistral Large,collective,P02,1,80.0,50.0,30.0
+Mistral Large,collective,P02,2,80.0,50.0,30.0
+Mistral Large,collective,P02,3,80.0,50.0,30.0
+Mistral Large,collective,P02,4,80.0,50.0,30.0
+Mistral Large,collective,P02,5,80.0,50.0,30.0
+Mistral Large,collective,P03,1,75.0,60.0,15.0
+Mistral Large,collective,P03,2,75.0,60.0,15.0
+Mistral Large,collective,P03,3,75.0,60.0,15.0
+Mistral Large,collective,P03,4,75.0,50.0,25.0
+Mistral Large,collective,P03,5,75.0,60.0,15.0
+Mistral Large,collective,P04,1,75.0,60.0,15.0
+Mistral Large,collective,P04,2,75.0,60.0,15.0
+Mistral Large,collective,P04,3,75.0,60.0,15.0
+Mistral Large,collective,P04,4,75.0,60.0,15.0
+Mistral Large,collective,P04,5,75.0,60.0,15.0
+Mistral Large,collective,P05,1,80.0,60.0,20.0
+Mistral Large,collective,P05,2,80.0,60.0,20.0
+Mistral Large,collective,P05,3,80.0,60.0,20.0
+Mistral Large,collective,P05,4,80.0,60.0,20.0
+Mistral Large,collective,P05,5,80.0,60.0,20.0
+Mistral Large,collective,P06,1,75.0,65.0,10.0
+Mistral Large,collective,P06,2,75.0,65.0,10.0
+Mistral Large,collective,P06,3,75.0,65.0,10.0
+Mistral Large,collective,P06,4,75.0,65.0,10.0
+Mistral Large,collective,P06,5,75.0,65.0,10.0
+Mistral Large,collective,P07,1,75.0,60.0,15.0
+Mistral Large,collective,P07,2,75.0,60.0,15.0
+Mistral Large,collective,P07,3,75.0,60.0,15.0
+Mistral Large,collective,P07,4,75.0,60.0,15.0
+Mistral Large,collective,P07,5,75.0,60.0,15.0
+Mistral Large,collective,P08,1,80.0,60.0,20.0
+Mistral Large,collective,P08,2,80.0,60.0,20.0
+Mistral Large,collective,P08,3,80.0,60.0,20.0
+Mistral Large,collective,P08,4,80.0,60.0,20.0
+Mistral Large,collective,P08,5,80.0,60.0,20.0
+Mistral Large,collective,P09,1,75.0,65.0,10.0
+Mistral Large,collective,P09,2,75.0,65.0,10.0
+Mistral Large,collective,P09,3,75.0,65.0,10.0
+Mistral Large,collective,P09,4,75.0,65.0,10.0
+Mistral Large,collective,P09,5,75.0,65.0,10.0
+Mistral Large,collective,P10,1,75.0,50.0,25.0
+Mistral Large,collective,P10,2,75.0,50.0,25.0
+Mistral Large,collective,P10,3,75.0,50.0,25.0
+Mistral Large,collective,P10,4,75.0,50.0,25.0
+Mistral Large,collective,P10,5,75.0,50.0,25.0
+Mistral Large,collective,P11,1,80.0,50.0,30.0
+Mistral Large,collective,P11,2,80.0,50.0,30.0
+Mistral Large,collective,P11,3,80.0,50.0,30.0
+Mistral Large,collective,P11,4,80.0,50.0,30.0
+Mistral Large,collective,P11,5,80.0,50.0,30.0
+Mistral Large,collective,P12,1,75.0,60.0,15.0
+Mistral Large,collective,P12,2,75.0,60.0,15.0
+Mistral Large,collective,P12,3,75.0,60.0,15.0
+Mistral Large,collective,P12,4,75.0,60.0,15.0
+Mistral Large,collective,P12,5,75.0,60.0,15.0
+Mistral Large,collective,P13,1,75.0,60.0,15.0
+Mistral Large,collective,P13,2,75.0,60.0,15.0
+Mistral Large,collective,P13,3,75.0,60.0,15.0
+Mistral Large,collective,P13,4,75.0,60.0,15.0
+Mistral Large,collective,P13,5,75.0,60.0,15.0
+Mistral Large,collective,P14,1,80.0,65.0,15.0
+Mistral Large,collective,P14,2,80.0,65.0,15.0
+Mistral Large,collective,P14,3,80.0,65.0,15.0
+Mistral Large,collective,P14,4,80.0,65.0,15.0
+Mistral Large,collective,P14,5,80.0,65.0,15.0
+Mistral Large,collective,P15,1,75.0,65.0,10.0
+Mistral Large,collective,P15,2,75.0,65.0,10.0
+Mistral Large,collective,P15,3,75.0,65.0,10.0
+Mistral Large,collective,P15,4,75.0,65.0,10.0
+Mistral Large,collective,P15,5,75.0,65.0,10.0
+Mistral Large,collective,P16,1,75.0,65.0,10.0
+Mistral Large,collective,P16,2,75.0,65.0,10.0
+Mistral Large,collective,P16,3,75.0,65.0,10.0
+Mistral Large,collective,P16,4,75.0,65.0,10.0
+Mistral Large,collective,P16,5,75.0,65.0,10.0
+Mistral Large,collective,P17,1,80.0,65.0,15.0
+Mistral Large,collective,P17,2,80.0,65.0,15.0
+Mistral Large,collective,P17,3,80.0,65.0,15.0
+Mistral Large,collective,P17,4,80.0,65.0,15.0
+Mistral Large,collective,P17,5,80.0,65.0,15.0
+Mistral Large,collective,P18,1,75.0,65.0,10.0
+Mistral Large,collective,P18,2,75.0,65.0,10.0
+Mistral Large,collective,P18,3,75.0,65.0,10.0
+Mistral Large,collective,P18,4,75.0,65.0,10.0
+Mistral Large,collective,P18,5,75.0,65.0,10.0
+Mistral Large,collective,P19,1,75.0,50.0,25.0
+Mistral Large,collective,P19,2,75.0,50.0,25.0
+Mistral Large,collective,P19,3,75.0,50.0,25.0
+Mistral Large,collective,P19,4,75.0,50.0,25.0
+Mistral Large,collective,P19,5,75.0,50.0,25.0
+Mistral Large,collective,P20,1,80.0,50.0,30.0
+Mistral Large,collective,P20,2,80.0,50.0,30.0
+Mistral Large,collective,P20,3,80.0,50.0,30.0
+Mistral Large,collective,P20,4,80.0,50.0,30.0
+Mistral Large,collective,P20,5,80.0,50.0,30.0
+Mistral Large,collective,P21,1,75.0,60.0,15.0
+Mistral Large,collective,P21,2,75.0,60.0,15.0
+Mistral Large,collective,P21,3,75.0,60.0,15.0
+Mistral Large,collective,P21,4,75.0,60.0,15.0
+Mistral Large,collective,P21,5,75.0,60.0,15.0
+Mistral Large,collective,P22,1,75.0,60.0,15.0
+Mistral Large,collective,P22,2,75.0,60.0,15.0
+Mistral Large,collective,P22,3,75.0,60.0,15.0
+Mistral Large,collective,P22,4,75.0,60.0,15.0
+Mistral Large,collective,P22,5,75.0,60.0,15.0
+Mistral Large,collective,P23,1,80.0,65.0,15.0
+Mistral Large,collective,P23,2,80.0,65.0,15.0
+Mistral Large,collective,P23,3,80.0,65.0,15.0
+Mistral Large,collective,P23,4,80.0,65.0,15.0
+Mistral Large,collective,P23,5,80.0,65.0,15.0
+Mistral Large,collective,P24,1,75.0,65.0,10.0
+Mistral Large,collective,P24,2,75.0,65.0,10.0
+Mistral Large,collective,P24,3,75.0,65.0,10.0
+Mistral Large,collective,P24,4,75.0,65.0,10.0
+Mistral Large,collective,P24,5,75.0,65.0,10.0
+Mistral Large,collective,P25,1,75.0,65.0,10.0
+Mistral Large,collective,P25,2,75.0,65.0,10.0
+Mistral Large,collective,P25,3,75.0,65.0,10.0
+Mistral Large,collective,P25,4,75.0,65.0,10.0
+Mistral Large,collective,P25,5,75.0,65.0,10.0
+Mistral Large,collective,P26,1,80.0,65.0,15.0
+Mistral Large,collective,P26,2,80.0,65.0,15.0
+Mistral Large,collective,P26,3,80.0,65.0,15.0
+Mistral Large,collective,P26,4,80.0,65.0,15.0
+Mistral Large,collective,P26,5,80.0,65.0,15.0
+Mistral Large,collective,P27,1,75.0,70.0,5.0
+Mistral Large,collective,P27,2,75.0,70.0,5.0
+Mistral Large,collective,P27,3,75.0,70.0,5.0
+Mistral Large,collective,P27,4,75.0,70.0,5.0
+Mistral Large,collective,P27,5,75.0,70.0,5.0
+Mistral Large,equity,P01,1,75.0,30.0,45.0
+Mistral Large,equity,P01,2,75.0,30.0,45.0
+Mistral Large,equity,P01,3,75.0,30.0,45.0
+Mistral Large,equity,P01,4,75.0,30.0,45.0
+Mistral Large,equity,P01,5,75.0,30.0,45.0
+Mistral Large,equity,P02,1,80.0,30.0,50.0
+Mistral Large,equity,P02,2,80.0,30.0,50.0
+Mistral Large,equity,P02,3,80.0,30.0,50.0
+Mistral Large,equity,P02,4,80.0,30.0,50.0
+Mistral Large,equity,P02,5,80.0,30.0,50.0
+Mistral Large,equity,P03,1,80.0,30.0,50.0
+Mistral Large,equity,P03,2,80.0,30.0,50.0
+Mistral Large,equity,P03,3,75.0,30.0,45.0
+Mistral Large,equity,P03,4,80.0,30.0,50.0
+Mistral Large,equity,P03,5,80.0,30.0,50.0
+Mistral Large,equity,P04,1,75.0,30.0,45.0
+Mistral Large,equity,P04,2,75.0,30.0,45.0
+Mistral Large,equity,P04,3,75.0,30.0,45.0
+Mistral Large,equity,P04,4,75.0,30.0,45.0
+Mistral Large,equity,P04,5,75.0,30.0,45.0
+Mistral Large,equity,P05,1,80.0,40.0,40.0
+Mistral Large,equity,P05,2,80.0,40.0,40.0
+Mistral Large,equity,P05,3,85.0,40.0,45.0
+Mistral Large,equity,P05,4,80.0,40.0,40.0
+Mistral Large,equity,P05,5,80.0,40.0,40.0
+Mistral Large,equity,P06,1,80.0,40.0,40.0
+Mistral Large,equity,P06,2,80.0,40.0,40.0
+Mistral Large,equity,P06,3,80.0,40.0,40.0
+Mistral Large,equity,P06,4,80.0,40.0,40.0
+Mistral Large,equity,P06,5,80.0,40.0,40.0
+Mistral Large,equity,P07,1,75.0,40.0,35.0
+Mistral Large,equity,P07,2,75.0,40.0,35.0
+Mistral Large,equity,P07,3,75.0,40.0,35.0
+Mistral Large,equity,P07,4,75.0,40.0,35.0
+Mistral Large,equity,P07,5,75.0,40.0,35.0
+Mistral Large,equity,P08,1,80.0,40.0,40.0
+Mistral Large,equity,P08,2,80.0,40.0,40.0
+Mistral Large,equity,P08,3,80.0,40.0,40.0
+Mistral Large,equity,P08,4,80.0,40.0,40.0
+Mistral Large,equity,P08,5,80.0,40.0,40.0
+Mistral Large,equity,P09,1,80.0,40.0,40.0
+Mistral Large,equity,P09,2,80.0,40.0,40.0
+Mistral Large,equity,P09,3,80.0,40.0,40.0
+Mistral Large,equity,P09,4,80.0,40.0,40.0
+Mistral Large,equity,P09,5,80.0,40.0,40.0
+Mistral Large,equity,P10,1,75.0,30.0,45.0
+Mistral Large,equity,P10,2,75.0,30.0,45.0
+Mistral Large,equity,P10,3,75.0,30.0,45.0
+Mistral Large,equity,P10,4,75.0,30.0,45.0
+Mistral Large,equity,P10,5,75.0,30.0,45.0
+Mistral Large,equity,P11,1,85.0,30.0,55.0
+Mistral Large,equity,P11,2,85.0,30.0,55.0
+Mistral Large,equity,P11,3,85.0,30.0,55.0
+Mistral Large,equity,P11,4,80.0,30.0,50.0
+Mistral Large,equity,P11,5,85.0,30.0,55.0
+Mistral Large,equity,P12,1,80.0,40.0,40.0
+Mistral Large,equity,P12,2,80.0,40.0,40.0
+Mistral Large,equity,P12,3,80.0,40.0,40.0
+Mistral Large,equity,P12,4,80.0,40.0,40.0
+Mistral Large,equity,P12,5,80.0,40.0,40.0
+Mistral Large,equity,P13,1,75.0,40.0,35.0
+Mistral Large,equity,P13,2,75.0,40.0,35.0
+Mistral Large,equity,P13,3,75.0,40.0,35.0
+Mistral Large,equity,P13,4,75.0,40.0,35.0
+Mistral Large,equity,P13,5,75.0,40.0,35.0
+Mistral Large,equity,P14,1,80.0,40.0,40.0
+Mistral Large,equity,P14,2,80.0,40.0,40.0
+Mistral Large,equity,P14,3,85.0,40.0,45.0
+Mistral Large,equity,P14,4,85.0,40.0,45.0
+Mistral Large,equity,P14,5,80.0,40.0,40.0
+Mistral Large,equity,P15,1,80.0,40.0,40.0
+Mistral Large,equity,P15,2,80.0,40.0,40.0
+Mistral Large,equity,P15,3,80.0,40.0,40.0
+Mistral Large,equity,P15,4,80.0,40.0,40.0
+Mistral Large,equity,P15,5,80.0,40.0,40.0
+Mistral Large,equity,P16,1,80.0,40.0,40.0
+Mistral Large,equity,P16,2,80.0,40.0,40.0
+Mistral Large,equity,P16,3,80.0,40.0,40.0
+Mistral Large,equity,P16,4,80.0,40.0,40.0
+Mistral Large,equity,P16,5,80.0,40.0,40.0
+Mistral Large,equity,P17,1,85.0,40.0,45.0
+Mistral Large,equity,P17,2,85.0,40.0,45.0
+Mistral Large,equity,P17,3,85.0,40.0,45.0
+Mistral Large,equity,P17,4,85.0,40.0,45.0
+Mistral Large,equity,P17,5,85.0,40.0,45.0
+Mistral Large,equity,P18,1,80.0,50.0,30.0
+Mistral Large,equity,P18,2,80.0,50.0,30.0
+Mistral Large,equity,P18,3,80.0,50.0,30.0
+Mistral Large,equity,P18,4,80.0,50.0,30.0
+Mistral Large,equity,P18,5,80.0,50.0,30.0
+Mistral Large,equity,P19,1,75.0,40.0,35.0
+Mistral Large,equity,P19,2,75.0,40.0,35.0
+Mistral Large,equity,P19,3,75.0,40.0,35.0
+Mistral Large,equity,P19,4,75.0,40.0,35.0
+Mistral Large,equity,P19,5,75.0,40.0,35.0
+Mistral Large,equity,P20,1,85.0,40.0,45.0
+Mistral Large,equity,P20,2,80.0,40.0,40.0
+Mistral Large,equity,P20,3,85.0,40.0,45.0
+Mistral Large,equity,P20,4,85.0,40.0,45.0
+Mistral Large,equity,P20,5,80.0,40.0,40.0
+Mistral Large,equity,P21,1,80.0,40.0,40.0
+Mistral Large,equity,P21,2,80.0,40.0,40.0
+Mistral Large,equity,P21,3,80.0,40.0,40.0
+Mistral Large,equity,P21,4,80.0,40.0,40.0
+Mistral Large,equity,P21,5,80.0,40.0,40.0
+Mistral Large,equity,P22,1,80.0,40.0,40.0
+Mistral Large,equity,P22,2,80.0,40.0,40.0
+Mistral Large,equity,P22,3,80.0,40.0,40.0
+Mistral Large,equity,P22,4,80.0,40.0,40.0
+Mistral Large,equity,P22,5,80.0,40.0,40.0
+Mistral Large,equity,P23,1,85.0,40.0,45.0
+Mistral Large,equity,P23,2,85.0,40.0,45.0
+Mistral Large,equity,P23,3,85.0,50.0,35.0
+Mistral Large,equity,P23,4,85.0,50.0,35.0
+Mistral Large,equity,P23,5,85.0,40.0,45.0
+Mistral Large,equity,P24,1,80.0,60.0,20.0
+Mistral Large,equity,P24,2,85.0,60.0,25.0
+Mistral Large,equity,P24,3,80.0,50.0,30.0
+Mistral Large,equity,P24,4,85.0,60.0,25.0
+Mistral Large,equity,P24,5,85.0,60.0,25.0
+Mistral Large,equity,P25,1,80.0,50.0,30.0
+Mistral Large,equity,P25,2,80.0,50.0,30.0
+Mistral Large,equity,P25,3,80.0,50.0,30.0
+Mistral Large,equity,P25,4,80.0,50.0,30.0
+Mistral Large,equity,P25,5,80.0,50.0,30.0
+Mistral Large,equity,P26,1,85.0,50.0,35.0
+Mistral Large,equity,P26,2,85.0,50.0,35.0
+Mistral Large,equity,P26,3,85.0,50.0,35.0
+Mistral Large,equity,P26,4,85.0,50.0,35.0
+Mistral Large,equity,P26,5,85.0,50.0,35.0
+Mistral Large,equity,P27,1,85.0,60.0,25.0
+Mistral Large,equity,P27,2,85.0,60.0,25.0
+Mistral Large,equity,P27,3,85.0,60.0,25.0
+Mistral Large,equity,P27,4,85.0,60.0,25.0
+Mistral Large,equity,P27,5,85.0,60.0,25.0
+Mistral Large,neutral,P01,1,75.0,30.0,45.0
+Mistral Large,neutral,P01,2,75.0,30.0,45.0
+Mistral Large,neutral,P01,3,75.0,30.0,45.0
+Mistral Large,neutral,P01,4,75.0,30.0,45.0
+Mistral Large,neutral,P01,5,75.0,30.0,45.0
+Mistral Large,neutral,P02,1,80.0,30.0,50.0
+Mistral Large,neutral,P02,2,80.0,30.0,50.0
+Mistral Large,neutral,P02,3,80.0,30.0,50.0
+Mistral Large,neutral,P02,4,80.0,30.0,50.0
+Mistral Large,neutral,P02,5,80.0,30.0,50.0
+Mistral Large,neutral,P03,1,75.0,40.0,35.0
+Mistral Large,neutral,P03,2,75.0,40.0,35.0
+Mistral Large,neutral,P03,3,75.0,40.0,35.0
+Mistral Large,neutral,P03,4,75.0,40.0,35.0
+Mistral Large,neutral,P03,5,75.0,40.0,35.0
+Mistral Large,neutral,P04,1,70.0,40.0,30.0
+Mistral Large,neutral,P04,2,75.0,40.0,35.0
+Mistral Large,neutral,P04,3,70.0,40.0,30.0
+Mistral Large,neutral,P04,4,70.0,40.0,30.0
+Mistral Large,neutral,P04,5,70.0,40.0,30.0
+Mistral Large,neutral,P05,1,80.0,40.0,40.0
+Mistral Large,neutral,P05,2,80.0,40.0,40.0
+Mistral Large,neutral,P05,3,80.0,40.0,40.0
+Mistral Large,neutral,P05,4,80.0,40.0,40.0
+Mistral Large,neutral,P05,5,80.0,40.0,40.0
+Mistral Large,neutral,P06,1,75.0,40.0,35.0
+Mistral Large,neutral,P06,2,75.0,40.0,35.0
+Mistral Large,neutral,P06,3,75.0,40.0,35.0
+Mistral Large,neutral,P06,4,75.0,40.0,35.0
+Mistral Large,neutral,P06,5,75.0,40.0,35.0
+Mistral Large,neutral,P07,1,75.0,40.0,35.0
+Mistral Large,neutral,P07,2,75.0,40.0,35.0
+Mistral Large,neutral,P07,3,70.0,40.0,30.0
+Mistral Large,neutral,P07,4,75.0,40.0,35.0
+Mistral Large,neutral,P07,5,75.0,40.0,35.0
+Mistral Large,neutral,P08,1,75.0,40.0,35.0
+Mistral Large,neutral,P08,2,75.0,40.0,35.0
+Mistral Large,neutral,P08,3,75.0,40.0,35.0
+Mistral Large,neutral,P08,4,75.0,40.0,35.0
+Mistral Large,neutral,P08,5,75.0,40.0,35.0
+Mistral Large,neutral,P09,1,75.0,40.0,35.0
+Mistral Large,neutral,P09,2,75.0,40.0,35.0
+Mistral Large,neutral,P09,3,75.0,40.0,35.0
+Mistral Large,neutral,P09,4,75.0,40.0,35.0
+Mistral Large,neutral,P09,5,75.0,40.0,35.0
+Mistral Large,neutral,P10,1,75.0,30.0,45.0
+Mistral Large,neutral,P10,2,75.0,30.0,45.0
+Mistral Large,neutral,P10,3,75.0,30.0,45.0
+Mistral Large,neutral,P10,4,75.0,30.0,45.0
+Mistral Large,neutral,P10,5,75.0,30.0,45.0
+Mistral Large,neutral,P11,1,80.0,30.0,50.0
+Mistral Large,neutral,P11,2,80.0,30.0,50.0
+Mistral Large,neutral,P11,3,80.0,30.0,50.0
+Mistral Large,neutral,P11,4,80.0,30.0,50.0
+Mistral Large,neutral,P11,5,80.0,30.0,50.0
+Mistral Large,neutral,P12,1,75.0,40.0,35.0
+Mistral Large,neutral,P12,2,75.0,40.0,35.0
+Mistral Large,neutral,P12,3,75.0,40.0,35.0
+Mistral Large,neutral,P12,4,75.0,40.0,35.0
+Mistral Large,neutral,P12,5,75.0,40.0,35.0
+Mistral Large,neutral,P13,1,75.0,40.0,35.0
+Mistral Large,neutral,P13,2,75.0,40.0,35.0
+Mistral Large,neutral,P13,3,75.0,40.0,35.0
+Mistral Large,neutral,P13,4,75.0,40.0,35.0
+Mistral Large,neutral,P13,5,75.0,40.0,35.0
+Mistral Large,neutral,P14,1,80.0,40.0,40.0
+Mistral Large,neutral,P14,2,80.0,40.0,40.0
+Mistral Large,neutral,P14,3,80.0,40.0,40.0
+Mistral Large,neutral,P14,4,80.0,40.0,40.0
+Mistral Large,neutral,P14,5,80.0,40.0,40.0
+Mistral Large,neutral,P15,1,75.0,50.0,25.0
+Mistral Large,neutral,P15,2,75.0,50.0,25.0
+Mistral Large,neutral,P15,3,75.0,50.0,25.0
+Mistral Large,neutral,P15,4,75.0,50.0,25.0
+Mistral Large,neutral,P15,5,75.0,50.0,25.0
+Mistral Large,neutral,P16,1,75.0,40.0,35.0
+Mistral Large,neutral,P16,2,75.0,40.0,35.0
+Mistral Large,neutral,P16,3,75.0,40.0,35.0
+Mistral Large,neutral,P16,4,75.0,40.0,35.0
+Mistral Large,neutral,P16,5,75.0,40.0,35.0
+Mistral Large,neutral,P17,1,80.0,40.0,40.0
+Mistral Large,neutral,P17,2,80.0,40.0,40.0
+Mistral Large,neutral,P17,3,80.0,40.0,40.0
+Mistral Large,neutral,P17,4,80.0,40.0,40.0
+Mistral Large,neutral,P17,5,80.0,40.0,40.0
+Mistral Large,neutral,P18,1,75.0,40.0,35.0
+Mistral Large,neutral,P18,2,75.0,40.0,35.0
+Mistral Large,neutral,P18,3,75.0,40.0,35.0
+Mistral Large,neutral,P18,4,75.0,40.0,35.0
+Mistral Large,neutral,P18,5,75.0,40.0,35.0
+Mistral Large,neutral,P19,1,75.0,30.0,45.0
+Mistral Large,neutral,P19,2,75.0,30.0,45.0
+Mistral Large,neutral,P19,3,75.0,30.0,45.0
+Mistral Large,neutral,P19,4,75.0,30.0,45.0
+Mistral Large,neutral,P19,5,75.0,30.0,45.0
+Mistral Large,neutral,P20,1,80.0,40.0,40.0
+Mistral Large,neutral,P20,2,80.0,40.0,40.0
+Mistral Large,neutral,P20,3,80.0,40.0,40.0
+Mistral Large,neutral,P20,4,80.0,40.0,40.0
+Mistral Large,neutral,P20,5,80.0,40.0,40.0
+Mistral Large,neutral,P21,1,75.0,40.0,35.0
+Mistral Large,neutral,P21,2,75.0,40.0,35.0
+Mistral Large,neutral,P21,3,75.0,40.0,35.0
+Mistral Large,neutral,P21,4,75.0,40.0,35.0
+Mistral Large,neutral,P21,5,75.0,40.0,35.0
+Mistral Large,neutral,P22,1,75.0,40.0,35.0
+Mistral Large,neutral,P22,2,75.0,40.0,35.0
+Mistral Large,neutral,P22,3,75.0,40.0,35.0
+Mistral Large,neutral,P22,4,75.0,40.0,35.0
+Mistral Large,neutral,P22,5,75.0,40.0,35.0
+Mistral Large,neutral,P23,1,80.0,40.0,40.0
+Mistral Large,neutral,P23,2,80.0,40.0,40.0
+Mistral Large,neutral,P23,3,80.0,40.0,40.0
+Mistral Large,neutral,P23,4,80.0,40.0,40.0
+Mistral Large,neutral,P23,5,80.0,40.0,40.0
+Mistral Large,neutral,P24,1,75.0,50.0,25.0
+Mistral Large,neutral,P24,2,75.0,50.0,25.0
+Mistral Large,neutral,P24,3,75.0,50.0,25.0
+Mistral Large,neutral,P24,4,75.0,50.0,25.0
+Mistral Large,neutral,P24,5,75.0,50.0,25.0
+Mistral Large,neutral,P25,1,75.0,40.0,35.0
+Mistral Large,neutral,P25,2,75.0,40.0,35.0
+Mistral Large,neutral,P25,3,75.0,40.0,35.0
+Mistral Large,neutral,P25,4,75.0,40.0,35.0
+Mistral Large,neutral,P25,5,75.0,40.0,35.0
+Mistral Large,neutral,P26,1,80.0,40.0,40.0
+Mistral Large,neutral,P26,2,80.0,40.0,40.0
+Mistral Large,neutral,P26,3,80.0,40.0,40.0
+Mistral Large,neutral,P26,4,80.0,40.0,40.0
+Mistral Large,neutral,P26,5,80.0,40.0,40.0
+Mistral Large,neutral,P27,1,75.0,50.0,25.0
+Mistral Large,neutral,P27,2,75.0,50.0,25.0
+Mistral Large,neutral,P27,3,75.0,50.0,25.0
+Mistral Large,neutral,P27,4,75.0,50.0,25.0
+Mistral Large,neutral,P27,5,75.0,50.0,25.0
+Qwen3.7 Plus,autonomy,P01,1,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P01,2,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P01,3,82.0,30.0,52.0
+Qwen3.7 Plus,autonomy,P01,4,80.0,20.0,60.0
+Qwen3.7 Plus,autonomy,P01,5,85.0,20.0,65.0
+Qwen3.7 Plus,autonomy,P02,1,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P02,2,82.0,25.0,57.0
+Qwen3.7 Plus,autonomy,P02,3,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P02,4,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P02,5,85.0,20.0,65.0
+Qwen3.7 Plus,autonomy,P03,1,82.0,20.0,62.0
+Qwen3.7 Plus,autonomy,P03,2,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P03,3,82.0,25.0,57.0
+Qwen3.7 Plus,autonomy,P03,4,85.0,20.0,65.0
+Qwen3.7 Plus,autonomy,P03,5,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P04,1,80.0,35.0,45.0
+Qwen3.7 Plus,autonomy,P04,2,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P04,3,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P04,4,70.0,25.0,45.0
+Qwen3.7 Plus,autonomy,P04,5,80.0,30.0,50.0
+Qwen3.7 Plus,autonomy,P05,1,85.0,30.0,55.0
+Qwen3.7 Plus,autonomy,P05,2,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P05,3,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P05,4,82.0,30.0,52.0
+Qwen3.7 Plus,autonomy,P05,5,80.0,30.0,50.0
+Qwen3.7 Plus,autonomy,P06,1,80.0,35.0,45.0
+Qwen3.7 Plus,autonomy,P06,2,80.0,35.0,45.0
+Qwen3.7 Plus,autonomy,P06,3,75.0,30.0,45.0
+Qwen3.7 Plus,autonomy,P06,4,80.0,35.0,45.0
+Qwen3.7 Plus,autonomy,P06,5,80.0,30.0,50.0
+Qwen3.7 Plus,autonomy,P07,1,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P07,2,80.0,30.0,50.0
+Qwen3.7 Plus,autonomy,P07,3,80.0,35.0,45.0
+Qwen3.7 Plus,autonomy,P07,4,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P07,5,85.0,30.0,55.0
+Qwen3.7 Plus,autonomy,P08,1,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P08,2,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P08,3,85.0,30.0,55.0
+Qwen3.7 Plus,autonomy,P08,4,82.0,35.0,47.0
+Qwen3.7 Plus,autonomy,P08,5,85.0,30.0,55.0
+Qwen3.7 Plus,autonomy,P09,1,80.0,35.0,45.0
+Qwen3.7 Plus,autonomy,P09,2,75.0,35.0,40.0
+Qwen3.7 Plus,autonomy,P09,3,80.0,35.0,45.0
+Qwen3.7 Plus,autonomy,P09,4,88.0,30.0,58.0
+Qwen3.7 Plus,autonomy,P09,5,82.0,30.0,52.0
+Qwen3.7 Plus,autonomy,P10,1,80.0,20.0,60.0
+Qwen3.7 Plus,autonomy,P10,2,90.0,20.0,70.0
+Qwen3.7 Plus,autonomy,P10,3,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P10,4,80.0,20.0,60.0
+Qwen3.7 Plus,autonomy,P10,5,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P11,1,82.0,25.0,57.0
+Qwen3.7 Plus,autonomy,P11,2,85.0,20.0,65.0
+Qwen3.7 Plus,autonomy,P11,3,90.0,25.0,65.0
+Qwen3.7 Plus,autonomy,P11,4,80.0,20.0,60.0
+Qwen3.7 Plus,autonomy,P11,5,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P12,1,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P12,2,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P12,3,80.0,30.0,50.0
+Qwen3.7 Plus,autonomy,P12,4,88.0,30.0,58.0
+Qwen3.7 Plus,autonomy,P12,5,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P13,1,80.0,30.0,50.0
+Qwen3.7 Plus,autonomy,P13,2,80.0,30.0,50.0
+Qwen3.7 Plus,autonomy,P13,3,80.0,35.0,45.0
+Qwen3.7 Plus,autonomy,P13,4,75.0,35.0,40.0
+Qwen3.7 Plus,autonomy,P13,5,75.0,30.0,45.0
+Qwen3.7 Plus,autonomy,P14,1,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P14,2,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P14,3,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P14,4,85.0,30.0,55.0
+Qwen3.7 Plus,autonomy,P14,5,82.0,30.0,52.0
+Qwen3.7 Plus,autonomy,P15,1,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P15,2,82.0,25.0,57.0
+Qwen3.7 Plus,autonomy,P15,3,80.0,30.0,50.0
+Qwen3.7 Plus,autonomy,P15,4,80.0,30.0,50.0
+Qwen3.7 Plus,autonomy,P15,5,85.0,30.0,55.0
+Qwen3.7 Plus,autonomy,P16,1,85.0,30.0,55.0
+Qwen3.7 Plus,autonomy,P16,2,82.0,30.0,52.0
+Qwen3.7 Plus,autonomy,P16,3,82.0,35.0,47.0
+Qwen3.7 Plus,autonomy,P16,4,85.0,40.0,45.0
+Qwen3.7 Plus,autonomy,P16,5,82.0,35.0,47.0
+Qwen3.7 Plus,autonomy,P17,1,85.0,35.0,50.0
+Qwen3.7 Plus,autonomy,P17,2,85.0,30.0,55.0
+Qwen3.7 Plus,autonomy,P17,3,82.0,35.0,47.0
+Qwen3.7 Plus,autonomy,P17,4,90.0,35.0,55.0
+Qwen3.7 Plus,autonomy,P17,5,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P18,1,88.0,30.0,58.0
+Qwen3.7 Plus,autonomy,P18,2,88.0,30.0,58.0
+Qwen3.7 Plus,autonomy,P18,3,82.0,25.0,57.0
+Qwen3.7 Plus,autonomy,P18,4,82.0,35.0,47.0
+Qwen3.7 Plus,autonomy,P18,5,85.0,30.0,55.0
+Qwen3.7 Plus,autonomy,P19,1,85.0,30.0,55.0
+Qwen3.7 Plus,autonomy,P19,2,82.0,30.0,52.0
+Qwen3.7 Plus,autonomy,P19,3,85.0,30.0,55.0
+Qwen3.7 Plus,autonomy,P19,4,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P19,5,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P20,1,82.0,20.0,62.0
+Qwen3.7 Plus,autonomy,P20,2,90.0,25.0,65.0
+Qwen3.7 Plus,autonomy,P20,3,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P20,4,85.0,25.0,60.0
+Qwen3.7 Plus,autonomy,P20,5,82.0,25.0,57.0
+Qwen3.7 Plus,autonomy,P21,1,82.0,25.0,57.0
+Qwen3.7 Plus,autonomy,P21,2,90.0,25.0,65.0
+Qwen3.7 Plus,autonomy,P21,3,85.0,30.0,55.0
+Qwen3.7 Plus,autonomy,P21,4,90.0,25.0,65.0
+Qwen3.7 Plus,autonomy,P21,5,82.0,30.0,52.0
+Qwen3.7 Plus,autonomy,P22,1,82.0,35.0,47.0
+Qwen3.7 Plus,autonomy,P22,2,80.0,40.0,40.0
+Qwen3.7 Plus,autonomy,P22,3,80.0,35.0,45.0
+Qwen3.7 Plus,autonomy,P22,4,85.0,30.0,55.0
+Qwen3.7 Plus,autonomy,P22,5,75.0,30.0,45.0
+Qwen3.7 Plus,autonomy,P23,1,85.0,35.0,50.0
+Qwen3.7 Plus,autonomy,P23,2,80.0,30.0,50.0
+Qwen3.7 Plus,autonomy,P23,3,85.0,35.0,50.0
+Qwen3.7 Plus,autonomy,P23,4,85.0,35.0,50.0
+Qwen3.7 Plus,autonomy,P23,5,82.0,30.0,52.0
+Qwen3.7 Plus,autonomy,P24,1,80.0,35.0,45.0
+Qwen3.7 Plus,autonomy,P24,2,78.0,45.0,33.0
+Qwen3.7 Plus,autonomy,P24,3,80.0,30.0,50.0
+Qwen3.7 Plus,autonomy,P24,4,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P24,5,90.0,30.0,60.0
+Qwen3.7 Plus,autonomy,P25,1,82.0,25.0,57.0
+Qwen3.7 Plus,autonomy,P25,2,85.0,35.0,50.0
+Qwen3.7 Plus,autonomy,P25,3,85.0,30.0,55.0
+Qwen3.7 Plus,autonomy,P25,4,85.0,45.0,40.0
+Qwen3.7 Plus,autonomy,P25,5,85.0,35.0,50.0
+Qwen3.7 Plus,autonomy,P26,1,88.0,45.0,43.0
+Qwen3.7 Plus,autonomy,P26,2,85.0,40.0,45.0
+Qwen3.7 Plus,autonomy,P26,3,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P26,4,80.0,30.0,50.0
+Qwen3.7 Plus,autonomy,P26,5,90.0,35.0,55.0
+Qwen3.7 Plus,autonomy,P27,1,80.0,25.0,55.0
+Qwen3.7 Plus,autonomy,P27,2,90.0,35.0,55.0
+Qwen3.7 Plus,autonomy,P27,3,90.0,30.0,60.0
+Qwen3.7 Plus,autonomy,P27,4,90.0,40.0,50.0
+Qwen3.7 Plus,autonomy,P27,5,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P01,1,80.0,30.0,50.0
+Qwen3.7 Plus,collective,P01,2,80.0,25.0,55.0
+Qwen3.7 Plus,collective,P01,3,82.0,20.0,62.0
+Qwen3.7 Plus,collective,P01,4,82.0,30.0,52.0
+Qwen3.7 Plus,collective,P01,5,80.0,30.0,50.0
+Qwen3.7 Plus,collective,P02,1,80.0,30.0,50.0
+Qwen3.7 Plus,collective,P02,2,85.0,25.0,60.0
+Qwen3.7 Plus,collective,P02,3,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P02,4,80.0,30.0,50.0
+Qwen3.7 Plus,collective,P02,5,85.0,25.0,60.0
+Qwen3.7 Plus,collective,P03,1,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P03,2,80.0,30.0,50.0
+Qwen3.7 Plus,collective,P03,3,82.0,35.0,47.0
+Qwen3.7 Plus,collective,P03,4,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P03,5,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P04,1,80.0,40.0,40.0
+Qwen3.7 Plus,collective,P04,2,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P04,3,82.0,35.0,47.0
+Qwen3.7 Plus,collective,P04,4,80.0,30.0,50.0
+Qwen3.7 Plus,collective,P04,5,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P05,1,85.0,30.0,55.0
+Qwen3.7 Plus,collective,P05,2,82.0,40.0,42.0
+Qwen3.7 Plus,collective,P05,3,82.0,35.0,47.0
+Qwen3.7 Plus,collective,P05,4,82.0,35.0,47.0
+Qwen3.7 Plus,collective,P05,5,82.0,40.0,42.0
+Qwen3.7 Plus,collective,P06,1,85.0,45.0,40.0
+Qwen3.7 Plus,collective,P06,2,80.0,65.0,15.0
+Qwen3.7 Plus,collective,P06,3,85.0,65.0,20.0
+Qwen3.7 Plus,collective,P06,4,82.0,45.0,37.0
+Qwen3.7 Plus,collective,P06,5,82.0,40.0,42.0
+Qwen3.7 Plus,collective,P07,1,82.0,40.0,42.0
+Qwen3.7 Plus,collective,P07,2,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P07,3,80.0,45.0,35.0
+Qwen3.7 Plus,collective,P07,4,82.0,40.0,42.0
+Qwen3.7 Plus,collective,P07,5,75.0,45.0,30.0
+Qwen3.7 Plus,collective,P08,1,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P08,2,80.0,40.0,40.0
+Qwen3.7 Plus,collective,P08,3,82.0,45.0,37.0
+Qwen3.7 Plus,collective,P08,4,82.0,45.0,37.0
+Qwen3.7 Plus,collective,P08,5,80.0,50.0,30.0
+Qwen3.7 Plus,collective,P09,1,78.0,40.0,38.0
+Qwen3.7 Plus,collective,P09,2,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P09,3,82.0,40.0,42.0
+Qwen3.7 Plus,collective,P09,4,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P09,5,80.0,40.0,40.0
+Qwen3.7 Plus,collective,P10,1,82.0,35.0,47.0
+Qwen3.7 Plus,collective,P10,2,85.0,40.0,45.0
+Qwen3.7 Plus,collective,P10,3,82.0,35.0,47.0
+Qwen3.7 Plus,collective,P10,4,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P10,5,80.0,30.0,50.0
+Qwen3.7 Plus,collective,P11,1,85.0,40.0,45.0
+Qwen3.7 Plus,collective,P11,2,85.0,25.0,60.0
+Qwen3.7 Plus,collective,P11,3,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P11,4,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P11,5,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P12,1,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P12,2,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P12,3,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P12,4,80.0,30.0,50.0
+Qwen3.7 Plus,collective,P12,5,82.0,35.0,47.0
+Qwen3.7 Plus,collective,P13,1,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P13,2,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P13,3,82.0,65.0,17.0
+Qwen3.7 Plus,collective,P13,4,82.0,35.0,47.0
+Qwen3.7 Plus,collective,P13,5,82.0,30.0,52.0
+Qwen3.7 Plus,collective,P14,1,85.0,40.0,45.0
+Qwen3.7 Plus,collective,P14,2,85.0,45.0,40.0
+Qwen3.7 Plus,collective,P14,3,82.0,40.0,42.0
+Qwen3.7 Plus,collective,P14,4,82.0,40.0,42.0
+Qwen3.7 Plus,collective,P14,5,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P15,1,80.0,45.0,35.0
+Qwen3.7 Plus,collective,P15,2,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P15,3,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P15,4,80.0,60.0,20.0
+Qwen3.7 Plus,collective,P15,5,85.0,40.0,45.0
+Qwen3.7 Plus,collective,P16,1,82.0,50.0,32.0
+Qwen3.7 Plus,collective,P16,2,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P16,3,82.0,40.0,42.0
+Qwen3.7 Plus,collective,P16,4,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P16,5,80.0,40.0,40.0
+Qwen3.7 Plus,collective,P17,1,80.0,60.0,20.0
+Qwen3.7 Plus,collective,P17,2,80.0,42.0,38.0
+Qwen3.7 Plus,collective,P17,3,80.0,35.0,45.0
+Qwen3.7 Plus,collective,P17,4,80.0,60.0,20.0
+Qwen3.7 Plus,collective,P17,5,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P18,1,85.0,70.0,15.0
+Qwen3.7 Plus,collective,P18,2,82.0,70.0,12.0
+Qwen3.7 Plus,collective,P18,3,85.0,45.0,40.0
+Qwen3.7 Plus,collective,P18,4,85.0,70.0,15.0
+Qwen3.7 Plus,collective,P18,5,85.0,70.0,15.0
+Qwen3.7 Plus,collective,P19,1,82.0,35.0,47.0
+Qwen3.7 Plus,collective,P19,2,82.0,25.0,57.0
+Qwen3.7 Plus,collective,P19,3,80.0,30.0,50.0
+Qwen3.7 Plus,collective,P19,4,82.0,35.0,47.0
+Qwen3.7 Plus,collective,P19,5,88.0,30.0,58.0
+Qwen3.7 Plus,collective,P20,1,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P20,2,82.0,35.0,47.0
+Qwen3.7 Plus,collective,P20,3,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P20,4,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P20,5,85.0,30.0,55.0
+Qwen3.7 Plus,collective,P21,1,88.0,45.0,43.0
+Qwen3.7 Plus,collective,P21,2,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P21,3,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P21,4,85.0,40.0,45.0
+Qwen3.7 Plus,collective,P21,5,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P22,1,80.0,65.0,15.0
+Qwen3.7 Plus,collective,P22,2,85.0,40.0,45.0
+Qwen3.7 Plus,collective,P22,3,80.0,70.0,10.0
+Qwen3.7 Plus,collective,P22,4,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P22,5,82.0,45.0,37.0
+Qwen3.7 Plus,collective,P23,1,85.0,40.0,45.0
+Qwen3.7 Plus,collective,P23,2,85.0,40.0,45.0
+Qwen3.7 Plus,collective,P23,3,78.0,40.0,38.0
+Qwen3.7 Plus,collective,P23,4,85.0,38.0,47.0
+Qwen3.7 Plus,collective,P23,5,85.0,45.0,40.0
+Qwen3.7 Plus,collective,P24,1,82.0,40.0,42.0
+Qwen3.7 Plus,collective,P24,2,82.0,35.0,47.0
+Qwen3.7 Plus,collective,P24,3,82.0,45.0,37.0
+Qwen3.7 Plus,collective,P24,4,78.0,60.0,18.0
+Qwen3.7 Plus,collective,P24,5,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P25,1,82.0,35.0,47.0
+Qwen3.7 Plus,collective,P25,2,82.0,60.0,22.0
+Qwen3.7 Plus,collective,P25,3,82.0,70.0,12.0
+Qwen3.7 Plus,collective,P25,4,80.0,45.0,35.0
+Qwen3.7 Plus,collective,P25,5,82.0,40.0,42.0
+Qwen3.7 Plus,collective,P26,1,88.0,45.0,43.0
+Qwen3.7 Plus,collective,P26,2,88.0,40.0,48.0
+Qwen3.7 Plus,collective,P26,3,78.0,35.0,43.0
+Qwen3.7 Plus,collective,P26,4,85.0,35.0,50.0
+Qwen3.7 Plus,collective,P26,5,85.0,40.0,45.0
+Qwen3.7 Plus,collective,P27,1,82.0,45.0,37.0
+Qwen3.7 Plus,collective,P27,2,82.0,50.0,32.0
+Qwen3.7 Plus,collective,P27,3,80.0,75.0,5.0
+Qwen3.7 Plus,collective,P27,4,82.0,42.0,40.0
+Qwen3.7 Plus,collective,P27,5,82.0,45.0,37.0
+Qwen3.7 Plus,equity,P01,1,82.0,15.0,67.0
+Qwen3.7 Plus,equity,P01,2,85.0,20.0,65.0
+Qwen3.7 Plus,equity,P01,3,80.0,20.0,60.0
+Qwen3.7 Plus,equity,P01,4,85.0,20.0,65.0
+Qwen3.7 Plus,equity,P01,5,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P02,1,85.0,15.0,70.0
+Qwen3.7 Plus,equity,P02,2,85.0,20.0,65.0
+Qwen3.7 Plus,equity,P02,3,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P02,4,82.0,30.0,52.0
+Qwen3.7 Plus,equity,P02,5,85.0,15.0,70.0
+Qwen3.7 Plus,equity,P03,1,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P03,2,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P03,3,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P03,4,85.0,20.0,65.0
+Qwen3.7 Plus,equity,P03,5,85.0,20.0,65.0
+Qwen3.7 Plus,equity,P04,1,80.0,30.0,50.0
+Qwen3.7 Plus,equity,P04,2,82.0,25.0,57.0
+Qwen3.7 Plus,equity,P04,3,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P04,4,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P04,5,82.0,25.0,57.0
+Qwen3.7 Plus,equity,P05,1,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P05,2,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P05,3,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P05,4,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P05,5,85.0,20.0,65.0
+Qwen3.7 Plus,equity,P06,1,85.0,40.0,45.0
+Qwen3.7 Plus,equity,P06,2,85.0,30.0,55.0
+Qwen3.7 Plus,equity,P06,3,85.0,30.0,55.0
+Qwen3.7 Plus,equity,P06,4,82.0,35.0,47.0
+Qwen3.7 Plus,equity,P06,5,90.0,30.0,60.0
+Qwen3.7 Plus,equity,P07,1,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P07,2,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P07,3,85.0,30.0,55.0
+Qwen3.7 Plus,equity,P07,4,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P07,5,80.0,25.0,55.0
+Qwen3.7 Plus,equity,P08,1,82.0,25.0,57.0
+Qwen3.7 Plus,equity,P08,2,85.0,30.0,55.0
+Qwen3.7 Plus,equity,P08,3,82.0,30.0,52.0
+Qwen3.7 Plus,equity,P08,4,90.0,30.0,60.0
+Qwen3.7 Plus,equity,P08,5,80.0,35.0,45.0
+Qwen3.7 Plus,equity,P09,1,90.0,35.0,55.0
+Qwen3.7 Plus,equity,P09,2,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P09,3,85.0,30.0,55.0
+Qwen3.7 Plus,equity,P09,4,80.0,35.0,45.0
+Qwen3.7 Plus,equity,P09,5,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P10,1,82.0,20.0,62.0
+Qwen3.7 Plus,equity,P10,2,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P10,3,85.0,20.0,65.0
+Qwen3.7 Plus,equity,P10,4,85.0,20.0,65.0
+Qwen3.7 Plus,equity,P10,5,85.0,20.0,65.0
+Qwen3.7 Plus,equity,P11,1,90.0,20.0,70.0
+Qwen3.7 Plus,equity,P11,2,85.0,20.0,65.0
+Qwen3.7 Plus,equity,P11,3,90.0,20.0,70.0
+Qwen3.7 Plus,equity,P11,4,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P11,5,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P12,1,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P12,2,82.0,25.0,57.0
+Qwen3.7 Plus,equity,P12,3,85.0,20.0,65.0
+Qwen3.7 Plus,equity,P12,4,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P12,5,82.0,20.0,62.0
+Qwen3.7 Plus,equity,P13,1,82.0,25.0,57.0
+Qwen3.7 Plus,equity,P13,2,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P13,3,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P13,4,85.0,30.0,55.0
+Qwen3.7 Plus,equity,P13,5,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P14,1,88.0,25.0,63.0
+Qwen3.7 Plus,equity,P14,2,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P14,3,85.0,20.0,65.0
+Qwen3.7 Plus,equity,P14,4,85.0,30.0,55.0
+Qwen3.7 Plus,equity,P14,5,82.0,30.0,52.0
+Qwen3.7 Plus,equity,P15,1,78.0,35.0,43.0
+Qwen3.7 Plus,equity,P15,2,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P15,3,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P15,4,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P15,5,82.0,25.0,57.0
+Qwen3.7 Plus,equity,P16,1,82.0,35.0,47.0
+Qwen3.7 Plus,equity,P16,2,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P16,3,82.0,30.0,52.0
+Qwen3.7 Plus,equity,P16,4,85.0,45.0,40.0
+Qwen3.7 Plus,equity,P16,5,82.0,25.0,57.0
+Qwen3.7 Plus,equity,P17,1,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P17,2,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P17,3,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P17,4,88.0,30.0,58.0
+Qwen3.7 Plus,equity,P17,5,88.0,35.0,53.0
+Qwen3.7 Plus,equity,P18,1,88.0,25.0,63.0
+Qwen3.7 Plus,equity,P18,2,90.0,35.0,55.0
+Qwen3.7 Plus,equity,P18,3,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P18,4,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P18,5,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P19,1,82.0,30.0,52.0
+Qwen3.7 Plus,equity,P19,2,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P19,3,85.0,30.0,55.0
+Qwen3.7 Plus,equity,P19,4,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P19,5,85.0,20.0,65.0
+Qwen3.7 Plus,equity,P20,1,90.0,30.0,60.0
+Qwen3.7 Plus,equity,P20,2,88.0,25.0,63.0
+Qwen3.7 Plus,equity,P20,3,90.0,20.0,70.0
+Qwen3.7 Plus,equity,P20,4,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P20,5,90.0,30.0,60.0
+Qwen3.7 Plus,equity,P21,1,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P21,2,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P21,3,90.0,35.0,55.0
+Qwen3.7 Plus,equity,P21,4,90.0,25.0,65.0
+Qwen3.7 Plus,equity,P21,5,85.0,25.0,60.0
+Qwen3.7 Plus,equity,P22,1,82.0,35.0,47.0
+Qwen3.7 Plus,equity,P22,2,82.0,35.0,47.0
+Qwen3.7 Plus,equity,P22,3,82.0,30.0,52.0
+Qwen3.7 Plus,equity,P22,4,85.0,30.0,55.0
+Qwen3.7 Plus,equity,P22,5,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P23,1,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P23,2,85.0,40.0,45.0
+Qwen3.7 Plus,equity,P23,3,90.0,40.0,50.0
+Qwen3.7 Plus,equity,P23,4,90.0,25.0,65.0
+Qwen3.7 Plus,equity,P23,5,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P24,1,85.0,40.0,45.0
+Qwen3.7 Plus,equity,P24,2,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P24,3,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P24,4,80.0,35.0,45.0
+Qwen3.7 Plus,equity,P24,5,80.0,30.0,50.0
+Qwen3.7 Plus,equity,P25,1,88.0,35.0,53.0
+Qwen3.7 Plus,equity,P25,2,82.0,35.0,47.0
+Qwen3.7 Plus,equity,P25,3,88.0,40.0,48.0
+Qwen3.7 Plus,equity,P25,4,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P25,5,80.0,35.0,45.0
+Qwen3.7 Plus,equity,P26,1,85.0,40.0,45.0
+Qwen3.7 Plus,equity,P26,2,88.0,40.0,48.0
+Qwen3.7 Plus,equity,P26,3,85.0,40.0,45.0
+Qwen3.7 Plus,equity,P26,4,85.0,35.0,50.0
+Qwen3.7 Plus,equity,P26,5,90.0,40.0,50.0
+Qwen3.7 Plus,equity,P27,1,88.0,25.0,63.0
+Qwen3.7 Plus,equity,P27,2,85.0,30.0,55.0
+Qwen3.7 Plus,equity,P27,3,85.0,40.0,45.0
+Qwen3.7 Plus,equity,P27,4,85.0,30.0,55.0
+Qwen3.7 Plus,equity,P27,5,85.0,35.0,50.0
+Qwen3.7 Plus,neutral,P01,1,80.0,20.0,60.0
+Qwen3.7 Plus,neutral,P01,2,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P01,3,80.0,20.0,60.0
+Qwen3.7 Plus,neutral,P01,4,82.0,15.0,67.0
+Qwen3.7 Plus,neutral,P01,5,80.0,20.0,60.0
+Qwen3.7 Plus,neutral,P02,1,85.0,15.0,70.0
+Qwen3.7 Plus,neutral,P02,2,80.0,15.0,65.0
+Qwen3.7 Plus,neutral,P02,3,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P02,4,80.0,20.0,60.0
+Qwen3.7 Plus,neutral,P02,5,85.0,15.0,70.0
+Qwen3.7 Plus,neutral,P03,1,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P03,2,82.0,20.0,62.0
+Qwen3.7 Plus,neutral,P03,3,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P03,4,80.0,20.0,60.0
+Qwen3.7 Plus,neutral,P03,5,80.0,20.0,60.0
+Qwen3.7 Plus,neutral,P04,1,80.0,30.0,50.0
+Qwen3.7 Plus,neutral,P04,2,85.0,30.0,55.0
+Qwen3.7 Plus,neutral,P04,3,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P04,4,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P04,5,80.0,30.0,50.0
+Qwen3.7 Plus,neutral,P05,1,80.0,30.0,50.0
+Qwen3.7 Plus,neutral,P05,2,85.0,25.0,60.0
+Qwen3.7 Plus,neutral,P05,3,85.0,30.0,55.0
+Qwen3.7 Plus,neutral,P05,4,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P05,5,85.0,25.0,60.0
+Qwen3.7 Plus,neutral,P06,1,80.0,30.0,50.0
+Qwen3.7 Plus,neutral,P06,2,80.0,30.0,50.0
+Qwen3.7 Plus,neutral,P06,3,75.0,25.0,50.0
+Qwen3.7 Plus,neutral,P06,4,82.0,30.0,52.0
+Qwen3.7 Plus,neutral,P06,5,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P07,1,82.0,25.0,57.0
+Qwen3.7 Plus,neutral,P07,2,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P07,3,78.0,25.0,53.0
+Qwen3.7 Plus,neutral,P07,4,75.0,25.0,50.0
+Qwen3.7 Plus,neutral,P07,5,80.0,20.0,60.0
+Qwen3.7 Plus,neutral,P08,1,90.0,35.0,55.0
+Qwen3.7 Plus,neutral,P08,2,85.0,25.0,60.0
+Qwen3.7 Plus,neutral,P08,3,82.0,25.0,57.0
+Qwen3.7 Plus,neutral,P08,4,85.0,35.0,50.0
+Qwen3.7 Plus,neutral,P08,5,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P09,1,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P09,2,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P09,3,80.0,35.0,45.0
+Qwen3.7 Plus,neutral,P09,4,75.0,25.0,50.0
+Qwen3.7 Plus,neutral,P09,5,85.0,35.0,50.0
+Qwen3.7 Plus,neutral,P10,1,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P10,2,85.0,15.0,70.0
+Qwen3.7 Plus,neutral,P10,3,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P10,4,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P10,5,80.0,20.0,60.0
+Qwen3.7 Plus,neutral,P11,1,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P11,2,85.0,15.0,70.0
+Qwen3.7 Plus,neutral,P11,3,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P11,4,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P11,5,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P12,1,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P12,2,80.0,15.0,65.0
+Qwen3.7 Plus,neutral,P12,3,80.0,20.0,60.0
+Qwen3.7 Plus,neutral,P12,4,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P12,5,82.0,15.0,67.0
+Qwen3.7 Plus,neutral,P13,1,82.0,30.0,52.0
+Qwen3.7 Plus,neutral,P13,2,82.0,25.0,57.0
+Qwen3.7 Plus,neutral,P13,3,85.0,30.0,55.0
+Qwen3.7 Plus,neutral,P13,4,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P13,5,85.0,30.0,55.0
+Qwen3.7 Plus,neutral,P14,1,80.0,35.0,45.0
+Qwen3.7 Plus,neutral,P14,2,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P14,3,85.0,30.0,55.0
+Qwen3.7 Plus,neutral,P14,4,85.0,25.0,60.0
+Qwen3.7 Plus,neutral,P14,5,85.0,25.0,60.0
+Qwen3.7 Plus,neutral,P15,1,82.0,25.0,57.0
+Qwen3.7 Plus,neutral,P15,2,80.0,35.0,45.0
+Qwen3.7 Plus,neutral,P15,3,82.0,25.0,57.0
+Qwen3.7 Plus,neutral,P15,4,85.0,15.0,70.0
+Qwen3.7 Plus,neutral,P15,5,80.0,20.0,60.0
+Qwen3.7 Plus,neutral,P16,1,85.0,35.0,50.0
+Qwen3.7 Plus,neutral,P16,2,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P16,3,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P16,4,80.0,35.0,45.0
+Qwen3.7 Plus,neutral,P16,5,80.0,35.0,45.0
+Qwen3.7 Plus,neutral,P17,1,85.0,30.0,55.0
+Qwen3.7 Plus,neutral,P17,2,82.0,25.0,57.0
+Qwen3.7 Plus,neutral,P17,3,85.0,25.0,60.0
+Qwen3.7 Plus,neutral,P17,4,82.0,30.0,52.0
+Qwen3.7 Plus,neutral,P17,5,82.0,30.0,52.0
+Qwen3.7 Plus,neutral,P18,1,80.0,30.0,50.0
+Qwen3.7 Plus,neutral,P18,2,85.0,35.0,50.0
+Qwen3.7 Plus,neutral,P18,3,85.0,35.0,50.0
+Qwen3.7 Plus,neutral,P18,4,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P18,5,85.0,30.0,55.0
+Qwen3.7 Plus,neutral,P19,1,82.0,25.0,57.0
+Qwen3.7 Plus,neutral,P19,2,85.0,25.0,60.0
+Qwen3.7 Plus,neutral,P19,3,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P19,4,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P19,5,80.0,15.0,65.0
+Qwen3.7 Plus,neutral,P20,1,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P20,2,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P20,3,80.0,20.0,60.0
+Qwen3.7 Plus,neutral,P20,4,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P20,5,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P21,1,85.0,25.0,60.0
+Qwen3.7 Plus,neutral,P21,2,85.0,15.0,70.0
+Qwen3.7 Plus,neutral,P21,3,82.0,15.0,67.0
+Qwen3.7 Plus,neutral,P21,4,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P21,5,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P22,1,85.0,35.0,50.0
+Qwen3.7 Plus,neutral,P22,2,80.0,30.0,50.0
+Qwen3.7 Plus,neutral,P22,3,85.0,30.0,55.0
+Qwen3.7 Plus,neutral,P22,4,80.0,40.0,40.0
+Qwen3.7 Plus,neutral,P22,5,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P23,1,85.0,25.0,60.0
+Qwen3.7 Plus,neutral,P23,2,85.0,25.0,60.0
+Qwen3.7 Plus,neutral,P23,3,85.0,30.0,55.0
+Qwen3.7 Plus,neutral,P23,4,85.0,30.0,55.0
+Qwen3.7 Plus,neutral,P23,5,85.0,30.0,55.0
+Qwen3.7 Plus,neutral,P24,1,82.0,30.0,52.0
+Qwen3.7 Plus,neutral,P24,2,85.0,20.0,65.0
+Qwen3.7 Plus,neutral,P24,3,80.0,30.0,50.0
+Qwen3.7 Plus,neutral,P24,4,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P24,5,85.0,25.0,60.0
+Qwen3.7 Plus,neutral,P25,1,80.0,30.0,50.0
+Qwen3.7 Plus,neutral,P25,2,90.0,60.0,30.0
+Qwen3.7 Plus,neutral,P25,3,80.0,35.0,45.0
+Qwen3.7 Plus,neutral,P25,4,80.0,35.0,45.0
+Qwen3.7 Plus,neutral,P25,5,80.0,40.0,40.0
+Qwen3.7 Plus,neutral,P26,1,85.0,35.0,50.0
+Qwen3.7 Plus,neutral,P26,2,85.0,30.0,55.0
+Qwen3.7 Plus,neutral,P26,3,85.0,30.0,55.0
+Qwen3.7 Plus,neutral,P26,4,85.0,25.0,60.0
+Qwen3.7 Plus,neutral,P26,5,85.0,30.0,55.0
+Qwen3.7 Plus,neutral,P27,1,80.0,25.0,55.0
+Qwen3.7 Plus,neutral,P27,2,75.0,50.0,25.0
+Qwen3.7 Plus,neutral,P27,3,82.0,25.0,57.0
+Qwen3.7 Plus,neutral,P27,4,80.0,40.0,40.0
+Qwen3.7 Plus,neutral,P27,5,82.0,25.0,57.0

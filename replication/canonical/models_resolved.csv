@@ -1,0 +1,16 @@
+model,provider,route,requested_model_id,returned_model_id,endpoint_host,available
+GPT-4.1,OpenAI,openai,gpt-4.1,gpt-4.1-2025-04-14,api.openai.com,yes
+GPT-4.1 mini,OpenAI,openai,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,api.openai.com,yes
+GPT-4o,OpenAI,openai,gpt-4o,gpt-4o-2024-08-06,api.openai.com,yes
+Claude Sonnet 4.6,Anthropic,anthropic,claude-sonnet-4-6,claude-sonnet-4-6,api.anthropic.com,yes
+Claude Opus 4.8,Anthropic,openrouter,anthropic/claude-opus-4.8,anthropic/claude-opus-4.8,openrouter.ai,yes
+Claude Haiku,Anthropic,anthropic,claude-haiku-4-5,claude-haiku-4-5-20251001,api.anthropic.com,yes
+Gemini 2.5 Pro,Google,gemini,gemini-2.5-pro,gemini-2.5-pro,generativelanguage.googleapis.com,yes
+Gemini 2.5 Flash,Google,gemini,gemini-2.5-flash,gemini-2.5-flash,generativelanguage.googleapis.com,yes
+Llama 3.1 70B Instruct,Meta,openrouter,meta-llama/llama-3.1-70b-instruct,meta-llama/llama-3.1-70b-instruct,openrouter.ai,yes
+Llama 3.1 8B Instruct,Meta,openrouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,openrouter.ai,yes
+DeepSeek-V3.2,DeepSeek,deepseek,deepseek-chat,deepseek-flash,api.deepseek.com,yes
+Qwen3.7 Plus,Qwen,dashscope,qwen-max,qwen-max,dashscope.aliyuncs.com,yes
+Mistral Large,Mistral,openrouter,mistralai/mistral-large,mistralai/mistral-large,openrouter.ai,yes
+Cohere Command R+,Cohere,openrouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,openrouter.ai,yes
+Kimi K2.6,Moonshot,openrouter,moonshotai/kimi-k2.6-20260420,moonshotai/kimi-k2.6,openrouter.ai,yes

@@ -1,0 +1,303 @@
+run_id,order_index,block,model,provider,route,requested_model_id,returned_model_id,endpoint_host,tokens_in,tokens_out,system_prompt_sha256,user_prompt_sha256,raw_response,n_parsed,scores,timestamp_utc
+CAN_ORI_001,1,orient,GPT-4.1,OpenAI,openai,gpt-4.1,gpt-4.1-2025-04-14,api.openai.com,443,39,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674,"7
+2
+6
+6
+6
+5
+7
+5
+5
+3
+5
+5
+7
+6
+3
+6
+6
+2
+7
+6",20,"[7, 2, 6, 6, 6, 5, 7, 5, 5, 3, 5, 5, 7, 6, 3, 6, 6, 2, 7, 6]",2026-09-17T06:36:10.617850+00:00
+CAN_ORI_002,2,orient,GPT-4.1 mini,OpenAI,openai,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,api.openai.com,443,39,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674,"7
+2
+6
+6
+6
+5
+7
+5
+5
+2
+6
+6
+7
+6
+2
+5
+5
+2
+6
+5",20,"[7, 2, 6, 6, 6, 5, 7, 5, 5, 2, 6, 6, 7, 6, 2, 5, 5, 2, 6, 5]",2026-09-17T06:36:10.343279+00:00
+CAN_ORI_003,3,orient,GPT-4o,OpenAI,openai,gpt-4o,gpt-4o-2024-08-06,api.openai.com,443,39,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674,"6  
+2  
+6  
+6  
+6  
+5  
+7  
+5  
+5  
+4  
+5  
+6  
+7  
+6  
+3  
+5  
+6  
+3  
+6  
+5",20,"[6, 2, 6, 6, 6, 5, 7, 5, 5, 4, 5, 6, 7, 6, 3, 5, 6, 3, 6, 5]",2026-09-17T06:36:10.574834+00:00
+CAN_ORI_004,4,orient,Claude Sonnet 4.6,Anthropic,anthropic,claude-sonnet-4-6,claude-sonnet-4-6,api.anthropic.com,495,43,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674,"6
+2
+5
+5
+6
+5
+6
+3
+4
+2
+4
+5
+6
+5
+2
+5
+4
+2
+6
+5",20,"[6, 2, 5, 5, 6, 5, 6, 3, 4, 2, 4, 5, 6, 5, 2, 5, 4, 2, 6, 5]",2026-09-17T06:36:10.804058+00:00
+CAN_ORI_005,5,orient,Claude Opus 4.8,Anthropic,anthropic,claude-opus-4-8,claude-opus-4-8,api.anthropic.com,764,41,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674,"6
+3
+5
+5
+5
+4
+5
+3
+4
+3
+4
+5
+5
+5
+3
+5
+3
+3
+6
+4",20,"[6, 3, 5, 5, 5, 4, 5, 3, 4, 3, 4, 5, 5, 5, 3, 5, 3, 3, 6, 4]",2026-09-17T06:36:10.982857+00:00
+CAN_ORI_006,6,orient,Claude Haiku,Anthropic,anthropic,claude-haiku-4-5,claude-haiku-4-5-20251001,api.anthropic.com,494,43,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674,"6
+3
+5
+6
+5
+5
+6
+3
+5
+3
+4
+5
+6
+6
+3
+6
+4
+3
+6
+6",20,"[6, 3, 5, 6, 5, 5, 6, 3, 5, 3, 4, 5, 6, 6, 3, 6, 4, 3, 6, 6]",2026-09-17T06:36:09.750094+00:00
+CAN_ORI_007,7,orient,Gemini 2.5 Pro,Google,gemini,gemini-2.5-pro,gemini-2.5-pro,generativelanguage.googleapis.com,466,39,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674,"7
+2
+6
+6
+6
+6
+7
+3
+4
+2
+5
+5
+7
+6
+2
+7
+5
+2
+6
+6",20,"[7, 2, 6, 6, 6, 6, 7, 3, 4, 2, 5, 5, 7, 6, 2, 7, 5, 2, 6, 6]",2026-09-17T06:36:30.109540+00:00
+CAN_ORI_008,8,orient,Gemini 2.5 Flash,Google,gemini,gemini-2.5-flash,gemini-2.5-flash,generativelanguage.googleapis.com,466,39,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674,"6
+2
+5
+6
+6
+5
+7
+3
+3
+1
+3
+5
+7
+6
+1
+6
+4
+2
+6
+5",20,"[6, 2, 5, 6, 6, 5, 7, 3, 3, 1, 3, 5, 7, 6, 1, 6, 4, 2, 6, 5]",2026-09-17T06:36:18.158349+00:00
+CAN_ORI_009,9,orient,Llama 3.1 70B Instruct,Meta,openrouter,meta-llama/llama-3.1-70b-instruct,meta-llama/llama-3.1-70b-instruct,openrouter.ai,448,101,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674,"
+
+1. 6
+2. 2
+3. 5
+4. 5
+5. 6
+6. 6
+7. 6
+8. 4
+9. 5
+10. 4
+11. 3
+12. 5
+13. 6
+14. 4
+15. 3
+16. 5
+17. 4
+18. 2
+19. 5
+20. 6",20,"[1, 6, 2, 2, 3, 5, 4, 5, 5, 6, 6, 6, 7, 6, 4, 5, 4, 3, 5, 6]",2026-09-17T06:36:11.727070+00:00
+CAN_ORI_010,10,orient,Llama 3.1 8B Instruct,Meta,openrouter,meta-llama/llama-3.1-8b-instruct,meta-llama/llama-3.1-8b-instruct,openrouter.ai,449,100,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674,"1. 4
+2. 2
+3. 6
+4. 5
+5. 6
+6. 5
+7. 4
+8. 2
+9. 6
+10. 4
+11. 5
+12. 6
+13. 5
+14. 4
+15. 3
+16. 6
+17. 5
+18. 2
+19. 4
+20. 6",20,"[1, 4, 2, 2, 3, 6, 4, 5, 5, 6, 6, 5, 7, 4, 2, 6, 4, 5, 6, 5]",2026-09-17T06:36:12.234977+00:00
+CAN_ORI_011,11,orient,DeepSeek-V3.2,DeepSeek,deepseek,deepseek-chat,deepseek-flash,api.deepseek.com,437,39,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674,"6
+2
+5
+5
+5
+5
+6
+4
+4
+3
+4
+5
+6
+5
+3
+5
+5
+3
+6
+5",20,"[6, 2, 5, 5, 5, 5, 6, 4, 4, 3, 4, 5, 6, 5, 3, 5, 5, 3, 6, 5]",2026-09-17T06:36:11.995150+00:00
+CAN_ORI_012,12,orient,Mistral Large,Mistral,openrouter,mistralai/mistral-large,mistralai/mistral-large,openrouter.ai,455,40,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674,"5
+2
+6
+6
+6
+5
+7
+3
+4
+2
+5
+6
+7
+6
+3
+5
+4
+3
+6
+4",20,"[5, 2, 6, 6, 6, 5, 7, 3, 4, 2, 5, 6, 7, 6, 3, 5, 4, 3, 6, 4]",2026-09-17T06:36:12.567650+00:00
+CAN_ORI_013,13,orient,Cohere Command R+,Cohere,openrouter,cohere/command-r-plus-08-2024,cohere/command-r-plus-08-2024,openrouter.ai,466,110,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674,"1. 6
+2. 3
+3. 5
+4. 5
+5. 6
+6. 4
+7. 4
+8. 3
+9. 4
+10. 2
+11. 4
+12. 6
+13. 5
+14. 4
+15. 2
+16. 4
+17. 2
+18. 1
+19. 5
+20. 3",20,"[1, 6, 2, 3, 3, 5, 4, 5, 5, 6, 6, 4, 7, 4, 3, 4, 2, 4, 6, 5]",2026-09-17T06:36:24.116925+00:00
+CAN_ORI_014,14,orient,Kimi K2.6,Moonshot,openrouter,moonshotai/kimi-k2.6-20260420,moonshotai/kimi-k2.6,openrouter.ai,445,40,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674," 4
+2
+5
+5
+5
+5
+6
+3
+3
+2
+4
+4
+6
+5
+2
+4
+4
+2
+5
+4",20,"[4, 2, 5, 5, 5, 5, 6, 3, 3, 2, 4, 4, 6, 5, 2, 4, 4, 2, 5, 4]",2026-09-17T06:36:13.282701+00:00
+CAN_ORI_015,15,orient,Qwen3.7 Plus,Qwen,dashscope,qwen3.7-plus,qwen3.7-plus,dashscope.aliyuncs.com,481,1145,87d830af5050707398ac768d4e4e5a4e6c334588e417c5aa4a064e2be6781267,188a69d76364465098db02fe542d20f016ad40cbd72a70974561ce87ebe3a674,"6
+2
+5
+5
+5
+5
+6
+2
+3
+2
+5
+5
+6
+5
+2
+5
+3
+2
+5
+3",20,"[6, 2, 5, 5, 5, 5, 6, 2, 3, 2, 5, 5, 6, 5, 2, 5, 3, 2, 5, 3]",2026-09-17T06:36:30.164296+00:00

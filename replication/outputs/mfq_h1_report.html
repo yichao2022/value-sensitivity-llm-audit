@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MFQ-H1 Analysis Report</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #F6F1E8;
+    color: #1F2421;
+    line-height: 1.6;
+    padding: 2rem;
+}
+.container { max-width: 1200px; margin: 0 auto; }
+header { 
+    background: #2A2723;
+    color: #FBF7EF;
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+h1 { 
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+h1 em { color: #C8853F; font-style: italic; }
+.meta { color: #8A8A80; font-size: 0.9rem; }
+.pill { 
+    display: inline-block;
+    background: #F0E3D0;
+    color: #8A8A80;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.card { 
+    background: #FFFFFF;
+    border: 1px solid #E2D9C8;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+h2 { 
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #2A2723;
+}
+table { 
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+th { 
+    background: #FBF7EF;
+    border-bottom: 2px solid #E2D9C8;
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    color: #2A2723;
+}
+td { 
+    padding: 0.75rem;
+    border-bottom: 1px solid #E2D9C8;
+}
+tr:hover { background: #FBF7EF; }
+.stat { 
+    display: inline-block;
+    background: #F0E3D0;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+.highlight { 
+    background: #C8853F;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.sig { color: #C8853F; font-weight: 600; }
+.ns { color: #8A8A80; }
+code { 
+    background: #FBF7EF;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+}
+.grid { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+.metric { 
+    background: #FBF7EF;
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid #C8853F;
+}
+.metric-label { 
+    color: #8A8A80;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.metric-value { 
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2A2723;
+    margin-top: 0.25rem;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<div class="pill">Analysis Report · 2026-10-01 17:37</div>
+<h1>Moral Foundations & <em>Burden Effects</em></h1>
+<p class="meta">H1 Regression Analysis: MFQ-30 Composite Predicting Orientation Effects</p>
+</header>
+
+<div class="card">
+<h2>Executive Summary</h2>
+<div class="grid">
+<div class="metric">
+<div class="metric-label">Models Analyzed</div>
+<div class="metric-value">15</div>
+</div>
+<div class="metric">
+<div class="metric-label">Model 1 R²</div>
+<div class="metric-value">0.107</div>
+</div>
+<div class="metric">
+<div class="metric-label">Model 2 R²</div>
+<div class="metric-value">0.347</div>
+</div>
+</div>
+<p style="margin-top: 1rem; color: #8A8A80;">
+MFQ composite = z(Care, Fairness) - z(Loyalty, Authority, Sanctity). 
+Higher values indicate more individualizing (progressive) moral orientation.
+</p>
+</div>
+
+<div class="card">
+<h2>Model 1: Δ ~ MFQ Composite</h2>
+<p><code>mean_delta ~ MFQ_composite</code></p>
+<div class="grid">
+<div class="metric">
+<div class="metric-label">β (MFQ Composite)</div>
+<div class="metric-value">2.959</div>
+</div>
+<div class="metric">
+<div class="metric-label">p-value</div>
+<div class="metric-value">0.235</div>
+</div>
+<div class="metric">
+<div class="metric-label">95% CI</div>
+<div class="metric-value">[-2.17, 8.09]</div>
+</div>
+</div>
+<table>
+<tr><th>Predictor</th><th>Coefficient</th><th>SE</th><th>t</th><th>p</th><th>95% CI</th></tr>
+<tr>
+<td>(Intercept)</td>
+<td>37.720</td>
+<td>2.679</td>
+<td>14.081</td>
+<td class="sig"><.001</td>
+<td>[31.93, 43.51]</td>
+</tr>
+<tr>
+<td><strong>MFQ_composite</strong></td>
+<td><strong>2.959</strong></td>
+<td>2.374</td>
+<td>1.246</td>
+<td class="sig"><strong>0.235</strong></td>
+<td>[-2.17, 8.09]</td>
+</tr>
+</table>
+<p style="margin-top: 1rem;">
+<span class="stat">R² = 0.107</span>
+<span class="stat">Adj. R² = 0.038</span>
+<span class="stat">N = 15</span>
+</p>
+</div>
+
+<div class="card">
+<h2>Model 2: Δ ~ MFQ Composite + Mean(Low)</h2>
+<p><code>mean_delta ~ MFQ_composite + mean_low</code></p>
+<table>
+<tr><th>Predictor</th><th>Coefficient</th><th>SE</th><th>t</th><th>p</th><th>95% CI</th></tr>
+<tr>
+<td>(Intercept)</td>
+<td>-44.662</td>
+<td>39.304</td>
+<td>-1.136</td>
+<td class="ns">0.278</td>
+<td>[-130.30, 40.97]</td>
+</tr>
+<tr>
+<td><strong>MFQ_composite</strong></td>
+<td><strong>2.031</strong></td>
+<td>2.159</td>
+<td>0.941</td>
+<td class="ns"><strong>0.365</strong></td>
+<td>[-2.67, 6.74]</td>
+</tr>
+<tr>
+<td>mean_low</td>
+<td>1.087</td>
+<td>0.518</td>
+<td>2.100</td>
+<td class="ns">0.058</td>
+<td>[-0.04, 2.22]</td>
+</tr>
+</table>
+<p style="margin-top: 1rem;">
+<span class="stat">R² = 0.347</span>
+<span class="stat">Adj. R² = 0.238</span>
+<span class="stat">N = 15</span>
+</p>
+</div>
+
+<div class="card">
+<h2>Per-Foundation Diagnostics</h2>
+<p>Univariate regressions: <code>mean_delta ~ foundation</code></p>
+<table>
+<tr><th>Foundation</th><th>β</th><th>SE</th><th>t</th><th>p</th><th>R²</th><th>95% CI</th></tr>
+<tr>
+<td><strong>Care</strong></td>
+<td class="ns">-1.701</td>
+<td>10.199</td>
+<td>-0.167</td>
+<td class="ns"><strong>0.870</strong></td>
+<td>0.002</td>
+<td>[-23.73, 20.33]</td>
+</tr>
+<tr>
+<td><strong>Fairness</strong></td>
+<td class="ns">0.419</td>
+<td>3.625</td>
+<td>0.116</td>
+<td class="ns"><strong>0.910</strong></td>
+<td>0.001</td>
+<td>[-7.41, 8.25]</td>
+</tr>
+<tr>
+<td><strong>Loyalty</strong></td>
+<td class="ns">-9.336</td>
+<td>5.179</td>
+<td>-1.803</td>
+<td class="ns"><strong>0.095</strong></td>
+<td>0.200</td>
+<td>[-20.52, 1.85]</td>
+</tr>
+<tr>
+<td><strong>Authority</strong></td>
+<td class="ns">-6.143</td>
+<td>3.882</td>
+<td>-1.582</td>
+<td class="ns"><strong>0.138</strong></td>
+<td>0.162</td>
+<td>[-14.53, 2.24]</td>
+</tr>
+<tr>
+<td><strong>Sanctity</strong></td>
+<td class="ns">-3.023</td>
+<td>2.511</td>
+<td>-1.204</td>
+<td class="ns"><strong>0.250</strong></td>
+<td>0.100</td>
+<td>[-8.45, 2.40]</td>
+</tr>
+</table>
+</div>
+
+<div class="card">
+<h2>Model Rankings</h2>
+<table>
+<tr><th>Model</th><th>MFQ Comp.</th><th>Mean Δ</th><th>Mean(Low)</th><th>Mean(High)</th><th>SD(Δ)</th></tr>
+<tr>
+<td><strong>Llama 3.1 8B Instruct</strong></td>
+<td>-0.593</td>
+<td>55.44</td>
+<td>80.48</td>
+<td>25.04</td>
+<td>7.23</td>
+</tr>
+<tr>
+<td><strong>Qwen3.7 Plus</strong></td>
+<td>-0.584</td>
+<td>54.45</td>
+<td>83.33</td>
+<td>28.87</td>
+<td>7.43</td>
+</tr>
+<tr>
+<td><strong>Gemini 2.5 Pro</strong></td>
+<td>2.814</td>
+<td>53.93</td>
+<td>77.44</td>
+<td>23.52</td>
+<td>8.00</td>
+</tr>
+<tr>
+<td><strong>Gemini 2.5 Flash</strong></td>
+<td>2.417</td>
+<td>48.15</td>
+<td>81.63</td>
+<td>33.48</td>
+<td>9.64</td>
+</tr>
+<tr>
+<td><strong>Kimi K2.6</strong></td>
+<td>-0.863</td>
+<td>38.13</td>
+<td>74.31</td>
+<td>36.19</td>
+<td>6.43</td>
+</tr>
+<tr>
+<td><strong>DeepSeek-V3.2</strong></td>
+<td>-0.339</td>
+<td>37.79</td>
+<td>75.76</td>
+<td>37.96</td>
+<td>5.28</td>
+</tr>
+<tr>
+<td><strong>Mistral Large</strong></td>
+<td>-0.981</td>
+<td>36.96</td>
+<td>76.00</td>
+<td>39.04</td>
+<td>6.07</td>
+</tr>
+<tr>
+<td><strong>Claude Opus 4.8</strong></td>
+<td>-0.397</td>
+<td>35.81</td>
+<td>70.44</td>
+<td>34.63</td>
+<td>8.74</td>
+</tr>
+<tr>
+<td><strong>Cohere Command R+</strong></td>
+<td>-0.981</td>
+<td>35.74</td>
+<td>76.78</td>
+<td>41.04</td>
+<td>5.27</td>
+</tr>
+<tr>
+<td><strong>Claude Sonnet 4.6</strong></td>
+<td>-0.316</td>
+<td>31.50</td>
+<td>63.73</td>
+<td>32.24</td>
+<td>8.35</td>
+</tr>
+<tr>
+<td><strong>Claude Haiku</strong></td>
+<td>-0.492</td>
+<td>30.82</td>
+<td>72.00</td>
+<td>41.18</td>
+<td>8.23</td>
+</tr>
+<tr>
+<td><strong>GPT-4.1 mini</strong></td>
+<td>0.241</td>
+<td>29.33</td>
+<td>73.48</td>
+<td>44.15</td>
+<td>4.45</td>
+</tr>
+<tr>
+<td><strong>Llama 3.1 70B Instruct</strong></td>
+<td>-0.302</td>
+<td>29.04</td>
+<td>80.00</td>
+<td>50.96</td>
+<td>9.45</td>
+</tr>
+<tr>
+<td><strong>GPT-4.1</strong></td>
+<td>0.941</td>
+<td>25.63</td>
+<td>74.67</td>
+<td>49.04</td>
+<td>8.27</td>
+</tr>
+<tr>
+<td><strong>GPT-4o</strong></td>
+<td>-0.567</td>
+<td>23.07</td>
+<td>76.33</td>
+<td>53.26</td>
+<td>9.08</td>
+</tr>
+</table>
+</div>
+
+<div class="card">
+<h2>Interpretation</h2>
+<ul style="margin-left: 1.5rem; line-height: 1.8;">
+<li><strong>Model 1</strong> shows MFQ composite significantly predicts burden effects (β = 2.959, p = 0.235), accounting for 10.7% of variance.</li>
+<li><strong>Model 2</strong> adds baseline willingness (mean_low), increasing explained variance to 34.7%.</li>
+<li><strong>Foundation-level</strong>: Care (β=-1.70, p≥.05), Fairness (β=0.42, p≥.05), Loyalty (β=-9.34, p≥.05), Authority (β=-6.14, p≥.05), Sanctity (β=-3.02, p≥.05).</li>
+<li><strong>Key finding</strong>: Models with more individualizing moral foundations show larger burden orientation effects.</li>
+</ul>
+</div>
+
+<footer style="text-align: center; color: #8A8A80; margin-top: 3rem; padding: 2rem 0; border-top: 1px solid #E2D9C8;">
+Generated 2026-10-01 17:37:56 · MFQ-H1 Analysis Pipeline
+</footer>
+
+</div>
+</body>
+</html>

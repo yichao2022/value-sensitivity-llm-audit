@@ -1,0 +1,15 @@
+H1 Power / MDE Simulation
+============================================================
+
+N = 9 models
+Simulations per beta: 10000
+
+PVC:
+  Residual SD: 14.69
+  80% power (MDE): β = 8.0
+
+CO:
+  Residual SD: 8.67
+  80% power (MDE): β = >10
+
+Note: With N=9, only very large effects are detectable at 80% power.
