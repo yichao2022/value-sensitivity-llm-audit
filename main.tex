@@ -75,7 +75,7 @@
 \end{abstract}
 
 % ---------- 关键词 ----------
-\noindent\textbf{Keywords:} large language models, simulation validity, administrative burden, policy simulation robustness, normative-frame sensitivity, calibration
+\noindent\textbf{Keywords:} large language models, simulation robustness, administrative burden, policy simulation, frame sensitivity, calibration
 
 % ---------- 正文 ----------
 % ---------- Introduction 部分引用的文献 ----------
@@ -96,7 +96,7 @@ A central challenge is that model provenance is an inadequate proxy for value or
 
 The study addresses three research questions. First, do LLMs with different measured moral-foundations profiles (MFQ-30) produce different simulated marginal effects of administrative burden on vaccination willingness? Second, are simulated burden effects systematically associated with the interpretive frames used in model rationales? Third, can simulated burden effects be shifted within the same base model by experimentally assigning governance-value frames?
 
-Contributions: (1) shift LLM value-sensitivity study from opinion to simulated policy effects; (2) apply an MFQ-30--derived probe using the original item content with an adapted 1--7 response format to measure LLM values; (3) provide a multi-level diagnostic framework for LLM simulation validity.
+Contributions: (1) shift LLM value-sensitivity study from opinion to simulated policy effects; (2) apply an MFQ-30--derived probe using the original two-part 0--5 administration to measure LLM values; (3) provide a multi-level diagnostic framework for LLM simulation robustness.
 
 \section{Theoretical Framework and Hypotheses}
 
@@ -117,7 +117,7 @@ The framework proceeds from coarse to fine-grained diagnostics. Each diagnostic 
 
 \textbf{Diagnostic 3 --- Experimental Frame Sensitivity.} We test whether an experimentally assigned governance-value prompt clause causally shifts simulated burden effects within the same base model. The manipulated object is the prompt clause itself: the causal claim therefore concerns the assigned framing of the prompt, not any claim about the values a model holds internally. Autonomy and equity/access frames should increase effects; collective-obligation frames should decrease them. Holding model, profiles, and scenarios fixed attributes any shift to framing itself.
 
-Each diagnostic addresses a distinct aspect of normative-frame sensitivity and contributes to the overall assessment of simulation validity.
+Each diagnostic addresses a distinct aspect of prompt-frame sensitivity and contributes to the overall assessment of simulation robustness.
 
 \begin{figure}[htbp]
 \centering
@@ -151,7 +151,7 @@ We constructed 27 standardized synthetic profiles as controlled test cases that 
 \subsubsection{Low- and high-burden scenarios}
 \label{subsub:scenarios}
 
-The two conditions differ only in administrative requirements: low burden (online scheduling, nearby pharmacy, minimal documentation, about 15 minutes) and high burden (in-person registration, income verification, proof of residency, paper forms, a 1--2 hour wait, one-week advance appointment). These are a \textbf{stylized testbed} for auditing simulation validity, not estimates of real-world burden magnitude.
+The two conditions differ only in administrative requirements: low burden (online scheduling, nearby pharmacy, minimal documentation, about 15 minutes) and high burden (in-person registration, income verification, proof of residency, paper forms, a 1--2 hour wait, one-week advance appointment). These are a \textbf{stylized testbed} for auditing simulation robustness, not estimates of real-world burden magnitude.
 
 \subsubsection{Outcome measure}
 \label{subsub:burden-outcome}
