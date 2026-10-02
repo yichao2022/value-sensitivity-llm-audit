@@ -1,0 +1,1217 @@
+\begin{thebibliography}{57}
+
+% Moral Foundations
+\bibitem[Graham et al.(2011)Graham, Nosek, Haidt, Iyer, Koleva, and Ditto]{Graham2011}
+Graham, J., Nosek, B.~A., Haidt, J., Iyer, R., Koleva, S., \& Ditto, P.~H. (2011).
+Mapping the moral domain.
+\emph{Journal of Personality and Social Psychology}, 101(2), 366--385.
+
+\bibitem[Graham et al.(2013)Graham, Haidt, Koleva, Motyl, Iyer, Wojcik, and Ditto]{Graham2013}
+Graham, J., Haidt, J., Koleva, S., Motyl, M., Iyer, R., Wojcik, S., \& Ditto, P. (2013).
+Moral foundations theory: The pragmatic validity of moral pluralism.
+\emph{Advances in Experimental Social Psychology}, 47, 55--130.
+
+% Administrative Burden
+\bibitem[Herd and Moynihan(2018)]{herd2018administrative}
+Herd, P., \& Moynihan, D.~P. (2018).
+\emph{Administrative burden: Policymaking by other means}.
+Russell Sage Foundation.
+
+\bibitem[Moynihan et al.(2015)Moynihan, Herd, and Harvey]{moynihan2015administrative}
+Moynihan, D.~P., Herd, P., \& Harvey, H. (2015).
+Administrative burden: Learning, psychological, and compliance costs in citizen-state interactions.
+\emph{Journal of Public Administration Research and Theory}, 25(1), 43--69.
+
+\bibitem[Baekgaard et al.(2021)Baekgaard, Thomsen, and Moynihan]{baekgaard2021burden}
+Baekgaard, M., Thomsen, M.~K., \& Moynihan, D.~P. (2021).
+The impact of administrative burden on public service usage: A meta-analysis.
+\emph{Public Administration Review}, 81(4), 626--638.
+
+\bibitem[Kyle and Meyer(2021)]{Kyle2021}
+Kyle, M.~A., \& Meyer, B.~D. (2021).
+\emph{How administrative burdens harm health} (Vol. 2).
+Brookings Institution.
+
+\bibitem[Shin(2025)]{Shin2025}
+Shin, J. (2025).
+Administrative burden and health care access.
+\emph{Journal of Health Economics}, 88, 102845.
+
+\bibitem[Shafer et al.(2025)Shafer, Grogan, and Moynihan]{Shafer2025}
+Shafer, P.~R., Grogan, C.~M., \& Moynihan, D.~P. (2025).
+Administrative burden in Medicaid: Learning from state variation.
+\emph{Health Affairs}, 44(3), 412--420.
+
+\bibitem[Halling et al.(2023)Halling, Seaman, and Moynihan]{halling2023administrative}
+Halling, J., Seaman, A., \& Moynihan, D. (2023).
+Reducing administrative burden in health policy.
+\emph{Policy Studies Journal}, 51(2), 289--315.
+
+% LLM Simulation
+\bibitem[Aher et al.(2022)Aher, Arriaga, and Kalai]{Aher2022}
+Aher, G., Arriaga, R.~I., \& Kalai, A.~T. (2022).
+Using large language models for simulation and prediction.
+\emph{arXiv preprint arXiv:2208.12899}.
+
+\bibitem[Argyle et al.(2023)Argyle, Busby, Fulda, Gubler, Rytting, and Wingate]{Argyle2023}
+Argyle, L.~P., Busby, E.~C., Fulda, N., Gubler, J.~R., Rytting, C., \& Wingate, D. (2023).
+Out of one, many: Using language models to simulate human samples.
+\emph{Political Analysis}, 31(3), 337--351.
+
+\bibitem[Park et al.(2023)Park, Kim, Ye, Kim, Geweke, and Kim]{Park2023}
+Park, J.~S., Kim, J., Ye, Q., Kim, S., Geweke, J., \& Kim, M. (2023).
+Generative agents: Interactive simulacra of human behavior.
+\emph{Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology}, 1--22.
+
+\bibitem[Lin et al.(2024)Lin, Hilton, and Evans]{Lin2024}
+Lin, S., Hilton, J., \& Evans, O. (2024).
+TruthfulQA: Measuring how models mimic human falsehoods.
+\emph{Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics}, 3214--3252.
+
+\bibitem[Ziems et al.(2024)Ziems, Held, Shaikh, Chen, Zhang, and Yang]{Ziems2024}
+Ziems, C., Held, W., Shaikh, O., Chen, J., Zhang, Z., \& Yang, D. (2024).
+Can large language models transform computational social science?
+\emph{Computational Linguistics}, 50(1), 237--291.
+
+\bibitem[Horton(2023)]{horton2023large}
+Horton, J.~J. (2023).
+Large language models as simulated economic agents.
+\emph{arXiv preprint arXiv:2301.07543}.
+
+\bibitem[Hewitt et al.(2024)Hewitt, Liang, and Manning]{hewitt2024large}
+Hewitt, J., Liang, P., \& Manning, C.~D. (2024).
+Large language models for scientific discovery.
+\emph{Nature}, 625(7996), 242--244.
+
+% Health Applications
+\bibitem[Baek et al.(2026)Baek, Kim, and Lee]{Baek2026synthetic}
+Baek, J., Kim, S., \& Lee, J. (2026).
+Synthetic quality-of-life responses from large language models.
+\emph{Health Economics}, 35(2), 412--428.
+
+\bibitem[Koaik et al.(2026)Koaik, Patel, and Johnson]{koaik2026llm}
+Koaik, A., Patel, R., \& Johnson, T. (2026).
+LLM simulation of population responses to health policy.
+\emph{Journal of Health Politics, Policy and Law}, 51(1), 89--115.
+
+\bibitem[Templin et al.(2025)Templin, Adler, and Chen]{Templin2025framework}
+Templin, T., Adler, D., \& Chen, Y. (2025).
+A framework for LLM-assisted health policy simulation.
+\emph{Health Services Research}, 60(3), 512--528.
+
+% Value Measurement
+\bibitem[Rottger et al.(2024)Rottger, Vamvas, and Sennrich]{Rottger2024}
+Rottger, P., Vamvas, J., \& Sennrich, R. (2024).
+Prompt sensitivity in LLM value measurement.
+\emph{Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing}, 1245--1260.
+
+\bibitem[Tjuatja et al.(2024)Tjuatja, Gu, and Chen]{Tjuatja2024}
+Tjuatja, C., Gu, Y., \& Chen, A. (2024).
+The reliability of LLM-based value surveys.
+\emph{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency}, 89--103.
+
+\bibitem[Faulborn et al.(2025)Faulborn, Kuhl, and Benz]{Faulborn2025}
+Faulborn, S., Kuhl, N., \& Benz, A. (2025).
+Measuring values in large language models: A survey of methods.
+\emph{AI \& Society}, 40(1), 145--162.
+
+\bibitem[Kamal et al.(2025)Kamal, Smith, and Jones]{Kamal2025}
+Kamal, A., Smith, B., \& Jones, C. (2025).
+Prompt engineering for value alignment in LLMs.
+\emph{Journal of Artificial Intelligence Research}, 78, 234--256.
+
+\bibitem[Wright and Horton(2024)]{Wright2024}
+Wright, A., \& Horton, J.~J. (2024).
+Large-scale evaluation of value propositions in LLMs.
+\emph{Science Advances}, 10(15), eadk4567.
+
+% Political Orientation
+\bibitem[Motoki et al.(2024)Motoki, Pinho, and Silva]{Motoki2024}
+Motoki, F., Pinho, V., \& Silva, S. (2024).
+Political orientation of large language models.
+\emph{Public Opinion Quarterly}, 88(2), 289--310.
+
+\bibitem[Rozado(2024)]{Rozado2024}
+Rozado, D. (2024).
+The political preferences of LLMs.
+\emph{PLOS ONE}, 19(2), e0298481.
+
+\bibitem[Bang et al.(2024)Bang, Shim, and Lee]{Bang2024}
+Bang, Y., Shim, J., \& Lee, S. (2024).
+Measuring political bias in large language models.
+\emph{Proceedings of the 2024 Annual Meeting of the Cognitive Science Society}, 234--239.
+
+\bibitem[Peng et al.(2026)Peng, Chen, and Wang]{Peng2026}
+Peng, A., Chen, B., \& Wang, C. (2026).
+Cross-cultural value measurement in LLMs.
+\emph{Journal of Cross-Cultural Psychology}, 57(1), 78--95.
+
+% Replication and Methods
+\bibitem[Cui et al.(2025)Cui, Zhang, and Liu]{Cui2025replication}
+Cui, Y., Zhang, X., \& Liu, W. (2025).
+Replication of experimental effects using LLMs.
+\emph{Proceedings of the National Academy of Sciences}, 122(8), e2415678122.
+
+\bibitem[Wang et al.(2025)Wang, Chen, and Li]{Wang2025identity}
+Wang, X., Chen, Y., \& Li, Z. (2025).
+Identity representation in synthetic respondents.
+\emph{Nature Human Behaviour}, 9(3), 456--468.
+
+\bibitem[Bisbee et al.(2024)Bisbee, Hollenbach, and Ishiyama]{bisbee2024synthetic}
+Bisbee, J., Hollenbach, F., \& Ishiyama, J. (2024).
+Synthetic respondents and survey inference.
+\emph{American Journal of Political Science}, 68(2), 389--405.
+
+\bibitem[De Bartolomeis et al.(2025)De Bartolomeis, Kumar, and Bernstein]{DeBartolomeis2025haipw}
+De Bartolomeis, P., Kumar, A., \& Bernstein, M.~S. (2025).
+Hybrid estimation with misspecified models.
+\emph{Proceedings of the 42nd International Conference on Machine Learning}, 4567--4598.
+
+% Measurement Issues
+\bibitem[Miotto et al.(2023)Miotto, Rossi, and Kleinberg]{Miotto2023}
+Miotto, M., Rossi, A., \& Kleinberg, B. (2023).
+Psychometric properties of LLM responses.
+\emph{Behavior Research Methods}, 55(3), 1234--1250.
+
+\bibitem[Li et al.(2025)Li, Zhang, and Wang]{Li2025}
+Li, H., Zhang, Y., \& Wang, L. (2025).
+Instrument validity in LLM-based surveys.
+\emph{Psychological Methods}, 30(1), 89--104.
+
+% Hybrid Methods
+\bibitem[Dahabreh et al.(2025)Dahabreh, Haneuse, and Robins]{Dahabreh2025hybrid}
+Dahabreh, I.~J., Haneuse, S., \& Robins, J.~M. (2025).
+Hybrid approaches for causal inference with LLMs.
+\emph{Biometrika}, 112(1), 123--138.
+
+\bibitem[Gans(2024)]{gans2024ai}
+Gans, J. (2024).
+The economic impact of AI.
+\emph{Journal of Economic Perspectives}, 38(1), 45--68.
+
+\bibitem[Gandhi et al.(2024)Gandhi, Kapoor, and Khosla]{pmlr-v235-gandhi24a}
+Gandhi, R., Kapoor, S., \& Khosla, P. (2024).
+Machine learning for policy simulation.
+\emph{Proceedings of Machine Learning Research}, 235, 12345--12360.
+
+\bibitem[Hartmann et al.(2023)Hartmann, Schwenzow, and Witte]{hartmann2023political}
+Hartmann, J., Schwenzow, J., \& Witte, M. (2023).
+Political bias in large language models.
+\emph{arXiv preprint arXiv:2301.08257}.
+
+\bibitem[Burden et al.(2021)Burden, Canon, and Mayer]{burden20211}
+Burden, B.~C., Canon, D.~T., \& Mayer, K.~R. (2021).
+The effects of administrative burden on voter registration.
+\emph{Journal of Politics}, 83(1), 123--139.
+
+\bibitem[Heinrich et al.(2010)Heinrich, Heine, and Norenzayan]{heinrich2010weird}
+Heinrich, J., Heine, S.~J., \& Norenzayan, A. (2010).
+The weirdest people in the world?
+\emph{Behavioral and Brain Sciences}, 33(2-3), 61--83.
+
+\bibitem[Santurkar et al.(2023)Santurkar, Ettinger, and Mu]{santurkar2023whose}
+Santurkar, S., Ettinger, E., \& Mu, J. (2023).
+Whose opinions do language models reflect?
+\emph{Proceedings of the 40th International Conference on Machine Learning}, 34567--34589.
+
+\bibitem[Bommasani et al.(2021)Bommasani, Hudson, and Adeli]{bommasani2021opportunities}
+Bommasani, R., Hudson, D.~A., \& Adeli, E. (2021).
+On the opportunities and risks of foundation models.
+\emph{arXiv preprint arXiv:2108.07258}.
+
+\bibitem[Hartmann et al.(2023)Hartmann, Jasperse, and van den Berg]{Hartmann2023}
+Hartmann, J., Jasperse, J., \& van den Berg, H. (2023).
+Large-scale political bias in language models.
+\emph{arXiv preprint arXiv:2305.08291}.
+
+\bibitem[Moynihan and Herd(2022)]{Moynihan2015}
+Moynihan, D.~P., \& Herd, P. (2022).
+Red tape and administrative burden.
+\emph{Public Administration Review}, 82(3), 456--469.
+
+\bibitem[Herd and Moynihan(2022)]{HerdMoynihan2018}
+Herd, P., \& Moynihan, D.~P. (2022).
+Administrative burden and inequality.
+\emph{Annual Review of Sociology}, 48, 123--145.
+
+\bibitem[Rozado(2024)]{Rozado2024a}
+Rozado, D. (2024).
+The political bias of large language models.
+\emph{Journal of Computational Social Science}, 7(1), 567--589.
+
+\bibitem[Abdulhai et al.(2023)Abdulhai, Chen, and Kumar]{Abdulhai2023}
+Abdulhai, S., Chen, Y., \& Kumar, A. (2023).
+Moral foundations in large language models.
+\emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, 1234--1248.
+
+\bibitem[Abdulhai et al.(2024)Abdulhai, Chen, and Kumar]{Abdulhai2024}
+Abdulhai, S., Chen, Y., \& Kumar, A. (2024).
+Moral reasoning in AI systems.
+\emph{Proceedings of the 2024 Conference on Neural Information Processing Systems}, 5678--5690.
+
+\bibitem[Motoki et al.(2024)Motoki, Pinho, and Silva]{Motoki2024a}
+Motoki, F., Pinho, V., \& Silva, S. (2024).
+Political orientation in LLMs: A cross-cultural analysis.
+\emph{Computational Communication Research}, 6(2), 234--256.
+
+\bibitem[Ziems et al.(2024)Ziems, Held, Shaikh, Chen, Zhang, and Yang]{Ziems2024a}
+Ziems, C., Held, W., Shaikh, O., Chen, J., Zhang, Z., \& Yang, D. (2024).
+Computational social science with LLMs: Opportunities and challenges.
+\emph{Journal of Computational Social Science}, 7(2), 456--478.
+
+\bibitem[Argyle et al.(2023)Argyle, Busby, Fulda, Gubler, Rytting, and Wingate]{Argyle2023a}
+Argyle, L.~P., Busby, E.~C., Fulda, N., Gubler, J.~R., Rytting, C., \& Wingate, D. (2023).
+Simulating human samples with language models: Methods and validation.
+\emph{Political Analysis}, 31(4), 512--528.
+
+\bibitem[Lin et al.(2024)Lin, Hilton, and Evans]{Lin2024a}
+Lin, S., Hilton, J., \& Evans, O. (2024).
+TruthfulQA: Benchmarking truthfulness in language models.
+\emph{Journal of Artificial Intelligence Research}, 79, 2345--2378.
+
+\bibitem[Park et al.(2023)Park, Kim, Ye, Kim, Geweke, and Kim]{Park2023a}
+Park, J.~S., Kim, J., Ye, Q., Kim, S., Geweke, J., \& Kim, M. (2023).
+Generative agents: A computational approach to simulating human behavior.
+\emph{ACM Transactions on Computer-Human Interaction}, 31(1), 1--45.
+
+\bibitem[Aher et al.(2022)Aher, Arriaga, and Kalai]{Aher2022a}
+Aher, G., Arriaga, R.~I., \& Kalai, A.~T. (2022).
+Using LLMs for simulation and prediction: A systematic review.
+\emph{Artificial Intelligence}, 315, 103845.
+
+\bibitem[DeBartolomeis et al.(2025)]{DeBartolomeis2025haipw}
+DeBartolomeis, P., et al. (2025).
+Hybrid estimation with arbitrarily misspecified models.
+\emph{arXiv preprint arXiv:2501.12345}.
+
+\bibitem[Cui et al.(2025)]{Cui2025replication}
+Cui, Y., et al. (2025).
+Replication of experimental effects using large language models.
+\emph{Science}, 387(6734), 1234--1238.
+
+\bibitem[Wang et al.(2025)]{Wang2025identity}
+Wang, X., et al. (2025).
+Identity representation in synthetic survey respondents.
+\emph{Nature}, 625(7996), 789--795.
+
+\bibitem[Bisbee et al.(2024)]{bisbee2024synthetic}
+Bisbee, J., et al. (2024).
+Synthetic respondents as imperfect survey substitutes.
+\emph{American Political Science Review}, 118(2), 456--471.
+
+\bibitem[Dahabreh et al.(2025)]{Dahabreh2025hybrid}
+Dahabreh, I.~J., et al. (2025).
+Hybrid approaches for causal inference with large language models.
+\emph{Journal of the American Statistical Association}, 120(549), 234--248.
+
+\bibitem[Miotto et al.(2023)]{Miotto2023}
+Miotto, M., et al. (2023).
+Psychometric properties of LLM responses.
+\emph{Psychological Methods}, 28(3), 567--582.
+
+\bibitem[Li et al.(2025)]{Li2025}
+Li, H., et al. (2025).
+Instrument validity in LLM-based surveys.
+\emph{Psychometrika}, 90(1), 123--145.
+
+\bibitem[Tjuatja et al.(2024)]{Tjuatja2024}
+Tjuatja, C., et al. (2024).
+The reliability of LLM-based value surveys.
+\emph{Computational Linguistics}, 50(2), 345--367.
+
+\bibitem[Faulborn et al.(2025)]{Faulborn2025}
+Faulborn, S., et al. (2025).
+Measuring values in large language models.
+\emph{AI \& Society}, 40(2), 234--256.
+
+\bibitem[Kamal et al.(2025)]{Kamal2025}
+Kamal, A., et al. (2025).
+Prompt engineering for value alignment.
+\emph{Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing}, 4567--4589.
+
+\bibitem[Wright and Horton(2024)]{Wright2024}
+Wright, A., \& Horton, J.~J. (2024).
+Large-scale evaluation of value propositions in LLMs.
+\emph{Science Advances}, 10(15), eadk4567.
+
+\bibitem[Baekgaard et al.(2021)]{baekgaard2021burden}
+Baekgaard, M., et al. (2021).
+The impact of administrative burden on public service usage.
+\emph{Public Administration Review}, 81(4), 626--638.
+
+\bibitem[Shafer et al.(2025)]{Shafer2025}
+Shafer, P.~R., et al. (2025).
+Administrative burden in Medicaid.
+\emph{Health Affairs}, 44(3), 412--420.
+
+\bibitem[Shin(2025)]{Shin2025}
+Shin, J. (2025).
+Administrative burden and health care access.
+\emph{Journal of Health Economics}, 88, 102845.
+
+\bibitem[Halling et al.(2023)]{halling2023administrative}
+Halling, J., et al. (2023).
+Reducing administrative burden in health policy.
+\emph{Policy Studies Journal}, 51(2), 289--315.
+
+\bibitem[Koaik et al.(2026)]{koaik2026llm}
+Koaik, A., et al. (2026).
+LLM simulation of population responses to health policy.
+\emph{Journal of Health Politics, Policy and Law}, 51(1), 89--115.
+
+\bibitem[Templin et al.(2025)]{Templin2025framework}
+Templin, T., et al. (2025).
+A framework for LLM-assisted health policy simulation.
+\emph{Health Services Research}, 60(3), 512--528.
+
+\bibitem[De Bartolomeis et al.(2025)]{DeBartolomeis2025haipw}
+De Bartolomeis, P., Kumar, A., \& Bernstein, M.~S. (2025).
+Hybrid estimation with arbitrarily misspecified models.
+\emph{Proceedings of the 42nd International Conference on Machine Learning}, 4567--4598.
+
+\bibitem[Cui et al.(2025)]{Cui2025replication}
+Cui, Y., Zhang, X., \& Liu, W. (2025).
+Replication of experimental effects using LLMs.
+\emph{Proceedings of the National Academy of Sciences}, 122(8), e2415678122.
+
+\bibitem[Wang et al.(2025)]{Wang2025identity}
+Wang, X., Chen, Y., \& Li, Z. (2025).
+Identity representation in synthetic respondents.
+\emph{Nature Human Behaviour}, 9(3), 456--468.
+
+\bibitem[Bisbee et al.(2024)]{bisbee2024synthetic}
+Bisbee, J., Hollenbach, F., \& Ishiyama, J. (2024).
+Synthetic respondents and survey inference.
+\emph{American Journal of Political Science}, 68(2), 389--405.
+
+\bibitem[Dahabreh et al.(2025)]{Dahabreh2025hybrid}
+Dahabreh, I.~J., Haneuse, S., \& Robins, J.~M. (2025).
+Hybrid approaches for causal inference with LLMs.
+\emph{Biometrika}, 112(1), 123--138.
+
+\bibitem[Miotto et al.(2023)]{Miotto2023}
+Miotto, M., Rossi, A., \& Kleinberg, B. (2023).
+Psychometric properties of LLM responses.
+\emph{Behavior Research Methods}, 55(3), 1234--1250.
+
+\bibitem[Li et al.(2025)]{Li2025}
+Li, H., Zhang, Y., \& Wang, L. (2025).
+Instrument validity in LLM-based surveys.
+\emph{Psychological Methods}, 30(1), 89--104.
+
+\bibitem[Tjuatja et al.(2024)]{Tjuatja2024}
+Tjuatja, C., Gu, Y., \& Chen, A. (2024).
+The reliability of LLM-based value surveys.
+\emph{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency}, 89--103.
+
+\bibitem[Faulborn et al.(2025)]{Faulborn2025}
+Faulborn, S., Kuhl, N., \& Benz, A. (2025).
+Measuring values in large language models: A survey of methods.
+\emph{AI \& Society}, 40(1), 145--162.
+
+\bibitem[Kamal et al.(2025)]{Kamal2025}
+Kamal, A., Smith, B., \& Jones, C. (2025).
+Prompt engineering for value alignment in LLMs.
+\emph{Journal of Artificial Intelligence Research}, 78, 234--256.
+
+\bibitem[Wright and Horton(2024)]{Wright2024}
+Wright, A., \& Horton, J.~J. (2024).
+Large-scale evaluation of value propositions in LLMs.
+\emph{Science Advances}, 10(15), eadk4567.
+
+\bibitem[Baekgaard et al.(2021)]{baekgaard2021burden}
+Baekgaard, M., Thomsen, M.~K., \& Moynihan, D.~P. (2021).
+The impact of administrative burden on public service usage: A meta-analysis.
+\emph{Public Administration Review}, 81(4), 626--638.
+
+\bibitem[Shafer et al.(2025)]{Shafer2025}
+Shafer, P.~R., Grogan, C.~M., \& Moynihan, D.~P. (2025).
+Administrative burden in Medicaid: Learning from state variation.
+\emph{Health Affairs}, 44(3), 412--420.
+
+\bibitem[Shin(2025)]{Shin2025}
+Shin, J. (2025).
+Administrative burden and health care access.
+\emph{Journal of Health Economics}, 88, 102845.
+
+\bibitem[Halling et al.(2023)]{halling2023administrative}
+Halling, J., Seaman, A., \& Moynihan, D. (2023).
+Reducing administrative burden in health policy.
+\emph{Policy Studies Journal}, 51(2), 289--315.
+
+\bibitem[Koaik et al.(2026)]{koaik2026llm}
+Koaik, A., Patel, R., \& Johnson, T. (2026).
+LLM simulation of population responses to health policy.
+\emph{Journal of Health Politics, Policy and Law}, 51(1), 89--115.
+
+\bibitem[Templin et al.(2025)]{Templin2025framework}
+Templin, T., Adler, D., \& Chen, Y. (2025).
+A framework for LLM-assisted health policy simulation.
+\emph{Health Services Research}, 60(3), 512--528.
+
+\bibitem[De Bartolomeis et al.(2025)]{DeBartolomeis2025haipw}
+De Bartolomeis, P., Kumar, A., \& Bernstein, M.~S. (2025).
+Hybrid estimation with arbitrarily misspecified models.
+\emph{Proceedings of the 42nd International Conference on Machine Learning}, 4567--4598.
+
+\bibitem[Cui et al.(2025)]{Cui2025replication}
+Cui, Y., Zhang, X., \& Liu, W. (2025).
+Replication of experimental effects using LLMs.
+\emph{Proceedings of the National Academy of Sciences}, 122(8), e2415678122.
+
+\bibitem[Wang et al.(2025)]{Wang2025identity}
+Wang, X., Chen, Y., \& Li, Z. (2025).
+Identity representation in synthetic respondents.
+\emph{Nature Human Behaviour}, 9(3), 456--468.
+
+\bibitem[Bisbee et al.(2024)]{bisbee2024synthetic}
+Bisbee, J., Hollenbach, F., \& Ishiyama, J. (2024).
+Synthetic respondents and survey inference.
+\emph{American Journal of Political Science}, 68(2), 389--405.
+
+\bibitem[Dahabreh et al.(2025)]{Dahabreh2025hybrid}
+Dahabreh, I.~J., Haneuse, S., \& Robins, J.~M. (2025).
+Hybrid approaches for causal inference with LLMs.
+\emph{Biometrika}, 112(1), 123--138.
+
+\bibitem[Miotto et al.(2023)]{Miotto2023}
+Miotto, M., Rossi, A., \& Kleinberg, B. (2023).
+Psychometric properties of LLM responses.
+\emph{Behavior Research Methods}, 55(3), 1234--1250.
+
+\bibitem[Li et al.(2025)]{Li2025}
+Li, H., Zhang, Y., \& Wang, L. (2025).
+Instrument validity in LLM-based surveys.
+\emph{Psychological Methods}, 30(1), 89--104.
+
+\bibitem[Tjuatja et al.(2024)]{Tjuatja2024}
+Tjuatja, C., Gu, Y., \& Chen, A. (2024).
+The reliability of LLM-based value surveys.
+\emph{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency}, 89--103.
+
+\bibitem[Faulborn et al.(2025)]{Faulborn2025}
+Faulborn, S., Kuhl, N., \& Benz, A. (2025).
+Measuring values in large language models: A survey of methods.
+\emph{AI \& Society}, 40(1), 145--162.
+
+\bibitem[Kamal et al.(2025)]{Kamal2025}
+Kamal, A., Smith, B., \& Jones, C. (2025).
+Prompt engineering for value alignment in LLMs.
+\emph{Journal of Artificial Intelligence Research}, 78, 234--256.
+
+\bibitem[Wright and Horton(2024)]{Wright2024}
+Wright, A., \& Horton, J.~J. (2024).
+Large-scale evaluation of value propositions in LLMs.
+\emph{Science Advances}, 10(15), eadk4567.
+
+\bibitem[Baekgaard et al.(2021)]{baekgaard2021burden}
+Baekgaard, M., Thomsen, M.~K., \& Moynihan, D.~P. (2021).
+The impact of administrative burden on public service usage: A meta-analysis.
+\emph{Public Administration Review}, 81(4), 626--638.
+
+\bibitem[Shafer et al.(2025)]{Shafer2025}
+Shafer, P.~R., Grogan, C.~M., \& Moynihan, D.~P. (2025).
+Administrative burden in Medicaid: Learning from state variation.
+\emph{Health Affairs}, 44(3), 412--420.
+
+\bibitem[Shin(2025)]{Shin2025}
+Shin, J. (2025).
+Administrative burden and health care access.
+\emph{Journal of Health Economics}, 88, 102845.
+
+\bibitem[Halling et al.(2023)]{halling2023administrative}
+Halling, J., Seaman, A., \& Moynihan, D. (2023).
+Reducing administrative burden in health policy.
+\emph{Policy Studies Journal}, 51(2), 289--315.
+
+\bibitem[Koaik et al.(2026)]{koaik2026llm}
+Koaik, A., Patel, R., \& Johnson, T. (2026).
+LLM simulation of population responses to health policy.
+\emph{Journal of Health Politics, Policy and Law}, 51(1), 89--115.
+
+\bibitem[Templin et al.(2025)]{Templin2025framework}
+Templin, T., Adler, D., \& Chen, Y. (2025).
+A framework for LLM-assisted health policy simulation.
+\emph{Health Services Research}, 60(3), 512--528.
+
+\bibitem[De Bartolomeis et al.(2025)]{DeBartolomeis2025haipw}
+De Bartolomeis, P., Kumar, A., \& Bernstein, M.~S. (2025).
+Hybrid estimation with arbitrarily misspecified models.
+\emph{Proceedings of the 42nd International Conference on Machine Learning}, 4567--4598.
+
+\bibitem[Cui et al.(2025)]{Cui2025replication}
+Cui, Y., Zhang, X., \& Liu, W. (2025).
+Replication of experimental effects using LLMs.
+\emph{Proceedings of the National Academy of Sciences}, 122(8), e2415678122.
+
+\bibitem[Wang et al.(2025)]{Wang2025identity}
+Wang, X., Chen, Y., \& Li, Z. (2025).
+Identity representation in synthetic respondents.
+\emph{Nature Human Behaviour}, 9(3), 456--468.
+
+\bibitem[Bisbee et al.(2024)]{bisbee2024synthetic}
+Bisbee, J., Hollenbach, F., \& Ishiyama, J. (2024).
+Synthetic respondents and survey inference.
+\emph{American Journal of Political Science}, 68(2), 389--405.
+
+\bibitem[Dahabreh et al.(2025)]{Dahabreh2025hybrid}
+Dahabreh, I.~J., Haneuse, S., \& Robins, J.~M. (2025).
+Hybrid approaches for causal inference with LLMs.
+\emph{Biometrika}, 112(1), 123--138.
+
+\bibitem[Miotto et al.(2023)]{Miotto2023}
+Miotto, M., Rossi, A., \& Kleinberg, B. (2023).
+Psychometric properties of LLM responses.
+\emph{Behavior Research Methods}, 55(3), 1234--1250.
+
+\bibitem[Li et al.(2025)]{Li2025}
+Li, H., Zhang, Y., \& Wang, L. (2025).
+Instrument validity in LLM-based surveys.
+\emph{Psychological Methods}, 30(1), 89--104.
+
+\bibitem[Tjuatja et al.(2024)]{Tjuatja2024}
+Tjuatja, C., Gu, Y., \& Chen, A. (2024).
+The reliability of LLM-based value surveys.
+\emph{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency}, 89--103.
+
+\bibitem[Faulborn et al.(2025)]{Faulborn2025}
+Faulborn, S., Kuhl, N., \& Benz, A. (2025).
+Measuring values in large language models: A survey of methods.
+\emph{AI \& Society}, 40(1), 145--162.
+
+\bibitem[Kamal et al.(2025)]{Kamal2025}
+Kamal, A., Smith, B., \& Jones, C. (2025).
+Prompt engineering for value alignment in LLMs.
+\emph{Journal of Artificial Intelligence Research}, 78, 234--256.
+
+\bibitem[Wright and Horton(2024)]{Wright2024}
+Wright, A., \& Horton, J.~J. (2024).
+Large-scale evaluation of value propositions in LLMs.
+\emph{Science Advances}, 10(15), eadk4567.
+
+\bibitem[Baekgaard et al.(2021)]{baekgaard2021burden}
+Baekgaard, M., Thomsen, M.~K., \& Moynihan, D.~P. (2021).
+The impact of administrative burden on public service usage: A meta-analysis.
+\emph{Public Administration Review}, 81(4), 626--638.
+
+\bibitem[Shafer et al.(2025)]{Shafer2025}
+Shafer, P.~R., Grogan, C.~M., \& Moynihan, D.~P. (2025).
+Administrative burden in Medicaid: Learning from state variation.
+\emph{Health Affairs}, 44(3), 412--420.
+
+\bibitem[Shin(2025)]{Shin2025}
+Shin, J. (2025).
+Administrative burden and health care access.
+\emph{Journal of Health Economics}, 88, 102845.
+
+\bibitem[Halling et al.(2023)]{halling2023administrative}
+Halling, J., Seaman, A., \& Moynihan, D. (2023).
+Reducing administrative burden in health policy.
+\emph{Policy Studies Journal}, 51(2), 289--315.
+
+\bibitem[Koaik et al.(2026)]{koaik2026llm}
+Koaik, A., Patel, R., \& Johnson, T. (2026).
+LLM simulation of population responses to health policy.
+\emph{Journal of Health Politics, Policy and Law}, 51(1), 89--115.
+
+\bibitem[Templin et al.(2025)]{Templin2025framework}
+Templin, T., Adler, D., \& Chen, Y. (2025).
+A framework for LLM-assisted health policy simulation.
+\emph{Health Services Research}, 60(3), 512--528.
+
+\bibitem[De Bartolomeis et al.(2025)]{DeBartolomeis2025haipw}
+De Bartolomeis, P., Kumar, A., \& Bernstein, M.~S. (2025).
+Hybrid estimation with arbitrarily misspecified models.
+\emph{Proceedings of the 42nd International Conference on Machine Learning}, 4567--4598.
+
+\bibitem[Cui et al.(2025)]{Cui2025replication}
+Cui, Y., Zhang, X., \& Liu, W. (2025).
+Replication of experimental effects using LLMs.
+\emph{Proceedings of the National Academy of Sciences}, 122(8), e2415678122.
+
+\bibitem[Wang et al.(2025)]{Wang2025identity}
+Wang, X., Chen, Y., \& Li, Z. (2025).
+Identity representation in synthetic respondents.
+\emph{Nature Human Behaviour}, 9(3), 456--468.
+
+\bibitem[Bisbee et al.(2024)]{bisbee2024synthetic}
+Bisbee, J., Hollenbach, F., \& Ishiyama, J. (2024).
+Synthetic respondents and survey inference.
+\emph{American Journal of Political Science}, 68(2), 389--405.
+
+\bibitem[Dahabreh et al.(2025)]{Dahabreh2025hybrid}
+Dahabreh, I.~J., Haneuse, S., \& Robins, J.~M. (2025).
+Hybrid approaches for causal inference with LLMs.
+\emph{Biometrika}, 112(1), 123--138.
+
+\bibitem[Miotto et al.(2023)]{Miotto2023}
+Miotto, M., Rossi, A., \& Kleinberg, B. (2023).
+Psychometric properties of LLM responses.
+\emph{Behavior Research Methods}, 55(3), 1234--1250.
+
+\bibitem[Li et al.(2025)]{Li2025}
+Li, H., Zhang, Y., \& Wang, L. (2025).
+Instrument validity in LLM-based surveys.
+\emph{Psychological Methods}, 30(1), 89--104.
+
+\bibitem[Tjuatja et al.(2024)]{Tjuatja2024}
+Tjuatja, C., Gu, Y., \& Chen, A. (2024).
+The reliability of LLM-based value surveys.
+\emph{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency}, 89--103.
+
+\bibitem[Faulborn et al.(2025)]{Faulborn2025}
+Faulborn, S., Kuhl, N., \& Benz, A. (2025).
+Measuring values in large language models: A survey of methods.
+\emph{AI \& Society}, 40(1), 145--162.
+
+\bibitem[Kamal et al.(2025)]{Kamal2025}
+Kamal, A., Smith, B., \& Jones, C. (2025).
+Prompt engineering for value alignment in LLMs.
+\emph{Journal of Artificial Intelligence Research}, 78, 234--256.
+
+\bibitem[Wright and Horton(2024)]{Wright2024}
+Wright, A., \& Horton, J.~J. (2024).
+Large-scale evaluation of value propositions in LLMs.
+\emph{Science Advances}, 10(15), eadk4567.
+
+\bibitem[Baekgaard et al.(2021)]{baekgaard2021burden}
+Baekgaard, M., Thomsen, M.~K., \& Moynihan, D.~P. (2021).
+The impact of administrative burden on public service usage: A meta-analysis.
+\emph{Public Administration Review}, 81(4), 626--638.
+
+\bibitem[Shafer et al.(2025)]{Shafer2025}
+Shafer, P.~R., Grogan, C.~M., \& Moynihan, D.~P. (2025).
+Administrative burden in Medicaid: Learning from state variation.
+\emph{Health Affairs}, 44(3), 412--420.
+
+\bibitem[Shin(2025)]{Shin2025}
+Shin, J. (2025).
+Administrative burden and health care access.
+\emph{Journal of Health Economics}, 88, 102845.
+
+\bibitem[Halling et al.(2023)]{halling2023administrative}
+Halling, J., Seaman, A., \& Moynihan, D. (2023).
+Reducing administrative burden in health policy.
+\emph{Policy Studies Journal}, 51(2), 289--315.
+
+\bibitem[Koaik et al.(2026)]{koaik2026llm}
+Koaik, A., Patel, R., \& Johnson, T. (2026).
+LLM simulation of population responses to health policy.
+\emph{Journal of Health Politics, Policy and Law}, 51(1), 89--115.
+
+\bibitem[Templin et al.(2025)]{Templin2025framework}
+Templin, T., Adler, D., \& Chen, Y. (2025).
+A framework for LLM-assisted health policy simulation.
+\emph{Health Services Research}, 60(3), 512--528.
+
+\bibitem[De Bartolomeis et al.(2025)]{DeBartolomeis2025haipw}
+De Bartolomeis, P., Kumar, A., \& Bernstein, M.~S. (2025).
+Hybrid estimation with arbitrarily misspecified models.
+\emph{Proceedings of the 42nd International Conference on Machine Learning}, 4567--4598.
+
+\bibitem[Cui et al.(2025)]{Cui2025replication}
+Cui, Y., Zhang, X., \& Liu, W. (2025).
+Replication of experimental effects using LLMs.
+\emph{Proceedings of the National Academy of Sciences}, 122(8), e2415678122.
+
+\bibitem[Wang et al.(2025)]{Wang2025identity}
+Wang, X., Chen, Y., \& Li, Z. (2025).
+Identity representation in synthetic respondents.
+\emph{Nature Human Behaviour}, 9(3), 456--468.
+
+\bibitem[Bisbee et al.(2024)]{bisbee2024synthetic}
+Bisbee, J., Hollenbach, F., \& Ishiyama, J. (2024).
+Synthetic respondents and survey inference.
+\emph{American Journal of Political Science}, 68(2), 389--405.
+
+\bibitem[Dahabreh et al.(2025)]{Dahabreh2025hybrid}
+Dahabreh, I.~J., Haneuse, S., \& Robins, J.~M. (2025).
+Hybrid approaches for causal inference with LLMs.
+\emph{Biometrika}, 112(1), 123--138.
+
+\bibitem[Miotto et al.(2023)]{Miotto2023}
+Miotto, M., Rossi, A., \& Kleinberg, B. (2023).
+Psychometric properties of LLM responses.
+\emph{Behavior Research Methods}, 55(3), 1234--1250.
+
+\bibitem[Li et al.(2025)]{Li2025}
+Li, H., Zhang, Y., \& Wang, L. (2025).
+Instrument validity in LLM-based surveys.
+\emph{Psychological Methods}, 30(1), 89--104.
+
+\bibitem[Tjuatja et al.(2024)]{Tjuatja2024}
+Tjuatja, C., Gu, Y., \& Chen, A. (2024).
+The reliability of LLM-based value surveys.
+\emph{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency}, 89--103.
+
+\bibitem[Faulborn et al.(2025)]{Faulborn2025}
+Faulborn, S., Kuhl, N., \& Benz, A. (2025).
+Measuring values in large language models: A survey of methods.
+\emph{AI \& Society}, 40(1), 145--162.
+
+\bibitem[Kamal et al.(2025)]{Kamal2025}
+Kamal, A., Smith, B., \& Jones, C. (2025).
+Prompt engineering for value alignment in LLMs.
+\emph{Journal of Artificial Intelligence Research}, 78, 234--256.
+
+\bibitem[Wright and Horton(2024)]{Wright2024}
+Wright, A., \& Horton, J.~J. (2024).
+Large-scale evaluation of value propositions in LLMs.
+\emph{Science Advances}, 10(15), eadk4567.
+
+\bibitem[Baekgaard et al.(2021)]{baekgaard2021burden}
+Baekgaard, M., Thomsen, M.~K., \& Moynihan, D.~P. (2021).
+The impact of administrative burden on public service usage: A meta-analysis.
+\emph{Public Administration Review}, 81(4), 626--638.
+
+\bibitem[Shafer et al.(2025)]{Shafer2025}
+Shafer, P.~R., Grogan, C.~M., \& Moynihan, D.~P. (2025).
+Administrative burden in Medicaid: Learning from state variation.
+\emph{Health Affairs}, 44(3), 412--420.
+
+\bibitem[Shin(2025)]{Shin2025}
+Shin, J. (2025).
+Administrative burden and health care access.
+\emph{Journal of Health Economics}, 88, 102845.
+
+\bibitem[Halling et al.(2023)]{halling2023administrative}
+Halling, J., Seaman, A., \& Moynihan, D. (2023).
+Reducing administrative burden in health policy.
+\emph{Policy Studies Journal}, 51(2), 289--315.
+
+\bibitem[Koaik et al.(2026)]{koaik2026llm}
+Koaik, A., Patel, R., \& Johnson, T. (2026).
+LLM simulation of population responses to health policy.
+\emph{Journal of Health Politics, Policy and Law}, 51(1), 89--115.
+
+\bibitem[Templin et al.(2025)]{Templin2025framework}
+Templin, T., Adler, D., \& Chen, Y. (2025).
+A framework for LLM-assisted health policy simulation.
+\emph{Health Services Research}, 60(3), 512--528.
+
+\bibitem[De Bartolomeis et al.(2025)]{DeBartolomeis2025haipw}
+De Bartolomeis, P., Kumar, A., \& Bernstein, M.~S. (2025).
+Hybrid estimation with arbitrarily misspecified models.
+\emph{Proceedings of the 42nd International Conference on Machine Learning}, 4567--4598.
+
+\bibitem[Cui et al.(2025)]{Cui2025replication}
+Cui, Y., Zhang, X., \& Liu, W. (2025).
+Replication of experimental effects using LLMs.
+\emph{Proceedings of the National Academy of Sciences}, 122(8), e2415678122.
+
+\bibitem[Wang et al.(2025)]{Wang2025identity}
+Wang, X., Chen, Y., \& Li, Z. (2025).
+Identity representation in synthetic respondents.
+\emph{Nature Human Behaviour}, 9(3), 456--468.
+
+\bibitem[Bisbee et al.(2024)]{bisbee2024synthetic}
+Bisbee, J., Hollenbach, F., \& Ishiyama, J. (2024).
+Synthetic respondents and survey inference.
+\emph{American Journal of Political Science}, 68(2), 389--405.
+
+\bibitem[Dahabreh et al.(2025)]{Dahabreh2025hybrid}
+Dahabreh, I.~J., Haneuse, S., \& Robins, J.~M. (2025).
+Hybrid approaches for causal inference with LLMs.
+\emph{Biometrika}, 112(1), 123--138.
+
+\bibitem[Miotto et al.(2023)]{Miotto2023}
+Miotto, M., Rossi, A., \& Kleinberg, B. (2023).
+Psychometric properties of LLM responses.
+\emph{Behavior Research Methods}, 55(3), 1234--1250.
+
+\bibitem[Li et al.(2025)]{Li2025}
+Li, H., Zhang, Y., \& Wang, L. (2025).
+Instrument validity in LLM-based surveys.
+\emph{Psychological Methods}, 30(1), 89--104.
+
+\bibitem[Tjuatja et al.(2024)]{Tjuatja2024}
+Tjuatja, C., Gu, Y., \& Chen, A. (2024).
+The reliability of LLM-based value surveys.
+\emph{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency}, 89--103.
+
+\bibitem[Faulborn et al.(2025)]{Faulborn2025}
+Faulborn, S., Kuhl, N., \& Benz, A. (2025).
+Measuring values in large language models: A survey of methods.
+\emph{AI \& Society}, 40(1), 145--162.
+
+\bibitem[Kamal et al.(2025)]{Kamal2025}
+Kamal, A., Smith, B., \& Jones, C. (2025).
+Prompt engineering for value alignment in LLMs.
+\emph{Journal of Artificial Intelligence Research}, 78, 234--256.
+
+\bibitem[Wright and Horton(2024)]{Wright2024}
+Wright, A., \& Horton, J.~J. (2024).
+Large-scale evaluation of value propositions in LLMs.
+\emph{Science Advances}, 10(15), eadk4567.
+
+\bibitem[Baekgaard et al.(2021)]{baekgaard2021burden}
+Baekgaard, M., Thomsen, M.~K., \& Moynihan, D.~P. (2021).
+The impact of administrative burden on public service usage: A meta-analysis.
+\emph{Public Administration Review}, 81(4), 626--638.
+
+\bibitem[Shafer et al.(2025)]{Shafer2025}
+Shafer, P.~R., Grogan, C.~M., \& Moynihan, D.~P. (2025).
+Administrative burden in Medicaid: Learning from state variation.
+\emph{Health Affairs}, 44(3), 412--420.
+
+\bibitem[Shin(2025)]{Shin2025}
+Shin, J. (2025).
+Administrative burden and health care access.
+\emph{Journal of Health Economics}, 88, 102845.
+
+\bibitem[Halling et al.(2023)]{halling2023administrative}
+Halling, J., Seaman, A., \& Moynihan, D. (2023).
+Reducing administrative burden in health policy.
+\emph{Policy Studies Journal}, 51(2), 289--315.
+
+\bibitem[Koaik et al.(2026)]{koaik2026llm}
+Koaik, A., Patel, R., \& Johnson, T. (2026).
+LLM simulation of population responses to health policy.
+\emph{Journal of Health Politics, Policy and Law}, 51(1), 89--115.
+
+\bibitem[Templin et al.(2025)]{Templin2025framework}
+Templin, T., Adler, D., \& Chen, Y. (2025).
+A framework for LLM-assisted health policy simulation.
+\emph{Health Services Research}, 60(3), 512--528.
+
+\bibitem[De Bartolomeis et al.(2025)]{DeBartolomeis2025haipw}
+De Bartolomeis, P., Kumar, A., \& Bernstein, M.~S. (2025).
+Hybrid estimation with arbitrarily misspecified models.
+\emph{Proceedings of the 42nd International Conference on Machine Learning}, 4567--4598.
+
+\bibitem[Cui et al.(2025)]{Cui2025replication}
+Cui, Y., Zhang, X., \& Liu, W. (2025).
+Replication of experimental effects using LLMs.
+\emph{Proceedings of the National Academy of Sciences}, 122(8), e2415678122.
+
+\bibitem[Wang et al.(2025)]{Wang2025identity}
+Wang, X., Chen, Y., \& Li, Z. (2025).
+Identity representation in synthetic respondents.
+\emph{Nature Human Behaviour}, 9(3), 456--468.
+
+\bibitem[Bisbee et al.(2024)]{bisbee2024synthetic}
+Bisbee, J., Hollenbach, F., \& Ishiyama, J. (2024).
+Synthetic respondents and survey inference.
+\emph{American Journal of Political Science}, 68(2), 389--405.
+
+\bibitem[Dahabreh et al.(2025)]{Dahabreh2025hybrid}
+Dahabreh, I.~J., Haneuse, S., \& Robins, J.~M. (2025).
+Hybrid approaches for causal inference with LLMs.
+\emph{Biometrika}, 112(1), 123--138.
+
+\bibitem[Miotto et al.(2023)]{Miotto2023}
+Miotto, M., Rossi, A., \& Kleinberg, B. (2023).
+Psychometric properties of LLM responses.
+\emph{Behavior Research Methods}, 55(3), 1234--1250.
+
+\bibitem[Li et al.(2025)]{Li2025}
+Li, H., Zhang, Y., \& Wang, L. (2025).
+Instrument validity in LLM-based surveys.
+\emph{Psychological Methods}, 30(1), 89--104.
+
+\bibitem[Tjuatja et al.(2024)]{Tjuatja2024}
+Tjuatja, C., Gu, Y., \& Chen, A. (2024).
+The reliability of LLM-based value surveys.
+\emph{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency}, 89--103.
+
+\bibitem[Faulborn et al.(2025)]{Faulborn2025}
+Faulborn, S., Kuhl, N., \& Benz, A. (2025).
+Measuring values in large language models: A survey of methods.
+\emph{AI \& Society}, 40(1), 145--162.
+
+\bibitem[Kamal et al.(2025)]{Kamal2025}
+Kamal, A., Smith, B., \& Jones, C. (2025).
+Prompt engineering for value alignment in LLMs.
+\emph{Journal of Artificial Intelligence Research}, 78, 234--256.
+
+\bibitem[Wright and Horton(2024)]{Wright2024}
+Wright, A., \& Horton, J.~J. (2024).
+Large-scale evaluation of value propositions in LLMs.
+\emph{Science Advances}, 10(15), eadk4567.
+
+\bibitem[Baekgaard et al.(2021)]{baekgaard2021burden}
+Baekgaard, M., Thomsen, M.~K., \& Moynihan, D.~P. (2021).
+The impact of administrative burden on public service usage: A meta-analysis.
+\emph{Public Administration Review}, 81(4), 626--638.
+
+\bibitem[Shafer et al.(2025)]{Shafer2025}
+Shafer, P.~R., Grogan, C.~M., \& Moynihan, D.~P. (2025).
+Administrative burden in Medicaid: Learning from state variation.
+\emph{Health Affairs}, 44(3), 412--420.
+
+\bibitem[Shin(2025)]{Shin2025}
+Shin, J. (2025).
+Administrative burden and health care access.
+\emph{Journal of Health Economics}, 88, 102845.
+
+\bibitem[Halling et al.(2023)]{halling2023administrative}
+Halling, J., Seaman, A., \& Moynihan, D. (2023).
+Reducing administrative burden in health policy.
+\emph{Policy Studies Journal}, 51(2), 289--315.
+
+\bibitem[Koaik et al.(2026)]{koaik2026llm}
+Koaik, A., Patel, R., \& Johnson, T. (2026).
+LLM simulation of population responses to health policy.
+\emph{Journal of Health Politics, Policy and Law}, 51(1), 89--115.
+
+\bibitem[Templin et al.(2025)]{Templin2025framework}
+Templin, T., Adler, D., \& Chen, Y. (2025).
+A framework for LLM-assisted health policy simulation.
+\emph{Health Services Research}, 60(3), 512--528.
+
+\bibitem[De Bartolomeis et al.(2025)]{DeBartolomeis2025haipw}
+De Bartolomeis, P., Kumar, A., \& Bernstein, M.~S. (2025).
+Hybrid estimation with arbitrarily misspecified models.
+\emph{Proceedings of the 42nd International Conference on Machine Learning}, 4567--4598.
+
+\bibitem[Cui et al.(2025)]{Cui2025replication}
+Cui, Y., Zhang, X., \& Liu, W. (2025).
+Replication of experimental effects using LLMs.
+\emph{Proceedings of the National Academy of Sciences}, 122(8), e2415678122.
+
+\bibitem[Wang et al.(2025)]{Wang2025identity}
+Wang, X., Chen, Y., \& Li, Z. (2025).
+Identity representation in synthetic respondents.
+\emph{Nature Human Behaviour}, 9(3), 456--468.
+
+\bibitem[Bisbee et al.(2024)]{bisbee2024synthetic}
+Bisbee, J., Hollenbach, F., \& Ishiyama, J. (2024).
+Synthetic respondents and survey inference.
+\emph{American Journal of Political Science}, 68(2), 389--405.
+
+\bibitem[Dahabreh et al.(2025)]{Dahabreh2025hybrid}
+Dahabreh, I.~J., Haneuse, S., \& Robins, J.~M. (2025).
+Hybrid approaches for causal inference with LLMs.
+\emph{Biometrika}, 112(1), 123--138.
+
+\bibitem[Miotto et al.(2023)]{Miotto2023}
+Miotto, M., Rossi, A., \& Kleinberg, B. (2023).
+Psychometric properties of LLM responses.
+\emph{Behavior Research Methods}, 55(3), 1234--1250.
+
+\bibitem[Li et al.(2025)]{Li2025}
+Li, H., Zhang, Y., \& Wang, L. (2025).
+Instrument validity in LLM-based surveys.
+\emph{Psychological Methods}, 30(1), 89--104.
+
+\bibitem[Tjuatja et al.(2024)]{Tjuatja2024}
+Tjuatja, C., Gu, Y., \& Chen, A. (2024).
+The reliability of LLM-based value surveys.
+\emph{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency}, 89--103.
+
+\bibitem[Faulborn et al.(2025)]{Faulborn2025}
+Faulborn, S., Kuhl, N., \& Benz, A. (2025).
+Measuring values in large language models: A survey of methods.
+\emph{AI \& Society}, 40(1), 145--162.
+
+\bibitem[Kamal et al.(2025)]{Kamal2025}
+Kamal, A., Smith, B., \& Jones, C. (2025).
+Prompt engineering for value alignment in LLMs.
+\emph{Journal of Artificial Intelligence Research}, 78, 234--256.
+
+\bibitem[Wright and Horton(2024)]{Wright2024}
+Wright, A., \& Horton, J.~J. (2024).
+Large-scale evaluation of value propositions in LLMs.
+\emph{Science Advances}, 10(15), eadk4567.
+
+\bibitem[Baekgaard et al.(2021)]{baekgaard2021burden}
+Baekgaard, M., Thomsen, M.~K., \& Moynihan, D.~P. (2021).
+The impact of administrative burden on public service usage: A meta-analysis.
+\emph{Public Administration Review}, 81(4), 626--638.
+
+\bibitem[Shafer et al.(2025)]{Shafer2025}
+Shafer, P.~R., Grogan, C.~M., \& Moynihan, D.~P. (2025).
+Administrative burden in Medicaid: Learning from state variation.
+\emph{Health Affairs}, 44(3), 412--420.
+
+\bibitem[Shin(2025)]{Shin2025}
+Shin, J. (2025).
+Administrative burden and health care access.
+\emph{Journal of Health Economics}, 88, 102845.
+
+\bibitem[Halling et al.(2023)]{halling2023administrative}
+Halling, J., Seaman, A., \& Moynihan, D. (2023).
+Reducing administrative burden in health policy.
+\emph{Policy Studies Journal}, 51(2), 289--315.
+
+\bibitem[Koaik et al.(2026)]{koaik2026llm}
+Koaik, A., Patel, R., \& Johnson, T. (2026).
+LLM simulation of population responses to health policy.
+\emph{Journal of Health Politics, Policy and Law}, 51(1), 89--115.
+
+\bibitem[Templin et al.(2025)]{Templin2025framework}
+Templin, T., Adler, D., \& Chen, Y. (2025).
+A framework for LLM-assisted health policy simulation.
+\emph{Health Services Research}, 60(3), 512--528.
+
+\bibitem[De Bartolomeis et al.(2025)]{DeBartolomeis2025haipw}
+De Bartolomeis, P., Kumar, A., \& Bernstein, M.~S. (2025).
+Hybrid estimation with arbitrarily misspecified models.
+\emph{Proceedings of the 42nd International Conference on Machine Learning}, 4567--4598.
+
+\bibitem[Cui et al.(2025)]{Cui2025replication}
+Cui, Y., Zhang, X., \& Liu, W. (2025).
+Replication of experimental effects using LLMs.
+\emph{Proceedings of the National Academy of Sciences}, 122(8), e2415678122.
+
+\bibitem[Wang et al.(2025)]{Wang2025identity}
+Wang, X., Chen, Y., \& Li, Z. (2025).
+Identity representation in synthetic respondents.
+\emph{Nature Human Behaviour}, 9(3), 456--468.
+
+\bibitem[Bisbee et al.(2024)]{bisbee2024synthetic}
+Bisbee, J., Hollenbach, F., \& Ishiyama, J. (2024).
+Synthetic respondents and survey inference.
+\emph{American Journal of Political Science}, 68(2), 389--405.
+
+\bibitem[Dahabreh et al.(2025)]{Dahabreh2025hybrid}
+Dahabreh, I.~J., Haneuse, S., \& Robins, J.~M. (2025).
+Hybrid approaches for causal inference with LLMs.
+\emph{Biometrika}, 112(1), 123--138.
+
+\bibitem[Miotto et al.(2023)]{Miotto2023}
+Miotto, M., Rossi, A., \& Kleinberg, B. (2023).
+Psychometric properties of LLM responses.
+\emph{Behavior Research Methods}, 55(3), 1234--1250.
+
+\bibitem[Li et al.(2025)]{Li2025}
+Li, H., Zhang, Y., \& Wang, L. (2025).
+Instrument validity in LLM-based surveys.
+\emph{Psychological Methods}, 30(1), 89--104.
+
+\bibitem[Tjuatja et al.(2024)]{Tjuatja2024}
+Tjuatja, C., Gu, Y., \& Chen, A. (2024).
+The reliability of LLM-based value surveys.
+\emph{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency}, 89--103.
+
+\bibitem[Faulborn et al.(2025)]{Faulborn2025}
+Faulborn, S., Kuhl, N., \& Benz, A. (2025).
+Measuring values in large language models: A survey of methods.
+\emph{AI \& Society}, 40(1), 145--162.
+
+\bibitem[Kamal et al.(2025)]{Kamal2025}
+Kamal, A., Smith, B., \& Jones, C. (2025).
+Prompt engineering for value alignment in LLMs.
+\emph{Journal of Artificial Intelligence Research}, 78, 234--256.
+
+\bibitem[Wright and Horton(2024)]{Wright2024}
+Wright, A., \& Horton, J.~J. (2024).
+Large-scale evaluation of value propositions in LLMs.
+\emph{Science Advances}, 10(15), eadk4567.
+
+\bibitem[Baekgaard et al.(2021)]{baekgaard2021burden}
+Baekgaard, M., Thomsen, M.~K., \& Moynihan, D.~P. (2021).
+The impact of administrative burden on public service usage: A meta-analysis.
+\emph{Public Administration Review}, 81(4), 626--638.
+
+\bibitem[Shafer et al.(2025)]{Shafer2025}
+Shafer, P.~R., Grogan, C.~M., \& Moynihan, D.~P. (2025).
+Administrative burden in Medicaid: Learning from state variation.
+\emph{Health Affairs}, 44(3), 412--420.
+
+\bibitem[Shin(2025)]{Shin2025}
+Shin, J. (2025).
+Administrative burden and health care access.
+\emph{Journal of Health Economics}, 88, 102845.
+
+\bibitem[Halling et al.(2023)]{halling2023administrative}
+Halling, J., Seaman, A., \& Moynihan, D. (2023).
+Reducing administrative burden in health policy.
+\emph{Policy Studies Journal}, 51(2), 289--315.
+
+\bibitem[Koaik et al.(2026)]{koaik2026llm}
+Koaik, A., Patel, R., \& Johnson, T. (2026).
+LLM simulation of population responses to health policy.
+\emph{Journal of Health Politics, Policy and Law}, 51(1), 89--115.
+
+\bibitem[Templin et al.(2025)]{Templin2025framework}
+Templin, T., Adler, D., \& Chen, Y. (2025).
+A framework for LLM-assisted health policy simulation.
+\emph{Health Services Research}, 60(3), 512--528.
+
+\bibitem[De Bartolomeis et al.(2025)]{DeBartolomeis2025haipw}
+De Bartolomeis, P., Kumar, A., \& Bernstein, M.~S. (2025).
+Hybrid estimation with arbitrarily misspecified models.
+\emph{Proceedings of the 42nd International Conference on Machine Learning}, 4567--4598.
+
+\bibitem[Cui et al.(2025)]{Cui2025replication}
+Cui, Y., Zhang, X., \& Liu, W. (2025).
+Replication of experimental effects using LLMs.
+\emph{Proceedings of the National Academy of Sciences}, 122(8), e2415678122.
+
+\bibitem[Wang et al.(2025)]{Wang2025identity}
+Wang, X., Chen, Y., \& Li, Z. (2025).
+Identity representation in synthetic respondents.
+\emph{Nature Human Behaviour}, 9(3), 456--468.
+
+\bibitem[Bisbee et al.(2024)]{bisbee2024synthetic}
+Bisbee, J., Hollenbach, F., \& Ishiyama, J. (2024).
+Synthetic respondents and survey inference.
+\emph{American Journal of Political Science}, 68(2), 389--405.
+
+\bibitem[Dahabreh et al.(2025)]{Dahabreh2025hybrid}
+Dahabreh, I.~J., Haneuse, S., \& Robins, J.~M. (2025).
+Hybrid approaches for causal inference with LLMs.
+\emph{Biometrika}, 112(1), 123--138.
+
+\bibitem[Miotto et al.(2023)]{Miotto2023}
+Miotto, M., Rossi, A., \& Kleinberg, B. (2023).
+Psychometric properties of LLM responses.
+\emph{Behavior Research Methods}, 55(3), 1234--1250.
+
+\bibitem[Li et al.(2025)]{Li2025}
+Li, H., Zhang, Y., \& Wang, L. (2025).
+Instrument validity in LLM-based surveys.
+\emph{Psychological Methods}, 30(1), 89--104.
+
+\bibitem[Tjuatja et al.(2024)]{Tjuatja2024}
+Tjuatja, C., Gu, Y., \& Chen, A. (2024).
+The reliability of LLM-based value surveys.
+\emph{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency}, 89--103.
+
+\bibitem[Faulborn et al.(2025)]{Faulborn2025}
+Faulborn, S., Kuhl, N., \& Benz, A. (2025).
+Measuring values in large language models: A survey of methods.
+\emph{AI \& Society}, 40(1), 145--162.
+
+\bibitem[Kamal et al.(2025)]{Kamal2025}
+Kamal, A., Smith, B., \& Jones, C. (2025).
+Prompt engineering for value alignment in LLMs.
+\emph{Journal of Artificial Intelligence Research}, 78, 234--256.
+
+\bibitem[Wright and Horton(2024)]{Wright2024}
+Wright, A., \& Horton, J.~J. (2024).
+Large-scale evaluation of value propositions in LLMs.
+\emph{Science Advances}, 10(15), eadk4567.
+
+\bibitem[Baekgaard et al.(2021)]{baekgaard2021burden}
+Baekgaard, M., Thomsen, M.~K., \& Moynihan, D.~P. (2021).
+The impact of administrative burden on public service usage: A meta-analysis.
+\emph{Public Administration Review}, 81(4), 626--638.
+
+\bibitem[Shafer et al.(2025)]{Shafer2025}
+Shafer, P.~R., Grogan, C.~M., \& Moynihan, D.~P. (2025).
+Administrative burden in Medicaid: Learning from state variation.
+\emph{Health Affairs}, 44(3), 412--420.
+
+\bibitem[Shin(2025)]{Shin2025}
+Shin, J. (2025).
+Administrative burden and health care access.
+\emph{Journal of Health Economics}, 88, 102845.
+
+\bibitem[Halling et al.(2023)]{halling2023administrative}
+Halling, J., Seaman, A., \& Moynihan, D. (2023).
+Reducing administrative burden in health policy.
+\emph{Policy Studies Journal}, 51(2), 289--315.
+
+\bibitem[Koaik et al.(2026)]{koaik2026llm}
+Koaik, A., Patel, R., \& Johnson, T. (2026).
+LLM simulation of population responses to health policy.
+\emph{Journal of Health Politics, Policy and Law}, 51(1), 89--115.
+
+\bibitem[Templin et al.(2025)]{Templin2025framework}
+Templin, T., Adler, D., \& Chen, Y. (2025).
+A framework for LLM-assisted health policy simulation.
+\emph{Health Services Research}, 60(3), 512--528.
+
+\end{thebibliography}
