@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate Figure 2: H1 scatter plot with improved label placement."""
+"""Regenerate Figure 2: H1 scatter plot with selective label placement."""
 import csv
 from pathlib import Path
 import numpy as np
@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 HOME = Path(__file__).resolve().parent
 OUT = HOME.parent / "output.png"
 
-# Load data from canonical output
+# Load data
 data = list(csv.DictReader(open(HOME / "outputs" / "h1_mfq_results_table.csv", newline="")))
 models = [r["Model"] for r in data]
 X = np.array([float(r["MFQ_Composite"]) for r in data])
@@ -20,36 +20,28 @@ DELTA = np.array([float(r["Mean_Delta"]) for r in data])
 # Regression
 r1 = sm.OLS(DELTA, sm.add_constant(X)).fit()
 
-def short_label(m):
-    """Shorten model names to prevent overlap."""
-    replacements = {
-        " Instruct": "",
-        " Command R+": " Cohere",
-        "DeepSeek-V3.2": "DeepSeek",
-        "Mistral Large": "Mistral",
-        "Kimi K2.6": "Kimi",
-        "Gemini 2.5 Pro": "Gemini Pro",
-        "Gemini 2.5 Flash": "Gemini Flash",
-        "Qwen3.7 Plus": "Qwen",
-        "Llama 3.1 70B": "Llama 70B",
-        "Llama 3.1 8B": "Llama 8B",
-    }
-    for old, new in replacements.items():
-        if old in m:
-            return m.replace(old, new)
-    return m
+# Only label extreme/leverage points
+LABELS = {
+    "Llama 3.1 8B Instruct": "Llama 8B",
+    "Qwen3.7 Plus": "Qwen",
+    "Gemini 2.5 Pro": "Gemini Pro", 
+    "GPT-4.1": "GPT-4.1",
+    "GPT-4o": "GPT-4o",
+}
 
 fig, ax = plt.subplots(figsize=(9, 6))
 ax.scatter(X, DELTA, color="steelblue", s=70, zorder=5)
 
-# Add labels with abbreviated names
+# Add selective labels
 for i, m in enumerate(models):
-    ax.annotate(short_label(m), (X[i], DELTA[i]), 
-                textcoords="offset points", xytext=(5, 5), 
-                fontsize=7, ha='left')
+    if m in LABELS:
+        offset = (8, 8) if m == "Llama 3.1 8B Instruct" else (8, -12)
+        ax.annotate(LABELS[m], (X[i], DELTA[i]), 
+                    textcoords="offset points", xytext=offset, 
+                    fontsize=9, ha='left', fontweight='bold')
 
 # Regression line
-xr = np.linspace(X.min() - 0.5, X.max() + 0.5, 100)
+xr = np.linspace(X.min() - 0.3, X.max() + 0.3, 100)
 ax.plot(xr, r1.predict(sm.add_constant(xr)), color="darkred", linewidth=1.5, 
         linestyle="--", label=rf"$\beta$={r1.params[1]:.2f}, $R^2$={r1.rsquared:.2f}")
 
