@@ -196,7 +196,7 @@ The primary H1 analysis tests whether models with higher moral-foundations compo
 \[
 \bar{\Delta}_m = \beta_0 + \beta_1 \text{MFQ}_m + \epsilon_m,
 \]
-where the MFQ composite is standardised across models: each foundation score is the unweighted mean of its six items, each standardised across endpoints, and the composite is \(\mathrm{MFQ}_m = Z(\mathrm{care})_m + Z(\mathrm{fairness})_m - Z(\mathrm{loyalty})_m - Z(\mathrm{authority})_m - Z(\mathrm{sanctity})_m\) (Appendix~\ref{app:orientation-items}); because its variation is model-level, this is a descriptive cross-model association rather than a high-powered population estimate. We also fit each of the five foundations separately as a diagnostic check.
+where the MFQ composite is the signed sum of standardized foundation scores: each foundation score is the unweighted mean of its six items, each standardised across endpoints, and the composite is \(\mathrm{MFQ}_m = Z(\mathrm{care})_m + Z(\mathrm{fairness})_m - Z(\mathrm{loyalty})_m - Z(\mathrm{authority})_m - Z(\mathrm{sanctity})_m\) (Appendix~\ref{app:orientation-items}); because its variation is model-level, this is a descriptive cross-model association rather than a high-powered population estimate. We also fit each of the five foundations separately as a diagnostic check.
 
 \subsubsection{Narrative frame-decomposition models (H2)}
 \label{sec:est-h2}
@@ -265,7 +265,7 @@ Mistral Large & -0.98 & 76.00 & 39.04 & 36.96 & [34.67, 39.25] \\
 \bottomrule
 \end{tabular*}
 \begin{flushleft}
-\footnotesize Notes: MFQ = Moral Foundations Questionnaire composite, standardized across the fifteen-model sample (individualizing foundations care, fairness minus binding foundations loyalty, authority, sanctity). Low $W$ and High $W$ are mean predicted vaccination willingness scores under low- and high-burden conditions. $\bar{\Delta}$ = Low $W$ $-$ High $W$. 95\% CI calculated as $\bar{\Delta} \pm 1.96 \times SE$, where $SE$ is the standard error of the 27 profile-level burden effects (each profile-level effect is the mean over that profile's repetitions), so repetitions are not treated as independent observations.
+\footnotesize Notes: MFQ = signed sum of standardized foundation scores: care + fairness $-$ loyalty $-$ authority $-$ sanctity. Low $W$ and High $W$ are mean predicted vaccination willingness scores under low- and high-burden conditions. $\bar{\Delta}$ = Low $W$ $-$ High $W$. 95\% CI calculated as $\bar{\Delta} \pm 1.96 \times SE$, where $SE$ is the standard error of the 27 profile-level burden effects (each profile-level effect is the mean over that profile's repetitions), so repetitions are not treated as independent observations.
 \end{flushleft}
 \end{table}
 
@@ -290,7 +290,7 @@ The null result for a composite derived from an MFQ-30--derived probe based on a
 \caption{Moral-foundations composite and predicted administrative-burden effects}
 \label{fig:pvc_delta}
 \begin{flushleft}
-\footnotesize Notes: Each point represents one model in the fifteen-model sample. The horizontal axis reports the model's MFQ-30 composite (standardized individualizing minus binding foundations), and the vertical axis reports the model-level average burden effect, \(\bar{\Delta}_m = \bar{W}^{low}_m - \bar{W}^{high}_m\). The fitted line shows the bivariate regression ($\hat{\beta} = 2.96$, 95\% CI [$-2.17$, $+8.09$], $p = 0.235$, $R^2 = 0.11$). The MFQ composite does not significantly predict variation in simulated burden effects.
+\footnotesize Notes: Each point represents one model in the fifteen-model sample. The horizontal axis reports the model's MFQ-30 composite (signed sum of standardized foundation scores: care + fairness $-$ loyalty $-$ authority $-$ sanctity), and the vertical axis reports the model-level average burden effect, \(\bar{\Delta}_m = \bar{W}^{low}_m - \bar{W}^{high}_m\). The fitted line shows the bivariate regression ($\hat{\beta} = 2.96$, 95\% CI [$-2.17$, $+8.09$], $p = 0.235$, $R^2 = 0.11$). The MFQ composite does not significantly predict variation in simulated burden effects.
 \end{flushleft}
 \end{figure}
 \clearpage
