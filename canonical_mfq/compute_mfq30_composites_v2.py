@@ -10,7 +10,7 @@ from pathlib import Path
 from collections import defaultdict
 
 PROJECT = Path(__file__).resolve().parent
-INPUT_CSV = PROJECT / "outputs" / "mfq30_FINAL_15models_v5.csv"
+INPUT_CSV = Path(__file__).parent / "mfq30_FINAL_15models_v4.csv"
 OUTPUT_CSV = PROJECT / "outputs" / "mfq30_canonical_composites_v2.csv"
 
 DIMENSION_MAP = {
