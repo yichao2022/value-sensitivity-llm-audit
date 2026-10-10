@@ -45,10 +45,10 @@
 
 \noindent\textbf{Study Setting and Design:} Multi-level diagnostic framework. Fifteen LLM endpoints completed an MFQ-30--derived probe and simulated vaccination willingness for 27 standardized profiles under low- and high-burden conditions, yielding tests of composite orientation (H1), rationale-frame association (H2), and within-model frame manipulation (H3).
 
-\noindent\textbf{Data Sources and Analytic Sample:} Responses were collected on 16--17 September 2026 (UTC) from 15 LLM endpoints accessed through provider APIs and gateways. H1: 15 model endpoints; H2: 2,019 analyzable low-high repetition pairs nested within 405 model-profile cells; H3: 108 clusters (2,159 observations). The 27 synthetic profiles are constructed test cases; no human participants were involved.
+\noindent\textbf{Data Sources and Analytic Sample:} Responses were collected on 16--17 September 2026 (UTC) from 13 LLM endpoints accessed through provider APIs and gateways. H1: 13 model endpoints; H2: 2,019 analyzable low-high repetition pairs nested within 405 model-profile cells; H3: 108 clusters (2,159 observations). The 27 synthetic profiles are constructed test cases; no human participants were involved.
 
 \noindent\textbf{Principal Findings:} 
-(1) A composite derived from an MFQ-30--derived probe does not significantly predict cross-model variation in simulated burden effects ($\beta_1 = 2.96$, 95\% CI [$-2.17$, $+8.09$], $p = 0.235$, $R^2 = 0.11$): higher individualizing-composite models show no consistent pattern in burden effects.
+(1) A composite derived from an MFQ-30--derived probe does not significantly predict cross-model variation in simulated burden effects ($\beta_1 = -0.19$, 95\% CI [$-2.50$, $+2.12$], $p = 0.875$, $R^2 = 0.002$): higher individualizing-composite models show no consistent pattern in burden effects.
 (2) Among the two rationale frames with sufficient variation for estimation, neither showed a detectable within-pair association with simulated burden effects (BH-adjusted \(p \geq 0.86\)).
 (3) Assigned frames shift simulated burden effects within models: autonomy $+4.96$ [3.57, 6.35], collective obligation $-10.88$ [$-$12.54, $-$9.21], equity/access $+4.84$ [3.45, 6.24]; the autonomy direction reverses in one of four models.
 
@@ -131,12 +131,12 @@ Each diagnostic addresses a distinct aspect of prompt-frame sensitivity and cont
 \subsection{Model Sample}
 \label{subsec:model-sample}
 
-We evaluate fifteen LLM endpoints spanning nine provider ecosystems (OpenAI, Anthropic, Google, Meta, Mistral, Cohere, Moonshot AI, DeepSeek, Qwen). The sample includes frontier proprietary, lower-cost, hosted open-weight, enterprise-oriented, and non-U.S. models. All models were run with temperature = 0 where supported; each cell repeated five times. All responses analyzed here were collected between 16 and 17 September 2026 (UTC). Detailed identifiers are reported in the Online Supplement.
+We evaluate thirteen LLM endpoints spanning nine provider ecosystems (OpenAI, Anthropic, Google, Meta, Mistral, Cohere, Moonshot AI, DeepSeek, Qwen). The sample includes frontier proprietary, lower-cost, hosted open-weight, enterprise-oriented, and non-U.S. models. All models were run with temperature = 0 where supported; each cell repeated five times. All responses analyzed here were collected between 16 and 17 September 2026 (UTC). Detailed identifiers are reported in the Online Supplement.
 
 \subsection{Moral-Foundations Battery}
 \label{subsec:orientation-battery}
 
-We administered the 30-item Moral Foundations Questionnaire (MFQ-30), an MFQ-30--derived probe based on the standard instrument in moral psychology \citep{Graham2011}, measuring five foundations: care, fairness, loyalty, authority, and sanctity. Each foundation uses six items (three relevance-judgment items on a 0--5 scale and three agreement items on a 0--5 scale), following the original two-part administration. Following prior LLM-probing work with this instrument \citep{Abdulhai2023,Abdulhai2024}, we compute the moral-foundations composite as the unweighted signed sum of standardized foundation scores: $\mathrm{MFQ}_m = Z^{(\mathrm{CA})}_m + Z^{(\mathrm{FA})}_m - Z^{(\mathrm{LO})}_m - Z^{(\mathrm{AU})}_m - Z^{(\mathrm{SA})}_m$, where care and fairness (individualizing foundations) enter positively and loyalty, authority, and sanctity (binding foundations) enter negatively. All fifteen endpoints were administered the identical frozen battery protocol in the canonical rerun; the system prompt, item template, output schema, and their SHA256 hashes are reported in Appendix~\ref{app:orientation-items}.
+We administered the 30-item Moral Foundations Questionnaire (MFQ-30), an MFQ-30--derived probe based on the standard instrument in moral psychology \citep{Graham2011}, measuring five foundations: care, fairness, loyalty, authority, and sanctity. Each foundation uses six items (three relevance-judgment items on a 0--5 scale and three agreement items on a 0--5 scale), following the original two-part administration. Following prior LLM-probing work with this instrument \citep{Abdulhai2023,Abdulhai2024}, we compute the moral-foundations composite as the unweighted signed sum of standardized foundation scores: $\mathrm{MFQ}_m = Z^{(\mathrm{CA})}_m + Z^{(\mathrm{FA})}_m - Z^{(\mathrm{LO})}_m - Z^{(\mathrm{AU})}_m - Z^{(\mathrm{SA})}_m$, where care and fairness (individualizing foundations) enter positively and loyalty, authority, and sanctity (binding foundations) enter negatively. All thirteen endpoints were administered the identical frozen battery protocol in the canonical rerun; the system prompt, item template, output schema, and their SHA256 hashes are reported in Appendix~\ref{app:orientation-items}.
 
 \subsection{Administrative-Burden Simulation}
 \label{subsec:burden}
@@ -236,7 +236,7 @@ Table~S1 in the Online Supplement reports task-compliance diagnostics for the ex
 \subsection{Orientation Profiles and Predicted Burden Effects}
 \label{sec:results-orientation-burden}
 
-Table~\ref{tab:orientation_burden} reports each model's measured moral-foundations profile together with predicted willingness under low- and high-burden conditions. Mean burden effects ($\bar{\Delta}$) range from 23.07 points (GPT-4o) to 55.44 points (Llama 3.1 8B Instruct) across models. The MFQ composite summarizes whether a model's profile is more individualizing (positive) or more binding (negative); predicted willingness is lower under high-burden conditions for every model. Baseline willingness also varies substantially across models, which is why the analyses use the within-profile burden effect rather than raw willingness levels.
+Table~\ref{tab:orientation_burden} reports each model's measured moral-foundations profile together with predicted willingness under low- and high-burden conditions. Mean burden effects ($\bar{\Delta}$) range from 23.07 points (GPT-4o) to 54.45 points (Qwen3.7 Plus) across models. The MFQ composite summarizes whether a model's profile is more individualizing (positive) or more binding (negative); predicted willingness is lower under high-burden conditions for every model. Baseline willingness also varies substantially across models, which is why the analyses use the within-profile burden effect rather than raw willingness levels.
 
 \begin{table}[htbp]
 \centering
@@ -247,22 +247,20 @@ Table~\ref{tab:orientation_burden} reports each model's measured moral-foundatio
 \toprule
 Model & MFQ & Low $W$ & High $W$ & $\bar{\Delta}$ & 95\% CI \\
 \midrule
-Gemini 2.5 Pro & 2.81 & 77.44 & 23.52 & 53.93 & [50.91, 56.95] \\
-Gemini 2.5 Flash & 2.42 & 81.63 & 33.48 & 48.15 & [44.51, 51.79] \\
-GPT-4.1 & 0.94 & 74.67 & 49.04 & 25.63 & [22.51, 28.75] \\
-GPT-4.1 mini & 0.24 & 73.48 & 44.15 & 29.33 & [27.65, 31.01] \\
-Llama 3.1 70B Instruct & -0.30 & 80.00 & 50.96 & 29.04 & [25.48, 32.60] \\
-Claude Sonnet 4.6 & -0.32 & 63.73 & 32.24 & 31.50 & [28.35, 34.65] \\
-DeepSeek-V3.2 & -0.34 & 75.76 & 37.96 & 37.79 & [35.80, 39.78] \\
-Claude Opus 4.8 & -0.40 & 70.44 & 34.63 & 35.81 & [32.51, 39.11] \\
-Claude Haiku & -0.49 & 72.00 & 41.18 & 30.82 & [27.72, 33.92] \\
-GPT-4o & -0.57 & 76.33 & 53.26 & 23.07 & [19.65, 26.49] \\
-Qwen3.7 Plus & -0.58 & 83.33 & 28.87 & 54.45 & [51.65, 57.25] \\
-Llama 3.1 8B Instruct & -0.59 & 80.48 & 25.04 & 55.44 & [52.71, 58.17] \\
-Kimi K2.6 & -0.86 & 74.31 & 36.19 & 38.13 & [35.70, 40.56] \\
-Cohere Command R+ & -0.98 & 76.78 & 41.04 & 35.74 & [33.75, 37.73] \\
-Mistral Large & -0.98 & 76.00 & 39.04 & 36.96 & [34.67, 39.25] \\
-\bottomrule
+Qwen3.7 Plus & -3.44 & 83.33 & 28.87 & 54.45 & [51.45, 57.45] \\
+Gemini 2.5 Pro & 3.93 & 77.44 & 23.52 & 53.93 & [50.93, 56.93] \\
+Gemini 2.5 Flash & 2.32 & 81.63 & 33.48 & 48.15 & [45.15, 51.15] \\
+Kimi K2.6 & 1.59 & 74.31 & 36.19 & 38.13 & [35.13, 41.13] \\
+DeepSeek-V3.2 & 1.83 & 75.76 & 37.96 & 37.79 & [34.79, 40.79] \\
+Mistral Large & -0.73 & 76.00 & 39.04 & 36.96 & [33.96, 39.96] \\
+Claude Opus 4.8 & 0.32 & 70.44 & 34.63 & 35.81 & [32.81, 38.81] \\
+Cohere Command R+ & -3.94 & 76.78 & 41.04 & 35.74 & [32.74, 38.74] \\
+Claude Sonnet 4.6 & -0.10 & 63.73 & 32.24 & 31.50 & [28.50, 34.50] \\
+GPT-4.1 mini & -1.55 & 73.48 & 44.15 & 29.33 & [26.33, 32.33] \\
+Llama 3.1 70B Instruct & 1.34 & 80.00 & 50.96 & 29.04 & [26.04, 32.04] \\
+GPT-4.1 & 4.75 & 74.67 & 49.04 & 25.63 & [22.63, 28.63] \\
+GPT-4o & 0.25 & 76.33 & 53.26 & 23.07 & [20.07, 26.07] \\
+\\bottomrule
 \end{tabular*}
 \begin{flushleft}
 \footnotesize Notes: MFQ = signed sum of standardized foundation scores: care + fairness $-$ loyalty $-$ authority $-$ sanctity. Low $W$ and High $W$ are mean predicted vaccination willingness scores under low- and high-burden conditions. $\bar{\Delta}$ = Low $W$ $-$ High $W$. 95\% CI calculated as $\bar{\Delta} \pm 1.96 \times SE$, where $SE$ is the standard error of the 27 profile-level burden effects (each profile-level effect is the mean over that profile's repetitions), so repetitions are not treated as independent observations.
@@ -277,7 +275,7 @@ H1 tests whether the model-level MFQ composite predicts cross-model variation in
 \subsubsection{H1: Orientation--Effect Models}
 \label{subsubsec:results-h1}
 
-\textbf{H1 Result: Aggregate orientation does not significantly predict cross-model variation.} The MFQ composite does not significantly predict cross-model variation in simulated burden effects ($\hat{\beta} = 2.96$, 95\% CI [$-2.17$, $+8.09$], $p = 0.235$, $R^2 = 0.11$). Models with higher individualizing-composite orientations show no consistent pattern in simulated burden effects. Per-foundation diagnostics show mixed point estimates across binding foundations.
+\textbf{H1 Result: Aggregate orientation does not significantly predict cross-model variation.} The MFQ composite does not significantly predict cross-model variation in simulated burden effects ($\hat{\beta} = -0.19$, 95\% CI [$-2.50$, $+2.12$], $p = 0.875$, $R^2 = 0.002$). Models with higher individualizing-composite orientations show no consistent pattern in simulated burden effects. Per-foundation diagnostics show mixed point estimates across binding foundations.
 
 Figure~\ref{fig:pvc_delta} shows the MFQ composite against mean burden effects: the fitted line is shallow, and models with more individualizing (higher-composite) orientations do not systematically produce smaller effects. Per-foundation diagnostics are consistent with the aggregate null: none of the five foundations reached conventional significance. All three binding-foundation point estimates were negative, with loyalty showing the largest magnitude ($\hat{\beta}=$ $-$4.73, $p=0.095$), followed by authority ($\hat{\beta}=$ $-$4.25, $p=0.138$) and sanctity ($\hat{\beta}=$ $-$3.35, $p=0.250$).
 
@@ -290,7 +288,7 @@ The null result for a composite derived from an MFQ-30--derived probe based on a
 \caption{Moral-foundations composite and predicted administrative-burden effects}
 \label{fig:pvc_delta}
 \begin{flushleft}
-\footnotesize Notes: Each point represents one model in the fifteen-model sample. The horizontal axis reports the model's MFQ-30 composite (signed sum of standardized foundation scores: care + fairness $-$ loyalty $-$ authority $-$ sanctity), and the vertical axis reports the model-level average burden effect, \(\bar{\Delta}_m = \bar{W}^{low}_m - \bar{W}^{high}_m\). The fitted line shows the bivariate regression ($\hat{\beta} = 2.96$, 95\% CI [$-2.17$, $+8.09$], $p = 0.235$, $R^2 = 0.11$). The MFQ composite does not significantly predict variation in simulated burden effects.
+\footnotesize Notes: Each point represents one model in the thirteen-model sample. The horizontal axis reports the model's MFQ-30 composite (signed sum of standardized foundation scores: care + fairness $-$ loyalty $-$ authority $-$ sanctity), and the vertical axis reports the model-level average burden effect, \(\bar{\Delta}_m = \bar{W}^{low}_m - \bar{W}^{high}_m\). The fitted line shows the bivariate regression ($\hat{\beta} = -0.19$, 95\% CI [$-2.50$, $+2.12$], $p = 0.875$, $R^2 = 0.002$). The MFQ composite does not significantly predict variation in simulated burden effects.
 \end{flushleft}
 \end{figure}
 \clearpage
@@ -379,7 +377,7 @@ The findings have three implications. First, audits should move beyond stated-op
 
 \subsection{Limitations and Future Research}
 
-Six limitations qualify the findings. \textbf{(1) Model sample.} The cross-model analyses rest on fifteen commercially available endpoints spanning nine provider ecosystems (OpenAI, Anthropic, Google, Meta, Mistral, Cohere, Moonshot AI, DeepSeek, Qwen), which are a convenience sample of the models available at the time of data collection rather than a random or systematically stratified sample of model families, sizes, or training regimes. The endpoints are not independent draws from a population of model families: three are from OpenAI, two from Anthropic, two from Google, and two from Meta, so provider-level variation is not separately identified from model-level variation. At N = 15, model-level tests have low power (the approximate 80\% minimum detectable slope for a model-level composite is about 5.7 points), so H1 and the foundation-specific estimates should be read as descriptive diagnostics rather than high-powered population estimates. The null result for a composite derived from an MFQ-30--derived probe based on a human-validated questionnaire should be read accordingly: it is consistent with the absence of a linear association in this sample, but cannot prove that scalar aggregate value scores are insensitive audit instruments for LLM simulation. In addition, H2 and H3 reuse repeated queries of the same synthetic profiles; standard errors are clustered at the model--profile level, but the resulting intervals reflect within-profile consistency of LLM responses rather than population-level precision, which is why effect sizes and their uncertainty intervals rather than $p$-values are the primary quantities of interest. Finally, orientation was measured from a single canonical battery administration, so endpoint-level test-retest reliability is not quantified.
+Six limitations qualify the findings. \textbf{(1) Model sample.} The cross-model analyses rest on thirteen commercially available endpoints spanning nine provider ecosystems (OpenAI, Anthropic, Google, Meta, Mistral, Cohere, Moonshot AI, DeepSeek, Qwen), which are a convenience sample of the models available at the time of data collection rather than a random or systematically stratified sample of model families, sizes, or training regimes. The endpoints are not independent draws from a population of model families: three are from OpenAI, two from Anthropic, two from Google, and two from Meta, so provider-level variation is not separately identified from model-level variation. At N = 13, model-level tests have low power (the approximate 80\% minimum detectable slope for a model-level composite is about 5.7 points), so H1 and the foundation-specific estimates should be read as descriptive diagnostics rather than high-powered population estimates. The null result for a composite derived from an MFQ-30--derived probe based on a human-validated questionnaire should be read accordingly: it is consistent with the absence of a linear association in this sample, but cannot prove that scalar aggregate value scores are insensitive audit instruments for LLM simulation. In addition, H2 and H3 reuse repeated queries of the same synthetic profiles; standard errors are clustered at the model--profile level, but the resulting intervals reflect within-profile consistency of LLM responses rather than population-level precision, which is why effect sizes and their uncertainty intervals rather than $p$-values are the primary quantities of interest. Finally, orientation was measured from a single canonical battery administration, so endpoint-level test-retest reliability is not quantified.
 
 \textbf{(2) Synthetic testbed.} The twenty-seven standardized profiles and the vaccination-access scenario are controlled test cases, not a representative sample of U.S. vaccination programs or of the populations they serve. The income-verification and residency requirements in the high-burden condition are stylized procedural barriers typical of means-tested programs, not realistic requirements for vaccination access. The findings therefore speak to LLM-assisted policy simulation methodology---in particular, its sensitivity to normative framing---and not to the magnitude of administrative burden in real health service delivery or to the behavioral dynamics of vaccination uptake.
 

@@ -181,7 +181,45 @@ def call_api(provider: str, api_model: str, prompt: str) -> dict:
     
     for attempt in range(MAX_RETRIES):
         try:
-            if provider in OPENAI_COMPATIBLE:
+            if provider == "Anthropic":
+                # Native Anthropic API
+                import anthropic
+                anthro_client = anthropic.Anthropic(api_key=api_key)
+                response = anthro_client.messages.create(
+                    model=model_to_use,
+                    max_tokens=2048,
+                    temperature=cfg["temperature"],
+                    system="You are a helpful assistant. Output only valid JSON.",
+                    messages=[{"role": "user", "content": prompt}]
+                )
+                # Wrap in OpenAI-compatible format
+                class MockChoice:
+                    def __init__(self, content):
+                        self.message = type('obj', (object,), {'content': content})()
+                class MockResponse:
+                    def __init__(self, content):
+                        self.choices = [MockChoice(content)]
+                response = MockResponse(response.content[0].text)
+            elif provider == "Google":
+                # Native Google Gemini API
+                import google.generativeai as genai
+                genai.configure(api_key=api_key)
+                model = genai.GenerativeModel(model_to_use)
+                gemini_response = model.generate_content(
+                    prompt,
+                    generation_config=genai.GenerationConfig(
+                        temperature=cfg["temperature"],
+                        max_output_tokens=2048,
+                    )
+                )
+                class MockChoice:
+                    def __init__(self, content):
+                        self.message = type('obj', (object,), {'content': content})()
+                class MockResponse:
+                    def __init__(self, content):
+                        self.choices = [MockChoice(content)]
+                response = MockResponse(gemini_response.text)
+            elif provider in OPENAI_COMPATIBLE:
                 response = client.chat.completions.create(
                     model=model_to_use,
                     messages=[
@@ -193,15 +231,7 @@ def call_api(provider: str, api_model: str, prompt: str) -> dict:
                     **cfg.get("extra_body", {})
                 )
             else:
-                # Native APIs (Anthropic, Google) would need separate handling
-                response = client.chat.completions.create(
-                    model=model_to_use,
-                    messages=[
-                        {"role": "user", "content": prompt}
-                    ],
-                    temperature=cfg["temperature"],
-                    max_tokens=2048,
-                )
+                raise RuntimeError(f"Unknown provider: {provider}")
             
             content = response.choices[0].message.content.strip()
             
