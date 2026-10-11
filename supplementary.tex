@@ -551,14 +551,14 @@ The main-text H2 analysis uses one fixed effect per model--profile pair, so its 
 \toprule
 Frame & Prevalence & Pair-FE \(b\) & SE & 95\% CI & BH-adj.\ \(p\) & Two-way FE \(b\) \\
 \midrule
-Access barriers & 43.2\% & 0.12 & 0.46 & [$-0.79$, 1.03] & 0.79 & 1.08 \\
+Access barriers & 26.8\% & -0.28 & 0.48 & [$-1.23$, 0.67] & 0.86 & -0.28 \\
 Collective responsibility & 0.05\% & --- & --- & --- & --- & --- \\
-Coercive backlash & 7.7\% & 1.20 & 1.84 & [$-2.41$, 4.81] & 0.79 & 1.59 \\
+Coercive backlash & 0.1\% & -0.17 & 0.95 & [$-2.04$, 1.70] & 0.86 & -0.17 \\
 \bottomrule
 \end{tabular}
 }
 \begin{flushleft}
-\footnotesize Notes: Pair-FE is the primary specification of the main text: one fixed effect per model--profile pair (405 pairs) plus the retained rationale-frame indicators, with standard errors clustered at the model--profile level. Collective responsibility is dropped from the pair-FE column because the corrected coding leaves only one positive rationale (0.05\%), giving the indicator no within-pair variation. Two-way FE replaces the pair indicators with separate model and profile fixed effects, absorbing additive heterogeneity only; its unadjusted \(p\)-values are 0.012 (access barriers) and 0.174 (coercive backlash), and its Benjamini--Hochberg adjusted values (across the two estimable frames) are 0.024 and 0.174. All \(p\)-values in the pair-FE column are Benjamini--Hochberg adjusted across the two retained frames (\(q=0.10\); collective responsibility is not estimable under this specification). \(N=2{,}019\) in both specifications. Positive coefficients indicate larger predicted burden effects.
+\footnotesize Notes: Pair-FE is the primary specification of the main text: one fixed effect per model--profile pair (405 pairs) plus the retained rationale-frame indicators, with standard errors clustered at the model--profile level. Collective responsibility is dropped from the pair-FE column because the corrected coding leaves only one positive rationale (0.05\%), giving the indicator no within-pair variation. Two-way FE replaces the pair indicators with separate model and profile fixed effects, absorbing additive heterogeneity only; its unadjusted \(p\)-values are 0.57 (access barriers) and 0.86 (coercive backlash), and its Benjamini--Hochberg adjusted values (across the two estimable frames) are 0.86 and 0.86. All \(p\)-values in the pair-FE column are Benjamini--Hochberg adjusted across the two retained frames (\(q=0.10\); collective responsibility is not estimable under this specification). \(N=2{,}019\) in both specifications. Prevalence is computed under frozen strict coding rules: paperwork, documentation, and waiting-time mentions without explicit resource-linkage are excluded. Negative coefficients indicate smaller predicted burden effects when the frame is present.
 \end{flushleft}
 \end{table}
 
@@ -573,9 +573,9 @@ Coercive backlash & 7.7\% & 1.20 & 1.84 & [$-2.41$, 4.81] & 0.79 & 1.59 \\
 \toprule
 Variable & Within-pair variance share & Pairs with no within-pair variation \\
 \midrule
-Access barriers & 0.329 & 237 of 405 \\
+Access barriers & 0.329 & 246 of 405 \\
 Collective responsibility & 0.800 & 404 of 405 \\
-Coercive backlash & 0.310 & 362 of 405 \\
+Coercive backlash & 0.310 & 402 of 405 \\
 Burden effect \(\Delta\) & 0.078 & 182 of 405 \\
 \bottomrule
 \end{tabular}
@@ -598,13 +598,13 @@ Two features of the design drive the results. First, the burden effect \(\Delta\
 \toprule
 Frame & LOMO range & LOMO sig. & LOPO range & LOPO sig. \\
 \midrule
-Access barriers & \(-0.03\) to \(+0.37\) & 0/15 & \(-0.09\) to \(+0.32\) & 0/27 \\
-Coercive backlash & \(+0.69\) to \(+1.58\) & 0/15 & \(+0.37\) to \(+2.33\) & 0/27 \\
+Access barriers & \(-0.42\) to \(+0.03\) & 0/15 & \(-0.61\) to \(-0.06\) & 0/27 \\
+Coercive backlash & \(-0.75\) to \(+1.00\) & 0/15 & \(-0.75\) to \(+0.88\) & 0/27 \\
 \bottomrule
 \end{tabular}
 }
 \begin{flushleft}
-\footnotesize Notes: LOMO = leave-one-model-out (fifteen fits, each excluding one model); LOPO = leave-one-profile-out (twenty-seven fits, each excluding one profile). No frame coefficient is statistically distinguishable from zero in any leave-one-out fit under the primary specification. Sign counts: access barriers positive in 14 of 15 LOMO and 25 of 27 LOPO fits; coercive backlash positive in 15 of 15 and 27 of 27.
+\footnotesize Notes: LOMO = leave-one-model-out (fifteen fits, each excluding one model); LOPO = leave-one-profile-out (twenty-seven fits, each excluding one profile). No frame coefficient is statistically distinguishable from zero in any leave-one-out fit under the primary specification. Sign counts: access barriers positive in 1 of 15 LOMO and 0 of 27 LOPO fits; coercive backlash positive in 1 of 15 and 1 of 27.
 \end{flushleft}
 \end{table}
 
@@ -909,7 +909,7 @@ These diagnostics reinforce the interpretation that H1 does not provide evidence
 
 \subsection{Leave-One-Profile-Out Diagnostics}
 
-We re-estimated each of the three main models twenty-seven times, excluding one synthetic profile at a time (27 fits per model). Coefficient ranges across the 27 fits are archived with the replication package. The H1 MFQ composite slope stays between 2.5 and 3.4 and is never statistically distinguishable from zero ($p$ between 0.16 and 0.33), so the H1 null is not produced by any single test case. For H2 under the primary pair-fixed-effects specification, no retained frame is statistically distinguishable from zero in any of the 27 fits: the access-barrier coefficient is positive in 25 of 27 fits (range $-$0.09 to $+0.32$), the collective-responsibility coefficient ranges from $-$0.08 to $+0.01$, and the coercive-backlash coefficient is positive in all 27 fits ($+0.37$ to $+2.33$) but never significant. For H3, all three frame contrasts retain both sign and significance in all 27 fits (autonomy $+4.64$ to $+5.18$; collective obligation $-$11.01 to $-$10.70; equity/access $+4.56$ to $+5.10$; $p<0.001$ throughout).
+We re-estimated each of the three main models twenty-seven times, excluding one synthetic profile at a time (27 fits per model). Coefficient ranges across the 27 fits are archived with the replication package. The H1 MFQ composite slope stays between 2.5 and 3.4 and is never statistically distinguishable from zero ($p$ between 0.16 and 0.33), so the H1 null is not produced by any single test case. For H2 under the primary pair-fixed-effects specification, no retained frame is statistically distinguishable from zero in any of the 27 fits: the access-barrier coefficient is negative in all 27 fits (range $-$0.61 to $-$0.06), the collective-responsibility coefficient ranges from $-$0.08 to $+0.01$, and the coercive-backlash coefficient ranges from $-$0.75 to $+0.88$ but is never significant. For H3, all three frame contrasts retain both sign and significance in all 27 fits (autonomy $+4.64$ to $+5.18$; collective obligation $-$11.01 to $-$10.70; equity/access $+4.56$ to $+5.10$; $p<0.001$ throughout).
 
 \subsection{Power and Minimum Detectable Effect Diagnostics}
 \label{app:h1-power}
