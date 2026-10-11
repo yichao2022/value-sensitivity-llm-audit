@@ -201,11 +201,11 @@ where the MFQ composite is the signed sum of standardized foundation scores: eac
 \subsubsection{Narrative frame-decomposition models (H2)}
 \label{sec:est-h2}
 
-H2 estimates a frame--outcome association model with one fixed effect per model--profile pair:
+H2 estimates frame--outcome association models with one fixed effect per model--profile pair, fitting each frame separately:
 \[
-\Delta_{mir} = \alpha_{mi} + \sum_{k} \beta_k \mathbb{I}(k \in r_{mir}) + \varepsilon_{mir},
+\Delta_{mir} = \alpha_{mi} + \beta_k \mathbb{I}(k \in r_{mir}) + \varepsilon_{mir}, \quad k \in \{\text{access\_barriers}, \text{coercive\_backlash}\},
 \]
-where \(\alpha_{mi}\) is an indicator for the model--profile pair (405 pairs in the fifteen-model sample). The frame indicators are rationale-level and vary across the five repetitions of a pair, so the coefficients are identified exclusively from repetition-level changes in frame presence within the same model--profile pair. Pair fixed effects absorb the cell-specific baseline, including any model-specific response to particular profiles that separate model and profile fixed effects would leave in the error term; a specification with separate model and profile fixed effects (additive heterogeneity only) is reported as a sensitivity analysis in Appendix~\ref{app:h2-identification}. The MFQ composite does not enter the H2 model. Estimates are co-expression, not causal mediation, because willingness and rationales are generated in the same response; standard errors are clustered at the model--profile level and frame-specific \(p\)-values use Benjamini--Hochberg FDR at \(q=0.10\).
+where \(\alpha_{mi}\) is an indicator for the model--profile pair (405 pairs in the fifteen-model sample). The frame indicators are rationale-level and vary across the five repetitions of a pair, so each coefficient is identified exclusively from repetition-level changes in frame presence within the same model--profile pair. Pair fixed effects absorb the cell-specific baseline, including any model-specific response to particular profiles that separate model and profile fixed effects would leave in the error term; a specification with separate model and profile fixed effects (additive heterogeneity only) is reported as a sensitivity analysis in Appendix~\ref{app:h2-identification}. The MFQ composite does not enter the H2 model. Estimates are co-expression, not causal mediation, because willingness and rationales are generated in the same response; standard errors are clustered at the model--profile level and frame-specific \(p\)-values use Benjamini--Hochberg FDR at \(q=0.10\).
 
 \subsubsection{Frame-manipulation models (H3)}
 \label{sec:est-h3}
@@ -277,7 +277,7 @@ H1 tests whether the model-level MFQ composite predicts cross-model variation in
 \subsubsection{H1: Orientation--Effect Models}
 \label{subsubsec:results-h1}
 
-\textbf{H1 Result: Aggregate orientation does not significantly predict cross-model variation.} The MFQ composite does not significantly predict cross-model variation in simulated burden effects ($\hat{\beta} = -0.19$, 95\% CI [$-2.50$, $+2.12$], $p = 0.875$, $R^2 = 0.002$). Models with higher individualizing-composite orientations show no consistent pattern in simulated burden effects. Per-foundation diagnostics show mixed point estimates across binding foundations.
+\textbf{H1 Result: Aggregate orientation does not significantly predict cross-model variation.} The MFQ composite does not significantly predict cross-model variation in simulated burden effects ($\hat{\beta} = -0.50$, 95\% CI [$-2.40$, $+1.39$], $p = 0.58$, $R^2 = 0.025$). Models with higher individualizing-composite orientations show no consistent pattern in simulated burden effects. Per-foundation diagnostics show mixed point estimates across binding foundations.
 
 Figure~\ref{fig:pvc_delta} shows the MFQ composite against mean burden effects: the fitted line is shallow, and models with more individualizing (higher-composite) orientations do not systematically produce smaller effects. Per-foundation diagnostics are consistent with the aggregate null: none of the five foundations reached conventional significance. All three binding-foundation point estimates were negative, with loyalty showing the largest magnitude ($\hat{\beta}=$ $-$4.73, $p=0.095$), followed by authority ($\hat{\beta}=$ $-$4.25, $p=0.138$) and sanctity ($\hat{\beta}=$ $-$3.35, $p=0.250$).
 
@@ -290,7 +290,7 @@ The null result for a composite derived from an MFQ-30--derived probe based on a
 \caption{Moral-foundations composite and predicted administrative-burden effects}
 \label{fig:pvc_delta}
 \begin{flushleft}
-\footnotesize Notes: Each point represents one model in the thirteen-model sample. The horizontal axis reports the model's MFQ-30 composite (signed sum of standardized foundation scores: care + fairness $-$ loyalty $-$ authority $-$ sanctity), and the vertical axis reports the model-level average burden effect, \(\bar{\Delta}_m = \bar{W}^{low}_m - \bar{W}^{high}_m\). The fitted line shows the bivariate regression ($\hat{\beta} = -0.19$, 95\% CI [$-2.50$, $+2.12$], $p = 0.875$, $R^2 = 0.002$). The MFQ composite does not significantly predict variation in simulated burden effects.
+\footnotesize Notes: Each point represents one model in the fifteen-model sample. The horizontal axis reports the model's MFQ-30 composite (signed sum of standardized foundation scores: care + fairness $-$ loyalty $-$ authority $-$ sanctity), and the vertical axis reports the model-level average burden effect, \(\bar{\Delta}_m = \bar{W}^{low}_m - \bar{W}^{high}_m\). The fitted line shows the bivariate regression ($\hat{\beta} = -0.50$, 95\% CI [$-2.40$, $+1.39$], $p = 0.58$, $R^2 = 0.025$). The MFQ composite does not significantly predict variation in simulated burden effects.
 \end{flushleft}
 \end{figure}
 \clearpage
@@ -429,7 +429,7 @@ in LLM-Assisted Health Policy Simulation\par}
 \end{center}
 \vspace{2.5em}
 \makeatletter\def\vslaMainDocument{1}\makeatother
-\input{supplementary-content.tex}
+\input{supplementary.tex}
 \endgroup
 
 \end{document}
