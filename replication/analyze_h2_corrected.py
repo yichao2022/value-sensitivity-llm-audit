@@ -12,8 +12,10 @@ SEs clustered at the pair level.
 
 Writes outputs/canonical/h2_pairfe_corrected.csv (main results)
 """
-import importlib.util
+import csv
+import re
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 import numpy as np
@@ -27,14 +29,118 @@ CAN = HOME / "outputs" / "canonical"
 # CORRECTED: only 2 frames with sufficient variation
 FRAMES = ["access_barriers", "coercive_backlash"]
 
+# Frame coding rules (from analyze_canonical_h2.py)
+FRAME_RULES = {
+    "access_barriers": [
+        r"cannot\s+afford", r"can'?t\s+afford",
+        r"miss\s+work", r"miss\w*\s+(her|the)\s+job", r"lose\s+(income|wages|pay)",
+        r"lost\s+wages?", r"unpaid\s+(leave|time)",
+        r"childcare", r"child\s+care", r"babysit",
+        r"transport", r"travel\s+(time|cost)", r"commute",
+        r"rural", r"remote\s+area", r"access\s+(to\s+)?care",
+        r"appointment\s+availability", r"long\s+wait", r"waiting\s+list",
+        r"time\s+off\s+work", r"take\s+time\s+off",
+        r"no\s+(paid\s+)?sick\s+leave", r"flexible\s+hours",
+        r"language\s+barrier", r"translation", r"interpreter",
+        r"paperwork", r"document\w*", r"proof\s+of",
+        r"insurance", r"uninsured", r"underinsured",
+        r"out\s*-\s*of\s*pocket", r"copay", r"deductible",
+    ],
+    "coercive_backlash": [
+        r"government\s+overreach", r"government\s+control",
+        r"force", r"coerce", r"mandate", r"compel",
+        r"pressure", r"arm\s*-\s*twist",
+        r"violate", r"infringe", r"encroach",
+        r"my\s+body", r"my\s+choice", r"my\s+decision",
+        r"medical\s+freedom", r"health\s+freedom",
+        r"parental\s+rights", r"parent\s*'?\s+decision",
+        r"trust\s+(issues|problem)", r"distrust",
+        r"experiment\w*", r"guinea\s+pig", r"test\s+subject",
+        r"unknown\s+(side\s*)?effects?", r"long\s*-\s*term\s+effects?",
+        r"rushed", r"too\s+fast", r"not\s+enough\s+(time|research|data)",
+        r"big\s+pharma", r"profit", r"money\s+grab",
+        r"corrupt", r"corruption", r"bribe",
+        r"conspiracy", r"cover\s*-\s*up", r"hidden\s+agenda",
+        r"punitive", r"penalty", r"lose\s+(benefits|rights)",
+    ],
+    "autonomy_infringement": [
+        r"individual\s+choice", r"personal\s+choice", r"personal\s+freedom",
+        r"autonomy", r"privacy", r"consent",
+    ],
+    "procedural_legitimacy": [
+        r"justified", r"safeguard", r"reasonable\s+(verification|requirement)",
+        r"necessary\s+(procedure|requirement)",
+    ],
+    "collective_responsibility": [
+        r"civic\s+duty", r"public\s+health", r"protect\w*\s+others?",
+        r"communal\s+(benefit|welfare|good)",
+    ],
+}
+FRAMES_ALL = list(FRAME_RULES)
+
+
+def code(text):
+    """Apply frame coding rules to text."""
+    text_lower = text.lower()
+    return {f: any(re.search(p, text_lower) for p in rules) for f, rules in FRAME_RULES.items()}
+
 
 def load_rows():
     """Load H2 data with CORRECTED frame coding."""
-    spec = importlib.util.spec_from_file_location("h2", HOME / "analyze_canonical_h2.py")
-    h2 = importlib.util.module_from_spec(spec)
-    sys.modules["h2"] = h2
-    spec.loader.exec_module(h2)
-    df = pd.DataFrame(h2.load()).rename(columns={"PVC": "PVOC"})
+    # Data paths (relative to replication/ directory)
+    # Load simulation data - group by model, profile_id, repetition to get low/high pairs
+    sim_rows = []
+    with open(CAN / "sim_raw.csv") as f:
+        for r in csv.DictReader(f):
+            if r.get("non_refusal") == "True" and r.get("json_valid") == "True":
+                sim_rows.append(r)
+    
+    # Group by model, profile_id to find low/high pairs
+    pairs = defaultdict(lambda: {"low": [], "high": []})
+    for r in sim_rows:
+        key = (r["model"], r["profile_id"])
+        burden = r["burden_level"]
+        if burden in ("low", "high"):
+            pairs[key][burden].append(r)
+    
+    # Load PVC data
+    pvc = {}
+    with open(CAN / "table2_orientation_profiles.csv") as f:
+        for r in csv.DictReader(f):
+            pvc[r["Model"]] = float(r["PVC"])
+    
+    # Build rows - calculate delta = low_willingness - high_willingness for each repetition
+    rows = []
+    for (model, profile_id), pair in pairs.items():
+        if len(pair["low"]) == 0 or len(pair["high"]) == 0:
+            continue
+        
+        # For each high burden row, find matching low burden row by repetition
+        low_by_rep = {int(r.get("repetition", 0)): float(r["willingness"]) for r in pair["low"]}
+        
+        for high_row in pair["high"]:
+            rep = int(high_row.get("repetition", 0))
+            if rep not in low_by_rep:
+                continue
+            
+            lo = low_by_rep[rep]
+            hi = float(high_row["willingness"])
+            
+            # Use high burden rationale for frame coding
+            rationale = (high_row.get("rationale") or "").strip()
+            
+            rows.append({
+                "model": model, 
+                "profile_id": profile_id, 
+                "repetition": rep,
+                "delta": lo - hi, 
+                "PVC": pvc.get(model),
+                "rationale": rationale,
+                **code(rationale)
+            })
+    
+    df = pd.DataFrame([r for r in rows if r["PVC"] is not None])
+    df = df.rename(columns={"PVC": "PVOC"})
     df["pair"] = df.model.astype(str) + "|" + df.profile_id.astype(str)
     return df
 
@@ -48,169 +154,142 @@ def coefs(r, frames):
             continue
         ci = r.conf_int().loc[f]
         out[f] = dict(
-            b=r.params[f], 
-            se=r.bse[f], 
-            p=r.pvalues[f], 
-            lo=ci[0], 
+            b=r.params[f],
+            se=r.bse[f],
+            p=r.pvalues[f],
+            lo=ci[0],
             hi=ci[1],
             absorbed=False
         )
     return out
 
 
-def fit_pair_fe(df, cluster_se=True):
-    """LSDV: pair dummies + frames."""
-    formula = "delta ~ C(pair) + " + " + ".join(FRAMES)
-    r = smf.ols(formula, data=df)
-    return r.fit(cov_type="cluster", cov_kwds={"groups": df["pair"]}) if cluster_se else r.fit()
+def run_pairfe(df, frames):
+    """Run pair fixed effects model and return results."""
+    rows_out = []
+    
+    for pair in df["pair"].unique():
+        sub = df[df["pair"] == pair]
+        if len(sub) < 2:
+            continue
+        
+        # Build formula: delta ~ PVOC + frames
+        formula = "delta ~ PVOC + " + " + ".join(frames)
+        
+        try:
+            m = smf.ols(formula, data=sub).fit()
+            
+            # Get frame coefficients
+            for f in frames:
+                if f in m.params.index:
+                    ci = m.conf_int().loc[f]
+                    rows_out.append({
+                        "pair": pair,
+                        "frame": f,
+                        "b": m.params[f],
+                        "se": m.bse[f],
+                        "p": m.pvalues[f],
+                        "ci_low": ci[0],
+                        "ci_high": ci[1],
+                        "n": len(sub),
+                        "model": sub["model"].iloc[0],
+                        "profile_id": sub["profile_id"].iloc[0]
+                    })
+        except Exception as e:
+            print(f"Warning: failed for pair {pair}: {e}")
+            continue
+    
+    return pd.DataFrame(rows_out)
 
 
-def fit_two_way(df):
-    """Two-way FE: model + profile."""
-    formula = "delta ~ C(model) + C(profile_id) + " + " + ".join(FRAMES)
-    r = smf.ols(formula, data=df)
-    return r.fit(cov_type="cluster", cov_kwds={"groups": df["pair"]})
-
-
-def diagnostics(df):
-    """Within-pair variation diagnostics."""
+def aggregate_pairfe(results_df):
+    """Aggregate pair-level results using inverse-variance weighting."""
     rows = []
-    check_vars = FRAMES + ["delta"]
-    for f in check_vars:
-        grp = df.groupby("pair")[f]
-        within = grp.transform("mean")
-        wv = ((df[f] - within) ** 2).mean()
-        tv = ((df[f] - df[f].mean()) ** 2).mean()
-        n_const = int((grp.nunique() == 1).sum())
+    
+    for frame in results_df["frame"].unique():
+        sub = results_df[results_df["frame"] == frame]
+        if len(sub) == 0:
+            continue
+        
+        # Inverse variance weighting
+        weights = 1 / (sub["se"] ** 2)
+        w_sum = weights.sum()
+        
+        b_w = (sub["b"] * weights).sum() / w_sum
+        se_w = np.sqrt(1 / w_sum)
+        
+        # Meta-analysis style z-score
+        z = b_w / se_w
+        p = 2 * (1 - np.abs(z).round(10))  # Two-tailed
+        
+        # Confidence interval
+        ci_low = b_w - 1.96 * se_w
+        ci_high = b_w + 1.96 * se_w
+        
         rows.append({
-            "variable": f, 
-            "within_pair_share": wv / tv if tv > 0 else 0,
-            "pairs_with_no_within_variation": n_const, 
-            "pairs": df["pair"].nunique()
+            "frame": frame,
+            "b": b_w,
+            "se": se_w,
+            "z": z,
+            "p": p,
+            "ci_low": ci_low,
+            "ci_high": ci_high,
+            "n_pairs": len(sub),
+            "n_obs": sub["n"].sum()
         })
+    
     return pd.DataFrame(rows)
 
 
-def leave_one_model_out(df):
-    """LOMO diagnostics under pair-FE specification."""
-    models = df["model"].unique()
-    results = []
-    for m in models:
-        d = df[df["model"] != m].copy()
-        try:
-            r = fit_pair_fe(d)
-            for f in FRAMES:
-                results.append({
-                    "left_out": m,
-                    "frame": f,
-                    "b": r.params.get(f, np.nan),
-                    "p": r.pvalues.get(f, np.nan)
-                })
-        except Exception as e:
-            for f in FRAMES:
-                results.append({
-                    "left_out": m,
-                    "frame": f,
-                    "b": np.nan,
-                    "p": np.nan,
-                    "error": str(e)
-                })
-    return pd.DataFrame(results)
-
-
-def leave_one_profile_out(df):
-    """LOPO diagnostics under pair-FE specification."""
-    profiles = df["profile_id"].unique()
-    results = []
-    for p in profiles:
-        d = df[df["profile_id"] != p].copy()
-        try:
-            r = fit_pair_fe(d)
-            for f in FRAMES:
-                results.append({
-                    "left_out": p,
-                    "frame": f,
-                    "b": r.params.get(f, np.nan),
-                    "p": r.pvalues.get(f, np.nan)
-                })
-        except Exception as e:
-            for f in FRAMES:
-                results.append({
-                    "left_out": p,
-                    "frame": f,
-                    "b": np.nan,
-                    "p": np.nan,
-                    "error": str(e)
-                })
-    return pd.DataFrame(results)
-
-
-if __name__ == "__main__":
-    print("=" * 70)
-    print("H2 Analysis: Model x Profile Pair Fixed Effects (CORRECTED)")
-    print("=" * 70)
+def main():
+    """Run corrected H2 analysis."""
+    print("=" * 60)
+    print("H2 Analysis (CORRECTED: pair fixed effects)")
+    print("=" * 60)
     
     # Load data
     df = load_rows()
-    print(f"\nSample: N = {len(df)}, {df.model.nunique()} models, "
-          f"{df.profile_id.nunique()} profiles, {df['pair'].nunique()} pairs")
+    print(f"Loaded {len(df)} rows from {df['model'].nunique()} models")
+    print(f"Pairs: {df['pair'].nunique()}")
     
-    # Diagnostics
-    dd = diagnostics(df)
-    print("\n=== Identification Diagnostics ===")
-    for _, r in dd.iterrows():
-        print(f"  {r.variable:<25} within-pair share = {r.within_pair_share:.3f}   "
-              f"no variation: {int(r.pairs_with_no_within_variation)}/{int(r.pairs)}")
+    # Run pair-level regressions
+    print("\nRunning pair-level regressions...")
+    pair_results = run_pairfe(df, FRAMES)
+    print(f"Completed {len(pair_results)} pair-frame estimates")
     
-    # Main regression (pair FE)
-    r_pair = fit_pair_fe(df)
-    v_pair = coefs(r_pair, FRAMES)
+    # Aggregate
+    print("\nAggregating with inverse-variance weighting...")
+    agg = aggregate_pairfe(pair_results)
     
-    # Two-way FE for comparison
-    r_two = fit_two_way(df)
-    v_two = coefs(r_two, FRAMES)
+    # Apply Benjamini-Hochberg correction
+    if len(agg) > 0:
+        agg["p_bh"] = multipletests(agg["p"], method="fdr_bh")[1]
     
-    # BH adjustment
-    pvals = [v_pair[f]["p"] for f in FRAMES]
-    _, p_bh, _, _ = multipletests(pvals, method="fdr_bh", alpha=0.10)
+    # Display results
+    print("\n" + "=" * 60)
+    print("CORRECTED H2 Results (Pair Fixed Effects)")
+    print("=" * 60)
+    for _, r in agg.iterrows():
+        sig = "***" if r["p_bh"] < 0.001 else "**" if r["p_bh"] < 0.01 else "*" if r["p_bh"] < 0.05 else ""
+        print(f"\n{r['frame']}:")
+        print(f"  b = {r['b']:+.4f}")
+        print(f"  SE = {r['se']:.4f}")
+        print(f"  95% CI = [{r['ci_low']:.4f}, {r['ci_high']:.4f}]")
+        print(f"  z = {r['z']:.3f}")
+        print(f"  p (uncorrected) = {r['p']:.4f}")
+        print(f"  p (BH corrected) = {r['p_bh']:.4f} {sig}")
+        print(f"  N pairs = {r['n_pairs']}")
     
-    # Build main results table
-    results = []
-    for i, f in enumerate(FRAMES):
-        results.append({
-            "frame": f,
-            "b_pairfe": v_pair[f]["b"],
-            "se_pairfe": v_pair[f]["se"],
-            "p_pairfe": v_pair[f]["p"],
-            "lo_pairfe": v_pair[f]["lo"],
-            "hi_pairfe": v_pair[f]["hi"],
-            "p_bh": p_bh[i],
-            "b_twoway": v_two[f]["b"],
-            "absorbed": v_pair[f].get("absorbed", False)
-        })
+    # Save results
+    out_file = CAN / "h2_pairfe_corrected.csv"
+    agg.to_csv(out_file, index=False)
+    print(f"\n✓ Results saved to {out_file}")
     
-    df_results = pd.DataFrame(results)
-    
-    print("\n=== Main Results (Pair FE) ===")
-    print(df_results.to_string(index=False))
-    
-    # Save main results
-    CAN.mkdir(parents=True, exist_ok=True)
-    df_results.to_csv(CAN / "h2_pairfe_corrected.csv", index=False)
-    print(f"\nSaved: {CAN / 'h2_pairfe_corrected.csv'}")
-    
-    # LOMO
-    print("\n=== Running LOMO (Leave-One-Model-Out) ===")
-    lomo = leave_one_model_out(df)
-    lomo.to_csv(CAN / "h2_pairfe_lomo_corrected.csv", index=False)
-    print(f"Saved: {CAN / 'h2_pairfe_lomo_corrected.csv'}")
-    
-    # LOPO
-    print("\n=== Running LOPO (Leave-One-Profile-Out) ===")
-    lopo = leave_one_profile_out(df)
-    lopo.to_csv(CAN / "h2_pairfe_lopo_corrected.csv", index=False)
-    print(f"Saved: {CAN / 'h2_pairfe_lopo_corrected.csv'}")
-    
-    print("\n" + "=" * 70)
-    print("Analysis complete.")
-    print("=" * 70)
+    # Also save pair-level results
+    pair_file = CAN / "h2_pairfe_pair_level.csv"
+    pair_results.to_csv(pair_file, index=False)
+    print(f"✓ Pair-level results saved to {pair_file}")
+
+
+if __name__ == "__main__":
+    main()
