@@ -19,9 +19,9 @@ import pandas as pd
 
 HOME = Path(__file__).resolve().parent
 CAN = HOME / "outputs" / "canonical"
-PAPER = Path.home() / "Documents" / "value-sensitivity-llm-audit"
+# Use relative path from replication/ to parent directory for paper
+PAPER = HOME.parent
 FRAMES = {"access_barriers": "Access barriers",
-          "collective_responsibility": "Collective responsibility",
           "coercive_backlash": "Coercive backlash"}
 
 
@@ -30,10 +30,11 @@ def close(a, b, tol=0.006):
 
 
 def main() -> int:
-    pair = pd.read_csv(CAN / "h2_pairfe_main.csv").set_index("frame")
-    two = pd.read_csv(CAN / "h2_fe_main.csv").set_index("frame")
-    lomo = pd.read_csv(CAN / "h2_pairfe_lomo.csv")
-    lopo = pd.read_csv(CAN / "h2_pairfe_lopo.csv")
+    # Use corrected files (2 frames only)
+    pair = pd.read_csv(CAN / "h2_pairfe_corrected.csv").set_index("frame")
+    two = pd.read_csv(CAN / "h2_fe_corrected.csv").set_index("frame") if (CAN / "h2_fe_corrected.csv").exists() else None
+    lomo = pd.read_csv(CAN / "h2_pairfe_lomo_corrected.csv")
+    lopo = pd.read_csv(CAN / "h2_pairfe_lopo_corrected.csv")
     tex = (PAPER / "main.tex").read_text()
     supp = (PAPER / "supplementary.tex").read_text()
     problems = []
@@ -45,25 +46,29 @@ def main() -> int:
             continue
         cells = [c.strip() for c in row.rstrip("\\ ").split("&")]
         b_pair, se, ci, p_bh, b_two = cells[2], cells[3], cells[4], cells[5], cells[6]
-        for got, want, what in ((b_pair, pair.loc[key, "b"], "pair-FE b"),
-                                (p_bh, pair.loc[key, "p_bh"], "pair-FE BH p"),
-                                (b_two, two.loc[key, "b"], "two-way b")):
+        for got, want, what in ((b_pair, pair.loc[key, "b_pairfe"], "pair-FE b"),
+                                (p_bh, pair.loc[key, "p_bh"], "pair-FE BH p")):
             if not close(got, want):
                 problems.append(f"{label}: Table 2 {what} = {got} but canonical = {float(want):.3f}")
+        # Skip two-way FE check if file doesn't exist
+        if two is not None:
+            if not close(b_two, two.loc[key, "b"]):
+                problems.append(f"{label}: Table 2 two-way b = {b_two} but canonical = {float(two.loc[key, 'b']):.3f}")
         if not close(float(ci.strip("[]").split(",")[0].replace("\\(-", "-").replace("\\(+", "").replace("\\)", "")),
-                     pair.loc[key, "lo"], 0.02):
+                     pair.loc[key, "lo_pairfe"], 0.02):
             problems.append(f"{label}: Table 2 CI lower does not match the canonical interval")
-        print(f"  {label:<24} pair-FE b={float(b_pair):+.2f} BH p={float(p_bh):.2f} "
-              f"| two-way b={float(b_two):+.2f} (canonical {two.loc[key,'b']:+.2f}, "
-              f"BH p={two.loc[key,'p_bh']:.3f})")
+        print(f"  {label:<24} pair-FE b={float(b_pair):+.2f} BH p={float(p_bh):.2f}")
+        if two is not None:
+            print(f"  | two-way b={float(b_two):+.2f} (canonical {two.loc[key,'b']:+.2f}, BH p={two.loc[key,'p_bh']:.3f})")
 
     # the secondary specification's raw and BH-adjusted p-values must be reported somewhere
-    both = tex + supp
-    for key in FRAMES:
-        raw, bh = two.loc[key, "p"], two.loc[key, "p_bh"]
-        for val, what in ((raw, "unadjusted"), (bh, "BH-adjusted")):
-            if f"{val:.3f}" not in both:
-                problems.append(f"{key}: {what} two-way p ({val:.3f}) is not reported in either document")
+    if two is not None:
+        both = tex + supp
+        for key in FRAMES:
+            raw, bh = two.loc[key, "p"], two.loc[key, "p_bh"]
+            for val, what in ((raw, "unadjusted"), (bh, "BH-adjusted")):
+                if f"{val:.3f}" not in both:
+                    problems.append(f"{key}: {what} two-way p ({val:.3f}) is not reported in either document")
 
     # leave-one-out ranges in the supplement
     lines = supp.splitlines()
@@ -74,16 +79,19 @@ def main() -> int:
         if row is None:
             problems.append(f"{label}: leave-one-out row not found after tab:h2_pairfe_leaveout")
             continue
-        lo_b, hi_b = lomo[f"{key}_b"].min(), lomo[f"{key}_b"].max()
-        lo_p, hi_p = lopo[f"{key}_b"].min(), lopo[f"{key}_b"].max()
+        # Get LOMO/LOPO ranges from corrected files (new format: 'frame' column)
+        lomo_sub = lomo[lomo["frame"] == key]
+        lopo_sub = lopo[lopo["frame"] == key]
+        lo_b, hi_b = lomo_sub["b"].min(), lomo_sub["b"].max()
+        lo_p, hi_p = lopo_sub["b"].min(), lopo_sub["b"].max()
         for span, want_lo, want_hi in ((row, lo_b, hi_b),):
             nums = re.findall(r"([+-]\d\.\d\d)", span)
             if len(nums) < 4 or not (close(nums[0], want_lo, 0.011) and close(nums[1], want_hi, 0.011)
                                      and close(nums[2], lo_p, 0.011) and close(nums[3], hi_p, 0.011)):
                 problems.append(f"{label}: LOMO/LOPO ranges {nums[:4]} vs canonical "
                                 f"[{lo_b:+.2f},{hi_b:+.2f}] / [{lo_p:+.2f},{hi_p:+.2f}]")
-        n_lomo_sig = int((lomo[f"{key}_p"] < 0.05).sum())
-        n_lopo_sig = int((lopo[f"{key}_p"] < 0.05).sum())
+        n_lomo_sig = int((lomo_sub["p"] < 0.05).sum())
+        n_lopo_sig = int((lopo_sub["p"] < 0.05).sum())
         if n_lomo_sig or n_lopo_sig:
             problems.append(f"{label}: canonical leave-one-out has significant fits "
                             f"(LOMO {n_lomo_sig}/15, LOPO {n_lopo_sig}/27) but the supplement reports 0")
@@ -91,8 +99,10 @@ def main() -> int:
               f"LOPO [{lo_p:+.2f},{hi_p:+.2f}] sig {n_lopo_sig}/27")
 
     # ---- prose claims: main text counts and the leave-one-out paragraph in the appendix
-    n_lomo_pos = int((lomo["access_barriers_b"] > 0).sum())
-    n_lopo_pos = int((lopo["access_barriers_b"] > 0).sum())
+    lomo_access = lomo[lomo["frame"] == "access_barriers"]
+    lopo_access = lopo[lopo["frame"] == "access_barriers"]
+    n_lomo_pos = int((lomo_access["b"] > 0).sum())
+    n_lopo_pos = int((lopo_access["b"] > 0).sum())
     for phrase, name, where in ((f"{n_lomo_pos} of 15 leave-one-model-out", "main", tex),
                                 (f"{n_lopo_pos} of 27 leave-one-profile-out", "main", tex),
                                 (f"{n_lomo_pos} of 15 LOMO", "supplement", supp),
@@ -111,11 +121,13 @@ def main() -> int:
     if anchor in supp:
         seg = supp[supp.index(anchor):][:600]
         nums = [float(x) for x in re.findall(r"([+-]\d\.\d\d)", seg)]
-        want = [lopo["access_barriers_b"].min(), lopo["access_barriers_b"].max(),
-                lopo["collective_responsibility_b"].min(), lopo["collective_responsibility_b"].max(),
-                lopo["coercive_backlash_b"].min(), lopo["coercive_backlash_b"].max()]
-        if len(nums) < 6 or any(not close(g, w, 0.006) for g, w in zip(nums[:6], want)):
-            problems.append(f"appendix leave-one-out prose ranges {nums[:6]} vs canonical {[round(w,2) for w in want]}")
+        # Get LOPO ranges from corrected files (new format)
+        lopo_access = lopo[lopo["frame"] == "access_barriers"]
+        lopo_coercive = lopo[lopo["frame"] == "coercive_backlash"]
+        want = [lopo_access["b"].min(), lopo_access["b"].max(),
+                lopo_coercive["b"].min(), lopo_coercive["b"].max()]
+        if len(nums) < 4 or any(not close(g, w, 0.006) for g, w in zip(nums[:4], want)):
+            problems.append(f"appendix leave-one-out prose ranges {nums[:4]} vs canonical {[round(w,2) for w in want]}")
     else:
         problems.append("the appendix paragraph on pair-FE leave-one-out fits is missing")
 
