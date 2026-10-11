@@ -1,0 +1,16 @@
+Model,MFQ Composite,Δ Mean
+Claude Haiku,-0.34,30.82
+Claude Opus 4.8,-0.293,35.81
+Claude Sonnet 4.6,-0.219,31.5
+Cohere Command R+,-0.047,35.74
+DeepSeek-V3.2,-0.599,37.79
+GPT-4.1,0.412,25.63
+GPT-4.1 mini,0.935,29.33
+GPT-4o,1.4,23.07
+Gemini 2.5 Flash,-0.267,48.15
+Gemini 2.5 Pro,-0.03,53.93
+Kimi K2.6,-0.117,38.13
+Llama 3.1 70B Instruct,-0.454,29.04
+Llama 3.1 8B Instruct,-0.961,55.44
+Mistral Large,-0.047,36.96
+Qwen3.7 Plus,0.624,54.45

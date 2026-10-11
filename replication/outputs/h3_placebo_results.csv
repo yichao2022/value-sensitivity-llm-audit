@@ -9762,7 +9762,31 @@ H3P_00580,Mistral Large,placebo,P04,high,5,,0,0,"Error code: 400 - {'error': {'m
 H3P_00581,Mistral Large,placebo,P05,low,1,,0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
 H3P_00582,Mistral Large,placebo,P05,low,2,,0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
 H3P_00583,Mistral Large,placebo,P05,low,3,,0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
-H3P_00584,Mistral Large,placebo,P05,low,4,,0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
+H3P_00584,Mistral Large,placebo,P05,low,4,"Based on the **person profile** and the **vaccination scenario**, here’s a reasoned estimate of her **willingness to proceed with vaccination (0–100)**:
+
+### **Estimated Willingness: 70–80/100**
+*(Likely to proceed, but with some hesitations or barriers that could lower it further.)*
+
+---
+
+### **Key Factors Influencing Willingness:**
+#### **1. Convenience & Accessibility (Positive Influence: +30–40 pts)**
+   - **Nearby location (pharmacy vs. distant clinic):** Eliminates travel time/cost, a major barrier for someone with a young child and limited income. This is a **strong motivator**.
+   - **Extended hours (evenings/weekends):** Fits her part-time work schedule and childcare needs, reducing logistical stress.
+   - **Fast process (15 min total):** Minimal disruption to her day, which is critical for a busy parent.
+   - **No documentation beyond ID:** Simplifies the process, avoiding potential bureaucratic hurdles.
+
+#### **2. Trust in Public Health Authorities (Neutral/Medium Influence: +10–15 pts)**
+   - Her **medium trust** suggests she’s not strongly opposed but may have lingering questions or skepticism. The **pharmacy setting** (vs. a government clinic) might feel more neutral or less intimidating, slightly increasing trust.
+   - If the pharmacy is a **familiar brand** (e.g., CVS, Walgreens), this could further boost confidence.
+
+#### **3. Socioeconomic & Practical Barriers (Negative Influence: -10–20 pts)**
+   - **Low income ($20k/year):** Even small costs (e.g., transportation, lost wages) can be a deterrent. However, the **nearby location** mitigates this.
+   - **Childcare:** A 3-year-old complicates outings. If she can’t bring the child to the appointment, she may need to arrange care, adding friction. The **short duration (15 min)** helps, but this remains a hurdle.
+   - **Part-time work flexibility:** While helpful, she may still worry about missing work or unpredictable schedules. Evening/weekend availability is a **major plus** here.
+   - **Education level:** High school education may correlate
+
+[WILLINGNESS: 100]",0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
 H3P_00585,Mistral Large,placebo,P05,low,5,,0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
 H3P_00586,Mistral Large,placebo,P05,high,1,,0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
 H3P_00587,Mistral Large,placebo,P05,high,2,,0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
@@ -9889,7 +9913,37 @@ H3P_00707,Mistral Large,placebo,P17,high,2,,0,0,"Error code: 400 - {'error': {'m
 H3P_00708,Mistral Large,placebo,P17,high,3,,0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
 H3P_00709,Mistral Large,placebo,P17,high,4,,0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
 H3P_00710,Mistral Large,placebo,P17,high,5,,0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
-H3P_00711,Mistral Large,placebo,P18,low,1,,0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
+H3P_00711,Mistral Large,placebo,P18,low,1,"Based on the provided **person profile** and **vaccination scenario**, here’s an estimated **willingness score (0–100)** to proceed with vaccination, along with the reasoning behind it:
+
+### **Estimated Willingness: 70–80/100**
+*(Likely to proceed, but with some hesitation or minor barriers to address.)*
+
+---
+
+### **Key Factors Influencing Willingness:**
+1. **Convenience of the Scenario (High Positive Impact)**
+   - **Nearby location (pharmacy):** Reduces travel time and effort.
+   - **Extended hours (evenings/weekends):** Fits her self-employed, flexible schedule and childcare needs.
+   - **No documentation beyond ID:** Low bureaucratic hassle.
+   - **Quick process (15 minutes):** Minimal time commitment, which is critical for a busy parent.
+   - **Immediate confirmation:** Reduces uncertainty and procrastination.
+
+   *→ These factors strongly increase willingness, especially for someone with a 3-year-old and a variable schedule.*
+
+2. **Trust in Public Health Authorities (Medium Impact)**
+   - Her **medium trust** suggests she may seek additional reassurance (e.g., from her doctor, friends, or online sources) but is not outright skeptical.
+   - If the vaccine is **recommended by her regular doctor**, willingness would likely rise to **80–85/100**.
+
+3. **Socioeconomic and Educational Context (Moderate Impact)**
+   - **Household income ($55K/year):** Not a major barrier, but cost (if any) could be a concern. The scenario implies no out-of-pocket cost, which helps.
+   - **High school education:** May correlate with **lower health literacy** or **higher susceptibility to misinformation**, but the **convenience of the scenario** mitigates this.
+   - **Self-employed:** Time is valuable; the **15-minute process** is a major plus.
+
+4. **Parenting Responsibilities (Mixed Impact)**
+   - **3-year-old child:** May prioritize the child’s health (e.g., if the vaccine is for flu/COVID/RSV, she may see it as protective for her child too).
+   - However, **childcare logistics** could be a minor hurdle—if she can’t bring the child, she
+
+[WILLINGNESS: 100]",0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
 H3P_00712,Mistral Large,placebo,P18,low,2,,0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
 H3P_00713,Mistral Large,placebo,P18,low,3,,0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"
 H3P_00714,Mistral Large,placebo,P18,low,4,,0,0,"Error code: 400 - {'error': {'message': 'mistral-large-latest is not a valid model ID', 'code': 400}, 'user_id': 'user_3AoV2gBwHOCUCnmKpo9wsYeJqxb'}"

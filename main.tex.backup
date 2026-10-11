@@ -1,0 +1,433 @@
+
+\documentclass[12pt,a4paper]{article}
+
+% ---------- 宏包 ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{pdflscape}
+\usepackage{xurl}
+\usepackage{hyperref}
+\hypersetup{hidelinks}  % submission PDF: no coloured link borders
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\singlespacing
+\setlength{\emergencystretch}{3em}
+\sloppy
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{docmute}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\breakabletexttt}[1]{\begingroup\ttfamily\small\path{#1}\endgroup}
+
+% ---------- 标题 ----------
+\title{A Framework for Auditing Value Sensitivity in Large Language Model--Assisted Health Policy Simulation}
+
+\author{Yichao Jin \thanks{University of Texas at Dallas,Yichao.Jin@UTDallas.edu} \\
+\textit{ EPPS, University of Texas at Dallas }}
+
+\date{October 3, 2026}
+
+\begin{document}
+\maketitle
+
+% ---------- 摘要 ----------
+
+\begin{abstract}
+
+\noindent\textbf{Objective:} To test whether LLM-assisted policy simulations are robust to model choice, prompt framing, and measured moral foundations, using administrative burden in U.S. vaccination access as a testbed.
+
+\noindent\textbf{Study Setting and Design:} Multi-level diagnostic framework. Fifteen LLM endpoints completed an MFQ-30--derived probe and simulated vaccination willingness for 27 standardized profiles under low- and high-burden conditions, yielding tests of composite orientation (H1), rationale-frame association (H2), and within-model frame manipulation (H3).
+
+\noindent\textbf{Data Sources and Analytic Sample:} Responses were collected on 16--17 September 2026 (UTC) from 13 LLM endpoints accessed through provider APIs and gateways. H1: 15 model endpoints; H2: 2,019 analyzable low-high repetition pairs nested within 405 model-profile cells; H3: 108 clusters (2,159 observations). The 27 synthetic profiles are constructed test cases; no human participants were involved.
+
+\noindent\textbf{Principal Findings:} 
+(1) A composite derived from an MFQ-30--derived probe does not significantly predict cross-model variation in simulated burden effects ($\beta_1 = -6.69$, 95\% CI [$-16.27$, $+2.88$], $p = 0.155$, $R^2 = 0.149$): higher individualizing-composite models show no consistent pattern in burden effects.
+(2) Among the two rationale frames with sufficient variation for estimation, neither showed a detectable within-pair association with simulated burden effects (BH-adjusted \(p \geq 0.86\)).
+(3) Assigned frames shift simulated burden effects within models: autonomy $+4.96$ [3.57, 6.35], collective obligation $-10.88$ [$-$12.54, $-$9.21], equity/access $+4.84$ [3.45, 6.24]; the autonomy direction reverses in one of four models.
+
+\noindent\textbf{Conclusions:} In this testbed, LLM-assisted policy simulation is frame-sensitive: identical models, profiles, and scenarios yield materially different estimates (pooled shifts of 4.8--10.9 points on a 0--100 scale) depending on analyst-selected framing. These results characterize simulation behavior, not real-world vaccination response.
+
+\vspace{0.5em}
+\noindent\rule{\linewidth}{0.4pt}
+\vspace{0.3em}
+
+\noindent\textbf{What is known on this topic}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\item LLMs are increasingly used to simulate social judgments and policy effects in health services research.
+\item Model values are usually measured with survey prompts rather than downstream simulated policy effects, so whether those orientations shape simulated effects is unknown.
+\end{itemize}
+
+\vspace{0.3em}
+\noindent\textbf{What this study found}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\item A composite derived from an MFQ-30--derived probe does not significantly predict cross-model variation in simulated burden effects: higher individualizing-composite models show no consistent pattern in burden effects.
+\item Naturally expressed rationale frames show no detectable within-pair association with simulated effects under the primary specification.
+\item Assigned frames shift simulated effects within models: collective obligation reduces them in all four tested models; autonomy and equity increase them in three.
+\end{itemize}
+
+\end{abstract}
+
+% ---------- 关键词 ----------
+\noindent\textbf{Keywords:} large language models, simulation robustness, administrative burden, policy simulation, frame sensitivity, calibration
+
+% ---------- 正文 ----------
+% ---------- Introduction 部分引用的文献 ----------
+
+\clearpage
+
+\section{Introduction}
+
+Administrative burden in U.S. health services---the learning, psychological, and compliance costs of interacting with public programs---is a well-documented barrier to care \citep{herd2018administrative,moynihan2015administrative}. It arises from forms, documentation, waiting time, procedural uncertainty, and perceived loss of autonomy, and it falls hardest on people whose informational and material resources are already constrained \citep{herd2018administrative,baekgaard2021burden,Kyle2021,Shin2025}. Policymakers therefore need tools that anticipate the access effects of procedural changes before those changes are implemented \citep{Shafer2025,halling2023administrative}.
+
+Large language models (LLMs) are increasingly used as synthetic participants and behavioral simulators---as substitutes for survey respondents, as simulated agents, and as predictors of experimental outcomes \citep{Aher2022,Argyle2023,Park2023,Lin2024,Ziems2024,horton2023large,hewitt2024large}---including in health applications such as synthetic quality-of-life survey responses and simulation of population responses to policy interventions \citep{Baek2026synthetic,koaik2026llm,Templin2025framework}. As these methods move from measuring opinions to predicting policy-relevant effects, a new methodological problem arises: seemingly technical simulated policy-effect estimates may depend on analyst-selected normative framing. If normative-frame sensitivity propagates to policy simulation, otherwise identical model--profile scenarios could yield different simulated effects under alternative governance-value frames.
+
+That LLM outputs respond to prompt wording and framing is well established: survey-based value and opinion measurements shift with response format, prompting technique, and phrasing \citep{Rottger2024,Tjuatja2024,Faulborn2025,Kamal2025}; one evaluation varies 62 value propositions across 420 prompt variations (156,000 responses) and finds systematic shifts in measured positions \citep{Wright2024}. What remains unclear is whether this sensitivity propagates to the quantities policy analysts consume---simulated marginal effects of a policy condition. The distinction matters: for questionnaire-based value measurement, prompt sensitivity degrades an instrument; for an HSR simulation, a shift of several points in a simulated burden effect changes the policy reading of the estimate. Our contribution is to relocate this finding from stated opinions to simulated policy effects and to make it measurable through a framework that separates aggregate orientation, expressed rationale frames, and experimentally assigned frame clauses.
+
+This paper develops and evaluates a multi-level diagnostic framework for auditing whether LLM-assisted policy simulation outputs are robust to alternative normative framings. We use administrative burden in U.S. vaccination access as a controlled HSR testbed to demonstrate the framework.
+
+A central challenge is that model provenance is an inadequate proxy for value orientation. To avoid treating development origin as a fixed ideological category, we independently measure each model's moral foundations using an MFQ-30--derived probe adapted from the 30-item Moral Foundations Questionnaire, capturing five foundations: care, fairness, loyalty, authority, and sanctity \citep{Graham2011}. We use MFQ-30 rather than the newer MFQ-2 to maintain comparability with prior LLM value-probing literature and the established five-foundation theoretical framework.
+
+The study addresses three research questions. First, do LLMs with different measured moral-foundations profiles (MFQ-30) produce different simulated marginal effects of administrative burden on vaccination willingness? Second, are simulated burden effects systematically associated with the interpretive frames used in model rationales? Third, can simulated burden effects be shifted within the same base model by experimentally assigning governance-value frames?
+
+Contributions: (1) shift LLM value-sensitivity study from opinion to simulated policy effects; (2) apply an MFQ-30--derived probe using the original two-part 0--5 administration to measure LLM values; (3) provide a multi-level diagnostic framework for LLM simulation robustness.
+
+\section{Theoretical Framework and Hypotheses}
+
+
+\subsection{Moral Foundations}
+\label{sec:orientation-effect}
+
+Moral foundations theory proposes that moral judgments are built on innate, culturally elaborated foundations: care/harm, fairness/cheating, loyalty/betrayal, authority/subversion, and sanctity/degradation \citep{Graham2011,Graham2013}. The theory has been used to characterize ideological differences in human populations: individualizing foundations (care, fairness) emphasize protection of individuals, whereas binding foundations (loyalty, authority, sanctity) emphasize the integrity of groups and institutions. We measure each model's moral profile with the 30-item Moral Foundations Questionnaire (MFQ-30), an MFQ-30--derived probe adapted from the standard instrument in this literature. Prior work has used the same instrument to probe LLM moral judgments and found that model responses track the human-like structure of moral foundations \citep{Abdulhai2023,Abdulhai2024}. Reported value and bias profiles also depend on how the instrument is administered: constrained versus open-ended response formats, prompting technique, and survey wording yield divergent measurements \citep{Rottger2024,Tjuatja2024,Faulborn2025}, and political-orientation estimates vary across model families and instruments \citep{Motoki2024,Rozado2024,Bang2024,Peng2026}.
+
+\subsection{Three-Level Diagnostic Framework}
+\label{sec:diagnostics}
+
+The framework proceeds from coarse to fine-grained diagnostics. Each diagnostic is informative regardless of the others.
+
+\textbf{Diagnostic 1 --- Aggregate Orientation.} We first test whether a model-level moral-foundations composite (individualizing minus binding foundations) predicts cross-model variation in simulated burden effects. Because the composite is derived from an MFQ-30--derived probe based on a human-validated questionnaire, a null result here would be informative: it would indicate that even an MFQ-30--derived scalar moral score carries little cross-model audit signal for simulated policy effects, suggesting that scalar aggregate orientation scores provide limited evidence as a standalone cross-model audit signal in this endpoint sample.
+
+\textbf{Diagnostic 2 --- Naturally Expressed Framing.} We examine whether interpretive frames expressed in model rationales systematically co-occur with simulated burden effects. Access-barrier, autonomy-infringement, and coercive-backlash frames should correspond to larger effects; procedural-legitimacy and collective-responsibility frames to smaller effects. Because frames are generated rather than assigned, this diagnostic identifies rationale--outcome co-expression rather than causal pathways, and we test whether any such co-expression survives model-by-profile pair fixed effects.
+
+\textbf{Diagnostic 3 --- Experimental Frame Sensitivity.} We test whether an experimentally assigned governance-value prompt clause causally shifts simulated burden effects within the same base model. The manipulated object is the prompt clause itself: the causal claim therefore concerns the assigned framing of the prompt, not any claim about the values a model holds internally. Autonomy and equity/access frames should increase effects; collective-obligation frames should decrease them. Holding model, profiles, and scenarios fixed attributes any shift to framing itself.
+
+Each diagnostic addresses a distinct aspect of prompt-frame sensitivity and contributes to the overall assessment of simulation robustness.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig1_conceptual.pdf}
+\caption{Three-level audit of normative-frame sensitivity. H1 tests whether a model-level MFQ composite predicts cross-model variation in administrative-burden effects ($N = 15$ endpoints). H2 tests whether narrative frames expressed in model rationales are associated with simulated burden effects under model-by-profile pair fixed effects ($N = 2{,}019$). H3 tests whether an experimentally assigned governance-value prompt clause shifts the simulated burden effect within the same base model (4 models $\times$ 27 profiles $\times$ 4 frames). The three diagnostics are independent components: each is informative regardless of the outcome of the others.}
+\label{fig:conceptual}
+\end{figure}
+
+\section{Experimental Design and Methods}
+
+\subsection{Model Sample}
+\label{subsec:model-sample}
+
+We evaluate thirteen LLM endpoints spanning nine provider ecosystems (OpenAI, Anthropic, Google, Meta, Mistral, Cohere, Moonshot AI, DeepSeek, Qwen). The sample includes frontier proprietary, lower-cost, hosted open-weight, enterprise-oriented, and non-U.S. models. All models were run with temperature = 0 where supported; each cell repeated five times. All responses analyzed here were collected between 16 and 17 September 2026 (UTC). Detailed identifiers are reported in the Online Supplement.
+
+\subsection{Moral-Foundations Battery}
+\label{subsec:orientation-battery}
+
+We administered the 30-item Moral Foundations Questionnaire (MFQ-30), an MFQ-30--derived probe based on the standard instrument in moral psychology \citep{Graham2011}, measuring five foundations: care, fairness, loyalty, authority, and sanctity. Each foundation uses six items (three relevance-judgment items on a 0--5 scale and three agreement items on a 0--5 scale), following the original two-part administration. Following prior LLM-probing work with this instrument \citep{Abdulhai2023,Abdulhai2024}, we compute the moral-foundations composite as the unweighted signed sum of standardized foundation scores: $\mathrm{MFQ}_m = Z^{(\mathrm{CA})}_m + Z^{(\mathrm{FA})}_m - Z^{(\mathrm{LO})}_m - Z^{(\mathrm{AU})}_m - Z^{(\mathrm{SA})}_m$, where care and fairness (individualizing foundations) enter positively and loyalty, authority, and sanctity (binding foundations) enter negatively. All thirteen endpoints were administered the identical frozen battery protocol in the canonical rerun; the system prompt, item template, output schema, and their SHA256 hashes are reported in Appendix~\ref{app:orientation-items}.
+
+\subsection{Administrative-Burden Simulation}
+\label{subsec:burden}
+
+To measure each model's simulated burden effect, we designed a vaccination-access simulation as a controlled HSR testbed, in which the same standardized profile faces two policy conditions: low administrative burden and high administrative burden. The simulation was administered after the orientation battery but before any frame manipulation, using a fresh API call for each model--profile--condition--repetition.
+
+\subsubsection{Standardized synthetic profiles}
+\label{subsub:profiles}
+
+We constructed 27 standardized synthetic profiles as controlled test cases that cross income, work flexibility, and health-care access while holding age, gender, residence, education, family status, and trust in public health authorities constant. They are experimental stimuli designed to isolate how models interpret the same scenarios, not a representation of any human population; the full set is in the Online Supplement.
+
+\subsubsection{Low- and high-burden scenarios}
+\label{subsub:scenarios}
+
+The two conditions differ only in administrative requirements: low burden (online scheduling, nearby pharmacy, minimal documentation, about 15 minutes) and high burden (in-person registration, income verification, proof of residency, paper forms, a 1--2 hour wait, one-week advance appointment). These are a \textbf{stylized testbed} for auditing simulation robustness, not estimates of real-world burden magnitude.
+
+\subsubsection{Outcome measure}
+\label{subsub:burden-outcome}
+
+For each model, profile, burden condition, and repetition we obtained a predicted willingness on a 0--100 scale from a structured JSON response (integer score plus a brief rationale). The primary outcome is the within-profile burden effect \(\Delta_{mir} = W_{mi,\text{low},r} - W_{mi,\text{high},r}\), positive when higher burden lowers predicted willingness; model-level analyses average across profiles and repetitions.
+
+\subsection{Task-Compliance Diagnostics}
+\label{subsec:capability}
+
+Because comparable benchmark scores are not uniformly available for all fifteen endpoints, we do not construct a composite capability score. Instead we report task-specific diagnostics computed from the study's own outputs---JSON validity, score-range compliance, non-refusal, repetition-level stability, burden-effect dispersion, and flip rate (Table~S1 in the Online Supplement)---which verify protocol compliance rather than capability.
+
+\subsection{Narrative coding framework}
+\label{subsec:narrative-coding}
+
+To test H2, rationales were coded with five theoretically derived frames (autonomy infringement, procedural legitimacy, collective responsibility, access barriers, coercive backlash) using a rule-based algorithm with predefined regular-expression patterns; frames are not mutually exclusive. A manual coding audit of 200 rationales (about 10\% of the high-burden sample), in which the author reviewed rationale text alongside the algorithm's frame assignments and checked every positive assignment against the frame definitions, identified no systematic coding errors. Because that audit was not independent of the algorithm's labels and could not bound false negatives, the frame indicators are used as descriptive evidence of co-expression rather than as validated measurements. Patterns are in the Online Supplement.
+
+\subsection{Within-Model Frame Manipulation}
+\label{sec:frame-manipulation}
+
+To test H3, we varied system-prompt frames within the same base model while holding profiles, scenarios, and output format fixed. Only the frame clause changes, so the experiment identifies the causal effect of assignment to the specified prompt-frame condition on the model-generated burden effect within a model; it does not speak to the values a model is claimed to hold.
+
+\subsubsection{Model selection}
+
+The experiment used a purposive four-model subset (GPT-4.1, Llama 3.1 70B Instruct, Qwen3.7 Plus, Mistral Large) covering a frontier proprietary model, a hosted open-weight model, a non-U.S. ecosystem, and a low-composite case. This tests whether frame sensitivity can be induced across diverse endpoints, not its distribution over all fifteen.
+
+\subsubsection{Frame conditions and randomization}
+
+Four system-prompt frames were used: \emph{neutral}, \emph{autonomy}, \emph{collective obligation}, and \emph{equity/access} (weighting individual choice, civic responsibility, and unequal procedural costs, respectively). The manipulation was fully crossed---every model evaluated every profile under every frame---with frame order randomized across runs.
+
+\subsubsection{Statistical analysis}
+
+The frame effect is estimated with model and profile fixed effects and frame indicators (neutral as reference), with Holm--Bonferroni adjustment. Because the manipulation is fully crossed within models, profile fixed effects absorb time-invariant profile heterogeneity, and standard errors are clustered on the 108 model--profile units. The inferential target is the within-model--profile assigned-frame contrast; because only the prompt clause is manipulated, the estimate is the causal effect of assignment to the specified prompt-frame condition on the model-generated burden effect rather than an effect of model-held values.
+\subsection{Estimation Strategy}
+\label{sec:estimation}
+
+In H1 the MFQ composite varies only at the model level, so that analysis is descriptive; In H2, the primary specification uses model-by-profile pair fixed effects so that frame coefficients are identified from repetition-level variation within the same model--profile cell.
+
+\subsubsection{Orientation-effect models (H1)}
+\label{sec:est-h1}
+
+The primary H1 analysis tests whether models with higher moral-foundations composite scores predict larger burden effects:
+\[
+\bar{\Delta}_m = \beta_0 + \beta_1 \text{MFQ}_m + \epsilon_m,
+\]
+where the MFQ composite is the signed sum of standardized foundation scores: each foundation score is the unweighted mean of its six items, each standardised across endpoints, and the composite is \(\mathrm{MFQ}_m = Z(\mathrm{care})_m + Z(\mathrm{fairness})_m - Z(\mathrm{loyalty})_m - Z(\mathrm{authority})_m - Z(\mathrm{sanctity})_m\) (Appendix~\ref{app:orientation-items}); because its variation is model-level, this is a descriptive cross-model association rather than a high-powered population estimate. We also fit each of the five foundations separately as a diagnostic check.
+
+\subsubsection{Narrative frame-decomposition models (H2)}
+\label{sec:est-h2}
+
+H2 estimates a frame--outcome association model with one fixed effect per model--profile pair:
+\[
+\Delta_{mir} = \alpha_{mi} + \sum_{k} \beta_k \mathbb{I}(k \in r_{mir}) + \varepsilon_{mir},
+\]
+where \(\alpha_{mi}\) is an indicator for the model--profile pair (405 pairs in the fifteen-model sample). The frame indicators are rationale-level and vary across the five repetitions of a pair, so the coefficients are identified exclusively from repetition-level changes in frame presence within the same model--profile pair. Pair fixed effects absorb the cell-specific baseline, including any model-specific response to particular profiles that separate model and profile fixed effects would leave in the error term; a specification with separate model and profile fixed effects (additive heterogeneity only) is reported as a sensitivity analysis in Appendix~\ref{app:h2-identification}. The MFQ composite does not enter the H2 model. Estimates are co-expression, not causal mediation, because willingness and rationales are generated in the same response; standard errors are clustered at the model--profile level and frame-specific \(p\)-values use Benjamini--Hochberg FDR at \(q=0.10\).
+
+\subsubsection{Frame-manipulation models (H3)}
+\label{sec:est-h3}
+
+H3 uses a two-way fixed-effects model: \(\Delta_{mcir} = \alpha_m + \mu_i + \sum \beta_k \mathbb{I}(c=k) + \varepsilon_{mcir}\), with neutral as reference. Pairwise comparisons use Holm--Bonferroni correction; standard errors are clustered at the model--profile level.
+
+\subsubsection{Multiple-testing and robustness checks}
+\label{sec:robustness}
+
+Multiple-testing adjustments: Benjamini--Hochberg FDR (\(q=0.10\)) for H2, Holm--Bonferroni for H3, none for H1 (single coefficient).
+
+\subsection{Human Subjects and Institutional Review}
+\label{sec:human-subjects}
+
+This study did not involve human subjects: all analytic inputs are synthetic profiles constructed by the author and text outputs generated by commercial LLM APIs. No human participants were recruited or observed, and no identifiable or protected health information was accessed. The work therefore does not constitute human-subjects research, institutional review board approval was not required, and no IRB approval or exemption number applies. Model outputs were obtained under the providers' standard terms of service, and no model was fine-tuned or trained on study inputs.
+
+\subsection{Data and Code Availability}
+
+Replication materials---the simulation and frame-manipulation runners, the orientation battery and its scoring code, the frame-coding patterns, the analysis scripts, and the derived response files---are available at \url{https://github.com/yichao2022/value-sensitivity-llm-audit} under the MIT License (Copyright 2026 Yichao Jin), which permits use, modification, and redistribution with attribution. Raw model responses remain subject to the providers' terms of service. All reported results can be reproduced from the archived response files and committed scripts.
+
+\section{Results}
+
+\subsection{Data Quality and Descriptive Statistics}
+\label{sec:results-data-quality}
+
+Table~S1 in the Online Supplement reports task-compliance diagnostics for the expanded fifteen-model simulation (4,050 raw responses; 2,025 possible model--profile--repetition pairs, of which 2,019 are analyzable because six high-burden responses from Gemini 2.5 Flash failed structure checks). JSON validity, score-range compliance, and non-refusal rates were 100\% for fourteen of fifteen models; Gemini 2.5 Flash had six malformed responses (97.8\% compliance). The flip rate was 0\% for every model, indicating that the high-burden condition moved mean predicted willingness in the expected direction in every profile; this metric documents directional consistency of the simulated responses and does not by itself establish that models understood the manipulation. An auxiliary burden-classification diagnostic fielded for that purpose returned the correct burden label in all 810 scenarios (100\%, exact 95\% CI 99.5--100; Appendix~\ref{app:burden-prompts}), so recognition of the assigned condition is directly supported; because that check was administered separately from the simulation runs and uses the same scenario texts, it speaks to comprehension rather than to the magnitude of the simulated effects. Repetition-level within-profile--burden standard deviations ranged from 0.03 to 3.14 points on the 0--100 scale, indicating high within-model stability. Mean predicted willingness varied substantially across models (47.99--65.48), motivating the use of the within-profile marginal burden-effect outcome in the main analyses.
+
+\subsection{Orientation Profiles and Predicted Burden Effects}
+\label{sec:results-orientation-burden}
+
+Table~\ref{tab:orientation_burden} reports each model's measured moral-foundations profile together with predicted willingness under low- and high-burden conditions. Mean burden effects ($\bar{\Delta}$) range from 23.07 points (GPT-4o) to 54.45 points (Qwen3.7 Plus) across models. The MFQ composite summarizes whether a model's profile is more individualizing (positive) or more binding (negative); predicted willingness is lower under high-burden conditions for every model. Baseline willingness also varies substantially across models, which is why the analyses use the within-profile burden effect rather than raw willingness levels.
+
+\begin{table}[htbp]
+\centering
+\caption{Moral-foundations profiles and predicted administrative-burden effects by model}
+\label{tab:orientation_burden}
+\small
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{3.5cm}rrrrr@{}}
+\toprule
+Model & MFQ & Low $W$ & High $W$ & $\bar{\Delta}$ & 95\% CI \\
+\midrule
+Qwen3.7 Plus & -3.44 & 83.33 & 28.87 & 54.45 & [51.45, 57.45] \\
+Gemini 2.5 Pro & 3.93 & 77.44 & 23.52 & 53.93 & [50.93, 56.93] \\
+Gemini 2.5 Flash & 2.32 & 81.63 & 33.48 & 48.15 & [45.15, 51.15] \\
+Kimi K2.6 & 1.59 & 74.31 & 36.19 & 38.13 & [35.13, 41.13] \\
+DeepSeek-V3.2 & 1.83 & 75.76 & 37.96 & 37.79 & [34.79, 40.79] \\
+Mistral Large & -0.73 & 76.00 & 39.04 & 36.96 & [33.96, 39.96] \\
+Claude Opus 4.8 & 0.32 & 70.44 & 34.63 & 35.81 & [32.81, 38.81] \\
+Cohere Command R+ & -3.94 & 76.78 & 41.04 & 35.74 & [32.74, 38.74] \\
+Claude Sonnet 4.6 & -0.10 & 63.73 & 32.24 & 31.50 & [28.50, 34.50] \\
+GPT-4.1 mini & -1.55 & 73.48 & 44.15 & 29.33 & [26.33, 32.33] \\
+Llama 3.1 70B Instruct & 1.34 & 80.00 & 50.96 & 29.04 & [26.04, 32.04] \\
+GPT-4.1 & 4.75 & 74.67 & 49.04 & 25.63 & [22.63, 28.63] \\
+GPT-4o & 0.25 & 76.33 & 53.26 & 23.07 & [20.07, 26.07] \\
+\bottomrule
+\end{tabular*}
+\begin{flushleft}
+\footnotesize Notes: MFQ = signed sum of standardized foundation scores: care + fairness $-$ loyalty $-$ authority $-$ sanctity. Low $W$ and High $W$ are mean predicted vaccination willingness scores under low- and high-burden conditions. $\bar{\Delta}$ = Low $W$ $-$ High $W$. 95\% CI calculated as $\bar{\Delta} \pm 1.96 \times SE$, where $SE$ is the standard error of the 27 profile-level burden effects (each profile-level effect is the mean over that profile's repetitions), so repetitions are not treated as independent observations.
+\end{flushleft}
+\end{table}
+
+\subsection{Hypothesis Tests}
+\label{sec:results-hypotheses}
+
+H1 tests whether the model-level MFQ composite predicts cross-model variation in average burden effects; H2, whether rationale-level frames co-vary with predicted effects; and H3, whether assignment to a specified prompt-frame condition causally shifts predicted effects within a model. The three tests are independent: each addresses a distinct level of evidence and is informative regardless of the others.
+
+\subsubsection{H1: Orientation--Effect Models}
+\label{subsubsec:results-h1}
+
+\textbf{H1 Result: Aggregate orientation does not significantly predict cross-model variation.} The MFQ composite does not significantly predict cross-model variation in simulated burden effects ($\hat{\beta} = -0.19$, 95\% CI [$-2.50$, $+2.12$], $p = 0.875$, $R^2 = 0.002$). Models with higher individualizing-composite orientations show no consistent pattern in simulated burden effects. Per-foundation diagnostics show mixed point estimates across binding foundations.
+
+Figure~\ref{fig:pvc_delta} shows the MFQ composite against mean burden effects: the fitted line is shallow, and models with more individualizing (higher-composite) orientations do not systematically produce smaller effects. Per-foundation diagnostics are consistent with the aggregate null: none of the five foundations reached conventional significance. All three binding-foundation point estimates were negative, with loyalty showing the largest magnitude ($\hat{\beta}=$ $-$4.73, $p=0.095$), followed by authority ($\hat{\beta}=$ $-$4.25, $p=0.138$) and sanctity ($\hat{\beta}=$ $-$3.35, $p=0.250$).
+
+The null result for a composite derived from an MFQ-30--derived probe based on a human-validated questionnaire indicates no statistically detectable cross-model association in this sample, but does not establish that scalar aggregate orientation scores are insensitive audit instruments for LLM simulation in general. It does not rule out more granular channels of value sensitivity, which Diagnostics 2 and 3 examine directly.
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.78\textwidth]{output.png}
+\caption{Moral-foundations composite and predicted administrative-burden effects}
+\label{fig:pvc_delta}
+\begin{flushleft}
+\footnotesize Notes: Each point represents one model in the thirteen-model sample. The horizontal axis reports the model's MFQ-30 composite (signed sum of standardized foundation scores: care + fairness $-$ loyalty $-$ authority $-$ sanctity), and the vertical axis reports the model-level average burden effect, \(\bar{\Delta}_m = \bar{W}^{low}_m - \bar{W}^{high}_m\). The fitted line shows the bivariate regression ($\hat{\beta} = -0.19$, 95\% CI [$-2.50$, $+2.12$], $p = 0.875$, $R^2 = 0.002$). The MFQ composite does not significantly predict variation in simulated burden effects.
+\end{flushleft}
+\end{figure}
+\clearpage
+
+\subsubsection{H2: Narrative Frame-Decomposition Analysis}
+\label{subsubsec:results-h2}
+
+H2 asks whether interpretive frames in model rationales co-vary with predicted burden effects, independently of any aggregate orientation score. It is designed as a frame--outcome association analysis, not as a causal pathway from MFQ to burden predictions.
+
+Two of the five frames varied meaningfully in the high-burden rationales: access-barrier reasoning in 43.2\% (after recoding to require an explicit link between procedural costs and reduced access, resource constraints, work flexibility, childcare, provider access, or socioeconomic vulnerability) and coercive-backlash in 7.7\%. Collective-responsibility reasoning appeared in only 0.05\% of rationales once the coding rule was corrected: the original rule matched the bare phrase ``public health,'' which fired almost exclusively on ``trust in public health (authorities)'' (1{,}495 of the 2{,}019 rationales) and ``public health center'' (the vaccination site; 81 rationales) rather than on collective-responsibility language. The collective-responsibility rule was corrected on face-validity grounds before estimation of the reported H2 specifications; both the original and corrected coding rules are retained in the replication archive. After correction, only one rationale expressed a genuine collective-responsibility frame. Autonomy infringement and procedural legitimacy were near zero and are reported descriptively only.
+
+Table~\ref{tab:h2_frame_decomposition} reports the estimates. Under the primary model-by-profile pair-fixed-effects specification, none of the retained rationale frames shows a detectable association with predicted burden effects (access barriers \(\hat{b}=0.12\), 95\% CI \([-0.79, 1.03]\), BH-adjusted \(p=0.79\); coercive backlash \(1.20\), adjusted \(p=0.79\)). Collective responsibility is excluded from the inferential H2 model because corrected coding yielded only one positive rationale, leaving within-pair variation in only one of 405 model-profile pairs; this provides insufficient support for meaningful estimation. A specification with separate model and profile fixed effects yields a positive access-barrier coefficient (\(\hat{b}=1.08\), 95\% CI \([0.24, 1.92]\), adjusted \(p=0.024\)), so that association does not survive absorbing pair-specific heterogeneity: it reflects cells in which a model systematically expresses access-barrier reasoning and also shows larger burden effects, rather than variation across repeated queries of the same cell.
+
+Identification under the pair-fixed-effects specification is limited by construction. Only 7.8\% of the variance in \(\Delta\) occurs within model--profile pairs (182 of 405 pairs show no within-pair variation in \(\Delta\) at all), and the frame indicators are constant across repetitions in 237 to 362 of the 405 pairs, so the coefficients are driven by the minority of pairs in which the expressed frame changes between repeated queries. The null estimates should therefore be interpreted as evidence that the previously observed access-barrier association is not robust to pair-specific heterogeneity, rather than as evidence that rationale framing is behaviorally irrelevant: with only 7.8\% within-pair variation, the within-pair estimand is estimable but supported by sparse within-cell variation in this design.
+
+Leave-one-out diagnostics behave accordingly: under the primary specification the access-barrier coefficient stays positive in 14 of 15 leave-one-model-out fits (\(-0.05\) to \(+0.36\)) and in 25 of 27 leave-one-profile-out fits (\(-0.10\) to \(+0.32\)), but is never statistically distinguishable from zero in either series, as is the coercive-backlash frame. H2 was not supported under the primary pair-fixed-effects specification.
+
+\begin{table}[htbp]
+\centering
+\caption{Narrative frame--outcome associations under model-by-profile pair fixed effects}
+\label{tab:h2_frame_decomposition}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrcr}
+\toprule
+Frame & Prevalence & Pair-FE \(b\) & SE & 95\% CI & BH-adj.\ \(p\) & Two-way FE \(b\) \\
+\midrule
+Access barriers & 43.2\% & 0.12 & 0.46 & [\(-0.79\), 1.03] & 0.79 & 1.08 \\
+Coercive backlash & 7.7\% & 1.20 & 1.84 & [\(-2.41\), 4.81] & 0.79 & 1.59 \\
+Collective responsibility & 0.05\% & --- & --- & --- & --- & --- \\
+\bottomrule
+\end{tabular}
+}
+\begin{flushleft}
+\footnotesize Notes: The primary specification includes one fixed effect per model--profile pair (405 pairs) plus the retained rationale-frame indicators; coefficients are therefore identified exclusively from repetition-level changes in frame presence within the same model--profile pair, and standard errors are clustered at the model--profile level. \(N=2{,}019\). Collective responsibility is excluded from the primary specification because corrected coding yielded only one positive rationale, leaving within-pair variation in only one of 405 model-profile pairs. The two-way column reports a specification with separate model and profile fixed effects (additive heterogeneity only) and is shown for comparison. \(p\)-values are Benjamini--Hochberg adjusted across the retained frames (\(q=0.10\)); both are non-significant under the primary specification. Prevalence is the share of high-burden rationales expressing the frame. Only 7.8\% of the variance in the burden effect \(\Delta = W^{low} - W^{high}\) occurs within model--profile pairs (182 of 405 pairs show no within-pair variation in \(\Delta\)), and the frame indicators are constant across repetitions in 237 (access barriers) and 362 (coercive backlash) of the 405 pairs, so the pair-fixed-effects estimates rest on limited within-cell variation. Leave-one-out ranges for the primary specification and the full identification diagnostics are reported in Appendix~\ref{app:h2-identification}. The table reports frame--outcome associations rather than formal mediation: MFQ-to-frame paths and \(a \times b\) products are not interpreted as causal mediation estimates because MFQ varies only at the model level and is not experimentally assigned.
+\end{flushleft}
+\end{table}
+
+\subsubsection{H3: Within-Model Frame Manipulation}
+\label{subsubsec:results-h3}
+
+H3 tests whether governance-value frames can shift predicted burden effects within the same base model, using a purposive four-model subset: GPT-4.1, Llama 3.1 70B Instruct, Qwen3.7 Plus, and Mistral Large.
+
+Figure~\ref{fig:h3_forest} reports pooled frame effects against the neutral frame, with standard errors clustered on the 108 model--profile units (27 profiles $\times$ 4 models). The 432 model--profile--frame cells are design cells; estimation uses the 2{,}159 profile--repetition observations they contain. All three contrasts remain significant after Holm--Bonferroni adjustment: autonomy increases the predicted burden effect by 4.96 points (95\% CI [3.57, 6.35]), collective obligation decreases it by 10.88 points ([-12.54, -9.21]), and equity/access increases it by 4.84 points ([3.45, 6.24]); adjusted $R^2 = 0.77$ ($N = 2{,}159$). Because the pooled estimates average heterogeneous model-level responses, the model-specific results are reported below and in the Online Supplement.
+
+These are within-model--profile frame contrasts, not population-level causal effects: the observations are repeated queries of 27 constructed test cases, so the intervals reflect within-profile consistency of responses at temperature = 0 in this controlled set of constructed model--profile test cases rather than population-level precision. Effect sizes (4.96, 4.84, and 10.88 points pooled, up to 20.11 points model-specifically) are the primary quantities of interest, with uncertainty quantified by clustered standard errors.
+
+Because each model-specific regression rests on 27 profile clusters, inference was re-checked with a wild cluster bootstrap-$t$ and a finite-sample corrected covariance; no conclusion changes, including the marginal equity/access contrast for Mistral Large ($p=0.027$ bootstrap, $0.030$ corrected) and the autonomy reversal for Qwen3.7 Plus ($-2.87$, 95\% CI $[-4.53, -1.22]$; $p=0.002$). Model-specific point estimates followed the theoretically expected directions for all three contrasts in three of the four models; Qwen3.7 Plus reversed sign on autonomy and showed a small, statistically indistinguishable-from-zero negative equity/access contrast. Mistral Large---the lowest-MFQ model in the subset---shifts in the expected direction on all three frames. H3 thus provides the clearest evidence that an assigned prompt clause shifts simulated effects within a model (by up to 20 points on a 0--100 scale, with negative collective-obligation point estimates in all four models, statistically distinguishable from zero in three), while the direction of that sensitivity is model-specific: a frame that amplifies burden sensitivity in one endpoint can attenuate it in another.
+
+Results were essentially unchanged when model-by-profile pair fixed effects replaced separate model and profile fixed effects (pooled autonomy $+4.96$, collective obligation $-10.88$, equity/access $+4.86$; Appendix~\ref{app:h3-pairfe}), confirming that the assigned-frame contrasts are identified within the same model--profile cells.
+
+\begin{figure}[htbp]
+\centering
+\caption{Forest plot of within-model frame-manipulation effects}
+\label{fig:h3_forest}
+\includegraphics[width=\textwidth]{fig3_h3_forest.pdf}
+\begin{flushleft}
+\footnotesize Notes: Coefficients represent the shift in predicted burden effect (points on a 0--100 willingness scale) relative to the neutral frame. Positive values indicate larger predicted burden effects. Pooled estimates use model and profile fixed effects with standard errors clustered at the model--profile level ($N=2{,}159$, 108 clusters: 27 synthetic profiles $\times$ 4 base models, adjusted $R^2=0.77$). Model-specific estimates show consistent directions for the collective-obligation contrast, but the autonomy and equity/access contrasts differ in sign across base models. Model-specific coefficients and standard errors are reported in the Online Supplement.
+\end{flushleft}
+\end{figure}
+\subsection{Robustness Checks}
+\label{sec:results-robustness}
+
+Robustness checks leave every conclusion unchanged. The H1 null persists across dimension-specific and alternative constructions (each of the five MFQ foundations is fitted separately, none significant; Table~\ref{tab:h1_dimension_checks}; the MFQ composite slope stays between 2.5 and 3.4 in leave-one-profile-out fits, never reaching conventional significance); under the primary pair-fixed-effects specification no retained H2 frame is significant in any leave-one-model-out or leave-one-profile-out fit, and the access-barrier coefficient remains positive in 14 of 15 leave-one-model-out and 25 of 27 leave-one-profile-out fits while the other frames remain null; and all three H3 contrasts retain sign and significance in every leave-one-profile-out fit, with model-specific regressions showing that the pooled manipulation is not driven by any single base model. Detailed results are reported in the Online Supplement.
+
+
+\section{Discussion}
+\label{sec:discussion}
+
+This study develops and evaluates a three-level diagnostic framework for auditing normative-frame sensitivity in LLM-assisted policy simulation. Using administrative burden in vaccination access as a controlled HSR testbed, we demonstrate that seemingly technical simulated policy-effect estimates depend on analyst-selected normative framing.
+
+\textbf{Summary of Diagnostic Results.} Diagnostic 1 shows that a composite derived from the MFQ-30--derived probe does not predict cross-model variation. Diagnostic 2 does not: under model-by-profile pair fixed effects, none of the retained rationale frames predicts burden effects. The access-barrier association that appears when only additive model and profile heterogeneity is removed disappears once pair-specific heterogeneity is absorbed, and only 7.8\% of the variance in the burden effect lies within model--profile pairs. Diagnostic 3 shows that assigned frames shift estimated effects---by 4.8 to 10.9 points pooled and up to 20.1 points model-specifically, with the autonomy contrast differing in sign across models.
+
+Taken together, the three diagnostics establish that, in this controlled testbed, LLM-assisted policy simulation is prompt-frame sensitive. The same model, same synthetic profiles, and same policy scenario can produce materially different simulated policy-effect estimates depending on the governance-value frame activated by the prompt.
+
+\textbf{Contribution beyond prompt-sensitivity benchmarks.} That an instruction to weight a factor moves an estimate is not, by itself, a surprising finding, and the contribution here does not rest on it. The paper's contribution is that this sensitivity propagates to the policy-effect estimand that HSR analysts consume---the simulated marginal effect of administrative burden---and that it can be systemically diagnosed through a three-level audit framework (model-level aggregate orientation, rationale-level co-expression, controlled fully-crossed intervention with randomized execution order). Three things follow from treating that movement as the estimand an analyst consumes. First, the shifts are expressed in the units the analyst reports---the simulated marginal effect of the burden condition---where pooled shifts of 4.8--10.9 points (up to 20.1 points model-specifically) are large relative to the precision of the simulated contrasts (pooled 95\% CIs span roughly $\pm 1.4$ points). Second, the contrast is identified within the same model--profile cell under fully-crossed frame conditions with randomized execution order, so it cannot be attributed to model or profile composition. Third, the direction is not uniform: the autonomy contrast takes different signs across endpoints, so no single model's frame response can stand in for ``the LLM'' response or be removed by one global adjustment. The deliverable is therefore the audit rather than the observation: an aggregate-orientation screen, a co-expression diagnostic that fails its strict test, and an assigned-frame sensitivity test reported with effect sizes.
+
+
+The narrative analysis does not supply a robust within-cell signal. Under the primary pair-fixed-effects specification none of the retained frames is detectable, and the access-barrier association that appears under additive model and profile fixed effects does not survive pair-specific heterogeneity---a pattern consistent with cells whose baseline burden effect and rationale style are jointly model- and profile-specific. Because only 7.8\% of the variance in \(\Delta\) occurs within pairs, this is a failure of robustness rather than proof that rationale framing is behaviorally irrelevant. H2 is descriptive co-expression in any case rather than causal mediation, because willingness and rationales are generated together and associations may reflect post-hoc justification.
+
+The strongest evidence comes from the within-model manipulation. In the four-model subset, the collective-obligation frame reduced simulated burden effects in all four models and the autonomy and equity/access frames increased them in three of four (Qwen3.7 Plus reversed sign on autonomy and showed no equity effect). What is manipulated is the assigned prompt clause, so the estimate is the causal effect of assignment to the governance-frame prompt condition on the simulated effect---a swing of up to 20 points on a 0--100 scale---and the direction of that sensitivity is itself model-specific.
+
+
+\textbf{Relation to Prior Work.} These results sit at the intersection of three literatures. \emph{First, the synthetic-human literature:} large-scale replication work shows that LLMs often recover the direction of experimental effects while producing larger effect sizes and returning significant results where human studies found nulls \citep{Cui2025replication}, that LLM replacement of human participants can flatten and misportray identity groups \citep{Wang2025identity}, and that synthetic respondents are imperfect survey substitutes \citep{bisbee2024synthetic}. Our frame manipulation documents frame sensitivity as a potential source of variation in LLM-generated effect magnitudes: estimated magnitudes are partly a function of the frame the analyst activates, so variation in estimated magnitudes reflects both model behavior and analyst-selected framing. Recent work on hybrid estimation proposes combining biased candidate predictions under convex constraints to preserve consistency even when individual models are arbitrarily misspecified \citep{DeBartolomeis2025haipw}; the present audit differs in aim---we diagnose fragility before estimation---but the two approaches are complementary. \emph{Second, the measurement-instability literature:} if value measurement is sensitive to format and phrasing \citep{Rottger2024,Tjuatja2024}, and if survey instruments do not behave as validated psychometric scales for models \citep{Miotto2023,Li2025}, then a composite built from such items should not be expected to predict an external outcome---the H1 result provides little support for the predictive validity of this particular composite for cross-model burden effects in this endpoint sample. \emph{Third, prompt-sensitivity work:} prior studies document format and phrasing sensitivity in opinion and scale measurements \citep{Wright2024,Tjuatja2024,Faulborn2025,Kamal2025}; we extend it to simulated marginal effects of a health-policy condition and show that it survives a fully crossed within-model manipulation. Hybrid approaches that filter LLM-generated candidates before causal modeling reduce ATE bias substantially \citep{Dahabreh2025hybrid}, yet they assume the underlying generation is stable across prompts; our frame-sensitivity results suggest this assumption requires explicit audit. This matters more for HSR than for NLP evaluation: in NLP, prompt sensitivity degrades measurement reliability, whereas in HSR a frame-dependent simulated effect enters policy deliberation directly. Because administrative burden already delays or forecloses care for the patients least able to absorb procedural costs \citep{Kyle2021,Shin2025,Shafer2025}, estimated burden effects that differ across assigned prompt frames raise distinct equity concerns.
+
+The findings have three implications. First, audits should move beyond stated-opinion tests to examine how models simulate policy effects under different frames. Second, audits should measure specific dimensions and frame sensitivity rather than rely on coarse provenance labels. Third, prompt framing should be treated as part of the experimental design: simulations should not be reported as single neutral estimates when governance-value frames materially shift predicted effects. Analysts should report model identity, prompt framing, scenario wording, and robustness to alternative frames. Funders and journals could strengthen reporting standards by requiring prompt, model, and frame-sensitivity documentation for LLM-assisted policy simulations.
+
+\subsection{Limitations and Future Research}
+
+Six limitations qualify the findings. \textbf{(1) Model sample.} The cross-model analyses rest on thirteen commercially available endpoints spanning nine provider ecosystems (OpenAI, Anthropic, Google, Meta, Mistral, Cohere, Moonshot AI, DeepSeek, Qwen), which are a convenience sample of the models available at the time of data collection rather than a random or systematically stratified sample of model families, sizes, or training regimes. The endpoints are not independent draws from a population of model families: three are from OpenAI, two from Anthropic, two from Google, and two from Meta, so provider-level variation is not separately identified from model-level variation. At N = 13, model-level tests have low power (the approximate 80\% minimum detectable slope for a model-level composite is about 5.7 points), so H1 and the foundation-specific estimates should be read as descriptive diagnostics rather than high-powered population estimates. The null result for a composite derived from an MFQ-30--derived probe based on a human-validated questionnaire should be read accordingly: it is consistent with the absence of a linear association in this sample, but cannot prove that scalar aggregate value scores are insensitive audit instruments for LLM simulation. In addition, H2 and H3 reuse repeated queries of the same synthetic profiles; standard errors are clustered at the model--profile level, but the resulting intervals reflect within-profile consistency of LLM responses rather than population-level precision, which is why effect sizes and their uncertainty intervals rather than $p$-values are the primary quantities of interest. Finally, orientation was measured from a single canonical battery administration, so endpoint-level test-retest reliability is not quantified.
+
+\textbf{(2) Synthetic testbed.} The twenty-seven standardized profiles and the vaccination-access scenario are controlled test cases, not a representative sample of U.S. vaccination programs or of the populations they serve. The income-verification and residency requirements in the high-burden condition are stylized procedural barriers typical of means-tested programs, not realistic requirements for vaccination access. The findings therefore speak to LLM-assisted policy simulation methodology---in particular, its sensitivity to normative framing---and not to the magnitude of administrative burden in real health service delivery or to the behavioral dynamics of vaccination uptake.
+
+\textbf{(3) Prompt and protocol dependence.} Each diagnostic relies on a single analyst-chosen prompt per level, a fixed item order for the orientation battery, and temperature = 0. The reported magnitudes are therefore conditional on those design choices; we did not run a systematic sweep over prompt wording, role instructions, or item order, and the frame sensitivity documented here should be read as protocol-conditional rather than as a fixed property of the models. Applying the diagnostics therefore requires documenting the prompt and protocol under which the reported magnitudes were obtained. Part-specific score distributions for the MFQ-30 battery differed across most foundations (relevance-judgment differences of 0.17--0.36 points for CA, FA, LO, and AU), providing no evidence of a gross response-format collapse; however, because relevance and judgment sections contain different item content, semantic differentiation between the two tasks cannot be established from these distributions alone.
+
+\textbf{(4) H2 rationale coding.} Frame indicators for H2 are produced by rule-based coding of model-generated rationales, audited by manual inspection of a random sample of 200 rationales (approximately 10\% of the high-burden sample). That audit is a single-coder quality check rather than an independent validation: it was not blind to the algorithm's assignments and does not quantify false negatives, so no precision, recall, or agreement statistic is reported. The coding is coarse, the rationales are generated alongside the willingness score rather than elicited separately, and the resulting estimates are frame--outcome co-expression rather than causal mediation; observed associations may partly reflect post-hoc justification.
+
+\textbf{(5) H3 treatment bundling and placebo.} The high-burden condition increases paperwork, documentation, waiting time, location friction, and scheduling delay simultaneously, so the estimated $\Delta$ reflects a multidimensional high-burden regime rather than any single component. Component-specific and interaction effects would require factorial designs that vary burden dimensions independently. In addition, the neutral condition contains no matched-length placebo clause, whereas the three treatment frames each insert a clause instructing the model to ``give special weight to'' the respective governance value. Because the comparison is between a complete prompt with an inserted frame clause and a complete prompt without such a clause, H3 identifies the effect of assignment to each complete prompt-frame condition; it does not separately identify the normative semantic content of the clause from generic instruction salience or the addition of prompt text.
+
+\textbf{(6) Absence of human calibration.} The framework contains no human ground truth. We can establish that simulated burden effects are sensitive to the assigned frame, but not whether the simulated magnitudes, or their frame sensitivity, correspond to those of human respondents. The diagnostics identify fragility, not validity of magnitude. Anchoring these simulations to externally calibrated human-subject data---for example, to trial-based or stated-preference benchmarks for the same policy scenario---is the natural next step, and would allow the frame-sensitivity results to be interpreted against a human reference point.
+
+\subsection{Conclusion}
+
+The central finding is that LLM-assisted policy simulation creates a new methodological problem for HSR: seemingly technical simulated policy-effect estimates may depend on analyst-selected normative framing. The three-level diagnostic framework demonstrates that (1) a composite derived from the MFQ-30--derived probe was not informative as a cross-model predictor of simulated burden effects, (2) naturally expressed rationale frames did not provide a robust within-pair diagnostic of simulated effect magnitude, and (3) experimentally assigned governance-value frames materially shift estimated policy effects.
+
+For HSR researchers using LLMs for policy simulation, the implication is clear: report frame sensitivity rather than treating one prompt/model output as a neutral point estimate. Analysts should document model identity, prompt framing, scenario wording, and robustness to alternative frames. The goal is not to eliminate values from policy simulation, but to make their influence measurable, transparent, and contestable---so that the method can be used responsibly as an HSR tool.
+
+\clearpage
+
+% ---------- 参考文献 ----------
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+%% ===========================================================
+%% Online Supplement (submitted separately)
+%% ===========================================================
+%% A detailed Online Supplement containing model versioning, the full
+%% orientation battery item wording, synthetic individual profile
+%% specifications, capability and task-diagnostic details, prompt
+%% templates, the narrative coding codebook, and additional
+%% robustness checks is submitted as a separate file. See
+%% supplementary.tex for the full text.
+
+\clearpage
+\begingroup
+\let\maketitle\relax
+\begin{center}
+\vspace*{2em}
+{\Large\bfseries Online Supplement\par}
+\vspace{2em}
+{\large\itshape A Framework for Auditing Value Sensitivity\\
+in LLM-Assisted Health Policy Simulation\par}
+\vspace{2em}
+{\large Yichao Jin\par}
+\vspace{0.75em}
+{\normalsize October 2, 2026\par}
+\end{center}
+\vspace{2.5em}
+\makeatletter\def\vslaMainDocument{1}\makeatother
+\input{supplementary-content.tex}
+\endgroup
+
+\end{document}

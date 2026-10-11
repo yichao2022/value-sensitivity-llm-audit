@@ -1,0 +1,1795 @@
+model,profile_id,burden_level,repetition,willingness,raw_response
+GPT-4.1 nano,P01,low,1,80,80
+GPT-4.1 nano,P01,low,2,80,80
+GPT-4.1 nano,P01,low,3,80,80
+GPT-4.1 nano,P01,low,4,80,80
+GPT-4.1 nano,P01,low,5,80,80
+GPT-4.1 nano,P01,high,1,70,70
+GPT-4.1 nano,P01,high,2,70,70
+GPT-4.1 nano,P01,high,3,70,70
+GPT-4.1 nano,P01,high,4,70,70
+GPT-4.1 nano,P01,high,5,70,70
+GPT-4.1 nano,P02,low,1,75,75
+GPT-4.1 nano,P02,low,2,75,75
+GPT-4.1 nano,P02,low,3,75,75
+GPT-4.1 nano,P02,low,4,75,75
+GPT-4.1 nano,P02,low,5,75,75
+GPT-4.1 nano,P02,high,1,40,40
+GPT-4.1 nano,P02,high,2,40,40
+GPT-4.1 nano,P02,high,3,40,40
+GPT-4.1 nano,P02,high,4,40,40
+GPT-4.1 nano,P02,high,5,40,40
+GPT-4.1 nano,P03,low,1,75,75
+GPT-4.1 nano,P03,low,2,75,75
+GPT-4.1 nano,P03,low,3,75,75
+GPT-4.1 nano,P03,low,4,75,75
+GPT-4.1 nano,P03,low,5,75,75
+GPT-4.1 nano,P03,high,1,70,70
+GPT-4.1 nano,P03,high,2,70,70
+GPT-4.1 nano,P03,high,3,70,70
+GPT-4.1 nano,P03,high,4,70,70
+GPT-4.1 nano,P03,high,5,70,70
+GPT-4.1 nano,P04,low,1,80,80
+GPT-4.1 nano,P04,low,2,80,80
+GPT-4.1 nano,P04,low,3,80,80
+GPT-4.1 nano,P04,low,4,80,80
+GPT-4.1 nano,P04,low,5,80,80
+GPT-4.1 nano,P04,high,1,70,70
+GPT-4.1 nano,P04,high,2,70,70
+GPT-4.1 nano,P04,high,3,70,70
+GPT-4.1 nano,P04,high,4,70,70
+GPT-4.1 nano,P04,high,5,70,70
+GPT-4.1 nano,P05,low,1,85,85
+GPT-4.1 nano,P05,low,2,85,85
+GPT-4.1 nano,P05,low,3,85,85
+GPT-4.1 nano,P05,low,4,85,85
+GPT-4.1 nano,P05,low,5,85,85
+GPT-4.1 nano,P05,high,1,60,60
+GPT-4.1 nano,P05,high,2,60,60
+GPT-4.1 nano,P05,high,3,60,60
+GPT-4.1 nano,P05,high,4,60,60
+GPT-4.1 nano,P05,high,5,60,60
+GPT-4.1 nano,P06,low,1,75,75
+GPT-4.1 nano,P06,low,2,75,75
+GPT-4.1 nano,P06,low,3,75,75
+GPT-4.1 nano,P06,low,4,75,75
+GPT-4.1 nano,P06,low,5,75,75
+GPT-4.1 nano,P06,high,1,40,40
+GPT-4.1 nano,P06,high,2,40,40
+GPT-4.1 nano,P06,high,3,40,40
+GPT-4.1 nano,P06,high,4,40,40
+GPT-4.1 nano,P06,high,5,40,40
+GPT-4.1 nano,P07,low,1,80,80
+GPT-4.1 nano,P07,low,2,80,80
+GPT-4.1 nano,P07,low,3,80,80
+GPT-4.1 nano,P07,low,4,80,80
+GPT-4.1 nano,P07,low,5,80,80
+GPT-4.1 nano,P07,high,1,70,70
+GPT-4.1 nano,P07,high,2,70,70
+GPT-4.1 nano,P07,high,3,70,70
+GPT-4.1 nano,P07,high,4,70,70
+GPT-4.1 nano,P07,high,5,70,70
+GPT-4.1 nano,P08,low,1,75,75
+GPT-4.1 nano,P08,low,2,75,75
+GPT-4.1 nano,P08,low,3,75,75
+GPT-4.1 nano,P08,low,4,75,75
+GPT-4.1 nano,P08,low,5,75,75
+GPT-4.1 nano,P08,high,1,50,50
+GPT-4.1 nano,P08,high,2,50,50
+GPT-4.1 nano,P08,high,3,50,50
+GPT-4.1 nano,P08,high,4,50,50
+GPT-4.1 nano,P08,high,5,50,50
+GPT-4.1 nano,P09,low,1,70,70
+GPT-4.1 nano,P09,low,2,70,70
+GPT-4.1 nano,P09,low,3,70,70
+GPT-4.1 nano,P09,low,4,70,70
+GPT-4.1 nano,P09,low,5,70,70
+GPT-4.1 nano,P09,high,1,70,70
+GPT-4.1 nano,P09,high,2,70,70
+GPT-4.1 nano,P09,high,3,70,70
+GPT-4.1 nano,P09,high,4,70,70
+GPT-4.1 nano,P09,high,5,70,70
+GPT-4.1 nano,P10,low,1,85,85
+GPT-4.1 nano,P10,low,2,85,85
+GPT-4.1 nano,P10,low,3,85,85
+GPT-4.1 nano,P10,low,4,85,85
+GPT-4.1 nano,P10,low,5,85,85
+GPT-4.1 nano,P10,high,1,70,70
+GPT-4.1 nano,P10,high,2,70,70
+GPT-4.1 nano,P10,high,3,70,70
+GPT-4.1 nano,P10,high,4,70,70
+GPT-4.1 nano,P10,high,5,70,70
+GPT-4.1 nano,P11,low,1,75,75
+GPT-4.1 nano,P11,low,2,75,75
+GPT-4.1 nano,P11,low,3,75,75
+GPT-4.1 nano,P11,low,4,75,75
+GPT-4.1 nano,P11,low,5,75,75
+GPT-4.1 nano,P11,high,1,50,50
+GPT-4.1 nano,P11,high,2,50,50
+GPT-4.1 nano,P11,high,3,50,50
+GPT-4.1 nano,P11,high,4,50,50
+GPT-4.1 nano,P11,high,5,50,50
+GPT-4.1 nano,P12,low,1,75,75
+GPT-4.1 nano,P12,low,2,75,75
+GPT-4.1 nano,P12,low,3,75,75
+GPT-4.1 nano,P12,low,4,75,75
+GPT-4.1 nano,P12,low,5,75,75
+GPT-4.1 nano,P12,high,1,70,70
+GPT-4.1 nano,P12,high,2,70,70
+GPT-4.1 nano,P12,high,3,70,70
+GPT-4.1 nano,P12,high,4,70,70
+GPT-4.1 nano,P12,high,5,70,70
+GPT-4.1 nano,P13,low,1,75,75
+GPT-4.1 nano,P13,low,2,75,75
+GPT-4.1 nano,P13,low,3,75,75
+GPT-4.1 nano,P13,low,4,75,75
+GPT-4.1 nano,P13,low,5,75,75
+GPT-4.1 nano,P13,high,1,70,70
+GPT-4.1 nano,P13,high,2,70,70
+GPT-4.1 nano,P13,high,3,70,70
+GPT-4.1 nano,P13,high,4,60,60
+GPT-4.1 nano,P13,high,5,60,60
+GPT-4.1 nano,P14,low,1,75,75
+GPT-4.1 nano,P14,low,2,75,75
+GPT-4.1 nano,P14,low,3,75,75
+GPT-4.1 nano,P14,low,4,75,75
+GPT-4.1 nano,P14,low,5,75,75
+GPT-4.1 nano,P14,high,1,60,60
+GPT-4.1 nano,P14,high,2,60,60
+GPT-4.1 nano,P14,high,3,60,60
+GPT-4.1 nano,P14,high,4,60,60
+GPT-4.1 nano,P14,high,5,60,60
+GPT-4.1 nano,P15,low,1,75,75
+GPT-4.1 nano,P15,low,2,75,75
+GPT-4.1 nano,P15,low,3,75,75
+GPT-4.1 nano,P15,low,4,75,75
+GPT-4.1 nano,P15,low,5,75,75
+GPT-4.1 nano,P15,high,1,60,60
+GPT-4.1 nano,P15,high,2,60,60
+GPT-4.1 nano,P15,high,3,60,60
+GPT-4.1 nano,P15,high,4,60,60
+GPT-4.1 nano,P15,high,5,60,60
+GPT-4.1 nano,P16,low,1,80,80
+GPT-4.1 nano,P16,low,2,80,80
+GPT-4.1 nano,P16,low,3,80,80
+GPT-4.1 nano,P16,low,4,80,80
+GPT-4.1 nano,P16,low,5,80,80
+GPT-4.1 nano,P16,high,1,70,70
+GPT-4.1 nano,P16,high,2,70,70
+GPT-4.1 nano,P16,high,3,70,70
+GPT-4.1 nano,P16,high,4,70,70
+GPT-4.1 nano,P16,high,5,70,70
+GPT-4.1 nano,P17,low,1,75,75
+GPT-4.1 nano,P17,low,2,75,75
+GPT-4.1 nano,P17,low,3,75,75
+GPT-4.1 nano,P17,low,4,75,75
+GPT-4.1 nano,P17,low,5,75,75
+GPT-4.1 nano,P17,high,1,40,40
+GPT-4.1 nano,P17,high,2,40,40
+GPT-4.1 nano,P17,high,3,40,40
+GPT-4.1 nano,P17,high,4,40,40
+GPT-4.1 nano,P17,high,5,40,40
+GPT-4.1 nano,P18,low,1,75,75
+GPT-4.1 nano,P18,low,2,75,75
+GPT-4.1 nano,P18,low,3,75,75
+GPT-4.1 nano,P18,low,4,75,75
+GPT-4.1 nano,P18,low,5,75,75
+GPT-4.1 nano,P18,high,1,70,70
+GPT-4.1 nano,P18,high,2,70,70
+GPT-4.1 nano,P18,high,3,70,70
+GPT-4.1 nano,P18,high,4,70,70
+GPT-4.1 nano,P18,high,5,30,30
+GPT-4.1 nano,P19,low,1,75,75
+GPT-4.1 nano,P19,low,2,80,80
+GPT-4.1 nano,P19,low,3,75,75
+GPT-4.1 nano,P19,low,4,75,75
+GPT-4.1 nano,P19,low,5,75,75
+GPT-4.1 nano,P19,high,1,70,70
+GPT-4.1 nano,P19,high,2,70,70
+GPT-4.1 nano,P19,high,3,70,70
+GPT-4.1 nano,P19,high,4,70,70
+GPT-4.1 nano,P19,high,5,70,70
+GPT-4.1 nano,P20,low,1,85,85
+GPT-4.1 nano,P20,low,2,85,85
+GPT-4.1 nano,P20,low,3,85,85
+GPT-4.1 nano,P20,low,4,85,85
+GPT-4.1 nano,P20,low,5,85,85
+GPT-4.1 nano,P20,high,1,60,60
+GPT-4.1 nano,P20,high,2,60,60
+GPT-4.1 nano,P20,high,3,60,60
+GPT-4.1 nano,P20,high,4,60,60
+GPT-4.1 nano,P20,high,5,60,60
+GPT-4.1 nano,P21,low,1,70,70
+GPT-4.1 nano,P21,low,2,70,70
+GPT-4.1 nano,P21,low,3,70,70
+GPT-4.1 nano,P21,low,4,70,70
+GPT-4.1 nano,P21,low,5,75,75
+GPT-4.1 nano,P21,high,1,70,70
+GPT-4.1 nano,P21,high,2,50,50
+GPT-4.1 nano,P21,high,3,70,70
+GPT-4.1 nano,P21,high,4,70,70
+GPT-4.1 nano,P21,high,5,70,70
+GPT-4.1 nano,P22,low,1,80,80
+GPT-4.1 nano,P22,low,2,80,80
+GPT-4.1 nano,P22,low,3,80,80
+GPT-4.1 nano,P22,low,4,80,80
+GPT-4.1 nano,P22,low,5,80,80
+GPT-4.1 nano,P22,high,1,70,70
+GPT-4.1 nano,P22,high,2,70,70
+GPT-4.1 nano,P22,high,3,70,70
+GPT-4.1 nano,P22,high,4,70,70
+GPT-4.1 nano,P22,high,5,70,70
+GPT-4.1 nano,P23,low,1,75,75
+GPT-4.1 nano,P23,low,2,75,75
+GPT-4.1 nano,P23,low,3,75,75
+GPT-4.1 nano,P23,low,4,75,75
+GPT-4.1 nano,P23,low,5,75,75
+GPT-4.1 nano,P23,high,1,60,60
+GPT-4.1 nano,P23,high,2,60,60
+GPT-4.1 nano,P23,high,3,60,60
+GPT-4.1 nano,P23,high,4,60,60
+GPT-4.1 nano,P23,high,5,60,60
+GPT-4.1 nano,P24,low,1,70,70
+GPT-4.1 nano,P24,low,2,70,70
+GPT-4.1 nano,P24,low,3,70,70
+GPT-4.1 nano,P24,low,4,70,70
+GPT-4.1 nano,P24,low,5,70,70
+GPT-4.1 nano,P24,high,1,30,30
+GPT-4.1 nano,P24,high,2,30,30
+GPT-4.1 nano,P24,high,3,30,30
+GPT-4.1 nano,P24,high,4,30,30
+GPT-4.1 nano,P24,high,5,30,30
+GPT-4.1 nano,P25,low,1,80,80
+GPT-4.1 nano,P25,low,2,80,80
+GPT-4.1 nano,P25,low,3,80,80
+GPT-4.1 nano,P25,low,4,80,80
+GPT-4.1 nano,P25,low,5,80,80
+GPT-4.1 nano,P25,high,1,70,70
+GPT-4.1 nano,P25,high,2,70,70
+GPT-4.1 nano,P25,high,3,70,70
+GPT-4.1 nano,P25,high,4,70,70
+GPT-4.1 nano,P25,high,5,70,70
+GPT-4.1 nano,P26,low,1,85,85
+GPT-4.1 nano,P26,low,2,85,85
+GPT-4.1 nano,P26,low,3,85,85
+GPT-4.1 nano,P26,low,4,85,85
+GPT-4.1 nano,P26,low,5,85,85
+GPT-4.1 nano,P26,high,1,50,50
+GPT-4.1 nano,P26,high,2,50,50
+GPT-4.1 nano,P26,high,3,50,50
+GPT-4.1 nano,P26,high,4,50,50
+GPT-4.1 nano,P26,high,5,50,50
+GPT-4.1 nano,P27,low,1,70,70
+GPT-4.1 nano,P27,low,2,70,70
+GPT-4.1 nano,P27,low,3,70,70
+GPT-4.1 nano,P27,low,4,70,70
+GPT-4.1 nano,P27,low,5,70,70
+GPT-4.1 nano,P27,high,1,60,60
+GPT-4.1 nano,P27,high,2,60,60
+GPT-4.1 nano,P27,high,3,60,60
+GPT-4.1 nano,P27,high,4,60,60
+GPT-4.1 nano,P27,high,5,60,60
+Gemma 2 27B,P01,low,1,75,"
+75 
+
+"
+Gemma 2 27B,P01,low,2,75,"
+75 
+
+"
+Gemma 2 27B,P01,low,3,75,"
+75 
+
+"
+Gemma 2 27B,P01,low,4,75,"
+75 
+
+"
+Gemma 2 27B,P01,low,5,75,"
+75 
+
+"
+Gemma 2 27B,P01,high,1,50,"
+
+50 
+
+"
+Gemma 2 27B,P01,high,2,50,"
+
+50 
+
+"
+Gemma 2 27B,P01,high,3,50,"
+
+50 
+
+"
+Gemma 2 27B,P01,high,4,50,"
+
+50 
+
+"
+Gemma 2 27B,P01,high,5,50,"
+
+50 
+
+"
+Gemma 2 27B,P02,low,1,75,"
+
+75 
+
+"
+Gemma 2 27B,P02,low,2,75,"
+75 
+
+"
+Gemma 2 27B,P02,low,3,75,"
+75 
+
+"
+Gemma 2 27B,P02,low,4,75,"
+75 
+
+"
+Gemma 2 27B,P02,low,5,75,"
+75 
+
+"
+Gemma 2 27B,P02,high,1,45,"
+
+45 
+
+"
+Gemma 2 27B,P02,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P02,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P02,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P02,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P03,low,1,75,"
+
+75 
+
+"
+Gemma 2 27B,P03,low,2,75,"
+
+75 
+
+"
+Gemma 2 27B,P03,low,3,75,"
+
+75 
+
+"
+Gemma 2 27B,P03,low,4,75,"
+
+75 
+
+"
+Gemma 2 27B,P03,low,5,75,"
+
+75 
+
+"
+Gemma 2 27B,P03,high,1,45,"
+
+45 
+
+"
+Gemma 2 27B,P03,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P03,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P03,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P03,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P04,low,1,75,"
+75 
+
+"
+Gemma 2 27B,P04,low,2,75,"
+75 
+
+"
+Gemma 2 27B,P04,low,3,75,"
+75 
+
+"
+Gemma 2 27B,P04,low,4,75,"
+75 
+
+"
+Gemma 2 27B,P04,low,5,75,"
+75 
+
+"
+Gemma 2 27B,P04,high,1,55,"
+
+55 
+
+"
+Gemma 2 27B,P04,high,2,55,"
+
+55 
+
+"
+Gemma 2 27B,P04,high,3,55,"
+
+55 
+
+"
+Gemma 2 27B,P04,high,4,55,"
+
+55 
+
+"
+Gemma 2 27B,P04,high,5,55,"
+
+55 
+
+"
+Gemma 2 27B,P05,low,1,75,"
+75 
+
+"
+Gemma 2 27B,P05,low,2,75,"
+75 
+
+"
+Gemma 2 27B,P05,low,3,75,"
+75 
+
+"
+Gemma 2 27B,P05,low,4,75,"
+75 
+
+"
+Gemma 2 27B,P05,low,5,75,"
+75 
+
+"
+Gemma 2 27B,P05,high,1,45,"
+
+45 
+
+"
+Gemma 2 27B,P05,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P05,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P05,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P05,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P06,low,1,75,"
+
+75 
+
+"
+Gemma 2 27B,P06,low,2,75,"
+
+75 
+
+"
+Gemma 2 27B,P06,low,3,75,"
+
+75 
+
+"
+Gemma 2 27B,P06,low,4,75,"
+
+75 
+
+"
+Gemma 2 27B,P06,low,5,75,"
+
+75 
+
+"
+Gemma 2 27B,P06,high,1,45,"
+
+45 
+
+"
+Gemma 2 27B,P06,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P06,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P06,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P06,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P07,low,1,75,"
+75
+"
+Gemma 2 27B,P07,low,2,75,"
+75
+"
+Gemma 2 27B,P07,low,3,75,"
+75
+"
+Gemma 2 27B,P07,low,4,75,"
+75
+"
+Gemma 2 27B,P07,low,5,75,"
+75
+"
+Gemma 2 27B,P07,high,1,55,"
+
+55 
+
+"
+Gemma 2 27B,P07,high,2,55,"
+
+55 
+
+"
+Gemma 2 27B,P07,high,3,55,"
+
+55 
+
+"
+Gemma 2 27B,P07,high,4,55,"
+
+55 
+
+"
+Gemma 2 27B,P07,high,5,55,"
+
+55 
+
+"
+Gemma 2 27B,P08,low,1,75,"
+75 
+
+"
+Gemma 2 27B,P08,low,2,75,"
+75 
+
+"
+Gemma 2 27B,P08,low,3,75,"
+75 
+
+"
+Gemma 2 27B,P08,low,4,75,"
+75 
+
+"
+Gemma 2 27B,P08,low,5,75,"
+75 
+
+"
+Gemma 2 27B,P08,high,1,45,"
+
+45 
+
+"
+Gemma 2 27B,P08,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P08,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P08,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P08,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P09,low,1,75,"
+
+75 
+
+"
+Gemma 2 27B,P09,low,2,75,"
+
+75 
+
+"
+Gemma 2 27B,P09,low,3,75,"
+
+75 
+
+"
+Gemma 2 27B,P09,low,4,75,"
+
+75 
+
+"
+Gemma 2 27B,P09,low,5,75,"
+
+75 
+
+"
+Gemma 2 27B,P09,high,1,40,"
+
+40 
+"
+Gemma 2 27B,P09,high,2,40,"
+
+40 
+
+"
+Gemma 2 27B,P09,high,3,40,"
+
+40 
+
+"
+Gemma 2 27B,P09,high,4,40,"
+
+40 
+
+"
+Gemma 2 27B,P09,high,5,40,"
+
+40 
+
+"
+Gemma 2 27B,P10,low,1,75,"
+
+75 
+
+"
+Gemma 2 27B,P10,low,2,75,"
+
+75 
+
+"
+Gemma 2 27B,P10,low,3,75,"
+
+75 
+
+"
+Gemma 2 27B,P10,low,4,75,"
+
+75 
+
+"
+Gemma 2 27B,P10,low,5,75,"
+
+75 
+
+"
+Gemma 2 27B,P10,high,1,45,"
+
+45 
+
+"
+Gemma 2 27B,P10,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P10,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P10,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P10,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P11,low,1,75,"
+75 
+
+"
+Gemma 2 27B,P11,low,2,75,"
+75 
+
+"
+Gemma 2 27B,P11,low,3,75,"
+75 
+
+"
+Gemma 2 27B,P11,low,4,75,"
+75 
+
+"
+Gemma 2 27B,P11,low,5,75,"
+75 
+
+"
+Gemma 2 27B,P11,high,1,45,"
+
+45 
+
+"
+Gemma 2 27B,P11,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P11,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P11,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P11,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P12,low,1,75,"
+
+75 
+
+"
+Gemma 2 27B,P12,low,2,75,"
+
+75 
+
+"
+Gemma 2 27B,P12,low,3,75,"
+
+75 
+
+"
+Gemma 2 27B,P12,low,4,75,"
+
+75 
+
+"
+Gemma 2 27B,P12,low,5,75,"
+
+75 
+
+"
+Gemma 2 27B,P12,high,1,45,"
+
+45 
+
+"
+Gemma 2 27B,P12,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P12,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P12,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P12,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P13,low,1,75,"
+75 
+
+"
+Gemma 2 27B,P13,low,2,75,"
+75 
+
+"
+Gemma 2 27B,P13,low,3,75,"
+75 
+
+"
+Gemma 2 27B,P13,low,4,75,"
+75 
+
+"
+Gemma 2 27B,P13,low,5,75,"
+75 
+
+"
+Gemma 2 27B,P13,high,1,55,"
+
+55 
+
+"
+Gemma 2 27B,P13,high,2,55,"
+
+55 
+
+"
+Gemma 2 27B,P13,high,3,55,"
+
+55 
+
+"
+Gemma 2 27B,P13,high,4,55,"
+
+55 
+
+"
+Gemma 2 27B,P13,high,5,55,"
+
+55 
+
+"
+Gemma 2 27B,P14,low,1,75,"
+75 
+
+"
+Gemma 2 27B,P14,low,2,75,"
+75 
+
+"
+Gemma 2 27B,P14,low,3,75,"
+75 
+
+"
+Gemma 2 27B,P14,low,4,75,"
+75 
+
+"
+Gemma 2 27B,P14,low,5,75,"
+75 
+
+"
+Gemma 2 27B,P14,high,1,40,"
+
+40 
+
+"
+Gemma 2 27B,P14,high,2,40,"
+
+40 
+
+"
+Gemma 2 27B,P14,high,3,40,"
+
+40 
+
+"
+Gemma 2 27B,P14,high,4,40,"
+
+40 
+
+"
+Gemma 2 27B,P14,high,5,40,"
+
+40 
+
+"
+Gemma 2 27B,P15,low,1,75,"
+
+75 
+
+"
+Gemma 2 27B,P15,low,2,75,"
+
+75 
+
+"
+Gemma 2 27B,P15,low,3,75,"
+
+75 
+
+"
+Gemma 2 27B,P15,low,4,75,"
+
+75 
+
+"
+Gemma 2 27B,P15,low,5,75,"
+
+75 
+
+"
+Gemma 2 27B,P15,high,1,40,"
+
+40 
+
+"
+Gemma 2 27B,P15,high,2,40,"
+
+40 
+
+"
+Gemma 2 27B,P15,high,3,40,"
+
+40 
+
+"
+Gemma 2 27B,P15,high,4,40,"
+
+40 
+
+"
+Gemma 2 27B,P15,high,5,40,"
+
+40 
+
+"
+Gemma 2 27B,P16,low,1,75,"
+75 
+
+"
+Gemma 2 27B,P16,low,2,75,"
+75 
+
+"
+Gemma 2 27B,P16,low,3,75,"
+75 
+
+"
+Gemma 2 27B,P16,low,4,75,"
+75 
+
+"
+Gemma 2 27B,P16,low,5,75,"
+75 
+
+"
+Gemma 2 27B,P16,high,1,55,"
+
+55 
+
+"
+Gemma 2 27B,P16,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P16,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P16,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P16,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P17,low,1,75,"
+75 
+
+"
+Gemma 2 27B,P17,low,2,75,"
+75 
+
+"
+Gemma 2 27B,P17,low,3,75,"
+75 
+
+"
+Gemma 2 27B,P17,low,4,75,"
+75 
+
+"
+Gemma 2 27B,P17,low,5,75,"
+75 
+
+"
+Gemma 2 27B,P17,high,1,45,"
+
+45 
+
+"
+Gemma 2 27B,P17,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P17,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P17,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P17,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P18,low,1,75,"
+
+75 
+
+"
+Gemma 2 27B,P18,low,2,75,"
+
+75 
+
+"
+Gemma 2 27B,P18,low,3,75,"
+
+75 
+
+"
+Gemma 2 27B,P18,low,4,75,"
+
+75 
+
+"
+Gemma 2 27B,P18,low,5,75,"
+
+75 
+
+"
+Gemma 2 27B,P18,high,1,45,"
+
+45 
+
+"
+Gemma 2 27B,P18,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P18,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P18,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P18,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P19,low,1,75,"
+75 
+
+"
+Gemma 2 27B,P19,low,2,75,"
+75 
+
+"
+Gemma 2 27B,P19,low,3,75,"
+75 
+
+"
+Gemma 2 27B,P19,low,4,75,"
+75 
+
+"
+Gemma 2 27B,P19,low,5,75,"
+75 
+
+"
+Gemma 2 27B,P19,high,1,55,"
+
+55 
+
+"
+Gemma 2 27B,P19,high,2,55,"
+
+55 
+
+"
+Gemma 2 27B,P19,high,3,55,"
+
+55 
+
+"
+Gemma 2 27B,P19,high,4,55,"
+
+55 
+
+"
+Gemma 2 27B,P19,high,5,55,"
+
+55 
+
+"
+Gemma 2 27B,P20,low,1,75,"
+75 
+
+"
+Gemma 2 27B,P20,low,2,75,"
+75 
+
+"
+Gemma 2 27B,P20,low,3,75,"
+75 
+
+"
+Gemma 2 27B,P20,low,4,75,"
+75 
+
+"
+Gemma 2 27B,P20,low,5,75,"
+75 
+
+"
+Gemma 2 27B,P20,high,1,45,"
+
+45 
+
+"
+Gemma 2 27B,P20,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P20,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P20,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P20,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P21,low,1,75,"
+
+75 
+
+"
+Gemma 2 27B,P21,low,2,75,"
+
+75 
+
+"
+Gemma 2 27B,P21,low,3,75,"
+
+75 
+
+"
+Gemma 2 27B,P21,low,4,75,"
+
+75 
+
+"
+Gemma 2 27B,P21,low,5,75,"
+
+75 
+
+"
+Gemma 2 27B,P21,high,1,45,"
+
+45 
+
+"
+Gemma 2 27B,P21,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P21,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P21,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P21,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P22,low,1,75,"
+75 
+
+"
+Gemma 2 27B,P22,low,2,75,"
+
+75 
+
+"
+Gemma 2 27B,P22,low,3,75,"
+
+75 
+
+"
+Gemma 2 27B,P22,low,4,75,"
+
+75 
+
+"
+Gemma 2 27B,P22,low,5,75,"
+
+75 
+
+"
+Gemma 2 27B,P22,high,1,55,"
+
+55 
+
+"
+Gemma 2 27B,P22,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P22,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P22,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P22,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P23,low,1,75,"
+75 
+
+"
+Gemma 2 27B,P23,low,2,75,"
+75 
+
+"
+Gemma 2 27B,P23,low,3,75,"
+75 
+
+"
+Gemma 2 27B,P23,low,4,75,"
+75 
+
+"
+Gemma 2 27B,P23,low,5,75,"
+75 
+
+"
+Gemma 2 27B,P23,high,1,55,"
+
+55 
+
+"
+Gemma 2 27B,P23,high,2,55,"
+
+55 
+
+"
+Gemma 2 27B,P23,high,3,55,"
+
+55 
+
+"
+Gemma 2 27B,P23,high,4,55,"
+
+55 
+
+"
+Gemma 2 27B,P23,high,5,55,"
+
+55 
+
+"
+Gemma 2 27B,P24,low,1,75,"
+
+75 
+
+"
+Gemma 2 27B,P24,low,2,75,"
+
+75 
+
+"
+Gemma 2 27B,P24,low,3,75,"
+
+75 
+
+"
+Gemma 2 27B,P24,low,4,75,"
+
+75 
+
+"
+Gemma 2 27B,P24,low,5,75,"
+
+75 
+
+"
+Gemma 2 27B,P24,high,1,40,"
+
+40 
+"
+Gemma 2 27B,P24,high,2,40,"
+
+40 
+"
+Gemma 2 27B,P24,high,3,40,"
+
+40 
+"
+Gemma 2 27B,P24,high,4,40,"
+
+40 
+"
+Gemma 2 27B,P24,high,5,40,"
+
+40 
+"
+Gemma 2 27B,P25,low,1,75,"
+75
+"
+Gemma 2 27B,P25,low,2,75,"
+75
+"
+Gemma 2 27B,P25,low,3,75,"
+75
+"
+Gemma 2 27B,P25,low,4,75,"
+75
+"
+Gemma 2 27B,P25,low,5,75,"
+75
+"
+Gemma 2 27B,P25,high,1,50,"
+
+50 
+
+"
+Gemma 2 27B,P25,high,2,50,"
+
+50 
+
+"
+Gemma 2 27B,P25,high,3,50,"
+
+50 
+
+"
+Gemma 2 27B,P25,high,4,50,"
+
+50 
+
+"
+Gemma 2 27B,P25,high,5,50,"
+
+50 
+
+"
+Gemma 2 27B,P26,low,1,75,"
+75 
+
+"
+Gemma 2 27B,P26,low,2,75,"
+75 
+
+"
+Gemma 2 27B,P26,low,3,75,"
+75 
+
+"
+Gemma 2 27B,P26,low,4,75,"
+75 
+
+"
+Gemma 2 27B,P26,low,5,75,"
+75 
+
+"
+Gemma 2 27B,P26,high,1,45,"
+
+45 
+
+"
+Gemma 2 27B,P26,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P26,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P26,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P26,high,5,45,"
+
+45 
+
+"
+Gemma 2 27B,P27,low,1,75,"
+
+75 
+
+"
+Gemma 2 27B,P27,low,2,75,"
+
+75 
+
+"
+Gemma 2 27B,P27,low,3,75,"
+
+75 
+
+"
+Gemma 2 27B,P27,low,4,75,"
+
+75 
+
+"
+Gemma 2 27B,P27,low,5,75,"
+
+75 
+
+"
+Gemma 2 27B,P27,high,1,45,"
+
+45 
+
+"
+Gemma 2 27B,P27,high,2,45,"
+
+45 
+
+"
+Gemma 2 27B,P27,high,3,45,"
+
+45 
+
+"
+Gemma 2 27B,P27,high,4,45,"
+
+45 
+
+"
+Gemma 2 27B,P27,high,5,45,"
+
+45 
+
+"
+Qwen 2.5 72B,P01,low,1,85,85
+Qwen 2.5 72B,P01,low,2,85,85
+Qwen 2.5 72B,P01,low,3,85,85
+Qwen 2.5 72B,P01,low,4,85,85
+Qwen 2.5 72B,P01,low,5,85,85
+Qwen 2.5 72B,P01,high,1,75,75
+Qwen 2.5 72B,P01,high,2,75,75
+Qwen 2.5 72B,P01,high,3,75,75
+Qwen 2.5 72B,P01,high,4,75,75
+Qwen 2.5 72B,P01,high,5,75,75
+Qwen 2.5 72B,P02,low,1,75,75
+Qwen 2.5 72B,P02,low,2,75,75
+Qwen 2.5 72B,P02,low,3,75,75
+Qwen 2.5 72B,P02,low,4,75,75
+Qwen 2.5 72B,P02,low,5,75,75
+Qwen 2.5 72B,P02,high,1,65,65
+Qwen 2.5 72B,P02,high,2,65,65
+Qwen 2.5 72B,P02,high,3,65,65
+Qwen 2.5 72B,P02,high,4,65,65
+Qwen 2.5 72B,P02,high,5,65,65
+Qwen 2.5 72B,P03,low,1,85,85
+Qwen 2.5 72B,P03,low,2,85,85
+Qwen 2.5 72B,P03,low,3,85,85
+Qwen 2.5 72B,P03,low,4,85,85
+Qwen 2.5 72B,P03,low,5,85,85
+Qwen 2.5 72B,P03,high,1,75,75
+Qwen 2.5 72B,P03,high,2,75,75
+Qwen 2.5 72B,P03,high,3,75,75
+Qwen 2.5 72B,P03,high,4,75,75
+Qwen 2.5 72B,P03,high,5,75,75
+Qwen 2.5 72B,P04,low,1,85,85
+Qwen 2.5 72B,P04,low,2,85,85
+Qwen 2.5 72B,P04,low,3,85,85
+Qwen 2.5 72B,P04,low,4,85,85
+Qwen 2.5 72B,P04,low,5,85,85
+Qwen 2.5 72B,P04,high,1,75,75
+Qwen 2.5 72B,P04,high,2,75,75
+Qwen 2.5 72B,P04,high,3,75,75
+Qwen 2.5 72B,P04,high,4,75,75
+Qwen 2.5 72B,P04,high,5,75,75
+Qwen 2.5 72B,P05,low,1,75,75
+Qwen 2.5 72B,P05,low,2,75,75
+Qwen 2.5 72B,P05,low,3,75,75
+Qwen 2.5 72B,P05,low,4,75,75
+Qwen 2.5 72B,P05,low,5,75,75
+Qwen 2.5 72B,P05,high,1,75,75
+Qwen 2.5 72B,P05,high,2,75,75
+Qwen 2.5 72B,P05,high,3,75,75
+Qwen 2.5 72B,P05,high,4,75,75
+Qwen 2.5 72B,P05,high,5,75,75
+Qwen 2.5 72B,P06,low,1,85,85
+Qwen 2.5 72B,P06,low,2,85,85
+Qwen 2.5 72B,P06,low,3,85,85
+Qwen 2.5 72B,P06,low,4,85,85
+Qwen 2.5 72B,P06,low,5,85,85
+Qwen 2.5 72B,P06,high,1,75,75
+Qwen 2.5 72B,P06,high,2,75,75
+Qwen 2.5 72B,P06,high,3,75,75
+Qwen 2.5 72B,P06,high,4,75,75
+Qwen 2.5 72B,P06,high,5,75,75
+Qwen 2.5 72B,P07,low,1,85,85
+Qwen 2.5 72B,P07,low,2,85,85
+Qwen 2.5 72B,P07,low,3,85,85
+Qwen 2.5 72B,P07,low,4,85,85
+Qwen 2.5 72B,P07,low,5,85,85
+Qwen 2.5 72B,P07,high,1,75,75
+Qwen 2.5 72B,P07,high,2,75,75
+Qwen 2.5 72B,P07,high,3,75,75
+Qwen 2.5 72B,P07,high,4,75,75
+Qwen 2.5 72B,P07,high,5,75,75
+Qwen 2.5 72B,P08,low,1,75,75
+Qwen 2.5 72B,P08,low,2,75,75
+Qwen 2.5 72B,P08,low,3,75,75
+Qwen 2.5 72B,P08,low,4,75,75
+Qwen 2.5 72B,P08,low,5,75,75
+Qwen 2.5 72B,P08,high,1,65,65
+Qwen 2.5 72B,P08,high,2,65,65
+Qwen 2.5 72B,P08,high,3,65,65
+Qwen 2.5 72B,P08,high,4,65,65
+Qwen 2.5 72B,P08,high,5,65,65
+Qwen 2.5 72B,P09,low,1,85,85
+Qwen 2.5 72B,P09,low,2,85,85
+Qwen 2.5 72B,P09,low,3,85,85
+Qwen 2.5 72B,P09,low,4,85,85
+Qwen 2.5 72B,P09,low,5,85,85
+Qwen 2.5 72B,P09,high,1,75,75
+Qwen 2.5 72B,P09,high,2,75,75
+Qwen 2.5 72B,P09,high,3,75,75
+Qwen 2.5 72B,P09,high,4,75,75
+Qwen 2.5 72B,P09,high,5,75,75
+Qwen 2.5 72B,P10,low,1,85,85
+Qwen 2.5 72B,P10,low,2,85,85
+Qwen 2.5 72B,P10,low,3,85,85
+Qwen 2.5 72B,P10,low,4,85,85
+Qwen 2.5 72B,P10,low,5,85,85
+Qwen 2.5 72B,P10,high,1,75,75
+Qwen 2.5 72B,P10,high,2,75,75
+Qwen 2.5 72B,P10,high,3,75,75
+Qwen 2.5 72B,P10,high,4,75,75
+Qwen 2.5 72B,P10,high,5,75,75
+Qwen 2.5 72B,P11,low,1,75,75
+Qwen 2.5 72B,P11,low,2,75,75
+Qwen 2.5 72B,P11,low,3,75,75
+Qwen 2.5 72B,P11,low,4,75,75
+Qwen 2.5 72B,P11,low,5,75,75
+Qwen 2.5 72B,P11,high,1,75,75
+Qwen 2.5 72B,P11,high,2,75,75
+Qwen 2.5 72B,P11,high,3,75,75
+Qwen 2.5 72B,P11,high,4,75,75
+Qwen 2.5 72B,P11,high,5,75,75
+Qwen 2.5 72B,P12,low,1,85,85
+Qwen 2.5 72B,P12,low,2,85,85
+Qwen 2.5 72B,P12,low,3,85,85
+Qwen 2.5 72B,P12,low,4,85,85
+Qwen 2.5 72B,P12,low,5,85,85
+Qwen 2.5 72B,P12,high,1,75,75
+Qwen 2.5 72B,P12,high,2,75,75
+Qwen 2.5 72B,P12,high,3,75,75
+Qwen 2.5 72B,P12,high,4,75,75
+Qwen 2.5 72B,P12,high,5,75,75
+Qwen 2.5 72B,P13,low,1,85,85
+Qwen 2.5 72B,P13,low,2,85,85
+Qwen 2.5 72B,P13,low,3,85,85
+Qwen 2.5 72B,P13,low,4,85,85
+Qwen 2.5 72B,P13,low,5,85,85
+Qwen 2.5 72B,P13,high,1,75,75
+Qwen 2.5 72B,P13,high,2,75,75
+Qwen 2.5 72B,P13,high,3,75,75
+Qwen 2.5 72B,P13,high,4,75,75
+Qwen 2.5 72B,P13,high,5,75,75
+Qwen 2.5 72B,P14,low,1,75,75
+Qwen 2.5 72B,P14,low,2,75,75
+Qwen 2.5 72B,P14,low,3,75,75
+Qwen 2.5 72B,P14,low,4,75,75
+Qwen 2.5 72B,P14,low,5,75,75
+Qwen 2.5 72B,P14,high,1,65,65
+Qwen 2.5 72B,P14,high,2,65,65
+Qwen 2.5 72B,P14,high,3,65,65
+Qwen 2.5 72B,P14,high,4,65,65
+Qwen 2.5 72B,P14,high,5,65,65
+Qwen 2.5 72B,P15,low,1,85,85
+Qwen 2.5 72B,P15,low,2,85,85
+Qwen 2.5 72B,P15,low,3,85,85
+Qwen 2.5 72B,P15,low,4,85,85
+Qwen 2.5 72B,P15,low,5,85,85
+Qwen 2.5 72B,P15,high,1,75,75
+Qwen 2.5 72B,P15,high,2,75,75
+Qwen 2.5 72B,P15,high,3,75,75
+Qwen 2.5 72B,P15,high,4,75,75
+Qwen 2.5 72B,P15,high,5,75,75
+Qwen 2.5 72B,P16,low,1,85,85
+Qwen 2.5 72B,P16,low,2,85,85
+Qwen 2.5 72B,P16,low,3,85,85
+Qwen 2.5 72B,P16,low,4,85,85
+Qwen 2.5 72B,P16,low,5,85,85
+Qwen 2.5 72B,P16,high,1,75,75
+Qwen 2.5 72B,P16,high,2,75,75
+Qwen 2.5 72B,P16,high,3,75,75
+Qwen 2.5 72B,P16,high,4,75,75
+Qwen 2.5 72B,P16,high,5,75,75
+Qwen 2.5 72B,P17,low,1,75,75
+Qwen 2.5 72B,P17,low,2,75,75
+Qwen 2.5 72B,P17,low,3,75,75
+Qwen 2.5 72B,P17,low,4,75,75
+Qwen 2.5 72B,P17,low,5,75,75
+Qwen 2.5 72B,P17,high,1,65,65
+Qwen 2.5 72B,P17,high,2,65,65
+Qwen 2.5 72B,P17,high,3,65,65
+Qwen 2.5 72B,P17,high,4,65,65
+Qwen 2.5 72B,P17,high,5,65,65
+Qwen 2.5 72B,P18,low,1,85,85
+Qwen 2.5 72B,P18,low,2,85,85
+Qwen 2.5 72B,P18,low,3,85,85
+Qwen 2.5 72B,P18,low,4,85,85
+Qwen 2.5 72B,P18,low,5,85,85
+Qwen 2.5 72B,P18,high,1,75,75
+Qwen 2.5 72B,P18,high,2,75,75
+Qwen 2.5 72B,P18,high,3,75,75
+Qwen 2.5 72B,P18,high,4,75,75
+Qwen 2.5 72B,P18,high,5,75,75
+Qwen 2.5 72B,P19,low,1,85,85
+Qwen 2.5 72B,P19,low,2,85,85
+Qwen 2.5 72B,P19,low,3,85,85
+Qwen 2.5 72B,P19,low,4,85,85
+Qwen 2.5 72B,P19,low,5,85,85
+Qwen 2.5 72B,P19,high,1,75,75
+Qwen 2.5 72B,P19,high,2,75,75
+Qwen 2.5 72B,P19,high,3,75,75
+Qwen 2.5 72B,P19,high,4,75,75
+Qwen 2.5 72B,P19,high,5,75,75
+Qwen 2.5 72B,P20,low,1,85,85
+Qwen 2.5 72B,P20,low,2,85,85
+Qwen 2.5 72B,P20,low,3,85,85
+Qwen 2.5 72B,P20,low,4,85,85
+Qwen 2.5 72B,P20,low,5,85,85
+Qwen 2.5 72B,P20,high,1,75,75
+Qwen 2.5 72B,P20,high,2,75,75
+Qwen 2.5 72B,P20,high,3,75,75
+Qwen 2.5 72B,P20,high,4,75,75
+Qwen 2.5 72B,P20,high,5,75,75
+Qwen 2.5 72B,P21,low,1,85,85
+Qwen 2.5 72B,P21,low,2,85,85
+Qwen 2.5 72B,P21,low,3,85,85
+Qwen 2.5 72B,P21,low,4,85,85
+Qwen 2.5 72B,P21,low,5,85,85
+Qwen 2.5 72B,P21,high,1,75,75
+Qwen 2.5 72B,P21,high,2,75,75
+Qwen 2.5 72B,P21,high,3,75,75
+Qwen 2.5 72B,P21,high,4,75,75
+Qwen 2.5 72B,P21,high,5,75,75
+Qwen 2.5 72B,P22,low,1,85,85
+Qwen 2.5 72B,P22,low,2,85,85
+Qwen 2.5 72B,P22,low,3,85,85
+Qwen 2.5 72B,P22,low,4,85,85
+Qwen 2.5 72B,P22,low,5,85,85
+Qwen 2.5 72B,P22,high,1,75,75
+Qwen 2.5 72B,P22,high,2,75,75
+Qwen 2.5 72B,P22,high,3,75,75
+Qwen 2.5 72B,P22,high,4,75,75
+Qwen 2.5 72B,P22,high,5,75,75
+Qwen 2.5 72B,P23,low,1,75,75
+Qwen 2.5 72B,P23,low,2,75,75
+Qwen 2.5 72B,P23,low,3,75,75
+Qwen 2.5 72B,P23,low,4,75,75
+Qwen 2.5 72B,P23,low,5,75,75
+Qwen 2.5 72B,P23,high,1,65,65
+Qwen 2.5 72B,P23,high,2,65,65
+Qwen 2.5 72B,P23,high,3,65,65
+Qwen 2.5 72B,P23,high,4,65,65
+Qwen 2.5 72B,P23,high,5,65,65
+Qwen 2.5 72B,P24,low,1,85,85
+Qwen 2.5 72B,P24,low,2,85,85
+Qwen 2.5 72B,P24,low,3,85,85
+Qwen 2.5 72B,P24,low,4,85,85
+Qwen 2.5 72B,P24,low,5,85,85
+Qwen 2.5 72B,P24,high,1,75,75
+Qwen 2.5 72B,P24,high,2,75,75
+Qwen 2.5 72B,P24,high,3,75,75
+Qwen 2.5 72B,P24,high,4,75,75
+Qwen 2.5 72B,P24,high,5,75,75
+Qwen 2.5 72B,P25,low,1,85,85
+Qwen 2.5 72B,P25,low,2,85,85
+Qwen 2.5 72B,P25,low,3,85,85
+Qwen 2.5 72B,P25,low,4,85,85
+Qwen 2.5 72B,P25,low,5,85,85
+Qwen 2.5 72B,P25,high,1,75,75
+Qwen 2.5 72B,P25,high,2,75,75
+Qwen 2.5 72B,P25,high,3,75,75
+Qwen 2.5 72B,P25,high,4,75,75
+Qwen 2.5 72B,P25,high,5,75,75
+Qwen 2.5 72B,P26,low,1,75,75
+Qwen 2.5 72B,P26,low,2,75,75
+Qwen 2.5 72B,P26,low,3,75,75
+Qwen 2.5 72B,P26,low,4,75,75
+Qwen 2.5 72B,P26,low,5,75,75
+Qwen 2.5 72B,P26,high,1,75,75
+Qwen 2.5 72B,P26,high,2,75,75
+Qwen 2.5 72B,P26,high,3,75,75
+Qwen 2.5 72B,P26,high,4,75,75
+Qwen 2.5 72B,P26,high,5,75,75
+Qwen 2.5 72B,P27,low,1,85,85
+Qwen 2.5 72B,P27,low,2,85,85
+Qwen 2.5 72B,P27,low,3,85,85
+Qwen 2.5 72B,P27,low,4,85,85
+Qwen 2.5 72B,P27,low,5,85,85
+Qwen 2.5 72B,P27,high,1,75,75
+Qwen 2.5 72B,P27,high,2,75,75
+Qwen 2.5 72B,P27,high,3,75,75
+Qwen 2.5 72B,P27,high,4,75,75
+Qwen 2.5 72B,P27,high,5,75,75

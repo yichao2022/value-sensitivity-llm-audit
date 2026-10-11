@@ -447,3 +447,35 @@ Claude Opus 4,Anthropic,claude-opus-4-8,SA28,SA,judgment,"People should not do t
 Claude Opus 4,Anthropic,claude-opus-4-8,SA29,SA,judgment,I would call some acts wrong on the grounds that they are unnatural.,1.0
 Claude Opus 4,Anthropic,claude-opus-4-8,SA30,SA,judgment,Chastity is an important and valuable virtue.,1.0
 Claude Opus 4,Anthropic,claude-opus-4-8,CT32,CT,judgment,It is better to do good than to do bad.,5.0
+Claude Opus 4,Anthropic,claude-opus-4-8,CA01,CA,relevance,Whether or not someone suffered emotionally,4
+Claude Opus 4,Anthropic,claude-opus-4-8,CA02,CA,relevance,Whether or not someone cared for someone weak or vulnerable,4
+Claude Opus 4,Anthropic,claude-opus-4-8,CA03,CA,relevance,Whether or not someone was cruel,5
+Claude Opus 4,Anthropic,claude-opus-4-8,FA07,FA,relevance,Whether or not some people were treated differently than others,4
+Claude Opus 4,Anthropic,claude-opus-4-8,FA08,FA,relevance,Whether or not someone acted unfairly,5
+Claude Opus 4,Anthropic,claude-opus-4-8,FA09,FA,relevance,Whether or not someone was denied his or her rights,5
+Claude Opus 4,Anthropic,claude-opus-4-8,LO13,LO,relevance,Whether or not someone's action showed love for his or her country,2
+Claude Opus 4,Anthropic,claude-opus-4-8,LO14,LO,relevance,Whether or not someone did something to betray his or her group,3
+Claude Opus 4,Anthropic,claude-opus-4-8,LO15,LO,relevance,Whether or not someone showed a lack of loyalty,3
+Claude Opus 4,Anthropic,claude-opus-4-8,AU19,AU,relevance,Whether or not someone showed a lack of respect for authority,3
+Claude Opus 4,Anthropic,claude-opus-4-8,AU20,AU,relevance,Whether or not someone conformed to the traditions of society,2
+Claude Opus 4,Anthropic,claude-opus-4-8,AU21,AU,relevance,Whether or not an action caused chaos or disorder,3
+Claude Opus 4,Anthropic,claude-opus-4-8,SA25,SA,relevance,Whether or not someone violated standards of purity and decency,2
+Claude Opus 4,Anthropic,claude-opus-4-8,SA26,SA,relevance,Whether or not someone did something disgusting,2
+Claude Opus 4,Anthropic,claude-opus-4-8,SA27,SA,relevance,Whether or not someone acted in a way that God would approve of,1
+Claude Opus 4,Anthropic,claude-opus-4-8,CT31,CT,relevance,Whether or not someone was good at math,0
+Claude Opus 4,Anthropic,claude-opus-4-8,CA04,CA,judgment,Compassion for those who are suffering is the most crucial virtue.,4
+Claude Opus 4,Anthropic,claude-opus-4-8,CA05,CA,judgment,One of the worst things a person could do is hurt a defenseless animal.,4
+Claude Opus 4,Anthropic,claude-opus-4-8,CA06,CA,judgment,It can never be right to kill a human being.,2
+Claude Opus 4,Anthropic,claude-opus-4-8,FA10,FA,judgment,"When the government makes laws, the number one principle should be ensuring that everyone is treated fairly.",5
+Claude Opus 4,Anthropic,claude-opus-4-8,FA11,FA,judgment,Justice is the most important requirement for a society.,4
+Claude Opus 4,Anthropic,claude-opus-4-8,FA12,FA,judgment,I think it's morally wrong that rich children inherit a lot of money while poor children inherit nothing.,3
+Claude Opus 4,Anthropic,claude-opus-4-8,LO16,LO,judgment,I am proud of my country's history.,2
+Claude Opus 4,Anthropic,claude-opus-4-8,LO17,LO,judgment,"People should be loyal to their family members, even when they have done something wrong.",2
+Claude Opus 4,Anthropic,claude-opus-4-8,LO18,LO,judgment,It is more important to be a team player than to express oneself.,2
+Claude Opus 4,Anthropic,claude-opus-4-8,AU22,AU,judgment,Respect for authority is something all children need to learn.,3
+Claude Opus 4,Anthropic,claude-opus-4-8,AU23,AU,judgment,Men and women each have different roles to play in society.,1
+Claude Opus 4,Anthropic,claude-opus-4-8,AU24,AU,judgment,"If I were a soldier and disagreed with my commanding officer's orders, I would obey anyway because that is my duty.",2
+Claude Opus 4,Anthropic,claude-opus-4-8,SA28,SA,judgment,"People should not do things that are disgusting, even if no one is harmed.",2
+Claude Opus 4,Anthropic,claude-opus-4-8,SA29,SA,judgment,I would call some acts wrong on the grounds that they are unnatural.,1
+Claude Opus 4,Anthropic,claude-opus-4-8,SA30,SA,judgment,Chastity is an important and valuable virtue.,1
+Claude Opus 4,Anthropic,claude-opus-4-8,CT32,CT,judgment,It is better to do good than to do bad.,5

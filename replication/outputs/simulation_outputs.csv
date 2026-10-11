@@ -1,0 +1,753 @@
+run_id,model,provider,api_model,json_valid,score_valid,non_refusal,willingness,rationale,raw_output,error,timestamp_utc
+RUN00001,GPT-4.1,OpenAI,gpt-4.1,True,True,True,75,"The convenient location, flexible hours, minimal documentation, and quick process make it feasible despite her work and childcare constraints. Her medium trust in public health and lack of a regular doctor may cause some hesitation, but overall, the scenario addresses most barriers.","{
+  ""willingness"": 75,
+  ""rationale"": ""The convenient location, flexible hours, minimal documentation, and quick process make it feasible despite her work and childcare constraints. Her medium trust in public health and lack of a regular doctor may cause some hesitation, but overall, the scenario addresses most barriers.""
+}",,2026-10-11T01:09:07.277968+00:00
+RUN00002,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, minimal documentation, and quick process make it feasible despite her work constraints. Her medium trust in public health and lack of a regular doctor may cause some hesitation, but overall, the scenario addresses most barriers.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, minimal documentation, and quick process make it feasible despite her work constraints. Her medium trust in public health and lack of a regular doctor may cause some hesitation, but overall, the scenario addresses most barriers.""
+}",,2026-10-11T01:09:08.700453+00:00
+RUN00003,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, minimal documentation, and quick process make it feasible despite her work and childcare constraints. Her medium trust in public health and lack of a regular doctor may cause some hesitation, but overall, the scenario addresses most barriers.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, minimal documentation, and quick process make it feasible despite her work and childcare constraints. Her medium trust in public health and lack of a regular doctor may cause some hesitation, but overall, the scenario addresses most barriers.""
+}",,2026-10-11T01:09:10.298142+00:00
+RUN00004,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, minimal documentation, and quick process make it feasible despite her work constraints. Her medium trust in public health and lack of a regular doctor may cause some hesitation, but overall, the scenario addresses most barriers.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, minimal documentation, and quick process make it feasible despite her work constraints. Her medium trust in public health and lack of a regular doctor may cause some hesitation, but overall, the scenario addresses most barriers.""
+}",,2026-10-11T01:09:11.700760+00:00
+RUN00005,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, minimal documentation, and quick process make it feasible despite her work and childcare constraints. Her medium trust in public health and lack of a regular doctor may cause some hesitation, but overall, the scenario addresses most barriers.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, minimal documentation, and quick process make it feasible despite her work and childcare constraints. Her medium trust in public health and lack of a regular doctor may cause some hesitation, but overall, the scenario addresses most barriers.""
+}",,2026-10-11T01:09:12.871866+00:00
+RUN00006,GPT-4.1,OpenAI,gpt-4.1,True,True,True,40,"The in-person registration, required documentation, long wait times, and lack of flexibility with her job make the process difficult. While she has some trust in public health, these barriers lower her willingness to proceed.","{
+  ""willingness"": 40,
+  ""rationale"": ""The in-person registration, required documentation, long wait times, and lack of flexibility with her job make the process difficult. While she has some trust in public health, these barriers lower her willingness to proceed.""
+}",,2026-10-11T01:09:14.372337+00:00
+RUN00007,GPT-4.1,OpenAI,gpt-4.1,True,True,True,40,"The in-person registration, required documentation, long wait times, and lack of flexibility with her job make the process difficult. While she has some trust in public health, these barriers lower her willingness to proceed.","{
+  ""willingness"": 40,
+  ""rationale"": ""The in-person registration, required documentation, long wait times, and lack of flexibility with her job make the process difficult. While she has some trust in public health, these barriers lower her willingness to proceed.""
+}",,2026-10-11T01:09:15.917193+00:00
+RUN00008,GPT-4.1,OpenAI,gpt-4.1,True,True,True,40,"The in-person registration, required documentation, long wait times, and need to schedule time off work create significant barriers. While she may value vaccination, these logistical challenges and lack of flexible work hours reduce her willingness.","{
+  ""willingness"": 40,
+  ""rationale"": ""The in-person registration, required documentation, long wait times, and need to schedule time off work create significant barriers. While she may value vaccination, these logistical challenges and lack of flexible work hours reduce her willingness.""
+}",,2026-10-11T01:09:17.190045+00:00
+RUN00009,GPT-4.1,OpenAI,gpt-4.1,True,True,True,40,"The in-person registration, required documentation, long wait times, and need to schedule time off work create significant barriers. While she has medium trust in public health, these logistical challenges make it difficult for her to prioritize vaccination.","{
+  ""willingness"": 40,
+  ""rationale"": ""The in-person registration, required documentation, long wait times, and need to schedule time off work create significant barriers. While she has medium trust in public health, these logistical challenges make it difficult for her to prioritize vaccination.""
+}",,2026-10-11T01:09:18.643355+00:00
+RUN00010,GPT-4.1,OpenAI,gpt-4.1,True,True,True,40,"The in-person registration, required documentation, long wait times, and lack of flexibility with her job make the process difficult. While she has some trust in public health, these barriers significantly reduce her willingness to proceed.","{
+  ""willingness"": 40,
+  ""rationale"": ""The in-person registration, required documentation, long wait times, and lack of flexibility with her job make the process difficult. While she has some trust in public health, these barriers significantly reduce her willingness to proceed.""
+}",,2026-10-11T01:09:19.884321+00:00
+RUN00011,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Medium trust in public health and minimal documentation required further reduce barriers.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Medium trust in public health and minimal documentation required further reduce barriers.""
+}",,2026-10-11T01:09:21.130635+00:00
+RUN00012,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Immediate confirmation and minimal documentation reduce barriers, and her medium trust in public health supports a high willingness.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Immediate confirmation and minimal documentation reduce barriers, and her medium trust in public health supports a high willingness.""
+}",,2026-10-11T01:09:22.295625+00:00
+RUN00013,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Medium trust in public health and minimal documentation required further reduce barriers.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Medium trust in public health and minimal documentation required further reduce barriers.""
+}",,2026-10-11T01:09:23.454966+00:00
+RUN00014,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Medium trust in public health and minimal documentation required further reduce barriers.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Medium trust in public health and minimal documentation required further reduce barriers.""
+}",,2026-10-11T01:09:24.537722+00:00
+RUN00015,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Immediate confirmation and minimal documentation reduce barriers, and her medium trust in public health supports a high willingness.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Immediate confirmation and minimal documentation reduce barriers, and her medium trust in public health supports a high willingness.""
+}",,2026-10-11T01:09:25.996234+00:00
+RUN00016,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, required documentation, long wait times, and need to schedule time off work create significant barriers. While she has some trust in public health and a regular doctor, these logistical challenges make her less likely to proceed.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, required documentation, long wait times, and need to schedule time off work create significant barriers. While she has some trust in public health and a regular doctor, these logistical challenges make her less likely to proceed.""
+}",,2026-10-11T01:09:27.285017+00:00
+RUN00017,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, required documentation, long wait times, and need to schedule time off work create significant barriers. While she has some trust in public health and a regular doctor, these logistical challenges make her less likely to proceed.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, required documentation, long wait times, and need to schedule time off work create significant barriers. While she has some trust in public health and a regular doctor, these logistical challenges make her less likely to proceed.""
+}",,2026-10-11T01:09:28.427790+00:00
+RUN00018,GPT-4.1,OpenAI,gpt-4.1,True,True,True,40,"The in-person registration, long wait times, and need for documentation create significant barriers, especially given her inflexible job and childcare responsibilities. While she has some trust in public health, the logistical challenges make her less likely to proceed.","{
+  ""willingness"": 40,
+  ""rationale"": ""The in-person registration, long wait times, and need for documentation create significant barriers, especially given her inflexible job and childcare responsibilities. While she has some trust in public health, the logistical challenges make her less likely to proceed.""
+}",,2026-10-11T01:09:29.566742+00:00
+RUN00019,GPT-4.1,OpenAI,gpt-4.1,True,True,True,40,"The in-person registration, long wait times, and need for documentation create significant barriers for someone with limited income, a young child, and a job with inflexible hours. While she has some trust in public health, the logistical challenges make her less likely to proceed.","{
+  ""willingness"": 40,
+  ""rationale"": ""The in-person registration, long wait times, and need for documentation create significant barriers for someone with limited income, a young child, and a job with inflexible hours. While she has some trust in public health, the logistical challenges make her less likely to proceed.""
+}",,2026-10-11T01:09:31.455314+00:00
+RUN00020,GPT-4.1,OpenAI,gpt-4.1,True,True,True,40,"The in-person registration, long wait times, and need for documentation create significant barriers, especially given her inflexible job and childcare responsibilities. While she has some trust in public health, the logistical challenges make her less likely to proceed.","{
+  ""willingness"": 40,
+  ""rationale"": ""The in-person registration, long wait times, and need for documentation create significant barriers, especially given her inflexible job and childcare responsibilities. While she has some trust in public health, the logistical challenges make her less likely to proceed.""
+}",,2026-10-11T01:09:32.826929+00:00
+RUN00021,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though some minor hesitancy may remain.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though some minor hesitancy may remain.""
+}",,2026-10-11T01:09:34.047988+00:00
+RUN00022,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though some hesitancy may remain.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though some hesitancy may remain.""
+}",,2026-10-11T01:09:35.260410+00:00
+RUN00023,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, despite some potential hesitancy.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, despite some potential hesitancy.""
+}",,2026-10-11T01:09:36.452386+00:00
+RUN00024,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though some hesitancy may remain.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though some hesitancy may remain.""
+}",,2026-10-11T01:09:37.887418+00:00
+RUN00025,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though some hesitancy may remain.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though some hesitancy may remain.""
+}",,2026-10-11T01:09:39.084877+00:00
+RUN00026,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait time are significant barriers for someone with a demanding job and childcare responsibilities. While she has some trust in public health and access to a doctor, the logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait time are significant barriers for someone with a demanding job and childcare responsibilities. While she has some trust in public health and access to a doctor, the logistical challenges lower her willingness.""
+}",,2026-10-11T01:09:40.352565+00:00
+RUN00027,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait time are significant barriers for someone with a demanding job and childcare responsibilities. While she has some trust in public health and access to a doctor, the logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait time are significant barriers for someone with a demanding job and childcare responsibilities. While she has some trust in public health and access to a doctor, the logistical challenges lower her willingness.""
+}",,2026-10-11T01:09:41.620890+00:00
+RUN00028,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait times are significant barriers for someone with a demanding job and childcare responsibilities. While she has medium trust in public health and access to a doctor, the logistical challenges make her less likely to proceed.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers for someone with a demanding job and childcare responsibilities. While she has medium trust in public health and access to a doctor, the logistical challenges make her less likely to proceed.""
+}",,2026-10-11T01:09:42.919240+00:00
+RUN00029,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait time are significant barriers for someone with a demanding job and childcare responsibilities. While she has some trust in public health and access to a doctor, the logistical challenges make her less likely to proceed.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait time are significant barriers for someone with a demanding job and childcare responsibilities. While she has some trust in public health and access to a doctor, the logistical challenges make her less likely to proceed.""
+}",,2026-10-11T01:09:44.102347+00:00
+RUN00030,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait time are significant barriers for someone with a demanding job and childcare responsibilities. While she has some trust in public health and access to a doctor, the logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait time are significant barriers for someone with a demanding job and childcare responsibilities. While she has some trust in public health and access to a doctor, the logistical challenges lower her willingness.""
+}",,2026-10-11T01:09:45.292041+00:00
+RUN00031,GPT-4.1,OpenAI,gpt-4.1,True,True,True,75,"The convenient location, flexible hours, and minimal documentation lower barriers for her, especially given her part-time work and childcare responsibilities. Medium trust in public health and lack of a regular doctor may cause some hesitation, but overall, the process is accessible and quick.","{
+  ""willingness"": 75,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation lower barriers for her, especially given her part-time work and childcare responsibilities. Medium trust in public health and lack of a regular doctor may cause some hesitation, but overall, the process is accessible and quick.""
+}",,2026-10-11T01:09:46.610914+00:00
+RUN00032,GPT-4.1,OpenAI,gpt-4.1,True,True,True,75,"The convenient location, flexible hours, and minimal documentation lower barriers for her. While her trust in public health is only medium and she lacks a regular doctor, the ease of scheduling and quick process make her fairly likely to proceed.","{
+  ""willingness"": 75,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation lower barriers for her. While her trust in public health is only medium and she lacks a regular doctor, the ease of scheduling and quick process make her fairly likely to proceed.""
+}",,2026-10-11T01:09:47.922375+00:00
+RUN00033,GPT-4.1,OpenAI,gpt-4.1,True,True,True,75,"The convenient location, flexible hours, and minimal documentation lower barriers for her. While her trust in public health is only medium and she lacks a regular doctor, the ease of scheduling and quick process make her fairly likely to proceed.","{
+  ""willingness"": 75,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation lower barriers for her. While her trust in public health is only medium and she lacks a regular doctor, the ease of scheduling and quick process make her fairly likely to proceed.""
+}",,2026-10-11T01:09:49.346855+00:00
+RUN00034,GPT-4.1,OpenAI,gpt-4.1,True,True,True,75,"The convenient location, flexible hours, and minimal documentation lower barriers for her. While her trust in public health is only medium and she lacks a regular doctor, the ease of scheduling and quick process make her fairly likely to proceed.","{
+  ""willingness"": 75,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation lower barriers for her. While her trust in public health is only medium and she lacks a regular doctor, the ease of scheduling and quick process make her fairly likely to proceed.""
+}",,2026-10-11T01:09:50.569839+00:00
+RUN00035,GPT-4.1,OpenAI,gpt-4.1,True,True,True,75,"The convenient location, flexible hours, and minimal documentation lower barriers for her. While her trust in public health is only medium and she lacks a regular doctor, the ease of scheduling and quick process make her fairly willing to proceed.","{
+  ""willingness"": 75,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation lower barriers for her. While her trust in public health is only medium and she lacks a regular doctor, the ease of scheduling and quick process make her fairly willing to proceed.""
+}",,2026-10-11T01:09:51.717369+00:00
+RUN00036,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait times are significant barriers for someone with a young child, low income, and no regular healthcare provider. While she has some trust in public health, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers for someone with a young child, low income, and no regular healthcare provider. While she has some trust in public health, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:09:52.893351+00:00
+RUN00037,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait times are significant barriers for someone with limited income, childcare responsibilities, and no regular healthcare provider. While she has some trust in public health, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers for someone with limited income, childcare responsibilities, and no regular healthcare provider. While she has some trust in public health, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:09:54.209120+00:00
+RUN00038,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait times are significant barriers for someone with a young child, low income, and no regular healthcare provider. While she has some trust in public health, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers for someone with a young child, low income, and no regular healthcare provider. While she has some trust in public health, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:09:55.520428+00:00
+RUN00039,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait times are significant barriers for someone with a young child, low income, and no regular healthcare provider. While she has some trust in public health, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers for someone with a young child, low income, and no regular healthcare provider. While she has some trust in public health, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:09:56.705981+00:00
+RUN00040,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait times are significant barriers for someone with a young child, low income, and no regular healthcare provider. While she has some trust in public health, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers for someone with a young child, low income, and no regular healthcare provider. While she has some trust in public health, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:09:57.984164+00:00
+RUN00041,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,The nearby pharmacy with flexible hours and easy online scheduling makes vaccination convenient despite her limited income and transportation challenges. Her medium trust in public health and the simple process increase her likelihood to proceed.,"{
+  ""willingness"": 80,
+  ""rationale"": ""The nearby pharmacy with flexible hours and easy online scheduling makes vaccination convenient despite her limited income and transportation challenges. Her medium trust in public health and the simple process increase her likelihood to proceed.""
+}",,2026-10-11T01:09:59.367651+00:00
+RUN00042,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,The nearby pharmacy with flexible hours and easy online scheduling makes vaccination convenient despite her limited income and transportation challenges. Her medium trust in public health and the minimal documentation required further support her willingness.,"{
+  ""willingness"": 85,
+  ""rationale"": ""The nearby pharmacy with flexible hours and easy online scheduling makes vaccination convenient despite her limited income and transportation challenges. Her medium trust in public health and the minimal documentation required further support her willingness.""
+}",,2026-10-11T01:10:00.555417+00:00
+RUN00043,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,The nearby pharmacy with flexible hours and easy online scheduling makes vaccination convenient despite her limited income and transportation challenges. Her medium trust in public health and the simple process increase her likelihood to proceed.,"{
+  ""willingness"": 80,
+  ""rationale"": ""The nearby pharmacy with flexible hours and easy online scheduling makes vaccination convenient despite her limited income and transportation challenges. Her medium trust in public health and the simple process increase her likelihood to proceed.""
+}",,2026-10-11T01:10:01.723992+00:00
+RUN00044,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,The nearby pharmacy with flexible hours and easy online scheduling makes vaccination convenient despite her limited income and transportation challenges. Her medium trust in public health and the simple process increase her likelihood to proceed.,"{
+  ""willingness"": 80,
+  ""rationale"": ""The nearby pharmacy with flexible hours and easy online scheduling makes vaccination convenient despite her limited income and transportation challenges. Her medium trust in public health and the simple process increase her likelihood to proceed.""
+}",,2026-10-11T01:10:02.905087+00:00
+RUN00045,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and having a young child likely motivate her to protect her family, increasing her willingness.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and having a young child likely motivate her to protect her family, increasing her willingness.""
+}",,2026-10-11T01:10:03.998816+00:00
+RUN00046,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, required documentation, long wait times, and delayed appointment create significant barriers, especially with a young child and limited income. While she has some trust in public health and flexible work hours, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, required documentation, long wait times, and delayed appointment create significant barriers, especially with a young child and limited income. While she has some trust in public health and flexible work hours, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:10:05.333528+00:00
+RUN00047,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, required documentation, long wait times, and delayed appointment create significant barriers, especially with her low income, childcare responsibilities, and distant clinic. While she has some trust in public health, these logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, required documentation, long wait times, and delayed appointment create significant barriers, especially with her low income, childcare responsibilities, and distant clinic. While she has some trust in public health, these logistical challenges lower her willingness.""
+}",,2026-10-11T01:10:06.756499+00:00
+RUN00048,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, required documentation, long wait times, and delayed appointment create significant barriers, especially with her low income, childcare responsibilities, and distant clinic. While she has some trust in public health, these logistical challenges reduce her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, required documentation, long wait times, and delayed appointment create significant barriers, especially with her low income, childcare responsibilities, and distant clinic. While she has some trust in public health, these logistical challenges reduce her willingness.""
+}",,2026-10-11T01:10:08.106645+00:00
+RUN00049,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, required documentation, long wait times, and delayed appointment create significant barriers, especially with a young child and limited income. While she has some trust in public health and flexible work hours, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, required documentation, long wait times, and delayed appointment create significant barriers, especially with a young child and limited income. While she has some trust in public health and flexible work hours, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:10:09.437629+00:00
+RUN00050,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and limited income. While she has some trust in public health and flexible work hours, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and limited income. While she has some trust in public health and flexible work hours, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:10:10.810864+00:00
+RUN00051,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and access to a regular doctor also support a high willingness.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and access to a regular doctor also support a high willingness.""
+}",,2026-10-11T01:10:12.126558+00:00
+RUN00052,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and regular access to healthcare further support her willingness.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and regular access to healthcare further support her willingness.""
+}",,2026-10-11T01:10:13.209993+00:00
+RUN00053,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though some hesitancy may remain.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though some hesitancy may remain.""
+}",,2026-10-11T01:10:14.564699+00:00
+RUN00054,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though some hesitancy may remain.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though some hesitancy may remain.""
+}",,2026-10-11T01:10:15.726097+00:00
+RUN00055,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and regular access to healthcare further support her willingness.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and regular access to healthcare further support her willingness.""
+}",,2026-10-11T01:10:17.074597+00:00
+RUN00056,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"The process is inconvenient and time-consuming, which is challenging for someone with a young child and limited income. However, her flexible work hours and access to a regular doctor make it somewhat feasible, and her medium trust in public health authorities means she is not strongly deterred.","{
+  ""willingness"": 55,
+  ""rationale"": ""The process is inconvenient and time-consuming, which is challenging for someone with a young child and limited income. However, her flexible work hours and access to a regular doctor make it somewhat feasible, and her medium trust in public health authorities means she is not strongly deterred.""
+}",,2026-10-11T01:10:18.341830+00:00
+RUN00057,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values her health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and limited income. Her medium trust in public health also tempers her motivation.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values her health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and limited income. Her medium trust in public health also tempers her motivation.""
+}",,2026-10-11T01:10:19.602100+00:00
+RUN00058,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values her health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and limited income. Her medium trust in public health also tempers her motivation.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values her health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and limited income. Her medium trust in public health also tempers her motivation.""
+}",,2026-10-11T01:10:20.884277+00:00
+RUN00059,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"The process is inconvenient and time-consuming, which is challenging for someone with a young child and limited income. However, her flexible work hours and access to a regular doctor make it somewhat feasible, and her medium trust in public health means she is not strongly deterred.","{
+  ""willingness"": 55,
+  ""rationale"": ""The process is inconvenient and time-consuming, which is challenging for someone with a young child and limited income. However, her flexible work hours and access to a regular doctor make it somewhat feasible, and her medium trust in public health means she is not strongly deterred.""
+}",,2026-10-11T01:10:22.119681+00:00
+RUN00060,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"The person values health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and limited income. Her medium trust in public health and flexible work hours make her somewhat willing, but the inconvenience lowers her enthusiasm.","{
+  ""willingness"": 55,
+  ""rationale"": ""The person values health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and limited income. Her medium trust in public health and flexible work hours make her somewhat willing, but the inconvenience lowers her enthusiasm.""
+}",,2026-10-11T01:10:23.474676+00:00
+RUN00061,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy for her to fit vaccination into her schedule as a self-employed parent. Her medium trust in public health and lack of major barriers increase her likelihood to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy for her to fit vaccination into her schedule as a self-employed parent. Her medium trust in public health and lack of major barriers increase her likelihood to proceed.""
+}",,2026-10-11T01:10:24.870833+00:00
+RUN00062,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy for her to fit vaccination into her schedule as a self-employed parent. Her medium trust in public health and lack of major barriers increase her likelihood to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy for her to fit vaccination into her schedule as a self-employed parent. Her medium trust in public health and lack of major barriers increase her likelihood to proceed.""
+}",,2026-10-11T01:10:26.183194+00:00
+RUN00063,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy for her to fit vaccination into her schedule as a self-employed parent. Her medium trust in public health and lack of barriers increase her likelihood to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy for her to fit vaccination into her schedule as a self-employed parent. Her medium trust in public health and lack of barriers increase her likelihood to proceed.""
+}",,2026-10-11T01:10:27.512658+00:00
+RUN00064,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy for her to fit the appointment into her schedule. Her medium trust in public health and lack of major barriers increase her likelihood to proceed, though some hesitancy may remain.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy for her to fit the appointment into her schedule. Her medium trust in public health and lack of major barriers increase her likelihood to proceed, though some hesitancy may remain.""
+}",,2026-10-11T01:10:28.860979+00:00
+RUN00065,GPT-4.1,OpenAI,gpt-4.1,True,True,True,75,"The convenient location, flexible hours, and minimal documentation make it easy for her to fit vaccination into her schedule as a self-employed parent. Her medium trust in public health may cause some hesitation, but overall, the low barriers increase her willingness.","{
+  ""willingness"": 75,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy for her to fit vaccination into her schedule as a self-employed parent. Her medium trust in public health may cause some hesitation, but overall, the low barriers increase her willingness.""
+}",,2026-10-11T01:10:30.554413+00:00
+RUN00066,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"She values her health and her child's, but the in-person registration, paperwork, and long wait are significant barriers, especially with no regular doctor and childcare needs. Her medium trust in public health and flexible schedule increase willingness somewhat, but logistical hurdles lower it.","{
+  ""willingness"": 55,
+  ""rationale"": ""She values her health and her child's, but the in-person registration, paperwork, and long wait are significant barriers, especially with no regular doctor and childcare needs. Her medium trust in public health and flexible schedule increase willingness somewhat, but logistical hurdles lower it.""
+}",,2026-10-11T01:10:31.929147+00:00
+RUN00067,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"She values her health and her child's, but the in-person registration, paperwork, and long wait are significant barriers, especially with no regular healthcare provider and childcare needs. Her medium trust in public health and flexible schedule increase willingness somewhat, but logistical hurdles lower it.","{
+  ""willingness"": 55,
+  ""rationale"": ""She values her health and her child's, but the in-person registration, paperwork, and long wait are significant barriers, especially with no regular healthcare provider and childcare needs. Her medium trust in public health and flexible schedule increase willingness somewhat, but logistical hurdles lower it.""
+}",,2026-10-11T01:10:33.323132+00:00
+RUN00068,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"She values her health and her child's, but the in-person registration, paperwork, and long wait are significant barriers, especially with no regular doctor and childcare needs. Her medium trust in public health and flexible schedule increase willingness somewhat, but logistical hurdles lower it.","{
+  ""willingness"": 55,
+  ""rationale"": ""She values her health and her child's, but the in-person registration, paperwork, and long wait are significant barriers, especially with no regular doctor and childcare needs. Her medium trust in public health and flexible schedule increase willingness somewhat, but logistical hurdles lower it.""
+}",,2026-10-11T01:10:34.553815+00:00
+RUN00069,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"She values her health and her child's, but the in-person registration, paperwork, and long wait are significant barriers, especially with no regular doctor and childcare needs. Her medium trust in public health and flexible schedule increase willingness somewhat, but logistical hurdles lower it.","{
+  ""willingness"": 55,
+  ""rationale"": ""She values her health and her child's, but the in-person registration, paperwork, and long wait are significant barriers, especially with no regular doctor and childcare needs. Her medium trust in public health and flexible schedule increase willingness somewhat, but logistical hurdles lower it.""
+}",,2026-10-11T01:10:35.922289+00:00
+RUN00070,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"She values her health and her child's, but the in-person registration, paperwork, and long wait are significant barriers, especially with no regular healthcare provider and childcare needs. Her medium trust in public health and flexible schedule increase willingness somewhat, but logistical hurdles lower it.","{
+  ""willingness"": 55,
+  ""rationale"": ""She values her health and her child's, but the in-person registration, paperwork, and long wait are significant barriers, especially with no regular healthcare provider and childcare needs. Her medium trust in public health and flexible schedule increase willingness somewhat, but logistical hurdles lower it.""
+}",,2026-10-11T01:10:37.263447+00:00
+RUN00071,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and having a young child likely motivate her to protect her family, increasing her willingness.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and having a young child likely motivate her to protect her family, increasing her willingness.""
+}",,2026-10-11T01:10:38.507521+00:00
+RUN00072,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The nearby pharmacy with flexible hours and easy online scheduling makes vaccination convenient, especially given her self-employed status and childcare responsibilities. The minimal documentation and short appointment time further reduce barriers. Her medium trust in public health may prevent full enthusiasm, but overall willingness is high.","{
+  ""willingness"": 80,
+  ""rationale"": ""The nearby pharmacy with flexible hours and easy online scheduling makes vaccination convenient, especially given her self-employed status and childcare responsibilities. The minimal documentation and short appointment time further reduce barriers. Her medium trust in public health may prevent full enthusiasm, but overall willingness is high.""
+}",,2026-10-11T01:10:39.780019+00:00
+RUN00073,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and having a young child likely motivate her to protect her family, increasing her willingness.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and having a young child likely motivate her to protect her family, increasing her willingness.""
+}",,2026-10-11T01:10:40.906524+00:00
+RUN00074,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The nearby pharmacy with flexible hours and easy online scheduling makes vaccination convenient, especially given her self-employed status and childcare responsibilities. Minimal documentation and a short appointment time further reduce barriers. Her medium trust in public health may prevent full enthusiasm, but overall willingness is high.","{
+  ""willingness"": 85,
+  ""rationale"": ""The nearby pharmacy with flexible hours and easy online scheduling makes vaccination convenient, especially given her self-employed status and childcare responsibilities. Minimal documentation and a short appointment time further reduce barriers. Her medium trust in public health may prevent full enthusiasm, but overall willingness is high.""
+}",,2026-10-11T01:10:42.147814+00:00
+RUN00075,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and having a young child likely motivate her to protect her family, increasing her willingness.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and having a young child likely motivate her to protect her family, increasing her willingness.""
+}",,2026-10-11T01:10:43.225393+00:00
+RUN00076,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait time are significant barriers, especially with a young child and limited income. While she controls her schedule and has medium trust in public health, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait time are significant barriers, especially with a young child and limited income. While she controls her schedule and has medium trust in public health, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:10:44.353237+00:00
+RUN00077,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and limited income. While she controls her schedule and has medium trust in public health, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and limited income. While she controls her schedule and has medium trust in public health, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:10:45.632900+00:00
+RUN00078,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and limited income. While she controls her schedule and has medium trust in public health, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and limited income. While she controls her schedule and has medium trust in public health, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:10:46.928756+00:00
+RUN00079,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait time are significant barriers, especially with a young child and limited income. While she controls her schedule and has medium trust in public health, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait time are significant barriers, especially with a young child and limited income. While she controls her schedule and has medium trust in public health, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:10:48.122500+00:00
+RUN00080,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and limited income. While she controls her schedule and has medium trust in public health, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and limited income. While she controls her schedule and has medium trust in public health, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:10:49.313749+00:00
+RUN00081,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The process is convenient, quick, and fits her flexible schedule. She has access to healthcare and only moderate trust in authorities, but the ease of registration and proximity increase her likelihood to proceed.","{
+  ""willingness"": 85,
+  ""rationale"": ""The process is convenient, quick, and fits her flexible schedule. She has access to healthcare and only moderate trust in authorities, but the ease of registration and proximity increase her likelihood to proceed.""
+}",,2026-10-11T01:10:50.575781+00:00
+RUN00082,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The process is convenient, quick, and fits her flexible schedule. She has access to healthcare and only moderate trust in authorities, but the ease of registration and proximity increase her likelihood to proceed.","{
+  ""willingness"": 85,
+  ""rationale"": ""The process is convenient, quick, and fits her flexible schedule. She has access to healthcare and only moderate trust in authorities, but the ease of registration and proximity increase her likelihood to proceed.""
+}",,2026-10-11T01:10:51.863879+00:00
+RUN00083,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The process is convenient, quick, and fits her flexible schedule. She has access to healthcare and only moderate trust in authorities, but the ease of registration and proximity increase her likelihood to proceed.","{
+  ""willingness"": 85,
+  ""rationale"": ""The process is convenient, quick, and fits her flexible schedule. She has access to healthcare and only moderate trust in authorities, but the ease of registration and proximity increase her likelihood to proceed.""
+}",,2026-10-11T01:10:53.078366+00:00
+RUN00084,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process fit her self-employed schedule and childcare needs. Her medium trust in public health and easy access to her doctor support a high willingness, though not absolute certainty.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process fit her self-employed schedule and childcare needs. Her medium trust in public health and easy access to her doctor support a high willingness, though not absolute certainty.""
+}",,2026-10-11T01:10:54.405950+00:00
+RUN00085,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The process is convenient, quick, and fits her flexible schedule. She has access to healthcare and only moderate trust in authorities, but the ease of registration and proximity increase her likelihood to proceed.","{
+  ""willingness"": 85,
+  ""rationale"": ""The process is convenient, quick, and fits her flexible schedule. She has access to healthcare and only moderate trust in authorities, but the ease of registration and proximity increase her likelihood to proceed.""
+}",,2026-10-11T01:10:55.594883+00:00
+RUN00086,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values her health and has access to a regular doctor, but the in-person registration, paperwork, and long wait time are inconvenient, especially with a young child and low income. These barriers reduce her willingness, though she is still somewhat likely to proceed.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values her health and has access to a regular doctor, but the in-person registration, paperwork, and long wait time are inconvenient, especially with a young child and low income. These barriers reduce her willingness, though she is still somewhat likely to proceed.""
+}",,2026-10-11T01:10:56.978364+00:00
+RUN00087,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values her health and has access to a regular doctor, but the in-person registration, paperwork, and long wait time are inconvenient, especially with a young child and low income. These barriers reduce her willingness, though she is still somewhat likely to proceed.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values her health and has access to a regular doctor, but the in-person registration, paperwork, and long wait time are inconvenient, especially with a young child and low income. These barriers reduce her willingness, though she is still somewhat likely to proceed.""
+}",,2026-10-11T01:10:58.269883+00:00
+RUN00088,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values her health and has access to a regular doctor, but the in-person registration, paperwork, and long wait time are inconvenient, especially with a young child and low income. These barriers reduce her willingness, though she is still somewhat likely to proceed.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values her health and has access to a regular doctor, but the in-person registration, paperwork, and long wait time are inconvenient, especially with a young child and low income. These barriers reduce her willingness, though she is still somewhat likely to proceed.""
+}",,2026-10-11T01:10:59.719160+00:00
+RUN00089,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values her health and has access to a regular doctor, but the in-person registration, paperwork, and long wait time are inconvenient, especially with a young child and low income. These barriers reduce her willingness, though she is still somewhat likely to proceed.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values her health and has access to a regular doctor, but the in-person registration, paperwork, and long wait time are inconvenient, especially with a young child and low income. These barriers reduce her willingness, though she is still somewhat likely to proceed.""
+}",,2026-10-11T01:11:00.818548+00:00
+RUN00090,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values her health and has access to a regular doctor, but the in-person registration, paperwork, and long wait time are inconvenient, especially with a young child and low income. These barriers reduce her willingness, though she is still somewhat likely to proceed.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values her health and has access to a regular doctor, but the in-person registration, paperwork, and long wait time are inconvenient, especially with a young child and low income. These barriers reduce her willingness, though she is still somewhat likely to proceed.""
+}",,2026-10-11T01:11:02.005482+00:00
+RUN00091,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy to fit vaccination into her busy schedule. Her medium trust in public health and lack of a regular doctor are minor barriers, but the ease of access likely outweighs them.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy to fit vaccination into her busy schedule. Her medium trust in public health and lack of a regular doctor are minor barriers, but the ease of access likely outweighs them.""
+}",,2026-10-11T01:11:03.215327+00:00
+RUN00092,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy to fit vaccination into her busy schedule. Her medium trust in public health and lack of a regular doctor are minor barriers, but the ease of access likely outweighs them.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy to fit vaccination into her busy schedule. Her medium trust in public health and lack of a regular doctor are minor barriers, but the ease of access likely outweighs them.""
+}",,2026-10-11T01:11:04.432767+00:00
+RUN00093,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium, the low barriers and quick process increase her likelihood to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium, the low barriers and quick process increase her likelihood to proceed.""
+}",,2026-10-11T01:11:05.630667+00:00
+RUN00094,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium, the low barriers and quick process increase her likelihood to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium, the low barriers and quick process increase her likelihood to proceed.""
+}",,2026-10-11T01:11:06.825246+00:00
+RUN00095,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium, the low barriers and quick process increase her likelihood to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium, the low barriers and quick process increase her likelihood to proceed.""
+}",,2026-10-11T01:11:08.125428+00:00
+RUN00096,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait times are significant barriers for someone with a demanding job and childcare responsibilities. Medium trust in public health and lack of a regular doctor further reduce motivation, though she may still consider vaccination important.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers for someone with a demanding job and childcare responsibilities. Medium trust in public health and lack of a regular doctor further reduce motivation, though she may still consider vaccination important.""
+}",,2026-10-11T01:11:09.860629+00:00
+RUN00097,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait times are significant barriers for someone with a demanding job and childcare responsibilities. While she has medium trust in public health, the logistical challenges and lack of a regular healthcare provider lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers for someone with a demanding job and childcare responsibilities. While she has medium trust in public health, the logistical challenges and lack of a regular healthcare provider lower her willingness.""
+}",,2026-10-11T01:11:11.159759+00:00
+RUN00098,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, required documentation, and long wait times are significant barriers for someone with a demanding job and childcare responsibilities. While she has medium trust in public health, the logistical challenges make her less likely to proceed.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, required documentation, and long wait times are significant barriers for someone with a demanding job and childcare responsibilities. While she has medium trust in public health, the logistical challenges make her less likely to proceed.""
+}",,2026-10-11T01:11:12.362624+00:00
+RUN00099,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, required documentation, and long wait times are significant barriers for someone with a full-time job and childcare responsibilities. Her medium trust in public health and lack of a regular doctor further reduce her motivation, though she may still consider vaccination important.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, required documentation, and long wait times are significant barriers for someone with a full-time job and childcare responsibilities. Her medium trust in public health and lack of a regular doctor further reduce her motivation, though she may still consider vaccination important.""
+}",,2026-10-11T01:11:13.630430+00:00
+RUN00100,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait times are significant barriers for someone with a full-time job and childcare responsibilities. While she has medium trust in public health, the logistical challenges make her less likely to proceed.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers for someone with a full-time job and childcare responsibilities. While she has medium trust in public health, the logistical challenges make her less likely to proceed.""
+}",,2026-10-11T01:11:14.786353+00:00
+RUN00101,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Medium trust in public health and minimal documentation required further reduce barriers.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Medium trust in public health and minimal documentation required further reduce barriers.""
+}",,2026-10-11T01:11:16.341123+00:00
+RUN00102,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Immediate confirmation and minimal documentation reduce barriers, and her medium trust in public health supports a high willingness.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Immediate confirmation and minimal documentation reduce barriers, and her medium trust in public health supports a high willingness.""
+}",,2026-10-11T01:11:17.507046+00:00
+RUN00103,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Immediate confirmation and minimal documentation reduce barriers, and her medium trust in public health is not a major deterrent.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Immediate confirmation and minimal documentation reduce barriers, and her medium trust in public health is not a major deterrent.""
+}",,2026-10-11T01:11:18.738536+00:00
+RUN00104,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and having a regular doctor also support her willingness, despite some logistical challenges.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and having a regular doctor also support her willingness, despite some logistical challenges.""
+}",,2026-10-11T01:11:19.920940+00:00
+RUN00105,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Immediate confirmation and minimal documentation reduce barriers, and her medium trust in public health supports a high willingness.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Immediate confirmation and minimal documentation reduce barriers, and her medium trust in public health supports a high willingness.""
+}",,2026-10-11T01:11:21.000850+00:00
+RUN00106,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, long wait times, and need for documentation create significant barriers for someone with a full-time job and childcare responsibilities. While she has some trust in public health and a regular doctor, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, long wait times, and need for documentation create significant barriers for someone with a full-time job and childcare responsibilities. While she has some trust in public health and a regular doctor, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:11:22.325924+00:00
+RUN00107,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, long wait times, and need for documentation create significant barriers for someone with a full-time job and childcare responsibilities. While she has some trust in public health and a regular doctor, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, long wait times, and need for documentation create significant barriers for someone with a full-time job and childcare responsibilities. While she has some trust in public health and a regular doctor, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:11:23.560136+00:00
+RUN00108,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, long wait times, and paperwork are significant barriers for someone with a full-time job and childcare responsibilities. While she has some trust in public health and a regular doctor, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, long wait times, and paperwork are significant barriers for someone with a full-time job and childcare responsibilities. While she has some trust in public health and a regular doctor, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:11:24.889053+00:00
+RUN00109,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, long wait times, and need for documentation create significant barriers for someone with a full-time job and childcare responsibilities. While she has some trust in public health and a regular doctor, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, long wait times, and need for documentation create significant barriers for someone with a full-time job and childcare responsibilities. While she has some trust in public health and a regular doctor, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:11:26.198299+00:00
+RUN00110,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, long wait times, and need for documentation create significant barriers for someone with a full-time job and childcare responsibilities. While she has some trust in public health and a regular doctor, the inconvenience and logistical challenges lower her willingness.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, long wait times, and need for documentation create significant barriers for someone with a full-time job and childcare responsibilities. While she has some trust in public health and a regular doctor, the inconvenience and logistical challenges lower her willingness.""
+}",,2026-10-11T01:11:27.403284+00:00
+RUN00111,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though she may have some minor reservations.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though she may have some minor reservations.""
+}",,2026-10-11T01:11:28.570955+00:00
+RUN00112,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and regular access to healthcare further support her willingness.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and regular access to healthcare further support her willingness.""
+}",,2026-10-11T01:11:29.671810+00:00
+RUN00113,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though she may still have some minor reservations.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though she may still have some minor reservations.""
+}",,2026-10-11T01:11:30.817779+00:00
+RUN00114,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though she may still have some minor reservations.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and access to a regular doctor also support her willingness, though she may still have some minor reservations.""
+}",,2026-10-11T01:11:31.908022+00:00
+RUN00115,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and easy access to her doctor also support her willingness, though some hesitancy may remain.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. Her medium trust in public health and easy access to her doctor also support her willingness, though some hesitancy may remain.""
+}",,2026-10-11T01:11:33.208926+00:00
+RUN00116,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"She values health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers given her work constraints and childcare responsibilities. Her medium trust in public health also makes her less likely to overcome these hurdles.","{
+  ""willingness"": 55,
+  ""rationale"": ""She values health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers given her work constraints and childcare responsibilities. Her medium trust in public health also makes her less likely to overcome these hurdles.""
+}",,2026-10-11T01:11:34.472517+00:00
+RUN00117,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"She values health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers given her work constraints and childcare responsibilities. Her medium trust in public health also tempers her motivation.","{
+  ""willingness"": 55,
+  ""rationale"": ""She values health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers given her work constraints and childcare responsibilities. Her medium trust in public health also tempers her motivation.""
+}",,2026-10-11T01:11:35.702859+00:00
+RUN00118,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"She values health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers given her work constraints and childcare responsibilities. Her medium trust in public health also makes her less likely to overcome these hurdles.","{
+  ""willingness"": 55,
+  ""rationale"": ""She values health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers given her work constraints and childcare responsibilities. Her medium trust in public health also makes her less likely to overcome these hurdles.""
+}",,2026-10-11T01:11:37.045507+00:00
+RUN00119,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"She values health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers given her work constraints and childcare responsibilities. Her medium trust in public health also makes her less likely to overcome these hurdles.","{
+  ""willingness"": 55,
+  ""rationale"": ""She values health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers given her work constraints and childcare responsibilities. Her medium trust in public health also makes her less likely to overcome these hurdles.""
+}",,2026-10-11T01:11:38.330200+00:00
+RUN00120,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"She values health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers given her work constraints and childcare responsibilities. Her medium trust in public health also makes her less likely to overcome these hurdles.","{
+  ""willingness"": 55,
+  ""rationale"": ""She values health and has access to a regular doctor, but the in-person registration, paperwork, and long wait times are significant barriers given her work constraints and childcare responsibilities. Her medium trust in public health also makes her less likely to overcome these hurdles.""
+}",,2026-10-11T01:11:39.730776+00:00
+RUN00121,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy for her to fit the appointment into her schedule. Her medium trust in public health and lack of major barriers increase her likelihood to proceed, though not to the maximum.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy for her to fit the appointment into her schedule. Her medium trust in public health and lack of major barriers increase her likelihood to proceed, though not to the maximum.""
+}",,2026-10-11T01:11:40.925473+00:00
+RUN00122,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy for her to fit the appointment into her schedule. Her medium trust in public health and lack of a regular doctor may cause some hesitation, but overall, the process is accessible and likely to encourage her to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy for her to fit the appointment into her schedule. Her medium trust in public health and lack of a regular doctor may cause some hesitation, but overall, the process is accessible and likely to encourage her to proceed.""
+}",,2026-10-11T01:11:42.185199+00:00
+RUN00123,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy for her to fit vaccination into her schedule. Her medium trust in public health and lack of major barriers increase her likelihood to proceed, though not to the maximum.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy for her to fit vaccination into her schedule. Her medium trust in public health and lack of major barriers increase her likelihood to proceed, though not to the maximum.""
+}",,2026-10-11T01:11:43.428795+00:00
+RUN00124,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy for her to fit the appointment into her schedule. Her medium trust in public health and lack of major barriers increase her likelihood to proceed, though not to the maximum.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy for her to fit the appointment into her schedule. Her medium trust in public health and lack of major barriers increase her likelihood to proceed, though not to the maximum.""
+}",,2026-10-11T01:11:44.759293+00:00
+RUN00125,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy for her to fit the appointment into her schedule. Her medium trust in public health and lack of major barriers increase her likelihood to proceed, though not to the maximum.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy for her to fit the appointment into her schedule. Her medium trust in public health and lack of major barriers increase her likelihood to proceed, though not to the maximum.""
+}",,2026-10-11T01:11:46.031924+00:00
+RUN00126,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"The in-person registration, paperwork, and waiting time are significant barriers, especially with a young child and no regular healthcare provider. Her medium trust in public health and flexible work hours make her somewhat willing, but the inconvenience lowers her overall willingness.","{
+  ""willingness"": 55,
+  ""rationale"": ""The in-person registration, paperwork, and waiting time are significant barriers, especially with a young child and no regular healthcare provider. Her medium trust in public health and flexible work hours make her somewhat willing, but the inconvenience lowers her overall willingness.""
+}",,2026-10-11T01:11:47.298928+00:00
+RUN00127,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"The in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and no regular doctor. However, her medium trust in public health and flexible work hours mean she is somewhat likely to proceed, though the process may discourage her.","{
+  ""willingness"": 55,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers, especially with a young child and no regular doctor. However, her medium trust in public health and flexible work hours mean she is somewhat likely to proceed, though the process may discourage her.""
+}",,2026-10-11T01:11:48.601545+00:00
+RUN00128,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"The in-person registration, paperwork, and long wait time are significant barriers, especially with a young child and no regular doctor. However, her medium trust in public health and flexible work hours mean she is somewhat likely to proceed, but the inconvenience lowers her willingness.","{
+  ""willingness"": 55,
+  ""rationale"": ""The in-person registration, paperwork, and long wait time are significant barriers, especially with a young child and no regular doctor. However, her medium trust in public health and flexible work hours mean she is somewhat likely to proceed, but the inconvenience lowers her willingness.""
+}",,2026-10-11T01:11:49.851845+00:00
+RUN00129,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"The in-person registration, paperwork, and long wait time are significant barriers, especially with a young child and no regular doctor. However, her medium trust in public health and flexible work hours mean she is somewhat likely to proceed, but the inconvenience lowers her willingness.","{
+  ""willingness"": 55,
+  ""rationale"": ""The in-person registration, paperwork, and long wait time are significant barriers, especially with a young child and no regular doctor. However, her medium trust in public health and flexible work hours mean she is somewhat likely to proceed, but the inconvenience lowers her willingness.""
+}",,2026-10-11T01:11:51.101017+00:00
+RUN00130,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"The in-person registration, paperwork, and long wait time are significant barriers, especially with a young child and no regular doctor. However, her medium trust in public health and flexible work hours mean she is somewhat likely to proceed, though not highly motivated.","{
+  ""willingness"": 55,
+  ""rationale"": ""The in-person registration, paperwork, and long wait time are significant barriers, especially with a young child and no regular doctor. However, her medium trust in public health and flexible work hours mean she is somewhat likely to proceed, though not highly motivated.""
+}",,2026-10-11T01:11:52.296166+00:00
+RUN00131,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and having a young child likely increase her motivation to get vaccinated.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and having a young child likely increase her motivation to get vaccinated.""
+}",,2026-10-11T01:11:53.512017+00:00
+RUN00132,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and simple registration process make it easy for her to fit the appointment into her schedule. Her medium trust in public health and having a young child may motivate her to get vaccinated for protection, despite only moderate trust in authorities.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process make it easy for her to fit the appointment into her schedule. Her medium trust in public health and having a young child may motivate her to get vaccinated for protection, despite only moderate trust in authorities.""
+}",,2026-10-11T01:11:54.748219+00:00
+RUN00133,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,The nearby pharmacy with flexible hours and quick process makes it convenient despite her busy schedule and distance from her regular doctor. Medium trust in public health and minimal documentation required further support her willingness.,"{
+  ""willingness"": 85,
+  ""rationale"": ""The nearby pharmacy with flexible hours and quick process makes it convenient despite her busy schedule and distance from her regular doctor. Medium trust in public health and minimal documentation required further support her willingness.""
+}",,2026-10-11T01:11:55.955184+00:00
+RUN00134,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The nearby pharmacy with flexible hours and quick, easy registration makes vaccination convenient despite her busy schedule and distance from her regular doctor. Her medium trust in public health is not a major barrier given the accessibility and simplicity of the process.","{
+  ""willingness"": 85,
+  ""rationale"": ""The nearby pharmacy with flexible hours and quick, easy registration makes vaccination convenient despite her busy schedule and distance from her regular doctor. Her medium trust in public health is not a major barrier given the accessibility and simplicity of the process.""
+}",,2026-10-11T01:11:57.213474+00:00
+RUN00135,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and simple registration process make it easy for her to fit the appointment into her schedule. Her medium trust in public health and having a young child may motivate her to get vaccinated for protection, despite only moderate trust in authorities.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process make it easy for her to fit the appointment into her schedule. Her medium trust in public health and having a young child may motivate her to get vaccinated for protection, despite only moderate trust in authorities.""
+}",,2026-10-11T01:11:58.421826+00:00
+RUN00136,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"The process is inconvenient due to travel distance, paperwork, and long wait times, which is challenging with a young child and part-time work. However, her medium trust in public health and access to a regular doctor keep her moderately willing to proceed.","{
+  ""willingness"": 55,
+  ""rationale"": ""The process is inconvenient due to travel distance, paperwork, and long wait times, which is challenging with a young child and part-time work. However, her medium trust in public health and access to a regular doctor keep her moderately willing to proceed.""
+}",,2026-10-11T01:11:59.585284+00:00
+RUN00137,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"The process is inconvenient due to travel distance, paperwork, and long wait times, which is challenging with a young child and part-time work. However, her medium trust in public health and access to a regular doctor keep her moderately willing.","{
+  ""willingness"": 55,
+  ""rationale"": ""The process is inconvenient due to travel distance, paperwork, and long wait times, which is challenging with a young child and part-time work. However, her medium trust in public health and access to a regular doctor keep her moderately willing.""
+}",,2026-10-11T01:12:00.792043+00:00
+RUN00138,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"The process is inconvenient due to travel distance, paperwork, and long wait times, which is challenging with a young child and part-time work. However, her medium trust in public health and access to a regular doctor means she is somewhat likely to proceed, though the barriers lower her willingness.","{
+  ""willingness"": 55,
+  ""rationale"": ""The process is inconvenient due to travel distance, paperwork, and long wait times, which is challenging with a young child and part-time work. However, her medium trust in public health and access to a regular doctor means she is somewhat likely to proceed, though the barriers lower her willingness.""
+}",,2026-10-11T01:12:02.005828+00:00
+RUN00139,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"The process is inconvenient due to travel distance, paperwork, and long wait times, which is challenging with a young child and part-time work. However, her medium trust in public health and access to a regular doctor means she is still somewhat likely to proceed, though not highly motivated.","{
+  ""willingness"": 55,
+  ""rationale"": ""The process is inconvenient due to travel distance, paperwork, and long wait times, which is challenging with a young child and part-time work. However, her medium trust in public health and access to a regular doctor means she is still somewhat likely to proceed, though not highly motivated.""
+}",,2026-10-11T01:12:03.629538+00:00
+RUN00140,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"The process is inconvenient due to travel distance, paperwork, and long wait times, which is challenging with a young child and part-time work. However, her medium trust in public health and access to a regular doctor means she is somewhat likely to proceed, though the barriers lower her willingness.","{
+  ""willingness"": 55,
+  ""rationale"": ""The process is inconvenient due to travel distance, paperwork, and long wait times, which is challenging with a young child and part-time work. However, her medium trust in public health and access to a regular doctor means she is somewhat likely to proceed, though the barriers lower her willingness.""
+}",,2026-10-11T01:12:04.829900+00:00
+RUN00141,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and access to a regular doctor also support a high willingness to proceed.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and access to a regular doctor also support a high willingness to proceed.""
+}",,2026-10-11T01:12:06.188802+00:00
+RUN00142,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and access to a regular doctor also support a high willingness.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process make it easy for her to fit vaccination into her schedule. Her medium trust in public health and access to a regular doctor also support a high willingness.""
+}",,2026-10-11T01:12:07.529242+00:00
+RUN00143,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The process is convenient, quick, and fits her flexible schedule. She has access to healthcare and moderate trust in authorities, making her likely to proceed with vaccination, especially to protect her young child.","{
+  ""willingness"": 85,
+  ""rationale"": ""The process is convenient, quick, and fits her flexible schedule. She has access to healthcare and moderate trust in authorities, making her likely to proceed with vaccination, especially to protect her young child.""
+}",,2026-10-11T01:12:08.622891+00:00
+RUN00144,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The process is convenient, quick, and fits her flexible schedule. She has access to healthcare and moderate trust in public health, making her likely to proceed with vaccination, especially to protect her young child.","{
+  ""willingness"": 85,
+  ""rationale"": ""The process is convenient, quick, and fits her flexible schedule. She has access to healthcare and moderate trust in public health, making her likely to proceed with vaccination, especially to protect her young child.""
+}",,2026-10-11T01:12:09.833712+00:00
+RUN00145,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The process is convenient, quick, and fits her flexible schedule. She has access to healthcare and moderate trust in public health, making her likely to proceed with vaccination, especially to protect her young child.","{
+  ""willingness"": 85,
+  ""rationale"": ""The process is convenient, quick, and fits her flexible schedule. She has access to healthcare and moderate trust in public health, making her likely to proceed with vaccination, especially to protect her young child.""
+}",,2026-10-11T01:12:11.430378+00:00
+RUN00146,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and part-time work. Her medium trust in authorities means she is likely to proceed, but the barriers reduce her enthusiasm.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and part-time work. Her medium trust in authorities means she is likely to proceed, but the barriers reduce her enthusiasm.""
+}",,2026-10-11T01:12:12.570322+00:00
+RUN00147,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and part-time work. Her medium trust in authorities means she is likely to proceed, but the barriers reduce her enthusiasm.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and part-time work. Her medium trust in authorities means she is likely to proceed, but the barriers reduce her enthusiasm.""
+}",,2026-10-11T01:12:13.885815+00:00
+RUN00148,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and part-time work. Her medium trust in authorities means she is likely to proceed, but the barriers reduce her enthusiasm.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and part-time work. Her medium trust in authorities means she is likely to proceed, but the barriers reduce her enthusiasm.""
+}",,2026-10-11T01:12:15.067924+00:00
+RUN00149,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and part-time work. Her medium trust in authorities means she is likely to proceed, but the barriers reduce her enthusiasm.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and part-time work. Her medium trust in authorities means she is likely to proceed, but the barriers reduce her enthusiasm.""
+}",,2026-10-11T01:12:16.302837+00:00
+RUN00150,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and part-time work. Her medium trust in authorities means she is likely to proceed, but the barriers reduce her enthusiasm.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and part-time work. Her medium trust in authorities means she is likely to proceed, but the barriers reduce her enthusiasm.""
+}",,2026-10-11T01:12:17.656271+00:00
+RUN00151,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and simple registration process fit her self-employed schedule and childcare needs. While her trust in public health is only medium, the low barriers and quick process make her likely to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process fit her self-employed schedule and childcare needs. While her trust in public health is only medium, the low barriers and quick process make her likely to proceed.""
+}",,2026-10-11T01:12:18.955107+00:00
+RUN00152,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and simple registration process fit her self-employed schedule and childcare needs. While her trust in public health is only medium, the low barriers and quick process make her likely to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process fit her self-employed schedule and childcare needs. While her trust in public health is only medium, the low barriers and quick process make her likely to proceed.""
+}",,2026-10-11T01:12:20.265935+00:00
+RUN00153,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and quick process fit her self-employed schedule and childcare needs. Medium trust in public health may cause some hesitation, but overall accessibility and minimal barriers make her likely to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and quick process fit her self-employed schedule and childcare needs. Medium trust in public health may cause some hesitation, but overall accessibility and minimal barriers make her likely to proceed.""
+}",,2026-10-11T01:12:21.434764+00:00
+RUN00154,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and simple registration process fit her self-employed schedule and childcare needs. While her trust in public health is only medium, the low barriers and quick process make her likely to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and simple registration process fit her self-employed schedule and childcare needs. While her trust in public health is only medium, the low barriers and quick process make her likely to proceed.""
+}",,2026-10-11T01:12:22.745720+00:00
+RUN00155,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and minimal documentation make it easy for her to fit vaccination into her schedule, especially as a self-employed parent. Her medium trust in public health may cause some hesitation, but overall, the ease of access increases her willingness.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and minimal documentation make it easy for her to fit vaccination into her schedule, especially as a self-employed parent. Her medium trust in public health may cause some hesitation, but overall, the ease of access increases her willingness.""
+}",,2026-10-11T01:12:24.045371+00:00
+RUN00156,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values her health and her child's, but the in-person registration, paperwork, and waiting time are inconvenient, especially without a regular doctor and with childcare needs. Her medium trust in public health and flexible schedule make her somewhat willing, but the barriers lower her enthusiasm.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values her health and her child's, but the in-person registration, paperwork, and waiting time are inconvenient, especially without a regular doctor and with childcare needs. Her medium trust in public health and flexible schedule make her somewhat willing, but the barriers lower her enthusiasm.""
+}",,2026-10-11T01:12:25.259161+00:00
+RUN00157,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values her health and her child's, but the in-person registration, paperwork, and long wait are inconvenient, especially without a regular doctor. Her flexible schedule helps, but the process is a barrier, lowering her willingness somewhat.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values her health and her child's, but the in-person registration, paperwork, and long wait are inconvenient, especially without a regular doctor. Her flexible schedule helps, but the process is a barrier, lowering her willingness somewhat.""
+}",,2026-10-11T01:12:26.348679+00:00
+RUN00158,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values her health and her child's, but the in-person registration, paperwork, and long wait are inconvenient, especially without a regular doctor. Her flexible schedule helps, but the process is a barrier, lowering her willingness somewhat.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values her health and her child's, but the in-person registration, paperwork, and long wait are inconvenient, especially without a regular doctor. Her flexible schedule helps, but the process is a barrier, lowering her willingness somewhat.""
+}",,2026-10-11T01:12:27.493483+00:00
+RUN00159,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values her health and her child's, and has a flexible schedule, but the in-person registration, paperwork, and wait time are inconvenient. Medium trust in authorities and lack of a regular doctor may also reduce motivation, but she is still likely to proceed.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values her health and her child's, and has a flexible schedule, but the in-person registration, paperwork, and wait time are inconvenient. Medium trust in authorities and lack of a regular doctor may also reduce motivation, but she is still likely to proceed.""
+}",,2026-10-11T01:12:28.737373+00:00
+RUN00160,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She is likely motivated to protect herself and her young child, but the in-person registration, paperwork, and waiting time are inconvenient, especially without a regular healthcare provider. Her medium trust in public health and flexible schedule make her somewhat willing, but the barriers lower her enthusiasm.","{
+  ""willingness"": 60,
+  ""rationale"": ""She is likely motivated to protect herself and her young child, but the in-person registration, paperwork, and waiting time are inconvenient, especially without a regular healthcare provider. Her medium trust in public health and flexible schedule make her somewhat willing, but the barriers lower her enthusiasm.""
+}",,2026-10-11T01:12:29.997988+00:00
+RUN00161,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her schedule. Her medium trust in public health and lack of documentation barriers further support her willingness, though some hesitancy may remain.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her schedule. Her medium trust in public health and lack of documentation barriers further support her willingness, though some hesitancy may remain.""
+}",,2026-10-11T01:12:31.172246+00:00
+RUN00162,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her schedule as a self-employed parent. Medium trust in public health may cause some hesitation, but overall accessibility and minimal barriers increase her willingness.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her schedule as a self-employed parent. Medium trust in public health may cause some hesitation, but overall accessibility and minimal barriers increase her willingness.""
+}",,2026-10-11T01:12:32.554063+00:00
+RUN00163,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her schedule as a self-employed parent. Medium trust in public health may cause some hesitation, but overall accessibility and minimal barriers increase her willingness.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her schedule as a self-employed parent. Medium trust in public health may cause some hesitation, but overall accessibility and minimal barriers increase her willingness.""
+}",,2026-10-11T01:12:33.673078+00:00
+RUN00164,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy for her to fit vaccination into her schedule, especially as a self-employed mother. Medium trust in public health and minimal documentation requirements further support her willingness.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy for her to fit vaccination into her schedule, especially as a self-employed mother. Medium trust in public health and minimal documentation requirements further support her willingness.""
+}",,2026-10-11T01:12:34.957508+00:00
+RUN00165,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her schedule as a self-employed parent. Medium trust in public health may cause some hesitation, but overall accessibility and minimal barriers increase her willingness.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her schedule as a self-employed parent. Medium trust in public health may cause some hesitation, but overall accessibility and minimal barriers increase her willingness.""
+}",,2026-10-11T01:12:36.141335+00:00
+RUN00166,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"She values her health and has some trust in public health, but the inconvenient registration process, travel distance, and need to arrange childcare make her less willing to proceed.","{
+  ""willingness"": 55,
+  ""rationale"": ""She values her health and has some trust in public health, but the inconvenient registration process, travel distance, and need to arrange childcare make her less willing to proceed.""
+}",,2026-10-11T01:12:37.261717+00:00
+RUN00167,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values her health and has a regular doctor, but the in-person registration, paperwork, and long wait are inconvenient, especially with a young child and a distant clinic. Her medium trust in public health and flexible schedule increase willingness somewhat, but the barriers lower it.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values her health and has a regular doctor, but the in-person registration, paperwork, and long wait are inconvenient, especially with a young child and a distant clinic. Her medium trust in public health and flexible schedule increase willingness somewhat, but the barriers lower it.""
+}",,2026-10-11T01:12:38.444013+00:00
+RUN00168,GPT-4.1,OpenAI,gpt-4.1,True,True,True,60,"She values her health and has a regular doctor, but the in-person registration, paperwork, and long wait are inconvenient, especially with a young child and a distant clinic. Her medium trust in public health and flexible schedule increase willingness somewhat, but the barriers lower it.","{
+  ""willingness"": 60,
+  ""rationale"": ""She values her health and has a regular doctor, but the in-person registration, paperwork, and long wait are inconvenient, especially with a young child and a distant clinic. Her medium trust in public health and flexible schedule increase willingness somewhat, but the barriers lower it.""
+}",,2026-10-11T01:12:39.655793+00:00
+RUN00169,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"She values her health and has some trust in public health, but the inconvenient registration process, travel distance, and need to arrange childcare make her less willing to proceed.","{
+  ""willingness"": 55,
+  ""rationale"": ""She values her health and has some trust in public health, but the inconvenient registration process, travel distance, and need to arrange childcare make her less willing to proceed.""
+}",,2026-10-11T01:12:40.835911+00:00
+RUN00170,GPT-4.1,OpenAI,gpt-4.1,True,True,True,55,"She values her health and has some trust in public health, but the inconvenient registration process, travel distance, and need to arrange childcare make her less willing to proceed.","{
+  ""willingness"": 55,
+  ""rationale"": ""She values her health and has some trust in public health, but the inconvenient registration process, travel distance, and need to arrange childcare make her less willing to proceed.""
+}",,2026-10-11T01:12:42.088078+00:00
+RUN00171,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The process is convenient, quick, and flexible, fitting her self-employed schedule and childcare needs. She has moderate trust in public health and easy access to healthcare, making her likely to proceed with vaccination.","{
+  ""willingness"": 85,
+  ""rationale"": ""The process is convenient, quick, and flexible, fitting her self-employed schedule and childcare needs. She has moderate trust in public health and easy access to healthcare, making her likely to proceed with vaccination.""
+}",,2026-10-11T01:12:43.228684+00:00
+RUN00172,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process fit her self-employed schedule and childcare needs. Her medium trust in public health and easy access to her doctor support a high willingness, though not absolute certainty.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process fit her self-employed schedule and childcare needs. Her medium trust in public health and easy access to her doctor support a high willingness, though not absolute certainty.""
+}",,2026-10-11T01:12:44.515742+00:00
+RUN00173,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process fit her self-employed schedule and childcare needs. Her medium trust in public health and easy access to her doctor support a high willingness, though not absolute certainty.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process fit her self-employed schedule and childcare needs. Her medium trust in public health and easy access to her doctor support a high willingness, though not absolute certainty.""
+}",,2026-10-11T01:12:45.680275+00:00
+RUN00174,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and easy scheduling fit her self-employed lifestyle and childcare needs. Her medium trust in public health and regular access to healthcare support a high willingness, though not absolute certainty.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and easy scheduling fit her self-employed lifestyle and childcare needs. Her medium trust in public health and regular access to healthcare support a high willingness, though not absolute certainty.""
+}",,2026-10-11T01:12:46.896506+00:00
+RUN00175,GPT-4.1,OpenAI,gpt-4.1,True,True,True,85,"The convenient location, flexible hours, and quick process fit her self-employed schedule and childcare needs. Her medium trust in public health and easy access to her doctor support a high willingness, though not absolute certainty.","{
+  ""willingness"": 85,
+  ""rationale"": ""The convenient location, flexible hours, and quick process fit her self-employed schedule and childcare needs. Her medium trust in public health and easy access to her doctor support a high willingness, though not absolute certainty.""
+}",,2026-10-11T01:12:48.254066+00:00
+RUN00176,GPT-4.1,OpenAI,gpt-4.1,True,True,True,65,"She values her health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and self-employment responsibilities. Her medium trust in public health and manageable barriers keep her willingness moderately high, but not maximal.","{
+  ""willingness"": 65,
+  ""rationale"": ""She values her health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and self-employment responsibilities. Her medium trust in public health and manageable barriers keep her willingness moderately high, but not maximal.""
+}",,2026-10-11T01:12:49.617690+00:00
+RUN00177,GPT-4.1,OpenAI,gpt-4.1,True,True,True,65,"She values her health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and self-employment responsibilities. Her medium trust in public health and manageable barriers keep her willingness moderately high, but not maximal.","{
+  ""willingness"": 65,
+  ""rationale"": ""She values her health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and self-employment responsibilities. Her medium trust in public health and manageable barriers keep her willingness moderately high, but not maximal.""
+}",,2026-10-11T01:12:51.060967+00:00
+RUN00178,GPT-4.1,OpenAI,gpt-4.1,True,True,True,65,"She values her health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and self-employment responsibilities. Her medium trust in public health and manageable barriers keep her willingness moderately high, but not maximal.","{
+  ""willingness"": 65,
+  ""rationale"": ""She values her health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and self-employment responsibilities. Her medium trust in public health and manageable barriers keep her willingness moderately high, but not maximal.""
+}",,2026-10-11T01:12:52.436072+00:00
+RUN00179,GPT-4.1,OpenAI,gpt-4.1,True,True,True,65,"She values her health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and self-employment responsibilities. Her medium trust in public health and manageable barriers keep her willingness moderately high, but not maximal.","{
+  ""willingness"": 65,
+  ""rationale"": ""She values her health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and self-employment responsibilities. Her medium trust in public health and manageable barriers keep her willingness moderately high, but not maximal.""
+}",,2026-10-11T01:12:53.798305+00:00
+RUN00180,GPT-4.1,OpenAI,gpt-4.1,True,True,True,65,"She values her health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and self-employment responsibilities. Her medium trust in public health and manageable barriers keep her willingness moderately high, but not maximal.","{
+  ""willingness"": 65,
+  ""rationale"": ""She values her health and has access to a regular doctor, but the in-person registration, paperwork, and waiting time are inconvenient, especially with a young child and self-employment responsibilities. Her medium trust in public health and manageable barriers keep her willingness moderately high, but not maximal.""
+}",,2026-10-11T01:12:55.185737+00:00
+RUN00181,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium and she lacks a regular doctor, the low barriers and immediate confirmation increase her likelihood to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium and she lacks a regular doctor, the low barriers and immediate confirmation increase her likelihood to proceed.""
+}",,2026-10-11T01:12:56.387626+00:00
+RUN00182,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium and she lacks a regular doctor, the low barriers and immediate confirmation increase her likelihood to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium and she lacks a regular doctor, the low barriers and immediate confirmation increase her likelihood to proceed.""
+}",,2026-10-11T01:12:57.563651+00:00
+RUN00183,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium and she lacks a regular doctor, the low barriers and immediate confirmation increase her likelihood to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium and she lacks a regular doctor, the low barriers and immediate confirmation increase her likelihood to proceed.""
+}",,2026-10-11T01:12:58.797125+00:00
+RUN00184,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium and she lacks a regular doctor, the low barriers and immediate confirmation increase her likelihood to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium and she lacks a regular doctor, the low barriers and immediate confirmation increase her likelihood to proceed.""
+}",,2026-10-11T01:13:00.138669+00:00
+RUN00185,GPT-4.1,OpenAI,gpt-4.1,True,True,True,80,"The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium and she lacks a regular doctor, the low barriers and immediate confirmation increase her likelihood to proceed.","{
+  ""willingness"": 80,
+  ""rationale"": ""The convenient location, flexible hours, and quick process make it easy to fit vaccination into her busy schedule. While her trust in public health is only medium and she lacks a regular doctor, the low barriers and immediate confirmation increase her likelihood to proceed.""
+}",,2026-10-11T01:13:01.264928+00:00
+RUN00186,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait time are significant barriers for someone with a full-time job and childcare responsibilities. Medium trust in public health and lack of a regular doctor further reduce motivation, though she may still consider vaccination important.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait time are significant barriers for someone with a full-time job and childcare responsibilities. Medium trust in public health and lack of a regular doctor further reduce motivation, though she may still consider vaccination important.""
+}",,2026-10-11T01:13:02.510080+00:00
+RUN00187,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait time are significant barriers for someone with a demanding job and childcare responsibilities. Medium trust in public health and lack of a regular doctor further reduce motivation, though she may still consider vaccination important.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait time are significant barriers for someone with a demanding job and childcare responsibilities. Medium trust in public health and lack of a regular doctor further reduce motivation, though she may still consider vaccination important.""
+}",,2026-10-11T01:13:03.700554+00:00
+RUN00188,GPT-4.1,OpenAI,gpt-4.1,True,True,True,45,"The in-person registration, paperwork, and long wait times are significant barriers for someone with a demanding job and childcare responsibilities. Medium trust in public health and lack of a regular doctor further reduce motivation, though she may still consider vaccination important.","{
+  ""willingness"": 45,
+  ""rationale"": ""The in-person registration, paperwork, and long wait times are significant barriers for someone with a demanding job and childcare responsibilities. Medium trust in public health and lack of a regular doctor further reduce motivation, though she may still consider vaccination important.""
+}",,2026-10-11T01:13:04.993100+00:00
