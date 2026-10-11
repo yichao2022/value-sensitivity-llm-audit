@@ -1,0 +1,41 @@
+\begin{table}[htbp]
+\centering
+\caption{H3 Frame Effects Decomposition: Low-Burden Willingness, High-Burden Willingness, and Their Difference (Delta)}
+\label{tab:h3_low_high_decomposition}
+\begin{tabular}{lcccccc}
+\toprule
+& \multicolumn{2}{c}{\textbf{Low burden ($w_{\text{low}}$)}} & \multicolumn{2}{c}{\textbf{High burden ($w_{\text{high}}$)}} & \multicolumn{2}{c}{\textbf{Delta ($\Delta = w_{\text{low}} - w_{\text{high}}$)}} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+Frame & $\beta$ (SE) & 95\% CI & $\beta$ (SE) & 95\% CI & $\beta$ (SE) & 95\% CI \\
+\midrule
+Autonomy (vs. neutral) & 
+
+Autonomy (vs. neutral) & 
+$+0.74^{*}$ (0.21) & [+0.32, +1.15] & 
+$-4.22^{*}$ (0.67) & [-5.54, -2.91] & 
+$+4.96^{*}$ (0.70) & [+3.58, +6.33] \\
+
+Collective (vs. neutral) & 
+$+0.41^{*}$ (0.16) & [+0.09, +0.74] & 
+$+11.29^{*}$ (0.82) & [+9.68, +12.91] & 
+$-10.88^{*}$ (0.84) & [-12.52, -9.23] \\
+
+Equity (vs. neutral) & 
+$+3.91^{*}$ (0.37) & [+3.18, +4.63] & 
+$-0.94$ (0.72) & [-2.36, +0.48] & 
+$+4.84^{*}$ (0.70) & [+3.47, +6.22] \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize\textit{Note.} All models include model fixed effects, profile fixed effects, and use model $\times$ profile cluster-robust standard errors. 
+$N = 2{,}159$ observations from 4 models $\times$ 27 profiles $\times$ 5 repetitions across 4 frame conditions. 
+Reference category: neutral frame. 
+$^{*}$ $p < .05$.
+\end{flushleft}
+\end{table}
+
+\vspace{1em}
+\noindent\textbf{Verification:} The decomposition satisfies $\beta_{\text{low}} - \beta_{\text{high}} = \beta_{\Delta}$ for all three frame contrasts (numerical precision: $<10^{-14}$). This confirms that the delta regression coefficients represent the difference between the low-burden and high-burden willingness effects.
+
+\vspace{1em}
+\noindent\textbf{Interpretation:} The autonomy frame increases willingness under low burden (+0.74) and decreases willingness under high burden ($-$4.22), resulting in a net positive delta (+4.96) that indicates stronger burden effects when autonomy framing is present. The collective frame shows the opposite pattern: it slightly increases low-burden willingness (+0.41) but substantially increases high-burden willingness (+11.29), producing a large negative delta ($-$10.88) consistent with reduced burden effects under collective obligation framing.
