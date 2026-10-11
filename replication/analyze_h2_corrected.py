@@ -289,6 +289,124 @@ def main():
     pair_file = CAN / "h2_pairfe_pair_level.csv"
     pair_results.to_csv(pair_file, index=False)
     print(f"✓ Pair-level results saved to {pair_file}")
+    
+    # Run LOMO (leave-one-model-out)
+    print("\n" + "=" * 60)
+    print("Running LOMO (Leave-One-Model-Out)")
+    print("=" * 60)
+    lomo_results = run_lomo(df, FRAMES)
+    lomo_file = CAN / "h2_pairfe_lomo_corrected.csv"
+    lomo_results.to_csv(lomo_file, index=False)
+    print(f"✓ LOMO results saved to {lomo_file}")
+    
+    # Run LOPO (leave-one-profile-out)
+    print("\n" + "=" * 60)
+    print("Running LOPO (Leave-One-Profile-Out)")
+    print("=" * 60)
+    lopo_results = run_lopo(df, FRAMES)
+    lopo_file = CAN / "h2_pairfe_lopo_corrected.csv"
+    lopo_results.to_csv(lopo_file, index=False)
+    print(f"✓ LOPO results saved to {lopo_file}")
+    
+    # Run diagnostics
+    print("\n" + "=" * 60)
+    print("Running Diagnostics")
+    print("=" * 60)
+    diag = diagnostics(df)
+    diag_file = CAN / "h2_pairfe_diagnostics_corrected.csv"
+    diag.to_csv(diag_file, index=False)
+    print(f"✓ Diagnostics saved to {diag_file}")
+    print("\nDiagnostics:")
+    print(diag.to_string())
+
+
+def run_lomo(df, frames):
+    """Leave-one-model-out robustness check."""
+    rows = []
+    models = df["model"].unique()
+    
+    for left_out in models:
+        sub = df[df["model"] != left_out]
+        pair_results = run_pairfe(sub, frames)
+        agg = aggregate_pairfe(pair_results)
+        
+        for _, r in agg.iterrows():
+            rows.append({
+                "left_out": left_out,
+                "frame": r["frame"],
+                "b": r["b"],
+                "p": r["p"]
+            })
+    
+    return pd.DataFrame(rows)
+
+
+def run_lopo(df, frames):
+    """Leave-one-profile-out robustness check."""
+    rows = []
+    profiles = df["profile_id"].unique()
+    
+    for left_out in profiles:
+        sub = df[df["profile_id"] != left_out]
+        pair_results = run_pairfe(sub, frames)
+        agg = aggregate_pairfe(pair_results)
+        
+        for _, r in agg.iterrows():
+            rows.append({
+                "left_out": left_out,
+                "frame": r["frame"],
+                "b": r["b"],
+                "p": r["p"]
+            })
+    
+    return pd.DataFrame(rows)
+
+
+def diagnostics(df):
+    """Calculate within-pair diagnostics for each frame."""
+    rows = []
+    
+    for frame in FRAMES:
+        # Calculate within-pair variance share
+        pair_means = df.groupby("pair")[frame].mean()
+        overall_var = df[frame].var()
+        between_var = pair_means.var()
+        within_share = 1 - (between_var / overall_var) if overall_var > 0 else 0
+        
+        # Count pairs with no within-pair variation
+        no_var_pairs = 0
+        for pair in df["pair"].unique():
+            sub = df[df["pair"] == pair]
+            if sub[frame].var() == 0:
+                no_var_pairs += 1
+        
+        rows.append({
+            "variable": frame,
+            "within_pair_share": within_share,
+            "pairs_with_no_within_variation": no_var_pairs,
+            "pairs": df["pair"].nunique()
+        })
+    
+    # Add delta (burden effect) diagnostics
+    pair_deltas = df.groupby("pair")["delta"].mean()
+    overall_delta_var = df["delta"].var()
+    between_delta_var = pair_deltas.var()
+    delta_within_share = 1 - (between_delta_var / overall_delta_var) if overall_delta_var > 0 else 0
+    
+    delta_no_var_pairs = 0
+    for pair in df["pair"].unique():
+        sub = df[df["pair"] == pair]
+        if sub["delta"].var() == 0:
+            delta_no_var_pairs += 1
+    
+    rows.append({
+        "variable": "delta",
+        "within_pair_share": delta_within_share,
+        "pairs_with_no_within_variation": delta_no_var_pairs,
+        "pairs": df["pair"].nunique()
+    })
+    
+    return pd.DataFrame(rows)
 
 
 if __name__ == "__main__":
