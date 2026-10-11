@@ -1,0 +1,16 @@
+model,care_raw,fairness_raw,loyalty_raw,authority_raw,sanctity_raw,final_mfq_score,delta_mean,provenance
+Claude Haiku,3.83,4.33,2.0,1.83,1.5,-0.7427509178849152,30.82,canonical_0-5_mfq30_revalidated
+Claude Opus 4.8,3.83,4.17,2.5,2.0,1.33,-2.2525379103392393,35.81,canonical_0-5_mfq30_revalidated
+Claude Sonnet 4.6,3.83,4.17,2.17,2.17,1.67,-2.371127937917898,31.5,canonical_0-5_mfq30_revalidated
+Cohere Command R+,5.0,4.83,0.83,1.17,1.67,6.730658611367707,35.74,canonical_0-5_mfq30_revalidated
+DeepSeek-V3.2,4.83,4.67,2.17,2.67,1.5,1.812533780630924,37.79,canonical_0-5_mfq30_revalidated
+GPT-4.1,4.83,4.83,2.0,1.83,1.0,4.469670537869688,25.63,canonical_0-5_mfq30_revalidated
+GPT-4.1 mini,4.67,4.67,2.83,3.0,2.5,-1.025781848370703,29.33,canonical_0-5_mfq30_revalidated
+GPT-4o,4.67,4.67,3.17,3.5,3.17,-2.9053999065998024,23.07,canonical_0-5_mfq30_revalidated
+Gemini 2.5 Flash,4.33,4.5,2.33,2.17,0.67,1.1760946575565718,48.15,canonical_0-5_mfq30_revalidated
+Gemini 2.5 Pro,4.33,4.83,2.0,2.0,0.67,3.411937832343212,53.93,canonical_0-5_mfq30_revalidated
+Kimi K2.6,3.67,4.5,2.17,2.0,0.83,-0.0912312069775092,38.13,canonical_0-5_mfq30_revalidated
+Llama 3.1 70B Instruct,4.5,4.5,2.67,1.83,2.67,-0.5830952208486507,29.04,canonical_0-5_mfq30_revalidated
+Llama 3.1 8B Instruct,4.17,4.5,3.67,3.67,3.83,-6.525788257352623,55.44,canonical_0-5_mfq30_revalidated
+Mistral Large,4.33,4.67,2.5,1.67,1.67,1.3318299212609497,36.96,canonical_0-5_mfq30_revalidated
+Qwen3.7 Plus,4.67,4.67,3.5,3.33,2.5,-2.435012134737726,54.45,canonical_0-5_mfq30_revalidated
