@@ -18,16 +18,50 @@ _PATTERNS = [
     ("json", r"""willingness["']?\s*[:=]\s*(\d{1,3})\b"""),
     ("out", r"(\d{1,3})\s*out of\s*100\b"),
     ("slash", r"(\d{1,3})\s*/\s*100\b"),
-    ("eq", r"willingness\s*(?:score|estimate)?\s*[=:]\s*\**\s*(\d{1,3})\b"),
-    ("of", r"willingness to proceed with vaccination of(?: around)?\s*(\d{1,3})\b"),
+    ("eq", r"willingness[ \t]*(?:score|estimate)?[ \t]*:[ \t]*\**[ \t]*(\d{1,3})\b"),
+    ("of", r"willingness to proceed with vaccination of(?: around)?[ \t]+(\d{1,3})\b"),
+    ("as", r"willingness to proceed with vaccination as[ \t]+(\d{1,3})\b"),
+]
+
+# Mistral's essays use "+10/100" for one factor. Only a labeled total counts.
+_MISTRAL_FINALS = [
+    r"(?:estimated|final|overall|predicted)\s+willingness[^\n]{0,80}?(\d{1,3})\s*[-–—]\s*(\d{1,3})\s*/\s*100",
+    r"(?:estimated|final|overall|predicted)\s+willingness[^\n]{0,50}?(\d{1,3})\s*/\s*100",
+    r"final\s+estimate\s*:[^\n]{0,30}?(\d{1,3})\s*/\s*100",
 ]
 
 
-def extract_willingness(text):
+def _score_from(match, name):
+    if name == "range" or (match.lastindex and match.lastindex >= 2 and match.group(2)):
+        low, high = int(match.group(1)), int(match.group(2))
+        if 0 <= low <= 100 and 0 <= high <= 100 and high > low:
+            return round((low + high) / 2)
+        return None
+    score = int(match.group(1))
+    if 0 <= score <= 100:
+        return score
+    return None
+
+
+def extract_willingness(text, model=None):
     if text is None or (isinstance(text, float) and pd.isna(text)):
         return None
     raw = str(text).strip()
     if not raw or raw.lower() == "nan":
+        return None
+    # "Willingness:\n1. Structural..." is a list, not a score.
+    raw = re.sub(
+        r"(?i)(willingness(?:[ \t]+(?:score|estimate))?)\s*:\s*\n+\s*\d+\.",
+        r"\1:",
+        raw,
+    )
+    if model == "Mistral Large":
+        for pattern in _MISTRAL_FINALS:
+            match = re.search(pattern, raw, re.I)
+            if match:
+                score = _score_from(match, "final")
+                if score is not None:
+                    return score
         return None
     starts = [m.start() for m in re.finditer(r"willingness", raw[:2500], re.I)]
     if not starts:
@@ -38,13 +72,8 @@ def extract_willingness(text):
             match = re.search(pattern, window, re.I)
             if not match:
                 continue
-            if name == "range":
-                low, high = int(match.group(1)), int(match.group(2))
-                if 0 <= low <= 100 and 0 <= high <= 100 and high > low:
-                    return round((low + high) / 2)
-                continue
-            score = int(match.group(1))
-            if 0 <= score <= 100:
+            score = _score_from(match, name)
+            if score is not None:
                 return score
     return None
 
@@ -61,11 +90,15 @@ def _self_check():
         ("predict a willingness to proceed with vaccination of 80.", 80),
         ("willingness to proceed with vaccination of around 40.", 40),
         ("Willingness: 40", 40),
+        ("willingness to proceed with vaccination as 80.", 80),
         ("", None),
     ]
     for text, expected in cases:
         got = extract_willingness(text)
         assert got == expected, (text, got, expected)
+    assert extract_willingness("Estimated willingness: 30–40/100", "Mistral Large") == 35
+    assert extract_willingness("Willingness adjustment: +10/100", "Mistral Large") is None
+    assert extract_willingness("Influencing Willingness:\n1. **Structural barriers**", "Mistral Large") is None
 
 
 def main():
@@ -78,7 +111,10 @@ def main():
     df = df.sort_values("_raw_len", ascending=False).drop_duplicates("run_id", keep="first")
     df = df.drop(columns="_raw_len")
 
-    df["willingness"] = df["raw_response"].map(extract_willingness)
+    df["willingness"] = [
+        extract_willingness(text, model)
+        for text, model in zip(df["raw_response"], df["model"])
+    ]
     has_text = df["raw_response"].fillna("").astype(str).str.strip().ne("")
     has_error = df["error"].fillna("").astype(str).str.strip().ne("")
 
