@@ -26,22 +26,30 @@ CAN = HOME / "outputs" / "canonical"
 # CORRECTED: only 2 frames with sufficient variation
 FRAMES = ["access_barriers", "coercive_backlash"]
 
-# Frame coding rules (corrected version)
+# Frame coding rules (FROZEN STRICT version - 2026-10-10)
+# Key change: REMOVED paperwork, document, proof of, long wait, waiting list
 FRAME_RULES = {
     "access_barriers": [
+        # Financial barriers
         r"cannot\s+afford", r"can'?t\s+afford",
-        r"miss\s+work", r"miss\w*\s+(her|the)\s+job", r"lose\s+(income|wages|pay)",
-        r"lost\s+wages?", r"unpaid\s+(leave|time)",
-        r"childcare", r"child\s+care", r"babysit",
-        r"transport", r"travel\s+(time|cost)", r"commute",
-        r"rural", r"remote\s+area", r"access\s+(to\s+)?care",
-        r"appointment\s+availability", r"long\s+wait", r"waiting\s+list",
-        r"time\s+off\s+work", r"take\s+time\s+off",
-        r"no\s+(paid\s+)?sick\s+leave", r"flexible\s+hours",
-        r"language\s+barrier", r"translation", r"interpreter",
-        r"paperwork", r"document\w*", r"proof\s+of",
-        r"insurance", r"uninsured", r"underinsured",
+        r"miss\s+work", r"miss\w*\s+(her|the)\s+job",
+        r"lose\s+(income|wages|pay)", r"lost\s+wages?",
+        r"unpaid\s+(leave|time)",
         r"out\s*-\s*of\s*pocket", r"copay", r"deductible",
+        # Care/work barriers
+        r"childcare", r"child\s+care", r"babysit",
+        r"no\s+(paid\s+)?sick\s+leave", r"flexible\s+hours",
+        # Geographic/transport barriers
+        r"transport", r"commute",
+        r"rural", r"remote\s+area",
+        # Insurance
+        r"insurance", r"uninsured", r"underinsured",
+        # Language
+        r"language\s+barrier", r"translation", r"interpreter",
+        # EXCLUDED (too broad, no explicit resource link):
+        # - paperwork, document, proof of
+        # - long wait, waiting list, appointment availability
+        # - travel time, travel cost (ambiguous)
     ],
     "coercive_backlash": [
         r"government\s+overreach", r"government\s+control",
