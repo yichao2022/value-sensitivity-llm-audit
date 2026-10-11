@@ -45,7 +45,7 @@
 
 \noindent\textbf{Study Setting and Design:} Multi-level diagnostic framework. Fifteen LLM endpoints completed an MFQ-30--derived probe and simulated vaccination willingness for 27 standardized profiles under low- and high-burden conditions, yielding tests of composite orientation (H1), rationale-frame association (H2), and within-model frame manipulation (H3).
 
-\noindent\textbf{Data Sources and Analytic Sample:} Responses were collected on 16--17 September 2026 (UTC) from 13 LLM endpoints accessed through provider APIs and gateways. H1: 15 model endpoints; H2: 2,019 analyzable low-high repetition pairs nested within 405 model-profile cells; H3: 108 clusters (2,159 observations). The 27 synthetic profiles are constructed test cases; no human participants were involved.
+\noindent\textbf{Data Sources and Analytic Sample:} Responses were collected on 16--17 September 2026 (UTC) from \textbf{15} LLM endpoints accessed through provider APIs and gateways. H1: 15 model endpoints; H2: 2,019 analyzable low-high repetition pairs nested within 405 model-profile cells; H3: 108 clusters (2,159 observations). The 27 synthetic profiles are constructed test cases; no human participants were involved.
 
 \noindent\textbf{Principal Findings:} 
 (1) A composite derived from an MFQ-30--derived probe does not significantly predict cross-model variation in simulated burden effects ($\beta_1 = -0.50$, 95\% CI [$-2.40$, $+1.39$], $p = 0.58$, $R^2 = 0.025$): higher individualizing-composite models show no consistent pattern in burden effects.
@@ -136,7 +136,7 @@ We evaluate thirteen LLM endpoints spanning nine provider ecosystems (OpenAI, An
 \subsection{Moral-Foundations Battery}
 \label{subsec:orientation-battery}
 
-We administered the 30-item Moral Foundations Questionnaire (MFQ-30), an MFQ-30--derived probe based on the standard instrument in moral psychology \citep{Graham2011}, measuring five foundations: care, fairness, loyalty, authority, and sanctity. Each foundation uses six items (three relevance-judgment items on a 0--5 scale and three agreement items on a 0--5 scale), following the original two-part administration. Following prior LLM-probing work with this instrument \citep{Abdulhai2023,Abdulhai2024}, we compute the moral-foundations composite as the unweighted signed sum of standardized foundation scores: $\mathrm{MFQ}_m = Z^{(\mathrm{CA})}_m + Z^{(\mathrm{FA})}_m - Z^{(\mathrm{LO})}_m - Z^{(\mathrm{AU})}_m - Z^{(\mathrm{SA})}_m$, where care and fairness (individualizing foundations) enter positively and loyalty, authority, and sanctity (binding foundations) enter negatively. All thirteen endpoints were administered the identical frozen battery protocol in the canonical rerun; the system prompt, item template, output schema, and their SHA256 hashes are reported in Appendix~\ref{app:orientation-items}.
+We administered the 30-item Moral Foundations Questionnaire (MFQ-30) to \textbf{15} LLM endpoints (Table~\ref{tab:orientation}) using the standard 0--5 two-part administration.
 
 \subsection{Administrative-Burden Simulation}
 \label{subsec:burden}
