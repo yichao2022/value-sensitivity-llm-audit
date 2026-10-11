@@ -5,10 +5,60 @@ import sys
 from pathlib import Path
 
 def test_table_1():
-    """Verify Table 1: Policy Simulation Results (27 profiles)."""
+    """Verify Table 1: Policy Simulation Results (27 profiles × 3 models)."""
     print("Testing Table 1...")
-    # TODO: Check simulation_outputs.csv or equivalent
-    print("  ✓ Table 1 validation placeholder")
+    csv_path = Path(__file__).parent / "outputs" / "simulation_outputs.csv"
+    
+    # Check file exists
+    if not csv_path.exists():
+        print(f"  ✗ Missing: {csv_path}")
+        print("    Run: python3 run_simulation.py")
+        return False
+    
+    df = pd.read_csv(csv_path)
+    
+    # Check expected columns
+    required_cols = ['model', 'profile_id', 'burden_level', 'willingness', 
+                     'json_valid', 'score_valid', 'non_refusal']
+    missing_cols = [c for c in required_cols if c not in df.columns]
+    if missing_cols:
+        print(f"  ✗ Missing columns: {missing_cols}")
+        return False
+    
+    # Check expected structure: 27 profiles × 3 models × 5 repetitions = 405 rows
+    # Or at minimum: 27 profiles × 3 models = 81 unique combinations
+    expected_profiles = 27
+    expected_models = 3
+    expected_burden_levels = ['low', 'high']
+    
+    unique_profiles = df['profile_id'].nunique()
+    unique_models = df['model'].nunique()
+    
+    if unique_profiles < expected_profiles:
+        print(f"  ✗ Expected {expected_profiles} profiles, got {unique_profiles}")
+        return False
+    
+    if unique_models < expected_models:
+        print(f"  ✗ Expected {expected_models} models, got {unique_models}")
+        return False
+    
+    # Check data quality metrics
+    json_valid_rate = df['json_valid'].mean() if 'json_valid' in df.columns else 0
+    score_valid_rate = df['score_valid'].mean() if 'score_valid' in df.columns else 0
+    non_refusal_rate = df['non_refusal'].mean() if 'non_refusal' in df.columns else 0
+    
+    print(f"  ✓ Table 1: {len(df)} total records")
+    print(f"    - {unique_profiles} profiles, {unique_models} models")
+    print(f"    - JSON valid: {json_valid_rate:.1%}")
+    print(f"    - Score valid: {score_valid_rate:.1%}")
+    print(f"    - Non-refusal: {non_refusal_rate:.1%}")
+    
+    # Warn if quality metrics are low but don't fail
+    if json_valid_rate < 0.9:
+        print(f"  ⚠ Warning: JSON validity below 90%")
+    if non_refusal_rate < 0.9:
+        print(f"  ⚠ Warning: Non-refusal rate below 90%")
+    
     return True
 
 def test_table_2():
